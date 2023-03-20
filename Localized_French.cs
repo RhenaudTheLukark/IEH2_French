@@ -8596,10 +8596,10 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "The chest was Mimic!!!";
-            case 1: return "Blessing!";
-            case 2: return "Time Limit + 30 sec!";
-            case 3: return "1 Portal Orb!";
+            case 0: return "Le coffre était un Mimic!!!";
+            case 1: return "Bénédiction!";
+            case 2: return "Temps Limite + 30 sec!";
+            case 3: return "1 Orbe Portail!";
             case 4: return "Talisman!";
             default: return "" + text;
         }
