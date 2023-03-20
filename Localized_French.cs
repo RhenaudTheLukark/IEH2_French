@@ -2624,19 +2624,19 @@ public class Localized_French : LOCALIZATION
                 effect = "Gain de Maîtrise d'Équipement de la Dompteuse";
                 break;
             case DictionaryUpgradeKind.EquipmentDropChance:
-                name = "Chasseur de Trésor";
+                name = "Chasseur d'Equipement";
                 effect = "Chance d'Apparition d'Équipement (sauf Unique) ";
                 break;
             case DictionaryUpgradeKind.EnchantedEffectChance1:
-                name = "Fortune du Trésor 1";
+                name = "Fortune d'Equipement 1";
                 effect = "Chance additionnelle d'avoir un 1er enchantement";
                 break;
             case DictionaryUpgradeKind.EnchantedEffectChance2:
-                name = "Treasure of Fortune 2";
+                name = "Fortune d'Equipement 2";
                 effect = "Chance additionnelle d'avoir un 2ème enchantement";
                 break;
             case DictionaryUpgradeKind.EnchantedEffectChance3:
-                name = "Treasure of Fortune 3";
+                name = "Fortune d'Equipement 3";
                 effect = "Chance additionnelle d'avoir un 3ème enchantement";
                 break;
         }
@@ -7571,47 +7571,47 @@ public class Localized_French : LOCALIZATION
                 tempStr += "Chaque héros a 10 capacités différentes qui peuvent être utilisées en jeu en les plaçant sur les Emplacements de Capacité de Classe et les Emplacements de Capacité Global disponibles. Cependant, vous pouvez seulement utiliser les capacités des autres héros dans les Emplacements de Capacité Global." +
                     "\n\nPour commencer à utiliser les capacités, elles doivent d'abord atteindre le Rang 1. Pour augmenter leur rang, vous devez posséder les Ressources requises. Vous pouvez voir ce qui est requis en déplaçant votre souris sur l'icône de ressouce à côté de la capacité. " +
                     "Après avoir augmenté le rang de la capacité, cela augmentera le niveau maximum de la capacité associée par 5. " +
-                    "\n\nPour augmenter le niveau de la capacité, vous devez utiliser la capacité en la mettant dans un Emplacement de Capacité de Classe. Vois pouvez augmenter la vitesse de la montée de niveau en augmentant les Gains de Maîtrise de Capacité. " +
-                    "Each skill has different milestones attached to the current level of the skill. These milestones provide passive bonuses to your hero. These passives only work for its skill's hero in default. You will be able to share it with other heroes through the Tier 2 Rebirth Upgrade. " +
-                    "\n\nMore Class Skill Slots and Global Skill Slots can be unlocked through gameplay.";
+                    "\n\nPour augmenter le niveau de la capacité, vous devez utiliser la capacité en la mettant dans un Emplacement de Capacité de Classe. Vous pouvez augmenter la vitesse de la montée de niveau en augmentant les Gains de Maîtrise de Capacité. " +
+                    "Chaque capacité a différents paliers liés au niveau courant de la capacité. Ces paliers offrent des bonus passifs au héros. Ces bonus ne sont appliqués qu'aux héros possédant cette capacité par défaut. Il est possible de partager ce bonus à travers une Amélioration de Réincarnation de Classe 2. " +
+                    "\n\nDes Emplacements de Capacité de Classe et des Emplacements de Capacité Globales supplémentaires peuvent être débloqués au fil du jeu.";
                 tempStr += "\n\n";
                 break;
             case HelpKind.Upgrade:
-                tempStr += "<u>Resource Upgrade</u>";
-                tempStr += "\n- The resource tab allows you to increase the amount of dropped resource from monsters by purchasing with gold. There are also quests that will unlock new resource gain upgrades.";
+                tempStr += "<u>Amélioration de Ressource</u>";
+                tempStr += "\n- L'onglet Ressource vous permet d'augmenter le nombre de ressources lâchées par les monstres en les achetant avec de l'or. Certaines quêtes peuvent aussidébloquer de nouvelles améliorations de gain de ressources.";
                 tempStr += "\n\n";
-                tempStr += "<u>Stats Upgrade</u>";
-                tempStr += "\n- The Stats tab provides bonuses to different stats for all heroes. At the cost of resources and gold.";
+                tempStr += "<u>Améliorations de Statistiques</u>";
+                tempStr += "\n- L'onglet Stats donne accès à des bonus lié à différentes statistiques pour tous les héros, pour un coût d'or et de ressources.";
                 tempStr += "\n\n";
-                tempStr += "<u>Gold Cap Upgrade</u>";
-                tempStr += "\n- The gold cap upgrade tab allows you to increase your Gold Cap at the expense of resources. Each resource has its own upgrade that you can level up to increase your Gold Cap.";
+                tempStr += "<u>Améliorations de Limite d'Or</u>";
+                tempStr += "\n- Les améliorations de limite d'or vous permettent d'augmenter la Limite d'Or contre des ressources. Chaque ressource a sa propre amélioration qui vous permet d'augmenter la Limite d'Or.";
                 tempStr += "\n\n";
-                tempStr += "<u>Slime Bank Upgrade</u>";
-                tempStr += "\n- Unlocked after reaching Guild Level 35, these provide you with new upgrades at the cost of Slime Coins, allowing you to upgrade different aspects of the game.";
+                tempStr += "<u>Améliorations de Banque Slime</u>";
+                tempStr += "\n- Débloqué après avoir atteint le Niveau de Guilde 35, la Banque Slime offre de nouvelles améliorations contre des Pièces Slime, qui permettent d'améliorer différents aspects du jeu.";
                 tempStr += "\n\n";
-                tempStr += "<u>Slime Coin</u>";
-                tempStr += "\n- Slime Coins are acquired after having maxed out your Gold Cap. Overflow gold gets turned into Slime Coins. You can also research your town building Slime Bank, to start gaining interest on your Slime Coins.";
+                tempStr += "<u>Pièce Slime</u>";
+                tempStr += "\n- Les Pièces Slime sont acquises lorsque la Limite d'Or est atteinte. Tout or supplémentaire est transformé en Pièces Slime. Vous pouvez aussi lancer une recherche sur la Banque Slime qui permet de gagner des intérêts sur vos Pièces Slime.";
                 tempStr += "\n\n";
                 break;
             case HelpKind.Equip:
-                tempStr += "<u>Equipment</u>";
-                tempStr += "\n- The Equip tab is where you will find all your equipment that you’ve picked up from the battlefield. To pick up the equipment on the battlefield, just left click the item.";
-                tempStr += "\n- To equip the equipment, simply left click hold and drag a piece of equipment in the Equipment Inventory to an open slot of the correct type of equipment.";
-                tempStr += "\n- While the item is equipped, it will gain Equipment Proficiency which can raise the level of the item, increasing its power. After reaching Level 10 (Mastery) on that specific hero, you will gain a Passive. All heroes that wear that item, gain that passive as well.";
-                tempStr += "\n- If you run out of space in your equipment inventory, you can drag and drop the item to the Disassemble bar and reclaim town materials.";
-                tempStr += "\n- In the Equip tab there is also the Enchant Inventory and Utility Inventory – See Lab Help for more info on Enchants and Utilities.";
-                tempStr += "\n- After a piece of equipment reaches level 60, it will unlock the first slot for Forging. Forging slots unlock at lv60, 80, 100, 120 per equipment.";
-                tempStr += "\n- You can get the Anvils needed to forge the equipment pieces by completing expeditions, challenge bosses, and dungeons in the late part of the game. Once an anvil is obtained, simply drag and drop it onto a Lv60+ equipment piece while it’s in the Inventory.";
+                tempStr += "<u>Equipement</u>";
+                tempStr += "\n- L'onglet Equipement est là où vous trouverez tous les équipements que vous avez ramassés sur le champ de bataille. Pour ramasser un équipement, effectuez un clic gauche sur celui-ci.";
+                tempStr += "\n- Pour l'équiper, effectuez un clic gauche et glissez-déposez l'équipement depuis l'Inventaire d'Equipement vers un emplacement vide pour le bon type d'équipement.";
+                tempStr += "\n- Tant que l'objet est équipé, il gagnera de la Maîtrise d'Equipement qui peut augmenter le niveau de l'objet, ce qui augmentera son pouvoir. Après avoir atteint le Niveau 10 (Maîtrise) avec ce héros, vous gagnerez un bonus passif. Tous les héros qui portent cet objet gagneront ce bonus passif.";
+                tempStr += "\n- Si vous n'avez plus de place dans votre inventaire d'équipement, vous pouvez glisser-déposer un objet dans la bar de désassemblage pour récupérer des matériaux de ville.";
+                tempStr += "\n- Il existe aussi un Inventaire d'Enchantements et un Inventaire d'utilitaires dans l'onglet Equipement - Référez-vous à la section d'aide du Laboratoire pour plus d'infos sur les Enchantements et les Utilitaires.";
+                tempStr += "\n- Une fois qu'un équipement atteint le niveau 60, il débloquera son premier emplacement de forge. Les emplacements de forge sont débloqués au niveaux 60, 80, 100 et 120 pour chaque équipement.";
+                tempStr += "\n- Vous pouvez récupérer les Enclumes requises pour forger l'équipement en complétant des expéditions, à travers des défis de boss, et à travers des donjons loin dans le jeu. Une fois qu'une enclume est obtenue, glissez-déposez la sur votre équipement de niveau 60 ou supérieur lors qu'il se trouve dans l'inventaire.";
                 tempStr += "\n\n";
-                tempStr += "<u>Dictionary</u>";
-                tempStr += "\n- The Dictionary tab under Equips will show you all the current equipment that you’ve found in the game so far.";
-                tempStr += "\n- Each time you level up a piece of equipment to level 10 (on a hero) you will gain dictionary points that can be used to then upgrade your choice of heroes Equipment Proficiency or Treasure Hunting which increases your chance at finding items in the battlefield.";
-                tempStr += "\n- Rarity of the equipment plays a part in the amount of Upgrade points. Common : 1, Uncommon : 2, Rare : 3, Super Rare : 4, and Epic : 5.";
-                tempStr += "\n- In the Dictionary you will be able to set the equipment to auto-disassemble once you’ve got the right upgrade, by clicking on the Item. You’ll see a D at the bottom left of the icon, to indicate Disassemble. The Auto-disassemble will happen when you have an open equip inventory slot, and you click on the item in the battlefield.";
-                tempStr += "\n- Upon an upgrade in the Town, you will be able to craft the equipment as well.";
+                tempStr += "<u>Dictionnaire</u>";
+                tempStr += "\n- L'onglet Dictionnaire dans l'Equipement montre tous les équipements trouvés en jeu jusqu'à présent.";
+                tempStr += "\n- A chaque fois qu'un équipement atteint le niveau 10 (pour chaque héros), vous gagnerez des points de dictionnaire qui peuvent être utilisés pour augmenter les Gain de Maîtrise d'Equipement d'un héros donne ou Chasseur d'Equipement qui augmente les chances de trouver des objets sur le champ de bataille.";
+                tempStr += "\n- La rareté d'un équipement jour sur les gains de Points de Dictionnaire donnés. Commun : 1, Peu Commun : 2, Rare : 3, Super Rare : 4, et Epique : 5.";
+                tempStr += "\n- Dans le Dictionnaire, vous pouvez donner des équipements à auto-désassembler une fois que vous avez la bonne amélioration en cliquant sur l'objet. Vous verrez un D en bas à gauche de l'icône de l'objet, qui indique Désassemblage. L'auto-désassemblage s'effectue lorsqu'un objet est cliqué sur le champ de bataille avec au moins un emplacement d'inventaire vide.";
+                tempStr += "\n- À l'aide d'une amélioration de ville, il vous sera aussi possible de fabriquer des équipements.";
                 tempStr += "\n\n";
                 tempStr += "<u>Talisman</u>";
-                tempStr += "\n- Talismans are unique items that provide bonuses to your hero. They can be equipped and are never consumed. They can increase their bonuses by adding more of the same talisman to create a stack. The stack max amount is based on your Alchemy Upgrade [Deeper Capacity]";
+                tempStr += "\n- Les talismans sont des objets uniques qui donnent des bonus aux héros. Ils peuvent être équipés et ne seront jamais supprimés. Il est possible d'augmenter leurs bonus en ajoutant plusieurs talismans du même type, ce qui créée une pile. Le nombre maximum de la pile est basé sur l'Amélioration d'Alchimie [Capacité Accrue]";
                 tempStr += "\n\n";
                 break;
             case HelpKind.Lab:
