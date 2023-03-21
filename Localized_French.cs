@@ -8360,73 +8360,73 @@ public class Localized_French : LOCALIZATION
         switch (pet.passiveEffectKind)
         {
             case PetPassiveEffectKind.ResourceGain:
-                return "Resource Gain <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain de Ressources <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.OilOfSlimeDropChance:
-                return Material(MaterialKind.OilOfSlime) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.OilOfSlime) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.EnchantedClothDropChance:
-                return Material(MaterialKind.EnchantedCloth) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.EnchantedCloth) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.SpiderSilkDropChance:
-                return Material(MaterialKind.SpiderSilk) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.SpiderSilk) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.BatWingDropChance:
-                return Material(MaterialKind.BatWing) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.BatWing) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.FairyDustDropChance:
-                return Material(MaterialKind.FairyDust) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.FairyDust) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.FoxTailDropChance:
-                return Material(MaterialKind.FoxTail) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.FoxTail) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.FishScalesDropChance:
-                return Material(MaterialKind.FishScales) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.FishScales) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.CarvedBranchDropChance:
-                return Material(MaterialKind.CarvedBranch) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.CarvedBranch) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.ThickFurDropChance:
-                return Material(MaterialKind.ThickFur) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.ThickFur) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.UnicornHornDropChance:
-                return Material(MaterialKind.UnicornHorn) + " Drop Chance <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return Material(MaterialKind.UnicornHorn) + " Chance d'Apparition <color=green>+ " + percent(pet.effectValue, 3) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.PotionEffect:
-                return "Potion Effect + <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rank )";
+                return "Effet des Potions + <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.TamingPointGain:
-                return "Taming Point Gain + <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain de Points de Domptage + <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.GoldCap:
-                return "Multiply Gold Cap by <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rank )";
+                return "Multiplie le Maximum d'Or par <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.GoldGain:
-                return "Gold Gain + <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rank )";
+                return "Gain d'Or+ <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.ExpGain:
-                return "EXP Gain + <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain d'EXP + <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.DoubleMaterialChance:
-                return "Lucky Material Chance for Doubled Material Gain : <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return "Chance de Doubler le Gain de Matériaux : <color=green>" + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.GoldGainOnDisassemblePotion:
-                return "Gold Gain on Disassembling Potions <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain d'Or en Désassemblant les Potions <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.DisassembleTownMatGain:
-                return "Town Material Gain on Disassembling Equipment <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain de Matériel de Ville en Désassemblant de l'Équipement <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.TownMatGainFromDungeonReward:
-                return "Town Material Gain from Dungeon Reward <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain de Matériel de Ville des Récompenses de Dongeons <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.EquipProfGain:
-                return "Equipment Proficiency Gain <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain en Maîtrise d'Équipement <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.MysteriousWaterGain:
-                return "Mysterious Water Gain <color=green>+ " + tDigit(pet.effectValue, 3) + " / sec</color> ( + " + tDigit(pet.effectIncrementValue, 3) + " / Rank )";
+                return "Gain d'Eau Mystérieuse <color=green>+ " + tDigit(pet.effectValue, 3) + " / sec</color> ( + " + tDigit(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.ChestPortalOrbChance:
-                return "Finding Portal Orb from Chest Chance : <color=green>" + percent(pet.effectValue, 4) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rank )";
+                return "Chance de Trouver une Orbe de Portail dans un Coffre : <color=green>" + percent(pet.effectValue, 4) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.SkillProfGain:
-                return "Skill Proficiency Gain <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain en Maîtrise de Capacité <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.TownMatGain:
-                return "Multiply Town Material Gain by <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Multiplicateur de Gain de Matériaux de Ville <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.ResearchPowerStone:
-                return "Stone Research Power <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rank )";
+                return "Puissance de Recherche de Pierre <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.ResearchPowerCrystal:
-                return "Crystal Research Power <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rank )";
+                return "Puissance de Recherche de Crystal <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.ResearchPowerLeaf:
-                return "Leaf Research Power <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rank )";
+                return "Puissance de Recherche de Feuille <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.Nothing:
-                return "Stay tuned for future updates!";
+                return "Restez à l'affut de futures mises à jour!";
             case PetPassiveEffectKind.CatalystCriticalChance:
-                return "Multiplies Critical Chance of Catalyst by <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Multiplies la Chance de Succès Critique du Catalyst par <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.MysteriousWaterCap:
-                return "Max Mysterious Water Cap <color=green>+ " + tDigit(pet.effectValue) + "</color> ( + " + tDigit(pet.effectIncrementValue, 2) + " / Rank )";
+                return "Mazimum d'Eau Mystérieuse <color=green>+ " + tDigit(pet.effectValue) + "</color> ( + " + tDigit(pet.effectIncrementValue, 2) + " / Rang )";
             case PetPassiveEffectKind.BlessingEffect:
-                return "Blessing Effect <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Effet des Bénédictions <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.LoyaltyPointGain:
-                return "Loyalty Point Gain <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain de Points de Loyauté <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.PetExpGain:
-                return "Summoned Pet EXP Gain <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain D'EXP des Familiers <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
         }
         return "";
     }
