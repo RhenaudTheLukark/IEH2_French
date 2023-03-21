@@ -8477,44 +8477,44 @@ public class Localized_French : LOCALIZATION
         switch (milestone.kind)
         {
             case WorldAscensionMiletoneKind.TownBuldingLevel:
-                name = "Raise the Town";
-                description = "Total levels of Town Buildings";
-                passive = "Town Building's level effect + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                name = "Construisez la Ville";
+                description = "Niveau Total des Bâtiments de la Ville";
+                passive = "Effet du Niveau des Bâtiments de la Ville + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.MissionClearNum:
-                name = "Map Milestoner";
-                description = "Area Missions completed this ascension #";
-                passive = "Town Material reward per Area Difficulty + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                name = "Émissaire de la Carte";
+                description = "Missions de Zone complétées cette ascension #";
+                passive = "Récompense en Matériaux de Ville par Difficulté de Zone + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.UpgradeLevel:
-                name = "Very Resourceful";
-                description = "Total levels of Resource Upgrades";
-                passive = "Resource Gain + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                name = "Très Ressourcé";
+                description = "Niveau Total des Améliorations de Ressources";
+                passive = "Gain en Ressources + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.MoveDistance:
-                name = "Walk the World";
-                description = "Total Walked Distance (meters)";
-                passive = "Move Speed + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                name = "Parcours le Monde";
+                description = "Distance Marchée Totale (mètres)";
+                passive = "Vitesse + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.DictionaryPoint:
-                name = "Polished Equipper";
-                description = "Total Dictionary Points gained";
-                passive = "Dictionary Upgrade effect + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                name = "Équipeur Poli";
+                description = "Total des points de Dictionnaire";
+                passive = "Amélioration des effets du Dictionnaire + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.DisassembleEquipment:
-                name = "Pro Disassembler";
-                description = "Total Town Material Gained from disassembling Equipment";
-                passive = "Equipment Proficiency Gain + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                name = "Désassembleur professionnel";
+                description = "Total des Matériaux de Ville Acquis en désassemblant";
+                passive = "Gain en Maîtrise d'Équipement+ " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.RebirthPointGainTier1:
-                name = "Rebirther 1";
-                description = "Total Tier 1 Rebirth Points gained";
-                passive = "Tier 1 Rebirth Point Gain + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                name = "Réincarnateur 1";
+                description = "Total des Points de Réincarnation Classe 1 gagnés";
+                passive = "Gain de Points de Réincarnation Classe 1 + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.RebirthPointGainTier2:
-                name = "Rebirther 2";
-                description = "Total Tier 2 Rebirth Points gained";
-                passive = "Tier 2 Rebirth Point Gain + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                name = "Réincarnateur 2";
+                description = "Total des Points de Réincarnation Classe 2 gagnés";
+                passive = "Gain de Points de Réincarnation Classe 2 + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
         }
         return (name, description, passive);
