@@ -8580,14 +8580,14 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "This feature is only available on Steam.";
-            case 1: return "Failed.";
-            case 2: return "Data is being acquired...";
-            case 3: return "Steam Server doesn't work currently. Please reboot the game and try it again.";
-            case 4: return "Steam Achievement Failed.\nPlease check followings:\nSteam Profile > Edit Profile > Privacy Settings > Game Details : [Public]\n\n";
-            case 5: return "Accepted Quest Limit + 1";
-            case 6: return "You need " + text + " utility slots!";
-            case 7: return "You have already received all of the current bonuses.";
+            case 0: return "Cette fonctionnalité n'est disponible que sur Steam.";
+            case 1: return "Échec.";
+            case 2: return "Les données se font acquérir...";
+            case 3: return "Le serveur Steam ne fonctionne présentement pas. Veuillez redémarrer le jeu et essayer à nouveau.";
+            case 4: return "Échec du Succès Steam.\nVeuillez vérifier la configuration suivante:\nProfile Steam > Modifier le Profile > Options de confidentialité > Visibilité sur mes jeux : [tout le monde]\n\n";
+            case 5: return "Limite de Quêtes Acceptées + 1";
+            case 6: return "Il vous faut " + text + " emplacements d'inventaire d'utilitaire!";
+            case 7: return "Vous avez déjà reçu tous les bonus courrants.";
             default: return "" + text;
         }
     }
