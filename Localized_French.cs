@@ -8523,10 +8523,10 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Max Level Reached";
-            case 1: return "Passive Effect";
-            case 2: return "World Ascension Point";
-            case 3: return "Need Temple Rank 1 to access the Tier 2 Rebirth upgrades";
+            case 0: return "Niveau Maximum Atteint";
+            case 1: return "Effet Passif";
+            case 2: return "Point d'Ascension Monde";
+            case 3: return "Nécessite Temple Rang 1 pour accéder aux Améliorations de Réincarnation Classe 2";
             default: return "" + text;
         }
     }
