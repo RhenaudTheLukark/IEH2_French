@@ -8435,35 +8435,35 @@ public class Localized_French : LOCALIZATION
         switch (kind)
         {
             case TownMaterialKind.MudBrick:
-                return "Mud Brick";
+                return "Brique de Boue";
             case TownMaterialKind.LimestoneBrick:
-                return "Limestone Brick";
+                return "Brique de Chaux";
             case TownMaterialKind.MarbleBrick:
-                return "Marble Brick";
+                return "Brique de Marbre";
             case TownMaterialKind.GraniteBrick:
-                return "Granite Brick";
+                return "Brique de Granite";
             case TownMaterialKind.BasaltBrick:
-                return "Basalt Brick";
+                return "Brique de Basalte";
             case TownMaterialKind.PineLog:
-                return "Pine Log";
+                return "Billot de Pin";
             case TownMaterialKind.MapleLog:
-                return "Maple Log";
+                return "Billot d'Érable";
             case TownMaterialKind.AshLog:
-                return "Ash Log";
+                return "Billot de Frêne";
             case TownMaterialKind.MahoganyLog:
-                return "Mahogany Log";
+                return "Billot d'Acajou";
             case TownMaterialKind.RosewoodLog:
-                return "Rosewood Log";
+                return "Billot de Bois de Rose";
             case TownMaterialKind.JasperShard:
-                return "Jasper Shard";
+                return "Éclat de Jaspe";
             case TownMaterialKind.OpalShard:
-                return "Opal Shard";
+                return "Éclat d'Opale";
             case TownMaterialKind.OnyxShard:
-                return "Onyx Shard";
+                return "Éclat d'Onyx";
             case TownMaterialKind.JadeShard:
-                return "Jade Shard";
+                return "Éclat de Jade";
             case TownMaterialKind.SapphireShard:
-                return "Sapphire Shard";
+                return "Éclat de Sapphire";
         }
         return kind.ToString();
     }
