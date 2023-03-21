@@ -8537,40 +8537,40 @@ public class Localized_French : LOCALIZATION
         switch (upgrade.kind)
         {
             case AscensionUpgradeKind.GuildExpGain:
-                name = "Guild EXP Booster";
-                effect = "Multiplies Guild EXP Gain by " + percent(1 + value);
+                name = "Booster d'EXP de Guilde";
+                effect = "Multiplies le gain d'EXP de Guilde par " + percent(1 + value);
                 break;
             case AscensionUpgradeKind.AreaClearCount:
-                name = "Area Booster";
-                effect = "Increases Area Clear # and Clear Reward by " + tDigit(value);
+                name = "Booster de Zone";
+                effect = "Augmente le nombre de Complétion de Zone et la Récompense de Complétion par " + tDigit(value);
                 break;
             case AscensionUpgradeKind.ActiveHero:
-                name = "Active Hero Slot Expansion";
-                effect = "Increases activable Hero slot by " + tDigit(value);
+                name = "Expansion d'Emplacement de Héro Actif";
+                effect = "Augmente le nombre d'Emplacements de Héros activables par " + tDigit(value);
                 break;
             case AscensionUpgradeKind.SkillProfGain:
-                name = "Skill Proficiency Boost";
-                effect = "Increases Skill Proficiency Gain by " + percent(value);
+                name = "Boost de Maîtrise de Capacité";
+                effect = "Augmente la Maîtrise de Capacité par " + percent(value);
                 break;
             case AscensionUpgradeKind.PreRebirthTier1:
-                name = "Pre-Rebirth Tier 1";
-                effect = "Adds free Rebirth Tier 1 Point + " + tDigit(value) + " at the start of a new WA";
+                name = "Points de Pré-Réincarnation Classe 1";
+                effect = "Ajoute des points de Réincarnation Classe 1 gratuits + " + tDigit(value) + " au début d'une nouvelle AM";
                 break;
             case AscensionUpgradeKind.PreRebirthTier2:
-                name = "Pre-Rebirth Tier 2";
-                effect = "Adds free Rebirth Tier 2 Point + " + tDigit(value) + " at the start of a new WA";
+                name = "Points de Pré-Réincarnation Classe 2";
+                effect = "Ajoute des points de Réincarnation Classe 2 gratuits + " + tDigit(value) + " au début d'une nouvelle AM";
                 break;
             case AscensionUpgradeKind.RebirthTier1BonusCap:
-                name = "Rebirth Tier 1 Bonus Expansion";
-                effect = "Increases the level cap for Tier 1 Rebirth Bonus Ability Points by Lv " + tDigit(value);
+                name = "Expansion du Bonus de Réincarnation Classe 1";
+                effect = "Augmente le niveau maximal des Points d'Abilité Bonus Classe 1 par Niv " + tDigit(value);
                 break;
             case AscensionUpgradeKind.RebirthTier2BonusCap:
-                name = "Rebirth Tier 2 Bonus Expansion";
-                effect = "Increases the level cap for Tier 2 Rebirth Bonus Ability Points by Lv " + tDigit(value);
+                name = "Expansion du Bonus de Réincarnation Classe 2";
+                effect = "Augmente le niveau maximal des Points d'Abilité Bonus Classe 2 par Niv " + tDigit(value);
                 break;
             case AscensionUpgradeKind.PointGainBonus:
-                name = "WA Milestone Point Efficiency";
-                effect = "Increases the point gain per level of WA Milestones by " + tDigit(value);
+                name = "Efficacité des points d'AM par palier";
+                effect = "Augmente le nombre de points gagnés par niveau de palier d'AM par " + tDigit(value);
                 break;
         }
 
