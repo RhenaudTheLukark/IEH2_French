@@ -8254,7 +8254,7 @@ public class Localized_French : LOCALIZATION
                 name = "Capture de Monstres";
                 effect = "Point de Domptage : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 par Niveau )";
                 passive = optStr + "Multiplie le Gain de points de Domptage par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
-                reward = "Points de Domptage " + Text;
+                reward = "Points de Domptage " + text;
                 break;
             case ExpeditionKind.Equipment:
                 name = "Entraînement d'Équipement";
@@ -8265,7 +8265,7 @@ public class Localized_French : LOCALIZATION
                 name = "Entraînement sur le Terrain";
                 effect = "Gain en EXP de Familier : <color=green>" + percent(Math.Pow(1.2d, expedition.level.value)) + "</color>  ( x1.2 par Niveau )";
                 passive = optStr + "Multiplie les Gains d'EXP de Familier en expédition par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
-                reward = "EXP de Familier " + Text;
+                reward = "EXP de Familier " + text;
                 break;
             case ExpeditionKind.WalkDistance:
                 name = "Marathon";
