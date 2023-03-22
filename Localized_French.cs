@@ -699,9 +699,9 @@ public class Localized_French : LOCALIZATION
             case MenuKind.Skill:
                 return "Capacité";
             case MenuKind.Upgrade:
-                return "<size=16>Amélioration</size>";
+                return "Amélioration";
             case MenuKind.Equip:
-                return "<size=16>Équipement</size>";
+                return "Équipement";
             case MenuKind.Guild:
                 return "Guilde";
             case MenuKind.Quest:
@@ -713,7 +713,7 @@ public class Localized_French : LOCALIZATION
             case MenuKind.Bestiary:
                 return "Bestiaire";
             case MenuKind.Rebirth:
-                return "<size=16>Réincarnation</size>";
+                return "Réincarnation";
             case MenuKind.Challenge:
                 return "Défi";
             case MenuKind.Ascension:
@@ -8592,7 +8592,7 @@ public class Localized_French : LOCALIZATION
         }
     }
 
-    public override string TresureChestString(int id, string text = "")
+    public override string TreasureChestString(int id, string text = "")
     {
         switch (id)
         {
