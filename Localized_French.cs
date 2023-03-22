@@ -8305,25 +8305,25 @@ public class Localized_French : LOCALIZATION
         switch (kind)
         {
             case ChallengeMonsterKind.Florzporb:
-                return "Florzporb, The Slime King";
+                return "Florzporb, Le Roi Slime";
             case ChallengeMonsterKind.Arachnetta:
-                return "Arachnetta, The Widow Queen";
+                return "Arachnetta, La Veuve Noire";
             case ChallengeMonsterKind.GuardianKor:
-                return "Guardian Kor, The Stone Giant";
+                return "Guardian Kor, Le Géant de Pierre";
             case ChallengeMonsterKind.Nostro:
-                return "Nostro, the Vampire Bat";
+                return "Nostro, la Chauve-Souris Vampire";
             case ChallengeMonsterKind.LadyEmelda:
-                return "Lady Emelda, the Fairy Sorceress";
+                return "Lady Emelda, la Fée Sorcière";
             case ChallengeMonsterKind.NariSune:
-                return "Nari Sune, the Nine-Tailed Fox";
+                return "Nari Sune, le Renard aux Neuf Queues";
             case ChallengeMonsterKind.Octobaddie:
-                return "Octobaddie, Terror of the Deep";
+                return "Octobaddie, Terreur des Profondeurs";
             case ChallengeMonsterKind.Bananoon:
-                return "Bananoon, the Nanastabber";
+                return "Bananoon, le Bananattaqueur";
             case ChallengeMonsterKind.Glorbliorbus:
-                return "Glorbliorbus, the Archmage Slime";
+                return "Glorbliorbus, le Slime Archimage";
             case ChallengeMonsterKind.DistortionSlime:
-                return "Gankyū, the Distortion Slime";
+                return "Gankyū, le Slime Distordu";
         }
         return kind.ToString();
     }
