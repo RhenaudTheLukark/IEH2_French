@@ -168,7 +168,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.ResearchPower:
                 return "Puissance de Recherche";
             case BasicWord.TownBuilding:
-                return "Bâtiments";
+                return "Bâtiment";
             case BasicWord.TownMaterialInventory:
                 return "Inventaire de Matériaux de Ville";
             case BasicWord.PurchasedNum:
@@ -310,7 +310,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.ProducedNum:
                 return "Produit #";
             case BasicWord.MixPotions:
-                return "Mixer des Potions";
+                return "Potions";
             case BasicWord.Upgrades:
                 return "Améliorations";
             case BasicWord.Material:
@@ -2879,7 +2879,7 @@ public class Localized_French : LOCALIZATION
             case AlchemyUpgradeKind.DeeperCapacity:
                 return "Capacité Accrue";
             case AlchemyUpgradeKind.CharmedLife:
-                return "charme de Vie";
+                return "Charme de Vie";
             case AlchemyUpgradeKind.Catalystic:
                 return "Super Catalysant";
             case AlchemyUpgradeKind.EssenceHoarder:
@@ -5045,7 +5045,7 @@ public class Localized_French : LOCALIZATION
             case ToggleKind.DisableDamageText:
                 return "Désactiver les Textes de Dégâts";
             case ToggleKind.DisableGoldLog:
-                return "Désactiver les Textes de Gain d'Or";
+                return "Or";
             case ToggleKind.FastResult:
                 return "Écourter l'Écran de Résultat de Combat";
             case ToggleKind.ShowDPS:
@@ -6641,7 +6641,7 @@ public class Localized_French : LOCALIZATION
             case MissionKind.Clear:
                 return "Compléter cette Zone";
             case MissionKind.SaveHp:
-                return "Compléter cette Zone avec vos PV azu dessus de " + text;
+                return "Compléter cette Zone avec PV > " + text;
             case MissionKind.WithinTime:
                 return "Compléter cette Zone en " + text + " sec";
             case MissionKind.Gold:
@@ -6841,8 +6841,8 @@ public class Localized_French : LOCALIZATION
             case 25: return "Détails de la Limite D'Or";
             case 26: return "Vous avez couremment";
             case 27: return "Gagné pendant la dernière minute";
-            case 28: return "Tout monstre lâche " + text + text2 + " lors qu'ils sont vaincus par le héros ";
-            case 29: return " ou le héros ";
+            case 28: return "Tout monstre lâche " + text + text2 + " lors qu'ils sont vaincus par le/la ";
+            case 29: return " ou le/la ";
             case 30: return "";
             case 31: return "Détails des Gains";
             case 32: return "EXP";
@@ -7638,7 +7638,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n\nMixer des Potions";
                 tempStr += "\n- C'est ici que vous dépenserez vos essences pour fabriquer des potions.";
                 tempStr += "\n\nPoints d'Alchimie";
-                tempStr += "\n- Vous recevez des points en mixant des potions que vous pouvez utiliser pour améliorer le niveau des potions, ou sur d'autres améliorations d'alchimie dans le sous-onglet Améliorations, à côté de Mixer des Potions.";
+                tempStr += "\n- Vous recevez des points en mixant des potions que vous pouvez utiliser pour améliorer le niveau des potions, ou sur d'autres améliorations d'alchimie dans le sous-onglet Améliorations, à côté de Potions.";
                 tempStr += "\n\n";
                 tempStr += "\n\n";
                 tempStr += "<u>Onglet de Fabrication</u>";
