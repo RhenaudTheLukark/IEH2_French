@@ -132,7 +132,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.Dungeon:
                 return "Donjon";
             case BasicWord.PortalOrb:
-                return "Orbe Portail";
+                return "Orbe(s) Portail";
             case BasicWord.Nitro:
                 return "Nitro";
             case BasicWord.Title:
@@ -376,7 +376,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.Blessing:
                 return "Bénédiction";
             case BasicWord.TownMat:
-                return "Mat de Ville";
+                return "Mat. de Ville";
             case BasicWord.RebirthUpgrades:
                 return "Améliorations de Réincarnation";
             case BasicWord.AutoRebirth:
@@ -769,7 +769,7 @@ public class Localized_French : LOCALIZATION
             case MultiplierKind.Stance:
                 return "Posture";
             case MultiplierKind.AlchemyExpand:
-                return "Limite Étendue";
+                return "Extension de Limite";
             case MultiplierKind.Blessing:
                 return "Bénédiction";
             case MultiplierKind.Town:
@@ -1309,7 +1309,7 @@ public class Localized_French : LOCALIZATION
                 tempColorStr = "Métallique";
                 break;
         }
-        return tempColorStr + " " + tempSpeciesStr;
+        return tempSpeciesStr + " " + tempColorStr;
     }
     //Pet
     public override string PetActiveEffect(PetActiveEffectKind kind)
@@ -2933,13 +2933,13 @@ public class Localized_French : LOCALIZATION
             case PotionKind.MinorHealthPotion:
                 return "Potion de Santé Mineure";
             case PotionKind.MinorRegenerationPoultice:
-                return "Bandage de Régénération Mineur";
+                return "Bandage de Régénération Mineure";
             case PotionKind.MinorResourcePoultice:
-                return "Bandage de Ressouce Mineur";
+                return "Bandage de Ressouces Mineure";
             case PotionKind.SlickShoeSolution:
                 return "Solution pour Chaussures Glissantes";
             case PotionKind.MinorManaRegenerationPoultice:
-                return "Bandage de Régénération de Mana Mineur";
+                return "Bandage de Régénération de Mana Mineure";
             case PotionKind.MaterialMultiplierMist:
                 return "Vaporisateur de Multiplication de Matériau";
             case PotionKind.BasicElixirOfBrawn:
@@ -3005,7 +3005,7 @@ public class Localized_French : LOCALIZATION
             case PotionKind.FlorzporbDoll:
                 return "Poupée Florzporbe";
             case PotionKind.ArachnettaDoll:
-                return "Poupée Aranetta Doll";
+                return "Poupée Aranetta";
             case PotionKind.GuardianKorDoll:
                 return "Poupée Gardien Kor";
             case PotionKind.SlimeBadge:
@@ -6278,7 +6278,7 @@ public class Localized_French : LOCALIZATION
             case 24: return "Gain de Matériaux de Ville à travers la complétion de zone ";
             case 25: return "Hutte de l'Alchimiste";
             case 26: return "# de Stock Max de Matériaux du Magasin ";
-            case 27: return "Étendre la Limite d'Eau Mystérieuse par " + text;
+            case 27: return "Étendre la Limite d'Eau Mystérieuse jusqu'à " + text;
             case 28: return "Débloque un nouveau Catalyste";
             case 29: return "Gain d'Eau Mystérieuse + " + text;
             case 30: return "Limite d'Eau Mystérieuse Max + " + text;
@@ -6675,7 +6675,7 @@ public class Localized_French : LOCALIZATION
             case 13: return "Progrès d'Expédition";
             case 14: return "Maîtrise d'Équipement";
             case 15: return "Progrès du Héros Actif";
-            case 16: return "# de Complétions";
+            case 16: return "Complété " + text + " fois";
             default: return "" + text;
         }
     }
@@ -6875,11 +6875,11 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Reeste actif quand équipé dans un Emplacement d'Utilitaire";
+            case 0: return "Reste actif quand équipé dans un Emplacement d'Utilitaire";
             case 1: return "Temps de Recharge";
             case 2: return "Vous gagnez " + text + " Points d'Alchimie pour chaque alchimie";
             case 3: return "Cet effet est boosté par la potion de classe inférieure";
-            case 4: return "vous avez besoin d'un Emplacement d'Utilitaire";
+            case 4: return "Vous avez besoin d'un Emplacement d'Utilitaire";
             case 5: return "Niveau Max";
             case 6: return "File Disponible";
             default: return "" + text;
@@ -7762,23 +7762,23 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n\n";
                 break;
             case HelpKind.Challenge:
-                tempStr += "Challenges are where you can test your might of your team, or solo hero against tough boss monsters. ";
-                tempStr += "\nThese Challenges will only reward you one competition per World Ascension.  You can still enter the challenge fight at any point, but you won’t be rewarded if you’ve already claimed the reward that World Ascension.";
+                tempStr += "Les défis sont là où vous pourrez tester la puissance de votre équipe ou d'un seul héros contre de solides boss. ";
+                tempStr += "\nCes Défis ne donneront qu'un bonus de complétion par Ascension Monde. Vous pouvez quand même recommencer un combat, mais aucune récompense ne sera donnée si elle a déjà été donnée pour cette Ascension Monde.";
                 tempStr += "\n\n";
-                tempStr += "<u>Raid Boss Battles</u>";
-                tempStr += "\n- Raid Boss battles will use your entire team that are in the Active/Passive mode.";
-                tempStr += "\n- Inactive heroes will not be joining you in this fight. ";
+                tempStr += "<u>Combats de Boss de Raid</u>";
+                tempStr += "\n- Les combats de Boss de Raid utilisent tous les memebres de l'équipe qui sont en mode Actif/Passif.";
+                tempStr += "\n- Les héros inactifs ne participeront pas au combat. ";
                 tempStr += "\n\n";
-                tempStr += "<u>Solo Boss Battles</u>";
-                tempStr += "\n- Solo Boss battles will only use your Active hero.";
-                tempStr += "\n- All skills/Global skills are available to be used during this fight.";
-                tempStr += "\n- You must first beat the Raid Boss to unlock the Solo Boss.";
+                tempStr += "<u>Combats de Boss Solo</u>";
+                tempStr += "\n- Les combats de Boss Solo utilisent seulement le héros couremment actif.";
+                tempStr += "\n- Toutes les capacités (y comprises globales) sont disponibles dans ce combat.";
+                tempStr += "\n- Vous devez d'abord vaincre le Boss de Raid pour débloquer le Boss Solo.";
                 tempStr += "\n\n";
-                tempStr += "<u>Handicapped Battles</u>";
-                tempStr += "\n- These battles have limitations to the fight. Such as no Global skills, no equipment, or a select number of skill slots.";
-                tempStr += "\n- You must first beat the Solo Boss Battles to unlock the Handicap Boss battles.";
+                tempStr += "<u>Combats avec Handicap</u>";
+                tempStr += "\n- Ces combats ont des limitations pendant le combat. Par exemple, aucune capacité globale n'est autorisée, aucun équipement n'est autorisé, ou seul un certain nombre d'emplacements de capacité est disponible.";
+                tempStr += "\n- Vous devez d'abord vaincre le Combat de Boss Solo pour débloquer les Combats de Boss avec Handicap.";
                 tempStr += "\n\n";
-                tempStr += "The Town building [Mystic Arena] is associated with these Challenges. You can unlock new floors and boss levels through this town building. ";
+                tempStr += "Le bâtiment de ville [Arène Mystique] est associée à ces Défis. Vous pouvez débloquer de nouveaux étages et niveaux de boss à travers ce bâtiment de ville. ";
                 break;
             case HelpKind.Expedition:
                 tempStr += "Expeditions are where you can send your pets (achieved by getting the pets to rank 1 through capturing them) out on different types of adventures.";
