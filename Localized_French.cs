@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UsefulMethod;
@@ -1309,7 +1309,7 @@ public class Localized_French : LOCALIZATION
                 tempColorStr = "Métallique";
                 break;
         }
-        return tempColorStr + " " + tempSpeciesStr;
+        return tempSpeciesStr + " " + tempColorStr;
     }
     //Pet
     public override string PetActiveEffect(PetActiveEffectKind kind)
