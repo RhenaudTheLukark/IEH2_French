@@ -8236,42 +8236,42 @@ public class Localized_French : LOCALIZATION
         switch (expedition.kind)
         {
             case ExpeditionKind.Brick:
-                name = "Manufacturing Bricks";
-                effect = "Bricks Gain : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 per Level )";
-                passive = optStr + "Town Brick Buildings' level effect <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Lv )";
+                name = "Manufacture de Briques";
+                effect = "Gain de Briques : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 par Niveau )";
+                passive = optStr + "Effet des Niveaux de Bâtiments de Ville en Brique <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 break;
             case ExpeditionKind.Log:
-                name = "Logging Trees";
-                effect = "Logs Gain : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 per Level )";
-                passive = optStr + "Town Log Buildings' level effect <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Lv )";
+                name = "Coûpe d'Arbres";
+                effect = "Gains en Billots : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 par Niveau )";
+                passive = optStr + "Effet des Niveaux de Bâtiments de Ville en Billots <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 break;
             case ExpeditionKind.Shard:
-                name = "Gathering Shards";
-                effect = "Shards Gain : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 per Level )";
-                passive = optStr + "Town Shard Buildings' level effect <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Lv )";
+                name = "Ramassage d'Éclats";
+                effect = "Gains en Éclats : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 par Niveau )";
+                passive = optStr + "Effet des Niveaux de Bâtiments de Ville en Éclats <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 break;
             case ExpeditionKind.PetRank:
-                name = "Capturing Monsters";
-                effect = "Taming Point : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 per Level )";
-                passive = optStr + "Multiply Taming Point Gain by <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Lv )";
-                reward = text + "'s Taming Point";
+                name = "Capture de Monstres";
+                effect = "Point de Domptage : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 par Niveau )";
+                passive = optStr + "Multiplie le Gain de points de Domptage par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
+                reward = "Points de Domptage " + Text;
                 break;
             case ExpeditionKind.Equipment:
-                name = "Training Equipment";
-                effect = "Proficiency Scroll's Time : <color=green>" + percent(1 + 0.10d * expedition.level.value) + "</color>  ( + " + percent(0.10d) + " per Level )";
-                passive = optStr + "Multiply Equipment Proficiency Gain by <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Lv )";
+                name = "Entraînement d'Équipement";
+                effect = "Temps de Parchemin de Maîtrise : <color=green>" + percent(1 + 0.10d * expedition.level.value) + "</color>  ( + " + percent(0.10d) + " par Niveau )";
+                passive = optStr + "Multiplie le Gain en Maîtise d'Équipement par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 break;
             case ExpeditionKind.PetExp:
-                name = "Field Training";
-                effect = "Pet EXP Gain : <color=green>" + percent(Math.Pow(1.2d, expedition.level.value)) + "</color>  ( x1.2 per Level )";
-                passive = optStr + "Multiply Pet EXP Gain from any expeditions by <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Lv )";
-                reward = text + "'s Pet EXP";
+                name = "Entraînement sur le Terrain";
+                effect = "Gain en EXP de Familier : <color=green>" + percent(Math.Pow(1.2d, expedition.level.value)) + "</color>  ( x1.2 par Niveau )";
+                passive = optStr + "Multiplie les Gains d'EXP de Familier en expédition par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
+                reward = "EXP de Familier " + Text;
                 break;
             case ExpeditionKind.WalkDistance:
-                name = "Marathon Race";
-                effect = "Walked Distance : <color=green>" + percent(Math.Pow(1.2d, expedition.level.value)) + "</color>  ( x1.2 per Level )";
-                passive = optStr + "Walked Distance Gain from expeditions <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Lv )";
-                reward = text + " Walked Distance";
+                name = "Marathon";
+                effect = "Distance Marchée: <color=green>" + percent(Math.Pow(1.2d, expedition.level.value)) + "</color>  ( x1.2 par Niveau )";
+                passive = optStr + "Gain de Distance Marchée en expédition <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
+                reward = text + " Distance Marchée";
                 break;
         }
 
