@@ -8096,7 +8096,7 @@ public class Localized_French : LOCALIZATION
     public override string WorldAscensionString()
     {
         string tempStr;
-        tempStr = optStr + "<size=20><u>Accomplished Playtime of World Ascension</u><size=18>";
+        tempStr = optStr + "<size=20><u>Temps de Jeu Accomplis de l'Ascension du Monde</u><size=18>";
         tempStr += "\n- Tier 1 : " + DoubleTimeToDate(game.ascensionCtrl.worldAscensions[0].accomplish.accomplishedTime);
         return tempStr;
     }
@@ -8104,8 +8104,8 @@ public class Localized_French : LOCALIZATION
     {
         StringBuilder tempStringBuilder = new StringBuilder(4096);
         tempStringBuilder.Clear();
-        tempStringBuilder.Append(optStr + "<size=20>TOTAL CLEARED # <color=green>" + tDigit(game.achievementCtrl.TotalClearNum()) + "</color> / " + tDigit(game.achievementCtrl.achievementList.Count));
-        tempStringBuilder.Append(optStr + "\nTotal Clear Bonus : Gold Gain <color=green>+ " + percent(game.achievementCtrl.GoldGainBonus(), 0) + "</color> ( + 1% / clear )");
+        tempStringBuilder.Append(optStr + "<size=20>TOTAL COMPLÉTÉ # <color=green>" + tDigit(game.achievementCtrl.TotalClearNum()) + "</color> / " + tDigit(game.achievementCtrl.achievementList.Count));
+        tempStringBuilder.Append(optStr + "\nBonus Total Complété : Gain d'Or <color=green>+ " + percent(game.achievementCtrl.GoldGainBonus(), 0) + "</color> ( + 1% / clear )");
         tempStringBuilder.Append("\n\n<u>Achievements</u><size=18>");
         switch (helpKind)
         {
