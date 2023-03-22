@@ -8282,12 +8282,12 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Expedition Effect";
-            case 1: return "Complete Reward";
-            case 2: return "Pet EXP Gain";
+            case 0: return "Effet d'Expédition";
+            case 1: return "Récompense de Complétion";
+            case 2: return "Gain d'EXP de Familier";
             case 3: return "Information";
-            case 4: return "Total Completed #";
-            case 5: return "Total Time";
+            case 4: return "Total Complété #";
+            case 5: return "Temps Total";
             default: return "" + text;
         }
     }
