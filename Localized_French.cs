@@ -8191,37 +8191,37 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Click to go to ";
-            case 1: return "You need " + text + " Portal Orb to enter this area(You have " + text2 + ")";
-            case 2: return "Go to see Titles that you acquired.";
-            case 3: return "Remove the Favorite";
-            case 4: return "Assign the Favorite";
-            case 5: return " [Favorite Quest] in Epic Store";
+            case 0: return "Cliquer pour aller à ";
+            case 1: return "Il faut " + text + " Orbes Portail pour entrer dans cette Zone (Vous en avez " + text2 + ")";
+            case 2: return "Aller voir les Titres acquis.";
+            case 3: return "Retirer le Favori";
+            case 4: return "Assigner le Favori";
+            case 5: return " [Quête Favorite] dans le Magasin Épique";
             case 6:
-                return "Title Quests and General Quests are limited to number of Accepted Quests." +
-"\nYou can increase the limit through a Rebirth upgrade.";
-            case 7: return "Walk";
-            case 8: return "Physical Attack #";
-            case 9: return "Fire Attack #";
-            case 10: return "Ice Attack #";
-            case 11: return "Thunder Attack #";
-            case 12: return "Light Attack #";
-            case 13: return "Dark Attack #";
-            case 14: return "General Quest Cleared #";
-            case 15: return "Defeat any " + text + " ";
-            case 16: return "Defeat " + text + " ";
-            case 17: return "Capture any " + text + " ";
+                return "Les Quêtes de Titre et les Quêtes Générales sont limitées au Nombre de Quêtes Acceptées." +
+"\nVous pouvez augmenter la limite avec une amélioration de Réincarnation.";
+            case 7: return "Marcher";
+            case 8: return "Attaque Physique #";
+            case 9: return "Attaque de Feu #";
+            case 10: return "Attaque de Glace #";
+            case 11: return "Attaque de Tonnerre #";
+            case 12: return "Attaque de Lumière #";
+            case 13: return "Attaque des Ténèbres #";
+            case 14: return "Quêtes Générales Complétées #";
+            case 15: return "Vainc un(e) " + text + " ";
+            case 16: return "Vainc " + text + " ";
+            case 17: return "Capture un(e) " + text + " ";
             case 18: return "Capture " + text + " ";
-            case 19: return "Clear #";
-            case 20: return "Guild EXP";
-            case 21: return "(Make sure you have enough slots before claim)";
-            case 22: return "Last Reset Time";
-            case 23: return "Next Reset Time";
-            case 24: return "This quest won't reset while active";
-            case 25: return "Quest Mastery";
-            case 26: return "Current Rank";
-            case 27: return "Total Cleared #";
-            case 28: return "Max Reached #";
+            case 19: return "Complétion #";
+            case 20: return "EXP de Guilde";
+            case 21: return "(Assurez-vous d'avoir suffisament d'emplacements disponibles avant de réclamer)";
+            case 22: return "Temps depuis le Dernier Rafraîchissement";
+            case 23: return "Temps avant le Prochain Rafraîchissement";
+            case 24: return "Cette quête ne se rafraîchira pas tant qu'elle est active";
+            case 25: return "Maîtrise des Quêtes";
+            case 26: return "Rang Courrant";
+            case 27: return "Total Complété #";
+            case 28: return "Max Atteint #";
             default: return "" + text;
         }
     }
