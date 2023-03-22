@@ -8295,8 +8295,8 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Get " + text + "Epic Coin right now!";
-            case 1: return "Only the first purchase doubles Epic Coin!";
+            case 0: return "Obtenez " + text + "Pièces Épiques Maintenant!";
+            case 1: return "Seul le premier achat double les Pièces Épiques!";
             default: return "" + text;
         }
     }
