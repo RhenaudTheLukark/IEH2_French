@@ -2279,7 +2279,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.CrystalGain:
                 if (isOnlyEffectValue) return percent(value);
-                tempString = "Gzin de Cristal (Global) + " + percent(value);
+                tempString = "Gain de Cristal (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.LeafGain:
@@ -6450,48 +6450,48 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Complète toutes les quêtes de tutoriel";
-            case 1: return "Débloque la Mage";
-            case 2: return "Débloque l'Ange";
-            case 3: return "Débloque le Voleur";
-            case 4: return "Débloque l'Archer";
-            case 5: return "Débloque la Dompteuse";
-            case 6: return "Utilise " + tDigit(value) + " Nitro en tout";
-            case 7: return "Capture " + tDigit(value) + " monstres en tout";
-            case 8: return "Ouvre " + tDigit(value) + " Coffre(s) au Trésor";
+            case 0: return "Compléter toutes les quêtes de tutoriel";
+            case 1: return "Débloquer la Mage";
+            case 2: return "Débloquer l'Ange";
+            case 3: return "Débloquer le Voleur";
+            case 4: return "Débloquer l'Archer";
+            case 5: return "Débloquer la Dompteuse";
+            case 6: return "Utiliser " + tDigit(value) + " Nitro en tout";
+            case 7: return "Capturer " + tDigit(value) + " monstres en tout";
+            case 8: return "Ouvrir " + tDigit(value) + " Coffre(s) au Trésor";
             case 9: return "Vaincre " + tDigit(value) + " Mimique(s)";
             case 10: return "Vaincre " + tDigit(value) + " invasion(s)";
-            case 11: return "Marche autour du monde [" + valueString + " mètres]";
-            case 12: return "Marche autour du monde 2 fois [" + valueString + " mètres]";
-            case 13: return "Marche autour du monde 3 fois [" + valueString + " mètres]";
-            case 14: return "Marche autour du monde 5 fois [" + valueString + " mètres]";
-            case 15: return "Marche vers la Lune [" + valueString + " mètres]";
-            case 16: return "Marche vers la Lune aller-retour [" + valueString + " mètres]";
-            case 17: return "Marche vers le Soleil [" + valueString + " mètres]";
-            case 18: return "Dépense " + tDigit(value) + " Pièces Épiques";
-            case 19: return "Débloque " + valueString;
-            case 20: return "Gagne tous les Équipements Uniques de la Collection " + valueString;
-            case 21: return "Gagne " + valueString + " Or en tout";
-            case 22: return "Gagne " + valueString + " Pierres en tout";
-            case 23: return "Gagne " + valueString + " Cristaux en tout";
-            case 24: return "Gagne " + valueString + " Feuilles en tout";
+            case 11: return "Marcher autour du monde [" + valueString + " mètres]";
+            case 12: return "Marcher autour du monde 2 fois [" + valueString + " mètres]";
+            case 13: return "Marcher autour du monde 3 fois [" + valueString + " mètres]";
+            case 14: return "Marcher autour du monde 5 fois [" + valueString + " mètres]";
+            case 15: return "Marcher vers la Lune [" + valueString + " mètres]";
+            case 16: return "Marcher vers la Lune aller-retour [" + valueString + " mètres]";
+            case 17: return "Marcher vers le Soleil [" + valueString + " mètres]";
+            case 18: return "Dépenser " + tDigit(value) + " Pièces Épiques";
+            case 19: return "Débloquer " + valueString;
+            case 20: return "Gagner tous les Équipements Uniques de la Collection " + valueString;
+            case 21: return "Gagner " + valueString + " Or en tout";
+            case 22: return "Gagner " + valueString + " Pierres en tout";
+            case 23: return "Gagner " + valueString + " Cristaux en tout";
+            case 24: return "Gagner " + valueString + " Feuilles en tout";
             case 25: return "Atteindre le Niveau de Guilde " + tDigit(value);
             case 26: return "Vaincre le Boss de Raid [" + valueString + "]";
             case 27: return "Atteindre le Niveau de Potion total " + tDigit(value);
-            case 28: return "Gagne " + valueString + " Points d'Alchimie en tout";
-            case 29: return "Gagne " + tDigit(value) + " Équipement en tout";
-            case 30: return "Aie " + tDigit(value) + " Emplacements d'Arme pour le héros " + valueString;
-            case 31: return "Aie " + tDigit(value) + " Emplacements d'Armure pour le héros " + valueString;
-            case 32: return "Aie " + tDigit(value) + " Emplacements de Bijou pour le héros " + valueString;
-            case 33: return "Aie " + tDigit(value) + " Emplacements d'Utilitaire pour le héros " + valueString;
-            case 34: return "Aie " + tDigit(value) + " Emplacements de Capacité de Classe pour le héros " + valueString;
-            case 35: return "Aie 8 Emplacements de Capacité Global";
-            case 36: return "Effectue " + tDigit(value) + " Réincarnation " + valueString;
-            case 37: return "Effectue " + tDigit(value) + " Ascension Monde";
-            case 38: return "Joue à IEH pendant " + tDigit(value) + " jour(s) de temps de jeu";
-            case 39: return "Joue à IEH pendant " + tDigit(value) + " semaine(s) de temps de jeu";
-            case 40: return "Joue à IEH pendant " + tDigit(value) + " mois(s) de temps de jeu";
-            case 41: return "Joue à IEH pendant " + tDigit(value) + " année(s) de temps de jeu";
+            case 28: return "Gagner " + valueString + " Points d'Alchimie en tout";
+            case 29: return "Gagner " + tDigit(value) + " Équipement en tout";
+            case 30: return "Avoir " + tDigit(value) + " Emplacements d'Arme pour le héros " + valueString;
+            case 31: return "Avoir " + tDigit(value) + " Emplacements d'Armure pour le héros " + valueString;
+            case 32: return "Avoir " + tDigit(value) + " Emplacements de Bijou pour le héros " + valueString;
+            case 33: return "Avoir " + tDigit(value) + " Emplacements d'Utilitaire pour le héros " + valueString;
+            case 34: return "Avoir " + tDigit(value) + " Emplacements de Capacité de Classe pour le héros " + valueString;
+            case 35: return "Avoir 8 Emplacements de Capacité Global";
+            case 36: return "Effectuer " + tDigit(value) + " Réincarnation " + valueString;
+            case 37: return "Effectuer " + tDigit(value) + " Ascension Monde";
+            case 38: return "Jouer à IEH pendant " + tDigit(value) + " jour(s) de temps de jeu";
+            case 39: return "Jouer à IEH pendant " + tDigit(value) + " semaine(s) de temps de jeu";
+            case 40: return "Jouer à IEH pendant " + tDigit(value) + " mois(s) de temps de jeu";
+            case 41: return "Jouer à IEH pendant " + tDigit(value) + " année(s) de temps de jeu";
         }
         return "";
     }
@@ -6599,7 +6599,7 @@ public class Localized_French : LOCALIZATION
             case 17: return "Détails de Gains";
             case 18: return "Base";
             case 19: return "Stats du Héros";
-            case 20: return "Ce monstre n'a pas de matériau laché";
+            case 20: return "Ce monstre ne lâche pas de matériau";
             case 21: return "Effet de Familier Actif";
             case 22: return "Effet de Familier Passif";
             case 23: return "Stats du Familier";
@@ -6612,24 +6612,24 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Warrior's Emplacement d'Arme";
-            case 1: return "Wizard's Emplacement d'Arme";
-            case 2: return "Angel's Emplacement d'Arme";
-            case 3: return "Thief's Emplacement d'Arme";
-            case 4: return "Archer's Emplacement d'Arme";
-            case 5: return "Tamer's Emplacement d'Arme";
-            case 6: return "Warrior's Emplacement d'Armure";
-            case 7: return "Wizard's Emplacement d'Armure";
-            case 8: return "Angel's Emplacement d'Armure";
-            case 9: return "Thief's Emplacement d'Armure";
-            case 10: return "Archer's Emplacement d'Armure";
-            case 11: return "Tamer's Emplacement d'Armure";
-            case 12: return "Warrior's Emplcement de Bijou";
-            case 13: return "Wizard's Emplcement de Bijou";
-            case 14: return "Angel's Emplcement de Bijou";
-            case 15: return "Thief's Emplcement de Bijou";
-            case 16: return "Archer's Emplcement de Bijou";
-            case 17: return "Tamer's Emplcement de Bijou";
+            case 0: return "Emplacement d'Arme du Guerrier";
+            case 1: return "Emplacement d'Arme de la Mage";
+            case 2: return "Emplacement d'Arme de l'Ange";
+            case 3: return "Emplacement d'Arme du Voleur";
+            case 4: return "Emplacement d'Arme de l'Archer";
+            case 5: return "Emplacement d'Arme de la Dompteuse";
+            case 6: return "Emplacement d'Armure du Guerrier";
+            case 7: return "Emplacement d'Armure de la Mage";
+            case 8: return "Emplacement d'Armure de l'Ange";
+            case 9: return "Emplacement d'Armure du Voleur";
+            case 10: return "Emplacement d'Armure de l'Archer";
+            case 11: return "Emplacement d'Armure de la Dompteuse";
+            case 12: return "Emplcement de Bijou du Guerrier";
+            case 13: return "Emplcement de Bijou de la Mage";
+            case 14: return "Emplcement de Bijou de l'Ange";
+            case 15: return "Emplcement de Bijou du Voleur";
+            case 16: return "Emplcement de Bijou de l'Archer";
+            case 17: return "Emplcement de Bijou de la Dompteuse";
             case 18: return "Emplacement d'Inventaire d'Équipement + " + slotAmt;
             case 19: return "Emplacement d'Inventaire d'Enchantement + " + slotAmt;
             case 20: return "Emplacement d'Inventaire d'Utilitaire + " + slotAmt;
@@ -6715,7 +6715,7 @@ public class Localized_French : LOCALIZATION
             case 38: return "Taux de Converstion d'Essence ";
             case 39: return "Limite Max d'Eau Mystérieuse ";
             case 40: return "Forge";
-            case 41: return "MUltiplie l'Effet des Équipements par ";
+            case 41: return "Multiplie l'Effet des Équipements par ";
             case 42: return "Points de Dictionnaire Gagnés : " + text;
             case 43: return "Débloque la [Fabrication] dans l'onglet Lab";
             case 44: return "Débloque la fabrication de nouveaux Parchemins";
@@ -8728,7 +8728,7 @@ public class Localized_French : LOCALIZATION
             case 23: return "Temps avant le Prochain Rafraîchissement";
             case 24: return "Cette quête ne se rafraîchira pas tant qu'elle est active";
             case 25: return "Maîtrise des Quêtes";
-            case 26: return "Rang Courrant";
+            case 26: return "Rang Courant";
             case 27: return "Total Complété #";
             case 28: return "Max Atteint #";
             default: return "" + text;
