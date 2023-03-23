@@ -8242,72 +8242,73 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Ces combats ont des limitations pendant le combat. Par exemple, aucune capacité globale n'est autorisée, aucun équipement n'est autorisé, ou seul un certain nombre d'emplacements de capacité est disponible.";
                 tempStr += "\n- Vous devez d'abord vaincre le Combat de Boss Solo pour débloquer les Combats de Boss avec Handicap.";
                 tempStr += "\n\n";
-                tempStr += "Le bâtiment de ville [Arène Mystique] est associée à ces Défis. Vous pouvez débloquer de nouveaux étages et niveaux de boss à travers ce bâtiment de ville. ";
+                tempStr += "Le bâtiment de ville [Arène Mystique] est associé à ces Défis. Vous pouvez débloquer de nouveaux étages et niveaux de boss à travers ce bâtiment de ville. ";
                 break;
             case HelpKind.Expedition:
-                tempStr += "Expeditions are where you can send your pets (achieved by getting the pets to rank 1 through capturing them) out on different types of adventures.";
+                tempStr += "Les expéditions sont là où vous pouvez envoyer vos familiers (récupéré en augmentant le rang de monstres au Rang 1 à travers des captures) dans de différentes types d'aventures.";
                 tempStr += "\n\n";
-                tempStr += "To start an expedition, click on an open pet slot on a team. (Click the grey + button under Team) Select the pet you would like to send. (Be mindful that this pet can not be used again, until you end the Expedition). Select which Expedition you would like to send the Team on, by the dropdown menu. You can then adjust the length of the Expedition. Longer the expedition, the more gold it will cost to send. Once everything is set, click Start and wait the length of the time. Click Claim to receive the rewards.";
+                tempStr += "Pour lancer une expédition, cliquez sur un emplacement de familier vide dans l'équipe. (Cliquez sur le bouton + gris sous Equipe). Sélectionnez le familier que vous voulez envoyer. (Faites attention, ce familier ne sera plus disponible jusqu'à la fin de l'expédition). Sélectionnez l'expédition dans laquelle vous voulez envoyer votre Equipe, à travers la liste déroulante. Vous pouvez ensuite ajuster la durée de l'expédition. Plus l'expédition est longue, plus son coût en Or sera élevé. Une fois que tout est prêt, appuyez sur Commencer puis attendez la fin de l'expédition. Une fois cela fait, appuyez sur Réclamer pour récupérer les récompenses de celle-ci.";
                 tempStr += "\n\n";
-                tempStr += "Each pet species will have different rewards regarding the Expeditions you send them on. You can increase the rewards by changing the length of Expeditions, increasing the Team Rank, and the Type of Expedition level. As you send the pets on expeditions, they will also gain Pet levels and meters walked which will count towards your total meters walked for World Ascension.";
+                tempStr += "Chaque espèce de familier aura des récompenses différentes suivant l'Expédition dans laquelle elle est envoyée. Vous pouvez augmenter les gains en changeant la longueur de l'expédition, en augmentant le Rang de l'Equipe, et le Niveau du Type d'Expédition. Les familiers gagneront aussi des Niveaux de Familier ainsi que de la distance parcourue supplémentaire comptabilisée pour l'Ascension Monde lorsqu'ils sont envoyés dans une expédition.";
                 tempStr += "\n\n";
-                tempStr += "You first start out with 3 different Distant Expeditions. Manufacturing Bricks, Logging Trees, and Gathering Shards. The rewards that you can receive are the Town materials, Bricks, Logs, and Shards.";
+                tempStr += "Vous commencez avec 3 types d'Expéditions Lointaines. La Manufacture de Briques, la Coûpe d'Arbres, et le Ramassage d'Éclats. Les récompenses reçues à travers celles-ci sont des Matériaux de Ville, des Briques, des Billots et des Eclats.";
                 tempStr += "\n\n";
-                tempStr += "Leveling up the expeditions will increase your total expeditions levels, which can unlock new expeditions and increase their passives.";
+                tempStr += "Monter le niveau des expéditions augmenteront votre nombre total de niveaux d'expéditions, qui peut débloquer de nouvelles expéditions ainsi qu'augmenter leurs effets passifs.";
                 tempStr += "\n\n";
-                tempStr += "There is a town building [Adventuring Party] that helps Expeditions, such as unlocking new Teams, pet slots, and Town Research for Expeditions.";
+                tempStr += "Le bâtiment de ville [Equipe d'Aventuriers] aide au niveau des Expéditions, en débloquant de nouvelles Equipes, de nouveaux emplacements de familiers, et en donnant accès à des Recherches de Ville liées aux Expéditions.";
                 break;
             case HelpKind.WorldAscension:
-                tempStr += "World Ascension is where the entire world resets, and you start back over. This time, even stronger than the previous world. ";
+                tempStr += "L'Ascension Monde est un processus dans lequel le monde entier est réinitialisé, ce qui vous fait recommencer du début. Cependant, ce nouveau monde sera bien plus fort que le précédent. ";
                 tempStr += "\n\n";
-                tempStr += "The full list of what is reset, and what isn’t reset is in the Ascension tab, at the top left (I) icon. There you can see all of what will be reset, kept, and words of caution. In the Top Right, you can change the Tiers of World Ascension when they are unlocked. There is only currently Tier 1 in game.";
+                tempStr += "La liste complète de ce qui est réinitialisé et de ce qui ne l'est pas est visible dans l'onglet Ascension, dans l'icône en haut à gauche (I). Vous pourrez voir ce qui est réinitialisé, ce qui ne l'est pas, ainsi que quelques mots d'avertissement. En haut à droite, vous pouvez changer la Classe de l'Ascension Monde lorsqu'elles seront débloquées. Il n'existe que l'Ascension Monde de Classe 1 en jeu couremment.";
                 tempStr += "\n\n\n";
-                tempStr += "<u>World Ascension Tier 1</u>";
+                tempStr += "<u>Ascension Monde de Classe 1</u>";
                 tempStr += "\n";
-                tempStr += "You have 8 different milestones that you can advance. You will need to reach a certain number of Milestones to be able to ascend the world. The first time you ascend the requirement will be 5 total Milestone levels. This cost will increase by 1, every time you World Ascend. ";
+                tempStr += "Il existe 8 paliers différents qu'il est possible d'atteindre. Vous aurez besoin de compléter un certain nombre de Paliers pour pouvoir effectuer une Ascension Monde. La première fois, 5 Niveaux de Paliers doivent être atteints afin d'être éligible. Ce coût augmente de 1 pour chaque Ascension Monde suivante. ";
                 tempStr += "\n\n";
-                tempStr += "The 8 Milestones are";
-                tempStr += "\n- Raise the Town – This is directly tied to the total # of levels of your town buildings.";
-                tempStr += "\n- Very Resourceful - Tied to the total # of levels of your General 1 tab, the Resource Gain upgrades.";
-                tempStr += "\n- Polished Equipper - This focuses on the amount of dictionary points you’ve gained.";
-                tempStr += "\n- Rebirther 1 – Total number of Rebirth Tier 1 Points that all heroes have gained this World Ascension. ";
-                tempStr += "\n- Map Milestoner – Total number of Area Mission Milestones that were achieved this World Ascension.";
-                tempStr += "\n- Walk the World – How far your heroes and pets have walked this Ascension.";
-                tempStr += "\n- Pro Disassembler – Total number of Town Materials gained by Disassembling them.";
-                tempStr += "\n- Rebirther 2 - Total number of Rebirth Tier 2 points that all of the heroes have gained this World Ascension.";
+                tempStr += "Les 8 Paliers sont";
+                tempStr += "\n- Constructeur de Ville – Celui-ci est directement lié au nombre de niveaux de vos bâtiments de ville.";
+                tempStr += "\n- Emissaire de la Carte – Nombre total de Paliers de Missions de Zone atteint pendant cette Ascension Monde.";
+                tempStr += "\n- Très Ressourcé - Lié au nombre de niveaux de l'onglet Général 1, des améliorations de Gain de Ressources.";
+                tempStr += "\n- Explorateur du Monde – La distance totale parcourue par les héros et les familiers pendant cette Ascension Monde.";
+                tempStr += "\n- Expert en Équipement - Celui-ci se concentre sur le nombre de points de dictionnaire accumulés.";
+                tempStr += "\n- Désassembleur Professionnel – Nombre total de Matériaux de Ville gagnés à travers le Désassemblage d'Equipement.";
+                tempStr += "\n- Réincarnateur Classe 1 – Nombre total de Réincarnations de Classe 1 effectuées à travers tous les héros pendant cette Ascension Monde. ";
+                tempStr += "\n- Réincarnateur Classe 2 – Nombre total de Réincarnations de Classe 2 effectuées à travers tous les héros pendant cette Ascension Monde.";
                 tempStr += "\n\n";
-                tempStr += "With the Milestones, each level you earn will award you with World Ascension Points. Not to be confused with the Milestone levels. Hover over each Milestone to see the amount of World Ascension points they will give, and how close you are to achieving the next level of that milestone. ";
+                tempStr += "Avec ces Paliers, chaque niveau gagné vous donnera des Points d'Ascension Monde, à ne pas confrondre avec les Niveaux de Paliers. Déplacez votre souris sur chaque Palier pour voir le nombre de points d'Ascension Monde qu'ils vous octroient ainsi que ce qui reste à faire afin d'atteindre le prochain niveau de ce palier. ";
                 tempStr += "\n\n\n";
-                tempStr += "Accomplishments are like tasks that you can complete for extra World Ascension points. These are timed, that starts at the beginning of that World Ascension. You can see your total time played in the Ascension tab, use this as a clock for accomplishments.";
+                tempStr += "Les Accomplissements sont comme des tâches qui peuvent être complétées pour récupérer des points d'Ascension Monde supplémentaires. Ceux-ci ont une limite de temps qui commence aussi tôt que l'Ascension Monde commence. Vous pouvez voir votre temps de jeu total dans l'onglet Ascension, que vous pouvez utiliser en tant que chronomètre pour les accomplissements.";
                 tempStr += "\n\n";
-                tempStr += "For each accomplishment you clear, you'll gain 1 total clear count, you'll also be awarded extra World Ascension points. There are rewards for achieving high clears in Accomplishments. Such as at 5 Accomplishments completed, you will be able to carry all uniques regardless of Enchantments/Enchant Slots through World Ascending. ";
+                tempStr += "Pour chaque Accomplissement complété, vous gagnerez 1 complétion totale, ainsi que des points d'Ascension Monde supplémentaires. Il existe des récompenses si vous arrivez à compléter un bon nombre d'Accomplissements. Par exemple, si vous arrivez à compléter 5 Accomplissements, vous pourrez garder tous les objets uniques peu importe leurs Emplacements d'Enchantement après une Ascension Monde. ";
                 tempStr += "\n\n";
-                tempStr += "The World Ascension Points awarded for completing accomplishments are awarded straight away to be used. ";
+                tempStr += "Les Point d'Ascension Monde gagnés à travers la complétion d'accomplissements sont donnés directement, et peuvent être utilisés instantanément. ";
                 tempStr += "\n\n\n";
-                tempStr += "World Ascension Upgrades ";
-                tempStr += "\n- Guild Exp Booster – This Multiplies your Guild EXP % for heroes.";
-                tempStr += "\n- Active Hero Slot Expansion – Allows you to have 1 extra passive hero working in the background.";
-                tempStr += "\n- Pre Rebirther 1 – This One-time(per WA) upgrade gives you Rebirth Tier 1 Points to spend.";
-                tempStr += "\n- Rebirth Tier 1 Bonus Expansion – This expands the[Max Hero Level Reached] for Rebirth Tier 1 Additional Ability Points.";
-                tempStr += "\n- WA Milestone Point Efficiency – Increases the Points you gain each time you level a Milestone.";
-                tempStr += "\n- Area Booster – Increases the Clear Count and Reward per Clear from Areas per upgrade.";
-                tempStr += "\n- Skill Proficiency Boost – Multiplies your skill proficiency gain % for heroes.";
-                tempStr += "\n- Pre - Rebirther Tier 2 – This One - Time(per - wa) upgrade gives you Rebirth Tier 2 points to spend, when you have the required Temple Building Rank.";
-                tempStr += "\n- Rebirth Tier 2 Bonus Expansion – This expands the[Max Hero Level Reached] for Rebirth Tier 2 , Ability Point every 25th Hero Level. ";
+                tempStr += "Améliorations d'Ascension Monde ";
+                tempStr += "\n- Boosteur d'EXP de Guilde – Multiplie le % de Gains d'EXP de Guilde pour tous les héros.";
+                tempStr += "\n- Boosteur de Zone – Augmente le nombre de Complétions de Zone et la Récompense de Complétion pour chaque amélioration.";
+                tempStr += "\n- Expansion d'Emplacement de Héro Actif – Permet d'avoir 1 héros actif en plus en arrière-plan.";
+                tempStr += "\n- Boost de Maîtrise de Capacité – Multiplie les gains de maîtrise de capacité pour tous les héros.";
+                tempStr += "\n- Points de Pré-Réincarnation Classe 1 – Cette amélioration donne des Points de Réincarnation de Classe 1 à dépenser au début d'une AM.";
+                tempStr += "\n- Points de Pré-Réincarnation Classe 2 – Cette amélioration donne des Points de Réincarnation de Classe 2 à dépenser lorsque la Réincarnation de Classe 2 esr débloquée à trvaers le Bâtiment Temple.";
+                tempStr += "\n- Expansion du Bonus de Réincarnation Classe 1 – Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 1.";
+                tempStr += "\n- Expansion du Bonus de Réincarnation Classe 2 – Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 2. ";
+                tempStr += "\n- Efficacité des Points d'AM par Palier – Augmente le nombre de Points gagnés à chaque fois qu'un Palier est atteint.";
+                tempStr += "\n- Amélioration de Nitro – Augmente la vitesse du jeu lorsque la Nitro est utilisée.";
                 break;
             case HelpKind.EpicStore:
-                tempStr += "The Epic Store is where you can purchase some premium upgrades/unlocks such as more Equipment slots, upgrades to Auto Rebirthing, Super Queues in Upgrades and Alchemy. To purchase these upgrades you need to gain <color=orange>Epic Coins (EC)</color>.";
-                tempStr += "\nThere are multiple ways to gain Epic Coins. <color=orange>Epic Coin Daily Quests</color>, <color=orange>Area Mission Completions</color>, <color=orange>Achievements</color>, and with Real life Money.";
+                tempStr += "Le Magasin Epique est là où vous achetez des améliorations/fonctionnalités supplémentaires tel que plus d'Emplacements d'Equipement, des améliorations liées à l'Auto-Réincarnation ou encore les Super Files pour les Améliorations et l'Alchimie. Les <color=orange>Pièces Epiques (PE)</color> sont utilisées pour acheter ces améliorations.";
+                tempStr += "\nIl y a plusieurs façons de gagner des Pièces Epiques. Les <color=orange>Quêtes Journalières de Pièces Epiques</color>, les <color=orange>Complétions de Missions de Zones</color>, les <color=orange>Succès</color>, ainsi qu'en les achetant avec de l'argent réel.";
                 tempStr += "\n\n";
-                tempStr += "You currently can have up to 4 Daily EC quests each day. They reset at your local computer time of Midnight. You start with 1 EC daily quest, 1 from the Statue of Heroes town building level 25 Milestone, and the last 2 EC quests are from the Epic store.";
+                tempStr += "Vous pouvez avoir jusqu'à 4 Quêtes Journalières de PE chaque jour. Elles sont réinitialisées lorsqu'il est Minuit dans l'horloge locale de l'ordinateur. Vous commencez avec 1 Quête Journalière de PE, 1 à travers la complétion du palier de niveau 25 du bâtiment de ville Statue de Héros, et les 2 dernières à travers le Magasin Epique.";
                 tempStr += "\n\n";
-                tempStr += "Completing Missions for each Area will also give Epic Coins. You only get Epic Coins on once per mission, per save. Each Area difficulty increases the EC Reward. Each Area has 10 total difficulties, and a max of 5 missions each. 50 Total Missions that can give a one-time reward of EC, per Area. There are 8 Areas per Region, and 10 Regions in the game.";
+                tempStr += "Compléter les Missions de chaque Zone octroie aussi des Pièces Epiques. Vous ne gagnez des Pièces Epiques qu'une seule fous par mission, par sauvegarde. Chaque Difficulté de Zone augmente la réompense en PE. Chaque Zone a 10 difficultés différentes, ayant un maximum de 5 missions chacunes. Au total, 50 missions donnent une récompense de première complétion par Zone. Il existe 10 Régions dans le jeu, comprenant chacune 8 Zones.";
                 tempStr += "\n\n";
-                tempStr += "There are achievements within the game, that will reward Epic Coins. Feel free to look at which ones do by going to Help > Achievements.";
+                tempStr += "Il exite aussi des succès en jeu qui donnent des Pièces Epiques. Veuillez en voir la liste en allant dans Aide > Succès.";
                 tempStr += "\n\n";
-                tempStr += "Lastly, you can purchase Epic Coins directly from the Epic Store using real life money.";
+                tempStr += "Enfin, vous pouvez directement acheter des Pièces Epiques depuis de Magasin Epique en utilisant de l'argent réel.";
                 tempStr += "\n\n";
-                tempStr += "Within the game currently, it is possible to gain <color=orange>over 250,000 Epic Coins</color> just by completing Missions and the Achievements.";
+                tempStr += "À ce jour, au total, il est possible de gagner <color=orange>plus de 250 000 Pièces Epiques</color> juste en compétant les Missions et les Succès en jeu.";
                 break;
             case HelpKind.S_General:
                 tempStr += GeneralString();
@@ -8348,85 +8349,85 @@ public class Localized_French : LOCALIZATION
     {
         string tempStr = optStr;
         double tempValue;
-        tempStr += "<size=20><u>Playtime</u><size=18>";
+        tempStr += "<size=20><u>Temps de Jeu</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
             if (main.S.playtimes[count] > 0)
             {
                 tempStr += "\n" + Hero((HeroKind)count);
-                tempStr += "\n- In-Game Playtime : " + DoubleTimeToDate(main.S.playtimes[count]);
+                tempStr += "\n- Temps de Jeu en Jeu : " + DoubleTimeToDate(main.S.playtimes[count]);
                 if (game.ascensionCtrl.worldAscensions[0].performedNum > 0)
-                    tempStr += "  ( This World Ascension : " + DoubleTimeToDate(main.SR.playtimes[count]) + " )";
-                tempStr += "\n- Real-time Active Playtime : " + DoubleTimeToDate(main.S.playtimesRealTime[count]);
+                    tempStr += "  ( Cette Ascension Monde : " + DoubleTimeToDate(main.SR.playtimes[count]) + " )";
+                tempStr += "\n- Temps de Jeu Actif Réel : " + DoubleTimeToDate(main.S.playtimesRealTime[count]);
                 if (game.ascensionCtrl.worldAscensions[0].performedNum > 0)
-                    tempStr += "  ( This World Ascension : " + DoubleTimeToDate(main.SR.playtimesRealTime[count]) + " )";
+                    tempStr += "  ( Cette Ascension Monde : " + DoubleTimeToDate(main.SR.playtimesRealTime[count]) + " )";
             }
         }
         tempStr += "\nTotal";
-        tempStr += "\n- In-Game Playtime : " + DoubleTimeToDate(main.allTime);
-        tempStr += "\n- Real-time Active Played : " + DoubleTimeToDate(main.allTimeRealtime);
+        tempStr += "\n- Temps de Jeu en Jeu : " + DoubleTimeToDate(main.allTime);
+        tempStr += "\n- Temps de Jeu Actif Réel : " + DoubleTimeToDate(main.allTimeRealtime);
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Total Currency Gained</u><size=18>";
-        tempStr += "\n- Gold : " + tDigit(main.S.totalGold);
-        tempStr += "\n- Stone : " + tDigit(main.S.totalStone);
-        tempStr += "\n- Crystal : " + tDigit(main.S.totalCrystal);
-        tempStr += "\n- Leaf : " + tDigit(main.S.totalLeaf);
-        tempStr += "\n- Slime Coin : " + tDigit(main.S.totalSlimeCoin);
+        tempStr += "<size=20><u>Total de Ressources Gagnées</u><size=18>";
+        tempStr += "\n- Or : " + tDigit(main.S.totalGold);
+        tempStr += "\n- Pierre : " + tDigit(main.S.totalStone);
+        tempStr += "\n- Cristal : " + tDigit(main.S.totalCrystal);
+        tempStr += "\n- Feuille : " + tDigit(main.S.totalLeaf);
+        tempStr += "\n- Pièce Slime : " + tDigit(main.S.totalSlimeCoin);
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Max Hero Level Reached</u><size=18>";
+        tempStr += "<size=20><u>Niveau de Héros Max Atteint</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
-            tempStr += "\n- " + localized.Hero((HeroKind)count) + " : Lv " + tDigit(main.S.maxHeroLevelReached[count]);
+            tempStr += "\n- " + localized.Hero((HeroKind)count) + " : Nv " + tDigit(main.S.maxHeroLevelReached[count]);
         }
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Total Walked Distance</u><size=18>";
+        tempStr += "<size=20><u>Distance Parcourue Totale</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
-            tempStr += "\n- " + localized.Hero((HeroKind)count) + " : " + meter(main.S.movedDistance[count]) + " | This Ascension " + meter(main.S.totalMovedDistance[count]) + " | This Rebirth " + meter(main.SR.movedDistance[count]);
+            tempStr += "\n- " + localized.Hero((HeroKind)count) + " : " + meter(main.S.movedDistance[count]) + " | Cette Ascension " + meter(main.S.totalMovedDistance[count]) + " | Cette Réincarnation " + meter(main.SR.movedDistance[count]);
         }
-        tempStr += "\n- Pet : " + meter(main.S.movedDistancePet) + " | This Ascension " + meter(main.S.totalMovedDistancePet);// + " | This Rebirth " + meter(main.SR.movedDistancePet);
-        tempStr += "\nTotal : " + meter(game.statsCtrl.TotalMovedDistance(false)) + " | This Ascension " + meter(game.statsCtrl.TotalMovedDistance(true));
+        tempStr += "\n- Familier : " + meter(main.S.movedDistancePet) + " | Cette Ascension " + meter(main.S.totalMovedDistancePet);// + " | Cette Réincarnation " + meter(main.SR.movedDistancePet);
+        tempStr += "\nTotal : " + meter(game.statsCtrl.TotalMovedDistance(false)) + " | Cette Ascension " + meter(game.statsCtrl.TotalMovedDistance(true));
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Swarm</u><size=18>";
-        tempStr += "\n- Total Swarms Vanquished : " + tDigit(main.S.swarmClearedNum);
-        tempStr += "\n- Best Swarm Score (Regular) : " + tDigit(main.S.swarmBestScores[0]);
-        tempStr += "\n- Best Swarm Score (Large) : " + tDigit(main.S.swarmBestScores[1]);
-        tempStr += "\n- Best Swarm Score (Epic) : " + tDigit(main.S.swarmBestScores[2]);
+        tempStr += "<size=20><u>Invasion</u><size=18>";
+        tempStr += "\n- Total d'Invasions Vaincues : " + tDigit(main.S.swarmClearedNum);
+        tempStr += "\n- Meilleur Score d'Invasion (Normale) : " + tDigit(main.S.swarmBestScores[0]);
+        tempStr += "\n- Meilleur Score d'Invasion (Grosse) : " + tDigit(main.S.swarmBestScores[1]);
+        tempStr += "\n- Meilleur Score d'Invasion (Epique) : " + tDigit(main.S.swarmBestScores[2]);
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Others</u><size=18>";
-        tempStr += "\n- Total Treasure Chest Opened # : " + tDigit(main.S.openedChestNum);
-        tempStr += "\n- Total Equipment Gained : " + tDigit(main.S.totalEquipmentGained);
+        tempStr += "<size=20><u>Autres</u><size=18>";
+        tempStr += "\n- Total de Coffres au Trésor ouverts : " + tDigit(main.S.openedChestNum);
+        tempStr += "\n- Total d'Equipement Gagné : " + tDigit(main.S.totalEquipmentGained);
         tempValue = 0;
         for (int i = 0; i < main.S.disassembledEquipmentNums.Length; i++)
         {
             tempValue += main.S.disassembledEquipmentNums[i];
         }
-        tempStr += "\n- Total Equipment Disassembled : " + tDigit(tempValue);
-        tempStr += "\n- Total Alchemy Point Gained : " + tDigit(main.S.totalAlchemyPointGained);
-        tempStr += "\n- Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum());
+        tempStr += "\n- Total d'Equipement Désassemblé : " + tDigit(tempValue);
+        tempStr += "\n- Total de Points d'Alchimie Gagnés : " + tDigit(main.S.totalAlchemyPointGained);
+        tempStr += "\n- Total de Montres Capturés : " + tDigit(game.monsterCtrl.CapturedNum());
         tempStr += "\n\n";
         return tempStr;
     }
     public override string GuildLevelString()
     {
         string tempStr = optStr;
-        tempStr += "Max Guild Level Reached : Lv " + tDigit(main.S.maxGuildLevel);
+        tempStr += "Niveau de Guilde Max Atteint : Nv " + tDigit(main.S.maxGuildLevel);
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Accomplished Playtime of Guild Level</u><size=18>";
+        tempStr += "<size=20><u>Record de Temps de Niveau de Guilde</u><size=18>";
         for (int i = 0; i < game.guildCtrl.accomplishGuildLevels.Length; i++)
         {
             if (game.guildCtrl.accomplishGuildLevels[i].accomplishedBestTime > 0)
             {
-                tempStr += "\n- Lv " + tDigit(i) + " : ";
+                tempStr += "\n- Nv " + tDigit(i) + " : ";
                 if (game.guildCtrl.accomplishGuildLevels[i].accomplishedTime > 0)
                     tempStr += DoubleTimeToDate(game.guildCtrl.accomplishGuildLevels[i].accomplishedTime);
                 if (game.ascensionCtrl.worldAscensions[0].performedNum > 0)
                 {
-                    tempStr += " | Best : " + DoubleTimeToDate(game.guildCtrl.accomplishGuildLevels[i].accomplishedBestTime);
-                    tempStr += " | First : " + DoubleTimeToDate(game.guildCtrl.accomplishGuildLevels[i].accomplishedFirstTime);
+                    tempStr += " | Meilleur : " + DoubleTimeToDate(game.guildCtrl.accomplishGuildLevels[i].accomplishedBestTime);
+                    tempStr += " | Premier : " + DoubleTimeToDate(game.guildCtrl.accomplishGuildLevels[i].accomplishedFirstTime);
                 }
             }
         }
@@ -8435,13 +8436,13 @@ public class Localized_French : LOCALIZATION
     public override string TownString()
     {
         string tempStr = optStr;
-        tempStr += "<size=20><u>Town Material Gain Breakdowns</u><size=18>";
+        tempStr += "<size=20><u>Détails des Gains de Matériaux de Ville</u><size=18>";
         tempStr += optStr + "\n" + game.townCtrl.townMaterialGainMultiplier[(int)game.currentHero].BreakdownString(true);
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Town Material Gain from Disassembling Equipment Breakdowns</u><size=18>";
+        tempStr += "<size=20><u>Détails des Gains de Matériaux de Ville à travers le Désassemblage d'Equipement</u><size=18>";
         tempStr += optStr + "\n" + game.equipmentCtrl.disassembleMultiplier.BreakdownString(true);
         tempStr += "\n\n";
-        tempStr += optStr + "<size=20><u>Accomplished Playtime of Building Rank</u><size=18>";
+        tempStr += optStr + "<size=20><u>Record de Temps de Rang de Bâtiment</u><size=18>";
         for (int i = 0; i < game.townCtrl.buildings.Length; i++)
         {
             BUILDING building = game.townCtrl.buildings[i];
@@ -8453,13 +8454,13 @@ public class Localized_French : LOCALIZATION
                     int countJ = j;
                     if (building.accomplish[countJ].accomplishedBestTime > 0)
                     {
-                        tempStr += "\n- Rank " + tDigit(j + 1) + " : ";
+                        tempStr += "\n- Rang " + tDigit(j + 1) + " : ";
                         if (building.accomplish[countJ].accomplishedTime > 0)
                             tempStr += DoubleTimeToDate(building.accomplish[countJ].accomplishedTime);
                         if (game.ascensionCtrl.worldAscensions[0].performedNum > 0)
                         {
-                            tempStr += " | Best : " + DoubleTimeToDate(building.accomplish[countJ].accomplishedBestTime);
-                            tempStr += " | First : " + DoubleTimeToDate(building.accomplish[countJ].accomplishedFirstTime);
+                            tempStr += " | Meilleur : " + DoubleTimeToDate(building.accomplish[countJ].accomplishedBestTime);
+                            tempStr += " | Premier : " + DoubleTimeToDate(building.accomplish[countJ].accomplishedFirstTime);
                         }
                     }
 
@@ -8471,7 +8472,7 @@ public class Localized_French : LOCALIZATION
     public override string ChallengeString()
     {
         string tempStr;
-        tempStr = optStr + "<size=20><u>Accomplished Playtime of Challenge</u><size=18>";
+        tempStr = optStr + "<size=20><u>Record de Temps de Défi</u><size=18>";
         for (int i = 0; i < game.challengeCtrl.challengeList.Count; i++)
         {
             CHALLENGE challenge = game.challengeCtrl.challengeList[i];
@@ -8481,8 +8482,8 @@ public class Localized_French : LOCALIZATION
                 tempStr += DoubleTimeToDate(challenge.accomplish.accomplishedTime);
                 if (game.ascensionCtrl.worldAscensions[0].performedNum > 0)
                 {
-                    tempStr += " | Best : " + DoubleTimeToDate(challenge.accomplish.accomplishedBestTime);
-                    tempStr += " | First : " + DoubleTimeToDate(challenge.accomplish.accomplishedFirstTime);
+                    tempStr += " | Meilleur : " + DoubleTimeToDate(challenge.accomplish.accomplishedBestTime);
+                    tempStr += " | Premier : " + DoubleTimeToDate(challenge.accomplish.accomplishedFirstTime);
                 }
             }
         }
@@ -8491,7 +8492,7 @@ public class Localized_French : LOCALIZATION
     public override string RebirthString()
     {
         string tempStr;
-        tempStr = optStr + "<size=20><u>Total Rebirth #</u><size=18>";
+        tempStr = optStr + "<size=20><u># Total de Réincarnations</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
@@ -8504,7 +8505,7 @@ public class Localized_French : LOCALIZATION
                     Rebirth rebirth = game.rebirthCtrl.Rebirth((HeroKind)count, countJ);
                     if (rebirth.totalRebirthNum > 0)
                     {
-                        tempStr += "\n- Tier " + tDigit(countJ + 1) + " : " + tDigit(rebirth.rebirthNum);
+                        tempStr += "\n- Classe " + tDigit(countJ + 1) + " : " + tDigit(rebirth.rebirthNum);
                         if (game.ascensionCtrl.worldAscensions[0].performedNum > 0)
                         {
                             tempStr += " | Total : " + tDigit(rebirth.totalRebirthNum);
@@ -8514,7 +8515,7 @@ public class Localized_French : LOCALIZATION
             }
         }
         tempStr += "\n\n";
-        tempStr += optStr + "<size=20><u>Best Rebirth Time</u><size=18>";
+        tempStr += optStr + "<size=20><u>Meilleur Temps de Réincarnation</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
@@ -8526,12 +8527,12 @@ public class Localized_French : LOCALIZATION
                     int countJ = j;
                     Rebirth rebirth = game.rebirthCtrl.Rebirth((HeroKind)count, countJ);
                     if (rebirth.totalRebirthNum > 0)
-                        tempStr += "\n- Tier " + tDigit(countJ + 1) + " : " + DoubleTimeToDate(rebirth.bestRebirthPlayTime);
+                        tempStr += "\n- Classe " + tDigit(countJ + 1) + " : " + DoubleTimeToDate(rebirth.bestRebirthPlayTime);
                 }
             }
         }
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Accomplished Playtime of Rebirth</u><size=18>";
+        tempStr += "<size=20><u>ARecord de Temps de Réincarnation</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
@@ -8545,13 +8546,13 @@ public class Localized_French : LOCALIZATION
                     rebirth = game.rebirthCtrl.Rebirth((HeroKind)count, countJ);
                     if (rebirth.totalRebirthNum > 0)
                     {
-                        tempStr += "\n- Tier " + tDigit(countJ + 1) + " : ";
+                        tempStr += "\n- Classe " + tDigit(countJ + 1) + " : ";
                         if (rebirth.accomplish.accomplishedTime > 0)
                             tempStr += DoubleTimeToDate(rebirth.accomplish.accomplishedTime);
                         if (game.ascensionCtrl.worldAscensions[0].performedNum > 0)
                         {
-                            tempStr += " | Best : " + DoubleTimeToDate(rebirth.accomplish.accomplishedBestTime);
-                            tempStr += " | First : " + DoubleTimeToDate(rebirth.accomplish.accomplishedFirstTime);
+                            tempStr += " | Meilleur : " + DoubleTimeToDate(rebirth.accomplish.accomplishedBestTime);
+                            tempStr += " | Premier : " + DoubleTimeToDate(rebirth.accomplish.accomplishedFirstTime);
                         }
                     }
                 }
@@ -8563,15 +8564,15 @@ public class Localized_French : LOCALIZATION
     public override string WorldAscensionString()
     {
         string tempStr;
-        tempStr = optStr + "<size=20><u>Temps de Jeu Accomplis de l'Ascension du Monde</u><size=18>";
+        tempStr = optStr + "<size=20><u>Record de Temps d'Ascension Monde</u><size=18>";
         tempStr += "\n- Tier 1 : " + DoubleTimeToDate(game.ascensionCtrl.worldAscensions[0].accomplish.accomplishedTime);
         return tempStr;
     }
-    public override string StatisticAreaMissionString() //TODO
+    public override string StatisticAreaMissionString()
     {
         string tempStr;
-        tempStr = optStr + "<size=20><b>Mission Clear Count</b></size>\n\n";
-        tempStr += "<u>Total</u>\nTotal Cleared # [ this ascension / overall ] : [ <color=green>" + tDigit(game.areaCtrl.TotalClearedMissionNum(true)) + "</color> / <color=green>" + tDigit(game.areaCtrl.TotalClearedMissionNum(false)) + "</color> ] \n\n";
+        tempStr = optStr + "<size=20><b>Compte de Missions Complétées</b></size>\n\n";
+        tempStr += "<u>Total</u>\n# Total de Complétions [ cette ascension / global ] : [ <color=green>" + tDigit(game.areaCtrl.TotalClearedMissionNum(true)) + "</color> / <color=green>" + tDigit(game.areaCtrl.TotalClearedMissionNum(false)) + "</color> ] \n\n";
         for (int i = 0; i < Enums.areaKindLength; i++)
         {
             AreaKind areaKind = (AreaKind)i;
@@ -8934,9 +8935,9 @@ public class Localized_French : LOCALIZATION
             case PetPassiveEffectKind.LoyaltyPointGain:
                 return "Gain de Points de Loyauté <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.PetExpGain:
-                return "Gain D'EXP des Familiers <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
+                return "Gain d'EXP des Familiers <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.ExpeditionExpGain: //TODO
-                return "Expedition EXP Gain <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
+                return "Gain d'EXP d'Expédition <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
         }
         return "";
     }
@@ -8987,7 +8988,7 @@ public class Localized_French : LOCALIZATION
         switch (milestone.kind)
         {
             case WorldAscensionMiletoneKind.TownBuldingLevel:
-                name = "Construisez la Ville";
+                name = "Constructeur de Ville";
                 description = "Niveau Total des Bâtiments de la Ville";
                 passive = "Effet du Niveau des Bâtiments de la Ville + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
@@ -9002,27 +9003,27 @@ public class Localized_French : LOCALIZATION
                 passive = "Gain en Ressources + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.MoveDistance:
-                name = "Parcours le Monde";
+                name = "Explorateur de Monde";
                 description = "Distance Marchée Totale (mètres)";
                 passive = "Vitesse + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.DictionaryPoint:
-                name = "Équipeur Poli";
+                name = "Expert en Équipement";
                 description = "Total des points de Dictionnaire";
                 passive = "Amélioration des effets du Dictionnaire + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.DisassembleEquipment:
-                name = "Désassembleur professionnel";
+                name = "Désassembleur Professionnel";
                 description = "Total des Matériaux de Ville Acquis en désassemblant";
                 passive = "Gain en Maîtrise d'Équipement+ " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.RebirthPointGainTier1:
-                name = "Réincarnateur 1";
+                name = "Réincarnateur Classe 1";
                 description = "Total des Points de Réincarnation Classe 1 gagnés";
                 passive = "Gain de Points de Réincarnation Classe 1 + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.RebirthPointGainTier2:
-                name = "Réincarnateur 2";
+                name = "Réincarnateur Classe 2";
                 description = "Total des Points de Réincarnation Classe 2 gagnés";
                 passive = "Gain de Points de Réincarnation Classe 2 + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
@@ -9047,12 +9048,12 @@ public class Localized_French : LOCALIZATION
         switch (upgrade.kind)
         {
             case AscensionUpgradeKind.GuildExpGain:
-                name = "Booster d'EXP de Guilde";
+                name = "Boosteur d'EXP de Guilde";
                 effect = "Multiplies le gain d'EXP de Guilde par " + percent(1 + value);
                 break;
             case AscensionUpgradeKind.AreaClearCount:
-                name = "Booster de Zone";
-                effect = "Augmente le nombre de Complétion de Zone et la Récompense de Complétion par " + tDigit(value);
+                name = "Boosteur de Zone";
+                effect = "Augmente le nombre de Complétions de Zone et la Récompense de Complétion par " + tDigit(value);
                 break;
             case AscensionUpgradeKind.ActiveHero:
                 name = "Expansion d'Emplacement de Héro Actif";
@@ -9072,19 +9073,19 @@ public class Localized_French : LOCALIZATION
                 break;
             case AscensionUpgradeKind.RebirthTier1BonusCap:
                 name = "Expansion du Bonus de Réincarnation Classe 1";
-                effect = "Augmente le niveau maximal des Points d'Abilité Bonus Classe 1 par Niv " + tDigit(value);
+                effect = "Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 1 par Niv " + tDigit(value);
                 break;
             case AscensionUpgradeKind.RebirthTier2BonusCap:
                 name = "Expansion du Bonus de Réincarnation Classe 2";
-                effect = "Augmente le niveau maximal des Points d'Abilité Bonus Classe 2 par Niv " + tDigit(value);
+                effect = "Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 2 par Niv " + tDigit(value);
                 break;
             case AscensionUpgradeKind.PointGainBonus:
-                name = "Efficacité des points d'AM par palier";
+                name = "Efficacité des Points d'AM par Palier";
                 effect = "Augmente le nombre de points gagnés par niveau de palier d'AM par " + tDigit(value);
                 break;
-            case AscensionUpgradeKind.NitroSpeed: //TODO
-                name = "Nitro Improvements";
-                effect = "Nitro Speed + " + tDigit(value, 1) + "x";
+            case AscensionUpgradeKind.NitroSpeed:
+                name = "Amélioration de Nitro";
+                effect = "Vitesse de Nitro + " + tDigit(value, 1) + "x";
                 break;
         }
 
