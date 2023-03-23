@@ -116,7 +116,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.UnlockCondition:
                 return "Condition de Déblocage";
             case BasicWord.EpicCoin:
-                return "Pièce Épique"; //TODO
+                return "Pièce(s) Épique";
             case BasicWord.Additive:
                 return "Additif";
             case BasicWord.Multiplicative:
@@ -369,8 +369,8 @@ public class Localized_French : LOCALIZATION
                 return "Améliorations de Talisman";
             case BasicWord.Scroll:
                 return "Parchemin";
-            case BasicWord.EnchantScroll: //TODO
-                return "Enchant Scroll";
+            case BasicWord.EnchantScroll:
+                return "Parchemin d'Enchantement";
             case BasicWord.Trap:
                 return "Piège";
             case BasicWord.Blessing:
@@ -523,8 +523,8 @@ public class Localized_French : LOCALIZATION
                 return "to";
             case BasicWord.AvailableBlessing:
                 return "Disponible";
-            case BasicWord.StackNum: //TODO
-                return "Stack #";
+            case BasicWord.StackNum:
+                return "Pile #";
             case BasicWord.TotalClearNum:
                 return "Complétions Totales #";
             case BasicWord.Simulation:
@@ -563,8 +563,8 @@ public class Localized_French : LOCALIZATION
                 return "Bonus de Joueur d'IEH1";
             case BasicWord.IEH2PlaytestBonus:
                 return "Bonus de Béta Testeur IEH2";
-            case BasicWord.AreaPrestigeLockText: //TODO
-                return "< AREA PRESTIGE >\n" + "<sprite=\"locks\" index=0> Faire une Ascension Monde Classe 1 une fois (ça vaut le coup)";
+            case BasicWord.AreaPrestigeLockText:
+                return "< PRESTIGE DE ZONE >\n" + "<sprite=\"locks\" index=0> Faire une Ascension Monde Classe 1 une fois (ça vaut le coup)";
             case BasicWord.ClickToStart:
                 return "Cliquer pour Commencer";
             case BasicWord.BonusCodeDescriptionText:
@@ -639,8 +639,8 @@ public class Localized_French : LOCALIZATION
                 return "Matériau Lâché";
             case BasicWord.Region:
                 return "Région";
-            case BasicWord.ClearPlaytime: //TODO
-                return "Clear Playtime";
+            case BasicWord.ClearPlaytime:
+                return "Temps de Complétion";
             case BasicWord.ThisWorldAscension:
                 return "Cette Ascension Monde";
             case BasicWord.First:
@@ -678,15 +678,15 @@ public class Localized_French : LOCALIZATION
             case BasicWord.EnchantSlotNumber:
                 return "# d'Emplacements d'Enchantement incluant l'effet";
             case BasicWord.Attempt: //TODO
-                return "Essayer";
+                return "Essai";
             case BasicWord.InputNewMultiplier:
                 return "Rentrer la nouvelle valeur du multiplicateur.";
             case BasicWord.PetStats:
                 return "Stats du Familier";
             case BasicWord.FieldCurse:
                 return "Malédiction du Terrain";
-            case BasicWord.RestorePurchase: //TODO
-                return "Restore Purchase";
+            case BasicWord.RestorePurchase:
+                return "Restaurer les Achats";
             case BasicWord.NetFree:
                 return "Net-Free";
             case BasicWord.Dung:
@@ -971,8 +971,8 @@ public class Localized_French : LOCALIZATION
             case Stats.SkillProficiencyGain:
                 return "Maîtrise de Capacité";
             case Stats.EquipmentProficiencyGain: //TODO
-                if (isShort) tempStrStats = "Equipment Prof. Gain";
-                else tempStrStats = "Equipment Proficiency Gain";
+                if (isShort) tempStrStats = "Gain de Maît. Equip.";
+                else tempStrStats = "Gain de Maîtrise d'Equipement";
                 break;
             case Stats.EquipmentDropChance:
                 return "Chance de Drop d'Équipement";
@@ -1679,8 +1679,8 @@ public class Localized_French : LOCALIZATION
                 return "Arc de Slime Magique";
             case EquipmentKind.MagicSlimeShoes:
                 return "Chaussures de Slime Magique";
-            case EquipmentKind.MagicSlimeRecorder: //TODO
-                return "Magicslime Recorder";
+            case EquipmentKind.MagicSlimeRecorder:
+                return "Flûte de Slime Magique";
             case EquipmentKind.MagicSlimeEarring:
                 return "Boucle d'Oreille de Slime Magique";
             case EquipmentKind.MagicSlimeBalloon:
@@ -1711,8 +1711,8 @@ public class Localized_French : LOCALIZATION
                 return "Épée Chauve-Souris";
             case EquipmentKind.BatHat:
                 return "Casque Chauve-Souris";
-            case EquipmentKind.BatRecorder: //TODO
-                return "Bat Recorder";
+            case EquipmentKind.BatRecorder:
+                return "Flûte Chauve-Souris";
             case EquipmentKind.BatBow:
                 return "Arc Chauve-Souris";
             case EquipmentKind.BatMascaradeMask:
@@ -1827,8 +1827,8 @@ public class Localized_French : LOCALIZATION
                 return "Épée Poisson Démon";
             case EquipmentKind.DevilfishWing:
                 return "Aile de Poisson Démon";
-            case EquipmentKind.DevilfishRecorder: //TODO
-                return "Devilfish Recorder";
+            case EquipmentKind.DevilfishRecorder:
+                return "Flûte Poisson Démon";
             case EquipmentKind.DevilfishArmor:
                 return "Armure Poisson Démon";
             case EquipmentKind.DevilfishScarf:
@@ -2586,7 +2586,7 @@ public class Localized_French : LOCALIZATION
                 tempString = "Effet des Bénédictions + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
-            case EquipmentEffectKind.CatalystDoubleCriticalChance: //TODO
+            case EquipmentEffectKind.CatalystDoubleCriticalChance:
                 if (isOnlyEffectValue) return percent(value);
                 tempString = "Chance de Catalysation Critique (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
@@ -3538,25 +3538,25 @@ public class Localized_French : LOCALIZATION
         switch (kind)
         {
             case SkillKindWarrior.SwordAttack:
-                return "A swift sword strike that deals low damage to a single target.";
+                return "Un coût d'épée rapide qui inflique peu de dégâts à une seule cible.";
             case SkillKindWarrior.Slash:
-                return "Unleash a slashing attack that hits once.";
+                return "Délivre une attaque tranchante qui touche une fois.";
             case SkillKindWarrior.DoubleSlash:
-                return "Perform two quick sword strikes in succession, dealing moderate damage.";
+                return "Effectue deux attaques à l'épée rapides à la suite, infligeant des dégâts modérés.";
             case SkillKindWarrior.SonicSlash:
-                return "Unleash a rapid flurry of sword strikes that deal multiple hits of moderate damage.";
+                return "Délivre une ruée de coups d'épée rapides qui infligent plusieurs coups ayant des dégâts modérés.";
             case SkillKindWarrior.SwingDown:
-                return "Deliver a powerful overhead swing that deals heavy damage to a single target and reduces their ATK.";
+                return "Effectue un tranchage de haut en bas qui inflige d'importants dégâts à une seule cible tout en réduisant son ATQ.";
             case SkillKindWarrior.SwingAround:
-                return "Perform a sweeping sword attack in an arc, dealing moderate damage to all enemies in front. ";
+                return "Effectue une attaque à l'épée de grande envergure dans un arc, effectuant des dégâts modérés à tous les ennemis en face. ";
             case SkillKindWarrior.ChargeSwing:
-                return "Charge up a powerful swing that deals massive damage to a single target and reduces their MATK.";
+                return "Charge une attaque puissante qui infligent des dégâts massifs à un seul ennemi tout en réduisant son MATQ.";
             case SkillKindWarrior.FanSwing:
-                return "Unleash a wide arc of sword strikes, hitting all enemies around the warrior multiple times.";
+                return "Délivre une attaque à l'épée tourbillonante, touchant tous les ennemis autour du héros plusieurs fois.";
             case SkillKindWarrior.ShieldAttack:
-                return "Makes a running dash toward the target monster to attack.";
+                return "Cours à toute vitesse vers l'ennemi cible pour l'attaquer.";
             case SkillKindWarrior.KnockingShot:
-                return "Deliver a powerful knockback attack that deals moderate damage and pushes enemies away.";
+                return "Délivre une attaque à dégâts modérés qui pousse grandement les ennemies qui l'ont subi.";
         }
         return kind.ToString();
     }
@@ -7896,7 +7896,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- <color=orange>Maj + F</color> : Montre le coût max (jusqu'au Niveau 100) pour certaines améliorations. Un bon exemple permet devoir combien de temps il vous prendra avant qu'un équipement aille du niveau 0 au niveau 10, ou même jusqu'au niveau 20 !";
                 tempStr += "\n\n";
                 tempStr += "<u>Onglet Quêtes</u>";
-                tempStr += "\n- <color=orange>Maj + Clic Gauche</color> le bouton pour accepter : Accepter et se déplacer vers la quête instantanément"; //TOCHECK
+                tempStr += "\n- <color=orange>Maj + Clic Gauche</color> le bouton pour accepter : Accepter et se déplacer vers la quête instantanément";
                 tempStr += "\n- <color=orange>Clic Droit</color> sur les boutons Global/Journalier : Accepter ou réclamer toutes les quêtes";
                 tempStr += "\n- <color=orange>Clic Droit</color> sur un bouton de quête : Accepter ou réclamer la quête";
                 tempStr += "\n- <color=orange>Maj + Clic Droit</color> sur un bouton de quête : Accepter et se déplacer vers la quête instantanément, ou juste réclamer la quête";
