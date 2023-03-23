@@ -3533,7 +3533,7 @@ public class Localized_French : LOCALIZATION
         }
         return "";
     }
-    public override string SkillDescriptionWarrior(SkillKindWarrior kind) //TODO
+    public override string SkillDescriptionWarrior(SkillKindWarrior kind)
     {
         switch (kind)
         {
@@ -3556,61 +3556,61 @@ public class Localized_French : LOCALIZATION
             case SkillKindWarrior.ShieldAttack:
                 return "Cours à toute vitesse vers l'ennemi cible pour l'attaquer.";
             case SkillKindWarrior.KnockingShot:
-                return "Délivre une attaque à dégâts modérés qui pousse grandement les ennemies qui l'ont subi.";
+                return "Délivre une attaque à dégâts modérés qui pousse grandement les ennemis qui l'ont subi.";
         }
         return kind.ToString();
     }
-    public override string SkillDescriptionWizard(SkillKindWizard kind) //TODO
+    public override string SkillDescriptionWizard(SkillKindWizard kind)
     {
         switch (kind)
         {
             case SkillKindWizard.StaffAttack:
-                return "Unleash a basic staff attack that deals fire damage to a single target within short range.";
+                return "Une attaque debâton simple qui inflige des dégâts de feu à une cible à distance faible.";
             case SkillKindWizard.FireBolt:
-                return "Cast a fireball that explodes on impact, dealing fire damage to a single target.";
+                return "Lance une boule de feu qui explose à l'impact, infligeant des dégâts de feu à une cible.";
             case SkillKindWizard.FireStorm:
-                return "Summon a ring of fire around the hero, dealing fire damage to all enemies within its range.";
+                return "Invoque un cercle de feu autour du héros, infligeant des dégâts de feu à tous les ennemis à sa portée.";
             case SkillKindWizard.MeteorStrike:
-                return "Summon a fiery meteor that crashes down on a targeted area, dealing massive AOE damage to all enemies within its range.";
+                return "Invoque un météore enflammé qui s'abat sur la zone cible, infligeant d'énormes dégâts à tous les ennemis dans sa zone d'effet.";
             case SkillKindWizard.IceBolt:
-                return "Cast a freezing ice bolt that deals ice damage to a single target and lowers their SPD.";
+                return "Lance une boule glacial qui inflige des dégâts de glace à une cible et réduit sa VIT.";
             case SkillKindWizard.ChillingTouch:
-                return "Strike a nearby enemy with a chilling touch that deals ice damage and has a chance to freeze them in place.";
+                return "Frappe un ennemi proche à l'aide d'un toucher glacial qui inflige des dégâts de glace et a une chance de le geler sur place.";
             case SkillKindWizard.Blizzard:
-                return "Summon a blizzard that blankets a large area and deals ice damage to all enemies within its range, also reducing their SPD.";
+                return "Invoque un blizzard qui affecte une grosse aire et inflige des dégâts de glace à tous les ennemis qui y sont, réduisant leur VIT.";
             case SkillKindWizard.ThunderBolt:
-                return "Cast a long range thunder bolt that deals thunder damage to a single target and a chance to increase the damage the enemy takes.";
+                return "Lance une boule électrique à portée longue qui inflige des dégâts d'électricité à une seule cible, ayant une chance d'augmenter les dégâts qu'elle recevra par la suite.";
             case SkillKindWizard.DoubleThunderBolt:
-                return "Unleash a double thunderbolt that strikes a single target twice, dealing thunder damage and applying a debuff that causes them to take increased damage.";
+                return "Lance deux boules électriques qui frappent la cible deux fois, infligeant des dégâts électriques ainsi qu'un débuff qui augmente les dégâts qu'elle recevra par la suite.";
             case SkillKindWizard.LightningThunder:
-                return "Call down a powerful lightning strike that deals thunder damage to all enemies within its range.";
+                return "Appelle un tonnerre puissant qui applique des dégâts d'électricité à tous les ennemis à sa portée.";
         }
         return kind.ToString();
     }
-    public override string SkillDescriptionAngel(SkillKindAngel kind) //TODO
+    public override string SkillDescriptionAngel(SkillKindAngel kind)
     {
         switch (kind)
         {
             case SkillKindAngel.WingAttack:
-                return "Unleash a wing attack that deals physical damage to multiple enemies within range of the hero.";
+                return "Une attaque d'aile qui inflige des dégâts physiques à plusieurs ennemis à la portée du héros.";
             case SkillKindAngel.WingShoot:
-                return "Launch a flurry of wing projectiles towards enemies, dealing light damage to the targets within range.";
+                return "Lance une volée de plumes vers les ennemis, infligeant des dégâts de lumière aux cibles à portée.";
             case SkillKindAngel.Heal:
-                return "Restore a portion of the hero's health.";
+                return "Régénère une portion de la santé du héros.";
             case SkillKindAngel.GodBless:
-                return "Bestow a divine blessing on the hero that increases their maximum HP.";
+                return "Octroie une bénédiction au héros, renforçant leur PV maximums.";
             case SkillKindAngel.MuscleInflation:
-                return "Infuse the hero's muscles with power, increasing their ATK power.";
+                return "Insuffle les muscles du héros avec du pouvoir, augmentant leur ATQ.";
             case SkillKindAngel.MagicImpact:
-                return "Unleash a surge of magical energy that enhances the hero's MATK power.";
+                return "Invoque une vague d'énergie magique, augmentant la MATQ du héros.";
             case SkillKindAngel.ProtectWall:
-                return "Erect a protective barrier that increases the hero's DEF and MDEF.";
+                return "Dresse une barrière protectrice qui augmente la DEF et la MDEF du héros.";
             case SkillKindAngel.Haste:
-                return "Bestow upon the hero the gift of speed, increasing their SPD.";
+                return "Octroie le don de la vitesse au héros, aumgentant leur VIT.";
             case SkillKindAngel.WingStorm:
-                return "Unleash a devastating storm of light damage, damaging enemies within a small area of effect and can knock them back.";
+                return "Lance un ouragan dévastateur infligeant des dégâts de lumière, endommageant tous les ennemis dans une petite zone d'effet, tout en pouvant les repousser.";
             case SkillKindAngel.HolyArch:
-                return "Channel the divine power to increase the hero's skill levels, except for this skill.";
+                return "Entre en communication avec un pouvoir divin pour augmenter l'apprentissage des capacités du héros, sauf celle-ci.";
         }
         return kind.ToString();
     }
