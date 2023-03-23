@@ -7747,7 +7747,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "Cliquer sur l'icône de Carte en haut à droite de l'écran vous emmènera sur la Carte Monde. C'est ici où vous pourrez voir le nombre d'Orbes Portail en votre possession, et mettre la souris sur le ruban montrera les Paliers de Missions.";
                 tempStr += "\n\n";
                 tempStr += "<u>Régions</u>";
-                tempStr += "\n- Ily a au total 10 régions dans le monde. Chaque région a 8 zones et quelques donjons. Vous pouvez cliquer sur chaque région sur la carte pour accéder aux différentes zones et donjons.";
+                tempStr += "\n- Il y a au total 10 régions dans le monde. Chaque région a 8 zones et quelques donjons. Vous pouvez cliquer sur chaque région sur la carte pour accéder aux différentes zones et donjons.";
                 tempStr += "\n- Chaque région de nombre impair augmente le Rang des Matériaux de Ville qui sont reçus en tant que récompense de complétion de zone. Par exemple, le Village des Slimes et la Cité des Slimes Magiques donne des Matériaux de Ville de Classe 1, tandis que le Labyrinthe des Araignées et la Grotte des Chauve-Souris donne des Matériaux de Ville de Classe 2.";
                 tempStr += "\n\n";
                 tempStr += "<u>Simulations</u>";
@@ -7760,13 +7760,13 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Les récompenses de Matériaux de Ville vont dans un ordre cyclique. La 1ère Zone donnera des Briques, la 2nde des Buches, et la 3ème des Éclats. Ce cycle continue jusqu'à la 8ème Zone, qui donne un mix des 3 différents Matériaux de Ville.";
                 tempStr += "\n- La prochaine région continue le cycle de la précédente en commençant par le prochain Matériau de Ville après celui de sa Zone 7.";
                 tempStr += "\n\n";
-                tempStr += "<u>Missions de Zone/u>";
+                tempStr += "<u>Missions de Zone</u>";
                 tempStr += "\n- Chaque Zone a deux missions au début, qui peuvent être complétées pour gagner des Pièces Epiques et qui comptent pour le compte des Paliers de Mission. Cela peut être amélioré à l'aide du Prestige de Zone détaillé ci-dessous.";
                 tempStr += "\n\n";
                 tempStr += "<u>Prestige de Zone</u>";
                 tempStr += "\n- Vous devez effectuer une Ascension Monde pour que ce Prestige soit débloqué.";
                 tempStr += "\n- Pour gagner des Points de Prestige de Zone, vous devez compléter la zone un certain nombre de fois. La fenêtre de détails de la zone vous dira le nombre de complétions requises pour gagner le prochain point.";
-                tempStr += "\n- Il y a 6 différentes améliorations qui peuvent être choisies.";
+                tempStr += "\n- Il y a 6 différentes améliorations qui peuvent être choisies :";
                 tempStr += "\n  - Prestige de Zone : Augmente la difficulté de la zone jusqu'à 10. Chaque nouvelle difficulté a les mêmes missions mais aussi des monstres plus forts et un plus grand nombre de vagues.";
                 tempStr += "\n  - Bénédiction de l'Explorateur : Augmente le nombre de Complétions de 1 par complétion. ";
                 tempStr += "\n  - Bonus d'EXP : Augmente les gains d'EXP par un pourcentage donné dans la région entière.";
@@ -7858,7 +7858,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Bénédiction de Maîtrise de Capacité - Multiplie les gains de Maîtrise de Capacité par un certain % pour une durée donnée.";
                 tempStr += "\n- Bénédiction de Maîtrise d'Équipement - Multiplie les gains de Maîtrise d'Equipement par un certain % pour une durée donnée.";
                 tempStr += "\n- Bénédiction de Gain d'Or - Multiplie les Gains d'Or par un certain % pour une durée donnée.";
-                tempStr += "\n- Bénédiction de Gain d'EP - Multiplie les Gains d'EXP par un certain % pour une durée donnée.";
+                tempStr += "\n- Bénédiction de Gain d'EXP - Multiplie les Gains d'EXP par un certain % pour une durée donnée.";
                 tempStr += "\n\n";
                 break;
             case HelpKind.Debuff:
@@ -7994,7 +7994,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n\n";
                 break;
             case HelpKind.Title:
-                tempStr += "Les titres donnent des bonus uniques spécifiquement au héros qui l'a obtenu. Ils sont acquis à travers les <color=orange>Quêtes de Titre</color>. Sous l'onglet Capacité, vous pouvez cliquer sur Tire à droite pour voir les titres et bonus du héros.";
+                tempStr += "Les titres donnent des bonus uniques spécifiquement au héros qui l'a obtenu. Ils sont acquis à travers les <color=orange>Quêtes de Titre</color>. Sous l'onglet Capacité, vous pouvez cliquer sur Titre à droite pour voir les titres et bonus du héros.";
                 tempStr += "\n\n";
                 break;
             case HelpKind.Quest:
