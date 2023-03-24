@@ -741,7 +741,7 @@ public class Localized_French : LOCALIZATION
             case MenuKind.Quest:
                 return "Quête";
             case MenuKind.Lab:
-                return "Lab";
+                return "Labo";
             case MenuKind.Setting:
                 return "Options";
             case MenuKind.Bestiary:
@@ -1877,7 +1877,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.MDEFAdder:
                 return "MDEF +";
             case EquipmentEffectKind.SPDAdder:
-                return "VIT +";
+                return "CEL +";
             case EquipmentEffectKind.HPMultiplier:
                 return "Multiplicateur de PV";
             case EquipmentEffectKind.MPMultiplier:
@@ -2837,28 +2837,28 @@ public class Localized_French : LOCALIZATION
         switch (catalyst.kind)
         {
             case CatalystKind.Slime:
-                tempName = "Catalyste de Slime";
+                tempName = "Catalyseur de Slime";
                 break;
             case CatalystKind.Mana:
-                tempName = "Catalyste de Mana";
+                tempName = "Catalyseur de Mana";
                 break;
             case CatalystKind.Frost:
-                tempName = "Catalyste du Froid";
+                tempName = "Catalyseur du Froid";
                 break;
             case CatalystKind.Flame:
-                tempName = "Catalyste de la Flamme";
+                tempName = "Catalyseur de la Flamme";
                 break;
             case CatalystKind.Storm:
-                tempName = "Catalyste de la Tempête";
+                tempName = "Catalyseur de la Tempête";
                 break;
             case CatalystKind.Soul:
-                tempName = "Catalyste de l'Âme";
+                tempName = "Catalyseur de l'Âme";
                 break;
             case CatalystKind.Sun:
-                tempName = "Catalyste du Soleil";
+                tempName = "Catalyseur du Soleil";
                 break;
             case CatalystKind.Void:
-                tempName = "Catalyste du Vide";
+                tempName = "Catalyseur du Vide";
                 break;
         }
         tempName += "<size=18>\n\n<color=green>Nv " + tDigit(catalyst.level.value) + "</color> / " + tDigit(catalyst.level.maxValue());
@@ -2944,7 +2944,7 @@ public class Localized_French : LOCALIZATION
             case AlchemyUpgradeKind.CharmedLife:
                 return percent(effectValue) + " chance d'empêcher la comsommation de potions et de pièges";
             case AlchemyUpgradeKind.Catalystic:
-                return "Catalystes disponibles + " + tDigit(effectValue);
+                return "Catalyseurs disponibles + " + tDigit(effectValue);
             case AlchemyUpgradeKind.EssenceHoarder:
                 return "Taux de Transformation des Essences + " + percent(effectValue);
             case AlchemyUpgradeKind.PotentPotables:
@@ -3745,7 +3745,7 @@ public class Localized_French : LOCALIZATION
             case Buff.DefMDefUp:
                 return "DEF & MDEF";
             case Buff.SpdUp:
-                return "VIT";
+                return "CEL";
             case Buff.MoveSpeedUp:
                 return "Vitesse";
             case Buff.GoldUp:
@@ -3769,7 +3769,7 @@ public class Localized_French : LOCALIZATION
             case Debuff.MdefDown:
                 return "Réduction de MDEF";
             case Debuff.SpdDown:
-                return "Réduction de VIT";
+                return "Réduction de CEL";
             case Debuff.Stop:
                 return "Gel";
             case Debuff.Electric:
@@ -3857,7 +3857,7 @@ public class Localized_French : LOCALIZATION
         switch (kind)
         {
             case GuildAbilityKind.GlobalSkillSlot:
-                return "Imitiation";
+                return "Imitation";
             case GuildAbilityKind.EquipmentInventory:
                 return "Collection";
             case GuildAbilityKind.EnchantInventory:
@@ -3986,59 +3986,59 @@ public class Localized_French : LOCALIZATION
                 switch (kindGlobal)
                 {
                     case QuestKindGlobal.AbilityVIT:
-                        name = "Tutorial 1 : Basic Training";
+                        name = "Tutoriel 1 : Entrâinement Basique";
                         client = "Hitan";
-                        description = "Welcome to Incremental Epic Hero 2! First, to get tougher, assign 1 <color=orange>Ability Point (AP)</color> to <color=orange>VTL</color>. VTL is the most basic ability, which boosts your HP, DEF and MDEF. You gain 1 AP every time you level up. \n<color=yellow>- For more information about ability points, check out the Help in top left > [Ability].</color>";
-                        condition = "Assign 1 AP to VTL";
+                        description = "Bienvenue sur Incrmental Epic Hero 2 ! Tout d'abord, pour devenir plus fort, assigne 1 <color=orange>Point d'Abilité (PA)</color> à <color=orange>VTL</color>. VTL est l'abilité la plus basique, qui augmente tes PV, DEF et MDEF. Tu gagneras 1 AP à chaque fois que ton niveau augmente. \n<color=yellow>- Pour plus d'informations sur les points d'abilité, clique sur le bouton d'Aide en haut à gauche > [Abilité].</color>";
+                        condition = "Assigner 1 PA à VTL";
                         break;
                     case QuestKindGlobal.ClearGeneralQuest:
-                        name = "Tutorial 2 : General Quest";
+                        name = "Tutoriel 2 : Quête Générale";
                         client = "Hitan";
-                        description = "There are four types of quests: <color=orange>Global</color>, <color=orange>Daily</color>, <color=orange>Title</color> and <color=orange>General</color>. The Global Quest is the main story of this game and progresses with all guild members. Title and General Quest are unique to each class. Try completing the first <color=orange>General Quest</color>!\n<color=yellow>- For more information about quests, check out the Help in top left > [Quest].</color>";
-                        condition = "Complete the first General Quest";
-                        reward = "Unleash Tab [ Skill ]";
+                        description = "Il y a quatre types de quêtes : <color=orange>Globale</color>, <color=orange>Journalière</color>, <color=orange>Titre</color> et <color=orange>Générale</color>. Les Quêtes Globales sont l'histoire principale du jeu et progressent pour chaque membre de la guilde. Les Quêtes Générales et de Titre ne concernent que le héros courant. Essaye de compléter la première <color=orange>Quête Générale</color> !\n<color=yellow>- Pour plus d'informations sur les quêtes, clique sur le bouton d'Aide en haut à gauche > [Quête].</color>";
+                        condition = "Compléter la première Quête Générale";
+                        reward = "Débloque l'onglet [ Capacité ]";
                         break;
                     case QuestKindGlobal.ClearTitleQuest:
-                        name = "Tutorial 3 : Title Quest";
+                        name = "Tutoriel 3 : Quête de Titre";
                         client = "Hitan";
-                        description = "Great job! Next, <color=orange>Title Quests</color> are special quests which, when completed, award Titles. These titles have unique effects. Try completing the first Title Quest! Keep in mind that you can only accept at most 3 quests between Title and General at once. You can increase the limit later on in the game. Global and Daily Quests are not affected by this limit.\n<color=yellow>- For more information about quests, check out the Help in top left > [Quest].</color>";
-                        condition = "Complete the first Title Quest";
-                        reward = "Unleash Tab [ Upgrade ]";
+                        description = "Bien joué ! Les <color=orange>Quêtes de Titre</color> sont des quêtes spéciales qui donnent accès à des Titres une fois complétées. Ces titres ont des effets uniques. Essaye de compléter la première Quête de Titre ! Garde en tête que tu ne peux accepter que 3 quêtes au maximum en comptant les Quêtes Générales et les Quêtes de Titre. Tu pourras augmenter cette limite plus loin dans le jeu. Les Quêtes Globales et Journalières ne sont pas affectées par cette limite.\n<color=yellow>- Pour plus d'informations sur les quêtes, clique sur le bouton d'Aide en haut à gauche > [Quête].</color>";
+                        condition = "Compléter la première Quête de Titre";
+                        reward = "Débloque l'onglet [ Amélioration ]";
                         break;
                     case QuestKindGlobal.UpgradeResource:
-                        name = "Tutorial 4 : Upgrade";
+                        name = "Tutoriel 4 : Amélioration";
                         client = "Hitan";
-                        description = "In the <color=orange>Upgrade</color> tab, you can buy various upgrades with gold to improve your stats! Try buying <color=orange>Resource Gain</color> upgrades!\n<color=yellow>- For more information about upgrades, check out the Help in top left > [Upgrade].</color>";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 25";
-                        reward = "Unleash Upgrade [ Resource Gain 2 ]\n- Unleash General 2 Upgrade Tab\n- Unleash Menu [ Equip ]";
+                        description = "Dans l'onglet <color=orange>Amélioration</color>, tu peux acheter différentes améliorations avec de l'or pour augmenter tes statistiques ! Essaye d'acheter des améliorations de <color=orange>Gain de Ressource</color> !\n<color=yellow>- Pour plus d'informations sur les améliorations, cliquez sur le bouton d'Aide en haut à gauche > [Amélioration].</color>";
+                        condition = "Atteindre le Nv 25 avec [ Gain de Ressource 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressource 2 ]\n- Débloque l'onglet d'Amélioration Générale 2\n- Débloque l'onglet [ Equipement ]";
                         break;
                     case QuestKindGlobal.Equip:
-                        name = "Tutorial 5 : Equipment";
+                        name = "Tutoriel 5 : Equipement";
                         client = "Hitan";
-                        description = "While you are defeating monsters, you have a very low chance for them to drop <color=orange>Equipment</color> after they are defeated. When you get one, please bring it to me! You can equip it by dragging and dropping it to an open equipment in the <color=orange>Equip</color> tab." +
-                            " After you get one, check out the <color=orange>Dictionary</color> in the Equip tab. This will show you all of the equipment you've looted so far!  In here you'll see that there are upgrades. These will help increase the heroes <color=orange>Equipment Proficiency Gain</color>, which lowers the required time to level up equipment.\n<color=yellow>- For more information about Equips and the Dictionary, check out the Help > [Equip].</color>";
-                        condition = "Get any Equipment";
-                        reward = "Unleash Tab [ Lab ]";
+                        description = "Lorsque tu combattras des monstres, il y a une chance mince qu'il lâchent un <color=orange>Equipement</color> après être vaincu. Lorsque tu en récupères un, amène-le à moi s'il te plaît ! Tu peux l'équiper en le glissant-déposant dans un emplacement d'équipement libre dans l'onglet color=orange>Equipement</color>." +
+                            " Une fois que tu en récupères un, va voir le <color=orange>Dictionnaire</color> dans l'onglet Equipement. Il affichera tous les équipements rencontrés jusqu'à présent ! Tu peux aussi voir qu'ils y a quelques améliorations. Elles augmentent les <color=orange>Gains de Maîtrise d'Equipement</color> des héros, qui réduit le temps requis pour augmenter le niveau d'un équipement.\n<color=yellow>- Pour plus d'informations sur les Equipements et le Dictionnaire, clique sur le bouton d'Aide en haut à gauche > [Equipement].</color>";
+                        condition = "Collecte un Equipement";
+                        reward = "Débloque l'onglet [ Labo ]";
                         break;
                     case QuestKindGlobal.Alchemy:
-                        name = "Tutorial 6 : Alchemy";
+                        name = "Tutoriel 6 : Alchimie";
                         client = "Hitan";
-                        description = optStr + "While you were out a guild member recently found some <color=orange>Mysterious Water</color> and set up a <color=orange>Lab</color>. You'll meet her soon enough, but for now, let's begin experimenting. Oh, you're not familiar with alchemy? Let me explain."
-                            + " To alchemize you first need to go to the lab and make a Catalyst. To make your first catalyst all you need to do is get some <color=orange>Oil of Slime</color>, collect <color=orange>3 Mysterious Water</color> and use that to make a <color=orange>Slime Catalyst</color>. After that, you need to make an essence."
-                            + " Essences are the raw ingredients used to make potions. To start, you need to pour at least 0.1 Mysterious Water into an essence of a catalyst you've selected to make the catalyst start producing essence. Let's try it with <color=orange>Essence of Slime</color>."
-                            + " Once that's finished all you have to do is look at <color=orange>[Mix Potion]</color>, and click the icon you want to make. Simple isn't it?"
-                            + " Now go play in the lab and don't forget to keep increasing your Mysterious Water Cap, refining your Catalyst, and upgrading your lab with the alchemy points you receive.\n<color=yellow>- For more information, Help > [Lab].</color>";
-                        condition = "Produce " + PotionName(PotionKind.MinorHealthPotion);
-                        reward = "EXP Gain Blessing (Duration 15 mins)\n- Unleash Tab [ Guild ] [ Bestiary ]";
+                        description = optStr + "Lorsque tu étais en mission, un membre de la guilde a trouvé de l'<color=orange>Eau Mystérieuse</color> et a mis en place un <color=orange>Laboratoire</color>. Tu la rencontrera bien vite, mais pour le moment, essayons de voir ça. Oh, tu ne connais pas l'alchimie ? Laisse-moi t'expliquer."
+                            + " Pour alchimiser, tu dois d'abord aller au Laboratoire et créer un Catalyseur. Pour créer ton premier catalyseur, tu dois récupérer de l'<color=orange>Huile de Slime</color> ainsi que <color=orange>3 Eaux Mystérieuses</color> et les utiliser pour créer un <color=orange>Catalyseur Slime</color>. Après cela, tu devras créer une essence."
+                            + " Les Essences sont les ingrédients bruts utilisés pour créer des potions. Pour commencer, tu dois verser au moins 0.1 Eau Mystérieuse sur l'essence d'un catalyste sélectionné afin qu'il commence à produire de l'essence. Essayons cela avec l'<color=orange>Essence de Slime</color>."
+                            + " Une fois terminé, il suffit d'aller dans l'onglet <color=orange>[Potion]</color>, et de cliquer sur l'icône de la potion que tu veux fabriquer. Simple, n'est-ce pas ?"
+                            + " Maintenant, va expérimenter dans le Laboratoire et n'oublie pas d'augmenter la Limite d'Eau Mystérieuse, de raffiner tes Catalysteurs, et d'améliorer ton labo avec les points d'alchimie reçus.\n<color=yellow>- Pour plus d'informations, Aide > [Labo].</color>";
+                        condition = "Produire une " + PotionName(PotionKind.MinorHealthPotion);
+                        reward = "Bénédiction de Gain d'EXP (Durée de 15 mins)\n- Débloque les onglets [ Guilde ] & [ Bestiaire ]";
                         break;
                     case QuestKindGlobal.Guild:
-                        name = "Tutorial 7 : Guild";
+                        name = "Tutoriel 7 : Guilde";
                         client = "Hitan";
-                        description = "To increase guild member limit, <color=orange>get Guild Lv 5!</color> Then you can select a new hero, Wizard, to play. You can also acquire various abilities in the guild tab. Guild EXP is gained through Hero leveling, which will provide guild ability points to spend." +
-                            "\n- To start with your Heroes will work independently, but as you progress in the game they will learn to cooperate more. The <color=orange>Imitating</color> guild ability will give you a <color=orange>Emplacement de Capacité Global</color>, which allows a Hero to modify their play slightly by equipping a skill learned by one of the other Heroes. You may need to adjust your Hero's default <color=orange>Combat Range</color> so they move close enough to use the borrowed skill." +
-                            "\n<color=yellow>- For more information, Help > [Guild].</color>";
-                        condition = "Guild Lv 5";
-                        reward = "Unleash Tab [ Town ] [ Shop ]";
+                        description = "Pour augmenter la listede membres de guilde,  <color=orange>atteins le Nv de Guilde 5 !</color> Tu pourras ensuite choisir une nouvelle héroïne, la Mage. Tu peux aussi acquérir des abilités variées dans l'onglet guilde. L'EXP de Guilde est gagné à travers la montée de niveau des héros, ce qui donne accès à des points d'abilité de guilde à dépenser." +
+                            "\n- Pour commencer, chacun des héros travaille indépendemment, mais au fur et à mesure du jeu, ils apprendront à coopérer. L'abilité de guilde <color=orange>Imitation</color> te donne un <color=orange>Emplacement de Capacité Global</color>, qui permet à un héros d'un peu modifier leur style de jeu en équipant une capacité apprise par un autre héros. Tu devras sans doute ajuste la <color=orange>Portée de Combat</color> du héros pour qu'il se déplace assez près pour utiliser la capacité qui a été empruntée." +
+                            "\n<color=yellow>- Pour plus d'informations, Aide > [Guilde].</color>";
+                        condition = "Nv de Guilde 5";
+                        reward = "Débloque les onglets [ Ville ] & [ Magasin ]";
                         break;
                     case QuestKindGlobal.Town:
                         name = "Tutorial 8 : Town";
@@ -5496,7 +5496,7 @@ public class Localized_French : LOCALIZATION
             case ToggleKind.DisableNotificationQuest:
                 return "Désactiver les Notifications pour les Quêtes";
             case ToggleKind.DisableNotificationLab:
-                return "Désactiver les Notifications pour le Lab";
+                return "Désactiver les Notifications pour le Labo";
             case ToggleKind.DisableExpLog:
                 return "EXP";
             case ToggleKind.DisableResourceLog:
@@ -6008,7 +6008,7 @@ public class Localized_French : LOCALIZATION
             case 26: return "Emplacement d'Inventaire d'Enchantement + 10";
             case 27: return "Effet des Béndictions + 100%";
             case 28: return "Emplacement de Familier Actif + 5";
-            case 29: return "Limite de Niveau des Catalystes + 25";
+            case 29: return "Limite de Niveau des Catalyseurs + 25";
             case 30: return "Emplacement de Set de Capacité + 1";
             case 31: return "Niveau de Bâtiment de Ville + " + text;
             case 32: return "Limite de Loyauté de Familier + " + text;
@@ -6114,7 +6114,7 @@ public class Localized_French : LOCALIZATION
             case 76: return "Atteindre le Niveau de Guilde " + str1 + " en 20 minutes ou moins";
             case 77: return "Atteindre le Niveau de Guilde " + str1 + " en 5 minutes ou moins";
             case 78: return "Les Équipements Uniques sont préservés sont préservés lors d'une Ascension Monde";
-            case 79: return "Le Niveau des Catalystes est préservé lors d'une Ascension Monde";
+            case 79: return "Le Niveau des Catalyseurs est préservé lors d'une Ascension Monde";
             case 80: return "Les objets dans l'Inventaire d'Enchantement sont préservés lors d'une Ascension Monde";
             case 81: return "Le Rang de la Statue des Héros est préservé lors d'une Ascension Monde";
             case 82: return "Le Rang du Cartographeur est préservé lors d'une Ascension Monde";
@@ -6531,7 +6531,7 @@ public class Localized_French : LOCALIZATION
             case 14: return "\n- Le Niveau d'Amélioration dans l'onglet d'Amélioration";
             case 15: return "\n- Les objets dans l'Inventaire d'Enchantements, le Niveau et la Maîtrise des Équipements et les Améliorations de Dictionnaire";
             case 16: return "\n- Les équipements sans emplacement d'enchantement dans l'inventaire et les emplacements d'équipement";
-            case 17: return "\n- Les Expansions d'Eau Mystérieuse et les Catalystes";
+            case 17: return "\n- Les Expansions d'Eau Mystérieuse et les Catalyseurs";
             case 18: return "\n- Le Niveau, l'EXP et les Capacités de Guilde";
             case 19: return "\n- Le Rang et Niveau des Bâtiments de Ville et les Matériaux de Ville";
             case 20: return "\n- Le progrès des Réincarnations et des Défis";
@@ -6702,7 +6702,7 @@ public class Localized_French : LOCALIZATION
             case 25: return "Hutte de l'Alchimiste";
             case 26: return "# de Stock Max de Matériaux du Magasin ";
             case 27: return "Étendre la Limite d'Eau Mystérieuse jusqu'à " + text;
-            case 28: return "Débloque un nouveau Catalyste";
+            case 28: return "Débloque un nouveau Catalyseur";
             case 29: return "Gain d'Eau Mystérieuse + " + text;
             case 30: return "Limite d'Eau Mystérieuse Max + " + text;
             case 31: return "Emplacement d'Inventaire d'Utilitaire + " + text;
@@ -6717,7 +6717,7 @@ public class Localized_French : LOCALIZATION
             case 40: return "Forge";
             case 41: return "Multiplie l'Effet des Équipements par ";
             case 42: return "Points de Dictionnaire Gagnés : " + text;
-            case 43: return "Débloque la [Fabrication] dans l'onglet Lab";
+            case 43: return "Débloque la [Fabrication] dans l'onglet Labo";
             case 44: return "Débloque la fabrication de nouveaux Parchemins";
             case 45: return "Débloque une nouvelle Amélioration de Dictionnaire";
             case 46: return "Emplacement d'Inventaire d'Équipement + " + text;
@@ -7412,7 +7412,7 @@ public class Localized_French : LOCALIZATION
                 name = "Réinitialisation d'Abilité de Guilde";
                 effect = "Réinitialise les Abilités de Guilde et récupère les Points d'Abilité de Guilds dépensés." +
             " Gardez à l'esprit que les objets dans les emplacements d'inventaire étendus seront indisponibles jusqu'à qu'ils soient de nouveau débloqués." +
-            " Il est aussi possible qu'il faille réallouer l'Eau Mystérieuse dans les catalystes une nouvelle fois.";
+            " Il est aussi possible qu'il faille réallouer l'Eau Mystérieuse dans les catalyseurs une nouvelle fois.";
                 break;
             case EpicStoreKind.DictionaryUpgradeReset:
                 name = "Réinitialisation d'Améliorations de Dictionnaire";
@@ -7672,7 +7672,7 @@ public class Localized_French : LOCALIZATION
             case HelpKind.Skill: return "Capacité";
             case HelpKind.Upgrade: return "Amélioration";
             case HelpKind.Equip: return "Équipement";
-            case HelpKind.Lab: return "Lab";
+            case HelpKind.Lab: return "Labo";
             case HelpKind.Guild: return "Guilde";
             case HelpKind.Town: return "Ville";
             case HelpKind.Bestiary: return "Bestiaire";
@@ -7919,7 +7919,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- <color=orange>Clic Gauche</color> sur un équipement dans le dictionnaire : Ajoute l'équipement cliqué dans la liste d'Auto Désassemblage (noté par un D). Effectuez un autre Clic Gauche pour l'enlever de la liste. (Note : Requiert des améliorations de ville ou des effets de familier)";
                 tempStr += "\n- <color=orange>Maj + C</color> un équipement dans le dictionnaire : Fabrique cet objet. (Note : Requiert une amélioration de ville)";
                 tempStr += "\n\n";
-                tempStr += "<u>Onglet Lab</u>";
+                tempStr += "<u>Onglet Labo</u>";
                 tempStr += "\n- <color=orange>Clic Gauche</color> sur une potion: Ajoute la potion dans la file d'alchimie (Note : Requiert une file d'alchimie récupérable à travers les effets de familier ou un achat dans le Magasin Epique)";
                 tempStr += "\n- <color=orange>Maj + Clic Droit</color> : Enlève la potion de la file";
                 tempStr += "\n- <color=orange>Q</color> : Ajoute la potion dans la Super File en échange de 10 emplacements de file d'alchimie (Note : Requiert un achat dans le Magasin Epique)";
@@ -8088,18 +8088,18 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- La Limite d'Eau Mystérieuse est le nombre maximum d'Eau Mystérieuse que vous pouvez posséder.";
                 tempStr += "\n- Déplacez votre souris sur le barre pour voir le maximum courant de la limite.";
                 tempStr += "\n- Il y a plusieurs moyens de l'augmenter à travers des bâtiments de ville.";
-                tempStr += "\n\nCatalystes";
-                tempStr += "\n- Les catalystes sont débloqués après avoir dépensé les Matériaux et l'Eau Mystérieuse requise en cliquant sur le signe +.";
-                tempStr += "\n- Pour équiper un catalyste après l'avoir débloqué, il faut juste cliquer dessus. Vous verrez une ligne à double épaissure autour de celui-ci, et deux Essences apparaitront plus bas.";
-                tempStr += "\n- Les catalystes ont aussi une chance d'effectuer un effet critique, qui procurera un objet d'Alchimie spécial qui peut être utilisé pour des améliorations dans la Ville.";
+                tempStr += "\n\nCatalyseurs";
+                tempStr += "\n- Les catalyseurs sont débloqués après avoir dépensé les Matériaux et l'Eau Mystérieuse requise en cliquant sur le signe +.";
+                tempStr += "\n- Pour équiper un catalyseur après l'avoir débloqué, il faut juste cliquer dessus. Vous verrez une ligne à double épaissure autour de celui-ci, et deux Essences apparaitront plus bas.";
+                tempStr += "\n- Les catalyseurs ont aussi une chance d'effectuer un effet critique, qui procurera un objet d'Alchimie spécial qui peut être utilisé pour des améliorations dans la Ville.";
                 tempStr += "\n\nEssence";
-                tempStr += "\n- Chaque Catalyste débloqué ont deux Essences attachées à ceux-ci.";
+                tempStr += "\n- Chaque Catalyseur débloqué ont deux Essences attachées à ceux-ci.";
                 tempStr += "\n- Chaque Conversion vous procurera un objet de cette Essence, qui est utilisé pour mixer des potions.";
                 tempStr += "\n\nConversion";
                 tempStr += "\n- Une Conversion arrive lorsque la barre de l'essence est pleine.";
                 tempStr += "\n- Pour réduire le temps requis pour remplir la barre de l'essence, ajoutez plus d'Eau Mystérieuse / sec en appuyant sur la flèche ^.";
                 tempStr += "\n- Vous avez besoin d'au moins 0.1 Eau Mystérieuse / sec pour l'appliquer à l'Essence.";
-                tempStr += "\n\nMixer des Potions";
+                tempStr += "\n\nPotions";
                 tempStr += "\n- C'est ici que vous dépenserez vos essences pour fabriquer des potions.";
                 tempStr += "\n\nPoints d'Alchimie";
                 tempStr += "\n- Vous recevez des points en mixant des potions que vous pouvez utiliser pour améliorer le niveau des potions, ou sur d'autres améliorations d'alchimie dans le sous-onglet Améliorations, à côté de Potions.";
