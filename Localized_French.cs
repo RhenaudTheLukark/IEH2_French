@@ -7632,24 +7632,24 @@ public class Localized_French : LOCALIZATION
                 effect = "Enables Skill Set persisting on World Ascension. It requires Area Mission Milestone #1000. Skill Loadouts will also persist on World Ascension. Skills in temporary slots will be disabled on World Ascension until you acquire the slot again.";
                 break;
             case EpicStoreKind.AutoAreaProgression:
-                name = "Auto Area Progression";
-                effect = "Unlocks a button in World Map that lets heroes go to each area to meet the target Clear # that you set, starting with Slime Village Area 1. When you meet the target Clear #, heroes will automatically go to the next area. It will be based on the current Area Difficulty. ";
+                name = "Auto Progression de Zone";
+                effect = "Débloque un boutton dans la Map Monde qui permet aux héros d'aller dans chaque Zone et d'atteindre le nombre de Complétions Ciblé # que vous avez établi, en partant du Village Slime 1. Quand vous avez rencontré le nomber de Complétions Ciblé #, les héros vont automatiquement à la prochaine Zone. Il sera basé sur la difficulté courrante de la Zone. ";
                 break;
             case EpicStoreKind.NitroCapExpansion:
-                name = "Nitro Cap Expansion";
-                effect = "Gives Nitro Cap + 10% per purchase. \nCurrent Effect : Multiply Nitro Cap by <color=green>" + percent(1d + 0.1d * game.epicStoreCtrl.Item(EpicStoreKind.NitroCapExpansion).purchasedNum.value) + "</color>\n";
+                name = "Expansion Nitro Max";
+                effect = "Augmente le Maximum de Nitro par + 10% par achat. \nEffet Courrant : Multiplie le Maximum de Nitro par <color=green>" + percent(1d + 0.1d * game.epicStoreCtrl.Item(EpicStoreKind.NitroCapExpansion).purchasedNum.value) + "</color>\n";
                 break;
             case EpicStoreKind.AdvancedAutoRebirthLazyQuestingMode:
-                name = "Advanced Auto-Rebirth [ Lazy Questing Mode ]";
-                effect = "<size=18>Unlocks a toggle that enables a hero to travel to the Questing Area of any General Quest that you have designated as a Favorite Quest. After completing a quest, the hero will proceed to the next Questing Area of the next Favorite Quest. Auto-Rebirth will not occur until all the Favorite Quests have been cleared. To use this feature, you need to have purchased the [Favorite Quest].";
+                name = "Auto-réincarnation Avancée [ Mode Quête Paresseuse ]";
+                effect = "<size=18>Débloque un boutton qui permet au héro de voyager vers la Zone de Quête de n'importe quelle Quête Générale que vous avez désignée en tant que Quête Favorite. Après avoir complété une Quête, le héro procèdera à la prochaine Zone de Quête de la prochaine Quête Favorite. L'Auto-Réincarnation ne se fera qu'une fois toutes les Quêtes Favorites sont complétées. Pour utiliser cette fonctionalité, vous devez avoir acheté [Quête Favorite].";
                 break;
             case EpicStoreKind.Nitro_OfflineBonus:
                 name = OfflineBounusString(8);
-                effect = "Gains [" + OfflineBounusString(8) + "] according to your current Nitro. Nitro is converted to offline time at 1 Nitro per second up to the first 24 hours, for each additional 24 hours gained the cost increases by 1 per second per purchase. Purchase # Limit will reset daily.";
+                effect = "Gagne [" + OfflineBounusString(8) + "] selon le niveau courrant de Nitro. La Nitro es convertie en temps hors-ligne à un ratio de 1 Nitro par seconde pour les premières 24 heures, pour chaque 24 heures gagnées le coût augmente de 1 par seconde par achat. Achat # Limite se réinitialise chaque jour.";
                 break;
             case EpicStoreKind.AutoMysteriousWaterAdder:
-                name = "Auto Mysterious Water Adder";
-                effect = "Enables the Load function of the Essence Allocation in Lab to automatically allocate Mysterious Water to essences as soon as you get 0.1/sec, or just after World Ascension. Requires Area Mission Milestone #1150 and WA1 Accomplishment #30.";
+                name = "Ajouteur d'Eau Mystérieuse Automatique";
+                effect = "Débloque la fonction de chargement d'Allocation d'Essences dans le Lab pour Automatiquement allouer l'Eau Mystérieuse aux Essences des que vous en produisez 0.1/sec, ou juste après une Ascension Monde. Requière le PAlier de Zone #1150 et le succès de AM1 #30.";
                 break;
         }
         return (name, effect);
