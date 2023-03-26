@@ -8407,7 +8407,7 @@ public class Localized_French : LOCALIZATION
         }
         tempStr += "\n- Total d'Equipement Désassemblé : " + tDigit(tempValue);
         tempStr += "\n- Total de Points d'Alchimie Gagnés : " + tDigit(main.S.totalAlchemyPointGained);
-        tempStr += "\n- Total de Montres Capturés : " + tDigit(game.monsterCtrl.CapturedNum());
+        tempStr += "\n- Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum());
         tempStr += "\n\n";
         return tempStr;
     }
