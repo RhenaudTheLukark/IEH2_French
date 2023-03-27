@@ -7631,9 +7631,9 @@ public class Localized_French : LOCALIZATION
                 name = "Filtre de Parchemin";
                 effect = "Débloque un bouton dans l'onglet Equipement qui active un filtre de parchemin, qui indique que les parchemins tels que les Parchemins de Suppression ou les Parchemins de Lotterie ne seront pas gardées après avoir réclamé les récompenses de complétion de donjons/défis. ";
                 break;
-            case EpicStoreKind.PersistentSkillSet: //TODO
+            case EpicStoreKind.PersistentSkillSet:
                 name = "Capacités Persistante";
-                effect = "Permet de garder les Capacités équipées après une Ascension Monde. Requiert le Palier de Mission de Zone #1000. Les Collections de Capacités sont aussi gardées après une Ascension Monde. Les capacités dans les emplacements temporaires seront désactivées après une Ascension Monde jusqu'à que l'emplacement soit débloqué de nouveau. Enables Skill Set persisting on World Ascension. It requires Area Mission Milestone #1000. Skill Loadouts will also persist on World Ascension. Skills in temporary slots will be disabled on World Ascension until you acquire the slot again.";
+                effect = "Permet de garder les Capacités équipées après une Ascension Monde. Requiert le Palier de Mission de Zone #1000. Les Collections de Capacités sont aussi gardées après une Ascension Monde. Les capacités dans les emplacements temporaires seront désactivées après une Ascension Monde jusqu'à que l'emplacement soit débloqué de nouveau.";
                 break;
             case EpicStoreKind.AutoAreaProgression:
                 name = "Auto Progression de Zone";
