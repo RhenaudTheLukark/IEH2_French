@@ -6004,7 +6004,7 @@ public class Localized_French : LOCALIZATION
             case 18: return "Gain de Ressources + 1000%";
             case 19: return "Réduit le Coût des Améliorations Générales par " + text;
             case 20: return "Emplacement d'Inventaire d'Enchantement + 10";
-            case 21: return "Emplacement de Tenue d'Équipement + 1";
+            case 21: return "Emplacement de Collection d'Équipement + 1";
             case 22: return "Gain de Maîtrise de Capacité + 100%";
             case 23: return "Limite d'Or + 100%";
             case 24: return "Gain d'Or + 100%";
@@ -7623,37 +7623,37 @@ public class Localized_French : LOCALIZATION
                 name = "Utilisation Automatique Avancée de Parchemins de Maîtrise";
                 effect = "<size=19>Permet de choisir un équipement sur lequel le Familier Tréant Vert utilise des Parchemins de Maîtrise automatiquement. Appuyez sur Maj et effectuez un clic gauche sur un équipement dans le Dictionnaire pour ajouter ou enlever l'objet de la liste de Parchemin de Maîtrise (dénoté par un P). (Le familier doit être activé pour que l'effet marche.)";
                 break;
-            case EpicStoreKind.OneClickChallenges: //TODO
-                name = "One-Click Challenges";
-                effect = "Right click a Challenge tab, such as \"Raid Boss Battle\", it automatically starts/claims all challenges for the Active Hero in that tab except for those which you've already cleared. It will automatically claim the rewards as the challenge is cleared. ";
+            case EpicStoreKind.OneClickChallenges:
+                name = "Défis en un clic";
+                effect = "Effectuer un clic droit sur un onglet de Défi, tel que \"Boss de Raid\", commencera/réclamera tous les défis pour le Héros Actif dans cet onglet sauf ceux qui ont déjà été complétés. Les récompenses récupérées à travers la complétion des défis seront aussi réclamées. ";
                 break;
             case EpicStoreKind.ScrollFilter:
-                name = "Scroll Filter";
-                effect = "Unlocks a button in Equip tab that enables a scroll filter, to specify any scrolls like Delete Scroll, Re-lottery Scroll to not be kept from dungeon/challenge rewards. ";
+                name = "Filtre de Parchemin";
+                effect = "Débloque un bouton dans l'onglet Equipement qui active un filtre de parchemin, qui indique que les parchemins tels que les Parchemins de Suppression ou les Parchemins de Lotterie ne seront pas gardées après avoir réclamé les récompenses de complétion de donjons/défis. ";
                 break;
-            case EpicStoreKind.PersistentSkillSet:
-                name = "Persistent Skill Set";
-                effect = "Enables Skill Set persisting on World Ascension. It requires Area Mission Milestone #1000. Skill Loadouts will also persist on World Ascension. Skills in temporary slots will be disabled on World Ascension until you acquire the slot again.";
+            case EpicStoreKind.PersistentSkillSet: //TODO
+                name = "Capacités Persistante";
+                effect = "Permet de garder les Capacités équipées après une Ascension Monde. Requiert le Palier de Mission de Zone #1000. Les Collections de Capacités sont aussi gardées après une Ascension Monde. Les capacités dans les emplacements temporaires seront désactivées après une Ascension Monde jusqu'à que l'emplacement soit débloqué de nouveau. Enables Skill Set persisting on World Ascension. It requires Area Mission Milestone #1000. Skill Loadouts will also persist on World Ascension. Skills in temporary slots will be disabled on World Ascension until you acquire the slot again.";
                 break;
             case EpicStoreKind.AutoAreaProgression:
                 name = "Auto Progression de Zone";
-                effect = "Débloque un boutton dans la Map Monde qui permet aux héros d'aller dans chaque Zone et d'atteindre le nombre de Complétions Ciblé # que vous avez établi, en partant du Village Slime 1. Quand vous avez rencontré le nomber de Complétions Ciblé #, les héros vont automatiquement à la prochaine Zone. Il sera basé sur la difficulté courrante de la Zone. ";
+                effect = "Débloque un bouton dans la Carte Monde qui permet aux héros d'aller dans chaque zone et d'atteindre le # de Complétions que vous avez établi, en partant du Village des Slimes 1. Quand vous avez atteint le # de Complétions donné, les héros se déplaceront automatiquement vers la prochaine Zone. Le nombre de complétions est basé sur la difficulté courante de la Zone. ";
                 break;
             case EpicStoreKind.NitroCapExpansion:
-                name = "Expansion Nitro Max";
-                effect = "Augmente le Maximum de Nitro par + 10% par achat. \nEffet Courrant : Multiplie le Maximum de Nitro par <color=green>" + percent(1d + 0.1d * game.epicStoreCtrl.Item(EpicStoreKind.NitroCapExpansion).purchasedNum.value) + "</color>\n";
+                name = "Expansion de Nitro Max";
+                effect = "Augmente le Maximum de Nitro de 10% par achat. \nEffet Courant : Multiplie le Maximum de Nitro par <color=green>" + percent(1d + 0.1d * game.epicStoreCtrl.Item(EpicStoreKind.NitroCapExpansion).purchasedNum.value) + "</color>\n";
                 break;
             case EpicStoreKind.AdvancedAutoRebirthLazyQuestingMode:
-                name = "Auto-réincarnation Avancée [ Mode Quête Paresseuse ]";
-                effect = "<size=18>Débloque un boutton qui permet au héro de voyager vers la Zone de Quête de n'importe quelle Quête Générale que vous avez désignée en tant que Quête Favorite. Après avoir complété une Quête, le héro procèdera à la prochaine Zone de Quête de la prochaine Quête Favorite. L'Auto-Réincarnation ne se fera qu'une fois toutes les Quêtes Favorites sont complétées. Pour utiliser cette fonctionalité, vous devez avoir acheté [Quête Favorite].";
+                name = "Auto Réincarnation Avancée [ Mode Quête Automatique ]";
+                effect = "<size=18>Débloque un bouton qui permet au héros de voyager vers la Zone de Quête de n'importe quelle Quête Générale que vous avez désignée en tant que Quête Favorite. Après avoir complété une Quête, le héro procèdera à la prochaine Zone de Quête de la prochaine Quête Favorite. L'Auto-Réincarnation ne se fera qu'une fois que toutes les Quêtes Favorites sont complétées. Pour utiliser cette fonctionalité, v[Quête Favorite] doit être acheté.";
                 break;
             case EpicStoreKind.Nitro_OfflineBonus:
                 name = OfflineBounusString(8);
-                effect = "Gagne [" + OfflineBounusString(8) + "] selon le niveau courrant de Nitro. La Nitro es convertie en temps hors-ligne à un ratio de 1 Nitro par seconde pour les premières 24 heures, pour chaque 24 heures gagnées le coût augmente de 1 par seconde par achat. Achat # Limite se réinitialise chaque jour.";
+                effect = "Gagne [" + OfflineBounusString(8) + "] suivant la Nitro en votre possession. La Nitro est convertie en temps hors-ligne utilisant un ratio de 1 Nitro par seconde pour les premières 24 heures, puis pour chaque prochaines 24 heures le coût augmente de 1 par seconde par achat. La Limite de # d'Achat est réinitialisée chaque jour.";
                 break;
             case EpicStoreKind.AutoMysteriousWaterAdder:
-                name = "Ajouteur d'Eau Mystérieuse Automatique";
-                effect = "Débloque la fonction de chargement d'Allocation d'Essences dans le Lab pour Automatiquement allouer l'Eau Mystérieuse aux Essences des que vous en produisez 0.1/sec, ou juste après une Ascension Monde. Requière le PAlier de Zone #1150 et le succès de AM1 #30.";
+                name = "Auto Ajouteur d'Eau Mystérieuse";
+                effect = "Débloque la fonction de chargement d'Allocation d'Essences dans le Labo pour automatiquement allouer l'Eau Mystérieuse aux Essences dès que vous en produisez 0.1/sec, ou juste après une Ascension Monde. Requiert la complétion du Palier de Mission de Zone #1150 et l' Accomplissement d'AM1 #30.";
                 break;
         }
         return (name, effect);
