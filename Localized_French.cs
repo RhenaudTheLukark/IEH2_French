@@ -7130,7 +7130,7 @@ public class Localized_French : LOCALIZATION
             case 10: return "Bénédiction de Gain d'EXP (Durée de 15 mins)";
             case 11: return "5 Fragments de Talisman";
             case 12: return "Bénédiction de Gain d'Or (Durée de 15 mins)";
-            case 13: return "1 Orbe de Portail";
+            case 13: return "1 Orbe Portail";
             case 14: return "1 ";
             case 15: return "Talisman (Peu Commun) [" + text + "]";
             case 16: return "Talisman (Rare) [" + text + "]";
@@ -8917,7 +8917,7 @@ public class Localized_French : LOCALIZATION
             case PetPassiveEffectKind.MysteriousWaterGain:
                 return "Gain d'Eau Mystérieuse <color=green>+ " + tDigit(pet.effectValue, 3) + " / sec</color> ( + " + tDigit(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.ChestPortalOrbChance:
-                return "Chance de Trouver une Orbe de Portail dans un Coffre : <color=green>" + percent(pet.effectValue, 4) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
+                return "Chance de Trouver une Orbe Portail dans un Coffre : <color=green>" + percent(pet.effectValue, 4) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.SkillProfGain:
                 return "Gain en Maîtrise de Capacité <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.TownMatGain:
