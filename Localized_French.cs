@@ -116,7 +116,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.UnlockCondition:
                 return "Condition de Déblocage";
             case BasicWord.EpicCoin:
-                return "Pièce(s) Épique";
+                return "Pièce Épique";
             case BasicWord.Additive:
                 return "Additif";
             case BasicWord.Multiplicative:
@@ -132,7 +132,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.Dungeon:
                 return "Donjon";
             case BasicWord.PortalOrb:
-                return "Orbe(s) Portail";
+                return "Orbe Portail";
             case BasicWord.Nitro:
                 return "Nitro";
             case BasicWord.Title:
@@ -216,9 +216,9 @@ public class Localized_French : LOCALIZATION
             case BasicWord.PetRank:
                 return "Rang de Familier";
             case BasicWord.On:
-                return "Activé";
+                return "Actif";
             case BasicWord.Off:
-                return "Desactivé";
+                return "Inactif";
             case BasicWord.Level:
                 return "Niveau";
             case BasicWord.LoyaltyPoint:
@@ -284,7 +284,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.TriggeredNum:
                 return "Utilisé #";
             case BasicWord.RestoreHP:
-                return "Restorer des PV";
+                return "PV Restauré";
             case BasicWord.NotEnoughMP:
                 return "Pas assez de PM";
             case BasicWord.ChanneledMP:
@@ -970,16 +970,20 @@ public class Localized_French : LOCALIZATION
                 return "EXP";
             case Stats.SkillProficiencyGain:
                 return "Maîtrise de Capacité";
-            case Stats.EquipmentProficiencyGain: //TODO
+            case Stats.EquipmentProficiencyGain:
                 if (isShort) tempStrStats = "Gain de Maît. Equip.";
-                else tempStrStats = "Gain de Maîtrise d'Equipement";
+                else         tempStrStats = "Gain de Maîtrise d'Equipement";
                 break;
             case Stats.EquipmentDropChance:
-                return "Chance de Drop d'Équipement";
+                if (isShort) tempStrStats = "Chance d'EQ";
+                else         tempStrStats = "Chance d'Apparition d'Équipement";
+                break;
             case Stats.MoveSpeed:
                 return "Vitesse";
             case Stats.TamingPointGain:
-                return "Gain de Points de Domptage";
+                if (isShort) tempStrStats = "Gain de Pts. Domptage.";
+                else         tempStrStats = "Gain de Points de Domptage";
+                break;
         }
         return tempStrStats;
     }
@@ -3125,7 +3129,7 @@ public class Localized_French : LOCALIZATION
             case PotionKind.MinorRegenerationPoultice:
                 return optStr + "Régénération de PM + " + tDigit(effectValue, 2) + " / " + Basic(BasicWord.Sec) + "</color>";
             case PotionKind.MinorResourcePoultice:
-                return optStr + "Gain de Ressources + " + percent(effectValue) + "</color>";
+                return optStr + "Gain de Ressources (Global) + " + percent(effectValue) + "</color>";
             case PotionKind.SlickShoeSolution:
                 return optStr + "Vitesse + " + percent(effectValue) + "</color>";
             case PotionKind.MinorManaRegenerationPoultice:
@@ -3151,7 +3155,7 @@ public class Localized_French : LOCALIZATION
             case PotionKind.IcyAuraDraught:
                 return optStr + "Génère une aura glaciale autour du héros qui a " + percent(effectValue) + "</color> de chances chaque seconde de donner le débuff " + DebuffName(Debuff.SpdDown) + " aux monstres";
             case PotionKind.SlightlyStickySalve:
-                return optStr + "Gain d'Or + " + percent(effectValue) + "</color>";
+                return optStr + "Gain d'Or (Global) + " + percent(effectValue) + "</color>";
             case PotionKind.SlickerShoeSolution:
                 return optStr + "Vitesse + " + percent(effectValue) + "</color>";
             case PotionKind.CoolHeadOintment:
@@ -3417,7 +3421,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindAngel.Heal:
                 return "Soin";
             case SkillKindAngel.GodBless:
-                return "Béni des Dieux";
+                return "Bénédiction des Dieux";
             case SkillKindAngel.MuscleInflation:
                 return "Gonflement de Muscle";
             case SkillKindAngel.MagicImpact:
@@ -3427,7 +3431,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindAngel.Haste:
                 return "Célérité Accrue";
             case SkillKindAngel.WingStorm:
-                return "Temp^te de Plumes";
+                return "Tempête de Plumes";
             case SkillKindAngel.HolyArch:
                 return "Arche Sainte";
         }
@@ -3505,8 +3509,8 @@ public class Localized_French : LOCALIZATION
                 return "Ode à l'Amitié";
             case SkillKindTamer.AnthemOfEnthusiasm:
                 return "Hymne à l'Entousiasme";
-            case SkillKindTamer.FeedChilli: //TODO
-                return "Feed Chilli";
+            case SkillKindTamer.FeedChilli:
+                return "Donner du Chili";
             case SkillKindTamer.BreedingKnowledge:
                 return "Connaissance en Domptage";
             case SkillKindTamer.TuneOfTotalTaming:
@@ -3614,30 +3618,30 @@ public class Localized_French : LOCALIZATION
         }
         return kind.ToString();
     }
-    public override string SkillDescriptionThief(SkillKindThief kind) //TODO
+    public override string SkillDescriptionThief(SkillKindThief kind)
     {
         switch (kind)
         {
             case SkillKindThief.DaggerAttack:
-                return "Perform a basic physical attack with a dagger.";
+                return "Effectue une attaque physique basique avec une dague.";
             case SkillKindThief.Stab:
-                return "Quick and precise stabs with a dagger.";
+                return "Coups de poignard rapides et précis avec une dague.";
             case SkillKindThief.KnifeToss:
-                return "Throws a sharp dagger at the enemy, dealing damage.";
+                return "Lance une dague pointue vers l'ennemi, infligeant des dégâts.";
             case SkillKindThief.LuckyBlow:
-                return "Short-range dagger throw that has a high critical chance, making it deal massive damage in a single strike.";
+                return "Lancer de dague de courte portée qui a une chance de coup critique élevée, ce qui inflige de g^ros dégâts en un seul coup.";
             case SkillKindThief.SpreadToss:
-                return "Throws multiple daggers in a circular pattern around the hero, hitting enemies in multiple directions.";
+                return "Lance plusieurs dagues dans un cercle autour du héros, touchant des ennemis dans différentes directions.";
             case SkillKindThief.ShadowStrike:
-                return "Strike enemies with a deadly blow of dark damage, with a chance to apply poison that deals additional dark damage over time.";
+                return "Endommage des ennemis avec un coup mortel de dégâts des ténèbres, avec une chance d'appliquer du poison qui inflige des dégâts des ténèbres additionnels au fil du temps.";
             case SkillKindThief.SneakyStrike:
-                return "Disappear briefly and reappear at the furthest monster to deal damage.";
+                return "Disparait et réapparait à côté de l'ennemi le plus éloigné pour infliger des dégâts.";
             case SkillKindThief.Pilfer:
-                return "Use your cunning to steal common loot from your enemies, while dealing a small amount of dark damage.";
+                return "Utilise la fourberie pour voler du butin commun, tout en infligeant un peu de dégâts des ténèbres.";
             case SkillKindThief.DarkWield:
-                return "Harness the power of Dark Damage and perform a wide-arc attack with your dagger in front of you.";
+                return "Exploite le pouvoir des ténèbres et exécute une attaque dans un arc avec votre dague en face de vous.";
             case SkillKindThief.Assassination:
-                return "Use your skills to deliver a deadly blow of Dark Damage, with a chance to instantly eliminate enemies below 50% HP.";
+                return "Utilise vos habileté pour délivrer un coup mortel des ténèbres, qui a une chance d'instantanément éliminer un ennemi ayant en dessous de 50% de ses PV.";
         }
         return kind.ToString();
     }
@@ -4041,68 +4045,68 @@ public class Localized_French : LOCALIZATION
                         reward = "Débloque les onglets [ Ville ] & [ Magasin ]";
                         break;
                     case QuestKindGlobal.Town:
-                        name = "Tutorial 8 : Town";
+                        name = "Tutoriel 8 : Ville";
                         client = "Hitan";
-                        description = optStr + "Now you can go to <color=orange>Town</color> tab." +
-                            " There are various buildings in the town." +
-                            " You can improve buildings with Town Materials that you gain every time you clear any area ( you can see it in the area info )." +
-                            " Dungeons give more Town Materials when you clear it." +
-                            " Like skills, buildings have Rank and Level. The level cap increases by 20 per rank." +
-                            " To understand more, <color=orange>let's raise Cartographer's level to 5.</color>" +
-                            " Then you will be able to go to another region in the world!\n<color=yellow>- For more information, Help > [Town].</color>"
+                        description = optStr + "Maintenant, tu peux aller dans l'onglet <color=orange>Ville</color>." +
+                            " Il y a plusieurs bâtiments dans la ville." +
+                            " Tu peux améliorer les bâtiments à l'aide de Matériaux de Ville que tu gagnes à chaque fois qu'une zone est complétée ( tu peux le voir dans les infos de la zone )." +
+                            " Les Donjons donnents des Matériaux de Ville lorsqu'ils sont complétés." +
+                            " Tout comme les capacités, les bâtiments ont un Rang et un Niveau. La limite de niveau augmente par 20 pour chaque rang." +
+                            " Pour mieux comprendre, <color=orange>augmentons le niveau du Cartographeur jusqu'au niveau 5.</color>" +
+                            " Tu pourras ensuite accéder à une nouvelle région du monde !\n<color=yellow>- Pour plus d'informations, Aide > [Ville].</color>"
                             ;
-                        condition = "Building [ Cartographer ] Lv 5";
-                        reward = "EXP Gain Blessing (Duration 30 mins)";
+                        condition = "Atteindre le Nv 5 pour le Bâtiment [ Cartographeur ]";
+                        reward = "Bénédiction de Gain d'EXP (Durée 30 mins)";
                         break;
                     case QuestKindGlobal.Research:
-                        name = "Tutorial 9 : Town Research";
+                        name = "Tutoriel 9 : Recherche de Ville";
                         client = "Hitan";
-                        description = optStr + "While we are in the town, each building has three different <color=orange>researchable effects</color>. You can speed up the research speed by gaining more resources. <color=orange>Let's research Cartographer's Leaf Research. This will provide an additional Town Material per clear</color>, which can be extremely useful in gathering town materials to level up buildings in the town!\n<color=yellow>- For more information, Help > [Town].</color>"
+                        description = optStr + "Tant que tu es dans la ville, chaque bâtiment a trois différents <color=orange>effets recherchables</color>. Tu peux augmenter la vitesse de recherche en gagnant les ressources associées. <color=orange>Recherchons la Recherche de Feuille du Cartographeur. Celle-ci augmente le nombre de Matériaux de Ville lâchés pour chaque complétion de zone</color>, ce qui est très utile pour ramasser plus de matériaux de ville pour augmenter le niveau des bâtiments dans la ville !\n<color=yellow>- Pour plus d'informations, Aide > [Ville].</color>"
                             ;
-                        condition = "Cartographer's Leaf Research Lv 1";
-                        reward = "Gold Gain Blessing (Duration 30 mins)\n-Unleash Tab [ Rebirth ]";
+                        condition = "Atteindre le Nv 1 de la Recherche de Feuille du Cartographeur";
+                        reward = "Bénédiction de Gain d'Or (Durée 30 mins)\n-Débloque l'onglet [ Réincarnation ]";
                         break;
                     case QuestKindGlobal.Rebirth:
-                        name = "Tutorial 10 : Rebirth";
+                        name = "Tutoriel 10 : Réincarnation";
                         client = "Hitan";
-                        description = optStr + "It's now time for a <color=orange>Rebirth</color>. There are multiple tiers of rebirthing. But for now, let's get started on Tier 1. <color=orange>Get to Hero Level 100</color> and click on the Rebirth Tab, then click on 'Rebirth'." +
-                            " Don't forget to apply some upgrades after rebirthing, especially the <color=orange>EXP Multiplier</color>. \n<color=yellow>- For more information, Help > [Rebirth].</color>"; ;
-                        condition = "Perform Tier 1 Rebirth of any hero";
-                        reward = "EXP Gain Blessing (Duration 30 mins)\n- Unleash Tab [ Challenge ]";
+                        description = optStr + "Il est maintenant temps de se <color=orange>Réincarner</color>. Il existe plusieures classes de réincarnation. Pour le moment, essayons d'en faire une de Classe 1. <color=orange>Atteins le Niveau 100 avec un des Héros</color> et clique sur l'onglet Réincarnation, puis sur 'Réincarnation'." +
+                            " N'oublie pas d'acheter des améliorations après la réincarnation, surtout <color=orange>Expérience Innée</color>. \n<color=yellow>- Pour plus d'informations, Aide > [Réincarnation].</color>"; ;
+                        condition = "Effectue une Réincarnation de Classe 1 avec n'importe quel héros";
+                        reward = "Bénédiction de Gain d'EXP (Durée 30 mins)\n- Débloque l'onglet [ Défi ]";
                         break;
                     case QuestKindGlobal.Challenge:
-                        name = "Tutorial 11 : Challenge";
+                        name = "Tutoriel 11 : Défi";
                         client = "Hitan";
-                        description = optStr + "Oh, looks like a horrible monster has emerged! Go to <color=orange>Challenge</color> tab to defeat <color=orange>Florzporb</color>." +
-                            " On Raid Boss Battle, all heroes that are currently active will join the battle." +
-                            " Since you have rebirthed, you can now get Proof of Rebirth title by the quest, which enables to activate the hero even in background." +
-                            " The boss monster is very powerful, so gather active guild members to fight together and prepare well before taking it on!\n<color=yellow>- For more information, Help > [Challenge].</color>";
-                        condition = "Complete Raid Boss Battle [ Florzporb Lv 100 ]";
-                        reward = "Unleash Tab [ Expedition ]\n- Unlock Auto Ability Point Adder";
+                        description = optStr + "Oh, on dirait qu'un horrible monstre est apparu ! Va dans l'onglet <color=orange>Défi</color> pour vaincre <color=orange>Florzporbe</color>." +
+                            " Dans un Combat de Boss de Raid, tous les héros couremment actifs vont rejoindre le combat." +
+                            " Comme tu t'es réincarné, tu peux recevoir le titre Preuve de Réincarnation à travers sa quête, ce qui permet d'activer le héos en arrière-plan." +
+                            " Le monstre boss est très puissant, donc regroupe les membres actifs de la guilde pour combattre ensemble et prépare-toi bien avant le combat !\n<color=yellow>- Pour plus d'informations, Aide > [Défi].</color>";
+                        condition = "Complète le Combat de Boss de Raid [ Florzporbe Nv 100 ]";
+                        reward = "Débloque l'onglet [ Expédition ]\n- Débloque l'Auto Ajouteur de Point d'Abilité";
                         break;
                     case QuestKindGlobal.Expedition:
-                        name = "Tutorial 12 : Expedition";
+                        name = "Tutoriel 12 : Expédition";
                         client = "Hitan";
-                        description = optStr + "You have successfully unlocked the ability to send your pets out on expeditions! If you head over to the Expedition tab in the menu, you will be able to choose which pets you want to set for your first adventuring team. After that, you may choose your expedition by pulling down the drop-down menu and selecting one of the expeditions for acquiring town materials. Choose your duration and then click start. Return here once you've completed your first expedition!\n<color=yellow>- For more information, Help > [Expedition].</color>";
-                        condition = "Complete any expedition once";
-                        reward = "Unleash Tab [ World Ascension ]\n- Unlock 1 Expedition Team";
+                        description = optStr + "Tu as débloqué la possibilité d'envoyer tes familiers dans une expédition ! Si tu vas dans l'onglet Expédition, tu pourras choisir quels familiers ajouter dans ta première équipe d'expédition. Après ça, tu peux choisir l'expédition en cliquant sur la liste déroulante et en choisissant l'une des expéditions pour acquérir des matériaux de ville. Choisis une durée et clique sur Commencer. Reviens sur cet onglet lorsque ta première expédition sera complétée !\n<color=yellow>- Pour plus d'informations, Aide > [Expédition].</color>";
+                        condition = "Complète n'importe quelle expédition";
+                        reward = "Débloque l'onglet [ Ascension Monde ]\n- Débloque 1 Equipe d'Expédition";
                         break;
                     case QuestKindGlobal.WorldAscension:
-                        name = "Tutorial 13 : World Ascension";
+                        name = "Tutoriel 13 : Ascension Monde";
                         client = "Hitan";
-                        description = optStr + "Okay, the next tutorial is... huh? You are thinking that this is a too long tutorial? Come on, this is only the beginning of this game so far. Very exciting, isn't it?" +
-                            " Now, though, it will be a while before you achieve the next goal, <color=orange>World Ascension</color>. Let's try to complete the milestones in World Ascension Tab and perform the World Ascension. Various things in this world will reset and hence further dimensional ascension will occur in this game." +
-                            " It is up to you when you want to World Ascension!\n<color=yellow>- For more information, Help > [World Ascension].</color>";
-                        condition = "Perform World Ascension Tier 1 once";
-                        reward = "Emplacement d'Inventaire d'Équipement + 10\n- Emplacement d'Inventaire d'Enchantement + 5\n- Utility Inventory Slot + 5";
+                        description = optStr + "Ok, le prochain tutoriel est... hein ? Tu penses que ce tutoriel est trop long ? Allons, ce n'est que le début de ce jeu. Excitant, non ?" +
+                            " Cependant, atteindre le prochain objectif, l'<color=orange>Ascension Monde</color>, te prendra du temps. Essaye de compléter les paliers dans l'onglet Ascension Monde et effectue une Ascension Monde. Certains aspects du monde seront réinitialisés, ce qui te permettra de progresser encore plus vite par la suite." +
+                            " À toi de choisir quand effectuer l'Ascension Monde !\n<color=yellow>- Pour plus d'informations, Aide > [Ascension Monde].</color>";
+                        condition = "Effectue une Ascension Monde de Classe 1";
+                        reward = "Emplacement d'Inventaire d'Équipement + 10\n- Emplacement d'Inventaire d'Enchantement + 5\n- Emplacement d'Inventaire d'Utilitaire + 5";
                         break;
                     case QuestKindGlobal.AreaPrestige:
-                        name = "Tutorial 14 : Area Prestige";
+                        name = "Tutoriel 14 : Prestige de Zone";
                         client = "Hitan";
-                        description = optStr + "Congratulations! After World Ascension, every area of the world also has a chance to prestige. You can earn <color=orange>Area Prestige Point</color> according to its area clear #. See the next clear # to earn points in area info." +
-                            " Once you increase <color=orange>[ Area Prestige ]</color> upgrade's level, you can change the difficulty of its area. The unique equipment drop chance and the reward amount increases according to the difficulty, while the monster's level and wave # to clear increases too." +
-                            " You can also try the same missions in the area of different difficulty, so you can earn another Epic Coin and Mission Milestone Count as well.\n<color=yellow>- For more information, Help > [World Map].</color>";
-                        condition = "Area Prestige Upgrade of " + AreaName(AreaKind.SlimeVillage) + " Area 1 [ Area Prestige ] Lv 1";
+                        description = optStr + "Bravo ! Après une Ascension Monde, chaque zone du monde a aussi la possibilité d'avoir un prestige. Tu peux gagner des <color=orange>Points de Prestige de Zone</color> dépendant du # de complétions de la zone. Tu peux voir le prochain # de complétions pour gagner des points dans les infos de la zone." +
+                            " Une fois que le niveau de l'amélioration <color=orange>[ Prestige de Zone ]</color> est augmenté, tu peux changer la difficulté de la zone. La chance d'apparition de l'équipement unique de la zone et la récompense de sa complétion augmente avec la difficulté, tandis que le niveau des monstres et le # de vagues à compléter augmente aussi." +
+                            " Tu peux aussi compléter les mêmes missions de la zone dans les différentes difficultés, donc tu peux aussi gagner plus de Pièces Epiques et augmenter le Nombre de Missions de Zone complétées.\n<color=yellow>- Pour plus d'informations, Aide > [Carte Monde].</color>";
+                        condition = "Atteindre le Nv 1 de l'Amélioration de Zone [ Prestige de Zone ] de la Zone 1 du " + AreaName(AreaKind.SlimeVillage);
                         break;
 
                     //Upgrade
@@ -6292,7 +6296,7 @@ public class Localized_French : LOCALIZATION
             case 23: return "Maj + Clic pour déplacer tous les héros dans leur zone favorite.";
             case 24: return "Magasin Épique [ Convocation ]";
             case 25: return "Bâtiment [Cartographeur] Nv ";
-            case 26: return " INVASIONS DE MONTRE EN COURS !";
+            case 26: return " INVASION DE MONSTRE EN COURS !";
             case 27: return " ( cliquer pour y aller )";
             case 28: return "Monstres Apparus";
             case 29: return "x ( Minimum";
@@ -7739,9 +7743,9 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n\n- Augmenter le niveau du Bâtiment de Ville <color=orange>Statue de Héros</color> donne un bonus de gain d'EXP chaque fois que son niveau augmente.";
                 tempStr += "\n\n- Faites en sorte de débloquer des <color=orange>Donjons</color> dans les différentes zones et vérifiez la partie <color=orange>Récompenses</color> sous l'onglet des détails du Donjon pour sa récompense d'EXP. Cela peut vastement booster le niveau du héros.";
                 tempStr += "\n\n- Pendant un donjon, openez les <color=orange>Coffres au Trésor</color> car il y a une chance d'obtenir une <color=orange>Bénédiction d'EXP</color>, qui boostera vos gains d'EXP pendant un court moment. Cela augmente aussi la récompense d'EXP, si la bénédiction est toujours active lors de sa complétion.";
-                tempStr += "\n\n- Quand vous atteignez la Réincarnation de Classe 1, faites en sorte d'amélirer le Multiplicateur d'EXP le plus possible.";
+                tempStr += "\n\n- Quand vous atteignez la Réincarnation de Classe 1, faites en sorte d'améliorer Expérience Innée le plus possible.";
                 tempStr += "\n\n- Atteindre la Rang 2 de la <color=orange>Hutte de l'Alchimiste</color> débloquera une potion d'EXP que les héros peuvent équiper dans un emplacement d'utilitaire pour augmenter ses gains d'EXP.";
-                tempStr += "\n\n- Il y a aussi des objets uniques qui ont une augmentation des gains d'EXP en tant que l'un de leurs effets.";
+                tempStr += "\n\n- Il y a aussi des objets uniques qui augmentent les gains d'EXP en tant que l'un de leurs effets.";
                 break;
             case HelpKind.WorldMap:
                 tempStr += "Cliquer sur l'icône de Carte en haut à droite de l'écran vous emmènera sur la Carte Monde. C'est ici où vous pourrez voir le nombre d'Orbes Portail en votre possession, et mettre la souris sur le ruban montrera les Paliers de Missions.";
@@ -8287,13 +8291,13 @@ public class Localized_French : LOCALIZATION
                 tempStr += "Améliorations d'Ascension Monde ";
                 tempStr += "\n- Boosteur d'EXP de Guilde – Multiplie le % de Gains d'EXP de Guilde pour tous les héros.";
                 tempStr += "\n- Boosteur de Zone – Augmente le nombre de Complétions de Zone et la Récompense de Complétion pour chaque amélioration.";
-                tempStr += "\n- Expansion d'Emplacement de Héro Actif – Permet d'avoir 1 héros actif en plus en arrière-plan.";
+                tempStr += "\n- Héro Actif + – Permet d'avoir 1 héros actif en plus en arrière-plan.";
                 tempStr += "\n- Boost de Maîtrise de Capacité – Multiplie les gains de maîtrise de capacité pour tous les héros.";
-                tempStr += "\n- Points de Pré-Réincarnation Classe 1 – Cette amélioration donne des Points de Réincarnation de Classe 1 à dépenser au début d'une AM.";
-                tempStr += "\n- Points de Pré-Réincarnation Classe 2 – Cette amélioration donne des Points de Réincarnation de Classe 2 à dépenser lorsque la Réincarnation de Classe 2 esr débloquée à trvaers le Bâtiment Temple.";
-                tempStr += "\n- Expansion du Bonus de Réincarnation Classe 1 – Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 1.";
-                tempStr += "\n- Expansion du Bonus de Réincarnation Classe 2 – Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 2. ";
-                tempStr += "\n- Efficacité des Points d'AM par Palier – Augmente le nombre de Points gagnés à chaque fois qu'un Palier est atteint.";
+                tempStr += "\n- Points de Pré-Réinc. Classe 1 – Cette amélioration donne des Points de Réincarnation de Classe 1 à dépenser au début d'une AM.";
+                tempStr += "\n- Points de Pré-Réinc. Classe 2 – Cette amélioration donne des Points de Réincarnation de Classe 2 à dépenser lorsque la Réincarnation de Classe 2 esr débloquée à trvaers le Bâtiment Temple.";
+                tempStr += "\n- Bonus de Réinc. Classe 1 + – Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 1.";
+                tempStr += "\n- Bonus de Réinc. Classe 2 + – Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 2. ";
+                tempStr += "\n- Gain de Points d'AM par Palier – Augmente le nombre de Points gagnés à chaque fois qu'un Palier est atteint.";
                 tempStr += "\n- Amélioration de Nitro – Augmente la vitesse du jeu lorsque la Nitro est utilisée.";
                 break;
             case HelpKind.EpicStore:
@@ -8614,8 +8618,8 @@ public class Localized_French : LOCALIZATION
         StringBuilder tempStringBuilder = new StringBuilder(4096);
         tempStringBuilder.Clear();
         tempStringBuilder.Append(optStr + "<size=20>TOTAL COMPLÉTÉ # <color=green>" + tDigit(game.achievementCtrl.TotalClearNum()) + "</color> / " + tDigit(game.achievementCtrl.achievementList.Count));
-        tempStringBuilder.Append(optStr + "\nBonus Total Complété : Gain d'Or <color=green>+ " + percent(game.achievementCtrl.GoldGainBonus(), 0) + "</color> ( + 1% / clear )");
-        tempStringBuilder.Append("\n\n<u>Achievements</u><size=18>");
+        tempStringBuilder.Append(optStr + "\nBonus Total Complété : Gain d'Or <color=green>+ " + percent(game.achievementCtrl.GoldGainBonus(), 0) + "</color> ( + 1% / complétion )");
+        tempStringBuilder.Append("\n\n<u>Succès</u><size=18>");
         switch (helpKind)
         {
             case HelpKind.A_All:
@@ -8701,7 +8705,7 @@ public class Localized_French : LOCALIZATION
         switch (id)
         {
             case 0: return "Cliquer pour aller à ";
-            case 1: return "Il faut " + text + " Orbes Portail pour entrer dans cette Zone (Vous en avez " + text2 + ")";
+            case 1: return "Il faut " + text + " Orbe(s) Portail pour entrer dans cette Zone (Vous en avez " + text2 + ")";
             case 2: return "Aller voir les Titres acquis.";
             case 3: return "Retirer le Favori";
             case 4: return "Assigner le Favori";
@@ -8814,23 +8818,23 @@ public class Localized_French : LOCALIZATION
         switch (kind)
         {
             case ChallengeMonsterKind.Florzporb:
-                return "Florzporb, Le Roi Slime";
+                return "Florzporbe, Le Roi Slime";
             case ChallengeMonsterKind.Arachnetta:
-                return "Arachnetta, La Veuve Noire";
+                return "Aranetta, La Veuve Noire";
             case ChallengeMonsterKind.GuardianKor:
-                return "Guardian Kor, Le Géant de Pierre";
+                return "Gardien Kor, Le Géant de Pierre";
             case ChallengeMonsterKind.Nostro:
                 return "Nostro, la Chauve-Souris Vampire";
             case ChallengeMonsterKind.LadyEmelda:
-                return "Lady Emelda, la Fée Sorcière";
+                return "Dame Emelda, la Fée Sorcière";
             case ChallengeMonsterKind.NariSune:
                 return "Nari Sune, le Renard aux Neuf Queues";
             case ChallengeMonsterKind.Octobaddie:
-                return "Octobaddie, Terreur des Profondeurs";
+                return "Octopabo, Terreur des Profondeurs";
             case ChallengeMonsterKind.Bananoon:
-                return "Bananoon, le Bananattaqueur";
+                return "Bananoutan, le Bananattaqueur";
             case ChallengeMonsterKind.Glorbliorbus:
-                return "Glorbliorbus, le Slime Archimage";
+                return "Glorbliorbe, le Slime Archimage";
             case ChallengeMonsterKind.DistortionSlime:
                 return "Gankyū, le Slime Distordu";
         }
@@ -8841,23 +8845,23 @@ public class Localized_French : LOCALIZATION
         switch (kind)
         {
             case ChallengeMonsterKind.Florzporb:
-                return "Florzporb";
+                return "Florzporbe";
             case ChallengeMonsterKind.Arachnetta:
-                return "Arachnetta";
+                return "Aranetta";
             case ChallengeMonsterKind.GuardianKor:
-                return "Guardian Kor";
+                return "Gardien Kor";
             case ChallengeMonsterKind.Nostro:
                 return "Nostro";
             case ChallengeMonsterKind.LadyEmelda:
-                return "Lady Emelda";
+                return "Dame Emelda";
             case ChallengeMonsterKind.NariSune:
                 return "Nari Sune";
             case ChallengeMonsterKind.Octobaddie:
-                return "Octobaddie";
+                return "Octopabo";
             case ChallengeMonsterKind.Bananoon:
-                return "Bananoon";
+                return "Bananoutan";
             case ChallengeMonsterKind.Glorbliorbus:
-                return "Glorbliorbus";
+                return "GlorGlorbliorbebliorbus";
             case ChallengeMonsterKind.DistortionSlime:
                 return "Gankyū";
         }
@@ -9056,7 +9060,7 @@ public class Localized_French : LOCALIZATION
                 effect = "Augmente le nombre de Complétions de Zone et la Récompense de Complétion par " + tDigit(value);
                 break;
             case AscensionUpgradeKind.ActiveHero:
-                name = "Expansion d'Emplacement de Héro Actif";
+                name = "Héro Actif +";
                 effect = "Augmente le nombre d'Emplacements de Héros activables par " + tDigit(value);
                 break;
             case AscensionUpgradeKind.SkillProfGain:
@@ -9064,23 +9068,23 @@ public class Localized_French : LOCALIZATION
                 effect = "Augmente la Maîtrise de Capacité par " + percent(value);
                 break;
             case AscensionUpgradeKind.PreRebirthTier1:
-                name = "Points de Pré-Réincarnation Classe 1";
+                name = "Points de Pré-Réinc. Classe 1";
                 effect = "Ajoute des points de Réincarnation Classe 1 gratuits + " + tDigit(value) + " au début d'une nouvelle AM";
                 break;
             case AscensionUpgradeKind.PreRebirthTier2:
-                name = "Points de Pré-Réincarnation Classe 2";
+                name = "Points de Pré-Réinc. Classe 2";
                 effect = "Ajoute des points de Réincarnation Classe 2 gratuits + " + tDigit(value) + " au début d'une nouvelle AM";
                 break;
             case AscensionUpgradeKind.RebirthTier1BonusCap:
-                name = "Expansion du Bonus de Réincarnation Classe 1";
+                name = "Bonus de Réinc. Classe 1 +";
                 effect = "Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 1 par Niv " + tDigit(value);
                 break;
             case AscensionUpgradeKind.RebirthTier2BonusCap:
-                name = "Expansion du Bonus de Réincarnation Classe 2";
+                name = "Bonus de Réinc. Classe 2 +";
                 effect = "Augmente le niveau maximal du Bonus de Points d'Abilité de Classe 2 par Niv " + tDigit(value);
                 break;
             case AscensionUpgradeKind.PointGainBonus:
-                name = "Efficacité des Points d'AM par Palier";
+                name = "Gain de Points d'AM par Palier";
                 effect = "Augmente le nombre de points gagnés par niveau de palier d'AM par " + tDigit(value);
                 break;
             case AscensionUpgradeKind.NitroSpeed:
