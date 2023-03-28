@@ -1,0 +1,39 @@
+<<<<<<<<<<<<Page de Magasin Steam d'IEH2>>>>>>>>>
+
+Incremental Epic Hero 2 est une réimagination du jeu originel [url=https://store.steampowered.com/app/1530340/Incremental_Epic_Hero/]Incremental Epic Hero[/url]. Un mix d'incrémental/idle et de jeu de rôle dans un monde fantastique rempli de monstres et de choses à explorer.
+
+[h2]Combat en Temps Réel[/h2]
+En playant l'un des six personnages disponibles, le combat ne s'arrête jamais ! Voyagez de plus en plus loin dans le monde pour rencontrer de nouveaux monstres, de meilleurs équipements, et pour compléter des quêtes pour continuellement devenir plus fort.
+
+
+[h2]Carte Monde[/h2]
+Il y a de nouvelles régions entières à explorer et une grande variété de monstres à affronter. Frayez-vous un chemin entre des armées de slimes, d'araignées, de renards et bien d'autres ! Chaque région étant plus difficile que la précédente, et avec la possibilité d'effectuer des prestiges sur les zones déjà visitées, tout le contenu restera frais peu importe où vous en êtes dans le jeu !
+
+[img]{STEAM_APP_IMAGE}/extras/WorldMapMonsterHero600x192.png[/img]
+
+
+[h2]Nouveau Système de Ville[/h2]
+En commençant avec la Statue des Héros, créez et améliorez les bâtiments de votre ville pour débloquer des bonus et du nouveau contenu !
+
+
+[img]{STEAM_APP_IMAGE}/extras/TownBuilding600x209.png[/img]
+
+[h2]Vous pourrez y trouver :[/h2]
+[list][*]6 personnages ayant chacun leur propre collection de capacités améliorables qui peuvent même être partagées et utilisées par les autres personnages
+[*]Presque tous les monstres du jeu sont capturables. Entraînez-les pour améliorer leurs uniques capacités spéciales !
+[*]Fabrique des dizaines de différentes potions avec l'alchimie ainsi que des dizaines de parchemins d'enchantement pour rendre votre équipement plus fort
+[*]Des centaines d'améliorations diverses qui vous permettent de vous améliorer et de progresser plus vite
+[*]Réincarnez vos personnages pour gagner des boosts puissants qui vous permettront de devenir plus fort, plus vite
+[*]Réincarnez le monde entier avec la Réincarnation de Monde pour débloquer encore plus de contenu et de boosts encore plus puissants
+[*]Faites des Prestiges de Zone et de Donjon pour que les anciennes zones restent utiles
+[*]Plus de cent pièces d'équipement à collecter et améliorer
+[*]Les Défis de Boss reviennent avec une nouvelle collection de défis profonds
+[*]Créé et équilibré avec l'aide de notre communauté Discord[/list]
+
+Nous aimerions vous inviter à rejoindre notre communauté Discord pour parler du jeu, recevoir des astuces, et peut-être y trouver votre nouveau/nouvelle partenaire ?
+- [url=https://discord.gg/VqbS4Wa]Serveur Discord[/url]
+- [url=https://hapiwaku.work/2022/07/22/incremental-epic-hero-2/]Site d'Hapiwaku (Code Bonus caché ici !)[/url]
+
+
+<<<<<<<<<<<<Version Courte de l'Introduction d'IEH2>>>>>>>>>
+Un mix d'incrémental/idle et de jeu de rôle dans un monde fantastique rempli de monstres et de choses à explorer, où le combat ne s'arrête jamais, presque tout peut être amélioré, et avec une grande sélection de mécaniques de réincarnation pour que tout reste frais et pour avancer toujours plus loin !

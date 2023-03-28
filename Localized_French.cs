@@ -7692,7 +7692,7 @@ public class Localized_French : LOCALIZATION
             case HelpKind.S_Rebirth: return "Réincarnation";
             case HelpKind.S_Challenge: return "Défi";
             case HelpKind.S_WorldAscension: return "Ascension Monde";
-            case HelpKind.S_AreaMission: return "Area Mission";
+            case HelpKind.S_AreaMission: return "Mission de Zone";
             case HelpKind.A_All: return "Tout";
             case HelpKind.A_General: return "Général";
             case HelpKind.A_Area: return "Zone";
