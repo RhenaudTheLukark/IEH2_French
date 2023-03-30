@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UsefulMethod;
@@ -503,8 +503,8 @@ public class Localized_French : LOCALIZATION
                 return "Unique";
             case BasicWord.Accepted:
                 return "Accepté";
-            case BasicWord.Questing: //TODO
-                return "Questing";
+            case BasicWord.Questing:
+                return "Se déplacer";
             case BasicWord.Chance:
                 return "Chance";
             case BasicWord.Stance:
@@ -651,8 +651,8 @@ public class Localized_French : LOCALIZATION
                 return "Capacité Globale";
             case BasicWord.BestLevel:
                 return "Meilleur Nv";
-            case BasicWord.CacheSave: //TODO
-                return "Cache Save";
+            case BasicWord.CacheSave:
+                return "Sauvegarde Rapide";
             case BasicWord.SetToTheCurrentArea:
                 return "Sélectionne la zone courante en tant que Zone Favorite";
             case BasicWord.SucceededInCapturing:
@@ -3641,61 +3641,61 @@ public class Localized_French : LOCALIZATION
             case SkillKindThief.DarkWield:
                 return "Exploite le pouvoir des ténèbres et exécute une attaque dans un arc avec votre dague en face de vous.";
             case SkillKindThief.Assassination:
-                return "Utilise vos habileté pour délivrer un coup mortel des ténèbres, qui a une chance d'instantanément éliminer un ennemi ayant en dessous de 50% de ses PV.";
+                return "Utilise votre habileté pour délivrer un coup mortel des ténèbres, qui a une chance d'instantanément éliminer un ennemi ayant en dessous de 50% de ses PV.";
         }
         return kind.ToString();
     }
-    public override string SkillDescriptionArcher(SkillKindArcher kind) //TODO
+    public override string SkillDescriptionArcher(SkillKindArcher kind)
     {
         switch (kind)
         {
             case SkillKindArcher.ArrowAttak:
-                return "Launch a basic physical attack by shooting an arrow at the enemy.";
+                return "Lance une attaque physique basique en tirant une flèche sur un ennemi.";
             case SkillKindArcher.PiercingArrow:
-                return "Shoot an arrow that pierces through enemies, dealing physical damage to all targets hit by the arrow.";
+                return "Tire une flèche qui transperce les ennemis, infligeant des dégâts à toutes les cibles touchées par la flèche.";
             case SkillKindArcher.BurstArrow:
-                return "Rapidly fire multiple arrows in quick succession to deal physical damage to your enemies.";
+                return "Tire plusieurs flèches à la suite pour infliger des dégâts physiques aux ennemis.";
             case SkillKindArcher.Multishot:
-                return "Shoot multiple arrows that target all the monsters in the field.";
+                return "Tire plusieurs flèches qui ciblent tous les ennemis sur le champ de bataille.";
             case SkillKindArcher.ShockArrow:
-                return "Fire a Thunder Damage arrow that has a chance to reduce the enemy's thunder resistance upon impact.";
+                return "Tire une flèche infligeant des Dégâts d'Electricité qui a une chance de réduire la résistance à l'électricité de l'ennemi.";
             case SkillKindArcher.FrozenArrow:
-                return "Fire an Ice Damage arrow that penetrates through targets, striking the furthest monster within range and has a chance to reduce the enemy's ice resistance upon impact.";
+                return "Tire une flèche infligeant des Dégâts de Glace qui passe au travers des ennemis, visant l'ennemi le plus éloigné, et qui a une chance de réduire la résistance à la glace de l'ennemi.";
             case SkillKindArcher.ExplodingArrow:
-                return "Launch a Medium sized AOE fire damage arrow that explodes on impact, with a chance to reduce the fire resistance of your enemies within range.";
+                return "Tire une flèche ayant une zone d'effet moyenne infligeant des Dégâts de Feu qui a une chance de réduire la résistance au feu des ennemis à sa portée.";
             case SkillKindArcher.ShiningArrow:
-                return "Fires multiple Light Damage arrows that starts out in a circle and converges to the center, with a chance to reduce the light resistance of the enemy upon impact.";
+                return "Tire plusieurs flèches infligeant des Dégâts de Lumière qui commence en cercle avant de converger vers le centre du champ de bataille, qui ont une chance de réduire la résistance à la lumière de l'ennemi.";
             case SkillKindArcher.GravityArrow:
-                return "Fire a Dark Damage arrow that has a chance to reduce the enemy's dark resistance and pulls all enemies within range to the center of the map.";
+                return "Tire une flèche infligeant des Dégâts des Ténèbres qui a une chance de réduire la résistance aux ténèbres de l'ennemi tout en attirant tout ennemi à portée vers le centre du champ de bataille.";
             case SkillKindArcher.Kiting:
-                return "Circle the edge of the field to move out of melee range of monsters with a movespeed modifier during Auto Move mode.";
+                return "Rase les bords du champ de bataille afin de se déplacer en dehors de la portée physique des ennemis tout en ayant un bonus de Vitesse en mode Déplacement Auto.";
         }
         return kind.ToString();
     }
-    public override string SkillDescriptionTamer(SkillKindTamer kind) //TODO
+    public override string SkillDescriptionTamer(SkillKindTamer kind)
     {
         switch (kind)
         {
             case SkillKindTamer.SonnetAttack:
-                return "Unleash a Light Damage basic attack that allows you to summon pets to fight alongside you.";
+                return "Lance une attaque basique infligeant des Dégâts de Lumière qui permet d'invoquer des familiers pour qu'ils se battent avec vous.";
             case SkillKindTamer.AttackingOrder:
-                return "Command your summoned pets to attack and increase their damage modifiers.";
+                return "Ordonne aux familiers invoqués d'attaquer, augmentant leurs multiplicateurs de dégâts.";
             case SkillKindTamer.RushOrder:
-                return "Command your summoned pets to rush at random enemies and increase their damage modifiers.";
+                return "Ordonne aux familiers invoqués de se ruer sur des ennemis aléatoires, augmentant leurs multiplicateurs de dégâts.";
             case SkillKindTamer.DefensiveOrder:
-                return "Command your summoned pets to stay close to the Hero to protect and attack nearby monsters, while increasing their damage modifiers.";
+                return "Ordonne aux faliliers invoqués de rester proche du Héros pour le protéger et attaquer des ennemis proches, augmentant leurs multiplicateurs de dégâts.";
             case SkillKindTamer.SoothingBallad:
-                return "Play a tune that heals your summoned pets.";
+                return "Joue une mélodie qui soigne les familiers invoqués.";
             case SkillKindTamer.OdeOfFriendship:
-                return "Enables summoned pets to use skills from the hero's skill bar through a musical tune.";
+                return "Permet aux familiers invoqués d'utiliser les capacités provenant de la barre de capacités du héros à travers une mélodie musicale.";
             case SkillKindTamer.AnthemOfEnthusiasm:
-                return "Imbues the summoned pets with greater strength and magical power, boosting their ATK% and MATK%.";
+                return "Imprègne les familiers invoqués avec une meilleure force et des pouvoirs magiques, augmentant leur ATQ% et leur MATQ%.";
             case SkillKindTamer.FeedChilli:
-                return "Feeds the summoned pets with spicy chili, increasing their attack SPD and Move SPD, turning them red in color.";
+                return "Donne du chili épicé aux familiers invoqués, ce qui augmente leur vitesse de déplacement et d'attaque, tout en les colorant en rouge.";
             case SkillKindTamer.BreedingKnowledge:
-                return "Imbues the summoned pets with increased EXP % gain, aiding their growth and development.";
+                return "Augmente les gains d'EXP des familiers invoqués, ce qui les aide à se développer.";
             case SkillKindTamer.TuneOfTotalTaming:
-                return "Play a magical melody that bewitches targeted monsters, granting the ability to capture them and turn them into loyal pets.";
+                return "Joue une mélodie magique qui ensorcelle les monstres cibles, donnant la possibiité de les capturer et de les transformer en familiers loyaux.";
         }
         return kind.ToString();
     }
@@ -5548,11 +5548,11 @@ public class Localized_French : LOCALIZATION
             case ToggleKind.ProfScrollMastery:
                 return "Utiliser les Parchemins de Maîtrise jusqu'à la maîtrise (Nv 10) plutôt qu'au niveau max";
             case ToggleKind.HideCompletedChallenge:
-                return "Cacher les Défis Compétés";
-            case ToggleKind.UseMultiplierForAutoBuyShop: //TODO
-                return "Use top-left multiplier for pet auto-buy and upgrade queue";
+                return "Cacher les Défis Complétés";
+            case ToggleKind.UseMultiplierForAutoBuyShop:
+                return "Utilisez le multiplicateur en haut à gauche pour l'auto-achat de familier et la file d'améliorations";
             case ToggleKind.AutoAreaProgressPassiveHero:
-                return "Bring Passive Heroes to Auto Area Progression";
+                return "Transporte les Héros Passifs dans la Zone de Progression Auto";
         }
         return kind.ToString();
     }
@@ -5970,10 +5970,10 @@ public class Localized_French : LOCALIZATION
             case 8: return "Débloque une Nouvelle Expédition Lointaine";
             case 9: return "Palier d'Expédition Nv 75";
             case 10: return "Débloque une Nouvelle Expédition Lointaine";
-            case 11: return "Expedition Pets persist on WA (only 1st slot until WA1 Accomp #65)"; //TODO
-            case 12: return "Expedition progress persists on WA (requires WA1 Accomp #65)";
-            case 13: return "Expedition Passive Effect + 25%";
-            case 14: return "Expedition Speed + 25%";
+            case 11: return "Les Familiers dans une Expédition persistent après une AM (seulement le premier emplacement jusqu'à l'Accomplissement AM1 #65)";
+            case 12: return "Le progrès des Expéditions persiste après une AM (requiert l'Accomplissement AM1 #65)";
+            case 13: return "Effet Passif des Expéditions + 25%";
+            case 14: return "Vitesse des Expéditions + 25%";
         }
         return "";
     }
@@ -6018,18 +6018,18 @@ public class Localized_French : LOCALIZATION
             case 32: return "Limite de Loyauté de Familier + " + text;
             case 33: return "Améliore l'effet des améliorations de Gain de Ressources";
             case 34: return "Réduit l'incrément du coût par Nv des améliorations de Gain de Ressources par " + text;
-            case 35: return "Pet Rank Cap + " + text; //TODO
-            case 36: return "Upgrade/Alchemy Queue persists on World Ascension";
-            case 37: return "Skill Rank persists at Rank 1 on World Ascension ";
-            case 38: return "Nitro Speed + 0.5x (Consumption + 0.5 per sec)";
-            case 39: return "Active/Passive Heroes setup in Guild tab persist on WA";
-            case 40: return "Unlocks Essence Allocation Save/Load in Lab (Requires WA1 Accomp #30)";//"Catalyst setup persists on WA (requires WA1 Accomp #30)";
-            case 41: return "Mysterious Water Cap persist on WA minus missing upgrades";
-            case 42: return "Town Research setup persists on WA (Requires WA1 Accomp #60)";
-            case 43: return "Gold Gain + 250%";
-            case 44: return "Quest Mastery Rank S General Quests persist unlocked on WA";
-            case 45: return "([Max GLv Reached (at most 200)]-100)/2 Guild Point Bonus on a fresh WA";
-            case 46: return "Reduces the diminishing returns curve on Mysterious Water per Essence";
+            case 35: return "Limite de Rang de Familier + " + text;
+            case 36: return "Les Files d'Amélioration/Alchimie persistent après une Ascension Monde";
+            case 37: return "Les Capacités restent au Rang 1 après une Ascension Monde ";
+            case 38: return "Vitesse de Nitro + 0.5x (Consommation + 0.5 par sec)";
+            case 39: return "La configuration de héros Actifs/Passifs dans l'onglet Guilde persiste après une AM";
+            case 40: return "Débloque l'Allocation d'Essence dans le Labo (Requiert l'Accomplissement AM1 #30)";//"Catalyst setup persists on WA (requires WA1 Accomp #30)";
+            case 41: return "La Limite d'Eau Mystérieuse persiste après une AM sans compter les améliorations manquantes";
+            case 42: return "La configuration de Recherche de ville persiste après une AM (Requiert l'Accomplissement AM1 #60)";
+            case 43: return "Gain d'Or + 250%";
+            case 44: return "Les Rang S de Maîtrise de Quêtes Générales persistent après une AM";
+            case 45: return "([Nv. Guilde Max Atteint (au plus 200)]-100)/2 Points de Guilde Bonus après une nouvelle AM";
+            case 46: return "Réduit la courbe de gains réduits d'Eau Mystérieuse allouée sur les Essences";
         }
         return "";
     }
@@ -6260,8 +6260,8 @@ public class Localized_French : LOCALIZATION
             case 21: return "À Définir";
             case 22: return " chance de capturer le monstre cible sans utiliser de piège à chaque utilisation ( + ";
             case 23: return "\n- Pour la capture, le piège adapté doit être débloqué dans le Magasin et l'ennemi doit être à un niveau capturable";
-            case 24: return "Attempts to capture all monsters of the same color as the target in the AOE"; //TODO
-            case 25: return "Priority is given to capturing monsters of the color of the equipped traps";
+            case 24: return "Essaye de capturer tous les monstres de la même couleur que la cible dans une zone d'effet";
+            case 25: return "La priorité est donnée à la capture de monstres dont un piège de la même couleur est équipé";
         }
         return "";
     }
@@ -6893,7 +6893,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- <color=orange>Maj</color> maintenu et le glisser déposer d'une Enclume sur un Emplacement vide : Séparation (de la valeur) de l'effet de l'Enclume, mesuré en nombre entiers.";
                 tempStr += "\n- <color=orange>Maj</color> maintenu et le glisser déposer d'un objet Utilitaire : Sépare son # de Pile basé sur le multiplicateur sélectionné en haut à gauche.";
                 return tempStr;
-            case 1: return "Reste actif tant qu'équipé dans un Empacement d'Utilitaire";
+            case 1: return "Reste actif tant qu'équipé dans un Emplacement d'Utilitaire";
             case 2: return "Temps de Recharge";
             case 3: return "Effet Équipé";
             case 4: return "Niveau de Monstre Capturable" + text + " ou moins";
@@ -7031,10 +7031,10 @@ public class Localized_French : LOCALIZATION
                 effect = percent(upgrade.EffectValue(isNextValue)) + " des dégâts normaux";
                 break;
 
-            case SlimeBankUpgradeKind.SlimeCoinCap2: //TODO
-                name = "Slime Coin Cap 2";
-                description = "Multiplies Slime Coin Cap";
-                effect = "by " + percent(1 + upgrade.EffectValue(isNextValue));
+            case SlimeBankUpgradeKind.SlimeCoinCap2:
+                name = "Limite de Pièce Slime 2";
+                description = "Multiplie la Limite de Pièce Slime";
+                effect = "par " + percent(1 + upgrade.EffectValue(isNextValue));
                 break;
 
             default:
@@ -7289,8 +7289,8 @@ public class Localized_French : LOCALIZATION
             case 39: return "Clic Gauche ou la touche \"+\" pour augmenter le montant";
             case 40: return "Clic Droit ou la touche \"-\" pour réduire le montant";
             case 41: return "Maj + Clic Gauche pour rentrer un montant personnalisé ou pour réinitialiser le montant courant";
-            case 42: return "Laj + F pour montrer les coûts entiers (Max x100)";
-            case 43: return "Nitro Cap Breakdowns"; //TODO
+            case 42: return "Maj + F pour montrer les coûts entiers (Max x100)";
+            case 43: return "Détails de la Limite de Nitro";
             default: return "" + text;
         }
     }
@@ -8931,16 +8931,16 @@ public class Localized_French : LOCALIZATION
             case PetPassiveEffectKind.Nothing:
                 return "Restez à l'affut de futures mises à jour!";
             case PetPassiveEffectKind.CatalystCriticalChance:
-                return "Multiplies la Chance de Succès Critique du Catalyst par <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
+                return "Multiplie la Chance de Succès Critique du Catalyst par <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.MysteriousWaterCap:
-                return "Mazimum d'Eau Mystérieuse <color=green>+ " + tDigit(pet.effectValue) + "</color> ( + " + tDigit(pet.effectIncrementValue, 2) + " / Rang )";
+                return "Maximum d'Eau Mystérieuse <color=green>+ " + tDigit(pet.effectValue) + "</color> ( + " + tDigit(pet.effectIncrementValue, 2) + " / Rang )";
             case PetPassiveEffectKind.BlessingEffect:
                 return "Effet des Bénédictions <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.LoyaltyPointGain:
                 return "Gain de Points de Loyauté <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.PetExpGain:
                 return "Gain d'EXP des Familiers <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
-            case PetPassiveEffectKind.ExpeditionExpGain: //TODO
+            case PetPassiveEffectKind.ExpeditionExpGain:
                 return "Gain d'EXP d'Expédition <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rank )";
         }
         return "";
