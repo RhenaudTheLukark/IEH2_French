@@ -972,17 +972,17 @@ public class Localized_French : LOCALIZATION
                 return "Maîtrise de Capacité";
             case Stats.EquipmentProficiencyGain:
                 if (isShort) tempStrStats = "Gain de Maît. Equip.";
-                else         tempStrStats = "Gain de Maîtrise d'Equipement";
+                else tempStrStats = "Gain de Maîtrise d'Equipement";
                 break;
             case Stats.EquipmentDropChance:
                 if (isShort) tempStrStats = "Chance d'EQ";
-                else         tempStrStats = "Chance d'Apparition d'Équipement";
+                else tempStrStats = "Chance d'Apparition d'Équipement";
                 break;
             case Stats.MoveSpeed:
                 return "Vitesse";
             case Stats.TamingPointGain:
                 if (isShort) tempStrStats = "Gain de Pts. Domptage.";
-                else         tempStrStats = "Gain de Points de Domptage";
+                else tempStrStats = "Gain de Points de Domptage";
                 break;
         }
         return tempStrStats;
@@ -1318,36 +1318,104 @@ public class Localized_French : LOCALIZATION
         }
         return species.ToString();
     }
+    public enum GenderKind
+    {
+        Male,
+        Female
+    }
+    public GenderKind MonsterSpeciesGenderKind(MonsterSpecies species)
+    {
+        switch (species)
+        {
+            case MonsterSpecies.Slime:
+                return GenderKind.Male;
+            case MonsterSpecies.MagicSlime:
+                return GenderKind.Male;
+            case MonsterSpecies.Spider:
+                return GenderKind.Male;
+            case MonsterSpecies.Bat:
+                return GenderKind.Male;
+            case MonsterSpecies.Fairy:
+                return GenderKind.Female;
+            case MonsterSpecies.Fox:
+                return GenderKind.Male;
+            case MonsterSpecies.DevilFish:
+                return GenderKind.Female;
+            case MonsterSpecies.Treant:
+                return GenderKind.Male;
+            case MonsterSpecies.FlameTiger:
+                return GenderKind.Male;
+            case MonsterSpecies.Unicorn:
+                return GenderKind.Male;
+            default:
+                return GenderKind.Male;
+        }
+    }
     public override string MonsterName(MonsterSpecies species, MonsterColor color)
     {
         string tempColorStr = color.ToString();
         string tempSpeciesStr = MonsterSpeciesName(species);
-        switch (color)
+        if (MonsterSpeciesGenderKind(species) == GenderKind.Male)
         {
-            case MonsterColor.Normal:
-                tempColorStr = "Normal";
-                break;
-            case MonsterColor.Blue:
-                tempColorStr = "Bleu";
-                break;
-            case MonsterColor.Yellow:
-                tempColorStr = "Jaune";
-                break;
-            case MonsterColor.Red:
-                tempColorStr = "Rouge";
-                break;
-            case MonsterColor.Green:
-                tempColorStr = "Vert";
-                break;
-            case MonsterColor.Purple:
-                tempColorStr = "Violet";
-                break;
-            case MonsterColor.Boss:
-                tempColorStr = "Boss";
-                break;
-            case MonsterColor.Metal:
-                tempColorStr = "Métallique";
-                break;
+            //Male
+            switch (color)
+            {
+                case MonsterColor.Normal:
+                    tempColorStr = "Normal";
+                    break;
+                case MonsterColor.Blue:
+                    tempColorStr = "Bleu";
+                    break;
+                case MonsterColor.Yellow:
+                    tempColorStr = "Jaune";
+                    break;
+                case MonsterColor.Red:
+                    tempColorStr = "Rouge";
+                    break;
+                case MonsterColor.Green:
+                    tempColorStr = "Vert";
+                    break;
+                case MonsterColor.Purple:
+                    tempColorStr = "Violet";
+                    break;
+                case MonsterColor.Boss:
+                    tempColorStr = "Boss";
+                    break;
+                case MonsterColor.Metal:
+                    tempColorStr = "Métallique";
+                    break;
+            }
+        }
+        else
+        {
+            //Female
+            switch (color)
+            {
+                case MonsterColor.Normal:
+                    tempColorStr = "Normal";
+                    break;
+                case MonsterColor.Blue:
+                    tempColorStr = "Bleu";
+                    break;
+                case MonsterColor.Yellow:
+                    tempColorStr = "Jaune";
+                    break;
+                case MonsterColor.Red:
+                    tempColorStr = "Rouge";
+                    break;
+                case MonsterColor.Green:
+                    tempColorStr = "Vert";
+                    break;
+                case MonsterColor.Purple:
+                    tempColorStr = "Violet";
+                    break;
+                case MonsterColor.Boss:
+                    tempColorStr = "Boss";
+                    break;
+                case MonsterColor.Metal:
+                    tempColorStr = "Métallique";
+                    break;
+            }
         }
         return tempSpeciesStr + " " + tempColorStr;
     }
@@ -3337,25 +3405,6 @@ public class Localized_French : LOCALIZATION
     }
 
     //SkillName
-    public string SkillName(HeroKind heroKind, int id)
-    {
-        switch (heroKind)
-        {
-            case HeroKind.Warrior:
-                return SkillNameWarrior((SkillKindWarrior)id);
-            case HeroKind.Wizard:
-                return SkillNameWizard((SkillKindWizard)id);
-            case HeroKind.Angel:
-                return SkillNameAngel((SkillKindAngel)id);
-            case HeroKind.Thief:
-                return SkillNameThief((SkillKindThief)id);
-            case HeroKind.Archer:
-                return SkillNameArcher((SkillKindArcher)id);
-            case HeroKind.Tamer:
-                return SkillNameTamer((SkillKindTamer)id);
-        }
-        return "";
-    }
     public override string SkillNameWarrior(SkillKindWarrior kind)
     {
         switch (kind)
@@ -3517,25 +3566,6 @@ public class Localized_French : LOCALIZATION
                 return "Mélodie de Domptage Total";
         }
         return kind.ToString();
-    }
-    public string SkillDescription(HeroKind heroKind, int id)
-    {
-        switch (heroKind)
-        {
-            case HeroKind.Warrior:
-                return SkillDescriptionWarrior((SkillKindWarrior)id);
-            case HeroKind.Wizard:
-                return SkillDescriptionWizard((SkillKindWizard)id);
-            case HeroKind.Angel:
-                return SkillDescriptionAngel((SkillKindAngel)id);
-            case HeroKind.Thief:
-                return SkillDescriptionThief((SkillKindThief)id);
-            case HeroKind.Archer:
-                return SkillDescriptionArcher((SkillKindArcher)id);
-            case HeroKind.Tamer:
-                return SkillDescriptionTamer((SkillKindTamer)id);
-        }
-        return "";
     }
     public override string SkillDescriptionWarrior(SkillKindWarrior kind)
     {
@@ -8598,20 +8628,6 @@ public class Localized_French : LOCALIZATION
             tempStr += "\n\n";
         }
         return tempStr;
-    }
-    public string ColoredString(string str, long num, bool isTotal = false)
-    {
-        if (isTotal)
-        {
-            if (num == 50) return "<color=green>" + str.ToString() + "</color>";
-            else return str;
-        }
-        switch (num)
-        {
-            case 5: return "<color=green>" + str.ToString() + "</color>";
-            default:
-                return str;
-        }
     }
     public override string AchievementString(HelpKind helpKind)
     {
