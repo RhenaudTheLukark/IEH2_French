@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UsefulMethod;
@@ -91,7 +91,7 @@ public class Localized_French : LOCALIZATION
                 return "Chance de Succès";
             case BasicWord.AdditionalEffect:
                 return "Effet d'Enchantement";
-            case BasicWord.RequiredAbilityIncrement:
+            case BasicWord.RequiredAbilityIncrement: //TODO
                 return "Required Ability Increment";
             case BasicWord.GuildLevel:
                 return "Niveau de Guilde";
@@ -428,7 +428,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.Discord:
                 return "Discord";
             case BasicWord.EPIC_STORE:
-                return "EPIC STORE";
+                return "MAGASIN EPIQUE";
             case BasicWord.QoL:
                 return "Comfort";
             case BasicWord.Special:
@@ -464,11 +464,11 @@ public class Localized_French : LOCALIZATION
             case BasicWord.MP:
                 return "PM";
             case BasicWord.AutoMove:
-                return "Mouvement Auto";
+                return "Déplacement Auto";
             case BasicWord.ManualMove:
-                return "Mouvement Manuel";
+                return "Déplacement Manuel";
             case BasicWord.ManualMoveText:
-                return "WASD ou les flèches pour bouger manuellement";
+                return "WASD ou les flèches pour se déplacer manuellement";
             case BasicWord.CombatRange:
                 return "Portée de Combat";
             case BasicWord.TotalDPS:
@@ -498,7 +498,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.ChooseTargetEffect:
                 return "Choisir l'effet cible.";
             case BasicWord.Stack:
-                return "Stack";
+                return "Pile";
             case BasicWord.Unique:
                 return "Unique";
             case BasicWord.Accepted:
@@ -687,38 +687,38 @@ public class Localized_French : LOCALIZATION
                 return "Malédiction du Terrain";
             case BasicWord.RestorePurchase:
                 return "Restaurer les Achats";
-            case BasicWord.NetFree:
+            case BasicWord.NetFree: //TODO
                 return "Net-Free";
             case BasicWord.Dung:
-                return "Dung";
+                return "Donj";
             case BasicWord.ScrollFilter:
-                return "Scroll Filter";
+                return "Filtre de Parchemin";
             case BasicWord.ScrollFilterDescription:
-                return "Check-marked scrolls will be kept when rewarded. Unchecked scrolls will be disassembled when rewarded. ";
+                return "Les parchemins ayant une coche seront gardés après avoir réclamé la récompense. Les parchemins sans coche seront désassemblés. ";
             case BasicWord.AutoAreaProgression:
-                return "Auto Area Progression";
+                return "Auto Progression de Zone";
             case BasicWord.AutoAreaProgressionDescription:
-                return "The active hero will go to each area to meet the target Clear # that you set below. Starting with Slime Village Area 1. It will be based on the current Area Difficulty. Auto Area Progression will skip locked areas, or areas that already meet the target Clear #. NOTE: During Auto Area Progression, [Swarm Chaser] will remain active. [Auto-Rebirth] will remain active. [Favorite Area], [Traveling Best EXP Area] and [Lazy Questing Mode] will be deactivated. While rebirthing or doing dungeons the hero will be returned to the first area that does not meet the clear criteria.";
+                return "Le héros actif ira dans chaque zone pour atteindre le # de Complétions donné ci-dessous, en commençant par Village des Slimes 1. Ce nombre est basé sur la Difficulté courante de la Zone. L'Auto Progression de Zone passera les zones verrouillées, ainsi que les zones ayant déjà atteint le # de Complétions cible. NOTE: Pendant l'Auto Progression de Zone, [Chasseur d'Invasion] restera actif. [Auto-Réincarnation] restera actif. [Zone Favorite], [Meilleur Gain d'EXP] et [Mode Quête Automatique] seront désactivés. Après une réincarnation ou un donjon, le héros sera renvoyé à la première zone qui ne remplit pas le critère de complétion donné.";
             case BasicWord.AutoProgression:
-                return "Auto Progression";
+                return "Progression Auto";
             case BasicWord.InputAll:
                 return "Input All";
             case BasicWord.PerformanceModeText:
-                return "<size=24>Performance Mode Active</size> \n\nShift+P to deactivate";
+                return "<size=24>Mode Performance Actif</size> \n\nMaj+P pour désactiver";
             case BasicWord.LazyQuestingMode:
-                return "Lazy Questing Mode";
+                return "Mode Quête Automatique";
             case BasicWord.ManualQuestingArea:
-                return "Shift + Right-Click to register the current area as the questing area.";
+                return "Maj + Clic Droit pour enregistrer la zone courante en tant que zone de quête.";
             case BasicWord.Save:
-                return "Save";
+                return "Sauver";
             case BasicWord.Load:
-                return "Load";
+                return "Charger";
             case BasicWord.AMWASaveDescription:
-                return "Click to save the current Mysterious Water allocation ratio to Essence.";
+                return "Cliquez pour sauvegarder le ratio d'allocation d'Eau Mystérieuse par Essence.";
             case BasicWord.AMWALoadDescription:
-                return "Mysterious Water (/sec) will be allocated to Essence at the ratio that you saved.";
+                return "L'Eau Mystérieuse (/sec) sera allouée aux Essences au ratio sauvegardé.";
             case BasicWord.CurrentSave:
-                return "Current Save";
+                return "Sauvegarde Courante";
         }
         return basicWord.ToString();
     }
@@ -1332,21 +1332,21 @@ public class Localized_French : LOCALIZATION
             case MonsterSpecies.MagicSlime:
                 return GenderKind.Male;
             case MonsterSpecies.Spider:
-                return GenderKind.Male;
+                return GenderKind.Female;
             case MonsterSpecies.Bat:
-                return GenderKind.Male;
+                return GenderKind.Female;
             case MonsterSpecies.Fairy:
                 return GenderKind.Female;
             case MonsterSpecies.Fox:
                 return GenderKind.Male;
             case MonsterSpecies.DevilFish:
-                return GenderKind.Female;
+                return GenderKind.Male;
             case MonsterSpecies.Treant:
                 return GenderKind.Male;
             case MonsterSpecies.FlameTiger:
                 return GenderKind.Male;
             case MonsterSpecies.Unicorn:
-                return GenderKind.Male;
+                return GenderKind.Female;
             default:
                 return GenderKind.Male;
         }
@@ -1392,10 +1392,10 @@ public class Localized_French : LOCALIZATION
             switch (color)
             {
                 case MonsterColor.Normal:
-                    tempColorStr = "Normal";
+                    tempColorStr = "Normale";
                     break;
                 case MonsterColor.Blue:
-                    tempColorStr = "Bleu";
+                    tempColorStr = "Bleue";
                     break;
                 case MonsterColor.Yellow:
                     tempColorStr = "Jaune";
@@ -1404,10 +1404,10 @@ public class Localized_French : LOCALIZATION
                     tempColorStr = "Rouge";
                     break;
                 case MonsterColor.Green:
-                    tempColorStr = "Vert";
+                    tempColorStr = "Verte";
                     break;
                 case MonsterColor.Purple:
-                    tempColorStr = "Violet";
+                    tempColorStr = "Violette";
                     break;
                 case MonsterColor.Boss:
                     tempColorStr = "Boss";
@@ -8722,9 +8722,9 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return "Cliquer pour aller à ";
             case 1: return "Il faut " + text + " Orbe(s) Portail pour entrer dans cette Zone (Vous en avez " + text2 + ")";
-            case 2: return "Aller voir les Titres acquis.";
-            case 3: return "Retirer le Favori";
-            case 4: return "Assigner le Favori";
+            case 2: return "Voir tous les Titres acquis.";
+            case 3: return "Retirer de la liste des Quêtes Favorites";
+            case 4: return "Assigner en tant que Quête Favorite";
             case 5: return " [Quête Favorite] dans le Magasin Épique";
             case 6:
                 return "Les Quêtes de Titre et les Quêtes Générales sont limitées au Nombre de Quêtes Acceptées." +
