@@ -1382,7 +1382,7 @@ public class Localized_French : LOCALIZATION
                     tempColorStr = "Boss";
                     break;
                 case MonsterColor.Metal:
-                    tempColorStr = "Métallique";
+                    tempColorStr = "de Métal";
                     break;
             }
         }
@@ -1413,7 +1413,7 @@ public class Localized_French : LOCALIZATION
                     tempColorStr = "Boss";
                     break;
                 case MonsterColor.Metal:
-                    tempColorStr = "Métallique";
+                    tempColorStr = "de Métal";
                     break;
             }
         }
