@@ -71,8 +71,8 @@ public class Localized_French : LOCALIZATION
                 return "Carte Monde";
             case BasicWord.Gold:
                 return "Or";
-            case BasicWord.Trigger: //TODO
-                return "trigger";
+            case BasicWord.Trigger:
+                return "lancement";
             case BasicWord.Gained:
                 return "Gagné";
             case BasicWord.FullInventory:
@@ -91,8 +91,8 @@ public class Localized_French : LOCALIZATION
                 return "Chance de Succès";
             case BasicWord.AdditionalEffect:
                 return "Effet d'Enchantement";
-            case BasicWord.RequiredAbilityIncrement: //TODO
-                return "Required Ability Increment";
+            case BasicWord.RequiredAbilityIncrement:
+                return "Incrément d'Abilité Requis";
             case BasicWord.GuildLevel:
                 return "Niveau de Guilde";
             case BasicWord.Cost:
@@ -327,8 +327,8 @@ public class Localized_French : LOCALIZATION
                 return "CATALYSEURS";
             case BasicWord.Favorite:
                 return "Favori";
-            case BasicWord.Ascend: //TOD
-                return "Ascend";
+            case BasicWord.Ascend:
+                return "Ascension";
             case BasicWord.QuestCancelText:
                 return "Êtes-vous sûr de vouloir annuler cette quête ?";
             case BasicWord.AreaMissionMilestone:
@@ -519,8 +519,8 @@ public class Localized_French : LOCALIZATION
                 return "Cette amélioration affecte tous les héros.";
             case BasicWord.Capture:
                 return "Capture";
-            case BasicWord.To: //TODO
-                return "to";
+            case BasicWord.To:
+                return "en";
             case BasicWord.AvailableBlessing:
                 return "Disponible";
             case BasicWord.StackNum:
@@ -677,8 +677,8 @@ public class Localized_French : LOCALIZATION
                 return "ou plus";
             case BasicWord.EnchantSlotNumber:
                 return "# d'Emplacements d'Enchantement incluant l'effet";
-            case BasicWord.Attempt: //TODO
-                return "Essai";
+            case BasicWord.Attempt:
+                return "Essayer";
             case BasicWord.InputNewMultiplier:
                 return "Rentrer la nouvelle valeur du multiplicateur.";
             case BasicWord.PetStats:
@@ -687,8 +687,8 @@ public class Localized_French : LOCALIZATION
                 return "Malédiction du Terrain";
             case BasicWord.RestorePurchase:
                 return "Restaurer les Achats";
-            case BasicWord.NetFree: //TODO
-                return "Net-Free";
+            case BasicWord.NetFree:
+                return "Sans Filet";
             case BasicWord.Dung:
                 return "Donj";
             case BasicWord.ScrollFilter:
@@ -702,7 +702,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.AutoProgression:
                 return "Progression Auto";
             case BasicWord.InputAll:
-                return "Input All";
+                return "Tout Mettre à";
             case BasicWord.PerformanceModeText:
                 return "<size=24>Mode Performance Actif</size> \n\nMaj+P pour désactiver";
             case BasicWord.LazyQuestingMode:
@@ -967,23 +967,17 @@ public class Localized_French : LOCALIZATION
             case Stats.CriticalDamage:
                 return "Dégâts Critique";
             case Stats.ExpGain:
-                return "EXP";
+                return "Gain d'EXP";
             case Stats.SkillProficiencyGain:
                 return "Maîtrise de Capacité";
             case Stats.EquipmentProficiencyGain:
-                if (isShort) tempStrStats = "Gain de Maît. Equip.";
-                else tempStrStats = "Gain de Maîtrise d'Equipement";
-                break;
+                return "Maîtrise d'Equipement";
             case Stats.EquipmentDropChance:
-                if (isShort) tempStrStats = "Chance d'EQ";
-                else tempStrStats = "Chance d'Apparition d'Équipement";
-                break;
+                return "Apparition d'Équipement";
             case Stats.MoveSpeed:
-                return "Vitesse";
+                return "Vitesse de Déplacement";
             case Stats.TamingPointGain:
-                if (isShort) tempStrStats = "Gain de Pts. Domptage.";
-                else tempStrStats = "Gain de Points de Domptage";
-                break;
+                return "Points de Domptage";
         }
         return tempStrStats;
     }
@@ -1031,9 +1025,9 @@ public class Localized_French : LOCALIZATION
             case AbilityKind.Intelligence:
                 return "L'Intelligence a un effet sur les PM, la MATQ et la MDEF.";
             case AbilityKind.Agility:
-                return "L'Agilité a un effet sur les PM, la CEL et la Vitesse.";
+                return "L'Agilité a un effet sur les PM, la CEL et la Vitesse de Déplacement.";
             case AbilityKind.Luck:
-                return "La Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition.";
+                return "La Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition d'Equipement.";
         }
         return kind.ToString();
     }
@@ -1112,7 +1106,7 @@ public class Localized_French : LOCALIZATION
             case global::AbilityWord.LoyaltyPointGain:
                 return "Points de Loyauté";
             case global::AbilityWord.DamageToChallengeBoss:
-                return "Dégâts sur les Boss de Défi";
+                return "Dégâts - Boss";
             case global::AbilityWord.GuildEXPGain:
                 return "EXP de Guilde";
             case global::AbilityWord.AAPA0:
@@ -1249,7 +1243,7 @@ public class Localized_French : LOCALIZATION
                 tempString = optStr + "+ " + percent(effectValue) + " résistance aux débuffs";
                 break;
             case TitleKind.MoveSpeed:
-                tempString = optStr + "Vitesse + " + percent(effectValue);
+                tempString = optStr + "Vitesse de Déplacement + " + percent(effectValue);
                 break;
             case TitleKind.Alchemist:
                 tempString = optStr + "Gain d'Eau Mystérieuse + " + percent(effectValue);
@@ -1281,7 +1275,7 @@ public class Localized_French : LOCALIZATION
                 tempString = optStr + "Dégâts des Ténèbres + " + percent(effectValue);
                 break;
             case TitleKind.Cooperation:
-                tempString = optStr + "Enable Background Cooperation that you gain " + percent(effectValue) + " in background";
+                tempString = optStr + "Permet une Activation en Arrière-Plan qui gagne " + percent(effectValue) + " des ressources normales";
                 break;
             case TitleKind.Quester:
                 return optStr + "# Complétions de Quêtes Générales + " + tDigit(effectValue) + " par complétion";
@@ -1585,8 +1579,8 @@ public class Localized_French : LOCALIZATION
                 break;
             case AreaPrestigeUpgradeKind.MoveSpeedBonus:
                 tempName = "Bonus de Vitesse";
-                tempEffect = "Vitesse + " + percent(upgrade.effectValue) + " si vous êtes dans la région " + AreaName(upgrade.prestige.areaKind);
-                tempNextEffect = "Vitesse + " + percent(upgrade.nextEffectValue) + " si vous êtes dans la région " + AreaName(upgrade.prestige.areaKind);
+                tempEffect = "Vitesse de Déplacement + " + percent(upgrade.effectValue) + " si vous êtes dans la région " + AreaName(upgrade.prestige.areaKind);
+                tempNextEffect = "Vitesse de Déplacement + " + percent(upgrade.nextEffectValue) + " si vous êtes dans la région " + AreaName(upgrade.prestige.areaKind);
                 break;
             case AreaPrestigeUpgradeKind.TreasureChest:
                 tempName = "Chasseur de Trésor";
@@ -2005,7 +1999,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.EquipmentProficiency:
                 return "Maîtrise d'Équipement";
             case EquipmentEffectKind.MoveSpeedAdder:
-                return "Vitesse +";
+                return "Vitesse de Déplacement +";
             case EquipmentEffectKind.MoveSpeedMultiplier:
                 return "Multiplicateur de Vitesse";
             case EquipmentEffectKind.GoldGain:
@@ -2329,14 +2323,14 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.MoveSpeedAdder:
                 if (isOnlyEffectValue) return meter(value);
-                if (value < 0) tempString = "Vitesse <color=red>" + meter(value) + " / sec</color>";
-                else tempString = "Vitesse + " + meter(value) + " / sec";
+                if (value < 0) tempString = "Vitesse de Déplacement <color=red>" + meter(value) + " / sec</color>";
+                else tempString = "Vitesse de Déplacement + " + meter(value) + " / sec";
                 if (perLevelValue > 0) tempString += " ( + " + meter(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MoveSpeedMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "Vitesse <color=red>" + percent(value) + "</color>";
-                else tempString = "Vitesse + " + percent(value);
+                if (value < 0) tempString = "Vitesse de Déplacement <color=red>" + percent(value) + "</color>";
+                else tempString = "Vitesse de Déplacement + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.GoldGain:
@@ -3199,7 +3193,7 @@ public class Localized_French : LOCALIZATION
             case PotionKind.MinorResourcePoultice:
                 return optStr + "Gain de Ressources (Global) + " + percent(effectValue) + "</color>";
             case PotionKind.SlickShoeSolution:
-                return optStr + "Vitesse + " + percent(effectValue) + "</color>";
+                return optStr + "Vitesse de Déplacement + " + percent(effectValue) + "</color>";
             case PotionKind.MinorManaRegenerationPoultice:
                 return optStr + "Régénération de PM + " + tDigit(effectValue, 2) + " / " + Basic(BasicWord.Sec) + "</color>";
             case PotionKind.MaterialMultiplierMist:
@@ -3225,7 +3219,7 @@ public class Localized_French : LOCALIZATION
             case PotionKind.SlightlyStickySalve:
                 return optStr + "Gain d'Or (Global) + " + percent(effectValue) + "</color>";
             case PotionKind.SlickerShoeSolution:
-                return optStr + "Vitesse + " + percent(effectValue) + "</color>";
+                return optStr + "Vitesse de Déplacement + " + percent(effectValue) + "</color>";
             case PotionKind.CoolHeadOintment:
                 return optStr + "Gain d'EXP + " + percent(effectValue) + "</color>";
             case PotionKind.FrostySlayersOil:
@@ -3306,7 +3300,7 @@ public class Localized_French : LOCALIZATION
                 return "PM + " + percent(effectValue);
             case PotionKind.DevilfishBadge:
                 if (isPassive) return "Gain de Pierre + " + percent(effectValue);
-                return "Vitesse + " + percent(effectValue);
+                return "Vitesse de Déplacement + " + percent(effectValue);
             case PotionKind.TreantBadge:
                 if (isPassive) return "Gain de Crystal + " + percent(effectValue);
                 return "Gain d'EXP + " + percent(effectValue);
@@ -3721,7 +3715,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindTamer.AnthemOfEnthusiasm:
                 return "Imprègne les familiers invoqués avec une meilleure force et des pouvoirs magiques, augmentant leur ATQ% et leur MATQ%.";
             case SkillKindTamer.FeedChilli:
-                return "Donne du chili épicé aux familiers invoqués, ce qui augmente leur vitesse de déplacement et d'attaque, tout en les colorant en rouge.";
+                return "Donne du chili épicé aux familiers invoqués, ce qui augmente leur vitesse de déplacement et leur attaque, tout en les coloriant en rouge.";
             case SkillKindTamer.BreedingKnowledge:
                 return "Augmente les gains d'EXP des familiers invoqués, ce qui les aide à se développer.";
             case SkillKindTamer.TuneOfTotalTaming:
@@ -3781,7 +3775,7 @@ public class Localized_French : LOCALIZATION
             case Buff.SpdUp:
                 return "CEL";
             case Buff.MoveSpeedUp:
-                return "Vitesse";
+                return "Vitesse de Déplacement";
             case Buff.GoldUp:
                 return "Gain d'Or";
             case Buff.SkillLevelUp:
@@ -6147,7 +6141,7 @@ public class Localized_French : LOCALIZATION
             case 75: return "Atteindre le Niveau de Guilde " + str1 + " en une heure ou moins";
             case 76: return "Atteindre le Niveau de Guilde " + str1 + " en 20 minutes ou moins";
             case 77: return "Atteindre le Niveau de Guilde " + str1 + " en 5 minutes ou moins";
-            case 78: return "Les Équipements Uniques sont préservés sont préservés lors d'une Ascension Monde";
+            case 78: return "Les Équipements Uniques sont préservés lors d'une Ascension Monde";
             case 79: return "Le Niveau des Catalyseurs est préservé lors d'une Ascension Monde";
             case 80: return "Les objets dans l'Inventaire d'Enchantement sont préservés lors d'une Ascension Monde";
             case 81: return "Le Rang de la Statue des Héros est préservé lors d'une Ascension Monde";
@@ -6162,7 +6156,7 @@ public class Localized_French : LOCALIZATION
             case 90: return "Le Rang de l'Équipe d'Aventuriers est préservé lors d'une Ascension Monde";
             case 91: return "Le Rang du Dojo est préservé lors d'une Ascension Monde";
             case 92: return "Le Rang de la Taverne est préservé lors d'une Ascension Monde";
-            case 93: return "Les zones " + str1 + " débloquées et leur # de Complétions sont préservés";
+            case 93: return "Les zones de la région " + str1 + " débloquées et leur # de Complétions sont préservés";
         }
         return "";
     }
@@ -6211,7 +6205,7 @@ public class Localized_French : LOCALIZATION
             case 4: return "0.5% de chance de soigner complètement à chaque utilisation";
             case 5: return "Régénération de PV + " + tDigit(value, 1) + " / sec tant que cette Capacité est équipée";
             case 6: return "+" + percent(value, 2) + " de Nullifier les Dégâts Physiques tant que cette Capacité est équipée";
-            case 7: return "Vitesse + " + percent(value) + " tant que cette Capacité est équipée";
+            case 7: return "Vitesse de Déplacement + " + percent(value) + " tant que cette Capacité est équipée";
             case 8: return "+50% de dégats pour cette Capacité par mètre parcouru";
             case 9: return "Portée de l'Effet de cette Capacité + ";
             case 10: return "Nombre de Coups de cette Capacité + 1";
@@ -6284,7 +6278,7 @@ public class Localized_French : LOCALIZATION
             case 15: return "Chance de Coup Critique des Familiers +" + percent(value, 2) + " tant que cette Capacité est équipée";
             case 16: return "ATQ & MATQ des Familiers : + ";
             case 17: return "Chance de Coup Critique des Familiers +" + percent(value, 2) + " tant que cette Capacité est équipée";
-            case 18: return "Vitesse & Vitesse d'Attaque des Familiers + ";
+            case 18: return "Vitesse de Déplacement & Vitesse d'Attaque des Familiers + ";
             case 19: return "Gain de Points de Loyauté +" + percent(value, 2) + " tant que cette Capacité est équipée";
             case 20: return "Gain d'EXP des Familiers : + ";
             case 21: return "À Définir";
@@ -6368,7 +6362,7 @@ public class Localized_French : LOCALIZATION
             case 0: return "Auto Désassembler les Talismans";
             case 1: return "Type : Talisman";
             case 2: return "# Désassemblé";
-            case 3: return "\n- Reste actif tant qu'équipé dans un Emplacement Utilitaire";
+            case 3: return "\n- Reste actif tant qu'équipé dans un Emplacement d'Utilitaire";
             case 4: return "\n- Gain de Fragments lors du désassemblage : ";
             case 5: return "<size=20><u>Effet Équipé par # de Pile</u><size=18>";
             case 6: return " Fragments";
@@ -6459,7 +6453,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Bénédiction de MATQ";
             case 7: return "Multiplication de la MATQ par ";
             case 8: return "Bénédiction de Vitesse";
-            case 9: return "Multiplication de la Vitesse par ";
+            case 9: return "Multiplication de la Vitesse de Déplacement par ";
             case 10: return "Bénédiction de Maîtrise de Capacité";
             case 11: return "Multiplication de la Maîtrise de Capacité par ";
             case 12: return "Bénédiction de Maîtrise d'Équipement";
@@ -9025,7 +9019,7 @@ public class Localized_French : LOCALIZATION
             case WorldAscensionMiletoneKind.MoveDistance:
                 name = "Explorateur de Monde";
                 description = "Distance Marchée Totale (mètres)";
-                passive = "Vitesse + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                passive = "Vitesse de Déplacement + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.DictionaryPoint:
                 name = "Expert en Équipement";
