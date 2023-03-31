@@ -4108,10 +4108,10 @@ public class Localized_French : LOCALIZATION
                         name = "Tutoriel 11 : Défi";
                         client = "Hitan";
                         description = optStr + "Oh, on dirait qu'un horrible monstre est apparu ! Va dans l'onglet <color=orange>Défi</color> pour vaincre <color=orange>Florzporbe</color>." +
-                            " Dans un Combat de Boss de Raid, tous les héros couremment actifs vont rejoindre le combat." +
+                            " Dans un Combat de Raid de Boss, tous les héros couremment actifs vont rejoindre le combat." +
                             " Comme tu t'es réincarné, tu peux recevoir le titre Preuve de Réincarnation à travers sa quête, ce qui permet d'activer le héos en arrière-plan." +
                             " Le monstre boss est très puissant, donc regroupe les membres actifs de la guilde pour combattre ensemble et prépare-toi bien avant le combat !\n<color=yellow>- Pour plus d'informations, Aide > [Défi].</color>";
-                        condition = "Complète le Combat de Boss de Raid [ Florzporbe Nv 100 ]";
+                        condition = "Complète le Combat de Raid de Boss [ Florzporbe Nv 100 ]";
                         reward = "Débloque l'onglet [ Expédition ]\n- Débloque l'Auto Ajouteur de Point d'Abilité";
                         break;
                     case QuestKindGlobal.Expedition:
@@ -5792,8 +5792,8 @@ public class Localized_French : LOCALIZATION
                 break;
             case RebirthUpgradeKind.T2RebirthPointGainBoost:
                 tempName = "Réincarnation Profonde 2";
-                tempEffect = "Tier 2 Rebirth Point Gain + " + percent(upgrade.effectValue, 0);
-                tempNextEffect = "Tier 2 Rebirth Point Gain + " + percent(upgrade.nextEffectValue, 0);
+                tempEffect = "Gain de Points de Réincarnation Classe 2 + " + percent(upgrade.effectValue, 0);
+                tempNextEffect = "Gain de Points de Réincarnation Classe 2 + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T2BasicAtkBoost:
                 tempName = "ATQ Basique ++";
@@ -5847,8 +5847,8 @@ public class Localized_French : LOCALIZATION
                 break;
             case RebirthUpgradeKind.T2CrystalGoldCapBoost:
                 tempName = "Limite d'Or Cristallique ++";
-                tempEffect = "Tier 2 Crystal Gold Cap Booster's effect + " + percent(upgrade.effectValue, 0);
-                tempNextEffect = "Tier 2 Crystal Gold Cap Booster's effect + " + percent(upgrade.nextEffectValue, 0);
+                tempEffect = "Effet de [Limite d'Or Cristallique +] + " + percent(upgrade.effectValue, 0);
+                tempNextEffect = "Effet de [Limite d'Or Cristallique +] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T2LeafGoldCapBoost:
                 tempName = "Limite d'Or Végétale ++";
@@ -5868,7 +5868,7 @@ public class Localized_French : LOCALIZATION
     //RebirthPoint
     public override string RebirthPointGain(Rebirth rebirth)
     {
-        string tempString = "Vous gagnez <color=green>" + tDigit(rebirth.RebirthPointGain()) + " Points de Réincarnation </color> de " + " Classe " + tDigit(rebirth.tier + 1) + " si vous vous réincarnez maintenant !";
+        string tempString = "Vous gagnerez <color=green>" + tDigit(rebirth.RebirthPointGain()) + " Points de Réincarnation</color> de Classe " + tDigit(rebirth.tier + 1) + " si vous vous réincarnez maintenant !";
         for (int i = 0; i < rebirth.rebirthPointKinds.Count; i++)
         {
             int count = i;
@@ -5935,7 +5935,7 @@ public class Localized_French : LOCALIZATION
         switch (type)
         {
             case global::ChallengeType.RaidBossBattle:
-                return "Boss de Raid";
+                return "Raid de Boss";
             case global::ChallengeType.SingleBossBattle:
                 return "Boss Solo";
             case global::ChallengeType.HandicappedBattle:
@@ -6082,26 +6082,26 @@ public class Localized_French : LOCALIZATION
             case 10: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en une heure ou moins";
             case 11: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en 20 minutes ou moins";
             case 12: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en 5 minutes ou moins";
-            case 13: return "Vaincre le Boss de Raid [Florzporbe Nv 100] en 8 heures ou moins";
-            case 14: return "Vaincre le Boss de Raid [Florzporbe Lv 100] en 3 heures ou moins";
-            case 15: return "Vaincre le Boss de Raid [Florzporbe Lv 100] en une heure ou moins";
-            case 16: return "Vaincre le Boss de Raid [Florzporbe Lv 100] en 20 minutes ou moins";
-            case 17: return "Vaincre le Boss de Raid [Florzporbe Lv 100] en 5 minutes ou moins";
-            case 18: return "Vaincre le Boss de Raid [Aranetta Lv 150] en 8 heures ou moins";
-            case 19: return "Vaincre le Boss de Raid [Aranetta Lv 150] en 3 heures ou moins";
-            case 20: return "Vaincre le Boss de Raid [Aranetta Lv 150] en une heure ou moins";
-            case 21: return "Vaincre le Boss de Raid [Aranetta Lv 150] en 20 minutes ou moins";
-            case 22: return "Vaincre le Boss de Raid [Aranetta Lv 150] en 5 minutes ou moins";
-            case 23: return "Vaincre le Boss de Raid [Gardien Kor Lv 200] en 8 heures ou moins";
-            case 24: return "Vaincre le Boss de Raid [Gardien Kor Lv 200] en 3 heures ou moins";
-            case 25: return "Vaincre le Boss de Raid [Gardien Kor Lv 200] en une heure ou moins";
-            case 26: return "Vaincre le Boss de Raid [Gardien Kor Lv 200] en 20 minutes ou moins";
-            case 27: return "Vaincre le Boss de Raid [Gardien Kor Lv 200] en 5 minutes ou moins";
-            case 28: return "Vaincre le Boss de Raid [" + str1 + "] en 8 heures ou moins";
-            case 29: return "Vaincre le Boss de Raid [" + str1 + "] en 3 heures ou moins";
-            case 30: return "Vaincre le Boss de Raid [" + str1 + "] en une heure ou moins";
-            case 31: return "Vaincre le Boss de Raid [" + str1 + "] en 20 minutes ou moins";
-            case 32: return "Vaincre le Boss de Raid [" + str1 + "] en 5 minutes ou moins";
+            case 13: return "Vaincre le Raid de Boss [Florzporbe Nv 100] en 8 heures ou moins";
+            case 14: return "Vaincre le Raid de Boss [Florzporbe Lv 100] en 3 heures ou moins";
+            case 15: return "Vaincre le Raid de Boss [Florzporbe Lv 100] en une heure ou moins";
+            case 16: return "Vaincre le Raid de Boss [Florzporbe Lv 100] en 20 minutes ou moins";
+            case 17: return "Vaincre le Raid de Boss [Florzporbe Lv 100] en 5 minutes ou moins";
+            case 18: return "Vaincre le Raid de Boss [Aranetta Lv 150] en 8 heures ou moins";
+            case 19: return "Vaincre le Raid de Boss [Aranetta Lv 150] en 3 heures ou moins";
+            case 20: return "Vaincre le Raid de Boss [Aranetta Lv 150] en une heure ou moins";
+            case 21: return "Vaincre le Raid de Boss [Aranetta Lv 150] en 20 minutes ou moins";
+            case 22: return "Vaincre le Raid de Boss [Aranetta Lv 150] en 5 minutes ou moins";
+            case 23: return "Vaincre le Raid de Boss [Gardien Kor Lv 200] en 8 heures ou moins";
+            case 24: return "Vaincre le Raid de Boss [Gardien Kor Lv 200] en 3 heures ou moins";
+            case 25: return "Vaincre le Raid de Boss [Gardien Kor Lv 200] en une heure ou moins";
+            case 26: return "Vaincre le Raid de Boss [Gardien Kor Lv 200] en 20 minutes ou moins";
+            case 27: return "Vaincre le Raid de Boss [Gardien Kor Lv 200] en 5 minutes ou moins";
+            case 28: return "Vaincre le Raid de Boss [" + str1 + "] en 8 heures ou moins";
+            case 29: return "Vaincre le Raid de Boss [" + str1 + "] en 3 heures ou moins";
+            case 30: return "Vaincre le Raid de Boss [" + str1 + "] en une heure ou moins";
+            case 31: return "Vaincre le Raid de Boss [" + str1 + "] en 20 minutes ou moins";
+            case 32: return "Vaincre le Raid de Boss [" + str1 + "] en 5 minutes ou moins";
             case 33: return "Atteindre le Niveau de Guilde 10 en 5 minutes ou moins";
             case 34: return "Atteindre le Niveau de Guilde 15 en 20 minutes ou moins";
             case 35: return "Atteindre le Niveau de Guilde 15 en 5 minutes ou moins";
@@ -6510,7 +6510,7 @@ public class Localized_French : LOCALIZATION
             case 23: return "Gagner " + valueString + " Cristaux en tout";
             case 24: return "Gagner " + valueString + " Feuilles en tout";
             case 25: return "Atteindre le Niveau de Guilde " + tDigit(value);
-            case 26: return "Vaincre le Boss de Raid [" + valueString + "]";
+            case 26: return "Vaincre le Raid de Boss [" + valueString + "]";
             case 27: return "Atteindre le Niveau de Potion total " + tDigit(value);
             case 28: return "Gagner " + valueString + " Points d'Alchimie en tout";
             case 29: return "Gagner " + tDigit(value) + " Équipement en tout";
@@ -6697,7 +6697,7 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return "Récompense de Première Complétion";
             case 1: return "Récompense pour Chaque Complétion";
-            case 2: return "Boss de Raid";
+            case 2: return "Raid de Boss";
             case 3: return "Participant";
             case 4: return "Tous les héros couremment actifs vont rejoindre le combat !";
         }
@@ -7655,7 +7655,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.OneClickChallenges:
                 name = "Défis en un clic";
-                effect = "Effectuer un clic droit sur un onglet de Défi, tel que \"Boss de Raid\", commencera/réclamera tous les défis pour le Héros Actif dans cet onglet sauf ceux qui ont déjà été complétés. Les récompenses récupérées à travers la complétion des défis seront aussi réclamées. ";
+                effect = "Effectuer un clic droit sur un onglet de Défi, tel que \"Raid de Boss\", commencera/réclamera tous les défis pour le Héros Actif dans cet onglet sauf ceux qui ont déjà été complétés. Les récompenses récupérées à travers la complétion des défis seront aussi réclamées. ";
                 break;
             case EpicStoreKind.ScrollFilter:
                 name = "Filtre de Parchemin";
@@ -8263,14 +8263,14 @@ public class Localized_French : LOCALIZATION
                 tempStr += "Les défis sont là où vous pourrez tester la puissance de votre équipe ou d'un seul héros contre de solides boss. ";
                 tempStr += "\nCes Défis ne donneront qu'un bonus de complétion par Ascension Monde. Vous pouvez quand même recommencer un combat, mais aucune récompense ne sera donnée si elle a déjà été donnée pour cette Ascension Monde.";
                 tempStr += "\n\n";
-                tempStr += "<u>Combats de Boss de Raid</u>";
-                tempStr += "\n- Les combats de Boss de Raid utilisent tous les memebres de l'équipe qui sont en mode Actif/Passif.";
+                tempStr += "<u>Combats de Raid de Boss</u>";
+                tempStr += "\n- Les combats de Raid de Boss utilisent tous les memebres de l'équipe qui sont en mode Actif/Passif.";
                 tempStr += "\n- Les héros inactifs ne participeront pas au combat. ";
                 tempStr += "\n\n";
                 tempStr += "<u>Combats de Boss Solo</u>";
                 tempStr += "\n- Les combats de Boss Solo utilisent seulement le héros couremment actif.";
                 tempStr += "\n- Toutes les capacités (y comprises globales) sont disponibles dans ce combat.";
-                tempStr += "\n- Vous devez d'abord vaincre le Boss de Raid pour débloquer le Boss Solo.";
+                tempStr += "\n- Vous devez d'abord vaincre le Raid de Boss pour débloquer le Boss Solo.";
                 tempStr += "\n\n";
                 tempStr += "<u>Combats avec Handicap</u>";
                 tempStr += "\n- Ces combats ont des limitations pendant le combat. Par exemple, aucune capacité globale n'est autorisée, aucun équipement n'est autorisé, ou seul un certain nombre d'emplacements de capacité est disponible.";
