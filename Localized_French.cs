@@ -4036,9 +4036,9 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.UpgradeResource:
                         name = "Tutoriel 4 : Amélioration";
                         client = "Hitan";
-                        description = "Dans l'onglet <color=orange>Amélioration</color>, tu peux acheter différentes améliorations avec de l'or pour augmenter tes statistiques ! Essaye d'acheter des améliorations de <color=orange>Gain de Ressource</color> !\n<color=yellow>- Pour plus d'informations sur les améliorations, cliquez sur le bouton d'Aide en haut à gauche > [Amélioration].</color>";
-                        condition = "Atteindre le Nv 25 avec [ Gain de Ressource 1 ]";
-                        reward = "Débloque l'Amélioration [ Gain de Ressource 2 ]\n- Débloque l'onglet d'Amélioration Générale 2\n- Débloque l'onglet [ Equipement ]";
+                        description = "Dans l'onglet <color=orange>Amélioration</color>, tu peux acheter différentes améliorations avec de l'or pour augmenter tes statistiques ! Essaye d'acheter des améliorations de <color=orange>Gain de Ressources</color> !\n<color=yellow>- Pour plus d'informations sur les améliorations, cliquez sur le bouton d'Aide en haut à gauche > [Amélioration].</color>";
+                        condition = "Atteindre le Nv 25 avec [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 2 ]\n- Débloque l'onglet d'Amélioration Générale 2\n- Débloque l'onglet [ Equipement ]";
                         break;
                     case QuestKindGlobal.Equip:
                         name = "Tutoriel 5 : Equipement";
@@ -4135,213 +4135,213 @@ public class Localized_French : LOCALIZATION
 
                     //Upgrade
                     case QuestKindGlobal.Upgrade1:
-                        name = "To Further Stage 1";
+                        name = "Pour Aller Plus Loin Partie 1";
                         client = "Yuni";
-                        description = "You know Resources such as blue stones are useful for ranking up skills and expanding the gold cap. You can improve resource gain in the Upgrade tab. To get resources more efficiently, get Resource Gain 1 to Lv 50!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 50";
-                        reward = "Unleash Upgrade [ Resource Gain 3 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Tu sais, les Ressources telles que les pierres bleues sont utiles pour augmenter le rang des capacités et pour augmenter la limite d'or. Tu peux augmenter le gain de ressources dans l'onglet Amélioration. Pour recevoir des ressources plus efficacement, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 50 !";
+                        condition = "Atteindre le Nv 50 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 3 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade2:
-                        name = "To Further Stage 2";
+                        name = "Pour Aller Plus Loin Partie 2";
                         client = "Yuni";
-                        description = "Good job! To further stage, get Resource Gain 1 to Lv 100!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 100";
-                        reward = "Unleash Upgrade [ Resource Gain 4 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Bon travail ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 100 !";
+                        condition = "Atteindre le Nv 100 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 4 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade3:
-                        name = "To Further Stage 3";
+                        name = "Pour Aller Plus Loin Partie 3";
                         client = "Yuni";
-                        description = "Great job! To further stage, get Resource Gain 1 to Lv 150!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 150";
-                        reward = "Unleash Upgrade [ Resource Gain 5 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Bien joué ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 150 !";
+                        condition = "Atteindre le Nv 150 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 5 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade4:
-                        name = "To Further Stage 4";
+                        name = "Pour Aller Plus Loin Partie 4";
                         client = "Yuni";
-                        description = "Excellent job! To further stage, get Resource Gain 1 to Lv 200!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 200";
-                        reward = "Unleash Upgrade [ Resource Gain 6 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Très bon travail ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 200 !";
+                        condition = "Atteindre le Nv 200 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 6 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade5:
-                        name = "To Further Stage 5";
+                        name = "Pour Aller Plus Loin Partie 5";
                         client = "Yuni";
-                        description = "Amazing job! To further stage, get Resource Gain 1 to Lv 250!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 250";
-                        reward = "Unleash Upgrade [ Resource Gain 7 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Super travail ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 250 !";
+                        condition = "Atteindre le Nv 250 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 7 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade6:
-                        name = "To Further Stage 6";
-                        description = "Awesome job! To further stage, get Resource Gain 1 to Lv 300!";
+                        name = "Pour Aller Plus Loin Partie 6";
+                        description = "Quel effort ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 300 !";
                         client = "Yuni";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 300";
-                        reward = "Unleash Upgrade [ Resource Gain 8 ]" +
-                            "\n- Upgrade File + 5";
+                        condition = "Atteindre le Nv 300 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 8 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade7:
-                        name = "To Further Stage 7";
+                        name = "Pour Aller Plus Loin Partie 7";
                         client = "Yuni";
-                        description = "Wonderful job! To further stage, get Resource Gain 1 to Lv 400!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 400";
-                        reward = "Unleash Upgrade [ Resource Gain 9 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Parfait ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 400 !";
+                        condition = "Atteindre le Nv 400 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 9 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade8:
-                        name = "To Further Stage 8";
+                        name = "Pour Aller Plus Loin Partie 8";
                         client = "Yuni";
-                        description = "Crazy job! To further stage, get Resource Gain 1 to Lv 500!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 500";
-                        reward = "Unleash Upgrade [ Resource Gain 10 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Magnifique ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 500 !";
+                        condition = "Atteindre le Nv 500 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 10 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade9:
-                        name = "To Further Stage 9";
+                        name = "Pour Aller Plus Loin Partie 9";
                         client = "Yuni";
-                        description = "Terrific job! To further stage, get Resource Gain 1 to Lv 600!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 600";
-                        reward = "Unleash Upgrade [ Resource Gain 11 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Formidable ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 600 !";
+                        condition = "Atteindre le Nv 600 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 11 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade10:
-                        name = "To Further Stage 10";
+                        name = "Pour Aller Plus Loin Partie 10";
                         client = "Yuni";
-                        description = "Fantastic job! To further stage, get Resource Gain 1 to Lv 700!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 700";
-                        reward = "Unleash Upgrade [ Resource Gain 12 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Fantastique ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 700 !";
+                        condition = "Atteindre le Nv 700 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 12 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade11:
-                        name = "To Further Stage 11";
+                        name = "Pour Aller Plus Loin Partie 11";
                         client = "Yuni";
-                        description = "Fascinating job! To further stage, get Resource Gain 1 to Lv 800!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 800";
-                        reward = "Unleash Upgrade [ Resource Gain 13 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Quel trvail gargantuesque ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 800 !";
+                        condition = "Atteindre le Nv 800 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 13 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade12:
-                        name = "To Further Stage 12";
+                        name = "Pour Aller Plus Loin Partie 12";
                         client = "Yuni";
-                        description = "Incredible job! To further stage, get Resource Gain 1 to Lv 900!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 900";
-                        reward = "Unleash Upgrade [ Resource Gain 14 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Incroyable ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 900 !";
+                        condition = "Atteindre le Nv 900 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 14 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade13:
-                        name = "To Further Stage 13";
+                        name = "Pour Aller Plus Loin Partie 13";
                         client = "Yuni";
-                        description = "Cosmic job! To further stage, get Resource Gain 1 to Lv 1000!";
-                        condition = "Upgrade [ Resource Gain 1 ] Lv 1000";
-                        reward = "Unleash Upgrade [ Resource Gain 15 ]" +
-                            "\n- Upgrade File + 5";
+                        description = "Quel travail astronomique ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 1000 !";
+                        condition = "Atteindre le Nv 1000 pour l'Amélioration [ Gain de Ressources 1 ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 15 ]" +
+                            "\n- File d'Améliorations + 5";
                         break;
 
                     case QuestKindGlobal.Nitro1:
-                        name = "How to be a Nitro Booster Geek 1";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
-                        description = "What's this? Why are you interrupting me? Can't you see that I'm busy here? Oh, you're curious about Nitro, are you? Have you ever even tried it before? Go ahead and use some Nitro (The TNT bomb icon at the top of your screen) before bothering me again.";
-                        condition = "Turn on Nitro Booster";
+                        name = "Comment Être un Crack de Nitro 1";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
+                        description = "Qu'est-ce qu'il y a ? Pourquoi tu m'interromps ? Tu vois pas que je suis occupé, là ? Oh, tu es curieux à propos de la Nitro, c'est ça ? Est-ce que tu l'as déjà essayée, au moins ? Va et utilise un peu de Nitro (L'icône de TNT en haut de ton écran) avant de revenir me casser les pieds.";
+                        condition = "Active le Boosteur de Nitro";
                         break;
                     case QuestKindGlobal.Nitro2:
-                        name = "How to be a Nitro Booster Geek 2";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
-                        description = "Who is it?! Oh, it's you again... You tried out the Nitro, did you? Pretty great stuff. I use it when I need to focus and finish building my contraptions and doodads, but I suppose it works for adventurers like you as well. Tell you what, come see me again after you've burned through around 5000 of the stuff and I'll show you how you can carry more of it.";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / 5000";
-                        reward = "Nitro Cap + 1000";
+                        name = "Comment Être un Crack de Nitro 2";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
+                        description = "Qui es-tu ?! Oh, c'est encore toi... T'as essayé la Nitro, c'est ça ? C'est un super truc. Je l'utilise quand j'ai besoin de me concentrer et de terminer la construction de mes contraptions et d'autres trucs, mais je suppose que ça marche aussi pour des aventuriers comme toi. Tiens, reviens me voir une fois que tu en as utilisé 5000 et je te montrerai comment en porter plus.";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / 5000";
+                        reward = "Limite de Nitro + 1000";
                         break;
                     case QuestKindGlobal.Nitro3:
-                        name = "How to be a Nitro Booster Geek 3";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
-                        description = "You see a blur whizzing about the workshop, before it finally settles into the image of a curmudgeonly, old gnomish man. \"Who are you and why are you in my workshop?!\" He adjusts the seventeen lenses of his strange spectacle headpiece before examining you again. \"Oh, hello there. So you've used a bit more Nitro than before have you? As you have just seen, I'm quite fond of it myself. Oh you want to know how to carry more Nitro? Alright, I'll give you a expansion for it after you've burned through 30,000 again, okay? Now if you'll please leave, I have work to do.\"";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(30000);
-                        reward = "Nitro Cap + 2000";
+                        name = "Comment Être un Crack de Nitro 3";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
+                        description = "Tu vois quelque chose passer en un clin d'oeil dans l'atelier, avant de finalement prendre la forme d'un vieux nain grincheux. \"Qui es-tu et pourquoi es-tu dans mon atelier ?!\" Il ajuste les dix-sept verres de ses étranges lunettes avant de t'examiner à nouveau. \"Oh, salut. Donc tu as utilisé un peu plus de Nitro qu'avant, c'est ça ? Comme tu as pu le voir, j'adore ce truc. Oh, tu veux savoir comment transporter encore plus de Nitro ? Ok, je t'en donnerai une extension une fois que t'en auras utilisé 30 000, ok ? Maintenant va-t'en, j'ai du travail à faire.\"";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(30000);
+                        reward = "Limite de Nitro + 2000";
                         break;
                     case QuestKindGlobal.Nitro4:
-                        name = "How to be a Nitro Booster Geek 4";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
-                        description = "A large explosion can be heard coming from a rickety looking workshop. Peering inside, you are surprised to see that the facility doesn't appear to have any indications that an explosion just occurred there. As you enter, you are greeted by a panting, eccentric, old gnome. \"Whew, experiment Z17S34.1 was a failure. Excellent, excellent. Alright...\" He lifts his head up from a journal, locking eyes with you in a sudden jolt of surprise. \"Oh sulphurous stalactites!! Don't sneak up on an elderly fellow like that. Whew... my heart... look if you're here for another Nitro expansion, just go burn through another " + tDigit(150000) + " and I'll give you another. If you have nothing else, please leave.\" He then ignores you as he carries on writing in his journal.";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(150000);
-                        reward = "Nitro Cap + 3000";
+                        name = "Comment Être un Crack de Nitro 4";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
+                        description = "Une grosse explosion peut être entendue provenant d'un atelier bancal. En regardant à l'intérieur, tu es surpris de voir que le bâtiment n'a aucun signe qu'une explosion vient d'arriver ici. Dès que tu rentres, tu es accueilli par un vieux nain excentrique, visiblement à bout de souffle. \"Fiou, expérience Z17S34.1 a échouée. Excellent, excellent. Alors...\" Il sort la tête de son journal, se bloquant sur un contact visuel avec toi par pur surprise. \"Oh mes stalactites sulfureuses !! Ne surprends pas un homme agé comme ça. Fiou... mon coeur... écoute, si tu es là pour une autre extension de Nitro, va en utiliser " + tDigit(150000) + " de plus et je t'en donnerai une autre. Si t'as rien d'autre à faire, va-t'en.\" Après cela, il t'ignore et continue d'écrire dans son journal.";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(150000);
+                        reward = "Limite de Nitro + 3000";
                         break;
                     case QuestKindGlobal.Nitro5:
-                        name = "How to be a Nitro Booster Geek 5";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
-                        description = "As you approach the gnomish workshop, a blur whizzes by you, trailing off into building. Then it whizzes again back out, stopping abruptly just two feet in front of you. \"You've returned I see. Sorry, but no one is allowed in my workshop at the moment. I'm on the brink of incredible discovery! If you want another Nitro expansion, I'm too busy to help you, so beat it.\" Your head droops a bit at hearing his words and you begin to walk away. \"Oh fine, fine. Don't be that way. Go burn through " + tDigit(500000) + " of Nitro and I'll give you another expansion. I can't keep doing this forever, though, so don't expect me to make many more exceptions for you.\" There is a brief gush of wind as the figure of the tiny gnome whooshes away, leaving a trail leading back into the workshop, ending with a loud slamming of the workshop door.";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(500000);
-                        reward = "Nitro Cap + 4000";
+                        name = "Comment Être un Crack de Nitro 5";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
+                        description = "Aussi vite que tu t'approches de l'atelier du nain, quelque chose passe à toute vitesse à côté de toi, vers l'intérieur du bâtiment. Après cela, il sort en trombe, s'arrêtant juste deux pas en face de toi. \"T'es revenu, à ce que je vois. Désolé, mais personne ne peut visiter mon atelier pour le moment. Je suis sur le point de faire une découverte incoyable ! Si tu veux une autre extension de Nitro, je suis trop occupé pour t'aider, donc dégage.\" Ta tête s'affaisse un peu après avoir entendu ces mots et tu commence à partir. \"D'accord, d'accord. Sois pas comme ça. Va utiliser " + tDigit(500000) + " Nitro et je te donnerai une autre extension. Je peux pas faire ça jusqu'à la nuit des temps, donc n'attends pas d'autres exceptions.\" Il y a un courant d'air bref lorsque la forme du petit nain disparaît, laissant une trainée menant vers l'atelier, terminant avec une fermeture bruyante de la prte de l'atelier.";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(500000);
+                        reward = "Limite de Nitro + 4000";
                         break;
                     case QuestKindGlobal.Nitro6:
-                        name = "How to be a Nitro Booster Geek 6";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
-                        description = "You return to the gnomish workshop only to find a giant crater in the ground where the building once stood. At the center of the crater sits a blackened, ash-covered gnome looking a bit despondent. As you approach he looks up at you a little bit embarrassed. \"I succeeded. I broke through the Nitro barrier.\" He wipes a bit of a tear from his eye, smearing the ash across his already filthy face. \"So that's it, my life's work complete. No idea what I'm going to do now. I'm sure you're here for another Nitro expansion? Fine, but this is the last time. I'll be returning to my homeland soon to report my findings and hopefully find inspiration to start a new life's work. Well, why are you still standing there? Go burn through " + tDigit(1000000) + " of Nitro and let me know when you're done. I've got some things to take care of before I go, so I'll wait till you return.\"";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1000000);
-                        reward = "Nitro Cap + 5000";
+                        name = "Comment Être un Crack de Nitro 6";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
+                        description = "Tu reviens vers l'atelier du nain, sauf que tout ce que tu trouves est un énorme cratère là où le bâtiment était auparavent. Au centre de celui-ci est assis un nain noir, couvert de cendres, qui a l'air un peu déprimé. Lorsque tu t'approches, il te regarde avec un air un peu embarrassé. \"J'ai réussi. J'ai percé la barrière du Nitro.\" Il essuie une petite larme dans son oeil, étalant les cendres sur son visage déjà sale. \"Donc voilà, le travail de toute ma vie est terminé. aucune idée de ce que je vais faire maintenant. Je suis sûr que t'es là pour une autre extension de Nitro ? D'accord, mais c'est la dernière fois. Je vais bientôt retourner dans ma contrée natale pour faire un rapport de mes trouvailles, et j'espère y trouver de l'inspiration pour commencer une autre projet. Eh bien, qu'est-ce que tu fais encore ici ? Va utiliser " + tDigit(1000000) + " de Nitro et dis-moi quand tu as fini. J'ai encore quelques affaires à régler avant de partir, donc j'attendrai ton retour.\"";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1000000);
+                        reward = "Limite de Nitro + 5000";
                         break;
                     case QuestKindGlobal.Nitro7:
-                        name = "How to be a Nitro Booster Geek 7";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                        name = "Comment Être un Crack de Nitro 7";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(5000000);
-                        reward = "Nitro Cap + 6000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(5000000);
+                        reward = "Limite de Nitro + 6000";
                         break;
                     case QuestKindGlobal.Nitro8:
-                        name = "How to be a Nitro Booster Geek 8";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                        name = "Comment Être un Crack de Nitro 8";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(10000000);
-                        reward = "Nitro Cap + 7000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(10000000);
+                        reward = "Limite de Nitro + 7000";
                         break;
-                    case QuestKindGlobal.Nitro9: //TODO
-                        name = "How to be a Nitro Booster Geek 9";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro9:
+                        name = "Comment Être un Crack de Nitro 9";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(20000000);
-                        reward = "Base Nitro Cap + 8000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(20000000);
+                        reward = "Base Limite de Nitro + 8000";
                         break;
-                    case QuestKindGlobal.Nitro10: //TODO
-                        name = "How to be a Nitro Booster Geek 10";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro10:
+                        name = "Comment Être un Crack de Nitro 10";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(30000000);
-                        reward = "Base Nitro Cap + 9000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(30000000);
+                        reward = "Base Limite de Nitro + 9000";
                         break;
-                    case QuestKindGlobal.Nitro11: //TODO
-                        name = "How to be a Nitro Booster Geek 11";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro11:
+                        name = "Comment Être un Crack de Nitro 11";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(50000000);
-                        reward = "Base Nitro Cap + 10000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(50000000);
+                        reward = "Base Limite de Nitro + 10000";
                         break;
-                    case QuestKindGlobal.Nitro12: //TODO
-                        name = "How to be a Nitro Booster Geek 12";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro12:
+                        name = "Comment Être un Crack de Nitro 12";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(100000000);
-                        reward = "Base Nitro Cap + 20000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(100000000);
+                        reward = "Base Limite de Nitro + 20000";
                         break;
-                    case QuestKindGlobal.Nitro13: //TODO
-                        name = "How to be a Nitro Booster Geek 13";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro13:
+                        name = "Comment Être un Crack de Nitro 13";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(300000000);
-                        reward = "Base Nitro Cap + 30000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(300000000);
+                        reward = "Base Limite de Nitro + 30000";
                         break;
-                    case QuestKindGlobal.Nitro14: //TODO
-                        name = "How to be a Nitro Booster Geek 14";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro14:
+                        name = "Comment Être un Crack de Nitro 14";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(500000000);
-                        reward = "Base Nitro Cap + 40000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(500000000);
+                        reward = "Base Limite de Nitro + 40000";
                         break;
-                    case QuestKindGlobal.Nitro15: //TODO
-                        name = "How to be a Nitro Booster Geek 15";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro15:
+                        name = "Comment Être un Crack de Nitro 15";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1000000000);
-                        reward = "Base Nitro Cap + 50000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1000000000);
+                        reward = "Base Limite de Nitro + 50000";
                         break;
 
                     case QuestKindGlobal.Capture1:
@@ -6714,7 +6714,7 @@ public class Localized_French : LOCALIZATION
             case 9: return "Gain de Matériaux de Ville + " + text + "%";
             case 10: return "Débloque une nouvelle Quête Journalière de Pièce Épique";
             case 11: return "Gain de Maîtrise de Capacité depuis un Emplacement Global + " + text + "%";
-            case 12: return "Gain de Ressource ";
+            case 12: return "Gain de Ressources ";
             case 13: return "Limite d'Or ";
             case 14: return "Réduit le coût de tous les bâtiments par ";
             case 15: return "Cartographeur";
@@ -9014,7 +9014,7 @@ public class Localized_French : LOCALIZATION
             case WorldAscensionMiletoneKind.UpgradeLevel:
                 name = "Très Ressourcé";
                 description = "Niveau Total des Améliorations de Ressources";
-                passive = "Gain en Ressources + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                passive = "Gain de Ressources + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.MoveDistance:
                 name = "Explorateur de Monde";
