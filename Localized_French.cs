@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UsefulMethod;
@@ -9133,4 +9133,14 @@ public class Localized_French : LOCALIZATION
             default: return "" + text;
         }
     }
+    public override string OtherString(int id, string text = "")//TODO
+    {
+        switch (id)
+        {
+            case 0: return text + " hour(s)";
+            case 1: return "<size=24>BONUS CODE</size>\nPlease enter the bonus code here.";
+            default: return text;
+        }
+    }
+
 }
