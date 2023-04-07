@@ -4299,49 +4299,49 @@ public class Localized_French : LOCALIZATION
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(20000000);
-                        reward = "Base Limite de Nitro + 8000";
+                        reward = "Limite de Nitro + 8000";
                         break;
                     case QuestKindGlobal.Nitro10:
                         name = "Comment Être un Crack de Nitro 10";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(30000000);
-                        reward = "Base Limite de Nitro + 9000";
+                        reward = "Limite de Nitro + 9000";
                         break;
                     case QuestKindGlobal.Nitro11:
                         name = "Comment Être un Crack de Nitro 11";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(50000000);
-                        reward = "Base Limite de Nitro + 10000";
+                        reward = "Limite de Nitro + 10000";
                         break;
                     case QuestKindGlobal.Nitro12:
                         name = "Comment Être un Crack de Nitro 12";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(100000000);
-                        reward = "Base Limite de Nitro + 20000";
+                        reward = "Limite de Nitro + 20000";
                         break;
                     case QuestKindGlobal.Nitro13:
                         name = "Comment Être un Crack de Nitro 13";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(300000000);
-                        reward = "Base Limite de Nitro + 30000";
+                        reward = "Limite de Nitro + 30000";
                         break;
                     case QuestKindGlobal.Nitro14:
                         name = "Comment Être un Crack de Nitro 14";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(500000000);
-                        reward = "Base Limite de Nitro + 40000";
+                        reward = "Limite de Nitro + 40000";
                         break;
                     case QuestKindGlobal.Nitro15:
                         name = "Comment Être un Crack de Nitro 15";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1000000000);
-                        reward = "Base Limite de Nitro + 50000";
+                        reward = "Limite de Nitro + 50000";
                         break;
 
                     case QuestKindGlobal.Capture1:
