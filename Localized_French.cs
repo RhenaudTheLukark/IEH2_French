@@ -9125,20 +9125,20 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Le coffre était un Mimic!!!";
-            case 1: return "Bénédiction!";
-            case 2: return "Temps Limite + 30 sec!";
-            case 3: return "1 Orbe Portail!";
-            case 4: return "Talisman!";
+            case 0: return "Le coffre était un Mimic !!!";
+            case 1: return "Bénédiction !";
+            case 2: return "Temps Limite + 30 sec !";
+            case 3: return "1 Orbe Portail !";
+            case 4: return "Talisman !";
             default: return "" + text;
         }
     }
-    public override string OtherString(int id, string text = "")//TODO
+    public override string OtherString(int id, string text = "")
     {
         switch (id)
         {
-            case 0: return text + " hour(s)";
-            case 1: return "<size=24>BONUS CODE</size>\nPlease enter the bonus code here.";
+            case 0: return text + " heure(s)";
+            case 1: return "<size=24>CODE BONUS</size>\nVeuillez entrer un code bonus ici.";
             default: return text;
         }
     }
