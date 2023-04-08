@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UsefulMethod;
@@ -6514,8 +6514,8 @@ public class Localized_French : LOCALIZATION
             case 33: return "Avoir " + tDigit(value) + " Emplacements d'Utilitaire pour le héros " + valueString;
             case 34: return "Avoir " + tDigit(value) + " Emplacements de Capacité de Classe pour le héros " + valueString;
             case 35: return "Avoir 8 Emplacements de Capacité Global";
-            case 36: return "Effectuer " + tDigit(value) + " Réincarnation " + valueString;
-            case 37: return "Effectuer " + tDigit(value) + " Ascension Monde";
+            case 36: return "Effectuer une Réincarnation de Classe " + tDigit(value) + " avec le héros " + valueString;
+            case 37: return "Effectuer une Ascension Monde " + tDigit(value) + " fois";
             case 38: return "Jouer à IEH pendant " + tDigit(value) + " jour(s) de temps de jeu";
             case 39: return "Jouer à IEH pendant " + tDigit(value) + " semaine(s) de temps de jeu";
             case 40: return "Jouer à IEH pendant " + tDigit(value) + " mois(s) de temps de jeu";
@@ -6530,7 +6530,7 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return "Simulation en Cours...";
             case 1: return "Vous pouvez simuler les résultats des combats dans chaque zone en même temps.\n<size=18>Raccourci : Maj + S";
-            case 2: return "Étes-vous sûr de voulir rentrer dans ce donjon ?\nCela coûtera";
+            case 2: return "Étes-vous sûr de vouloir rentrer dans ce donjon ?\nCela coûtera";
             case 3: return "\n- Vous avez besoin de ";
             case 4: return " pour rentrer dans ce donjon";
             case 5: return " Mat. Ville";
@@ -6793,7 +6793,7 @@ public class Localized_French : LOCALIZATION
             case 88: return "Slimes capturés : ";
             case 89: return "Débloque la Banque Slime dans l'onglet Amélioration";
             case 90: return "Débloque de nouvelles Améliorations de Banque Slime";
-            case 91: return "Efficacité des Pièces Slime" + text + "%";
+            case 91: return "Efficacité des Pièces Slime " + text + "%";
             case 92: return "Gain d'Or + " + text + "%";
             case 93: return "Octroie de l'intérêt sur les Pièces Slime en votre possession toutes les 10 minutes : ";
             case 94: return "Quantité de réapprovisionnement de matériaux dans le Magasin ";
@@ -6906,7 +6906,7 @@ public class Localized_French : LOCALIZATION
         {
             case 0:
                 tempStr = "<size=20>Boîte de Désassemblage<size=18>";
-                tempStr += "\n- Glissez et posez un objet ici pour le désassembler.";
+                tempStr += "\n- Glissez et déposez un objet ici pour le désassembler.";
                 tempStr += "\n\nRaccourcis : ";
                 tempStr += "\n- <color=orange>Maj+D</color> et un <color=orange>Clic</color> sur un <color=orange>OBJET</color> : Désassemble un Équipement/objet Utilitaire.";
                 tempStr += "\n- <color=orange>Maj+D</color> et un <color=orange>Double Clic</color> <color=orange>ICI</color> : Désassemble tous les Équipements dans l'inventaire sauf les objets verrouillés.";
