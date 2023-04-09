@@ -3657,7 +3657,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindThief.SpreadToss:
                 return "Lance plusieurs dagues dans un cercle autour du héros, touchant des ennemis dans différentes directions.";
             case SkillKindThief.ShadowStrike:
-                return "Endommage des ennemis avec un coup mortel de dégâts des ténèbres, avec une chance d'appliquer du poison qui inflige des dégâts des ténèbres additionnels au fil du temps.";
+                return "Endommage des ennemis avec un attaque infligeant des dégâts des ténèbres, ayant une chance d'appliquer du poison qui inflige des dégâts des ténèbres additionnels au fil du temps.";
             case SkillKindThief.SneakyStrike:
                 return "Disparait et réapparait à côté de l'ennemi le plus éloigné pour infliger des dégâts.";
             case SkillKindThief.Pilfer:
