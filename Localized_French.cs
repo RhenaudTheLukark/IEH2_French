@@ -3495,7 +3495,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindThief.SpreadToss:
                 return "Lancer Étendu";
             case SkillKindThief.ShadowStrike:
-                return "Cou de l'Ombre";
+                return "Coup de l'Ombre";
             case SkillKindThief.SneakyStrike:
                 return "Coup Furtif";
             case SkillKindThief.Pilfer:
@@ -4014,7 +4014,7 @@ public class Localized_French : LOCALIZATION
                 switch (kindGlobal)
                 {
                     case QuestKindGlobal.AbilityVIT:
-                        name = "Tutoriel 1 : Entrâinement Basique";
+                        name = "Tutoriel 1 : Entraînement Basique";
                         client = "Hitan";
                         description = "Bienvenue sur Incrmental Epic Hero 2 ! Tout d'abord, pour devenir plus fort, assigne 1 <color=orange>Point d'Abilité (PA)</color> à <color=orange>VTL</color>. VTL est l'abilité la plus basique, qui augmente tes PV, DEF et MDEF. Tu gagneras 1 AP à chaque fois que ton niveau augmente. \n<color=yellow>- Pour plus d'informations sur les points d'abilité, clique sur le bouton d'Aide en haut à gauche > [Abilité].</color>";
                         condition = "Assigner 1 PA à VTL";
@@ -4135,7 +4135,7 @@ public class Localized_French : LOCALIZATION
 
                     //Upgrade
                     case QuestKindGlobal.Upgrade1:
-                        name = "Pour Aller Plus Loin Partie 1";
+                        name = "Meilleure Collecte 1";
                         client = "Yuni";
                         description = "Tu sais, les Ressources telles que les pierres bleues sont utiles pour augmenter le rang des capacités et pour augmenter la limite d'or. Tu peux augmenter le gain de ressources dans l'onglet Amélioration. Pour recevoir des ressources plus efficacement, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 50 !";
                         condition = "Atteindre le Nv 50 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4143,7 +4143,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade2:
-                        name = "Pour Aller Plus Loin Partie 2";
+                        name = "Meilleure Collecte 2";
                         client = "Yuni";
                         description = "Bon travail ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 100 !";
                         condition = "Atteindre le Nv 100 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4151,7 +4151,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade3:
-                        name = "Pour Aller Plus Loin Partie 3";
+                        name = "Meilleure Collecte 3";
                         client = "Yuni";
                         description = "Bien joué ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 150 !";
                         condition = "Atteindre le Nv 150 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4159,7 +4159,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade4:
-                        name = "Pour Aller Plus Loin Partie 4";
+                        name = "Meilleure Collecte 4";
                         client = "Yuni";
                         description = "Très bon travail ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 200 !";
                         condition = "Atteindre le Nv 200 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4167,7 +4167,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade5:
-                        name = "Pour Aller Plus Loin Partie 5";
+                        name = "Meilleure Collecte 5";
                         client = "Yuni";
                         description = "Super travail ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 250 !";
                         condition = "Atteindre le Nv 250 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4175,7 +4175,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade6:
-                        name = "Pour Aller Plus Loin Partie 6";
+                        name = "Meilleure Collecte 6";
                         description = "Quel effort ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 300 !";
                         client = "Yuni";
                         condition = "Atteindre le Nv 300 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4183,7 +4183,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade7:
-                        name = "Pour Aller Plus Loin Partie 7";
+                        name = "Meilleure Collecte 7";
                         client = "Yuni";
                         description = "Parfait ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 400 !";
                         condition = "Atteindre le Nv 400 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4191,7 +4191,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade8:
-                        name = "Pour Aller Plus Loin Partie 8";
+                        name = "Meilleure Collecte 8";
                         client = "Yuni";
                         description = "Magnifique ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 500 !";
                         condition = "Atteindre le Nv 500 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4199,7 +4199,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade9:
-                        name = "Pour Aller Plus Loin Partie 9";
+                        name = "Meilleure Collecte 9";
                         client = "Yuni";
                         description = "Formidable ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 600 !";
                         condition = "Atteindre le Nv 600 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4207,7 +4207,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade10:
-                        name = "Pour Aller Plus Loin Partie 10";
+                        name = "Meilleure Collecte 10";
                         client = "Yuni";
                         description = "Fantastique ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 700 !";
                         condition = "Atteindre le Nv 700 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4215,7 +4215,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade11:
-                        name = "Pour Aller Plus Loin Partie 11";
+                        name = "Meilleure Collecte 11";
                         client = "Yuni";
                         description = "Quel trvail gargantuesque ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 800 !";
                         condition = "Atteindre le Nv 800 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4223,7 +4223,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade12:
-                        name = "Pour Aller Plus Loin Partie 12";
+                        name = "Meilleure Collecte 12";
                         client = "Yuni";
                         description = "Incroyable ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 900 !";
                         condition = "Atteindre le Nv 900 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4231,7 +4231,7 @@ public class Localized_French : LOCALIZATION
                             "\n- File d'Améliorations + 5";
                         break;
                     case QuestKindGlobal.Upgrade13:
-                        name = "Pour Aller Plus Loin Partie 13";
+                        name = "Meilleure Collecte 13";
                         client = "Yuni";
                         description = "Quel travail astronomique ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 1000 !";
                         condition = "Atteindre le Nv 1000 pour l'Amélioration [ Gain de Ressources 1 ]";
@@ -4240,104 +4240,104 @@ public class Localized_French : LOCALIZATION
                         break;
 
                     case QuestKindGlobal.Nitro1:
-                        name = "Comment Être un Crack de Nitro 1";
+                        name = "Fan de Nitro 1";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "Qu'est-ce qu'il y a ? Pourquoi tu m'interromps ? Tu vois pas que je suis occupé, là ? Oh, tu es curieux à propos de la Nitro, c'est ça ? Est-ce que tu l'as déjà essayée, au moins ? Va et utilise un peu de Nitro (L'icône de TNT en haut de ton écran) avant de revenir me casser les pieds.";
                         condition = "Active le Boosteur de Nitro";
                         break;
                     case QuestKindGlobal.Nitro2:
-                        name = "Comment Être un Crack de Nitro 2";
+                        name = "Fan de Nitro 2";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "Qui es-tu ?! Oh, c'est encore toi... T'as essayé la Nitro, c'est ça ? C'est un super truc. Je l'utilise quand j'ai besoin de me concentrer et de terminer la construction de mes contraptions et d'autres trucs, mais je suppose que ça marche aussi pour des aventuriers comme toi. Tiens, reviens me voir une fois que tu en as utilisé 5000 et je te montrerai comment en porter plus.";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / 5000";
                         reward = "Limite de Nitro + 1000";
                         break;
                     case QuestKindGlobal.Nitro3:
-                        name = "Comment Être un Crack de Nitro 3";
+                        name = "Fan de Nitro 3";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "Tu vois quelque chose passer en un clin d'oeil dans l'atelier, avant de finalement prendre la forme d'un vieux nain grincheux. \"Qui es-tu et pourquoi es-tu dans mon atelier ?!\" Il ajuste les dix-sept verres de ses étranges lunettes avant de t'examiner à nouveau. \"Oh, salut. Donc tu as utilisé un peu plus de Nitro qu'avant, c'est ça ? Comme tu as pu le voir, j'adore ce truc. Oh, tu veux savoir comment transporter encore plus de Nitro ? Ok, je t'en donnerai une extension une fois que t'en auras utilisé 30 000, ok ? Maintenant va-t'en, j'ai du travail à faire.\"";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(30000);
                         reward = "Limite de Nitro + 2000";
                         break;
                     case QuestKindGlobal.Nitro4:
-                        name = "Comment Être un Crack de Nitro 4";
+                        name = "Fan de Nitro 4";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "Une grosse explosion peut être entendue provenant d'un atelier bancal. En regardant à l'intérieur, tu es surpris de voir que le bâtiment n'a aucun signe qu'une explosion vient d'arriver ici. Dès que tu rentres, tu es accueilli par un vieux nain excentrique, visiblement à bout de souffle. \"Fiou, expérience Z17S34.1 a échouée. Excellent, excellent. Alors...\" Il sort la tête de son journal, se bloquant sur un contact visuel avec toi par pur surprise. \"Oh mes stalactites sulfureuses !! Ne surprends pas un homme agé comme ça. Fiou... mon coeur... écoute, si tu es là pour une autre extension de Nitro, va en utiliser " + tDigit(150000) + " de plus et je t'en donnerai une autre. Si t'as rien d'autre à faire, va-t'en.\" Après cela, il t'ignore et continue d'écrire dans son journal.";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(150000);
                         reward = "Limite de Nitro + 3000";
                         break;
                     case QuestKindGlobal.Nitro5:
-                        name = "Comment Être un Crack de Nitro 5";
+                        name = "Fan de Nitro 5";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "Aussi vite que tu t'approches de l'atelier du nain, quelque chose passe à toute vitesse à côté de toi, vers l'intérieur du bâtiment. Après cela, il sort en trombe, s'arrêtant juste deux pas en face de toi. \"T'es revenu, à ce que je vois. Désolé, mais personne ne peut visiter mon atelier pour le moment. Je suis sur le point de faire une découverte incoyable ! Si tu veux une autre extension de Nitro, je suis trop occupé pour t'aider, donc dégage.\" Ta tête s'affaisse un peu après avoir entendu ces mots et tu commence à partir. \"D'accord, d'accord. Sois pas comme ça. Va utiliser " + tDigit(500000) + " Nitro et je te donnerai une autre extension. Je peux pas faire ça jusqu'à la nuit des temps, donc n'attends pas d'autres exceptions.\" Il y a un courant d'air bref lorsque la forme du petit nain disparaît, laissant une trainée menant vers l'atelier, terminant avec une fermeture bruyante de la prte de l'atelier.";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(500000);
                         reward = "Limite de Nitro + 4000";
                         break;
                     case QuestKindGlobal.Nitro6:
-                        name = "Comment Être un Crack de Nitro 6";
+                        name = "Fan de Nitro 6";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "Tu reviens vers l'atelier du nain, sauf que tout ce que tu trouves est un énorme cratère là où le bâtiment était auparavent. Au centre de celui-ci est assis un nain noir, couvert de cendres, qui a l'air un peu déprimé. Lorsque tu t'approches, il te regarde avec un air un peu embarrassé. \"J'ai réussi. J'ai percé la barrière du Nitro.\" Il essuie une petite larme dans son oeil, étalant les cendres sur son visage déjà sale. \"Donc voilà, le travail de toute ma vie est terminé. aucune idée de ce que je vais faire maintenant. Je suis sûr que t'es là pour une autre extension de Nitro ? D'accord, mais c'est la dernière fois. Je vais bientôt retourner dans ma contrée natale pour faire un rapport de mes trouvailles, et j'espère y trouver de l'inspiration pour commencer une autre projet. Eh bien, qu'est-ce que tu fais encore ici ? Va utiliser " + tDigit(1000000) + " de Nitro et dis-moi quand tu as fini. J'ai encore quelques affaires à régler avant de partir, donc j'attendrai ton retour.\"";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1000000);
                         reward = "Limite de Nitro + 5000";
                         break;
                     case QuestKindGlobal.Nitro7:
-                        name = "Comment Être un Crack de Nitro 7";
+                        name = "Fan de Nitro 7";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(5000000);
                         reward = "Limite de Nitro + 6000";
                         break;
                     case QuestKindGlobal.Nitro8:
-                        name = "Comment Être un Crack de Nitro 8";
+                        name = "Fan de Nitro 8";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(10000000);
                         reward = "Limite de Nitro + 7000";
                         break;
                     case QuestKindGlobal.Nitro9:
-                        name = "Comment Être un Crack de Nitro 9";
+                        name = "Fan de Nitro 9";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(20000000);
                         reward = "Limite de Nitro + 8000";
                         break;
                     case QuestKindGlobal.Nitro10:
-                        name = "Comment Être un Crack de Nitro 10";
+                        name = "Fan de Nitro 10";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(30000000);
                         reward = "Limite de Nitro + 9000";
                         break;
                     case QuestKindGlobal.Nitro11:
-                        name = "Comment Être un Crack de Nitro 11";
+                        name = "Fan de Nitro 11";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(50000000);
                         reward = "Limite de Nitro + 10000";
                         break;
                     case QuestKindGlobal.Nitro12:
-                        name = "Comment Être un Crack de Nitro 12";
+                        name = "Fan de Nitro 12";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(100000000);
                         reward = "Limite de Nitro + 20000";
                         break;
                     case QuestKindGlobal.Nitro13:
-                        name = "Comment Être un Crack de Nitro 13";
+                        name = "Fan de Nitro 13";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(300000000);
                         reward = "Limite de Nitro + 30000";
                         break;
                     case QuestKindGlobal.Nitro14:
-                        name = "Comment Être un Crack de Nitro 14";
+                        name = "Fan de Nitro 14";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(500000000);
                         reward = "Limite de Nitro + 40000";
                         break;
                     case QuestKindGlobal.Nitro15:
-                        name = "Comment Être un Crack de Nitro 15";
+                        name = "Fan de Nitro 15";
                         client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1000000000);
@@ -4345,84 +4345,84 @@ public class Localized_French : LOCALIZATION
                         break;
 
                     case QuestKindGlobal.Capture1:
-                        name = "Capturing Monsters 1";
+                        name = "Capture de Monstre 1";
                         client = "Ringold";
-                        description = "In the <color=orange>Shop</color>, there is a tab where you can find all of the traps that you have currently unlocked. The first trap that is unlocked is the <color=orange>Throwing Net</color>, which is ONLY capable of capturing <color=orange>'Normal' Type</color> monsters. Also keep in mind that you must at least pass the <color=orange>Title Quest [ Monster Study 1 ]</color> before you will be able to properly utilize Traps. Traps can be equipped in the <color=orange>Utility Slot</color>, you can then <color=orange>Right Click</color> on a monster. You must have the right trap type equipped and have a high enough capturable monster level for the monster you are trying to trap.";//Traps can be equipped in the <color=orange>Utility</color> slot and are activated automatically upon defeating a monster whose type and level are eligible to be captured based on the type of trap equipped.";
-                        description += "\n- You can hover over a trap to see the max capturable monster level. To increase this further, you can increase your Hero level, finish Monster Study title quests, and increase the level of a particular town building.";
-                        description += "\n- Captured Monsters, or Pets, provide a range of special bonuses that not only enable you to automate various aspects of the game, but also provide passive boosts to a variety of stats.";
-                        description += "\n<color=yellow>For more information, Help > [Capture].</color>";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10);
-                        reward = "Taming Point Gain + 10%";
+                        description = "Dans le <color=orange>Magasin</color>, il y a un onglet dans lequel tu peux trouver tous les types de pièges couremment débloqués. Le premier piège qui est débloqué est le <color=orange>Filet de Capture</color>, qui est SEULEMENT capable de capturer des monstres de <color=orange>Type 'Normal'</color>. Garde aussi en^tête que la <color=orange>Quête de Titre [ Etude de Monstre 1 ]</color> doit aussi être complétée afin de pouvoir utiliser des Pièges. Les Pièges peuvent être équipés dans un <color=orange>Emplacement d'Utilitaire</color>, qui permet d'effectuer un <color=orange>Clic Droit</color> sur un monstre. Tu dois avoir le bon type de piège équipé et un niveau de monstre capturable suffisant afin de pouvoir capturer le monstre choisi.";//Traps can be equipped in the <color=orange>Utility</color> slot and are activated automatically upon defeating a monster whose type and level are eligible to be captured based on the type of trap equipped.";
+                        description += "\n- Tu peux déplacer ta souris sur un piège pour voir le niveau maximum de monstre capturable. Pour augmenter ce niveau, tu peux augmenter le Niveau du Héros, compléter des quêtes de titre Etude de Monstre, et augmenter le niveau d'un bâtiment de ville spécifique.";
+                        description += "\n- Les monstres capturés, ou Familiers, donnent une variété de bonus spéciaux qui permettent non seulement d'automatiser certains aspects du jeu, mais aussi de donner des boosts passifs sur de nombreuses statistiques.";
+                        description += "\n<color=yellow>Pour plus d'informations, Aide > [Capture].</color>";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10);
+                        reward = "Gain de Points de Domptage + 10%";
                         break;
                     case QuestKindGlobal.Capture2:
-                        name = "Capturing Monsters 2";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 2";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         description = "Oy d'ere! Ye must be looking for training on how to handle monstery types, yea? Well, look no fur'ter as I'd be happy to teach ye. First ting's first, ye need to get yerself a trap. Head yerself over to the Shop, buy yerself some traps and capture some monstery types, then come back and sees me. I'll be waitin' right here.";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000);
-                        reward = "Taming Point Gain + 20%";
+                        reward = "Gain de Points de Domptage + 20%";
                         break;
                     case QuestKindGlobal.Capture3:
-                        name = "Capturing Monsters 3";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 3";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         description = "Ey! Yer back! Looks like ye got yer hands on some traps and figured them out alright, ye did. Yer like a wizard, ye are! Since ye know how to wrangle a monstery type now, and ye've seen hows they turn into cute, wuvable pets, they do, ye may have noticed ye can only have so many afollowing ye at once. It's important to keep improving yer Trapper building! Oh and since we be friends now, I'll tell ye a little secret that will be surely helpful to ye. Seek out a monstery type that helps ye with trapping.";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000);
-                        reward = "Taming Point Gain + 30%";
+                        reward = "Gain de Points de Domptage + 30%";
                         break;
                     case QuestKindGlobal.Capture4:
-                        name = "Capturing Monsters 4";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 4";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         description = "Well 'allo d'ere! That spidery fella was helpful, it was? I bet it was! Now if ye be wanting to do this in a more professional manner, so to speak, ye best be expanding the selection at the Shop! That requires fixing up the Trapper building real nice, it does. Come back and see me when the Shop has stocked traps for red monstery types!";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000)
                             + "\n- Town Building [Trapper] Rank 3";
-                        reward = "Taming Point Gain + 40%";
+                        reward = "Gain de Points de Domptage + 40%";
                         break;
                     case QuestKindGlobal.Capture5:
-                        name = "Capturing Monsters 5";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 5";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000);
-                        reward = "Taming Point Gain + 50%";
+                        reward = "Gain de Points de Domptage + 50%";
                         break;
                     case QuestKindGlobal.Capture6: //TODO
-                        name = "Capturing Monsters 6";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 6";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000000);
-                        reward = "Taming Point Gain + 75%";
+                        reward = "Gain de Points de Domptage + 75%";
                         break;
                     case QuestKindGlobal.Capture7: //TODO
-                        name = "Capturing Monsters 7";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 7";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(50000000);
-                        reward = "Taming Point Gain + 100%";
+                        reward = "Gain de Points de Domptage + 100%";
                         break;
                     case QuestKindGlobal.Capture8: //TODO
-                        name = "Capturing Monsters 8";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 8";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000000);
-                        reward = "Taming Point Gain + 200%";
+                        reward = "Gain de Points de Domptage + 200%";
                         break;
                     case QuestKindGlobal.Capture9: //TODO
-                        name = "Capturing Monsters 9";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 9";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(300000000);
-                        reward = "Taming Point Gain + 300%";
+                        reward = "Gain de Points de Domptage + 300%";
                         break;
                     case QuestKindGlobal.Capture10: //TODO
-                        name = "Capturing Monsters 10";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 10";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(500000000);
-                        reward = "Taming Point Gain + 500%";
+                        reward = "Gain de Points de Domptage + 500%";
                         break;
                     case QuestKindGlobal.Capture11: //TODO
-                        name = "Capturing Monsters 11";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 11";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000000);
-                        reward = "Taming Point Gain + 1000%";
+                        reward = "Gain de Points de Domptage + 1000%";
                         break;
                     case QuestKindGlobal.Capture12: //TODO
-                        name = "Capturing Monsters 12";
-                        client = "Dirgah Suebur, the Monster Handler";
+                        name = "Capture de Monstre 12";
+                        client = "Dirge Suebe, l'Eleveur de Monstres";
                         condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(5000000000);
-                        reward = "Taming Point Gain + 5000%";
+                        reward = "Gain de Points de Domptage + 5000%";
                         break;
 
                     case QuestKindGlobal.Alchemy1:
