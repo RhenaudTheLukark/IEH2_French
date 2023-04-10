@@ -5650,19 +5650,19 @@ public class Localized_French : LOCALIZATION
                 tempNextEffect = "Gain de Feuille + " + percent(upgrade.nextEffectValue);
                 break;
             case RebirthUpgradeKind.StoneGoldCap:
-                tempName = "Limite d'Or Rocheuse";
-                tempEffect = "Stone Gold Cap Upgrade's effect + " + percent(upgrade.effectValue);
-                tempNextEffect = "Stone Gold Cap Upgrade's effect + " + percent(upgrade.nextEffectValue);
+                tempName = "Limite d'Or Rocheuse +";
+                tempEffect = "Effet de l'Amélioration Limite d'Or Rocheuse + " + percent(upgrade.effectValue);
+                tempNextEffect = "Effet de l'Amélioration Limite d'Or Rocheuse + " + percent(upgrade.nextEffectValue);
                 break;
             case RebirthUpgradeKind.CrystalGoldCap:
-                tempName = "Limite d'Or Cristallique";
-                tempEffect = "Crystal Gold Cap Upgrade's effect + " + percent(upgrade.effectValue);
-                tempNextEffect = "Crystal Gold Cap Upgrade's effect + " + percent(upgrade.nextEffectValue);
+                tempName = "Limite d'Or Cristallique +";
+                tempEffect = "Effet de l'Amélioration Limite d'Or Cristallique + " + percent(upgrade.effectValue);
+                tempNextEffect = "Effet de l'Amélioration Limite d'Or Cristallique + " + percent(upgrade.nextEffectValue);
                 break;
             case RebirthUpgradeKind.LeafGoldCap:
-                tempName = "Limite d'Or Végétale";
-                tempEffect = "Leaf Gold Cap Upgrade's effect + " + percent(upgrade.effectValue);
-                tempNextEffect = "Leaf Gold Cap Upgrade's effect + " + percent(upgrade.nextEffectValue);
+                tempName = "Limite d'Or Végétale +";
+                tempEffect = "Effet de l'Amélioration Limite d'Or Végétale + " + percent(upgrade.effectValue);
+                tempNextEffect = "Effet de l'Amélioration Limite d'Or Végétale + " + percent(upgrade.nextEffectValue);
                 break;
             case RebirthUpgradeKind.SkillProfGain:
                 tempName = "Maîtrise de Capacité X";
@@ -5740,19 +5740,19 @@ public class Localized_French : LOCALIZATION
                 tempNextEffect = "Effet de [Meilleure Cueillette] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T1StoneGoldCapBoost:
-                tempName = "Limite d'Or Rocheuse +";
-                tempEffect = "Effet de [Limite d'Or Rocheuse] + " + percent(upgrade.effectValue, 0);
-                tempNextEffect = "Effet de [Limite d'Or Rocheuse] + " + percent(upgrade.nextEffectValue, 0);
+                tempName = "Limite d'Or Rocheuse ++";
+                tempEffect = "Effet de [Limite d'Or Rocheuse +] + " + percent(upgrade.effectValue, 0);
+                tempNextEffect = "Effet de [Limite d'Or Rocheuse +] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T1CrystalGoldCapBoost:
                 tempName = "Limite d'Or Cristallique +";
-                tempEffect = "Effet de [Limite d'Or Cristallique] + " + percent(upgrade.effectValue, 0);
-                tempNextEffect = "Effet de [Limite d'Or Cristallique] + " + percent(upgrade.nextEffectValue, 0);
+                tempEffect = "Effet de [Limite d'Or Cristallique +] + " + percent(upgrade.effectValue, 0);
+                tempNextEffect = "Effet de [Limite d'Or Cristallique +] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T1LeafGoldCapBoost:
-                tempName = "Limite d'Or Végétale +";
-                tempEffect = "Effet de [Limite d'Or Végétale] + " + percent(upgrade.effectValue, 0);
-                tempNextEffect = "Effet de [Limite d'Or Végétale] + " + percent(upgrade.nextEffectValue, 0);
+                tempName = "Limite d'Or Végétale ++";
+                tempEffect = "Effet de [Limite d'Or Végétale +] + " + percent(upgrade.effectValue, 0);
+                tempNextEffect = "Effet de [Limite d'Or Végétale +] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.EQLevelCap:
                 tempName = "Transcendance d'Équipement";
@@ -5835,19 +5835,19 @@ public class Localized_French : LOCALIZATION
                 tempNextEffect = "Effet de [Meilleure Cueillette +] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T2StoneGoldCapBoost:
-                tempName = "Limite d'Or Rocheuse ++";
-                tempEffect = "Effet de [Limite d'Or Rocheuse +] + " + percent(upgrade.effectValue, 0);
-                tempNextEffect = "Effet de [Limite d'Or Rocheuse +] + " + percent(upgrade.nextEffectValue, 0);
+                tempName = "Limite d'Or Rocheuse +++";
+                tempEffect = "Effet de [Limite d'Or Rocheuse ++] + " + percent(upgrade.effectValue, 0);
+                tempNextEffect = "Effet de [Limite d'Or Rocheuse ++] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T2CrystalGoldCapBoost:
-                tempName = "Limite d'Or Cristallique ++";
-                tempEffect = "Effet de [Limite d'Or Cristallique +] + " + percent(upgrade.effectValue, 0);
-                tempNextEffect = "Effet de [Limite d'Or Cristallique +] + " + percent(upgrade.nextEffectValue, 0);
+                tempName = "Limite d'Or Cristallique +++";
+                tempEffect = "Effet de [Limite d'Or Cristallique ++] + " + percent(upgrade.effectValue, 0);
+                tempNextEffect = "Effet de [Limite d'Or Cristallique ++] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T2LeafGoldCapBoost:
-                tempName = "Limite d'Or Végétale ++";
-                tempEffect = "Effet de [Limite d'Or Végétale +] + " + percent(upgrade.effectValue, 0);
-                tempNextEffect = "Effet de [Limite d'Or Végétale +] + " + percent(upgrade.nextEffectValue, 0);
+                tempName = "Limite d'Or Végétale +++";
+                tempEffect = "Effet de [Limite d'Or Végétale ++] + " + percent(upgrade.effectValue, 0);
+                tempNextEffect = "Effet de [Limite d'Or Végétale ++] + " + percent(upgrade.nextEffectValue, 0);
                 break;
             case RebirthUpgradeKind.T2SkillProfGainBoost:
                 tempName = "Maître d'Équipement +";
@@ -7483,7 +7483,7 @@ public class Localized_French : LOCALIZATION
                 effect = "Débloque 1 Emplacement d'Inventaire d'Armure pour tous les héros.";
                 break;
             case EpicStoreKind.EquipmentJewelrySlot1:
-                name = "Emplacement de Bijou d'Arme + 1";
+                name = "Emplacement d'Inventaire de Bijou + 1";
                 effect = "Débloque 1 Emplacement d'Inventaire de Bijou pour tous les héros.";
                 break;
             case EpicStoreKind.SkillTenacity:
