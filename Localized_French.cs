@@ -5314,29 +5314,29 @@ public class Localized_French : LOCALIZATION
                         description = "An individual dressed from head to toe in Yellow robes stands just outside the slime village, bouncing on their heels in excitement as they crane their neck to get a better view of the town. As you pass by, they frantically wave you down, beckoning you over. \"Please, I was passing by this village and I saw a flash of yellow run between some buildings but I couldn't keep up with it. Can you try to catch it for me? Please oh please oh please?!\" Well, you can't say no to that face. Off you go then!";
                         break;
                     case QuestKindGeneral.CaptureNormalFairy:
-                        name = "King Of The Fairies 1";
-                        client = "A Lost Boy";
-                        description = "A young boy, sniveling and covered in bruises, approaches you, \"I just wanted to play in the garden when I tripped on a fairy. Then they all bullied me out of the garden. Can you make sure it's safe to go back?\"";
+                        name = "Le Roi Des Fées 1";
+                        client = "Un Garçon Perdu";
+                        description = "Un jeune garçon, renifflant et couvert de bleus vous approche, \"J voulais seulement jouer dans le jardin quand j'ai trébuché sur une fée. Ensuite elles m'ont intimidé jusqu'à ce que je sortes. Pouvez-vous m'assurer que c'est sûr d'y retourner?\"";
                         break;
                     case QuestKindGeneral.CaptureBlueFairy:
-                        name = "King Of The Fairies 2";
-                        client = "Perky Peter";
-                        description = "Young adventurers like you always come by and make things worse. Don't you know every time you slay a fairy two more comes back. You need to capture them if you really want them to stop terrorizing you. I'll do my best to help as well.";
+                        name = "Le Roi Des Fées 2";
+                        client = "Pierre Pétillant";
+                        description = "Les jeunes aventuriers comme vous viennent toujours empirer les choses. Ne savez-vous pas que pour chaque fée pourfendue deux autres reviennent?. Vous devez les capturer si vous voulez les empêcher de vous terroriser. Je vais également faire de mon mieux.";
                         break;
                     case QuestKindGeneral.CaptureYellowFairy:
-                        name = "King Of The Fairies 3";
-                        client = "Perky Peter";
-                        description = "Now if there is one thing fairies respect. It's a stronger fairy. All we have to do is make the strongest fairy in the history of ever. Just get a strong fairy, and we can take it to the gardens to clear things up.";
+                        name = "Le Roi Des Fées 3";
+                        client = "Pierre Pétillant";
+                        description = "Il ya a une chose que les fées respectent. C'est une fée plus puissante qu'elles. Tout ce que nous avons à faire c'est créer la fée la plus forte de l'histoire de l'univers. Trouvez une fée puissante et on peut l'emmener aux jardins pour éclaircir les choses.";
                         break;
                     case QuestKindGeneral.CaptureRedFairy:
-                        name = "Queen Of The Fairies";
-                        client = "Perky Peter";
-                        description = "You did a pretty good job helping that kid, I wouldn't expect anything less. Although this is where we part ways. I want you to take good care of that fairy I gave you.";
+                        name = "La Reine Des Fées";
+                        client = "Pierre Pétillant";
+                        description = "Tu as fait du bon travail jeunot, je n'en attendais pas moins. Par contre c'est ici que nos chemins se séparent. Prennez bien soin de la fée que je vous ai donnée.";
                         break;
                     case QuestKindGeneral.CaptureGreenFairy:
-                        name = "Good Luck Charms";
+                        name = "Breloques pour la Chance";
                         client = "Panemu";
-                        description = "You know some people think fairies' wings bring good luck? We could sure use some good karma right now. If you help me make some charms we can spread them around. Just in case there is any negative energy still in the town.";
+                        description = "Vous savez que certains croient que les ailes de fées portent chance? On aurait bien besoin de mon karma. Si vous m'aidez à faire ces breloques, nous pouvons les distribuer. Juste au cas ou il reste des énergies négatives dans la ville.";
                         break;
                     //Fox
                     case QuestKindGeneral.CaptureNormalFox:
