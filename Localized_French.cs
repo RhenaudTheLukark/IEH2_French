@@ -5340,24 +5340,25 @@ public class Localized_French : LOCALIZATION
                         break;
                     //Fox
                     case QuestKindGeneral.CaptureNormalFox:
-                        name = "Fox Friends";
-                        client = "Monk Of Many Tales";
+                        name = "Amis Renards";
+                        client = "Moine aux multiples comptes";
+                        description = "Avez-vous entendu la rumeur que le temple du renard local est possédé par le neuf-queues? C'est horrible que les renards attaquent les gens à vue. Pourriez vous capturer quelques renards pour qu'on puisse les aider? Si vous les ramenez dans des fillets nous alons le relocaliser dans une petite ville dans la forêt. La rumeur dit que les renards parcourent les rues, tout comme les gens.";
                         description = "Did you hear the rumors that the local fox shrine is possessed by nine tails. How horrible the foxes are even attacking people on sight. Can you please rescue a few foxes so we can help? If you bring them here with nets we can relocate them to a small town in the forest? Rumor has it they allow foxes to roam the streets just like people.";
                         break;
                     case QuestKindGeneral.BringFoxTails:
-                        name = "Fox Town";
-                        client = "Monk Of Many Tales";
-                        description = "The foxes in the town are doing well but they're lonely without their old friends. I see you have quite the collection of monsters in your village yourself. Could you send some to the village in the forest. They can cheer up the foxes, and collect knickknacks along the way to bring back to your village.";
+                        name = "Renard-ville";
+                        client = "Moine aux multiples comptes";
+                        description = "Les renards dans la ville vont bien mais sont seuls sans leurs vieux amis. Je vois que vous avez une jolie collection de monstres dans votre village. Pourriez-vous en envoyer quelques uns dans le village dans la forêt? Ils peuvent encourager les renards, et ramasser des trucs sur leur chemin du retour vers votre village.";
                         break;
                     case QuestKindGeneral.CaptureGreenFox:
-                        name = "Build A Better Shrine";
-                        client = "Monk Of Many Tales";
-                        description = "It seems the nine tails isn't leaving the shrine any time soon. Yet the foxes still have nowhere to go. Perhaps your little friends can come in handy again. The foxes may not trust humans, but if your companions help build them a shrine. They could stay in a shrine, and not have to worry about the nine tails. The villagers of the forest would never allow their precious foxes to be hurt after all.";
+                        name = "Construire un Meilleur Temple";
+                        client = "Moine aux multiples comptes";
+                        description = "Il semble que le neuf-queues ne quittera pas le temple de si tôt. Cependant les renards n'ont nul part ou aller. Peut-être que vos petits amis peuvent être utiles à nouveau. Les renards ne font pas confiance aux humains, mais si vos companions les aident à construire un temple, ils pourraient rester dans ce temple et ne pas se soucier du neuf-queues. Les villageois de la forêt ne laisseraient jamais leur précieux renards être blessés après tout.";
                         break;
                     case QuestKindGeneral.CapturePurpleFox:
-                        name = "Journey Of A Thousand Miles";
-                        client = "Monk Of Many Tales";
-                        description = "Oh it's you again. Thank you for all your help before. I just came to the guild to request a small favor. There was a recent accident in the forest village when a traveler came to stay the night. It was rather unsettling and I think I need to go on a small pilgrimage to clear my head. I don't think another should come with me. It's not safe. Still, the journey will be very lonely, and I'd greatly appreciate if one of your little buddies joined me on this journey.";
+                        name = "Un Voyage de Mille Lieues";
+                        client = "Moine aux multiples comptes";
+                        description = "Oh c'est encore vous. Merci encore pour votre aide. Je viens d'aller à la guilde pour demander une petite faveur. Il y a eu un accident récent dans le village de la forêt où un voyageur est venu passer la nuit. C'était plutôt déstabilisant et je crois que je dois aller faire un pèlerinage pour me remettre les idées en place. Ce n'est pas sûr. Cependant le voyage sera très solitaire, et j'apprécierais grandement que l'un de vos petits amis se joigne à moi.";
                         break;
                     //Devilfish
                     case QuestKindGeneral.CaptureBlueDevilFish:
