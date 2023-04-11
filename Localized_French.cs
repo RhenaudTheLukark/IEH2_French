@@ -5361,24 +5361,24 @@ public class Localized_French : LOCALIZATION
                         break;
                     //Devilfish
                     case QuestKindGeneral.CaptureBlueDevilFish:
-                        name = "Over The Pond";
+                        name = "Par delà l'étang";
                         client = "Brick";
-                        description = "Oii we dun tunneled all the way through, and found ourselves a lake. The boss says it's safe to take a break and go swimming here, while we work on making a new mine, but I don't think it's such a good idea. Even the scary ones taking precautions. Maybe you could take a look in the lake, and see if you can find proof there are monsters down there. Rather not get a nip in my trousers.";
+                        description = "Heyyy on a creusé jusqu'au fond puis on s'est trouvé un lac. Le patron dit qu'c'est ok de prendre une pausepour nager un peu, pendant qu'on travaille à creuser une autre mine, mais j'crois pas que ce soit une si bonne idée. Même les plus épeurants prennent leurs précautions. P't'être que vous pourriez jetter un oeil dans le lac, et trouver une preuve qu'y'a des monstres là-dedans. J'préfère pas me faire mordre le fond de culotte.";
                         break;
                     case QuestKindGeneral.DefeatBlueDevilFish:
-                        name = "Heresy";
+                        name = "Hérésie";
                         client = "Cryt";
-                        description = "Listen Son. Have you been listening to heresy recently? I'll tell you now this is my lake and my home, and I've lived here for a long time, and never had no problem with devilfish. Till that one man started coming around with all these fake devilfish toys to scare away the tourist. Nobody believes him of course. Everyone knows devilfish are red, not blue. How about you go stop their next line of fake devilfish fakes before the tourist get a little too worked up.";
+                        description = "Écoute filston. Avez-vous écouté de l'hérésie dernièrement? J'vous dit tout de suite, c'est mon lac et ma maison, et je vis ici depuis longtemps, et j'ai jamais eu de problèmes de poisson démon. Jusqu'à c'qu'un homme commence à venir avec ses poisson démon jouets pour faire peur aux touristes. Personne le crois bien sûr. Tout le monde sait que les poissons démons sont rouge, pas bleus. Qu'est-ce tu dirais d'arrêter la prochaine ligne de faux poissons démons avant que les touristes soient trop agités.";
                         break;
                     case QuestKindGeneral.DefeatBossDevilFish:
-                        name = "Fishing With Dynamite";
-                        client = "Miss Fizzle";
-                        description = "You know I'm not one for philosophical debates on whether or not devilfish are real or not or morals for that matter. So I'm trying to stay out of those little arguments people seem to be getting into. I do know there is something big down there, and I'm not swimming till it's gone. How about I open the underwater cavern, and you go deal with it where it sleeps. Correction where it slept.";
+                        name = "Pêche à la dynamite";
+                        client = "Mademoiselle pétillement";
+                        description = "Vous savez, je ne suis pas fan de débats philosophiques sur l'existence des poissons démons, ou leur mortalité. Alors j'essaies de me tenir loin des petites disputes desquelles les gens se mêlent. Je sais qu'il y a quelque chose de gros là-dedans, et je ne nagerai pas tant que ce ne sera pas parti. Et si j'ouvrais la caverne sous-marine, et vous vous en chargez où ça dort. Correction, où ça dormait.";
                         break;
                     case QuestKindGeneral.BringFairyFoxFish:
-                        name = "For The Casing";
-                        client = "Miss Fizzle";
-                        description = "You know I'm a pragmatic individual. I still don't think we have undeniable proof devilfish exist. Of course I did see you come back with multiple large fish like monsters the other day. So maybe some precautions are necessary. Waterproof bombs are hard to make though. We'll need some devilfish mat here for the casing. A few Fox Tails to help it sink fast, and enough Fairy Dust to light up the sky. Should be enough to scare them away from the shore for a little while.";
+                        name = "Pour le contenant";
+                        client = "Mademoiselle pétillement";
+                        description = "Je suis une personne pragmatique. Je n'ai toujours pas de preuve indéniable que le poisson démon existe. Bien entendu je vous ai vu revenir avec plusieurs gros monstres poissons l'autre jour. Donc mieux vaut prendre des précautions. Les bombes à l'épreuve de l'au sont difficiles à produire. On aura besoin de matériaux de poisson démon pour le contenant. Quelques queues de renard pour l'aider à couler rapidement, et suffisament de poudre de fée pour illuminer le ciel. Ça devrait suffire pour les tenir loin de la rive pour un petit moment.";
                         break;
                     //Treant
                     case QuestKindGeneral.DefeatNormalTreant:
