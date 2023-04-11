@@ -5309,9 +5309,10 @@ public class Localized_French : LOCALIZATION
                         description = "I've found the spider queen. At least one of the queens.  Sadly she has me captured. Please send help!";
                         break;
                     case QuestKindGeneral.CaptureYellowSlime:
-                        name = "All Things Yellow!";
-                        client = "Yellow Circle";
+                        name = "Toutes Choses Jaunes!";
+                        client = "Cercle Jaune";
                         description = "An individual dressed from head to toe in Yellow robes stands just outside the slime village, bouncing on their heels in excitement as they crane their neck to get a better view of the town. As you pass by, they frantically wave you down, beckoning you over. \"Please, I was passing by this village and I saw a flash of yellow run between some buildings but I couldn't keep up with it. Can you try to catch it for me? Please oh please oh please?!\" Well, you can't say no to that face. Off you go then!";
+                        description = "Un individu vêtu de robes Jaunes de la tête aux pieds se tient juste au dehors du village slime, bondissant sur ses talons d'excitement alors qu'il étire le cou pour mieux voir dans la ville. Alors que vous le dépassez, il vous salue frénétiquement, vous invitant à le rejoindre. \"S'il-vous-plaît, je passais par ce village et j'ai vu un éclair jaune se faufiller entre deux édifices mais je n'ai pas pu le rattraper. Pouvez-vous l'attraper pour moi? S'il-vou-plaît s'il-vou-plaît s'il-vou-plaît?!\" Bon, vous ne pouvez dire non à ce visage. Allons-y!";
                         break;
                     case QuestKindGeneral.CaptureNormalFairy:
                         name = "Le Roi Des Fées 1";
