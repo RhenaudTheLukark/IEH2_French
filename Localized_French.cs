@@ -4357,71 +4357,71 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Capture2:
                         name = "Capture de Monstre 2";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Oy d'ere! Ye must be looking for training on how to handle monstery types, yea? Well, look no fur'ter as I'd be happy to teach ye. First ting's first, ye need to get yerself a trap. Head yerself over to the Shop, buy yerself some traps and capture some monstery types, then come back and sees me. I'll be waitin' right here.";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000);
+                        description = "Eh salut ! T'dois chercher comment entraîner et gérer d'monstrueux, non ? Cherche pas plus loin, j'serais content de t'apprendre ça. D'bord, t'dois avoir un piège. Va au Magasin, achète des pièges et capture des monstrueux, puis reviens me voir. J't'attendrai ici.";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000);
                         reward = "Gain de Points de Domptage + 20%";
                         break;
                     case QuestKindGlobal.Capture3:
                         name = "Capture de Monstre 3";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Ey! Yer back! Looks like ye got yer hands on some traps and figured them out alright, ye did. Yer like a wizard, ye are! Since ye know how to wrangle a monstery type now, and ye've seen hows they turn into cute, wuvable pets, they do, ye may have noticed ye can only have so many afollowing ye at once. It's important to keep improving yer Trapper building! Oh and since we be friends now, I'll tell ye a little secret that will be surely helpful to ye. Seek out a monstery type that helps ye with trapping.";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000);
+                        description = "Hé ! T'là ! On d'rait que t'dégoté des pièges et que t'sû les utiliser, c'vrai. T'comme un magicien maintenant ! Comme t'sais t'débrouiller avec l'monstrueux maintenant, et t'vu comment l'faire devenir des animaux d'compagnie tout mimi, eh oui, t'peut-être pu voir que seul un certain nombre peut t'suivre à la fois. T'dois continuer à améliorer l'bâtiment Trappeur ! Oh, et comme on est potes, j't'dirai un petit secret qui t'sera utile. Cherche un monstrueux qui t'aides pour l'capture.";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000);
                         reward = "Gain de Points de Domptage + 30%";
                         break;
                     case QuestKindGlobal.Capture4:
                         name = "Capture de Monstre 4";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Well 'allo d'ere! That spidery fella was helpful, it was? I bet it was! Now if ye be wanting to do this in a more professional manner, so to speak, ye best be expanding the selection at the Shop! That requires fixing up the Trapper building real nice, it does. Come back and see me when the Shop has stocked traps for red monstery types!";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000)
-                            + "\n- Town Building [Trapper] Rank 3";
+                        description = "Eh bien s'lut ! Ce p'ti gars à huit pattes a bien aidé, non ? J'suis sûr que oui ! Maintenant s't'veux faire ça plus sérieusement, t'dois étendre la sélection de pièges dans l'Magasin ! Pour ça y faut réparer le bâtiment Trappeur bien comme il faut, c'vrai. Reviens m'voir quand l'Magasin vend d'pièges pour l'monstrueux rouges !";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000)
+                            + "\n- Rang 3 pour le Bâtiment de Ville [Trappeur]";
                         reward = "Gain de Points de Domptage + 40%";
                         break;
                     case QuestKindGlobal.Capture5:
                         name = "Capture de Monstre 5";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000);
                         reward = "Gain de Points de Domptage + 50%";
                         break;
-                    case QuestKindGlobal.Capture6: //TODO
+                    case QuestKindGlobal.Capture6:
                         name = "Capture de Monstre 6";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000000);
                         reward = "Gain de Points de Domptage + 75%";
                         break;
-                    case QuestKindGlobal.Capture7: //TODO
+                    case QuestKindGlobal.Capture7:
                         name = "Capture de Monstre 7";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(50000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(50000000);
                         reward = "Gain de Points de Domptage + 100%";
                         break;
-                    case QuestKindGlobal.Capture8: //TODO
+                    case QuestKindGlobal.Capture8:
                         name = "Capture de Monstre 8";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000000);
                         reward = "Gain de Points de Domptage + 200%";
                         break;
-                    case QuestKindGlobal.Capture9: //TODO
+                    case QuestKindGlobal.Capture9:
                         name = "Capture de Monstre 9";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(300000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(300000000);
                         reward = "Gain de Points de Domptage + 300%";
                         break;
-                    case QuestKindGlobal.Capture10: //TODO
+                    case QuestKindGlobal.Capture10:
                         name = "Capture de Monstre 10";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(500000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(500000000);
                         reward = "Gain de Points de Domptage + 500%";
                         break;
-                    case QuestKindGlobal.Capture11: //TODO
+                    case QuestKindGlobal.Capture11:
                         name = "Capture de Monstre 11";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000000);
                         reward = "Gain de Points de Domptage + 1000%";
                         break;
-                    case QuestKindGlobal.Capture12: //TODO
+                    case QuestKindGlobal.Capture12:
                         name = "Capture de Monstre 12";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(5000000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(5000000000);
                         reward = "Gain de Points de Domptage + 5000%";
                         break;
 
@@ -5309,7 +5309,7 @@ public class Localized_French : LOCALIZATION
                         description = "J'ai trouvé la reine des araignées. Du moins, une des reines. Malheureusement, elle m'a capturé. Envoyez de l'aide !";
                         break;
                     case QuestKindGeneral.CaptureYellowSlime:
-                        name = "Tout Devient Jaune !";
+                        name = "Pour Tout En Jaune !";
                         client = "Cercle Jaune";
                         description = "Un individu vêtu d'une robe Jaune de la tête aux pieds se tient juste au dehors du village slime, bondissant d'excitement sur ses talons alors qu'il étire le cou pour avoir une meilleure vue sur la ville. Alors que vous le dépassez, il vous salue frénétiquement, vous invitant à le rejoindre. \"S'il vous plaît, je passais par ce village et j'ai vu un éclair jaune se faufiller entre deux édifices, mais je n'ai pas pu le rattraper. Pouvez-vous l'attraper pour moi ? S'il vous plaît, s'il vous plaît, s'il vous plaît !\" Bon, vous ne pouvez dire non à ce visage. Allons-y !";
                         break;
@@ -5376,7 +5376,7 @@ public class Localized_French : LOCALIZATION
                         description = "Vous savez, je ne suis pas fan de débats philosophiques sur l'existence des poissons démons, ou la moralité en général. Alors j'essaie de me tenir loin des petites disputes dans lesquelles les gens se mêlent. Je sais qu'il y a quelque chose de gros là-dedans, et je ne nagerai pas tant que ce ne sera pas parti. Si je viens à ouvrir la caverne sous-marine, vous vous en chargerez dans sa propre tanière. Correction, dans son ancienne tanière.";
                         break;
                     case QuestKindGeneral.BringFairyFoxFish:
-                        name = "Pour le contenant";
+                        name = "Pour Le Revêtement";
                         client = "Mademoiselle Pétille";
                         description = "Vous savez, je suis une personne pragmatique. Nous n'avons toujours pas de preuve indéniable que les poissons démons existent. Bien entendu, je vous ai vu revenir avec plusieurs gros poissons ressemblant à des monstres l'autre jour. Donc mieux vaut prendre des précautions. Cependant, les bombes à l'épreuve de l'eau sont difficiles à produire. On aura besoin de matériaux de poisson démon pour le revêtement, quelques Queues de Renard pour l'aider à couler rapidement, et suffisament de Poudre de Fée pour illuminer le ciel. Ça devrait suffire pour les tenir loin de la rive pour un petit moment.";
                         break;
