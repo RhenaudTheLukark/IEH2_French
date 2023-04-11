@@ -5289,29 +5289,28 @@ public class Localized_French : LOCALIZATION
                         description = "Hey, thanks for the help earlier. My experiments are almost ready. All I need is a little Oil Of Slime to act as a base, A bit of Magical Cloth to wrap it in, and some Spider Silk for a long enough fuse. Then we can create a bomb so big it could blast away a million bats. For science of course.";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_0:
-                        name = "Haunted Mansion 1";
+                        name = "Manoir Hanté 1";
                         client = "Hansen";
-                        description = "Did you hear the manor in the woods is haunted by an evil spirit? I need you to go check it out. People keep telling me there are noises coming from the walls, but I'm too busy to go look, myself. Very very busy.";
+                        description = "Avez-vous entendu? On dit que le manoir dans les bois est hanté par un esprit maléfique. Il faut que j'ailles vérifier. Les gens me disent sans cesse qu'il y a du bruit provenant des murs, mais je suis trop occupé pour aller voir moi-même. Très très occupé";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_1:
-                        name = "Haunted Mansion 2";
+                        name = "Manoir Hanté 2";
                         client = "Hansen";
-                        description = "Eek it was spiders making all that noise. I mean oh spiders. Could you clear some of them out for me? I have a lot of work to do in the forest today.";
+                        description = "Eek c'était les areignées qui faisaient tout ce bruit. Je veux dire ô areignées. Pourriez-vous en éliminer quelques unes pour moi? J'ai beaucoup de travail dans la forêt aujourd'hui.";
                         break;
                     case QuestKindGeneral.CaptureNormalSpider:
-                        name = "Haunted Mansion 3";
+                        name = "Manoir Hanté 3";
                         client = "Hansen";
-                        description = "The spiders just keep coming huh? There must be a queen. Sadly I'm sick and can't do it myself, but could you take some nets, and capture some spiders for me. I'll help you find the queen after.";
+                        description = "Les areignées ne cessent de débarquer hein? Il doit y avoir une reine. Malheureusement je suis malade et je ne peux le faire moi-même, alors pourriez-vous prendre quelques fillets, et capturer des areignées pour moi? Je vous aiderai à trouver la reine ensuite.";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_2:
-                        name = "Haunted Mansion 4";
-                        client = "A Strange Note";
-                        description = "I've found the spider queen. At least one of the queens.  Sadly she has me captured. Please send help!";
+                        name = "Manoir Hanté 4";
+                        client = "Une Étrange Note";
+                        description = "J'ai trouvé la reine des areignées. Dumoins une des reines. Malheureusement elle m'a capturé. Envoyez de l'aide!";
                         break;
                     case QuestKindGeneral.CaptureYellowSlime:
                         name = "Toutes Choses Jaunes!";
                         client = "Cercle Jaune";
-                        description = "An individual dressed from head to toe in Yellow robes stands just outside the slime village, bouncing on their heels in excitement as they crane their neck to get a better view of the town. As you pass by, they frantically wave you down, beckoning you over. \"Please, I was passing by this village and I saw a flash of yellow run between some buildings but I couldn't keep up with it. Can you try to catch it for me? Please oh please oh please?!\" Well, you can't say no to that face. Off you go then!";
                         description = "Un individu vêtu de robes Jaunes de la tête aux pieds se tient juste au dehors du village slime, bondissant sur ses talons d'excitement alors qu'il étire le cou pour mieux voir dans la ville. Alors que vous le dépassez, il vous salue frénétiquement, vous invitant à le rejoindre. \"S'il-vous-plaît, je passais par ce village et j'ai vu un éclair jaune se faufiller entre deux édifices mais je n'ai pas pu le rattraper. Pouvez-vous l'attraper pour moi? S'il-vou-plaît s'il-vou-plaît s'il-vou-plaît?!\" Bon, vous ne pouvez dire non à ce visage. Allons-y!";
                         break;
                     case QuestKindGeneral.CaptureNormalFairy:
@@ -5344,7 +5343,6 @@ public class Localized_French : LOCALIZATION
                         name = "Amis Renards";
                         client = "Moine aux multiples comptes";
                         description = "Avez-vous entendu la rumeur que le temple du renard local est possédé par le neuf-queues? C'est horrible que les renards attaquent les gens à vue. Pourriez vous capturer quelques renards pour qu'on puisse les aider? Si vous les ramenez dans des fillets nous alons le relocaliser dans une petite ville dans la forêt. La rumeur dit que les renards parcourent les rues, tout comme les gens.";
-                        description = "Did you hear the rumors that the local fox shrine is possessed by nine tails. How horrible the foxes are even attacking people on sight. Can you please rescue a few foxes so we can help? If you bring them here with nets we can relocate them to a small town in the forest? Rumor has it they allow foxes to roam the streets just like people.";
                         break;
                     case QuestKindGeneral.BringFoxTails:
                         name = "Renard-ville";
