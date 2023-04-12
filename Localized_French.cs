@@ -7279,8 +7279,8 @@ public class Localized_French : LOCALIZATION
             case 5: return "Cliquer pour Activer/Désactiver";
             case 6: return "Tant que le Boosteur de Nitro est Activé, la Vitesse du Jeu est";
             case 7: return "x" + text;
-            case 8: return text + " est consommé";
-            case 9: return ", " + text + " Nitro par sec";
+            case 8: return text;
+            case 9: return ", " + text + " Nitro est consommé par sec";
             case 10: return " + Flèche Haut/Bas pour augmenter/réduite la vitesse.";
             case 11: return "Pièce de Slime";
             case 12: return "Gagné lorsque l'Or dépasse la Limite d'Or";
