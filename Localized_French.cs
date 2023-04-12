@@ -4357,71 +4357,71 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Capture2:
                         name = "Capture de Monstre 2";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Oy d'ere! Ye must be looking for training on how to handle monstery types, yea? Well, look no fur'ter as I'd be happy to teach ye. First ting's first, ye need to get yerself a trap. Head yerself over to the Shop, buy yerself some traps and capture some monstery types, then come back and sees me. I'll be waitin' right here.";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000);
+                        description = "Eh salut ! T'dois chercher comment entraîner et gérer d'monstrueux, non ? Cherche pas plus loin, j'serais content de t'apprendre ça. D'bord, t'dois avoir un piège. Va au Magasin, achète des pièges et capture des monstrueux, puis reviens me voir. J't'attendrai ici.";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000);
                         reward = "Gain de Points de Domptage + 20%";
                         break;
                     case QuestKindGlobal.Capture3:
                         name = "Capture de Monstre 3";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Ey! Yer back! Looks like ye got yer hands on some traps and figured them out alright, ye did. Yer like a wizard, ye are! Since ye know how to wrangle a monstery type now, and ye've seen hows they turn into cute, wuvable pets, they do, ye may have noticed ye can only have so many afollowing ye at once. It's important to keep improving yer Trapper building! Oh and since we be friends now, I'll tell ye a little secret that will be surely helpful to ye. Seek out a monstery type that helps ye with trapping.";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000);
+                        description = "Hé ! T'là ! On d'rait que t'dégoté des pièges et que t'sû les utiliser, c'vrai. T'comme un magicien maintenant ! Comme t'sais t'débrouiller avec l'monstrueux maintenant, et t'vu comment l'faire devenir des animaux d'compagnie tout mimi, eh oui, t'peut-être pu voir que seul un certain nombre peut t'suivre à la fois. T'dois continuer à améliorer l'bâtiment Trappeur ! Oh, et comme on est potes, j't'dirai un petit secret qui t'sera utile. Cherche un monstrueux qui t'aides pour l'capture.";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000);
                         reward = "Gain de Points de Domptage + 30%";
                         break;
                     case QuestKindGlobal.Capture4:
                         name = "Capture de Monstre 4";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Well 'allo d'ere! That spidery fella was helpful, it was? I bet it was! Now if ye be wanting to do this in a more professional manner, so to speak, ye best be expanding the selection at the Shop! That requires fixing up the Trapper building real nice, it does. Come back and see me when the Shop has stocked traps for red monstery types!";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000)
-                            + "\n- Town Building [Trapper] Rank 3";
+                        description = "Eh bien s'lut ! Ce p'ti gars à huit pattes a bien aidé, non ? J'suis sûr que oui ! Maintenant s't'veux faire ça plus sérieusement, t'dois étendre la sélection de pièges dans l'Magasin ! Pour ça y faut réparer le bâtiment Trappeur bien comme il faut, c'vrai. Reviens m'voir quand l'Magasin vend d'pièges pour l'monstrueux rouges !";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000)
+                            + "\n- Rang 3 pour le Bâtiment de Ville [Trappeur]";
                         reward = "Gain de Points de Domptage + 40%";
                         break;
                     case QuestKindGlobal.Capture5:
                         name = "Capture de Monstre 5";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000);
                         reward = "Gain de Points de Domptage + 50%";
                         break;
-                    case QuestKindGlobal.Capture6: //TODO
+                    case QuestKindGlobal.Capture6:
                         name = "Capture de Monstre 6";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000000);
                         reward = "Gain de Points de Domptage + 75%";
                         break;
-                    case QuestKindGlobal.Capture7: //TODO
+                    case QuestKindGlobal.Capture7:
                         name = "Capture de Monstre 7";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(50000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(50000000);
                         reward = "Gain de Points de Domptage + 100%";
                         break;
-                    case QuestKindGlobal.Capture8: //TODO
+                    case QuestKindGlobal.Capture8:
                         name = "Capture de Monstre 8";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000000);
                         reward = "Gain de Points de Domptage + 200%";
                         break;
-                    case QuestKindGlobal.Capture9: //TODO
+                    case QuestKindGlobal.Capture9:
                         name = "Capture de Monstre 9";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(300000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(300000000);
                         reward = "Gain de Points de Domptage + 300%";
                         break;
-                    case QuestKindGlobal.Capture10: //TODO
+                    case QuestKindGlobal.Capture10:
                         name = "Capture de Monstre 10";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(500000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(500000000);
                         reward = "Gain de Points de Domptage + 500%";
                         break;
-                    case QuestKindGlobal.Capture11: //TODO
+                    case QuestKindGlobal.Capture11:
                         name = "Capture de Monstre 11";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000000);
                         reward = "Gain de Points de Domptage + 1000%";
                         break;
-                    case QuestKindGlobal.Capture12: //TODO
+                    case QuestKindGlobal.Capture12:
                         name = "Capture de Monstre 12";
                         client = "Dirge Suebe, l'Eleveur de Monstres";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(5000000000);
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(5000000000);
                         reward = "Gain de Points de Domptage + 5000%";
                         break;
 
@@ -5289,112 +5289,112 @@ public class Localized_French : LOCALIZATION
                         description = "Hey, thanks for the help earlier. My experiments are almost ready. All I need is a little Oil Of Slime to act as a base, A bit of Magical Cloth to wrap it in, and some Spider Silk for a long enough fuse. Then we can create a bomb so big it could blast away a million bats. For science of course.";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_0:
-                        name = "Haunted Mansion 1";
+                        name = "Manoir Hanté 1";
                         client = "Hansen";
-                        description = "Did you hear the manor in the woods is haunted by an evil spirit? I need you to go check it out. People keep telling me there are noises coming from the walls, but I'm too busy to go look, myself. Very very busy.";
+                        description = "Avez-vous entendu la rumeur d'après laquelle le bois est hanté par un esprit maléfique ? Il faut que j'aille vérifier par moi-même. On m'a dit qu'il y a du bruit provenant des murs, mais je suis trop occupé pour aller voir moi-même. Très, très occupé.";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_1:
-                        name = "Haunted Mansion 2";
+                        name = "Manoir Hanté 2";
                         client = "Hansen";
-                        description = "Eek it was spiders making all that noise. I mean oh spiders. Could you clear some of them out for me? I have a lot of work to do in the forest today.";
+                        description = "Argh, c'était les araignées qui faisaient tout ce bruit. Je veux dire de GROSSES araignées. Pourriez-vous en éliminer quelques unes pour moi ? J'ai beaucoup de travail à faire dans la forêt aujourd'hui.";
                         break;
                     case QuestKindGeneral.CaptureNormalSpider:
-                        name = "Haunted Mansion 3";
+                        name = "Manoir Hanté 3";
                         client = "Hansen";
-                        description = "The spiders just keep coming huh? There must be a queen. Sadly I'm sick and can't do it myself, but could you take some nets, and capture some spiders for me. I'll help you find the queen after.";
+                        description = "Les araignées ne cessent de débarquer, hein ? Il doit y avoir une reine. Malheureusement je suis malade et je ne peux le faire moi-même, donc pourriez-vous prendre quelques filets et capturer des araignées pour moi ? Je vous aiderai à trouver la reine après ça.";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_2:
-                        name = "Haunted Mansion 4";
-                        client = "A Strange Note";
-                        description = "I've found the spider queen. At least one of the queens.  Sadly she has me captured. Please send help!";
+                        name = "Manoir Hanté 4";
+                        client = "Une Étrange Note";
+                        description = "J'ai trouvé la reine des araignées. Du moins, une des reines. Malheureusement, elle m'a capturé. Envoyez de l'aide !";
                         break;
                     case QuestKindGeneral.CaptureYellowSlime:
-                        name = "All Things Yellow!";
-                        client = "Yellow Circle";
-                        description = "An individual dressed from head to toe in Yellow robes stands just outside the slime village, bouncing on their heels in excitement as they crane their neck to get a better view of the town. As you pass by, they frantically wave you down, beckoning you over. \"Please, I was passing by this village and I saw a flash of yellow run between some buildings but I couldn't keep up with it. Can you try to catch it for me? Please oh please oh please?!\" Well, you can't say no to that face. Off you go then!";
+                        name = "Pour Tout En Jaune !";
+                        client = "Cercle Jaune";
+                        description = "Un individu vêtu d'une robe Jaune de la tête aux pieds se tient juste au dehors du village slime, bondissant d'excitement sur ses talons alors qu'il étire le cou pour avoir une meilleure vue sur la ville. Alors que vous le dépassez, il vous salue frénétiquement, vous invitant à le rejoindre. \"S'il vous plaît, je passais par ce village et j'ai vu un éclair jaune se faufiller entre deux édifices, mais je n'ai pas pu le rattraper. Pouvez-vous l'attraper pour moi ? S'il vous plaît, s'il vous plaît, s'il vous plaît !\" Bon, vous ne pouvez dire non à ce visage. Allons-y !";
                         break;
                     case QuestKindGeneral.CaptureNormalFairy:
-                        name = "King Of The Fairies 1";
-                        client = "A Lost Boy";
-                        description = "A young boy, sniveling and covered in bruises, approaches you, \"I just wanted to play in the garden when I tripped on a fairy. Then they all bullied me out of the garden. Can you make sure it's safe to go back?\"";
+                        name = "Le Roi Des Fées 1";
+                        client = "Un Garçon Perdu";
+                        description = "Un jeune garçon, renifflant et couvert de bleus, vous approche. \"J'voulais juste jouer dans le jardin quand j'ai trébuché sur une fée. Ensuite elles m'ont intimidé jusqu'à ce que je sorte. Pouvez-vous m'aider à savoir si je peux y retourner sans danger ?\"";
                         break;
                     case QuestKindGeneral.CaptureBlueFairy:
-                        name = "King Of The Fairies 2";
-                        client = "Perky Peter";
-                        description = "Young adventurers like you always come by and make things worse. Don't you know every time you slay a fairy two more comes back. You need to capture them if you really want them to stop terrorizing you. I'll do my best to help as well.";
+                        name = "Le Roi Des Fées 2";
+                        client = "Pierre Joyeux";
+                        description = "Les jeunes aventuriers comme vous viennent toujours empirer les choses. Ne sais-tu pas que pour chaque fée tuée, deux autres reviennent ? Vous devez les capturer si vous voulez les empêcher de vous terroriser. Je vais également faire de mon mieux.";
                         break;
                     case QuestKindGeneral.CaptureYellowFairy:
-                        name = "King Of The Fairies 3";
-                        client = "Perky Peter";
-                        description = "Now if there is one thing fairies respect. It's a stronger fairy. All we have to do is make the strongest fairy in the history of ever. Just get a strong fairy, and we can take it to the gardens to clear things up.";
+                        name = "Le Roi Des Fées 3";
+                        client = "Pierre Joyeux";
+                        description = "S'il y a une chose que les fées respectent, c'est une fée plus puissante qu'elles. Tout ce que nous avons à faire c'est créer la fée la plus forte de l'histoire de l'univers. Trouve une fée puissante et on l'emmenera aux jardins pour éclaircir les choses.";
                         break;
                     case QuestKindGeneral.CaptureRedFairy:
-                        name = "Queen Of The Fairies";
-                        client = "Perky Peter";
-                        description = "You did a pretty good job helping that kid, I wouldn't expect anything less. Although this is where we part ways. I want you to take good care of that fairy I gave you.";
+                        name = "La Reine Des Fées";
+                        client = "Pierre Joyeux";
+                        description = "Tu as fait du bon travail en aidant ce jeunot, je n'en attendais pas moins. Cependant, c'est ici que nos chemins se séparent. Prends bien soin de la fée que je vous ai donnée.";
                         break;
                     case QuestKindGeneral.CaptureGreenFairy:
-                        name = "Good Luck Charms";
+                        name = "Charmes pour la Chance";
                         client = "Panemu";
-                        description = "You know some people think fairies' wings bring good luck? We could sure use some good karma right now. If you help me make some charms we can spread them around. Just in case there is any negative energy still in the town.";
+                        description = "Est-ce que vous savez que certains croient que les ailes de fées portent chance ? On aurait bien besoin d'un meilleur karma en ce moment. Si vous m'aidez à faire ces charmes, nous pourrons les distribuer, juste au cas où il reste de l'énergie négative dans la ville.";
                         break;
                     //Fox
                     case QuestKindGeneral.CaptureNormalFox:
-                        name = "Fox Friends";
-                        client = "Monk Of Many Tales";
-                        description = "Did you hear the rumors that the local fox shrine is possessed by nine tails. How horrible the foxes are even attacking people on sight. Can you please rescue a few foxes so we can help? If you bring them here with nets we can relocate them to a small town in the forest? Rumor has it they allow foxes to roam the streets just like people.";
+                        name = "Amis Renards";
+                        client = "Moine aux Histoires Nombreuses";
+                        description = "Avez-vous entendu la rumeur que le temple du renard local est possédé par un neuf-queues ? C'est horrible de voir les renards attaquer les gens à vue. Pourriez-vous capturer quelques renards pour qu'on puisse les aider ? Si vous les ramenez dans des filets, nous pourrons les relocaliser dans une petite ville dans la forêt. La rumeur dit que les renards peuvent y parcourir ses rues légalement, tout comme les gens.";
                         break;
                     case QuestKindGeneral.BringFoxTails:
-                        name = "Fox Town";
-                        client = "Monk Of Many Tales";
-                        description = "The foxes in the town are doing well but they're lonely without their old friends. I see you have quite the collection of monsters in your village yourself. Could you send some to the village in the forest. They can cheer up the foxes, and collect knickknacks along the way to bring back to your village.";
+                        name = "Ville des Renards";
+                        client = "Moine aux Histoires Nombreuses";
+                        description = "Les renards dans la ville vont bien mais ils se sentent seuls sans leurs vieux amis. Je vois que vous avez une jolie collection de monstres dans votre village. Pourriez-vous en envoyer quelques uns dans le village dans la forêt ? Ils peuvent encourager les renards, et ramasser des trucs sur leur chemin du retour vers votre village.";
                         break;
                     case QuestKindGeneral.CaptureGreenFox:
-                        name = "Build A Better Shrine";
-                        client = "Monk Of Many Tales";
-                        description = "It seems the nine tails isn't leaving the shrine any time soon. Yet the foxes still have nowhere to go. Perhaps your little friends can come in handy again. The foxes may not trust humans, but if your companions help build them a shrine. They could stay in a shrine, and not have to worry about the nine tails. The villagers of the forest would never allow their precious foxes to be hurt after all.";
+                        name = "Construire un Meilleur Temple";
+                        client = "Moine aux Histoires Nombreuses";
+                        description = "Il semble que le neuf-queues ne quittera pas le temple de si tôt. Donc les renards n'ont nul part où aller. Peut-être que vos petits amis peuvent être utiles à nouveau. Les renards ne font pas confiance aux humains, mais si vos companions les aident à construire un temple, ils pourraient rester dans ce temple et ne pas se soucier du neuf-queues. Les villageois de la forêt ne laisseraient jamais leur précieux renards être blessés, après tout.";
                         break;
                     case QuestKindGeneral.CapturePurpleFox:
-                        name = "Journey Of A Thousand Miles";
-                        client = "Monk Of Many Tales";
-                        description = "Oh it's you again. Thank you for all your help before. I just came to the guild to request a small favor. There was a recent accident in the forest village when a traveler came to stay the night. It was rather unsettling and I think I need to go on a small pilgrimage to clear my head. I don't think another should come with me. It's not safe. Still, the journey will be very lonely, and I'd greatly appreciate if one of your little buddies joined me on this journey.";
+                        name = "Un Voyage de Mille Lieues";
+                        client = "Moine aux Histoires Nombreuses";
+                        description = "Oh, c'est encore vous. Merci encore pour votre aide. Je viens d'aller à la guilde pour demander une petite faveur. Il y a eu un accident récent dans le village de la forêt où un voyageur est venu passer la nuit. C'était plutôt déstabilisant et je crois que je dois aller faire un pèlerinage pour me remettre les idées en place. Ce voyage n'est pas sûr. Même sans ça, le voyage sera très solitaire, et j'apprécierais grandement que l'un de vos petits amis se joigne à moi.";
                         break;
                     //Devilfish
                     case QuestKindGeneral.CaptureBlueDevilFish:
-                        name = "Over The Pond";
+                        name = "Par Delà l'Etang";
                         client = "Brick";
-                        description = "Oii we dun tunneled all the way through, and found ourselves a lake. The boss says it's safe to take a break and go swimming here, while we work on making a new mine, but I don't think it's such a good idea. Even the scary ones taking precautions. Maybe you could take a look in the lake, and see if you can find proof there are monsters down there. Rather not get a nip in my trousers.";
+                        description = "Héé, on a creusé jusqu'au fond puis on s'est trouvé un lac. Le patron dit qu'c'est ok de prendre une pause pour nager un peu, pendant qu'on creuse une autre mine, mais j'crois pas que ce soit une si bonne idée. Même les plus épeurants prennent leurs précautions. P't'être que vous pourriez jetter un oeil dans le lac, et trouver une preuve qu'y'a des monstres là-dedans. J'préfère pas me faire mordre le fond de culotte.";
                         break;
                     case QuestKindGeneral.DefeatBlueDevilFish:
-                        name = "Heresy";
+                        name = "Hérésie";
                         client = "Cryt";
-                        description = "Listen Son. Have you been listening to heresy recently? I'll tell you now this is my lake and my home, and I've lived here for a long time, and never had no problem with devilfish. Till that one man started coming around with all these fake devilfish toys to scare away the tourist. Nobody believes him of course. Everyone knows devilfish are red, not blue. How about you go stop their next line of fake devilfish fakes before the tourist get a little too worked up.";
+                        description = "Écoute fiston, as-tu entendu parler de l'hérésie dernièrement ? J'te le dis tout de suite, c'est mon lac et ma maison, je vis ici depuis longtemps, et j'ai jamais eu de problèmes de poisson démon. Jusqu'à c'qu'un homme commence à venir avec ses jouets de poisson démon pour faire peur aux touristes. Personne le crois bien sûr. Tout le monde sait que les poissons démons sont rouges, pas bleus. Qu'est-ce tu dirais d'arrêter la prochaine ligne de faux poissons démons avant que les touristes soient trop agités ?";
                         break;
                     case QuestKindGeneral.DefeatBossDevilFish:
-                        name = "Fishing With Dynamite";
-                        client = "Miss Fizzle";
-                        description = "You know I'm not one for philosophical debates on whether or not devilfish are real or not or morals for that matter. So I'm trying to stay out of those little arguments people seem to be getting into. I do know there is something big down there, and I'm not swimming till it's gone. How about I open the underwater cavern, and you go deal with it where it sleeps. Correction where it slept.";
+                        name = "Pêche à la Dynamite";
+                        client = "Mademoiselle Pétille";
+                        description = "Vous savez, je ne suis pas fan de débats philosophiques sur l'existence des poissons démons, ou la moralité en général. Alors j'essaie de me tenir loin des petites disputes dans lesquelles les gens se mêlent. Je sais qu'il y a quelque chose de gros là-dedans, et je ne nagerai pas tant que ce ne sera pas parti. Si je viens à ouvrir la caverne sous-marine, vous vous en chargerez dans sa propre tanière. Correction, dans son ancienne tanière.";
                         break;
                     case QuestKindGeneral.BringFairyFoxFish:
-                        name = "For The Casing";
-                        client = "Miss Fizzle";
-                        description = "You know I'm a pragmatic individual. I still don't think we have undeniable proof devilfish exist. Of course I did see you come back with multiple large fish like monsters the other day. So maybe some precautions are necessary. Waterproof bombs are hard to make though. We'll need some devilfish mat here for the casing. A few Fox Tails to help it sink fast, and enough Fairy Dust to light up the sky. Should be enough to scare them away from the shore for a little while.";
+                        name = "Pour Le Revêtement";
+                        client = "Mademoiselle Pétille";
+                        description = "Vous savez, je suis une personne pragmatique. Nous n'avons toujours pas de preuve indéniable que les poissons démons existent. Bien entendu, je vous ai vu revenir avec plusieurs gros poissons ressemblant à des monstres l'autre jour. Donc mieux vaut prendre des précautions. Cependant, les bombes à l'épreuve de l'eau sont difficiles à produire. On aura besoin de matériaux de poisson démon pour le revêtement, quelques Queues de Renard pour l'aider à couler rapidement, et suffisament de Poudre de Fée pour illuminer le ciel. Ça devrait suffire pour les tenir loin de la rive pour un petit moment.";
                         break;
                     //Treant
                     case QuestKindGeneral.DefeatNormalTreant:
-                        name = "Wombat Escapees 1";
-                        client = "Sharkbite, the Wombat Shepherd";
-                        description = "You see large furry beast moving towards you. Actually no, once closer you see that it's a man ... carrying a large furry beast. The creature is enormous and completely obscures the man so all you can see is scruffy blond hair peeking over the furry face currently watching you and chewing quietly. \"G'day, could ya spare us a hand? Have ya got a minute? I've got a bunch of wombats, they're me pride and joy, but some monsters right worked me farm up and now the buggers have wandered off somewhere. Nah, the wombats, not the monsters. Well, them too. Anyway, I'd love to get them back, but while me farm's buggered there's not much point, is there ? Would ya help a guy out and find me some sturdy wood to fix me farm with? I'd do it meself, but Gus here is all I've got left and I can hardly cut wood while I'm holding this beautiful boy. No, daddy's not letting you go, ya furry bugger.\" You leave the strange man talking to his strange creature.";
+                        name = "Wombat Rescapés 1";
+                        client = "Croque-Requin, le berger de Wombat";
+                        description = "Vous voyez une grosse bête poilue approcher. En fait, non, en regardant de plus près c'est un homme... qui transporte une bête poilue. La créature est énorme et cache complètement l'homme et tout ce que vous voyez c'est une tignasse de cheveux blonds qui dépasse au dessus d'un visage poilu qui vous regarde en mâchant tranquillement. \"B'jour, 'pouvez nous donner un coup d'main ? Z'avez une minute ? J'ai un tas de wombats, la prunelle de mes yeux, mais des monstres ont attaqué ma ferme et ces casse-pieds sont partis plus loin. Nan, les wombats, pas les monstres. Bah, eux aussi. Enfin, j'aimerais les ravoir, mais tant que ma ferme est ruinée, ça sert a rien hein ? Aideriez-vous un type comme moi, en trouvant du bois solide pour réparer ma ferme ? J'le ferais moi-même, mais Gus ici présent est tout ce qu'il me reste et j'peux pas couper du bois en tennant mon gros gaillard. Non, Papa te laisse pas partir p'tit casse-pieds poilu.\" Vous laissez l'étrange homme parler à son étrange créature.";
                         break;
                     case QuestKindGeneral.DefeatYellowTreant:
-                        name = "Wombat Escapees 2";
-                        client = "Sharkbite, the Wombat Shepherd";
-                        description = "You little beauty, that's just what I need to get me farm sorted. With this, me 'n Gus can fix me farm right up in two shakes of a wombat's tail! (You glance down at Gus, but he doesn't seem to have a tail) I hate to ask for more help, but since you're exploring or adventuring or whatever it is you get up to when you're not helping poor buggers like me anyway, could ya keep an eye out for the rest of me herd? Wombats are a bit of an invasive species around here. They'd never hurt anyone, but they're pretty much invulnerable and nothing can hurt them, neither. Ya shoulda seen it when Gus's ma decided to take a nap in the middle of the main road into the city. An entire adventurer's guild tried and failed to shift her until someone thought to wake her up and lure her out of the way with some carrots. Took hours for the traffic jam to clear! It was worth the fine for the drinking stories I got out of it. Anyway, we've both got work to do, and sitting here yarning won't get me farm fixed.";
+                        name = "Wombat Rescapés 2";
+                        client = "Croque-Requin, le berger de Wombat";
+                        description = "Ma p'tite beauté, c'est exactement ce qui m'faut pour réparer ma ferme. Avec ça, Gus pis moi on peut réparer la ferme en deux mouvements de queue de wombat ! (Vous regardez Gus, mais il ne semble pas avoir de queue) J'déteste vous demander encore de l'aide, mais comme vous explorez et aventurez et peu importe c'que vous faites quand vous aidez pas les pauvres casse-pieds, pourriez-vous garder un oeil surc'qui reste de mon troupeau ?Les wombats sont une espèce invasive ici. Y' font de mal à personne, mais 'sont à peu près invulnérables et rien peut leur faire de mal non plus. Z'auriez dû voir quand la mère de Gus a décidé de faire la sieste au milieu de la route principale vers la ville. Une guilde d'aventuriers entière a essayé et échoué à la déplacer, jusqu'à c'que quelqu'un pense à la réveiller et l'attirer hors du chemin avec des carottes. Ça' pris des heures pour que l'embouteillage se règle! Ça nous a valu d'bonnes histoires de beuverie ! Enfin, on a tous deux du travail à faire, et rester assis à parler va pas réparer ma ferme.";
                         break;
                     case QuestKindGeneral.DefeatRedTreant:
-                        name = "Wombat Escapees 3";
-                        client = "Sharkbite, the Wombat Shepherd";
-                        description = "Me herd! Me farm! It's all coming back together thanks ta you! Except, I need ya help again. Those buggers what worked me farm up back when, they're still out there. I think they were watching me the other night, I couldn't see anything but Gus sat staring out into the dark for an age, and I swear the sound of branches rustling weren't natural. It gave me terrible flashbacks to me time in the army, when I was in charge of training up a combat wombat unit. Terrible bad it was, too much even for drinking stories. I won't face that again, but that means I can't fight around me herd, not even to protect 'em. So could ya, would ya, fight these monsters for me and let me keep me babies safe?";
+                        name = "Wombat Rescapés 3";
+                        client = "Croque-Requin, le berger de Wombat";
+                        description = "Mon troupeau ! Ma ferme ! Ils sont r'venu grâce à vous ! Sauf qu'y m'faut encore vot' aide. Ces casse-pieds qui ont détruit ma ferme dans l'temps sont encore dans les alentours. J'crois qu'ils me r'gardaient l'autre nuit. J'voyais rien, mais Gus était assis à fixer dans l'noir pendant des lunes, et j'vous jure, le son des branches qui bougent, c'tait pas naturel. Ça m'a fait rappeler des souvenirs terribles de mon temps dans l'armée, quand j'tais en charge d'entrainer une unité de wombats de combat. C'tait terrible, trop même pour les histoires de beuverie. J'referrai pas face à ça, mais ça veut dire que j'peux pas me battre près d'mon troupeau, même pas pou' les défendre. Donc s'tu pourrais, tu vois, combattre ces monstres pour moi et me laisser garder mes bébés en sûreté ?";
                         break;
                 }
                 break;
