@@ -3269,7 +3269,7 @@ public class Localized_French : LOCALIZATION
                 if (isPassive) return "Limite d'Or + " + percent(effectValue);
                 return "Donne une chance de " + percent(System.Math.Min(1, effectValue)) + " d'appliquer le débuff Poison à travers la Capacité d'Attaque de Base";
             case PotionKind.GuardianKorDoll:
-                if (isPassive) return "Multiplie les Gains de Maîtrise d'Équipemet par " + percent(1 + effectValue);
+                if (isPassive) return "Multiplie les Gains de Maîtrise d'Équipement par " + percent(1 + effectValue);
                 return "Si les dégâts reçus sont égaux ou en dessous de " + percent(System.Math.Min(0.25d, effectValue)) + " des PV, ils sont nullifiés (Max : 25%)";
             case PotionKind.NostroDoll:
                 if (isPassive) return "Absorption Physique + " + percent(effectValue);
