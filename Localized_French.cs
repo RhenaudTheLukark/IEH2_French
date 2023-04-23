@@ -9330,7 +9330,7 @@ public class Localized_French : LOCALIZATION
             case WorldAscensionMiletoneKind.DisassembleEquipment:
                 name = "Désassembleur Professionnel";
                 description = "Total des Matériaux de Ville Acquis en désassemblant";
-                passive = "Gain en Maîtrise d'Équipement+ " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                passive = "Gain en Maîtrise d'Équipement + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.RebirthPointGainTier1:
                 name = "Réincarnateur Classe 1";
