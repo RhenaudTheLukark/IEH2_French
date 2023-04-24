@@ -4209,9 +4209,9 @@ public class Localized_French : LOCALIZATION
         switch (rarity)
         {
             case DailyQuestRarity.Common:
-                return "Commun";
+                return "Commune";
             case DailyQuestRarity.Uncommon:
-                return "Peu Commun";
+                return "Peu Commune";
             case DailyQuestRarity.Rare:
                 return "Rare";
             case DailyQuestRarity.SuperRare:
@@ -4290,7 +4290,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Guild:
                         name = "Tutoriel 7 : Guilde";
                         client = "Hitan";
-                        description = "Pour augmenter la listede membres de guilde,  <color=orange>atteins le Nv de Guilde 5 !</color> Tu pourras ensuite choisir une nouvelle héroïne, la Mage. Tu peux aussi acquérir des abilités variées dans l'onglet guilde. L'EXP de Guilde est gagné à travers la montée de niveau des héros, ce qui donne accès à des points d'abilité de guilde à dépenser." +
+                        description = "Pour augmenter la liste de membres de la guilde, <color=orange>atteins le Nv de Guilde 5 !</color> Tu pourras ensuite choisir une nouvelle héroïne, la Mage. Tu peux aussi acquérir des abilités variées dans l'onglet guilde. L'EXP de Guilde est gagné à travers la montée de niveau des héros, ce qui donne accès à des points d'abilité de guilde à dépenser." +
                             "\n- Pour commencer, chacun des héros travaille indépendemment, mais au fur et à mesure du jeu, ils apprendront à coopérer. L'abilité de guilde <color=orange>Imitation</color> te donne un <color=orange>Emplacement de Capacité Global</color>, qui permet à un héros d'un peu modifier leur style de jeu en équipant une capacité apprise par un autre héros. Tu devras sans doute ajuste la <color=orange>Portée de Combat</color> du héros pour qu'il se déplace assez près pour utiliser la capacité qui a été empruntée." +
                             "\n<color=yellow>- Pour plus d'informations, Aide > [Guilde].</color>";
                         condition = "Nv de Guilde 5";
@@ -4575,7 +4575,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Capture1:
                         name = "Capture de Monstre 1";
                         client = "Ringold";
-                        description = "Dans le <color=orange>Magasin</color>, il y a un onglet dans lequel tu peux trouver tous les types de pièges couremment débloqués. Le premier piège qui est débloqué est le <color=orange>Filet de Capture</color>, qui est SEULEMENT capable de capturer des monstres de <color=orange>Type 'Normal'</color>. Garde aussi en^tête que la <color=orange>Quête de Titre [ Etude de Monstre 1 ]</color> doit aussi être complétée afin de pouvoir utiliser des Pièges. Les Pièges peuvent être équipés dans un <color=orange>Emplacement d'Utilitaire</color>, qui permet d'effectuer un <color=orange>Clic Droit</color> sur un monstre. Tu dois avoir le bon type de piège équipé et un niveau de monstre capturable suffisant afin de pouvoir capturer le monstre choisi.";//Traps can be equipped in the <color=orange>Utility</color> slot and are activated automatically upon defeating a monster whose type and level are eligible to be captured based on the type of trap equipped.";
+                        description = "Dans le <color=orange>Magasin</color>, il y a un onglet dans lequel tu peux trouver tous les types de pièges couremment débloqués. Le premier piège qui est débloqué est le <color=orange>Filet de Capture</color>, qui est SEULEMENT capable de capturer des monstres de <color=orange>Type 'Normal'</color>. Garde aussi en^tête que la <color=orange>Quête de Titre [ Etude de Monstre 1 ]</color> doit aussi être complétée afin de pouvoir utiliser des Pièges. Les Pièges peuvent être équipés dans un <color=orange>Emplacement d'Utilitaire</color>, qui permet d'effectuer un <color=orange>Clic Droit</color> sur un monstre. Tu dois avoir le bon type de piège équipé et un niveau de monstre capturable suffisant afin de pouvoir capturer le monstre choisi.";
                         description += "\n- Tu peux déplacer ta souris sur un piège pour voir le niveau maximum de monstre capturable. Pour augmenter ce niveau, tu peux augmenter le Niveau du Héros, compléter des quêtes de titre Etude de Monstre, et augmenter le niveau d'un bâtiment de ville spécifique.";
                         description += "\n- Les monstres capturés, ou Familiers, donnent une variété de bonus spéciaux qui permettent non seulement d'automatiser certains aspects du jeu, mais aussi de donner des boosts passifs sur de nombreuses statistiques.";
                         description += "\n<color=yellow>Pour plus d'informations, Aide > [Capture].</color>";
@@ -4729,49 +4729,49 @@ public class Localized_French : LOCALIZATION
                 switch (kindDaily)
                 {
                     case QuestKindDaily.EC1:
-                        name = "Epic Coin 1 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Adventurer's Guild";
-                        description = "The Adventurer's Guild has posted a " + DailyQuestRarityName(quest.dailyQuestRarity) + " job to defeat " + tDigit(quest.defeatRequredDefeatNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " that have been terrorizing the villagers living near " + AreaName(quest.questingArea.kind) + ". Return here when you have completed the task.";
+                        name = "Pièce Epique 1 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "La Guilde des Aventuriers";
+                        description = "La Guilde des Aventuriers a posté une quête " + DailyQuestRarityName(quest.dailyQuestRarity) + " pour vaincre " + tDigit(quest.defeatRequredDefeatNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " qui terrorisent les villageois vivant près de la région " + AreaName(quest.questingArea.kind) + ". Revenez ici lorsque la tâche est complétée.";
                         break;
                     case QuestKindDaily.EC2:
-                        name = "Epic Coin 2 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Tamer's Association";
-                        description = "The Tamer's Association has posted a " + DailyQuestRarityName(quest.dailyQuestRarity) + " request to capture " + tDigit(quest.captureRequiredNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " for further study and analysis. Return here when you have completed the task.";
+                        name = "Pièce Epique 2 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "L'Association des Trappeurs";
+                        description = "L'Association des Trappeurs a posté une quête " + DailyQuestRarityName(quest.dailyQuestRarity) + " pour capturer " + tDigit(quest.captureRequiredNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " pour une analyse et étude approfondie. Revenez ici lorsque la tâche est complétée.";
                         break;
                     case QuestKindDaily.EC3:
-                        name = "Epic Coin 3 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Adventurer's Guild";
-                        description = "The Adventurer's Guild has posted a " + DailyQuestRarityName(quest.dailyQuestRarity) + " job to defeat " + tDigit(quest.defeatRequredDefeatNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " that have been terrorizing the villagers living near " + AreaName(quest.questingArea.kind) + ". Return here when you have completed the task.";
+                        name = "Pièce Epique 3 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "La Guilde des Aventuriers";
+                        description = "La Guilde des Aventuriers a posté une quête " + DailyQuestRarityName(quest.dailyQuestRarity) + " pour vaincre " + tDigit(quest.defeatRequredDefeatNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " qui terrorisent les villageois vivant près de la région " + AreaName(quest.questingArea.kind) + ". Revenez ici lorsque la tâche est complétée.";
                         break;
                     case QuestKindDaily.EC4:
-                        name = "Epic Coin 4 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Tamer's Association";
-                        description = "The Tamer's Association has posted a " + DailyQuestRarityName(quest.dailyQuestRarity) + " request to capture " + tDigit(quest.captureRequiredNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " for further study and analysis. Return here when you have completed the task.";
+                        name = "Pièce Epique 4 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "L'Association des Trappeurs";
+                        description = "L'Association des Trappeurs a posté une quête " + DailyQuestRarityName(quest.dailyQuestRarity) + " pour capturer " + tDigit(quest.captureRequiredNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " pour une analyse et étude approfondie. Revenez ici lorsque la tâche est complétée.";
                         break;
                     case QuestKindDaily.Cartographer1:
-                        name = "Cartographer 1 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Cartographer's Symposium";
-                        description = "The Cartographer's Symposium wishes to send out a few cartographers to " + AreaName(quest.completeTargetArea.kind) + " to collect more data and inspect for any changes to the landscape and the creatures that dwell there. Please escort them while they complete this work. With this job being " + DailyQuestRarityName(quest.dailyQuestRarity) + ", it is expected you will need to clear " + quest.completeTargetArea.Name(true, false) + " at least " + tDigit(quest.areaRequredCompletedNum()) + " times before the Cartographers will be finished with their task.";
+                        name = "Cartographeur 1 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "La Conférence des Cartographeurs";
+                        description = "La Conférence des Cartographeurs aimerait envoyer quelques cartographeurs dans la région " + AreaName(quest.completeTargetArea.kind) + " pour collecter plus de données et inspecter tout changement dans le paysage ou dans l'écosystème de créatures s'y trouvant. Veuillez les escorter pendant leur travail. Vu que cette quête est " + DailyQuestRarityName(quest.dailyQuestRarity) + ", vous devez donc compléter la zone " + quest.completeTargetArea.Name(true, false) + " au moins " + tDigit(quest.areaRequredCompletedNum()) + " fois avant que les Cartographeurs aient terminé leur tâche.";
                         break;
                     case QuestKindDaily.Cartographer2:
-                        name = "Cartographer 2 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Cartographer's Symposium";
-                        description = "The Cartographer's Symposium wishes to send out a few cartographers to " + AreaName(quest.completeTargetArea.kind) + " to collect more data and inspect for any changes to the landscape and the creatures that dwell there. Please escort them while they complete this work. With this job being " + DailyQuestRarityName(quest.dailyQuestRarity) + ", it is expected you will need to clear " + quest.completeTargetArea.Name(true, false) + " at least " + tDigit(quest.areaRequredCompletedNum()) + " times before the Cartographers will be finished with their task.";
+                        name = "Cartographeur 2 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "La Conférence des Cartographeurs";
+                        description = "La Conférence des Cartographeurs aimerait envoyer quelques cartographeurs dans la région " + AreaName(quest.completeTargetArea.kind) + " pour collecter plus de données et inspecter tout changement dans le paysage ou dans l'écosystème de créatures s'y trouvant. Veuillez les escorter pendant leur travail. Vu que cette quête est " + DailyQuestRarityName(quest.dailyQuestRarity) + ", vous devez donc compléter la zone " + quest.completeTargetArea.Name(true, false) + " au moins " + tDigit(quest.areaRequredCompletedNum()) + " fois avant que les Cartographeurs aient terminé leur tâche.";
                         break;
                     case QuestKindDaily.Cartographer3:
-                        name = "Cartographer 3 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Cartographer's Symposium";
-                        description = "The Cartographer's Symposium wishes to send out a few cartographers to " + AreaName(quest.completeTargetArea.kind) + " to collect more data and inspect for any changes to the landscape and the creatures that dwell there. Please escort them while they complete this work. With this job being " + DailyQuestRarityName(quest.dailyQuestRarity) + ", it is expected you will need to clear " + quest.completeTargetArea.Name(true, false) + " at least " + tDigit(quest.areaRequredCompletedNum()) + " times before the Cartographers will be finished with their task.";
+                        name = "Cartographeur 3 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "La Conférence des Cartographeurs";
+                        description = "La Conférence des Cartographeurs aimerait envoyer quelques cartographeurs dans la région " + AreaName(quest.completeTargetArea.kind) + " pour collecter plus de données et inspecter tout changement dans le paysage ou dans l'écosystème de créatures s'y trouvant. Veuillez les escorter pendant leur travail. Vu que cette quête est " + DailyQuestRarityName(quest.dailyQuestRarity) + ", vous devez donc compléter la zone " + quest.completeTargetArea.Name(true, false) + " au moins " + tDigit(quest.areaRequredCompletedNum()) + " fois avant que les Cartographeurs aient terminé leur tâche.";
                         break;
                     case QuestKindDaily.Cartographer4:
-                        name = "Cartographer 4 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Cartographer's Symposium";
-                        description = "The Cartographer's Symposium wishes to send out a few cartographers to " + AreaName(quest.completeTargetArea.kind) + " to collect more data and inspect for any changes to the landscape and the creatures that dwell there. Please escort them while they complete this work. With this job being " + DailyQuestRarityName(quest.dailyQuestRarity) + ", it is expected you will need to clear " + quest.completeTargetArea.Name(true, false) + " at least " + tDigit(quest.areaRequredCompletedNum()) + " times before the Cartographers will be finished with their task.";
+                        name = "Cartographeur 4 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "La Conférence des Cartographeurs";
+                        description = "La Conférence des Cartographeurs aimerait envoyer quelques cartographeurs dans la région " + AreaName(quest.completeTargetArea.kind) + " pour collecter plus de données et inspecter tout changement dans le paysage ou dans l'écosystème de créatures s'y trouvant. Veuillez les escorter pendant leur travail. Vu que cette quête est " + DailyQuestRarityName(quest.dailyQuestRarity) + ", vous devez donc compléter la zone " + quest.completeTargetArea.Name(true, false) + " au moins " + tDigit(quest.areaRequredCompletedNum()) + " fois avant que les Cartographeurs aient terminé leur tâche.";
                         break;
                     case QuestKindDaily.Cartographer5:
-                        name = "Cartographer 5 : " + DailyQuestRarityName(quest.dailyQuestRarity);
-                        client = "The Cartographer's Symposium";
-                        description = "The Cartographer's Symposium wishes to send out a few cartographers to " + AreaName(quest.completeTargetArea.kind) + " to collect more data and inspect for any changes to the landscape and the creatures that dwell there. Please escort them while they complete this work. With this job being " + DailyQuestRarityName(quest.dailyQuestRarity) + ", it is expected you will need to clear " + quest.completeTargetArea.Name(true, false) + " at least " + tDigit(quest.areaRequredCompletedNum()) + " times before the Cartographers will be finished with their task.";
+                        name = "Cartographeur 5 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        client = "La Conférence des Cartographeurs";
+                        description = "La Conférence des Cartographeurs aimerait envoyer quelques cartographeurs dans la région " + AreaName(quest.completeTargetArea.kind) + " pour collecter plus de données et inspecter tout changement dans le paysage ou dans l'écosystème de créatures s'y trouvant. Veuillez les escorter pendant leur travail. Vu que cette quête est " + DailyQuestRarityName(quest.dailyQuestRarity) + ", vous devez donc compléter la zone " + quest.completeTargetArea.Name(true, false) + " au moins " + tDigit(quest.areaRequredCompletedNum()) + " fois avant que les Cartographeurs aient terminé leur tâche.";
                         break;
 
                 }
