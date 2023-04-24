@@ -4281,9 +4281,9 @@ public class Localized_French : LOCALIZATION
                         client = "Hitan";
                         description = optStr + "Lorsque tu étais en mission, un membre de la guilde a trouvé de l'<color=orange>Eau Mystérieuse</color> et a mis en place un <color=orange>Laboratoire</color>. Tu la rencontrera bien vite, mais pour le moment, essayons de voir ça. Oh, tu ne connais pas l'alchimie ? Laisse-moi t'expliquer."
                             + " Pour alchimiser, tu dois d'abord aller au Laboratoire et créer un Catalyseur. Pour créer ton premier catalyseur, tu dois récupérer de l'<color=orange>Huile de Slime</color> ainsi que <color=orange>3 Eaux Mystérieuses</color> et les utiliser pour créer un <color=orange>Catalyseur Slime</color>. Après cela, tu devras créer une essence."
-                            + " Les Essences sont les ingrédients bruts utilisés pour créer des potions. Pour commencer, tu dois verser au moins 0.1 Eau Mystérieuse sur l'essence d'un catalyste sélectionné afin qu'il commence à produire de l'essence. Essayons cela avec l'<color=orange>Essence de Slime</color>."
+                            + " Les Essences sont les ingrédients bruts utilisés pour créer des potions. Pour commencer, tu dois verser au moins 0.1 Eau Mystérieuse sur l'essence d'un catalyseur sélectionné afin qu'il commence à produire de l'essence. Essayons cela avec l'<color=orange>Essence de Slime</color>."
                             + " Une fois terminé, il suffit d'aller dans l'onglet <color=orange>[Potion]</color>, et de cliquer sur l'icône de la potion que tu veux fabriquer. Simple, n'est-ce pas ?"
-                            + " Maintenant, va expérimenter dans le Laboratoire et n'oublie pas d'augmenter la Limite d'Eau Mystérieuse, de raffiner tes Catalysteurs, et d'améliorer ton labo avec les points d'alchimie reçus.\n<color=yellow>- Pour plus d'informations, Aide > [Labo].</color>";
+                            + " Maintenant, va expérimenter dans le Laboratoire et n'oublie pas d'augmenter la Limite d'Eau Mystérieuse, de raffiner tes Catalyseurs, et d'améliorer ton labo avec les points d'alchimie reçus.\n<color=yellow>- Pour plus d'informations, Aide > [Labo].</color>";
                         condition = "Produire une " + PotionName(PotionKind.MinorHealthPotion);
                         reward = "Bénédiction de Gain d'EXP (Durée de 15 mins)\n- Débloque les onglets [ Guilde ] & [ Bestiaire ]";
                         break;
@@ -4654,74 +4654,74 @@ public class Localized_French : LOCALIZATION
                         break;
 
                     case QuestKindGlobal.Alchemy1:
-                        name = "The Road of Alchemy 1";
-                        client = "Archimedes, the Old Hermit";
-                        description = "\"Hello and welcome to my hut! Fancy a potion? ... Oh you wish to learn the craft yourself? Ahh, well that is quite fortutitous, as I was just thinking of finding an apprentice. So to get started, in your lab you must... you don't have lab, you say? Fine, use mine... you will select a catalyst and then which essence you which to synthesize. It's very rudimentary stuff, really. Once you've collected enough essence, you can begin crafting potions! Improving them is essential to growth, so come back after you've improved some.\"";
-                        description += "\n- When crafting potions, you will gain <color=orange>Alchemy Points</color>, which can be used to purchase <color=orange>Alchemy Upgrades</color> or to upgrade your potions, improving their effect and disassembly value. Use those points to gain a cumulative total of 100 potion levels to proceed to the next quest.";
-                        description += "\n- It will benefit you to spend some time <color=orange>expanding your Mysterious Water capacity</color>, as it will be needed to upgrade your <color=orange>Catalysts</color> and increasing your Mysterious Water production amount.";
-                        condition = "Total Potion Level " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 100";
-                        reward = "Multiplies Critical Chance of Catalyst by 125%";
+                        name = "Route vers l'Alchimie 1";
+                        client = "Archimède, le Vieil Ermite";
+                        description = "\"Bonjour et bienvenue dans ma hutte ! Voulez-vous une potion ? ...Oh, vous voulez en savoir plus sur l'alchimie ? Ah, vous avez bien de la chance, car je cherchais justement un apprenti. Pour commencer, allez dans votre laboratoire et... vous n'avez pas de laboratoire, vous dites ? Très bien, utilisez le mien... vous devez sélectionner un catalyseur puis l'essence que vous voulez synthétiser. C'est assez rudimentaire. Une fois que vous avez collecté assez d'essence, vous pouvez commencer à fabriquer des potions ! Les améliorer est nécessaire, donc revenez vers moi après en avoir amélioré quelques unes.\"";
+                        description += "\n- Lorsque vous fabriquez des potions, vous gagnez des <color=orange>Points d'Alchimie</color>, qui peuvent être utilisés pour acheter des <color=orange>Améliorations d'Alchimie</color> ou pour améliorer vos potions, ce qui augmentera leur effet et leur valeur de désassemblage. Utilisez ces points pour gagner un nombre cumulatif de 100 niveaux pour passer à la prochaine quête.";
+                        description += "\n- Il vous sera utile de passer quelque temps à <color=orange>étendre votre limite d'Eau Mystérieuse</color>, car cela sera nécessaire pour améliorer vos <color=orange>Catalyseurs</color> et pour augmenter votre production d'Eau Mystérieuse.";
+                        condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 100";
+                        reward = "Multiplie la Chance Critique de Catalyseur par 125%";
                         break;
                     case QuestKindGlobal.Alchemy2:
-                        name = "The Road of Alchemy 2";
-                        client = "Archimedes, the Old Hermit";
-                        description = "\"Oh, uhh, there you are! I was just about to come looking for you to check on how well you are progressing with Alchemy. It seems that you've got the basics down. That's good, that's good. Now I will challenge you to continue doing that a little more, before we get into the less elementary level instruction.\"";
-                        description += "\n- Continue using your Alchemy Points to level up your potions until they reach a cumulative total of 200 potion levels.";
-                        description += "\n- There is an easier way to Disassemble potions for Alchemy Points and gold. Be on the look out in the Bestiary for the monster that can provide this for you.";
-                        description += "\n- When using said pet, make sure to change your top left multiplier when crafting.";
-                        condition = "Total Potion Level " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 200";
-                        reward = "Max Mysterious Water Cap + 100";
+                        name = "Route vers l'Alchimie 2";
+                        client = "Archimède, le Vieil Ermite";
+                        description = "\"Oh, euh, vous voilà ! J'allais tout juste venir pour voir vos progrès avec l'Alchimie. Il semblerait que vous ayez les bases. Bien, bien, c'est très bien. Maintenant, je vous donne la tâche de continuer cela un peu plus, avant de rentrer dans une partie un peu moins élémentaire.\"";
+                        description += "\n- Continuez d'utiliser vos Points d'Alchimie pour monter le niveau de vos potions jusqu'à ce qu'elles atteignent un nombre cumulatif de 200 niveaux de potion.";
+                        description += "\n- Il y a une façon plus facile de Désassembler les potions pour des Points d'Alchimie et de l'or. Cherchez votre Bestiaire pour voir quel monstre peut vous aider avec ça.";
+                        description += "\n- En utilisant ce familier, faites en sorte de changer le multiplicateur en haut à gauche pendant la fabrication.";
+                        condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 200";
+                        reward = "Limite d'Eau Mystérieuse Max + 100";
                         break;
                     case QuestKindGlobal.Alchemy3:
-                        name = "The Road of Alchemy 3";
-                        client = "Archimedes, the Old Hermit";
-                        description = "\"My, you are progressing much faster than any of my former pupils. Why, that's marvelous! Good, good, good. Okay, now that you've got a handle on the basics, it's time to test your skills a little. Keep improving your potions, yes, but I also want to ensure you grasp certain potions well enough for us to proceed with your training...\"";
-                        description += "\n- Now you must not only reach a cumulative potion level of 300, but you must also collect critical materials that you rarely gain when essences are producted.";
-                        condition = "Total Potion Level " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 300";
-                        reward = "Potion Level Cap + 25";
+                        name = "Route vers l'Alchimie 3";
+                        client = "Archimède, le Vieil Ermite";
+                        description = "\"Eh bien, vous progressez bien plus vite que tous mes anciens élèves. Que c'est merveilleux ! Bien, bien, bien. Ok, maintenant que vous avez maîtrisé les bases, il est temps de tester votre aptitude un peu plus. Oui, continuez d'améliorer vos potions, mais je veux aussi que vous compreniez assez certaines potions pour pouvoir continuer votre formation...\"";
+                        description += "\n- Vous devez non seulement atteindre un niveau de potion cumulatif de 300, mais vous devez aussi collecter des matériaux critiques qui peuvent être rarement gagnés lorsqu'une essence est produite.";
+                        condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 300";
+                        reward = "Limite de Niveau de Potion + 25";
                         break;
                     case QuestKindGlobal.Alchemy4:
-                        name = "The Road of Alchemy 4";
-                        client = "Archimedes, the Old Hermit";
-                        description = "\"Looks good, looks good. You did well grasping the health and resource potions. I am proud of you. Now, onwards and upwards! I hope that by now you've discovered the elemental catalysts of Fire, Ice, and Thunder. I would like to see that you're experienced enough with those to have collected five of each of their special materials they sometimes produce when you are synthesizing their essences. Plus, I need those for a potion I am developing, so I hope you won't mind we both benefit from this education.\"";
-                        description += "\n- Now you must not only reach a cumulative potion level of 500, but you must also collect critical materials that you rarely gain when essences are producted.";
-                        condition = "Total Potion Level " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 500";
-                        reward = "Catalyst Level Cap + 25";
+                        name = "Route vers l'Alchimie 4";
+                        client = "Archimède, le Vieil Ermite";
+                        description = "\"Ca m'a l'air bon, oui. Vous avez fait un bon travail avec les potions de santé et de ressource. Je suis fier de vous. Maintenant, continuons à aller de l'avant ! J'espère que vous avez découvert les catalyseurs élémentaires de Feu, Glace, et d'Electricité. J'aimerais voir dix de chacun de leur matériaux spéciaux qu'ils produisent de temps en temps lorsque vous synthétisez leurs essences. Cela me permettra de voir que vous avez expérimenté avec ces catalyseurs. De plus, j'en ai besoin pour une potion que je suis en train de développer, donc j'espère que vous ne vous souciez pas qu'on puisse tous deux profiter de cet apprentissage.\"";
+                        description += "\n- Vous devez non seulement atteindre un niveau de potion cumulatif de 500, mais vous devez aussi collecter des matériaux critiques qui peuvent être rarement gagnés lorsqu'une essence est produite.";
+                        condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 500";
+                        reward = "Limite de Niveau de Catalyseur + 25";
                         break;
                     case QuestKindGlobal.Alchemy5:
-                        name = "The Road of Alchemy 5";
-                        client = "Archimedes, the Old Hermit";
-                        description = "\"Oh these are marvelous specimans. Good work my student! I must say these are quite rare, as I'm sure you've discovered why that is, so do your best to collect as many as you can. Now, to the next endeavor. Learning Alchemy is more than simply mixing potions, you know? It's gaining an understanding of the world and the substances that make it up. While very basic, Mysterious Water, as I'm sure you've gathered, can be converted to just about anything if you apply the knowledge correctly. Gather yourself a large quantity of it, as we will be needing it for lessons to come!\"";
-                        description += "\n- Now you must not only reach a cumulative potion level of 750, but you must also expand your Mysterious Water capacity to 300.";
-                        condition = "Total Potion Level " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 750\n- Mysterious Water Cap " + tDigit(game.alchemyCtrl.mysteriousWaterCap.Value()) + " / 300";
-                        reward = "Lower the cost for leveling Catalysts by 25%";
+                        name = "Route vers l'Alchimie 5";
+                        client = "Archimède, le Vieil Ermite";
+                        description = "\"Oh, ceux-ci sont de merveilleux spécimens. Bien joué, mon élève ! Je dois dire qu'ils sont assez rares, comme vous avez sans doute pu le constater, donc faites de votre mieux pour en collecter le plus possible. Au tour de la prochaine tâche. L'apprentissage de l'alchimie est bien plus que juste mixer des potions, vous savez ? C'est aussi l'apprentissage du monde et des substances qui le compose. Bien que basique, l'Eau Mystérieuse, comme vous avez pu le constater, peut être convertie en n'importe quoi tant que vous appliquez vos connaissances à la lettre. Collectez-en une grande quantité, car nous en aurons besoin pour de futures lessons !\"";
+                        description += "\n- Vous devez non seulement atteindre un niveau de potion cumulatif de 750, mais vous devez aussi étendre votre limite d'Eau Mystérieuse jusqu'à 300.";
+                        condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 750\n- Limite d'Eau Mystérieuse " + tDigit(game.alchemyCtrl.mysteriousWaterCap.Value()) + " / 300";
+                        reward = "Réduction des coûts de montée de niveau des Catalyseurs par 25%";
                         break;
                     case QuestKindGlobal.Alchemy6:
-                        name = "The Road of Alchemy 6";
-                        client = "Archimedes, the Old Hermit";
-                        description = "\"Always you astound me with how quickly you are completing the tasks I give you. You remind me a bit of myself, now that I think about it. Anywho, let's get back to work, shall we? Let's see, you've done that... okay, and this... excellent. Alright, now I'd like for you to explore the deeper mysteries of Alchemy. Collect 30 Ectoplasm and let me know when you've got them in hand.\"";
-                        description += "\n- Now you must not only reach a cumulative potion level of 1000, but you must also collect 30 Ectoplasm to give to Archimedes to proceed.";
-                        condition = "Total Potion Level " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 1000";
-                        reward = "Multiplies Critical Chance of Catalyst by 125%" +
-                            "\n- Max Mysterious Water Cap + 250";
+                        name = "Route vers l'Alchimie 6";
+                        client = "Archimède, le Vieil Ermite";
+                        description = "\"Vous m'impressionnez toujours avec la vitesse à laquelle vous effectuez les tâches que je vous donne. Vous me rappelez moi-même à mes débuts, maintenant que j'y pense. Bref, remettons-nous y, d'accord ? Voyons voir, vous avez fait ça... ok, et ça aussi... excellent. Très bien, maintenant, j'imerais que vous exploriez les mystères plus profonds de l'alchimie. Collectez 30 Ectoplasmes et dites-moi lorsque vous les avez sur vous.\"";
+                        description += "\n- Vous devez non seulement atteindre un niveau de potion cumulatif de 1000, mais vous devez aussi collecter 30 Ectoplasmes pour les donner à Archimède pour continuer.";
+                        condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 1000";
+                        reward = "Multiplication de la Chance Critique de Catalyseur par 125%" +
+                            "\n- Limite d'Eau Mystérieuse Max + 250";
                         break;
                     case QuestKindGlobal.Alchemy7:
-                        name = "The Road of Alchemy 7";
-                        client = "Archimedes, the Old Hermit";
-                        description = "\"It's miraculous, really, this Ectoplasm. It honestly shouldn't exist, belonging to another plane of existence, and yet here it is. Now, we delve deeper, as this mystery is exceeded in its enigma by another. Now you must gather the very essence of the stars and bring me 100 Stardust. Only the most powerful of wizards has reached the stars themselves, but we can sometimes synthesize the substance by using a Sun Catalyst. Return to me when you have gathered it.\"";
-                        description += "\n- Now you must not only reach a cumulative potion level of 1500, but you must also collect 100 Stardust to give to Archimedes to proceed.";
-                        condition = "Total Potion Level " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 1500";
-                        reward = "Potion Level Cap + 25" +
-                            "\n- Catalyst Level Cap + 25";
+                        name = "Route vers l'Alchimie 7";
+                        client = "Archimède, le Vieil Ermite";
+                        description = "\"C'est un miracle, cet Ectoplasme, vraiment. Il ne devrait normalement pas exister, car il appartient à un autre monde, et pourtant le voici. Maintenant, nous allons plonger encore plus profondément, car ce mystère est dépassé par un autre. Maintenant, vous devez collecter l'essence concentrée des étoiles et m'apporter 100 Poussières d'Etoile. Seuls les magiciens les plus puissants ont atteint les étoiles, mais il est parfois possible d'en synthétiser avec un Catalyseur du Soleil. Revenez me voir lorsque vous les avez en votre possession.\"";
+                        description += "\n- Vous devez non seulement atteindre un niveau de potion cumulatif de 1500, mais vous devez aussi collecter 100 Poussières d'Etoile pour les donner à Archimède pour continuer.";
+                        condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 1500";
+                        reward = "Limite de Niveau de Potion + 25" +
+                            "\n- Limite de Niveau de Catalyseur + 25";
                         break;
                     case QuestKindGlobal.Alchemy8:
-                        name = "The Road of Alchemy 8";
-                        client = "Archimedes, the Old Hermit";
-                        description = "\"Alas, I knew this day would come. You are about to graduate from my tutelage, so I shall challenge you to discover the last of the secrets of Alchemy. Beyond our world, nay beyond the veil of reality itself lies a realm only known as the Void. No one who dared venture there has ever returned, but we have found traces of it in strange objects known as Void Eggs that are sometimes left behind when a Void portal closes. We have figured out how to synthesize these ourselves, with the use of the Void Catalyst. Again, I ask you to bring me 1000 of them and I shall bestow upon you the last bits of my wisdom.\"";
-                        description += "\n- Now you must not only reach a cumulative potion level of 2000, but you must also collect 1000 Void Eggs to give to Archimedes.";
-                        condition = "Total Potion Level " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 2000";
-                        reward = "Alchemy Point Gain + 100%" +
-                            "\n- Lower the cost for leveling Catalysts by 25%";
+                        name = "Route vers l'Alchimie 8";
+                        client = "Archimède, le Vieil Ermite";
+                        description = "\"Malheureusement, je savais que ce jour arriverait. Vous êtes sur le point d'être diplômé de ma tutelle, donc je vais vous mettre au défi dedécouvrir l'un des derniers secrets de l'Alchimie. Au-delà de notre montre, même au-delà du voile de la réalité lui-même se trouve un royaume seulement connu comme le Vide. Aucune des personnes ne s'y étant aventuré n'en est revenue, mais nous avons trouvé des traces de celui-ci dans d'étranges objets nommés les Oeufs du Vide qui sont parfois laissés après qu'un portail vers le Vide se ferme. Nous avons trouvé comment en synthétiser par nous-mêmes, à travers l'utilisation du Catalyseur du Vide. Pour la dernière fois, je vais devoir vous demander l'en apporter 1000, et je partagerai avec vous les dernières pépites d'information que je peux vous donner.\"";
+                        description += "\n- Vous devez non seulement atteindre un niveau de potion cumulatif de 2000, mais vous devez aussi collecter 1000 Oeufs du Vide pour les donner à Archimède.";
+                        condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 2000";
+                        reward = "Gain de Points d'Alchimie + 100%" +
+                            "\n- Réduction des coûts de montée de niveau des Catalyseurs par 25%";
                         break;
                 }
                 break;
