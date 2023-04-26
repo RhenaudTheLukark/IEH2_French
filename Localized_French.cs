@@ -764,10 +764,6 @@ public class Localized_French : LOCALIZATION
                 return "Magasin";
             case MenuKind.Expedition:
                 return "Expédition";
-            case MultiplierKind.ArmoredFury:
-                return "Furie d'Armure";
-            case MultiplierKind.WardedFury:
-                return "Furie d'Esprit";
         }
         return kind.ToString();
     }
@@ -848,6 +844,10 @@ public class Localized_French : LOCALIZATION
                 return "DLC de Steam";
             case MultiplierKind.Expedition:
                 return "Expédition";
+            case MultiplierKind.ArmoredFury:
+                return "Furie d'Armure";
+            case MultiplierKind.WardedFury:
+                return "Furie d'Esprit";
         }
         return kind.ToString();
     }
@@ -2249,572 +2249,572 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.Nothing:
                 if (isOnlyEffectValue) return "";
                 if (isLevelMaxEffect) tempString = "Emplacement d'Enchantement + " + tDigit(value);
-                else                  tempString = "[Enchantement Disponible]";
+                else tempString = "[Enchantement Disponible]";
                 break;
             case EquipmentEffectKind.HPAdder:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "PV <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "PV + " + tDigit(value, 1);
+                else tempString = "PV + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.MPAdder:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "PM <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "PM + " + tDigit(value, 1);
+                else tempString = "PM + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKAdder:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "ATQ <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "ATQ + " + tDigit(value, 1);
+                else tempString = "ATQ + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.MATKAdder:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "MATQ <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "MATQ + " + tDigit(value, 1);
+                else tempString = "MATQ + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.DEFAdder:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "DEF <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "DEF + " + tDigit(value, 1);
+                else tempString = "DEF + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.MDEFAdder:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "MDEF <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "MDEF + " + tDigit(value, 1);
+                else tempString = "MDEF + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.SPDAdder:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "VIT <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "VIT + " + tDigit(value, 1);
+                else tempString = "VIT + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.HPMultiplier:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "PV <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "PV + " + tDigit(value, 1);
+                else tempString = "PV + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MPMultiplier:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "PM <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "PM + " + tDigit(value, 1);
+                else tempString = "PM + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKMultiplier:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "ATQ <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "ATQ + " + tDigit(value, 1);
+                else tempString = "ATQ + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MATKMultiplier:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "MATQ <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "MATQ + " + tDigit(value, 1);
+                else tempString = "MATQ + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DEFMultiplier:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "DEF <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "DEF + " + tDigit(value, 1);
+                else tempString = "DEF + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MDEFMultiplier:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "MDEF <color=red>" + tDigit(value, 1) + "</color>";
-                else           tempString = "MDEF + " + tDigit(value, 1);
+                else tempString = "MDEF + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKPropotion:
                 if (isOnlyEffectValue) return percent(value);
                 tempString = "ATQ + " + percent(value) + " du Niveau du Héros";
                 if (value < 0) tempString = "ATQ <color=red>" + percent(value) + "</color> du Niveau du Héros";
-                else           tempString = "ATQ + " + percent(value) + " du Niveau du Héros";
+                else tempString = "ATQ + " + percent(value) + " du Niveau du Héros";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MATKPropotion:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "MATQ <color=red>" + percent(value) + "</color> du Niveau du Héros";
-                else           tempString = "MATQ + " + percent(value) + " du Niveau du Héros";
+                else tempString = "MATQ + " + percent(value) + " du Niveau du Héros";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DEFPropotion:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "DEF <color=red>" + percent(value) + "</color> du Niveau du Héros";
-                else           tempString = "DEF + " + percent(value) + " du Niveau du Héros";
+                else tempString = "DEF + " + percent(value) + " du Niveau du Héros";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MDEFPropotion:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "MDEF <color=red>" + percent(value) + "</color> du Niveau du Héros";
-                else           tempString = "MDEF + " + percent(value) + " du Niveau du Héros";
+                else tempString = "MDEF + " + percent(value) + " du Niveau du Héros";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.FireResistance:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Résistance au Feu <color=red>" + percent(value) + "</color>";
-                else           tempString = "Résistance au Feu + " + percent(value);
+                else tempString = "Résistance au Feu + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.IceResistance:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Résistance à la Glace <color=red>" + percent(value) + "</color>";
-                else           tempString = "Résistance à la Glace + " + percent(value);
+                else tempString = "Résistance à la Glace + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThunderResistance:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Résistance à l'Electricité <color=red>" + percent(value) + "</color>";
-                else           tempString = "Résistance à l'Electricité + " + percent(value);
+                else tempString = "Résistance à l'Electricité + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.LightResistance:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Résistance à la Lumière <color=red>" + percent(value) + "</color>";
-                else           tempString = "Résistance à la Lumière + " + percent(value);
+                else tempString = "Résistance à la Lumière + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DarkResistance:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Résistance aux Ténèbres <color=red>" + percent(value) + "</color>";
-                else           tempString = "Résistance aux Ténèbres + " + percent(value);
+                else tempString = "Résistance aux Ténèbres + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.PhysicalAbsorption:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Absorption Physique <color=red>" + percent(value) + "</color> des dégâts reçus";
-                else           tempString = "Absorption Physique + " + percent(value) + " des dégâts reçus";
+                else tempString = "Absorption Physique + " + percent(value) + " des dégâts reçus";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.FireAbsorption:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Absorption du Feu <color=red>" + percent(value) + "</color> des dégâts reçus";
-                else           tempString = "Absorption du Feu + " + percent(value) + " des dégâts reçus";
+                else tempString = "Absorption du Feu + " + percent(value) + " des dégâts reçus";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.IceAbsorption:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Absorption de la Glace <color=red>" + percent(value) + "</color> des dégâts reçus";
-                else           tempString = "Absorption de la Glace + " + percent(value) + " des dégâts reçus";
+                else tempString = "Absorption de la Glace + " + percent(value) + " des dégâts reçus";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThunderAbsorption:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Absorption de l'Electricité <color=red>" + percent(value) + "</color> des dégâts reçus";
-                else           tempString = "Absorption de l'Electricité + " + percent(value) + " des dégâts reçus";
+                else tempString = "Absorption de l'Electricité + " + percent(value) + " des dégâts reçus";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.LightAbsorption:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Absorption de la Lumière <color=red>" + percent(value) + "</color> des dégâts reçus";
-                else           tempString = "Absorption de la Lumière + " + percent(value) + " des dégâts reçus";
+                else tempString = "Absorption de la Lumière + " + percent(value) + " des dégâts reçus";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DarkAbsorption:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Absorption des Ténèbres <color=red>" + percent(value) + "</color> des dégâts reçus";
-                else           tempString = "Absorption des Ténèbres + " + percent(value) + " des dégâts reçus";
+                else tempString = "Absorption des Ténèbres + " + percent(value) + " des dégâts reçus";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DebuffResistance:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Résistance aux Débuffs <color=red> " + percent(value) + "</color>";
-                else           tempString = "Résistance aux Débuffs + " + percent(value);
+                else tempString = "Résistance aux Débuffs + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.PhysicalCritical:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Chance de Coup Critique Physique <color=red> " + percent(value) + "</color>";
-                else           tempString = "Chance de Coup Critique Physique + " + percent(value);
+                else tempString = "Chance de Coup Critique Physique + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MagicalCritical:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Chance de Coup Critique Magique <color=red> " + percent(value) + "</color>";
-                else           tempString = "Chance de Coup Critique Magique + " + percent(value);
+                else tempString = "Chance de Coup Critique Magique + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.EXPGain:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain d'EXP <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain d'EXP + " + percent(value);
+                else tempString = "Gain d'EXP + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.SkillProficiency:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Maîtrise de Capacité <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Maîtrise de Capacité + " + percent(value);
+                else tempString = "Gain de Maîtrise de Capacité + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.EquipmentProficiency:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Maîtrise d'Équipement <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Maîtrise d'Équipement + " + percent(value);
+                else tempString = "Gain de Maîtrise d'Équipement + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MoveSpeedAdder:
                 if (isOnlyEffectValue) return meter(value);
                 if (value < 0) tempString = "Vitesse de Déplacement <color=red>" + meter(value) + " / sec</color>";
-                else           tempString = "Vitesse de Déplacement + " + meter(value) + " / sec";
+                else tempString = "Vitesse de Déplacement + " + meter(value) + " / sec";
                 if (perLevelValue > 0) tempString += " ( + " + meter(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MoveSpeedMultiplier:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Vitesse de Déplacement <color=red>" + percent(value) + "</color>";
-                else           tempString = "Vitesse de Déplacement + " + percent(value);
+                else tempString = "Vitesse de Déplacement + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.GoldGain:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain d'Or (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain d'Or (Global) + " + percent(value);
+                else tempString = "Gain d'Or (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.StoneGain:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Pierre (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Pierre (Global) + " + percent(value);
+                else tempString = "Gain de Pierre (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.CrystalGain:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Cristal (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Cristal (Global) + " + percent(value);
+                else tempString = "Gain de Cristal (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.LeafGain:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Feuille (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Feuille (Global) + " + percent(value);
+                else tempString = "Gain de Feuille (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.WarriorSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités du Guerrier (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Niveau des Capacités du Guerrier (Global) + " + percent(value);
+                else tempString = "Niveau des Capacités du Guerrier (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.WizardSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités de la Mage (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Niveau des Capacités de la Mage (Global) + " + percent(value);
+                else tempString = "Niveau des Capacités de la Mage (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.AngelSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités de l'Ange (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Niveau des Capacités de l'Ange (Global) + " + percent(value);
+                else tempString = "Niveau des Capacités de l'Ange (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThiefSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités du Voleur (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Niveau des Capacités du Voleur (Global) + " + percent(value);
+                else tempString = "Niveau des Capacités du Voleur (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.ArcherSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités de l'Archer (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Niveau des Capacités de l'Archer (Global) + " + percent(value);
+                else tempString = "Niveau des Capacités de l'Archer (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.TamerSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités de la Dompteuse (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Niveau des Capacités de la Dompteuse (Global) + " + percent(value);
+                else tempString = "Niveau des Capacités de la Dompteuse (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.AllSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau de Toutes les Capacités (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Niveau de Toutes les Capacités (Global) + " + percent(value);
+                else tempString = "Niveau de Toutes les Capacités (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.SlimeKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Slimes <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Slimes + " + percent(value);
+                else tempString = "Dégâts infligés aux Slimes + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MagicSlimeKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Slimes Magiques <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Slimes Magiques + " + percent(value);
+                else tempString = "Dégâts infligés aux Slimes Magiques + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.SpiderKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Araignées <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Araignées + " + percent(value);
+                else tempString = "Dégâts infligés aux Araignées + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.BatKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Chauve-Souris <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Chauve-Souris + " + percent(value);
+                else tempString = "Dégâts infligés aux Chauve-Souris + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.FairyKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Fées <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Fées + " + percent(value);
+                else tempString = "Dégâts infligés aux Fées + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.FoxKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Renards <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Renards + " + percent(value);
+                else tempString = "Dégâts infligés aux Renards + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DevilFishKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Poissons Démons <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Poissons Démons + " + percent(value);
+                else tempString = "Dégâts infligés aux Poissons Démons + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.TreantKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Tréants <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Tréants + " + percent(value);
+                else tempString = "Dégâts infligés aux Tréants + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.FlameTigerKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Tigres de Feu <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Tigres de Feu + " + percent(value);
+                else tempString = "Dégâts infligés aux Tigres de Feu + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.UnicornKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Licornes <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Licornes + " + percent(value);
+                else tempString = "Dégâts infligés aux Licornes + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.PhysicalDamage:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts Physiques <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts Physiques + " + percent(value);
+                else tempString = "Dégâts Physiques + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.FireDamage:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts de Feu <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts de Feu + " + percent(value);
+                else tempString = "Dégâts de Feu + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.IceDamage:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts de Glace <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts de Glace + " + percent(value);
+                else tempString = "Dégâts de Glace + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThunderDamage:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts d'Electricité <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts d'Electricité + " + percent(value);
+                else tempString = "Dégâts d'Electricité + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.LightDamage:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts de Lumière <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts de Lumière + " + percent(value);
+                else tempString = "Dégâts de Lumière + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DarkDamage:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts des Ténèbres <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts des Ténèbres + " + percent(value);
+                else tempString = "Dégâts des Ténèbres + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.EquipmentDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition d'Équipement <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition d'Équipement + " + percent(value);
+                else tempString = "Chance d'Apparition d'Équipement + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 4) + " / Nv )";
                 break;
             case EquipmentEffectKind.SlimeDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition d'" + Material(MaterialKind.OilOfSlime) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition d'" + Material(MaterialKind.OilOfSlime) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition d'" + Material(MaterialKind.OilOfSlime) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.MagicSlimeDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition de " + Material(MaterialKind.EnchantedCloth) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition de " + Material(MaterialKind.EnchantedCloth) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition de " + Material(MaterialKind.EnchantedCloth) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.SpiderDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition de " + Material(MaterialKind.SpiderSilk) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition de " + Material(MaterialKind.SpiderSilk) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition de " + Material(MaterialKind.SpiderSilk) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.BatDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition d'" + Material(MaterialKind.BatWing) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition d'" + Material(MaterialKind.BatWing) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition d'" + Material(MaterialKind.BatWing) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.FairyDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition de " + Material(MaterialKind.FairyDust) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition de " + Material(MaterialKind.FairyDust) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition de " + Material(MaterialKind.FairyDust) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.FoxDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition de " + Material(MaterialKind.FoxTail) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition de " + Material(MaterialKind.FoxTail) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition de " + Material(MaterialKind.FoxTail) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.DevilFishDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition d'" + Material(MaterialKind.FishScales) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition d'" + Material(MaterialKind.FishScales) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition d'" + Material(MaterialKind.FishScales) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.TreantDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition de " + Material(MaterialKind.CarvedBranch) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition de " + Material(MaterialKind.CarvedBranch) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition de " + Material(MaterialKind.CarvedBranch) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.FlameTigerDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition de " + Material(MaterialKind.ThickFur) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition de " + Material(MaterialKind.ThickFur) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition de " + Material(MaterialKind.ThickFur) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.UnicornDropChance:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Chance d'Apparition de " + Material(MaterialKind.UnicornHorn) + " (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition de " + Material(MaterialKind.UnicornHorn) + " (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition de " + Material(MaterialKind.UnicornHorn) + " (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.ColorMaterialDropChance:
                 if (isOnlyEffectValue) return percent(value, 4);
                 tempString = "Chance d'Apparition de Matériaux Rares (Global) + " + percent(value, 4);
                 if (value < 0) tempString = "Chance d'Apparition de Matériaux Rares (Global) <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance d'Apparition de Matériaux Rares (Global) + " + percent(value);
+                else tempString = "Chance d'Apparition de Matériaux Rares (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 4) + " / Nv )";
                 break;
             case EquipmentEffectKind.HpRegen:
                 if (isOnlyEffectValue) return tDigit(value, 2);
                 if (value < 0) tempString = "Régénération de PV <color=red>" + tDigit(value, 2) + "</color> / sec";
-                else           tempString = "Régénération de PV + " + tDigit(value, 2) + " / sec";
+                else tempString = "Régénération de PV + " + tDigit(value, 2) + " / sec";
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.MpRegen:
                 if (isOnlyEffectValue) return tDigit(value, 2);
                 if (value < 0) tempString = "Régénération de PM <color=red>" + tDigit(value, 2) + "</color> / sec";
-                else           tempString = "Régénération de PM + " + tDigit(value, 2) + " / sec";
+                else tempString = "Régénération de PM + " + tDigit(value, 2) + " / sec";
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.TamingPoint:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Domptage <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Points de Domptage + " + percent(value);
+                else tempString = "Gain de Points de Domptage + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.PetEXPGain:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain d'EXP des Familiers <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain d'EXP des Familiers + " + percent(value);
+                else tempString = "Gain d'EXP des Familiers + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.LoyaltyPointGain:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Loyauté <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Points de Loyauté + " + percent(value);
+                else tempString = "Gain de Points de Loyauté + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.WarriorSkillRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Capacités du Guerrier <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Capacités du Guerrier + " + percent(value);
+                else tempString = "Portée des Capacités du Guerrier + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.WizardSkillRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Capacités de la Mage <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Capacités de la Mage + " + percent(value);
+                else tempString = "Portée des Capacités de la Mage + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.AngelSkillRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Capacités de l'Ange <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Capacités de l'Ange + " + percent(value);
+                else tempString = "Portée des Capacités de l'Ange + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThiefSkillRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Capacités du Voleur <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Capacités du Voleur + " + percent(value);
+                else tempString = "Portée des Capacités du Voleur + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.ArcherSkillRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Capacités de l'Archer <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Capacités de l'Archer + " + percent(value);
+                else tempString = "Portée des Capacités de l'Archer + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.TamerSkillRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Capacités de la Dompteuse <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Capacités de la Dompteuse + " + percent(value);
+                else tempString = "Portée des Capacités de la Dompteuse + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.WarriorSkillEffectRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Effets des Capacités du Guerrier <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Effets des Capacités du Guerrier + " + percent(value);
+                else tempString = "Portée des Effets des Capacités du Guerrier + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.WizardSkillEffectRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Effets des Capacités de la Mage <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Effets des Capacités de la Mage + " + percent(value);
+                else tempString = "Portée des Effets des Capacités de la Mage + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.AngelSkillEffectRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Effets des Capacités de l'Ange <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Effets des Capacités de l'Ange + " + percent(value);
+                else tempString = "Portée des Effets des Capacités de l'Ange + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThiefSkillEffectRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Effets des Capacités du Voleur <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Effets des Capacités du Voleur + " + percent(value);
+                else tempString = "Portée des Effets des Capacités du Voleur + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.ArcherSkillEffectRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Effets des Capacités de l'Archer <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Effets des Capacités de l'Archer + " + percent(value);
+                else tempString = "Portée des Effets des Capacités de l'Archer + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.TamerSkillEffectRange:
                 if (isOnlyEffectValue) return percent(value, 3);
                 if (value < 0) tempString = "Portée des Effets des Capacités de la Dompteuse <color=red>" + percent(value) + "</color>";
-                else           tempString = "Portée des Effets des Capacités de la Dompteuse + " + percent(value);
+                else tempString = "Portée des Effets des Capacités de la Dompteuse + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.TownMatGain:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Matériaux de Ville <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Matériaux de Ville + " + percent(value);
+                else tempString = "Gain de Matériaux de Ville + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.TownMatAreaClearGain:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
+                else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             //case EquipmentEffectKind.TownMatDungeonRewardGain:
@@ -2825,37 +2825,37 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.RebirthPointGain1:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Réincarnation de Classe 1 <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Points de Réincarnation de Classe 1 + " + percent(value);
+                else tempString = "Gain de Points de Réincarnation de Classe 1 + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.RebirthPointGain2:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Réincarnation de Classe 2 <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Points de Réincarnation de Classe 2 + " + percent(value);
+                else tempString = "Gain de Points de Réincarnation de Classe 2 + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.RebirthPointGain3:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Réincarnation de Classe 3 <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Points de Réincarnation de Classe 3 + " + percent(value);
+                else tempString = "Gain de Points de Réincarnation de Classe 3 + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.CriticalDamage:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts des Coups Critiques <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts des Coups Critiques + " + percent(value);
+                else tempString = "Dégâts des Coups Critiques + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.BlessingEffect:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Effet des Bénédictions <color=red>" + percent(value) + "</color>";
-                else           tempString = "Effet des Bénédictions + " + percent(value);
+                else tempString = "Effet des Bénédictions + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.CatalystDoubleCriticalChance:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Chance de Catalysation Critique <color=red>" + percent(value) + "</color>";
-                else           tempString = "Chance de Catalysation Critique + " + percent(value);
+                else tempString = "Chance de Catalysation Critique + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ChallengeBossKnowledge:
@@ -2867,7 +2867,7 @@ public class Localized_French : LOCALIZATION
             default:
                 if (isOnlyEffectValue) return tDigit(value);
                 if (value < 0) tempString = kind.ToString() + " <color=red>" + tDigit(value) + "</color>";
-                else           tempString = kind.ToString() + " + " + tDigit(value);
+                else tempString = kind.ToString() + " + " + tDigit(value);
                 break;
         }
         return tempString;
@@ -2891,7 +2891,7 @@ public class Localized_French : LOCALIZATION
         }
         return kind.ToString();
     }
-    public override string ForgeEffectString(EquipmentForgeEffectKind kind, double value)
+    public override string ForgeEffectString(EquipmentForgeEffectKind kind, double value, double maxValue)
     {
         switch (kind)
         {
@@ -7996,6 +7996,7 @@ public class Localized_French : LOCALIZATION
             case EpicStoreKind.AutoMysteriousWaterAdder:
                 name = "Auto Ajouteur d'Eau Mystérieuse";
                 effect = "Débloque la fonction de chargement d'Allocation d'Essences dans le Labo pour automatiquement allouer l'Eau Mystérieuse aux Essences dès que vous en produisez 0.1/sec, ou juste après une Ascension Monde. Requiert la complétion du Palier de Mission de Zone #1150 et l' Accomplissement d'AM1 #30.";
+                break;
             case EpicStoreKind.SmartUseOfAnvils:
                 name = "Utilisation Intelligente des Enclumes";
                 effect = "Lorsqu'elle est appliquée à un équipement, une [Enclume de Forge] n'est appliquée que jusqu'à la valeur maximale pour éviter son gaspillage.";
@@ -8003,7 +8004,6 @@ public class Localized_French : LOCALIZATION
             case EpicStoreKind.EasyAccessChallenge:
                 name = "Accès Facile [Défi]";
                 effect = "Débloque des boutons dans l'onglet Défi qui vous permet de tenter des défis avec les héros en arrière-plan.";
-                break;
                 break;
         }
         return (name, effect);
