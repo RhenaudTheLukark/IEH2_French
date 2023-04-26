@@ -706,7 +706,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.PerformanceModeText:
                 return "<size=24>Mode Performance Actif</size> \n\nMaj+P pour désactiver";
             case BasicWord.LazyQuestingMode:
-                return "Mode Quête Automatique";
+                return "Mode Quête Automatique (Maj + Clic Droit sur le bouton \"" + BasicWord.Questing + "\" pour changer la zone de quête)";
             case BasicWord.ManualQuestingArea:
                 return "Maj + Clic Droit pour enregistrer la zone courante en tant que zone de quête.";
             case BasicWord.Save:
@@ -1273,7 +1273,7 @@ public class Localized_French : LOCALIZATION
             case TitleKind.MetalHunter:
                 if (isSub) tempString = optStr + "Gain d'EXP venant de monstres Métalliques + " + percent(effectValue);
                 else
-                    tempString = optStr + "Dégâts aux monstres Métalliques + " + tDigit(effectValue);
+                    tempString = optStr + "Dégâts infligés aux monstres Métalliques + " + tDigit(effectValue);
                 break;
             case TitleKind.BreakingTheLimit:
                 tempString = optStr + "Limite de Dégâts + " + tDigit(effectValue);
@@ -2236,6 +2236,8 @@ public class Localized_French : LOCALIZATION
                 return "Multiplicateur de Critique Physique";
             case EquipmentEffectKind.MagicalCriticalMultiplier:
                 return "Multiplicateur de Critique Magique";
+            case EquipmentEffectKind.ChallengeBossKnowledge:
+                return "Connaissance de Boss de Défi";
         }
         return kind.ToString();
     }
@@ -2856,6 +2858,12 @@ public class Localized_French : LOCALIZATION
                 else           tempString = "Chance de Catalysation Critique + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
+            case EquipmentEffectKind.ChallengeBossKnowledge:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Dégâts infligés aux Boss de Défi <color=red>" + percent(value) + "</color>";
+                else           tempString = "Dégâts infligés aux Boss de Défi + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
             default:
                 if (isOnlyEffectValue) return tDigit(value);
                 if (value < 0) tempString = kind.ToString() + " <color=red>" + tDigit(value) + "</color>";
@@ -2878,6 +2886,8 @@ public class Localized_French : LOCALIZATION
                 return "Effet d'Équipement + " + percent(value);
             case EquipmentForgeEffectKind.PurifyCurseEffect:
                 return "Purifie " + percent(value) + " de l'Effet Maudit";
+            case EquipmentForgeEffectKind.IncreaseEffectIncrement:
+                return "Augmentation de l'Effet / Nv + " + percent(value);
         }
         return kind.ToString();
     }
@@ -2895,6 +2905,8 @@ public class Localized_French : LOCALIZATION
                 return "Effet de cet équipement + " + percent(value) + " (Max : " + tDigit(maxValue) + ")";
             case EquipmentForgeEffectKind.PurifyCurseEffect:
                 return "Réduit les effets négatifs de cet équipement par " + percent(value) + " (Max : " + percent(maxValue) + ")";
+            case EquipmentForgeEffectKind.IncreaseEffectIncrement:
+                return "Effet de cet équipement + " + percent(value) + " par niveau (Max : " + percent(maxValue) + ")";
         }
         return kind.ToString();
     }
@@ -3386,6 +3398,10 @@ public class Localized_French : LOCALIZATION
                 return "Poupée Glorbliorbe";
             case PotionKind.DistortionSlimeDoll:
                 return "Poupée Gankyū";
+            case PotionKind.TrackersMap:
+                return "Carte du Traqueur";
+            case PotionKind.BerserkersStone:
+                return "Pierre de Berserker";
         }
         return kind.ToString();
     }
@@ -3506,8 +3522,11 @@ public class Localized_French : LOCALIZATION
                 if (isPassive) return "Absorption Magique + " + percent(effectValue);
                 return "Dégâts des Capacités infligeant des dégâts + " + percent(effectValue) + " mais leur Consommation de PM + " + percent(4 * effectValue);
             case PotionKind.NariSuneDoll:
-                if (isPassive) return "Chance d'Invasion Grosse + " + percent(effectValue) + " au lieu d'une Invasion Normale";
+                if (isPassive) return "Chance de Grosse Invasion + " + percent(effectValue) + " au lieu d'une Invasion Normale";
                 return "Portée des Capacités + " + percent(effectValue);
+            case PotionKind.OctobaddieDoll:
+                if (isPassive) return "Gain de Pièces Slime + " + percent(effectValue);
+                return "Zone d'Effet des Capacités + " + percent(effectValue);
             case PotionKind.SlimeBadge:
                 if (isPassive) return "PV + " + tDigit(effectValue, 1);
                 return "PV + " + percent(effectValue);
@@ -3559,6 +3578,15 @@ public class Localized_French : LOCALIZATION
             case PotionKind.TamersBadge:
                 if (isPassive) return "Réduit le Cout de Rang des Capacités de la Dompteuse par " + percent(effectValue);
                 return "Gain d'EXP + " + percent(effectValue);
+            case PotionKind.EnchantedAlembic:
+                if (isPassive) return "Gain d'Eau Mystérieuse + " + tDigit(effectValue, 3) + " / " + Basic(BasicWord.Sec);
+                return "Effet de Potion (Global) + " + percent(effectValue);
+            case PotionKind.TrackersMap:
+                if (isPassive) return "Chance d'Invasion Epique + " + percent(effectValue) + " au lieu d'une Grosse Invasion";
+                return "Augmente le # de Complétions de Zone et de Récompense de Zone par " + tDigit(effectValue, 1);
+            case PotionKind.BerserkersStone:
+                if (isPassive) return "Effet de l'Equipement + " + percent(effectValue);
+                return "Dégâts infligés aux Boss de Défi + " + percent(effectValue);
         }
         return kind.ToString();
     }
@@ -4330,7 +4358,7 @@ public class Localized_French : LOCALIZATION
                         name = "Tutoriel 11 : Défi";
                         client = "Hitan";
                         description = optStr + "Oh, on dirait qu'un horrible monstre est apparu ! Va dans l'onglet <color=orange>Défi</color> pour vaincre <color=orange>Florzporbe</color>." +
-                            " Dans un Combat de Raid de Boss, tous les héros couremment actifs vont rejoindre le combat." +
+                            " Dans un Combat de Raid de Boss, tous les héros couramment actifs vont rejoindre le combat." +
                             " Comme tu t'es réincarné, tu peux recevoir le titre Preuve de Réincarnation à travers sa quête, ce qui permet d'activer le héos en arrière-plan." +
                             " Le monstre boss est très puissant, donc regroupe les membres actifs de la guilde pour combattre ensemble et prépare-toi bien avant le combat !\n<color=yellow>- Pour plus d'informations, Aide > [Défi].</color>";
                         condition = "Complète le Combat de Raid de Boss [ Florzporbe Nv 100 ]";
@@ -4575,7 +4603,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Capture1:
                         name = "Capture de Monstre 1";
                         client = "Ringold";
-                        description = "Dans le <color=orange>Magasin</color>, il y a un onglet dans lequel tu peux trouver tous les types de pièges couremment débloqués. Le premier piège qui est débloqué est le <color=orange>Filet de Capture</color>, qui est SEULEMENT capable de capturer des monstres de <color=orange>Type 'Normal'</color>. Garde aussi en^tête que la <color=orange>Quête de Titre [ Etude de Monstre 1 ]</color> doit aussi être complétée afin de pouvoir utiliser des Pièges. Les Pièges peuvent être équipés dans un <color=orange>Emplacement d'Utilitaire</color>, qui permet d'effectuer un <color=orange>Clic Droit</color> sur un monstre. Tu dois avoir le bon type de piège équipé et un niveau de monstre capturable suffisant afin de pouvoir capturer le monstre choisi.";
+                        description = "Dans le <color=orange>Magasin</color>, il y a un onglet dans lequel tu peux trouver tous les types de pièges couramment débloqués. Le premier piège qui est débloqué est le <color=orange>Filet de Capture</color>, qui est SEULEMENT capable de capturer des monstres de <color=orange>Type 'Normal'</color>. Garde aussi en^tête que la <color=orange>Quête de Titre [ Etude de Monstre 1 ]</color> doit aussi être complétée afin de pouvoir utiliser des Pièges. Les Pièges peuvent être équipés dans un <color=orange>Emplacement d'Utilitaire</color>, qui permet d'effectuer un <color=orange>Clic Droit</color> sur un monstre. Tu dois avoir le bon type de piège équipé et un niveau de monstre capturable suffisant afin de pouvoir capturer le monstre choisi.";
                         description += "\n- Tu peux déplacer ta souris sur un piège pour voir le niveau maximum de monstre capturable. Pour augmenter ce niveau, tu peux augmenter le Niveau du Héros, compléter des quêtes de titre Etude de Monstre, et augmenter le niveau d'un bâtiment de ville spécifique.";
                         description += "\n- Les monstres capturés, ou Familiers, donnent une variété de bonus spéciaux qui permettent non seulement d'automatiser certains aspects du jeu, mais aussi de donner des boosts passifs sur de nombreuses statistiques.";
                         description += "\n<color=yellow>Pour plus d'informations, Aide > [Capture].</color>";
@@ -4779,7 +4807,7 @@ public class Localized_French : LOCALIZATION
             case QuestKind.Title:
                 switch (kindTitle)
                 {
-                    case QuestKindTitle.SkillMaster1:
+                    case QuestKindTitle.SkillMaster1: //TODO
                         name = Title(TitleKind.SkillMaster) + " 1";
                         client = "Condescending Asian Kid";
                         description = "\"You there! Rookie! Yes, clearly I mean you, the 'Hero' who looks like you're practicing your white belt katas but keep forgetting the next step. I can see that you have potential but that's only because I have excellent eyesight! You need to walk before you can run, so I would suggest practicing your basic moves until you get the technique right and can do it without thinking. Then come back to me and I'll show you an easy one-two combo.\"";
@@ -6325,6 +6353,7 @@ public class Localized_French : LOCALIZATION
             case 46: return "Réduit la courbe de gains réduits d'Eau Mystérieuse allouée sur les Essences";
             case 47: return "Les Parchemins de Lotterie tirent seulement des valeurs plus hautes";
             case 48: return "Intérêt sur les Pièces Slime + " + text;
+            case 49: return "Gain de Score d'Invasion + " + text;
         }
         return "";
     }
@@ -6477,7 +6506,7 @@ public class Localized_French : LOCALIZATION
             case 5: return "Régénération de PV + " + tDigit(value, 1) + " / sec tant que cette Capacité est équipée";
             case 6: return "+" + percent(value, 2) + " de Nullifier les Dégâts Physiques tant que cette Capacité est équipée";
             case 7: return "Vitesse de Déplacement + " + percent(value) + " tant que cette Capacité est équipée";
-            case 8: return "+50% de dégats pour cette Capacité par mètre parcouru";
+            case 8: return "+50% de dégâts pour cette Capacité par mètre parcouru";
             case 9: return "Portée de l'Effet de cette Capacité + ";
             case 10: return "Nombre de Coups de cette Capacité + 1";
             case 11: return "Temps de Recharge de cette Capacité -25%";
@@ -6500,7 +6529,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Portée de l'Effet de cette Capacité + ";
             case 7: return "À Définir";
             case 8: return "Chance de Coup Critique de cette Capacité : ";
-            case 9: return "Disparait momentanément et apparait de nouveau près de l'ennemi le plus éloigné pour lui ingliger des dégats";
+            case 9: return "Disparait momentanément et apparait de nouveau près de l'ennemi le plus éloigné pour lui ingliger des dégâts";
             case 10: return " chance de voler un matériau laché à chaque utilisation";
         }
         return "";
@@ -6519,7 +6548,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Dégâts de Glace +" + percent(value, 2) + " tant que cette Capacité est équipée";
             case 7: return "Tire une flèche de glace perçante vers le monstre le plus éloigné";
             case 8: return "Dégâts de Feu +" + percent(value, 2) + " tant que cette Capacité est équipée";
-            case 9: return "Dégats de Lumière +" + percent(value, 2) + " tant que cette Capacité est équipée";
+            case 9: return "Dégâts de Lumière +" + percent(value, 2) + " tant que cette Capacité est équipée";
             case 10: return "Dégâts des Ténèbres +" + percent(value, 2) + " tant que cette Capacité est équipée";
             case 11: return "Tire une flèche vers le centre qui attire tous les ennemis à l'écran vers celle-ci";
             case 12: return "Permet de se déplacer aux bords de l'écran pour échapper à la portée au corps à corps des ennemies avec une pénalité de vitesse dans le mode Mouvement Auto";
@@ -6585,7 +6614,7 @@ public class Localized_French : LOCALIZATION
             case 17: return "récompense unique";
             case 18: return "Niveau + !!!";
             case 19: return "Vous vous êtes Réincarné !";
-            case 20: return "Dégâts vers vous";
+            case 20: return "Dégâts infligés à vous";
             case 21: return "DPS";
             case 22: return "<size=20>Convocation<size=18>\n- Cliquer pour convoquer tous les héros passifs en arrière-plan.\n- Vous ne pouvez pas utiliser ceci dans un Donjon ou un Défi.";
             case 23: return "Maj + Clic pour déplacer tous les héros dans leur zone favorite.";
@@ -6851,7 +6880,7 @@ public class Localized_French : LOCALIZATION
             case 35: return "\n- Chaque Ascension Monde augmente les requis de niveau de palier total pour faire une autre ascension par 1";
             case 36: return "\n- Les héros débloqués seront toujours débloqués après l'Ascension Monde";
             case 37: return "\n- Les Bâtiments de Ville débloqués seront toujours débloqués après l'Ascension Monde";
-            case 38: return "\n- Les Quêtes Journalières et de Titres couremment acceptées devront être acceptées de nouveau après une Ascension Monde";
+            case 38: return "\n- Les Quêtes Journalières et de Titres couramment acceptées devront être acceptées de nouveau après une Ascension Monde";
             case 39: return "\n- Les objets dans les emplacements d'inventaire étendu ne seront disponibles qu'après les avoir débloqués de nouveau";
             case 40: return "\n- Les Familiers actifs après le # de familiers activables seront automatiquement désactivés";
             case 41: return "\n- Vous pourrez recommencer les missions complétées mais vous ne recevrez pas de Pièces Épiques venant d'elles";
@@ -6964,7 +6993,7 @@ public class Localized_French : LOCALIZATION
             case 1: return "Récompense pour Chaque Complétion";
             case 2: return "Raid de Boss";
             case 3: return "Participant";
-            case 4: return "Tous les héros couremment actifs vont rejoindre le combat !";
+            case 4: return "Tous les héros couramment actifs vont rejoindre le combat !";
         }
         return "";
     }
@@ -7070,7 +7099,7 @@ public class Localized_French : LOCALIZATION
             case 94: return "Quantité de réapprovisionnement de matériaux dans le Magasin ";
             case 95: return "Multiplie la Limite de Pièces Slime par ";
             case 96: return "Arène Mystique";
-            case 97: return "Dégâts aux Boss de Défi ";
+            case 97: return "Dégâts sur les Boss de Défi ";
             case 98: return "Complétion de Défi de Raid " + text;
             case 99: return "Débloque les Défis avec Handicap";
             case 100: return "Débloque les Défis Super Donjon";
@@ -7117,10 +7146,10 @@ public class Localized_French : LOCALIZATION
             case 1: return "<size=17>Florzporbe, le Roi des Slimes, était une fois un roi humain qui régnait sur ce qui est maintenant le Village des Slimes et la Cité des Slimes Magiques. Ce n'est qu'une rumeur, car tous les écrits ont été détruits, mais il est dit que son orgueil démesuré contre les dieux est ce qui a apporté cette terrible malédiction sur ses terres. Vous devez faire très attention lordque vous vous approchez de lui, car il commande toujours la capacité d'invoquer une variété de slimes à ses côtés pour le défendre de quiconque voudrait l'assassiner.</size>";
             case 2: return "<size=17>Aranetta, la Reine Veuve, est une créature monstrueuse apparue soudainement il y a plus d'une décennie. Ses laquais sans nombre ont envahis le Domaine de Tressel et tous ses nombreux vergers et villages. Personne n'a survécu son occupation. Elle a fait du labyrinthe de haies derrière le Manoir du Domaine de Tressel sa zone de reproduction. Tout aventurier essayant de l'exterminer doivent être conscient que son poison est sans doute le plus puissant du monde, et qu'elle a transformé tous les grands héros envoyés pour la tuer en repas.</size>";
             case 3: return "<size=17>Nostro, la Chauve-Souris Vampire, est apparu dans les légendes depuis des centaines d'années, cependant elle n'a jamais été apperçue directement. Il est dit que cette monstrosité maléfique absorbe la vie de ses victimes, ne laissant aucun survivant, et seules les âmes les plus chanceuses qui l'ont aperçue se sont échappées vivantes. Vivant dans les tréfonds des Cavernes Cramoisies, aussi connue comme la Grotte des Chauve-Souris, elle se tient en embuscade pour toute âme malchanceuse qui s'approche trop près de son domaine. Attention, car toute personne qui cherche à en faire sa proie a de grandes chances de devenir la proie.</size>";
-            case 4: return "<size=17>Dame Emelda, la Sorcière Fée, a gouverné pendant longtemps sur les Fées de Glainn Caillte, depuis que la Reine des Fées a succombé à une malédiction qui l'a transformé en pierre de façon permanente. Intervenant pour prendre la place de la souveraine pétrifiée, la haine de Dame Emelda envers toute créature non féerique a influencé les Fées de Glainn Caillte à devenir tordues et hostile. Sa maîtrise de la magie de feu est bien connue, et il est dit que dès qu'elle voit quelqu'un qui n'appartient pas à son espèce, elle l'incinère immédiatement. Il est dit que l'assassinat de cette bête pourrait restaurer la gentillesse des Fées qu'elles avaient il y a des siècles, mais il est aussi possible que leur corruption soit complète et qu'elles ne puissentplus être telles qu'elles étaient avant la mort de la Reine des Fées. Dans tous les cas, le danger envers le monde qu'est Dame Emelda reste, et beaucoup souhaiterait voir son règne se terminer.</size>";
+            case 4: return "<size=17>Dame Emelda, la Fée Sorcière, a gouverné pendant longtemps sur les Fées de Glainn Caillte, depuis que la Reine des Fées a succombé à une malédiction qui l'a transformé en pierre de façon permanente. Intervenant pour prendre la place de la souveraine pétrifiée, la haine de Dame Emelda envers toute créature non féerique a influencé les Fées de Glainn Caillte à devenir tordues et hostile. Sa maîtrise de la magie de feu est bien connue, et il est dit que dès qu'elle voit quelqu'un qui n'appartient pas à son espèce, elle l'incinère immédiatement. Il est dit que l'assassinat de cette bête pourrait restaurer la gentillesse des Fées qu'elles avaient il y a des siècles, mais il est aussi possible que leur corruption soit complète et qu'elles ne puissentplus être telles qu'elles étaient avant la mort de la Reine des Fées. Dans tous les cas, le danger envers le monde qu'est Dame Emelda reste, et beaucoup souhaiterait voir son règne se terminer.</size>";
             case 5: return "<size=17>Nari Sune, le Renard aux Neuf Queues, a beaucoup de rumeurs circulant autour d'elle. En tant que farceur connu, Nari Sune peut se transformer en plein de créatures différentes et peut même contrôler tout pouvoir natif que cette créature peut posséder. Généralement isolée et content d'ignorer l'état du monde, Nari Sune a récemment été découverte en train d'interférer avec les affaires politiques de différents royaumes, se transformant en leaders variés pour implanter conflit et discontentement. Les intentions de Nari Sune sont inconnues, mais ses actions ont donné lieu à des guerres, des coups d'état, et à la mort de milliers de personne dans le chaos qu'il s'en suit. Attention à tous ceux à sa recherche, car elle est ancienne est rusée, ce qui lui a permis de survivre depuis si longtemps.</size>";
-            case 6: return "<size=17>Octopabo, la Terreur des Tréfonds, tourmente les paquebots de commerce depuis maintenant soixante ans. Peu de choses sont connues à son propos, car il existe peu de survivants, et ceux qui existent ont péri peu après leur échapée à cause du poison mortel se trouvant dans l'encre noire d'Octopabo. Ce que l'on sait est qu'il aveugle complètement ses victimes, même en dehors de l'eau, car son encre reste dans l'air, formant d'épais nuages noirs. Lorsque ces nuages se dispersent enfin, le bâteau ainsi que son équipage ont disparus, comme si entièrement avalés par la bête. Seules les âmes les plus stupides et courageuses essayent de réclamer la prime multidécennale sur cette créature machiavélique.";
-            case 7: return "<size=17>Bananoutan, le Poignardeur Banane, est une créature mystérieuse. Brandissant des bananes en tant que dagues, cette créature peut en invoquer une infinité, bombardant une zone dans une évisceration totale de bananes. Certains pensent qu'il est l'esprit d'un arbre qui a été maudit par une sorcière pour ne pas avoir poussé de fruit suite à se demande, cependant personne ne connait la réelle origine de ce monstre. Cependant, il est su qu'il agit rarement d'une façon amicale, et il devient immédiatement hostile lorsqu'il est approché. Il est dit que seuls ceux portant le symbole de la Grande Banane peut s'en approcher, mais personne ne sait vraiment ce que c'est ou comment l'acquérir.";
+            case 6: return "<size=17>Octopabo, la Terreur des Profondeurs, tourmente les paquebots de commerce depuis maintenant soixante ans. Peu de choses sont connues à son propos, car il existe peu de survivants, et ceux qui existent ont péri peu après leur échapée à cause du poison mortel se trouvant dans l'encre noire d'Octopabo. Ce que l'on sait est qu'il aveugle complètement ses victimes, même en dehors de l'eau, car son encre reste dans l'air, formant d'épais nuages noirs. Lorsque ces nuages se dispersent enfin, le bâteau ainsi que son équipage ont disparus, comme si entièrement avalés par la bête. Seules les âmes les plus stupides et courageuses essayent de réclamer la prime multidécennale sur cette créature machiavélique.";
+            case 7: return "<size=17>Bananoutan, le Bananattaqueur, est une créature mystérieuse. Brandissant des bananes en tant que dagues, cette créature peut en invoquer une infinité, bombardant une zone dans une évisceration totale de bananes. Certains pensent qu'il est l'esprit d'un arbre qui a été maudit par une sorcière pour ne pas avoir poussé de fruit suite à se demande, cependant personne ne connait la réelle origine de ce monstre. Cependant, il est su qu'il agit rarement d'une façon amicale, et il devient immédiatement hostile lorsqu'il est approché. Il est dit que seuls ceux portant le symbole de la Grande Banane peut s'en approcher, mais personne ne sait vraiment ce que c'est ou comment l'acquérir.";
             case 8: return "";
             case 9: return "";
             case 10: return "";
@@ -7342,23 +7371,23 @@ public class Localized_French : LOCALIZATION
         switch (id)
         {
             case 0: return "En combat dans" + text;
-            case 1: return "en attente dans " + text;
+            case 1: return "En attente dans " + text;
             case 2: return "EXP";
             case 3: return "EXP gagnés dans la dernière minute";
             case 4: return "Points d'Abilité disponibles";
-            case 5: return " Héros sont couremment actifs";
-            case 6: return " Héro est couremment actif";
+            case 5: return " Héros sont couramment actifs";
+            case 6: return " Héro est couramment actif";
             case 7:
                 return optStrL
-                + "\n- En plus du héros couremmen en jeu, vous pouvez activer les autres héros en arrière-plan " +
+                + "\n- En plus du héros couramment en jeu, vous pouvez activer les autres héros en arrière-plan " +
                 "\naprès avoir reçu la Quête de Titre [Preuve de Reinc.]."
                 + "\n- " + text + " héros peuvent être activés en même temps." +
                 "\n- Vous pouvez augmenter cette limite à travers une amélioration d'Ascension Monde.";
-            case 8: return "Ce héros est couremment actif.";
-            case 9: return "Ce héros est couremment actif en arrière-plan.\nEfficacité des Gains en Arrière-Plan : ";
+            case 8: return "Ce héros est couramment actif.";
+            case 9: return "Ce héros est couramment actif en arrière-plan.\nEfficacité des Gains en Arrière-Plan : ";
             case 10: return "vous pouvez activer ce héros en arrière-plan.\nEfficacité des Gains en Arrière-Plan : ";
             case 11: return "Finissez la Quête de Titre [Preuve de Reinc.] pour permettre l'Activation en Arrière-Plan.";
-            case 12: return "Vous jouez couremment le héros " + text;
+            case 12: return "Vous jouez couramment le héros " + text;
             case 13: return "Jouer le héros " + text;
             default: return "" + text;
         }
@@ -7393,7 +7422,7 @@ public class Localized_French : LOCALIZATION
             case 2: return "Sélectionnez un bonus de déconnexion parmi les suivants :";
             case 3: return "Bonus de Nitro";
             case 4: return "Vous gagnerez <color=green>" + text + " Nitro</color>.";
-            case 5: return "Vous êtes couremment à vote max de Nitro.";
+            case 5: return "Vous êtes couramment à vote max de Nitro.";
             case 6: return "1 Nitro est gagné toutes les 2 secondes de déconnexion.";
             case 7: return "Le Temps de Jeu n'augmentera pas.";
             case 8: return "Bonus de Temps de Jeu Passif";
@@ -7452,13 +7481,31 @@ public class Localized_French : LOCALIZATION
         if (area.curseAbilityMul < 1)
         {
             if (isCurse) tempStr += ", ";
-            tempStr += "Réduit les Points d'Abilité à " + percent(area.curseAbilityMul);
+            tempStr += "Réduit les Points d'Abilité de " + percent(area.curseAbilityMul);
             isCurse = true;
         }
         if (area.cursePetBasicStatsMul < 1)
         {
             if (isCurse) tempStr += ", ";
-            tempStr += "Réduit les Stats des Familiers à " + percent(area.cursePetBasicStatsMul);
+            tempStr += "Réduit les Stats des Familiers de " + percent(area.cursePetBasicStatsMul);
+            isCurse = true;
+        }
+        if (area.curseMoveSpeedMul < 1)
+        {
+            if (isCurse) tempStr += ", ";
+            tempStr += "Réduit la Vitesse de Déplacement de " + percent(area.curseMoveSpeedMul);
+            isCurse = true;
+        }
+        if (area.curseSkillRangeMul < 1)
+        {
+            if (isCurse) tempStr += ", ";
+            tempStr += "Réduit la Portée des Capacités de " + percent(area.curseSkillRangeMul);
+            isCurse = true;
+        }
+        if (area.curseAOEMul < 1)
+        {
+            if (isCurse) tempStr += ", ";
+            tempStr += "Réduit la Taille des Zones d'Effet de " + percent(area.curseAOEMul);
             isCurse = true;
         }
         return tempStr;
@@ -7516,7 +7563,7 @@ public class Localized_French : LOCALIZATION
             case 4: return "Compléter une zone au moins une fois";
             case 5: return "La Réincarnation est une fonctionnalité de prestige pour chaque héros qui remet à zéro quels progrès mais permet de gagner des Points de Réincarnation utilisés pour des Améliorations de Réincarnation, qui vous permettent d'atteindre un Niveau de Héros plus haut et plus rapidement !";
             case 6: return "La Réincarnation de Classe 2 remet à zéro tous les Niveaux de Capacité et les Maîtrises de Capacité en plus de ce que celle de Classe 1 remet à zéro. Cependant, les Améliorations de Réincarnation de Classe 2 booste les Améliorations de Classe 1 et le Gain de Maîtrise de Capacité !";
-            case 7: return "La Réincarnation de Classe 3 remet à zéro le Niveau des Équipements et leur Maîtrise du héros couremment actif hero en plus de ce que celle de Classe 1 remet à zéro, ce qui veut dire que vous pouvez gagner des Points de Dictionnaire à nouveau. Les Améliorations de Réincarnation de Classe 3 booste les améliorations des Classes inférieures et permet d'augmenter le Niveau de Héros et le Niveau des Équipements plus haut et plus rapidement !";
+            case 7: return "La Réincarnation de Classe 3 remet à zéro le Niveau des Équipements et leur Maîtrise du héros couramment actif hero en plus de ce que celle de Classe 1 remet à zéro, ce qui veut dire que vous pouvez gagner des Points de Dictionnaire à nouveau. Les Améliorations de Réincarnation de Classe 3 booste les améliorations des Classes inférieures et permet d'augmenter le Niveau de Héros et le Niveau des Équipements plus haut et plus rapidement !";
             case 8: return "La Réincarnation de Classe " + text + " remet à zéro :";
             case 9: return "Le Niveau du Héros et son EXP";
             case 10: return "Les Quêtes Générales";
@@ -7545,7 +7592,7 @@ public class Localized_French : LOCALIZATION
             case 0: return "Boosteur de Nitro";
             case 1: return "Temps de Jeu x" + text;
             case 2: return "Vous gagnez du Nitro en étant hors-ligne";
-            case 3: return "Vous avez couremment";
+            case 3: return "Vous avez couramment";
             case 4: return "L'Objet du Magasin Épique [Chargeur de Nitro Max] peut donner du Nitro après la Limite de Nitro.";
             case 5: return "Cliquer pour Activer/Désactiver";
             case 6: return "Tant que le Boosteur de Nitro est Activé, la Vitesse du Jeu est";
@@ -7556,7 +7603,7 @@ public class Localized_French : LOCALIZATION
             case 11: return "Pièce de Slime";
             case 12: return "Gagné lorsque l'Or dépasse la Limite d'Or";
             case 13: return "Utilisé pour les Améliorations de Banque Slime, qui sont débloquées par la Banque Slime au Niveau de Guilde 35";
-            case 14: return "Vous avez couremment";
+            case 14: return "Vous avez couramment";
             case 15: return "Gagné dans les 10 dernières minutes";
             case 16: return "Efficacité de Gain : ";
             case 17: return " d'or dépassant la limite";
@@ -7564,11 +7611,11 @@ public class Localized_French : LOCALIZATION
             case 19: return "Base à travers les Améliorations";
             case 20: return "Ville";
             case 21: return "Gagné lors de la défaite d'un monstre";
-            case 22: return "Vous avez couremment";
+            case 22: return "Vous avez couramment";
             case 23: return "Gagné pendant la dernière minute";
             case 24: return "Or Gagné au Total";
             case 25: return "Détails de la Limite D'Or";
-            case 26: return "Vous avez couremment";
+            case 26: return "Vous avez couramment";
             case 27: return "Gagné pendant la dernière minute";
             case 28: return "Tout monstre lâche " + text + text2 + " lors qu'ils sont vaincus par le/la ";
             case 29: return " ou le/la ";
@@ -7705,7 +7752,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.AbilityReset:
                 name = "Réinitialisation d'Abilité";
-                effect = "Réinitialise les Abilités et redonne les Points d'Abilité du Héros couremment en jeu.";
+                effect = "Réinitialise les Abilités et redonne les Points d'Abilité du Héros couramment en jeu.";
                 break;
             case EpicStoreKind.GuildAbilityReset:
                 name = "Réinitialisation d'Abilité de Guilde";
@@ -8103,7 +8150,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Vous pouvez aussi activer les autres héros en arrière-plan une fois que le titre [Preuve de Reinc.] est acquis.";
                 tempStr += " Une Réincarnation de Classe 1 doit être complétée pour acquérir le titre [Preuve de Reinc. 1], une Réincarnation de Classe 2 doit être complétée pour acquérir le titre [Preuve de Reinc. 2], et cetera.";
                 tempStr += "\n- Les héros en arrière-plan gagnent la même chose que s'ils sont actifs, à un taux réduit. Ils sont notés comme Passifs dans l'onglet Guilde.";
-                tempStr += "\n- L'obtention d'un titre [Preuve de Réinc.] supplémentaire augmente l'efficacité de ce héros tant qu'il est actif en arrière-plan et non pas le héros couremment en jeu.";
+                tempStr += "\n- L'obtention d'un titre [Preuve de Réinc.] supplémentaire augmente l'efficacité de ce héros tant qu'il est actif en arrière-plan et non pas le héros couramment en jeu.";
                 tempStr += "\n\n";
                 tempStr += "<u>Portée de Combat</u>";
                 tempStr += "\n- La Portée de Combat est une valeur qui indique la distance minimale entre le héros et le monstre pour que l'attaque connecte en combat.";
@@ -8129,7 +8176,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "<u>Dégâts Infligés</u>";
                 tempStr += "\n- Tout d'abord, les dégâts d'une capacité sont calculés comme ceci : [ATQ/MATQ du Héros] * [Multiplicateur de Dégâts de la Capacité]";
                 tempStr += "\n- ensuite, quand un monstre reçoit l'attaque de la capacité : les dégâts sont réduits par la DEF et le pourcentage de résistance élémentaire du monstre";
-                tempStr += "\n- Après cela, les dégâts sont multipliés par [% de Dégâts Physiques/de Feu/de Glace/d'Electricité/de Lumière/de Ténèbres] et [% de Dégats spécifiques au monstre à travers les effects d'Equipements uniques]";
+                tempStr += "\n- Après cela, les dégâts sont multipliés par [% de Dégâts Physiques/de Feu/de Glace/d'Electricité/de Lumière/de Ténèbres] et [% de Dégâts spécifiques au monstre à travers les effects d'Equipements uniques]";
                 tempStr += "\n\n";
                 tempStr += "<u>Dégâts Reçus</u>";
                 tempStr += "\n- Test du % de Nullification des Dégâts - Aucun dégât n'est reçu. Si ce test a échoué, ces prochains points arrivent dans l'ordre qu'ils sont donnés";
@@ -8441,7 +8488,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n\n";
                 tempStr += "<u>Membres</u>";
                 tempStr += "\n- Ici, vous pouvez voir que ce font les différents membres de la guilde.";
-                tempStr += "\n- Vous pouvez activer jusqu'à 3 héros au début du jeu. Seul un héros peut être actif, qui est votre héros couremment en jeu. Les autres héros actifs sont en mode Passif. Ils continuent de faire tout comme s'ils sont actifs, mais avec un taux de gains réduit. ";
+                tempStr += "\n- Vous pouvez activer jusqu'à 3 héros au début du jeu. Seul un héros peut être actif, qui est votre héros couramment en jeu. Les autres héros actifs sont en mode Passif. Ils continuent de faire tout comme s'ils sont actifs, mais avec un taux de gains réduit. ";
                 tempStr += "\n- Vous pouvez déplacer votre souris sur le bouton Passif/Actif/Inactif pour déterminer le % d'Efficacité en Arrière-Plan. Cette valeur peut être améliorée en complétant les quêtes de titres pour les titres PReuve de Réincarnation 1/2/3/4/5/6, que vous débloquerez après avoir atteint le Niveau de Héros 100.";
                 tempStr += "\n- Vous pouvez déplacer votre souris sur chaque héros pour voir où ils sont ainsi que leur gains d'EXP dans la dernière minute.";
                 tempStr += "\n\n";
@@ -8553,7 +8600,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Les héros inactifs ne participeront pas au combat. ";
                 tempStr += "\n\n";
                 tempStr += "<u>Combats de Boss Solo</u>";
-                tempStr += "\n- Les combats de Boss Solo utilisent seulement le héros couremment actif.";
+                tempStr += "\n- Les combats de Boss Solo utilisent seulement le héros couramment actif.";
                 tempStr += "\n- Toutes les capacités (y comprises globales) sont disponibles dans ce combat.";
                 tempStr += "\n- Vous devez d'abord vaincre le Raid de Boss pour débloquer le Boss Solo.";
                 tempStr += "\n\n";
@@ -8579,7 +8626,7 @@ public class Localized_French : LOCALIZATION
             case HelpKind.WorldAscension:
                 tempStr += "L'Ascension Monde est un processus dans lequel le monde entier est réinitialisé, ce qui vous fait recommencer du début. Cependant, ce nouveau monde sera bien plus fort que le précédent. ";
                 tempStr += "\n\n";
-                tempStr += "La liste complète de ce qui est réinitialisé et de ce qui ne l'est pas est visible dans l'onglet Ascension, dans l'icône en haut à gauche (I). Vous pourrez voir ce qui est réinitialisé, ce qui ne l'est pas, ainsi que quelques mots d'avertissement. En haut à droite, vous pouvez changer la Classe de l'Ascension Monde lorsqu'elles seront débloquées. Il n'existe que l'Ascension Monde de Classe 1 en jeu couremment.";
+                tempStr += "La liste complète de ce qui est réinitialisé et de ce qui ne l'est pas est visible dans l'onglet Ascension, dans l'icône en haut à gauche (I). Vous pourrez voir ce qui est réinitialisé, ce qui ne l'est pas, ainsi que quelques mots d'avertissement. En haut à droite, vous pouvez changer la Classe de l'Ascension Monde lorsqu'elles seront débloquées. Il n'existe que l'Ascension Monde de Classe 1 en jeu couramment.";
                 tempStr += "\n\n\n";
                 tempStr += "<u>Ascension Monde de Classe 1</u>";
                 tempStr += "\n";
