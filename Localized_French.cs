@@ -725,8 +725,10 @@ public class Localized_French : LOCALIZATION
                 return "Augmente les Dégâts Magiques par ([Furie d'Esprit] x Log2([MDEF]))%";
             case BasicWord.After:
                 return "Après";
+            case BasicWord.NumberFormat://NEW ver1.1.14.6.11
+                return "Number Format";
         }
-        return basicWord.ToString();
+        return base.Basic(basicWord);
     }
 
     //Menu
@@ -765,7 +767,7 @@ public class Localized_French : LOCALIZATION
             case MenuKind.Expedition:
                 return "Expédition";
         }
-        return kind.ToString();
+        return base.Menu(kind);
     }
     public override string EpicStoreMenu()
     {
@@ -849,7 +851,7 @@ public class Localized_French : LOCALIZATION
             case MultiplierKind.WardedFury:
                 return "Furie d'Esprit";
         }
-        return kind.ToString();
+        return base.StatsBreakdown(kind);
     }
     //Resource
     public override string ResourceName(ResourceKind kind)
@@ -863,7 +865,7 @@ public class Localized_French : LOCALIZATION
             case ResourceKind.Leaf:
                 return "Feuille";
         }
-        return kind.ToString();
+        return base.ResourceName(kind);
     }
     //Hero
     public override string Hero(HeroKind kind)
@@ -883,7 +885,7 @@ public class Localized_French : LOCALIZATION
             case HeroKind.Tamer:
                 return "Dompteuse";
         }
-        return kind.ToString();
+        return base.Hero(kind);
     }
     //Stats
     string tempStrBaseStats;
@@ -941,7 +943,7 @@ public class Localized_French : LOCALIZATION
             case BasicStatsKind.SPD:
                 return "Réduit le Temps d'Utilisation des Capacités";
         }
-        return kind.ToString();
+        return base.BasicStatsDescription(kind);
     }
     string tempStrStats;
     public override string Stat(Stats stats, bool isShort = false)
@@ -1016,7 +1018,7 @@ public class Localized_French : LOCALIZATION
             case GlobalStats.LeafGain:
                 return "Gain de Feuille";
         }
-        return stats.ToString();
+        return base.GlobalStat(stats);
     }
     //Ability
     public override string Ability(AbilityKind kind)
@@ -1034,7 +1036,7 @@ public class Localized_French : LOCALIZATION
             case AbilityKind.Luck:
                 return "CHA";
         }
-        return kind.ToString();
+        return base.Ability(kind);
     }
     public override string AbilityDescription(AbilityKind kind)
     {
@@ -1051,7 +1053,7 @@ public class Localized_French : LOCALIZATION
             case AbilityKind.Luck:
                 return "La Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition d'Equipement.";
         }
-        return kind.ToString();
+        return base.AbilityDescription(kind);
     }
     public override string AbilityWord(AbilityWord kind)
     {
@@ -1146,7 +1148,7 @@ public class Localized_French : LOCALIZATION
             case global::AbilityWord.BlessingEffect:
                 return "Effet de Bénédiction";
         }
-        return kind.ToString();
+        return base.AbilityWord(kind);
     }
     //Title
     public override string Title(TitleKind kind)
@@ -1206,7 +1208,7 @@ public class Localized_French : LOCALIZATION
             case TitleKind.Quester:
                 return "Quêteur";
         }
-        return kind.ToString();
+        return base.Title(kind);
     }
     public override string TitleEffect(TitleKind kind, double effectValue, bool isSub = false)
     {
@@ -1332,7 +1334,7 @@ public class Localized_French : LOCALIZATION
             case MonsterSpecies.Mimic:
                 return "Mimique";
         }
-        return species.ToString();
+        return base.MonsterSpeciesName(species);
     }
     public enum GenderKind
     {
@@ -1539,7 +1541,7 @@ public class Localized_French : LOCALIZATION
             case PetActiveEffectKind.AutoAlchemiseForNito:
                 return "Créée et désassemble des Potions de Soin Mineures automatiquement pour maximiser la Nitro lorsqu'il n'y en a plus. (le Slime Magique Bleu doit être Actif, requiert [Auto Désassemblage de Potion Avancé] dans le Magasin Epique et assez d'essences pour maximiser la Nitro)";
         }
-        return kind.ToString();
+        return base.PetActiveEffect(kind);
     }
     //Area
     public override string AreaName(AreaKind kind)
@@ -1567,7 +1569,7 @@ public class Localized_French : LOCALIZATION
             case AreaKind.UnicornIsland:
                 return "Île des Licornes";
         }
-        return kind.ToString();
+        return base.AreaName(kind);
     }
 
     //未
@@ -1966,7 +1968,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentKind.ScreenOfTheSneakyFlametiger:
                 return "Ecran Furtif de Tigre de Feu";
         }
-        return kind.ToString();
+        return base.EquipmentName(kind);
     }
     public override string EquipmentEffectName(EquipmentEffectKind kind)
     {
@@ -2239,7 +2241,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.ChallengeBossKnowledge:
                 return "Connaissance de Boss de Défi";
         }
-        return kind.ToString();
+        return base.EquipmentEffectName(kind);
     }
     public override string EquipmentEffect(EquipmentEffectKind kind, double value, bool isLevelMaxEffect = false, double perLevelValue = 0, bool isOnlyEffectValue = false)
     {
@@ -2295,42 +2297,43 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.HPMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "PV <color=red>" + percent(value) + "</color>";
-                else tempString = "PV + " + percent(value);
+                if (value < 0) tempString = "PV <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "PV + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MPMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "PM <color=red>" + percent(value) + "</color>";
-                else tempString = "PM + " + percent(value);
+                if (value < 0) tempString = "PM <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "PM + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "ATQ <color=red>" + percent(value) + "</color>";
-                else tempString = "ATQ + " + percent(value);
+                if (value < 0) tempString = "ATQ <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "ATQ + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MATKMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "MATQ <color=red>" + percent(value) + "</color>";
-                else tempString = "MATQ + " + percent(value);
+                if (value < 0) tempString = "MATQ <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "MATQ + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DEFMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "DEF <color=red>" + percent(value) + "</color>";
-                else tempString = "DEF + " + percent(value);
+                if (value < 0) tempString = "DEF <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "DEF + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MDEFMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "MDEF <color=red>" + percent(value) + "</color>";
-                else tempString = "MDEF + " + percent(value);
+                if (value < 0) tempString = "MDEF <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "MDEF + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKPropotion:
                 if (isOnlyEffectValue) return percent(value);
+                tempString = "ATQ + " + percent(value) + " du Niveau du Héros";
                 if (value < 0) tempString = "ATQ <color=red>" + percent(value) + "</color> du Niveau du Héros";
                 else tempString = "ATQ + " + percent(value) + " du Niveau du Héros";
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
@@ -2493,44 +2496,44 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.WarriorSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités du Guerrier (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités du Guerrier (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités du Guerrier (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités du Guerrier (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.WizardSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités de la Mage (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités de la Mage (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités de la Mage (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités de la Mage (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.AngelSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités de l'Ange (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités de l'Ange (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités de l'Ange (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités de l'Ange (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThiefSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités du Voleur (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités du Voleur (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités du Voleur (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités du Voleur (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.ArcherSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités de l'Archer (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités de l'Archer (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités de l'Archer (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités de l'Archer (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.TamerSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités de la Dompteuse (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités de la Dompteuse (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités de la Dompteuse (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités de la Dompteuse (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.AllSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau de Toutes les Capacités (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau de Toutes les Capacités (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau de Toutes les Capacités (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau de Toutes les Capacités (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.SlimeKnowledge:
@@ -2812,8 +2815,8 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.TownMatAreaClearGain:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + tDigit(value, 1);
+                if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone <color=red>" + percent(value) + "</color>";
+                else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             //case EquipmentEffectKind.TownMatDungeonRewardGain:
@@ -2860,7 +2863,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.ChallengeBossKnowledge:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Dégâts infligés aux Boss de Défi <color=red>" + percent(value) + "</color>";
-                else           tempString = "Dégâts infligés aux Boss de Défi + " + percent(value);
+                else tempString = "Dégâts infligés aux Boss de Défi + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             default:
@@ -2888,7 +2891,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentForgeEffectKind.IncreaseEffectIncrement:
                 return "Augmentation de l'Effet / Nv + " + percent(value);
         }
-        return kind.ToString();
+        return base.ForgeNameString(kind, value);
     }
     public override string ForgeEffectString(EquipmentForgeEffectKind kind, double value, double maxValue)
     {
@@ -2971,7 +2974,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentPart.Jewelry:
                 return "Bijou";
         }
-        return part.ToString();
+        return base.EquipmentPartName(part);
     }
     public override string EquipmentRarityName(EquipmentRarity rarity)
     {
@@ -2988,7 +2991,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentRarity.Epic:
                 return "Épique";
         }
-        return rarity.ToString();
+        return base.EquipmentRarityName(rarity);
     }
 
     public override string EquipmentSetKindName(EquipmentSetKind kind)
@@ -3016,7 +3019,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentSetKind.Unicorn:
                 return "Collection Licorne";
         }
-        return kind.ToString();
+        return base.EquipmentSetKindName(kind);
     }
 
     //Enchant
@@ -3061,7 +3064,7 @@ public class Localized_French : LOCALIZATION
             case EnchantKind.OptionCopyAll:
                 return "Parchemin de Copie Globale";
         }
-        return kind.ToString();
+        return base.EnchantName(kind);
     }
     //EnchantInfo
     public override string EnchantInformation(EnchantKind kind)
@@ -3105,7 +3108,7 @@ public class Localized_French : LOCALIZATION
             case EnchantKind.OptionCopyAll:
                 return "Copie tous les enchantements d'un équipement et créée des Parchemins d'Enchantement associés. Les enchantements originels sont gardés.";
         }
-        return kind.ToString();
+        return base.EnchantInformation(kind);
     }
     //Alchemy
     public override (string name, string description) Catalyst(Catalyst catalyst)
@@ -3208,7 +3211,7 @@ public class Localized_French : LOCALIZATION
             case EssenceKind.EssenceOfEternity:
                 return "Essence d'Éternité";
         }
-        return kind.ToString();
+        return base.EssenceName(kind);
     }
     //AlchemyUpgrade
     public override string AlchemyUpgradeName(AlchemyUpgradeKind kind)
@@ -3236,7 +3239,7 @@ public class Localized_French : LOCALIZATION
             case AlchemyUpgradeKind.NitrousExtraction:
                 return "Extraction Nitrique";
         }
-        return kind.ToString();
+        return base.AlchemyUpgradeName(kind);
     }
     public override string AlchemyUpgradeEffect(AlchemyUpgradeKind kind, double effectValue)
     {
@@ -3263,7 +3266,7 @@ public class Localized_French : LOCALIZATION
             case AlchemyUpgradeKind.NitrousExtraction:
                 return "Donne 1% de chance de gagner " + tDigit(effectValue) + " Nitro lors d'une alchimie";
         }
-        return kind.ToString();
+        return base.AlchemyUpgradeEffect(kind, effectValue);
     }
 
     //Potion
@@ -3402,7 +3405,7 @@ public class Localized_French : LOCALIZATION
             case PotionKind.BerserkersStone:
                 return "Pierre de Berserker";
         }
-        return kind.ToString();
+        return base.PotionName(kind);
     }
     //PotionConsumeInfo
     public override string PotionConsume(PotionConsumeConditionKind kind, double chance)
@@ -3422,7 +3425,7 @@ public class Localized_French : LOCALIZATION
             case PotionConsumeConditionKind.Capture:
                 return "Clic droit pour essayer de capturer un monstre";
         }
-        return kind.ToString();
+        return base.PotionConsume(kind, chance);
     }
     //PotionEffect
     public override string PotionEffect(PotionKind kind, double effectValue, bool isPassive = false)
@@ -3587,7 +3590,7 @@ public class Localized_French : LOCALIZATION
                 if (isPassive) return "Effet de l'Equipement + " + percent(effectValue);
                 return "Dégâts infligés aux Boss de Défi + " + percent(effectValue);
         }
-        return kind.ToString();
+        return base.PotionEffect(kind, effectValue);
     }
     //PotionType
     public override string PotionType(PotionType type)
@@ -3633,7 +3636,7 @@ public class Localized_French : LOCALIZATION
             case global::PotionType.Talisman:
                 return "Talisman";
         }
-        return type.ToString();
+        return base.PotionType(type);
     }
     public override string TalismanRarity(TalismanRarity rarity)
     {
@@ -3650,7 +3653,7 @@ public class Localized_French : LOCALIZATION
             case global::TalismanRarity.Epic:
                 return "Épique";
         }
-        return rarity.ToString();
+        return base.TalismanRarity(rarity);
     }
 
     //SkillName
@@ -3679,7 +3682,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindWarrior.KnockingShot:
                 return "Coup Sonnant";
         }
-        return kind.ToString();
+        return base.SkillNameWarrior(kind);
     }
     public override string SkillNameWizard(SkillKindWizard kind)
     {
@@ -3706,7 +3709,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindWizard.LightningThunder:
                 return "Foudroiement";
         }
-        return kind.ToString();
+        return base.SkillNameWizard(kind);
     }
     public override string SkillNameAngel(SkillKindAngel kind)
     {
@@ -3733,7 +3736,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindAngel.HolyArch:
                 return "Arche Sainte";
         }
-        return kind.ToString();
+        return base.SkillNameAngel(kind);
     }
     public override string SkillNameThief(SkillKindThief kind)
     {
@@ -3760,7 +3763,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindThief.Assassination:
                 return "Assassinat";
         }
-        return kind.ToString();
+        return base.SkillNameThief(kind);
     }
     public override string SkillNameArcher(SkillKindArcher kind)
     {
@@ -3787,7 +3790,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindArcher.Kiting:
                 return "Kiting";
         }
-        return kind.ToString();
+        return base.SkillNameArcher(kind);
     }
     public override string SkillNameTamer(SkillKindTamer kind)
     {
@@ -3814,7 +3817,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindTamer.TuneOfTotalTaming:
                 return "Mélodie de Domptage Total";
         }
-        return kind.ToString();
+        return base.SkillNameTamer(kind);
     }
     public override string SkillDescriptionWarrior(SkillKindWarrior kind)
     {
@@ -4012,7 +4015,7 @@ public class Localized_French : LOCALIZATION
             case EffectKind.EffectRange:
                 return "Portée de l'Effet";
         }
-        return effect.ToString();
+        return base.SkillEffect(effect);
     }
     //バフ
     public override string BuffName(Buff kind)
@@ -4036,7 +4039,7 @@ public class Localized_French : LOCALIZATION
             case Buff.SkillLevelUp:
                 return "Niveau de Capacité";
         }
-        return kind.ToString();
+        return base.BuffName(kind);
     }
     //デバフ
     public override string DebuffName(Debuff kind)
@@ -4080,7 +4083,7 @@ public class Localized_French : LOCALIZATION
             case Debuff.MPAspiration:
                 return "Drain de PM";
         }
-        return kind.ToString();
+        return base.DebuffName(kind);
     }
     //Stance未
     public override (string name, string effect) Stance(Stance stance)
@@ -4180,7 +4183,7 @@ public class Localized_French : LOCALIZATION
             case GuildAbilityKind.ExpGain:
                 return "Apprentissage";
         }
-        return kind.ToString();
+        return base.GuildAbilityName(kind);
     }
     //GuildAbilityEffect
     public override string GuildAbilityEffect(GuildAbilityKind kind, double effectValue)
@@ -4246,7 +4249,7 @@ public class Localized_French : LOCALIZATION
             case DailyQuestRarity.Epic:
                 return "Épique";
         }
-        return rarity.ToString();
+        return DailyQuestRarityName(rarity);
     }
     //Quest
     public override (string name, string client, string description, string condition, string reward, string unlock) Quest(QUEST quest)
@@ -5756,7 +5759,7 @@ public class Localized_French : LOCALIZATION
             case MaterialKind.EnchantedShard:
                 return "Éclat Enchanté";
         }
-        return kind.ToString();
+        return base.Material(kind);
     }
     //Setting
     public override string Toggle(ToggleKind kind)
@@ -5874,7 +5877,7 @@ public class Localized_French : LOCALIZATION
             case ToggleKind.AutoAreaProgressPassiveHero:
                 return "Transporte les Héros Passifs dans la Zone de Progression Auto";
         }
-        return kind.ToString();
+        return base.Toggle(kind);
     }
 
     //Rebirth
@@ -6182,7 +6185,7 @@ public class Localized_French : LOCALIZATION
             case RebirthPointKind.EQLevel:
                 return "Niveau d'Équipement";
         }
-        return kind.ToString();
+        return base.RebirthPointGainKind(kind);
     }
     //RebirthInfo
     public override string RebirthInfo(Rebirth rebirth)
@@ -6216,7 +6219,7 @@ public class Localized_French : LOCALIZATION
             case 2: return "- Zone Favorite\nAprès une Réincarnation, vous commencerez à ";
             case 3: return "Aller à la meilleure zone de gain d'EXP/sec tous les 25èmes Niveaux de Héros. <size=16>( Seulement valide pour le héros courant )";
         }
-        return "";
+        return base.AutoRebirthInfo(id);
     }
 
     //Challenge
@@ -6233,7 +6236,7 @@ public class Localized_French : LOCALIZATION
             case global::ChallengeType.SuperDungeon:
                 return "Super Donjon";
         }
-        return type.ToString();
+        return ChallengeType(type);
     }
     //ChallengeHandicap
     public override string HandicapString(ChallengeHandicapKind kind)
@@ -6271,7 +6274,7 @@ public class Localized_French : LOCALIZATION
             case ChallengeHandicapKind.DisableManualMove:
                 return "Le mouvement manuel est désactivé";
         }
-        return kind.ToString();
+        return base.HandicapString(kind);
     }
 
     //ExpeditionMilestone
@@ -6295,7 +6298,7 @@ public class Localized_French : LOCALIZATION
             case 13: return "Effet Passif des Expéditions + 25%";
             case 14: return "Vitesse des Expéditions + 25%";
         }
-        return "";
+        return base.ExpeditionMilestoneString(id);
     }
 
     //AreaMissionMilestone
@@ -6354,7 +6357,7 @@ public class Localized_French : LOCALIZATION
             case 48: return "Intérêt sur les Pièces Slime + " + text;
             case 49: return "Gain de Score d'Invasion + " + text;
         }
-        return "";
+        return base.MissionMilestoneString(id);
     }
 
     //WorldAscensionMissions
@@ -6457,7 +6460,7 @@ public class Localized_French : LOCALIZATION
             case 92: return "Le Rang de la Taverne est préservé lors d'une Ascension Monde";
             case 93: return "Les zones de la région " + str1 + " débloquées et leur # de Complétions sont préservés";
         }
-        return "";
+        return base.AscensionMissionString(id);
     }
 
     public override string WarriorSkillsString(int id)
@@ -6475,7 +6478,7 @@ public class Localized_French : LOCALIZATION
             case 8: return "Dégâts de cette capacité +50% par mètre parcouru";
             case 9: return "Effectue une charge rapide vers la cible pour attaquer.";
         }
-        return "";
+        return base.WarriorSkillsString(id);
     }
 
     public override string WizardSkillsString(int id)
@@ -6490,7 +6493,7 @@ public class Localized_French : LOCALIZATION
             case 5: return "Temps de Recharge de cette Capacité -50%";
             case 6: return "À Définir";
         }
-        return "";
+        return base.WizardSkillsString(id);
     }
 
     public override string AngelSkillsString(int id, double value = 0)
@@ -6512,7 +6515,7 @@ public class Localized_French : LOCALIZATION
             case 12: return "À Définir";
             case 13: return "Résistance aux Débuffs +" + percent(value, 2) + " tant que cette Capacité est équipée";
         }
-        return "";
+        return base.AngelSkillsString(id);
     }
 
     public override string ThiefSkillsString(int id, double value = 0)
@@ -6531,7 +6534,7 @@ public class Localized_French : LOCALIZATION
             case 9: return "Disparait momentanément et apparait de nouveau près de l'ennemi le plus éloigné pour lui ingliger des dégâts";
             case 10: return " chance de voler un matériau laché à chaque utilisation";
         }
-        return "";
+        return base.ThiefSkillsString(id);
     }
 
     public override string ArcherSkillsString(int id, double value = 0)
@@ -6552,7 +6555,7 @@ public class Localized_French : LOCALIZATION
             case 11: return "Tire une flèche vers le centre qui attire tous les ennemis à l'écran vers celle-ci";
             case 12: return "Permet de se déplacer aux bords de l'écran pour échapper à la portée au corps à corps des ennemies avec une pénalité de vitesse dans le mode Mouvement Auto";
         }
-        return "";
+        return base.ArcherSkillsString(id);
     }
 
     public override string TamerSkillsString(int id, double value = 0)
@@ -6586,7 +6589,7 @@ public class Localized_French : LOCALIZATION
             case 24: return "Essaye de capturer tous les monstres de la même couleur que la cible dans une zone d'effet";
             case 25: return "La priorité est donnée à la capture de monstres dont un piège de la même couleur est équipé";
         }
-        return "";
+        return TamerSkillsString(id);
     }
 
     public override string BattleControllerUIString(int id)
@@ -6636,7 +6639,7 @@ public class Localized_French : LOCALIZATION
             case 40: return "Meilleur Gain d'EXP Total";
 
         }
-        return "";
+        return base.BattleControllerUIString(id);
     }
 
     public override string EquipmentDictionaryUIString(int id)
@@ -6651,7 +6654,7 @@ public class Localized_French : LOCALIZATION
             case 5: return "<color=orange> Désassembler";
             case 6: return "<color=yellow>Maj + C pour fabriquer</color>";
         }
-        return "";
+        return base.EquipmentDictionaryUIString(id);
     }
 
     public override string EquipmentTalismanUIString(int id)
@@ -6669,7 +6672,7 @@ public class Localized_French : LOCALIZATION
             case 8: return "<size=20><u>Effet Passif par # Désassemblé</u><size=18>";
             case 9: return "<size=20><u>Effet Passif Total Courant</u><size=18>";
         }
-        return "";
+        return base.EquipmentTalismanUIString(id);
     }
 
     public override string LabMenuUIString(int id)
@@ -6679,7 +6682,7 @@ public class Localized_French : LOCALIZATION
             case 0: return "Auto Étendre";
             case 1: return "Auto Désassembler";
         }
-        return "";
+        return base.LabMenuUIString(id);
     }
 
     public override string SaveManagerString(int id, string str1 = "", string str2 = "")
@@ -6702,7 +6705,7 @@ public class Localized_French : LOCALIZATION
             case 13: return "\n<color=green>- Téléchargez la sauvegarde pour gagner <sprite=\"epiccoin\" index=0> " + str1 + " Pièces Épiques tout de suite !</color>";
             case 14: return "\n<color=yellow>- Vous pouvez gagner <sprite=\"epiccoin\" index=0> " + str1 + " Pièces Épiques dans " + str2 + " de Temps de Jeu Réel</color>";
         }
-        return "";
+        return base.SaveManagerString(id);
     }
 
     public override string SettingMenuUIString(int id)
@@ -6716,7 +6719,7 @@ public class Localized_French : LOCALIZATION
             case 4: return "Êtes-vous sûr de vouloir réinitialiser le jeu ?\n\n<size=20><color=yellow>Vous allez TOUT perdre.\nAprès une Réinitialisation complète, veuillez relancer le jeu pour stabiliser les performances. Vous pouvez restaurer les achats en jeu dans le Magasin Épique.";
             case 5: return "Si votre jeu plante souvent, désactivez ceci\net effectuez une sauvegarde en cache juste avant de quitter le jeu.";
         }
-        return "";
+        return base.SettingMenuUIString(id);
     }
 
     public override string BonusCodeUIString(int id)
@@ -6736,7 +6739,7 @@ public class Localized_French : LOCALIZATION
             case 10: return "Vous avez reçu :\n<color=green>";
             case 11: return "Erreur.\nVeuillez vérifier que vous avez participé au béta-test de IEH2 AVANT le 10 Juin.\n Ou, veuillez vérifier ici :\nProfil Steam > Éditer le Profil > Options Privées > Détails du Jeu : [Publique]";
         }
-        return "";
+        return base.BonusCodeUIString(id);
     }
 
     public override string BlessingString(int id)
@@ -6762,7 +6765,7 @@ public class Localized_French : LOCALIZATION
             case 16: return "Bénédiction de Gain d'EXP";
             case 17: return "Multiplication des Gains d'EXP par ";
         }
-        return "";
+        return base.BlessingString(id);
     }
 
     public override string PlaytestBonusDeadlineString(int id)
@@ -6771,7 +6774,7 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return "<color=yellow>Limite de temps pour le reçu : 22 Août</color>";
         }
-        return "";
+        return base.PlaytestBonusDeadlineString(id);
     }
     public override string AchievementString(int id, double value = 0, string valueString = "")
     {
@@ -6820,7 +6823,7 @@ public class Localized_French : LOCALIZATION
             case 40: return "Jouer à IEH pendant " + tDigit(value) + " mois(s) de temps de jeu";
             case 41: return "Jouer à IEH pendant " + tDigit(value) + " année(s) de temps de jeu";
         }
-        return "";
+        return base.AchievementString(id);
     }
 
     public override string AreaTableUIString(int id)
@@ -6845,7 +6848,7 @@ public class Localized_French : LOCALIZATION
             case 1: return "Vous allez gagner <color=green>" + tDigit(wa.PointGain()) + " Points d'Ascension Monde</color> de Classe " + tDigit(wa.tier + 1) + " si vous le faites maintenant !";
             case 2: return "Ascension Monde de Classe " + tDigit(wa.tier + 1) + " : Nv de Palier Total ";
             case 3: return "Comp. #";
-            case 4: return "Améliorations d'AM Classe " + tDigit(wa.tier + 1) + " <size=18>( points : ";
+            case 4: return "Améliorations d'Ascension Monde de Classe " + tDigit(wa.tier + 1) + " <size=18>( points : ";
             case 5: return "<size=20>Ascension Monde de Classe 1<size=18>";
             case 6: return "\n\n<u>Qu'est-ce qui est débloqué après une Ascension Monde de Classe 1</u>";
             case 7: return "\n- Prestige de Zone / Donjon";
@@ -6869,7 +6872,7 @@ public class Localized_French : LOCALIZATION
             case 25: return "\n- L'Effet de Maîtrise des Équipements";
             case 26: return "\n- Les Équipements avec des effets d'enchantement, des emplacements d'enchantement ou des effets de forge dans l'inventaire";
             case 27: return "\n- Les objets dans l'Inventaire d'Utilitaires et ses emplacements équipés, le progrès des Talismans";
-            case 28: return "\n- Les Essences et Matériaux sauf les Matériaux de Ville";
+            case 28: return "\n- Les Essences et Matéruaix sauf les Matériaux de Ville";
             case 29: return "\n- Les Améliorations d'Alchimie et le Niveau des Potions";
             case 30: return "\n- Le progrès de la Recherche des Bâtiments de Ville";
             case 31: return "\n- Le progrès du Bestiaire";
@@ -7181,7 +7184,7 @@ public class Localized_French : LOCALIZATION
             case 3: return " (# de Limite d'Achat : " + text + ")";
             case 4: return "Ceci coûte normalement " + text + ", mais il est GRATUIT la première fois !";
             case 5: return "Le prix augmentera après l'achat.";
-            default: return "" + text;
+            default: return base.EpicStoreMenuString(id, text);
         }
     }
     public override string ChallengeHandicappedString(int id, string text = "")
@@ -7195,7 +7198,7 @@ public class Localized_French : LOCALIZATION
             case 4: return "Récompense de Première Complétion";
             case 5: return "Récompense pour Toute Complétion";
             case 6: return "Arène Mystique " + text + "F";
-            default: return "" + text;
+            default: return base.ChallengeHandicappedString(id, text);
         }
     }
     public override string EquipMenuString(int id, string text = "")
@@ -7224,7 +7227,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Vous ne pouvez pas capturer des monstres de type 'colorés' avec cet objet.";
             case 7: return "Ce Talisman ne peut pas être désassemblé.";
             case 8: return "Effet Passif obtenu après désassemblage";
-            default: return "" + text;
+            default: return base.EquipMenuString(id, text);
         }
     }
     public override string ExpeditionCtrlString(int id, string text = "")
@@ -7240,7 +7243,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Récompense de Complétion";
             case 7: return "Commencer";
             case 8: return "Annuler";
-            default: return "" + text;
+            default: return base.ExpeditionCtrlString(id, text);
         }
     }
 
@@ -7388,7 +7391,7 @@ public class Localized_French : LOCALIZATION
             case 11: return "Finissez la Quête de Titre [Preuve de Reinc.] pour permettre l'Activation en Arrière-Plan.";
             case 12: return "Vous jouez couramment le héros " + text;
             case 13: return "Jouer le héros " + text;
-            default: return "" + text;
+            default: return base.GuildMenuString(id, text);
         }
     }
     public override string MissionString(MISSION mission, string text = "")
@@ -7409,7 +7412,7 @@ public class Localized_French : LOCALIZATION
                 return "Compléter cette Zone sans aucun Équipement";
             case MissionKind.OnlyBase:
                 return "Compléter cette Zone en n'ayant que l'Attaque de Base équipée";
-            default: return "";
+            default: return base.MissionString(mission, text);
         }
     }
     public override string OfflineBounusString(int id, string text = "")
@@ -7433,7 +7436,7 @@ public class Localized_French : LOCALIZATION
             case 14: return "Maîtrise d'Équipement";
             case 15: return "Progrès du Héros Actif";
             case 16: return "Complété " + text + " fois";
-            default: return "" + text;
+            default: return base.OfflineBounusString(id, text);
         }
     }
     public override string SwarmString(int id, string text = "")
@@ -7469,7 +7472,7 @@ public class Localized_French : LOCALIZATION
             case 26: return "Temps";
             case 27: return "Vous recevez :";
             case 28: return " x" + text;
-            default: return "" + text;
+            default: return base.SwarmString(id, text);
         }
     }
 
@@ -7537,7 +7540,7 @@ public class Localized_French : LOCALIZATION
             case 20: return "Complété";
             case 21: return text + " restant";
             case 22: return "Sélectionnez un Familier";
-            default: return "" + text;
+            default: return base.ExpeditionMenuString(id, text);
         }
     }
     public override string QuestString(int id, string text = "")
@@ -7548,7 +7551,7 @@ public class Localized_French : LOCALIZATION
             case 1: return "Gain de Point de Réincarnation de cette quête";
             case 2: return "Divise le coût d'emplacement d'acceptation par deux";
             case 3: return "Élimine le cout d'emplacement d'acceptation";
-            default: return "" + text;
+            default: return base.QuestString(id, text);
         }
     }
     public override string RebirthMenuString(int id, string text = "")
@@ -7581,7 +7584,7 @@ public class Localized_French : LOCALIZATION
             case 23: return "Effet Bonus de Réincarnation de Classe 2";
             case 24: return "# de Réincarnations de Classe 3";
             case 25: return "Temps Joué avant une Réincarnation de Classe " + text;
-            default: return "" + text;
+            default: return base.RebirthMenuString(id, text);
         }
     }
     public override string ResourceCtrlString(int id, string text = "", string text2 = "")
@@ -7632,7 +7635,7 @@ public class Localized_French : LOCALIZATION
             case 41: return "Maj + Clic Gauche pour rentrer un montant personnalisé ou pour réinitialiser le montant courant";
             case 42: return "Maj + F pour montrer les coûts entiers (Max x100)";
             case 43: return "Détails de la Limite de Nitro";
-            default: return "" + text;
+            default: return base.ResourceCtrlString(id, text);
         }
     }
 
@@ -7644,7 +7647,7 @@ public class Localized_French : LOCALIZATION
             case 1: return "Vous commencerez en tant que le " + text + "Guerrier" + text2 + ".";
             case 2: return "Une fois arrivé, acceptez la permière " + text + "Quête Globale" + text2 + " pour commencer votre aventure !";
             case 3: return "";
-            default: return "" + text;
+            default: return base.TitleSceneString(id, text, text2);
         }
     }
     public override string LabMenuString(int id, string text = "")
@@ -7658,7 +7661,7 @@ public class Localized_French : LOCALIZATION
             case 4: return "Vous avez besoin d'un Emplacement d'Utilitaire";
             case 5: return "Niveau Max";
             case 6: return "File Disponible";
-            default: return "" + text;
+            default: return base.LabMenuString(id, text);
         }
     }
     public override string SettingMenuString(int id, string text = "")
@@ -7673,7 +7676,7 @@ public class Localized_French : LOCALIZATION
             case 5: return "# de Succès";
             case 6: return "Si vous avez acheté le CLD de IEH1 [Lot de Support de IEH2], vous pouvez aussi gagner les suivants :";
             case 7: return "Pièce Épique, Limite de Quêtes Acceptées";
-            default: return "" + text;
+            default: return base.SettingMenuString(id, text);
         }
     }
     public override string UpgradeMenuString(int id, string text = "")
@@ -7690,7 +7693,7 @@ public class Localized_French : LOCALIZATION
             case 7: return "Incrémentation de l'Effet par Coût d'Or";
             case 8: return "Effet Courant";
             case 9: return "Prochain Effet";
-            default: return "" + text;
+            default: return base.UpgradeMenuString(id, text);
         }
     }
     public override string WorldAscensionMissionString(int id, string text = "")
@@ -7698,7 +7701,7 @@ public class Localized_French : LOCALIZATION
         switch (id)
         {
             case 0: return "Récompense de Point d'AM " + text;
-            default: return "" + text;
+            default: return base.WorldAscensionMissionString(id, text);
         }
     }
     public override string WorldMapString(int id, string text = "")
@@ -7706,7 +7709,7 @@ public class Localized_French : LOCALIZATION
         switch (id)
         {
             case 0: return "Vous avez " + text + " " + Basic(BasicWord.PortalOrb);
-            default: return "" + text;
+            default: return WorldMapString(id, text);
         }
     }
 
@@ -8054,7 +8057,7 @@ public class Localized_French : LOCALIZATION
             case HelpKind.A_Rebirth: return "Réincarnation";
             case HelpKind.A_Playtime: return "Temps de Jeu";
         }
-        return kind.ToString();
+        return base.HelpNameString(kind);
     }
 
     public override string HelpString(HelpKind kind)
@@ -9082,7 +9085,7 @@ public class Localized_French : LOCALIZATION
             case 26: return "Rang Courant";
             case 27: return "Total Complété #";
             case 28: return "Max Atteint #";
-            default: return "" + text;
+            default: return base.QuestMenuString(id, text);
         }
     }
 
@@ -9148,7 +9151,7 @@ public class Localized_French : LOCALIZATION
             case 3: return "Information";
             case 4: return "Total Complété #";
             case 5: return "Temps Total";
-            default: return "" + text;
+            default: return base.ExpeditionString(id, text);
         }
     }
     public override string InAppPurchaseString(int id, string text = "")
@@ -9157,7 +9160,7 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return "Obtenez " + text + "Pièces Épiques Maintenant!";
             case 1: return "Seul le premier achat double les Pièces Épiques!";
-            default: return "" + text;
+            default: return base.InAppPurchaseString(id, text);
         }
     }
     public override string MonsterNameString(ChallengeMonsterKind kind)
@@ -9185,7 +9188,7 @@ public class Localized_French : LOCALIZATION
             case ChallengeMonsterKind.DistortionSlime:
                 return "Gankyū, le Slime Distordu";
         }
-        return kind.ToString();
+        return base.MonsterNameString(kind);
     }
     public override string MonsterShortNameString(ChallengeMonsterKind kind)
     {
@@ -9212,7 +9215,7 @@ public class Localized_French : LOCALIZATION
             case ChallengeMonsterKind.DistortionSlime:
                 return "Gankyū";
         }
-        return kind.ToString();
+        return base.MonsterShortNameString(kind);
     }
 
     public override string MonsterPetPassiveEffectStreing(MonsterPet pet)
@@ -9300,7 +9303,7 @@ public class Localized_French : LOCALIZATION
             case PetPassiveEffectKind.AlchemyPointGain:
                 return "Gain de Points d'Alchimie <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
         }
-        return "";
+        return base.MonsterPetPassiveEffectStreing(pet);
     }
     public override string TownMaterialNameString(TownMaterialKind kind)
     {
@@ -9337,7 +9340,7 @@ public class Localized_French : LOCALIZATION
             case TownMaterialKind.SapphireShard:
                 return "Éclat de Sapphire";
         }
-        return kind.ToString();
+        return base.TownMaterialNameString(kind);
     }
 
     public override (string name, string description, string passive) WorldAscensionMilestoneString(WorldAscensionMilestone milestone, double currentValue = 0, double nextValue = 0)
@@ -9399,7 +9402,7 @@ public class Localized_French : LOCALIZATION
             case 1: return "Effet Passif";
             case 2: return "Point d'Ascension Monde";
             case 3: return "Nécessite Temple Rang 1 pour accéder aux Améliorations de Réincarnation Classe 2";
-            default: return "" + text;
+            default: return base.WorldAscensionString(id, text);
         }
     }
     public override (string name, string effect) WorldAscensionUpgradeString(WorldAscensionUpgrade upgrade, double value = 0)
@@ -9464,7 +9467,7 @@ public class Localized_French : LOCALIZATION
             case 5: return "Limite de Quêtes Acceptées + 1";
             case 6: return "Il vous faut " + text + " emplacements d'inventaire d'utilitaire!";
             case 7: return "Vous avez déjà reçu tous les bonus courrants.";
-            default: return "" + text;
+            default: return base.IEH1PlayerBonusString(id, text);
         }
     }
 
@@ -9477,7 +9480,7 @@ public class Localized_French : LOCALIZATION
             case 2: return "Temps Limite + 30 sec !";
             case 3: return "1 Orbe Portail !";
             case 4: return "Talisman !";
-            default: return "" + text;
+            default: return base.TreasureChestString(id, text);
         }
     }
     public override string OtherString(int id, string text = "")
@@ -9486,8 +9489,22 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return text + " heure(s)";
             case 1: return "<size=24>CODE BONUS</size>\nVeuillez entrer un code bonus ici.";
+            case 2: return "You cannot equip the same Talisman.";//NEW ver1.1.14.6.11
+            case 3: return "You cannot equip the same Trap.";//NEW ver1.1.14.6.11
+            case 4: return "You cannot equip the same type.";//NEW ver1.1.14.6.11
             default: return text;
         }
     }
 
+    public override string NumberFormatString(NumberFormatKind kind)//NEW ver1.1.14.6.11
+    {
+        switch (kind)
+        {
+            case NumberFormatKind.Default: return "Default";
+            case NumberFormatKind.Standard: return "Standard";
+            case NumberFormatKind.Scientific: return "Scientific";
+            case NumberFormatKind.Engineering: return "Engineering";
+        }
+        return base.NumberFormatString(kind);
+    }
 }
