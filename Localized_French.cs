@@ -6607,7 +6607,7 @@ public class Localized_French : LOCALIZATION
             case 8: return "Choisissez une bénédiction !";
             case 9: return "Durée";
             case 10: return "<size=18>Réinitialiser les améliorations suivantes est possible ";
-            case 11: return " fois plus";
+            case 11: return " fois";
             case 12: return "Magasin Épique [Réinitialisation de Prestige de Zone/Donjon]";
             case 13: return "Total Complété #";
             case 14: return "Difficulté ";
