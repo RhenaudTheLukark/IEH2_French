@@ -725,6 +725,8 @@ public class Localized_French : LOCALIZATION
                 return "Augmente les Dégâts Magiques par ([Furie d'Esprit] x Log2([MDEF]))%";
             case BasicWord.After:
                 return "Après";
+            case BasicWord.NumberFormat:
+                return "Format de Nombre";
         }
         return basicWord.ToString();
     }
@@ -9486,8 +9488,23 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return text + " heure(s)";
             case 1: return "<size=24>CODE BONUS</size>\nVeuillez entrer un code bonus ici.";
+            case 2: return "Impossible d'équiper le même Talisman.";
+            case 3: return "Impossible d'équiper le même Piège.";
+            case 4: return "Impossible d'équiper le même type d'objet.";
             default: return text;
         }
+    }
+
+    public virtual string NumberFormatString(NumberFormatKind kind)
+    {
+        switch (kind)
+        {
+            case NumberFormatKind.Default: return "Défaut";
+            case NumberFormatKind.Standard: return "Standard";
+            case NumberFormatKind.Scientific: return "Scientifique";
+            case NumberFormatKind.Engineering: return "Ingénierie";
+        }
+        return kind.ToString();
     }
 
 }
