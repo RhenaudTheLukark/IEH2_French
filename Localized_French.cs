@@ -1467,7 +1467,7 @@ public class Localized_French : LOCALIZATION
             case PetActiveEffectKind.AlchemyQueue:
                 return "File d'Alchimie Disponible + 10 \n<size=16>ffectuez un Clic Droit sur une potion pour l'assigner à la File, Maj + Click Droit pour l'enlever de la File</size>";
             case PetActiveEffectKind.EquipPotion:
-                return "Réapprovisionne les objets Utilitaires équipés";//return "Automatically equip to restore Utility items that you are equipping";
+                return "Réapprovisionne les objets Utilitaires équipés";
             case PetActiveEffectKind.Capture:
                 return "Utilise un piège automatiquement pour capturer un monstre quand il est vaincu tant qu'un piège valide est équipé";
             case PetActiveEffectKind.GetEquipment:
@@ -1485,29 +1485,29 @@ public class Localized_French : LOCALIZATION
             case PetActiveEffectKind.BuyShopMaterialBat:
                 return "Achète l'" + Material(MaterialKind.BatWing) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopMaterialFairy:
-                return "Achète la" + Material(MaterialKind.FairyDust) + " automatiquement dans le magasin";
+                return "Achète la " + Material(MaterialKind.FairyDust) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopMaterialFox:
-                return "Achète la" + Material(MaterialKind.FoxTail) + " automatiquement dans le magasin";
+                return "Achète la " + Material(MaterialKind.FoxTail) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopMaterialDevilfish:
-                return "Achète les" + Material(MaterialKind.FishScales) + " automatiquement dans le magasin";
+                return "Achète les " + Material(MaterialKind.FishScales) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopMaterialTreant:
-                return "Achète la" + Material(MaterialKind.CarvedBranch) + " automatiquement dans le magasin";
+                return "Achète la " + Material(MaterialKind.CarvedBranch) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopMaterialFlametiger:
-                return "Achète la" + Material(MaterialKind.ThickFur) + " automatiquement dans le magasin";
+                return "Achète la " + Material(MaterialKind.ThickFur) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopMaterialUnicorn:
-                return "Achète la" + Material(MaterialKind.UnicornHorn) + " automatiquement dans le magasin";
+                return "Achète la " + Material(MaterialKind.UnicornHorn) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopTrapNormal:
-                return "Achète le" + PotionName(PotionKind.ThrowingNet) + " automatiquement dans le magasin";
+                return "Achète le " + PotionName(PotionKind.ThrowingNet) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopTrapIce:
-                return "Achète le" + PotionName(PotionKind.IceRope) + " automatiquement dans le magasin";
+                return "Achète le " + PotionName(PotionKind.IceRope) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopTrapThunder:
-                return "Achète le" + PotionName(PotionKind.ThunderRope) + " automatiquement dans le magasin";
+                return "Achète le " + PotionName(PotionKind.ThunderRope) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopTrapFire:
-                return "Achète le" + PotionName(PotionKind.FireRope) + " automatiquement dans le magasin";
+                return "Achète le " + PotionName(PotionKind.FireRope) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopTrapLight:
-                return "Achète le" + PotionName(PotionKind.LightRope) + " automatiquement dans le magasin";
+                return "Achète le " + PotionName(PotionKind.LightRope) + " automatiquement dans le magasin";
             case PetActiveEffectKind.BuyShopTrapDark:
-                return "Achète le" + PotionName(PotionKind.DarkRope) + " automatiquement dans le magasin";
+                return "Achète le " + PotionName(PotionKind.DarkRope) + " automatiquement dans le magasin";
             case PetActiveEffectKind.RetryDungeon:
                 return "Réessaye le donjon courant automatiquement après l'avoir complété";
             case PetActiveEffectKind.OpenChest:
@@ -1586,10 +1586,10 @@ public class Localized_French : LOCALIZATION
                 tempEffect = "Limite de Difficulté de Zone + " + tDigit(upgrade.effectValue);
                 tempNextEffect = "Limite de Difficulté de Zone + " + tDigit(upgrade.nextEffectValue);
                 break;
-            case AreaPrestigeUpgradeKind.UnlockMission: //TOCHECK
+            case AreaPrestigeUpgradeKind.UnlockMission:
                 tempName = "Challengeur de Mission";
-                tempEffect = "Débloque une autre mission " + tDigit(upgrade.effectValue);
-                tempNextEffect = "Débloque une autre mision " + tDigit(upgrade.nextEffectValue);
+                tempEffect = "Débloque " + tDigit(upgrade.effectValue) + " autre(s) mission(s) ";
+                tempNextEffect = "Débloque " + tDigit(upgrade.nextEffectValue) + " autre(s) mission(s) ";
                 break;
             case AreaPrestigeUpgradeKind.ClearCount:
                 tempName = "Bénédiction de l'Explorateur";
