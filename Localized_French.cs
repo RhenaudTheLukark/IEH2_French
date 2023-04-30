@@ -4835,45 +4835,45 @@ public class Localized_French : LOCALIZATION
                         description = "Tu vois l'enfant s'entraîner avec une douzaine d'hommes et femmes. Ou, du moins, une douzaine d'hommes et de femmes essayant de s'entraîner avec lui mais il dance autour d'eux, réfléchissant leurs coups avec des mouvements fins, tout en equivant toutes leurs tentatives. Il te voit observer son entraînement et t'interpelle. \"Salut le nouveau, on dirait que t'as pu former une fondation solide, après tout. Malheureusement, ça veut dire que je dois un billet de 50 à Régis. Fais-toi pardonner, d'accord ? Je vais lui miser quitte ou double sur le fait que tu maitrises tout ton art. Je t'y ferais même profiter si tu y arrives.\"";
                         condition = "Atteindre le Nv 250 avec Toutes les Capacités du héros " + Hero(heroKind);
                         break;
-                    case QuestKindTitle.MonsterDistinguisher1: //TODO
+                    case QuestKindTitle.MonsterDistinguisher1:
                         name = Title(TitleKind.MonsterDistinguisher) + " 1";
-                        client = "Ranger Rick";
-                        description = "Oh, hey there, you want to be a Ranger Scout? Doing so will teach you how to be more knowledgeable about monsters, their habits, their diets, everything... oh, you want it to learn how to trap them more efficiently? I suppose that is also a benefit. Okay, so get started by going out there and defeating 20 normal slimes in combat! Pay close attention to their habits while you do and I’ll dub you a Ranger Scout when you’re done.";
+                        client = "Nico le Garde Forestier";
+                        description = "Oh, salut toi, tu veux devenir un scout ? Je pourrais t'en apprendre plus sur les monstres, leurs habitudes, leur alimentation, et tout ça... oh, tu viens juste pour savoir comment attrapper des monstres plus efficacement ? Je suppose que ça peut aussi t'aider pour ça. D'accord, tout d'abord, va explorer et vaincre 20 slimes normaux en combat ! Essaye d'examiner leur comportement tant que tu y es, et tu devriendras un vrai scout lorsque tu auras fini.";
                         break;
                     case QuestKindTitle.MonsterDistinguisher2:
                         name = Title(TitleKind.MonsterDistinguisher) + " 2";
-                        client = "Ranger Rick";
-                        description = "Studying monsters is a lot of fun, don’t you think? As you become more knowledgeable, your ability to capture higher level monsters will improve! So now let’s study a different monster. Go defeat around 100 Blue Slimes and report back to me when you’re done. I can’t wait to hear everything you’ve learned!";
+                        client = "Nico le Garde Forestier";
+                        description = "L'étude de monstre est amusante, non ? Plus tu en sais à propos d'eux, plus tu pourras attraper des ennemis plus puissants ! Maintenant, allons étudier un monstre différent. Va vaincre 100 Slimes Bleus et reviens me voir quand tu auras terminé. J'ai hate d'entendre tout ce que tu auras appris !";
                         break;
                     case QuestKindTitle.MonsterDistinguisher3:
                         name = Title(TitleKind.MonsterDistinguisher) + " 3";
-                        client = "Ranger Rick";
-                        description = "Ever felt the slight sting of electrocution before? Well, if you want to learn how to avoid it in the wild, you’ll need to tangle with some yellow slimes and understand how to avoid their electrically charged ooze. Learning how to deal with the strengths of these monsters will give you an edge when you are attempting to capture them. So go defeat around 250 Yellow Slimes and report back to me.";
+                        client = "Nico le Garde Forestier";
+                        description = "As-tu déjà senti le pincement d'une décharge éléectrique ? Si tu veux l'éviter dans la nature, tu auras besoin de rencontrer des slimes jaunes et de comprendre comment éviter leur fluide qui est chargé électriquement. Apprendre comment gérer les forces de ces monstres te donnera un avantage lorsque tu essayeras de les capturer. Maintenant va vaincre à peu près 250 Slimes Jaunes puis reviens me voir.";
                         break;
                     case QuestKindTitle.MonsterDistinguisher4:
                         name = Title(TitleKind.MonsterDistinguisher) + " 4";
-                        client = "Ranger Rick";
-                        description = "This time let’s change things up, because I’m not sure what else you will learn from fighting slimes. This time, I want you to study the habits of blue spiders. Some people are incredibly afraid of spiders, in which case it’s a good effort to overcome those fears by facing them head on! Just be careful and do your best! Let me know after you’ve defeated around 1000 Blue Spiders.";
+                        client = "Nico le Garde Forestier";
+                        description = "Cette fois-ci, essayons quelque chose de nouveau, car je ne pense pas que tu puisses apprendre beaucoup plus en ne combattant que des slimes. Cette fois, je veux que tu étudies les habitudes des araignées bleues. Certaines personnes ont extrêmement peurs des araignées, auquel cas c'est une bonne chose de dépasser sa peur en les confrontant directement ! Fais juste attention et fais de ton mieux ! Tiens-moi au courant quand tu auras vaincu 1000 Araignées Bleues.";
                         break;
                     case QuestKindTitle.MonsterDistinguisher5:
                         name = Title(TitleKind.MonsterDistinguisher) + " 5";
-                        client = "Ranger Rick";
-                        description = "There are some pretty interesting monsters out there, aren’t there? Well, how about one that can literally make you move slower? How do you handle not being able to move at the speed you are used to moving? You adapt and make every movement matter! Go and study Red Fairies, defeating around 5000 of them ought to help you to understand how to overcome their strengths and improve your ability to capture monsters.";
+                        client = "Nico le Garde Forestier";
+                        description = "Il y a des monstres assez intéressants dans ce monde, n'est-ce pas ? Parmi eux, que penses-tu d'un qui peut litéralement te ralentir ? Comment peux-tu gérer un cas où tu ne peux pas te déplacer aussi vite que d'habitude ? Tu t'adaptes et fais en sorte que chaque mouvement compte ! Va étudier les Fées Rouges, en vaincre à peu près 5000 t'aidera à comprendre comment apprivoiser leurs forces et augmenter ton aptitude de capture de monstre.";
                         break;
                     case QuestKindTitle.MonsterDistinguisher6:
                         name = Title(TitleKind.MonsterDistinguisher) + " 6";
-                        client = "Ranger Rick";
-                        description = "Alright, I don’t know if I have much left to teach you, but I must ask if you’ve ever gone fishing? It’s quite a sport indeed, for those with the patience to endure it. So, my last lesson will come in the form of fishing! Go and defeat " + tDigit(50000) + " Green Devilfish and report back to me. Remember, this is a patience building exercise, but it will vastly improve your ability to capture stronger monsters – I guarantee it!";
+                        client = "Nico le Garde Forestier";
+                        description = "Bon, je ne sais pas si j'ai grand chose d'autre à t'apprendre, mais je dois te demander, es-tu déjà parti à la pêche ? C'est un sacré sport pour ceux qui ont la patience de s'y atteler. Donc, ma prochaine leçon t'apprendra la pêche ! Va vaincre " + tDigit(50000) + " Poissons-Démon Verts puis reviens me voir. Rappelle-toi que c'est un exercice pour améliorer ta patience, mais il t'aidera à grandement augmenter ton aptitude de capture de monstre, je te le garantis !";
                         break;
-                    case QuestKindTitle.MonsterDistinguisher7: //TODO
+                    case QuestKindTitle.MonsterDistinguisher7:
                         name = Title(TitleKind.MonsterDistinguisher) + " 7";
-                        client = "Ranger Rick";
-                        description = "Do you know how to distinguish between regular trees and treants? It's easy to tell them apart when the treant starts moving, but even professional monster identifiers have trouble telling the still treants apart from regular trees. It's dangerous to approach a regular tree when you think it's a treant, so I think I'll have you defeat them until you can perfectly distinguish between the two. Maybe if you defeat 1M of them, you won't make any mistakes. You might think that's too many, but once you clear this, I'll recognize you as a professional monster identifier who can tell treants apart!";
+                        client = "Nico le Garde Forestier";
+                        description = "Est-ce que tu sais comment distinguer les arbres normaux des tréants ? C'est facile de les différencier lorsque les tréants bougent, mais même les identificateurs de monstre professionnels ont du mal à différencier les tréants immobiles des arbres normaux. C'est dangeureux d'approcher un tréant lorsque tu penses que c'est un arbre normal, donc je pense que je vais te donner la tâche d'en vaincre jusqu'à que tu puisses parfaitement distinguer l'un de l'autre. Peut-être que si tu en vaincs 1 million, tu ne pourras plus faire d'erreurs. Tu peux penser que c'est trop, mais une fois que tu auras fini, tu seras reconnu comme un identificateur de monstre professionnel qui sait reconnaitre les tréants !";
                         break;
-                    case QuestKindTitle.MonsterDistinguisher8: //TODO
+                    case QuestKindTitle.MonsterDistinguisher8:
                         name = Title(TitleKind.MonsterDistinguisher) + " 8";
-                        client = "Ranger Rick";
-                        description = "Hey there, adventurer. Have you ever heard of the Flametigers? They're fierce monsters that roam the volcano in this area. I've been studying them for some time now, but I need your help with some field research. I need you to go out there and take down 10 Million Purple Flametigers as you can. Bring me back their furs and I'll be able to learn more about them. Now, I saw that face when I said 10 million. I know it's a lot to ask, but I will make sure the reward is worth your while! Good luck, and be careful out there.";
+                        client = "Nico le Garde Forestier";
+                        description = "Salut, aventurier. As-tu déjà entendu parler des Tigres de Feu ? Ce sont de redoutables monstres qui parcourent le volcan dans cette région. Je les étudie depuis un moment, mais j'ai besoin de ton aide pour une recherche sur le terrain. J'ai besoin que tu ailles là-bas et vaincs 10 millions de Tigres de Feu Violets. Ramène-moi leurs fourrures et je serais capable d'en apprendre plus sur eux. Hé, j'ai vu ta tête lorsque j'ai dit 10 millions. Je sais que c'est beaucoup, mais je ferais en sorte que ça vaille le coup pour toi ! Bonne chance, et sois prudent.";
                         break;
                     case QuestKindTitle.EquipmentSlotWeapon1:
                         name = Title(TitleKind.EquipmentSlotWeapon) + " 1";
