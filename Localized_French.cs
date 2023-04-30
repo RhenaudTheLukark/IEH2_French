@@ -4809,33 +4809,33 @@ public class Localized_French : LOCALIZATION
             case QuestKind.Title:
                 switch (kindTitle)
                 {
-                    case QuestKindTitle.SkillMaster1: //TODO
+                    case QuestKindTitle.SkillMaster1:
                         name = Title(TitleKind.SkillMaster) + " 1";
-                        client = "Condescending Asian Kid";
-                        description = "\"You there! Rookie! Yes, clearly I mean you, the 'Hero' who looks like you're practicing your white belt katas but keep forgetting the next step. I can see that you have potential but that's only because I have excellent eyesight! You need to walk before you can run, so I would suggest practicing your basic moves until you get the technique right and can do it without thinking. Then come back to me and I'll show you an easy one-two combo.\"";
-                        description += "\n- Skills gain <color=orange>Proficiency</color> every time they trigger, and they gain levels just like your Hero. Each Hero collects a type of Resource that can be spent to increase <color=orange>Skill Ranks</color> which increase the Skill's maximum level.";
-                        description += "\n- Clearing this quest gives the <color=orange>Class Master</color> Title, which expands a <color=orange>Class Skill Slot</color>. After you gain a new skill and an empty Class Skill slot, you can click the skill icon in the Skill tab to equip/remove it. Keep in mind that the first Base Attack Skill is not removable.";
-                        condition = SkillName(heroKind, 0) + " Lv 7";
+                        client = "Gamin Asiatique Condescendant";
+                        description = "\"Eh toi ! Le nouveau ! Oui, bien sûr que je te parle à toi, le 'Héros' qui a l'air d'entraîner ses katas de ceinture blanche mais qui oublie toujours la prochaîne étape. Je vois que t'as du potentiel mais c'est seulement parce que j'ai une super bonne vue ! Tu dois d'abord apprendre à marcher avant de courir, donc je te suggère d'entraîner tes coups basiques jusqu'à que tu aies la bonne technique et que tu puisses les lancer instinctivement. Quand tu as fini, reviens vers moi et je te montrerai un double combo facile.\"";
+                        description += "\n- Les capacités gagnent de la <color=orange>Maîtrise</color> à chaque fois qu'elles sont utilisées, et elles gagnent des niveaux tout comme votre Héros. Chaque Héros collecte un type de Ressource qui peut être dépensé pour augmenter le <color=orange>Rang des Capacités</color>, ce qui augmente le niveau maximum des Capacités.";
+                        description += "\n- La complétion de cette quête donne le Titre <color=orange>Maître de Capacité</color>, donne un <color=orange>Emplacement de Capacité de Classe</color>. Après avoir gagné un nouvel emplacement de Capacité de Classe, vous pouvez cliquer sur l'icône d'une capacité dans l'onglet Capacité pour l'équipper/l'enlever. La Capacité d'Attaque de Base ne peut pas être enlevée.";
+                        condition = "Atteindre le Nv 7 avec la Capacité " + SkillName(heroKind, 0);
                         break;
                     case QuestKindTitle.SkillMaster2:
                         name = Title(TitleKind.SkillMaster) + " 2";
-                        client = "Condescending Asian Kid";
-                        description = "You see the kid from before practicing Tai Chi. His eyes are closed as moves smoothly from one position to the next, his breath timed perfectly with his movements. He starts to speak without opening his eyes as he continues gracefully moving. \"Hey Rookie. You're doing better but I'm afraid that's not saying much. You can't build a house without a strong foundation and your foundation is as weak as yesterday's tea. Strengthen your core and work on your balance until you can dance a waltz without tripping over your own feet.\"";
-                        condition = SkillName(heroKind, 0) + " Lv 50";
+                        client = "Gamin Asiatique Condescendant";
+                        description = "Tu peux voir l'enfant d'avant entraînant son Tai Chi. Ses yeux fermés, il se déplace aisément d'une position à une autre, sa respiration en rythme avec ses déplacements. Il commence à parler sans ouvrir ses yeux alors qu'il continue son entraînement. \"Salut, le nouveau. Tu t'es amélioré, mais j'ai peur de dire qu'on n'y est pas encore. Tu ne peux pas contruire une maison sans une solide fondation, et ta fondation est aussi faible que le thé d'hier. Renforce tes bases et travaille ton équilibre jusqu'à que tu puisses dancer une valse sans trébucher sur tes propres pieds.\"";
+                        condition = "Atteindre le Nv 50 avec la Capacité " + SkillName(heroKind, 0);
                         break;
                     case QuestKindTitle.SkillMaster3:
                         name = Title(TitleKind.SkillMaster) + " 3";
-                        client = "Condescending Asian Kid";
-                        description = "The kid is practicing Tai Chi again, but this time he is balancing a glass of water on each upturned palm. He flows quickly and fluidly through the movements but not a ripple shows in the water. He turns and locks his gaze on you while he continues to move with the grace of a cat. \"Hey Rookie. You're getting better, I saw you almost keep control of your moves back there. Almost, anyway. Keep working on your control and your technique and before you know it you'll start to look like you know what you're doing!\"";
-                        condition = SkillName(heroKind, 0) + " Lv 250";
+                        client = "Gamin Asiatique Condescendant";
+                        description = "L'enfant entraîne toujours son Tai Chi, mais cette fois il tient une bouteille en équilibre sur les paumes de chacune de ses mains. Il transitionne rapidement entre ses positions, mais l'eau n'ondule même pas. Il se retourne et te fige du regard alors qu'il continue de bouger avec la grâce d'un chat. \"Salut, le nouveau. Tu t'améliores, je t'ai vu presque garder le contrôle de tes coups là-bas. Presque, en tout cas. Continue de travailler sur ton contrôle et ta technique et tu auras enfin l'air de savoir ce que tu fais avant de dire ouf !\"";
+                        condition = "Atteindre le Nv 250 avec la Capacité " + SkillName(heroKind, 0);
                         break;
                     case QuestKindTitle.SkillMaster4:
                         name = Title(TitleKind.SkillMaster) + " 4";
                         client = "Condescending Asian Kid";
-                        description = "You find the kid sparring with a dozen men and women. Or rather, a dozen men and women are trying to spar with him but he dances around them, redirecting their strikes with light touches and avoiding every advance. He sees you watching and calls out to you. \"Hey Rookie, looks like you built a strong foundation after all. Unfortunately that means I owe Gary fifty bucks. Make it up to me, will you? I'll raise him double or nothing that you can master your whole art, I'll even cut you in if you can do it.\"";
-                        condition = "All " + Hero(heroKind) + "'s skills Lv 250";
+                        description = "Tu vois l'enfant s'entraîner avec une douzaine d'hommes et femmes. Ou, du moins, une douzaine d'hommes et de femmes essayant de s'entraîner avec lui mais il dance autour d'eux, réfléchissant leurs coups avec des mouvements fins, tout en equivant toutes leurs tentatives. Il te voit observer son entraînement et t'interpelle. \"Salut le nouveau, on dirait que t'as pu former une fondation solide, après tout. Malheureusement, ça veut dire que je dois un billet de 50 à Régis. Fais-toi pardonner, d'accord ? Je vais lui miser quitte ou double sur le fait que tu maitrises tout ton art. Je t'y ferais même profiter si tu y arrives.\"";
+                        condition = "Atteindre le Nv 250 avec Toutes les Capacités du héros " + Hero(heroKind);
                         break;
-                    case QuestKindTitle.MonsterDistinguisher1:
+                    case QuestKindTitle.MonsterDistinguisher1: //TODO
                         name = Title(TitleKind.MonsterDistinguisher) + " 1";
                         client = "Ranger Rick";
                         description = "Oh, hey there, you want to be a Ranger Scout? Doing so will teach you how to be more knowledgeable about monsters, their habits, their diets, everything... oh, you want it to learn how to trap them more efficiently? I suppose that is also a benefit. Okay, so get started by going out there and defeating 20 normal slimes in combat! Pay close attention to their habits while you do and I’ll dub you a Ranger Scout when you’re done.";
@@ -7095,7 +7095,7 @@ public class Localized_French : LOCALIZATION
             case 88: return "Slimes capturés : ";
             case 89: return "Débloque la Banque Slime dans l'onglet Amélioration";
             case 90: return "Débloque de nouvelles Améliorations de Banque Slime";
-            case 91: return "Efficacité des Pièces Slime " + text + "%";
+            case 91: return "Efficacité des Pièces Slime + " + text + "%";
             case 92: return "Gain d'Or + " + text + "%";
             case 93: return "Octroie de l'intérêt sur les Pièces Slime en votre possession toutes les 10 minutes : ";
             case 94: return "Quantité de réapprovisionnement de matériaux dans le Magasin ";
@@ -7435,7 +7435,7 @@ public class Localized_French : LOCALIZATION
             case 13: return "Progrès d'Expédition";
             case 14: return "Maîtrise d'Équipement";
             case 15: return "Progrès du Héros Actif";
-            case 16: return "Complété " + text + " fois";
+            case 16: return "complétée " + text + " fois";
             default: return base.OfflineBounusString(id, text);
         }
     }
@@ -7945,7 +7945,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.Pause:
                 name = "Pause";
-                effect = "Débloque un bouton qui permet de mettre le jeu en pause dans l'onglet Options. Vous pouvez toujours intéragir avec le jeu pendant qu'il est mis en pause, pour changer les équipements et les capaciités, acheter des améliorations, ou changer de héros, sans que le Temps de Jeu n'avance. Cela pause aussi le temps des Accomplissements d'Ascension Monde.";
+                effect = "Débloque un bouton qui permet de mettre le jeu en pause dans l'onglet Options. Vous pouvez toujours intéragir avec le jeu pendant qu'il est mis en pause, pour changer les équipements et les capacités, acheter des améliorations, ou changer de héros, sans que le Temps de Jeu n'avance. Cela pause aussi le temps des Accomplissements d'Ascension Monde.";
                 break;
             case EpicStoreKind.PurpleFoxMastery:
                 name = "Maîtrise du Renard Violet";
