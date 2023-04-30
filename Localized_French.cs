@@ -4877,75 +4877,75 @@ public class Localized_French : LOCALIZATION
                         break;
                     case QuestKindTitle.EquipmentSlotWeapon1:
                         name = Title(TitleKind.EquipmentSlotWeapon) + " 1";
-                        client = "Equipment Trainer, Tsuba";
-                        description = "Greetings novice. You have come seeking knowledge for weapon mastery? Very well. First, equip any weapon and simply start using it. As you do, you will notice your proficiency with that weapon will improve until it levels up, improving the effects it bestows upon you. Return to me when you have attained Level 10 with at least one weapon, and I shall show you how to wield more weapons.";
-                        condition = "1 Weapon Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon)) + " / 1";
+                        client = "Tsuba, le Maître d'Armes";
+                        description = "Bienvenue, débutant. Viens-tu demander une éducation au sujet de la maîtrise d'arme ? Très bien. Tout d'abord, équipe une arme et essaye juste de l'utiliser. Pendant cela, tu pourras voir que ta compétence avec cette arme augmente jusqu'à ce qu'elle augmente de niveau, ce qui augmentera les effets qu'elle t'octroie. Reviens me voir lorsque tu auras atteint le Niveau 10 avec au moins une arme, et je te montrerai comment manier plus d'armes à la fois.";
+                        condition = "Atteindre le Nv 10 avec 1 Arme avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon)) + " / 1";
                         break;
                     case QuestKindTitle.EquipmentSlotWeapon2:
                         name = Title(TitleKind.EquipmentSlotWeapon) + " 2";
-                        client = "Equipment Trainer, Tsuba";
-                        description = "You have proven yourself capable, novice. Do it again now, but this time attain Level 10 with at least five weapons, and I will again teach you how to wield more weapons!";
-                        condition = "5 Weapons Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon)) + " / 5";
+                        client = "Tsuba, le Maître d'Armes";
+                        description = "Tu as sû prouver ta volonté, débutant. Fais-le encore une fois, mais cette fois-ci atteint le Niveau 10 avec au moins cinq armes différentes, et je t'aiderai à en manier encore plus !";
+                        condition = "Atteindre le Nv 10 avec 5 Armes avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon)) + " / 5";
                         break;
                     case QuestKindTitle.EquipmentSlotWeapon3:
                         name = Title(TitleKind.EquipmentSlotWeapon) + " 3";
-                        client = "Equipment Trainer, Tsuba";
-                        description = "It seems I cannot keep calling you novice, as you have demonstrated fine ability with using a variety of weapons. Now, adept, if you wish to continue your training with me, I must see that you have attained Level 10 with at least 15 weapons!";
-                        condition = "15 Weapons Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon)) + " / 15";
+                        client = "Tsuba, le Maître d'Armes";
+                        description = "On dirait que je ne plus t'appeler un débutant, car tu as sû me montrer ton aptitude en utilisant une variété d'armes. Maintenant, adepte, si tu veux continuer à être sous ma tutelle, je dois voir que tu as attent le Niveau 10 avec 15 armes différentes !";
+                        condition = "Atteindre le Nv 10 avec 15 Armes avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon)) + " / 15";
                         break;
                     case QuestKindTitle.EquipmentSlotWeapon4:
                         name = Title(TitleKind.EquipmentSlotWeapon) + " 4";
-                        client = "Equipment Trainer, Tsuba";
-                        description = "Well done, adept. Again, 30 weapons this time. Show me that you have what it takes to be a weapons master!";
-                        condition = "30 Weapons Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon)) + " / 30";
+                        client = "Tsuba, le Maître d'Armes";
+                        description = "Bien joué, adepte. Encore une fois, cette fois-ci avec 30 armes. Montre-moi que tu as l'étoffe de devenir un maître d'armes !";
+                        condition = "Atteindre le Nv 10 avec 30 Armes avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon)) + " / 30";
                         break;
                     case QuestKindTitle.EquipmentSlotWeapon5:
                         name = Title(TitleKind.EquipmentSlotWeapon) + " 5";
-                        client = "Equipment Trainer, Tsuba";
-                        description = "I am impressed, adept. Now for something more challenging. I desire to see at least 20 weapons at level 15. Push past the limits of ordinary and begin to achieve greatness!";
-                        condition = "20 Weapons Lv 15 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon, 15)) + " / 20";
+                        client = "Tsuba, le Maître d'Armes";
+                        description = "Je suis impressionné, adepte. Maintenant, essayons quelque chose de plus difficile. Je veux te voir manier au moins 20 armes qui sont au moins au Niveau 15. Pousse les limites de l'ordinaire et commence à atteindre une nouvelle grandeur !";
+                        condition = "Atteindre le Nv 15 avec 20 Armes avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon, 15)) + " / 20";
                         break;
                     case QuestKindTitle.EquipmentSlotWeapon6:
                         name = Title(TitleKind.EquipmentSlotWeapon) + " 6";
-                        client = "Equipment Trainer, Tsuba";
-                        description = "There is very little left that I can teach you, so I will issue you one last challenge. Have over 50 weapons at level 20, and I will bestow the last of my secrets to you.";
-                        condition = "50 Weapons Lv 20 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon, 20)) + " / 50";
+                        client = "Tsuba, le Maître d'Armes";
+                        description = "Il ne me reste plus grand chose à t'apprendre, donc je vais te donner un dernier défi. Atteint le Niveau 20 avec 50 armes différentes, et je te divulgerai mes derniers secrets.";
+                        condition = "Atteindre le Nv 20 avec 50 Armes avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Weapon, 20)) + " / 50";
                         break;
                     case QuestKindTitle.EquipmentSlotArmor1:
                         name = Title(TitleKind.EquipmentSlotArmor) + " 1";
-                        client = "Equipment Trainer, Koutetsu";
-                        description = "The path to armor mastery begins here, with you seeking such wisdom. Prove to me you desire this wisdom by leveling any piece of armor to Level 10.";
-                        condition = "1 Armor Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor)) + " / 1";
+                        client = "Koutetsu, le Maître d'Armures";
+                        description = "Le chemin vers la maîtrise d'armure commence ici, avec ta requête d'accéder à ces connaissances. Prouve-moi que tu veux en savoir plus en atteingant le Niveau 10 avec n'importe quelle armure.";
+                        condition = "Atteindre le Nv 10 avec 1 Armure avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor)) + " / 1";
                         break;
                     case QuestKindTitle.EquipmentSlotArmor2:
                         name = Title(TitleKind.EquipmentSlotArmor) + " 2";
-                        client = "Equipment Trainer, Koutetsu";
-                        description = "Ahh, excellent. Your pursuit in wisdom of armor mastery is noble my young novice. Now take what you have learned and do it five times! You will begin to understand the mind of the armor the more you practice, enabling you to wear more armor without it encumbering you.";
-                        condition = "5 Armor Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor)) + " / 5";
+                        client = "Koutetsu, le Maître d'Armures";
+                        description = "Ah, excellent. Ta poursuite du savoir de la maîtrise d'armure est noble, mon cher débutant. Maintenant, prends ce que tu as appris et fais-le cinq fois ! Plus tu t'entraîneras, plus tu comprendras l'âme des armures, ce qui te permettra d'en porter plus sans t'encombrer.";
+                        condition = "Atteindre le Nv 10 avec 5 Armures avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor)) + " / 5";
                         break;
                     case QuestKindTitle.EquipmentSlotArmor3:
                         name = Title(TitleKind.EquipmentSlotArmor) + " 3";
-                        client = "Equipment Trainer, Koutetsu";
-                        description = "Remarkable work my keen novice. Your zeal for understanding is admirable, but you must push further if you wish to gain the clarity you seek. Now bring to me 15 pieces of armor at level 10 and I will further illuminate you to efficient armor wearing.";
-                        condition = "15 Armor Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor)) + " / 15";
+                        client = "Koutetsu, le Maître d'Armures";
+                        description = "Travail remarquable, mon débutant assidu. Ton zèle pour l'apprentissage est admirable, mais tu dois pousser plus loin si tu veux atteindre la clarté que tu recherches. Amène-moi 15 armures au Niveau 10 et je t'illuminerai sur l'équipement d'armure efficace.";
+                        condition = "Atteindre le Nv 10 avec 15 Armures avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor)) + " / 15";
                         break;
                     case QuestKindTitle.EquipmentSlotArmor4:
                         name = Title(TitleKind.EquipmentSlotArmor) + " 4";
-                        client = "Equipment Trainer, Koutetsu";
-                        description = "It would seem you have become adept at this, so now my young adept, can you handle the task of bringing me 30 armor at level 10 and I will train you further on moving freely in more armor.";
-                        condition = "30 Armor Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor)) + " / 30";
+                        client = "Koutetsu, le Maître d'Armures";
+                        description = "On dirait que tu es devenu un adepte, donc maintenant mon jeune adepte, si tu peux m'apporter 30 armures au niveau 10, je t'entraînerai à bouger facilement en portant encore plus d'armures.";
+                        condition = "Atteindre le Nv 10 avec 30 Armures avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor)) + " / 30";
                         break;
                     case QuestKindTitle.EquipmentSlotArmor5:
                         name = Title(TitleKind.EquipmentSlotArmor) + " 5";
-                        client = "Equipment Trainer, Koutetsu";
-                        description = "Sometimes, what we think is the highest we can go is just another beginning. This time I ask you to exceed your limits and bring me 20 pieces of armor at level 15, and we can continue training your armor wearing ability.";
-                        condition = "20 Armor Lv 15 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor, 15)) + " / 20";
+                        client = "Koutetsu, le Maître d'Armures";
+                        description = "Parfois, il arrive que ce que nous pensons être le haut d'un sommet n'est qu'un nouveau début. Cette fois je te demande de dépasser tes limites et de m'apporter 20 armures au Niveau 15, puis nous pourrons continuer ton entraînement sur ta capacité à porter des armures.";
+                        condition = "Atteindre le Nv 15 avec 20 Armures avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor, 15)) + " / 20";
                         break;
                     case QuestKindTitle.EquipmentSlotArmor6:
                         name = Title(TitleKind.EquipmentSlotArmor) + " 6";
-                        client = "Equipment Trainer, Koutetsu";
-                        description = "You have nearly matched me, my keen adept. The last I have to teach you is to seek the wisdom found in bringing 50 pieces of armor to level 20. I will bestow to you the last secret knowledge I have gathered in my life upon your return.";
-                        condition = "50 Armor Lv 20 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor, 20)) + " / 50";
+                        client = "Koutetsu, le Maître d'Armures";
+                        description = "Tu as presque atteint mon niveau, mon cher adepte. La dernière tâche que j'ai à te donner est d'atteindre le Niveau 20 avec 50 armures différentes. Je t'apprendrai la dernière technique secrète que j'ai pu apprendre au fil de ma longue vie à ton retour.";
+                        condition = "Atteindre le Nv 20 avec 50 Armures avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Armor, 20)) + " / 50";
                         break;
                     case QuestKindTitle.EquipmentSlotJewelry1:
                         name = Title(TitleKind.EquipmentSlotJewelry) + " 1";
