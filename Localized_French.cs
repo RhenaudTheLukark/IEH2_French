@@ -4949,58 +4949,58 @@ public class Localized_French : LOCALIZATION
                         break;
                     case QuestKindTitle.EquipmentSlotJewelry1:
                         name = Title(TitleKind.EquipmentSlotJewelry) + " 1";
-                        client = "Equipment Trainer, Joudama";
-                        description = "Why hello there, are you interested in jewelry? Ahh, you are like an uncut diamond, my dear, but that we can fix. Bring me any accessory piece that you’ve leveled to 10 and we can speak more about refining your appearance. I’m looking forward to it.";
-                        condition = "1 Jewelry Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry)) + " / 1";
+                        client = "Joudama, le Maître des Bijoux";
+                        description = "Bien le bonjour, es-tu intéressé par les bijoux ? Ah, tu es comme un diamant brut, mon cher, mais c'est quelque chose qu'on peut arranger. Ramène-moi un accessoire que tu as monté au Niveau 10 et nous pourrons voir comment raffiner ton apparance. J'ai hâte de voir ce que ça donnera.";
+                        condition = "Atteindre le Nv 10 avec 1 Bijou avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry)) + " / 1";
                         break;
                     case QuestKindTitle.EquipmentSlotJewelry2:
                         name = Title(TitleKind.EquipmentSlotJewelry) + " 2";
-                        client = "Equipment Trainer, Joudama";
-                        description = "Oh, now that is exquisite indeed. There is nothing quite like seeing a freshly polished gem in your hands, and you, my dear, are that gem to me. Now, our work is not yet done. Go now and come back to see me after you’ve got 5 accessory pieces to level 10. I’ll be thinking about you until we meet again!";
-                        condition = "5 Jewelry Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry)) + " / 5";
+                        client = "Joudama, le Maître des Bijoux";
+                        description = "Ohh, quelle merveille, en effet. Il n'y a rien de tel qu'une gemme fraîchement polie dans ses mains, et toi, mon cher, tu es cette gemme pour moi. Cependant, notre travail ne vient que de commencer. Va et reviens me voir une fois que 5 accessoires ont atteint le Niveau 10. Je penserai à toi jusqu'à qu'on se rencontre de nouveau !";
+                        condition = "Atteindre le Nv 10 avec 5 Bijoux avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry)) + " / 5";
                         break;
                     case QuestKindTitle.EquipmentSlotJewelry3:
                         name = Title(TitleKind.EquipmentSlotJewelry) + " 3";
-                        client = "Equipment Trainer, Joudama";
-                        description = "Set my heart alight, you have done so well! You may very well be a diamond in the rough, my dear. Let’s continue polishing you up and expose that hidden, ravishing beauty that you are! Bring me 15 accessory items that you’ve leveled to 10 and I will show you ways to make you sparkle in the sun!";
-                        condition = "15 Jewelry Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry)) + " / 15";
+                        client = "Joudama, le Maître des Bijoux";
+                        description = "Mon coeur s'enflamme, très bon travail ! Tu es vraiment un diamant brut, mon cher. Continuouns à te raffiner et exposer LA beauté enchantante que tu es ! Ramène-moi 15 accessoires que tu as monté au Niveau 10 et je te montrerai comment briller de mille feux !";
+                        condition = "Atteindre le Nv 10 avec 15 Bijoux avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry)) + " / 15";
                         break;
                     case QuestKindTitle.EquipmentSlotJewelry4:
                         name = Title(TitleKind.EquipmentSlotJewelry) + " 4";
-                        client = "Equipment Trainer, Joudama";
-                        description = "Dare I say that the stars sparkle less brightly than you? Perhaps not quite yet, but you’re certainly a twinkle in my eyes right now. Though there’s only so much we do with polishing, now we must cut this gemstone to really bring out its true beauty, as I see in you, my dear. Bring me 30 accessory pieces that are level 10, and I will show you how to shine like a diamond!";
-                        condition = "30 Jewelry Lv 10 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry)) + " / 30";
+                        client = "Joudama, le Maître des Bijoux";
+                        description = "Puis-je dire que les étoiles brillent moins que toi ? Peut-être pas pour le moment, mais tu es bel et bien une lueur d'espoir en ce moment. On ne peut qu'arriver jusqu'à un certain point avec le raffinement, mais maintenant il est temps d'exposer la vraie beauté de la pièrre précieuse que je vois en toi. Ramène-moi 30 accessoires au Niveau 10, et je te montrerai comment briller comme un diamant !";
+                        condition = "Atteindre le Nv 10 avec 30 Bijoux avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry)) + " / 30";
                         break;
                     case QuestKindTitle.EquipmentSlotJewelry5:
                         name = Title(TitleKind.EquipmentSlotJewelry) + " 5";
-                        client = "Equipment Trainer, Joudama";
-                        description = "You’ve not disappointed me once, my exquisite little gem. True perfection is but a goal, though to me that which I see in you is nearly that. To rise to the next level and to reach for this goal I need you to bring me 20 accessory pieces at level 15. Only through surpassing our standards can we truly begin to glow.";
-                        condition = "20 Jewelry Lv 15 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry, 15)) + " / 20";
+                        client = "Joudama, le Maître des Bijoux";
+                        description = "Tu ne m'as pas déçu une seule fois, me chère gemme exquise. Le perfection réelle n'est qu'un but, cependant je vois quelque chose qui s'en rapproche en toi. Pour atteindre le prochain niveau, tu dois atteindre le Niveau 15 avec 20 accessoires différents. On ne peut que briller encore plus en supassant ses limites.";
+                        condition = "Atteindre le Nv 15 avec 20 Bijoux avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry, 15)) + " / 20";
                         break;
                     case QuestKindTitle.EquipmentSlotJewelry6:
                         name = Title(TitleKind.EquipmentSlotJewelry) + " 6";
-                        client = "Equipment Trainer, Joudama";
-                        description = "My dear, to say you are ravishing upon the eyes is an understatement to be sure. Alas, I fear this little project of ours is near its end. I will miss seeing your perfect little face with those dazzling eyes staring longingly at me as I return that gaze. I shall not stand in your ascent to unimaginable beauty, but I will set you on the path to reach for it. Bring me back 50 accessory pieces at level 20 and I will bestow the last bits of titillating wisdom I have with you. ";
-                        condition = "50 Jewelry Lv 20 for " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry, 20)) + " / 50";
+                        client = "Joudama, le Maître des Bijoux";
+                        description = "Mon cher, dire que tu es resplandissant est un euphémisme. Malheureusement, notre petit projet approche à sa fin. Je vais manquer de voir ta petite bouille parfaite avec ce regard éblouissant qui se fige sur moi lorsque je te retourne un regard. Je ne me mettrai pas en travers de ta route vers une beauté inimaginable, mais je vais te mettre sur le chemin pour l'atteindre. Ramène-moi 50 accessoires au Niveau 20 et je partagerai avec toi les dernières bribes de savoir qu'il me reste.";
+                        condition = "Atteindre le Nv 20 avec 50 Bijoux avec le héros " + Hero(heroKind) + " : " + tDigit(game.equipmentCtrl.LevelMaxedNum(heroKind, EquipmentPart.Jewelry, 20)) + " / 50";
                         break;
 
                     case QuestKindTitle.PotionSlot1:
                         name = Title(TitleKind.PotionSlot) + " 1";
-                        client = "Alchemy Guru, Flamel";
-                        description = "Hmmm? Who are you and why are you in my laboratory? Oh, you come seeking advice on Alchemy, do you? Hmm, well I’m not one to share my alchemy secrets openly, but I can show you how to be more efficient with your potions. Fetch me these items and we can talk more.";
+                        client = "Flandre, le Gourou d'Alchimie";
+                        description = "Hmmm ? Qui es-tu et pourquoi es-tu dans mon laboratoire ? Oh, tu viens pour quelques conseils sur l'Alchimie, c'est ça ? Hmm, je ne suis pas du genre à partager mes secrets d'alchimie comme ça, mais je peux te montrer comment être plus efficae avec tes potions. Ramène-moi ces objets et on pourra en parler plus.";
                         break;
                     case QuestKindTitle.PotionSlot2:
                         name = Title(TitleKind.PotionSlot) + " 2";
-                        client = "Alchemy Guru, Flamel";
-                        description = "Do I know you? Oh, that’s right, you’re seeking alchemical knowledge. Again, sorry but I won’t share that kind of knowledge with people coming in off the street. However, I do need someone to fetch me more ingredients. If you get me these, I’ll show you how to expand your potion-carrying ability.";
+                        client = "Flandre, le Gourou d'Alchimie";
+                        description = "Est-ce qu'on se connaît ? Oh, c'est vrai, tu viens pour demander des connaissances alchimiques. Encore une fois, désolé, mais je ne partagerai pas ce genre de savoir avec quelqu'un qui vient de nulle part. Cependant, j'ai besoin que quelqu'un aille me chercher plus d'ingrédients. Si tu vas m'en chercher, je te montrarai comment étendre tes capacités de manipulation de potion.";
                         break;
                     case QuestKindTitle.PotionSlot3:
                         name = Title(TitleKind.PotionSlot) + " 3";
-                        client = "Alchemy Guru, Flamel";
-                        description = "I don’t remember ordering a pizza… oh sorry, you just have that look of someone always looking to run an errand for someone else. Speaking of which, I need some more ingredients. If you’d be so kind as to fetch these I’ll teach you how to unlock another potion slot, but after this I will be setting off to travel the world, and please stop asking me for alchemical recipes – I really cannot share them with you.";
+                        client = "Flandre, le Gourou d'Alchimie";
+                        description = "Je ne me rappelle pas avoir commandé une pizza... Ah, désolé, tu as la tête de quelqu'un qui cherche toujours à faire des courses pour les autres. En parlant de ça, j'ai besoin de plus d'ingrédients. Si tu es assez sympa pour m'en récupérer, je t'apprendrai comment utiliser une potion de plus à la fois, mais après ça je vais devoir partir en voyage à travers le monde. Et, s'il te plaît, arrête de me demander mes recettes alchimiques - je ne peux vraiment pas les partager avec toi.";
                         break;
 
-                    case QuestKindTitle.Porter1:
+                    case QuestKindTitle.Porter1: //TODO
                         name = "The Great Race 1";
                         client = "Bebop the Warthog";
                         description = "\"Hey, you, wanna race? I bet I can run 1000 meters faster than you can. Beat me and I’ll teach you how to be even faster than me!\" You are a little concerned that racing this large, warthog man will be pointless, but you might as well since he seems interested in teaching you something that may be useful.";
