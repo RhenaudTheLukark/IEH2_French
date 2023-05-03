@@ -727,6 +727,10 @@ public class Localized_French : LOCALIZATION
                 return "Après";
             case BasicWord.NumberFormat:
                 return "Format de Nombre";
+            case BasicWord.Lv:
+                return "Nv";
+            case BasicWord.GLv:
+                return "GNv";
         }
         return base.Basic(basicWord);
     }
@@ -9492,11 +9496,16 @@ public class Localized_French : LOCALIZATION
             case 2: return "Impossible d'équiper le même Talisman.";
             case 3: return "Impossible d'équiper le même Piège.";
             case 4: return "Impossible d'équiper le même type d'objet.";
-            default: return text;
+            case 5: return "Tier " + text;//NEW
+            case 6: return "Non-" + text;//NEW
+            case 7: return "Total Realtime Played";//NEW
+            case 8: return "Total Time Played";//NEW
+            case 9: return "Quit Background Mode";//NEW
+            default: return base.OtherString(id, text);
         }
     }
 
-    public virtual string NumberFormatString(NumberFormatKind kind)
+    public override string NumberFormatString(NumberFormatKind kind)
     {
         switch (kind)
         {
@@ -9505,6 +9514,6 @@ public class Localized_French : LOCALIZATION
             case NumberFormatKind.Scientific: return "Scientifique";
             case NumberFormatKind.Engineering: return "Ingénierie";
         }
-        return kind.ToString();
+        return base.NumberFormatString(kind);
     }
 }
