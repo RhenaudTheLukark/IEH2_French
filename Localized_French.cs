@@ -9496,11 +9496,11 @@ public class Localized_French : LOCALIZATION
             case 2: return "Impossible d'équiper le même Talisman.";
             case 3: return "Impossible d'équiper le même Piège.";
             case 4: return "Impossible d'équiper le même type d'objet.";
-            case 5: return "Tier " + text;//NEW
-            case 6: return "Non-" + text;//NEW
-            case 7: return "Total Realtime Played";//NEW
-            case 8: return "Total Time Played";//NEW
-            case 9: return "Quit Background Mode";//NEW
+            case 5: return "Classe " + text;
+            case 6: return "Non-" + text;
+            case 7: return "Temps de Jeu Réel Total";
+            case 8: return "Temps de Jeu Total";
+            case 9: return "Quitter le Mode Arrière-Plan";
             default: return base.OtherString(id, text);
         }
     }
