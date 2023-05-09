@@ -2139,7 +2139,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.PetEXPGain:
                 return "Gain d'EXP des Familiers";
             case EquipmentEffectKind.LoyaltyPointGain:
-                return "Gain de Point de Loyauté";
+                return "Gain de Points de Loyauté";
             case EquipmentEffectKind.WarriorSkillRange:
                 return "Portée des Capacités du Guerrier";
             case EquipmentEffectKind.WizardSkillRange:
@@ -2862,6 +2862,187 @@ public class Localized_French : LOCALIZATION
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Chance de Catalysation Critique <color=red>" + percent(value) + "</color>";
                 else tempString = "Chance de Catalysation Critique + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.HpRegenMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Régénération de PV / sec <color=red>" + percent(value, 3) + "</color> des PV Max";
+                else tempString = "Régénération de PV / sec + " + percent(value, 3) + " des PV Max";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.MpRegenMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Régénération de PM / sec <color=red>" + percent(value, 3) + "</color> des PV Max";
+                else tempString = "Régénération de PM / sec + " + percent(value, 3) + " des PV Max";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.ArmoredFury:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Furie d'Armure <color=red>" + percent(value, 3) + "</color>";
+                else tempString = "Furie d'Armure + " + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.WardedFury:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Furie d'Esprit <color=red>" + percent(value, 3) + "</color>";
+                else tempString = "Furie d'Esprit + " + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.PetPhysicalCriticalChance:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Chance de Coup Critique Physique de Familier <color=red>" + percent(value) + "</color>";
+                else tempString = "Chance de Coup Critique Physique de Familier + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.PetMagicalCriticalChance:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Chance de Coup Critique Magique des Familiers <color=red>" + percent(value) + "</color>";
+                else tempString = "Chance de Coup Critique Magique des Familiers + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.PetCriticalDamage:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Dégâts Critiques des Familiers <color=red>" + percent(value) + "</color>";
+                else tempString = "Dégâts Critiques des Familiers + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.PetDebuffResistance:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Résistance aux Débuffs des Familiers <color=red>" + percent(value) + "</color>";
+                else tempString = "Résistance aux Débuffs des Familiers + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.StoneTownResearchPower:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Pouvoir de Recherche de Pierre (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Pouvoir de Recherche de Pierre (Global) + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.CrystalTownResearchPower:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Pouvoir de Recherche de Crystal (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Pouvoir de Recherche de Crystal (Global) + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.LeafTownResearchPower:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Pouvoir de Recherche de Feuille (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Pouvoir de Recherche de Feuille (Global) + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.GuildEXPGain:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Gain d'EXP de Guilde <color=red>" + percent(value, 3) + "</color>";
+                else tempString = "Gain d'EXP de Guilde + " + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.SPDMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "VIT <color=red>" + percent(value, 3) + "</color>";
+                else tempString = "VIT + " + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.CriticalDamageMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Dégâts Critiques <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Dégâts Critiques x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.SkillProficiencyMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Gain de Maîtrise de Capacité <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Gain de Maîtrise de Capacité x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.EquipmentProficiencyMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Gain de Maîtrise d'Equipement <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Gain de Maîtrise d'Equipement x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.EXPGainMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Gain d'EXP <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Gain d'EXP x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.GoldGainMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Gain d'Or <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Gain d'Or x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.PhysicalDamageMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Dégâts Physiques <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Dégâts Physiques x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.FireDamageMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Dégâts de Feu <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Dégâts de Feu x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.IceDamageMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Dégâts de Glace <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Dégâts de Glace x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.ThunderDamageMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Dégâts d'Electricité <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Dégâts d'Electricité x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.LightDamageMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Dégâts de Lumière <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Dégâts de Lumière x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.DarkDamageMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Dégâts des Ténèbres <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Dégâts des Ténèbres x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.TamingPointMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                tempString = "Multiplicative Taming Point Gain + " + percent(value, 3);
+                if (value < 0) tempString = "Gain de Points de Domptage <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Gain de Points de Domptage x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.PetEXPGainMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Gain d'EXP de Familier <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Gain d'EXP de Familier x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.LoyaltyPointGainMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Gain de Points de Loyauté <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Gain de Points de Loyauté x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.BlessingEffectMultiplier:
+                if (isOnlyEffectValue) return percent(value, 3);
+                if (value < 0) tempString = "Effet de Bénédiction <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Effet de Bénédiction x" + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
+                break;
+            case EquipmentEffectKind.PhysicalCriticalMultiplier:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Chance de Critique Physique <color=red>x" + percent(value) + "</color>";
+                else tempString = "Chance de Critique Physique x" + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.MagicalCriticalMultiplier:
+                if (isOnlyEffectValue) return percent(value);
+                if (value < 0) tempString = "Chance de Critique Magique <color=red>x" + percent(value) + "</color>";
+                else tempString = "Chance de Critique Magique x" + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ChallengeBossKnowledge:
@@ -4694,7 +4875,7 @@ public class Localized_French : LOCALIZATION
                         description += "\n- Lorsque vous fabriquez des potions, vous gagnez des <color=orange>Points d'Alchimie</color>, qui peuvent être utilisés pour acheter des <color=orange>Améliorations d'Alchimie</color> ou pour améliorer vos potions, ce qui augmentera leur effet et leur valeur de désassemblage. Utilisez ces points pour gagner un nombre cumulatif de 100 niveaux pour passer à la prochaine quête.";
                         description += "\n- Il vous sera utile de passer quelque temps à <color=orange>étendre votre limite d'Eau Mystérieuse</color>, car cela sera nécessaire pour améliorer vos <color=orange>Catalyseurs</color> et pour augmenter votre production d'Eau Mystérieuse.";
                         condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 100";
-                        reward = "Multiplie la Chance Critique de Catalyseur par 125%";
+                        reward = "Multiplie la Chance de Critique de Catalyseur par 125%";
                         break;
                     case QuestKindGlobal.Alchemy2:
                         name = "Route vers l'Alchimie 2";
@@ -4736,7 +4917,7 @@ public class Localized_French : LOCALIZATION
                         description = "\"Vous m'impressionnez toujours avec la vitesse à laquelle vous effectuez les tâches que je vous donne. Vous me rappelez moi-même à mes débuts, maintenant que j'y pense. Bref, remettons-nous y, d'accord ? Voyons voir, vous avez fait ça... ok, et ça aussi... excellent. Très bien, maintenant, j'imerais que vous exploriez les mystères plus profonds de l'alchimie. Collectez 30 Ectoplasmes et dites-moi lorsque vous les avez sur vous.\"";
                         description += "\n- Vous devez non seulement atteindre un niveau de potion cumulatif de 1000, mais vous devez aussi collecter 30 Ectoplasmes pour les donner à Archimède pour continuer.";
                         condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 1000";
-                        reward = "Multiplication de la Chance Critique de Catalyseur par 125%" +
+                        reward = "Multiplication de la Chance de Critique de Catalyseur par 125%" +
                             "\n- Limite d'Eau Mystérieuse Max + 250";
                         break;
                     case QuestKindGlobal.Alchemy7:
@@ -7066,7 +7247,7 @@ public class Localized_French : LOCALIZATION
             case 55: return "Gain de Matériau lors du Désassemblage d'un Équipement ";
             case 56: return "Réduit le coût de fabrication par " + text;
             case 57: return "Temple";
-            case 58: return "Gain de Point de Réincarnation ";
+            case 58: return "Gain de Points de Réincarnation ";
             case 59: return "# Total de Réincarnations de Classe 1 : " + text;
             case 60: return "# Total de Réincarnations de Classe 2 : " + text;
             case 61: return "# Total de Réincarnations de Classe 3 : " + text;
@@ -7087,7 +7268,7 @@ public class Localized_French : LOCALIZATION
             case 76: return "Nv Max de Monstre Capturable : " + text;
             case 77: return "Battre tout monstre : ";
             case 78: return "Débloque un nouveau Piège dans le Magasin";
-            case 79: return "Gain de Point de Domptage + " + text + "%";
+            case 79: return "Gain de Points de Domptage + " + text + "%";
             case 80: return "# de Stock Max de Pièges dans le Magasin + " + text;
             case 81: return "Emplacement de Familier Actif + " + text;
             case 82: return "Réduit le temps de recharge des Pièges par " + text + " sec";
@@ -7113,7 +7294,7 @@ public class Localized_French : LOCALIZATION
             case 102: return "Débloque le Défi de Boss de Nv +" + text;
             case 103: return "Emplacement d'Inventaire d'Équipement ";
             case 104: return "Multiplie les Récompenses de Stats des Défis avec Handicap par ";
-            case 105: return "Gain de Point d'Alchimie ";
+            case 105: return "Gain de Points d'Alchimie ";
             case 106: return "Chercheur Arcanique";
             case 107: return "Multiplie le Pouvoir de Recherche par";
             case 108: return "# de Recherches + " + text;
@@ -7552,7 +7733,7 @@ public class Localized_French : LOCALIZATION
         switch (id)
         {
             case 0: return "Récompense d'EXP";
-            case 1: return "Gain de Point de Réincarnation de cette quête";
+            case 1: return "Gain de Points de Réincarnation de cette quête";
             case 2: return "Divise le coût d'emplacement d'acceptation par deux";
             case 3: return "Élimine le cout d'emplacement d'acceptation";
             default: return base.QuestString(id, text);
