@@ -3363,14 +3363,14 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.PhysicalCriticalMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "Chance de Critique Physique <color=red>x" + percent(value) + "</color>";
-                else tempString = "Chance de Critique Physique x" + percent(value);
+                if (value < 0) tempString = "Chance Critique Physique <color=red>x" + percent(value) + "</color>";
+                else tempString = "Chance Critique Physique x" + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MagicalCriticalMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "Chance de Critique Magique <color=red>x" + percent(value) + "</color>";
-                else tempString = "Chance de Critique Magique x" + percent(value);
+                if (value < 0) tempString = "Chance Critique Magique <color=red>x" + percent(value) + "</color>";
+                else tempString = "Chance Critique Magique x" + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ChallengeBossKnowledge:
@@ -3421,12 +3421,12 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.PhysicalCriticalAfter:
                 if (isOnlyEffectValue) return percent(value);
-                tempString = "Chance de Critique Physique Absolue + " + percent(value);
+                tempString = "Chance Critique Physique Absolue + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MagicalCriticalAfter:
                 if (isOnlyEffectValue) return percent(value);
-                tempString = "Chance de Critique Magique Absolue + " + percent(value);
+                tempString = "Chance Critique Magique Absolue + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.CriticalDamageAfter:
@@ -10464,8 +10464,8 @@ public class Localized_French : LOCALIZATION
             case 24: return "Multiplicateur de Réduction de Dégâts dans un SD";
             case 25: return "Dégâts Physiques dans un SD";
             case 26: return "Dégâts Magiques dans un SD";
-            case 27: return "Chance de Critique Physique dans un SD";
-            case 28: return "Chance de Critique Magique dans un SD";
+            case 27: return "Chance Critique Physique dans un SD";
+            case 28: return "Chance Critique Magique dans un SD";
             case 29: return "Dégâts Critiques dans un SD";
             case 30: return "Vitesse de Lancer de Capacité dans un SD";
             case 31: return "Nombre de Coups d'une Capacité dans un SD";

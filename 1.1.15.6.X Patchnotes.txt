@@ -1,33 +1,33 @@
 **IEH2 Alpha [ver. 1.1.15.6.X]**
 
-**Expedition Revamp**
-- Added [Expedition Milestones] up to #3100
- - Pet Rank Cap+
- - Pet Loyalty Cap+
- - Pet Stats+%
- - Gold Cap+%, etc
-- Added Expedition selectable times up to 3840h
-- Expedition Speed is now 1.1x every 10th level of the expedition.
-- Expedition [Field Training] now counts Pet EXP Gain of hero stats. 
-- Expedition's Pet EXP Gain now counts Pet EXP Gain of hero stats.
-- Balanced Expedition EXP requirement for 200+ level
-- Shift + Click Cancel button in Expedition cancels all expeditions at once
+**Refonte des Expédition**
+- Ajout de [Paliers d'Expédition]
+ - Limite de Rang de Familier +
+ - Limite de Loyauté de Familier +
+ - % Stats de Familier +
+ - % Limite d'Or +, etc
+- Ajout de sélection de temps d'Expédition jusqu'à 3840h
+- Vitesse d'Expédition est maintenant 1.1x pour chaque 10ème niveau d'expédition
+- L'Expédition [Entraînement de Terrain] prend maintenant en compte le Gain d'EXP de Familier des stats du héros
+- Le Gain d'EXP d'Expédition prend maintenant en compte le Gain d'EXP de Familier des stats du héros
+- Requis d'EXP d'Expédition balancé pour le niveau 200+
+- Maj + Clic le bouton Annuler dans les Expéditions annule toutes les expéditions à la fois
 
-**Bestiary Pet Revamp**
-- Added [Total Pet Rank Milestones] in Bestiary
- - Various stats boost
- - Pet Passive Effect+%
- - Available Pet Slot+
- - Material Drop Cance+
- - Double/Triple Capture Chance+
- - Improves Pet Active Effect
- - Auto Buy Rebirth Upgrades
- - Auto Disassemble Selectable Talismans, etc
-- Purple Bat Pet now has active effect [Automatically Buy Guild Abilities]
-- Buffed Pet Stats (2x per Lv 50)
-- Pet Stat Bonus (from Loyalty, expedition milestones, etc) now applies to Pet Critical Chance, Critical Damage and Debuff Resistance as well.
-- Buffed Taming Point Gain. It now counts pet level and captured #. See the tooltip on taming point bar in bestiary.
-- EQ Effect [Pet Physical/Magical Critical Chance] now applies multiplicatively. It was previously additive with Tamer's skill.
+**Refonte du Bestiaire de Familier**
+- Ajout de [Palier de Rang de Familier] dans le Bestiaire
+ - Boost de stats
+ - Effet de Familier Passif %+
+ - Emplacement de Familier Actif +
+ - Chance d'Apparition de Matériel +
+ - Chance de Capture Double/Triple +
+ - Augmente l'Effet des Familiers Actifs
+ - Auto Achat d'Améliorations de Réincarnation
+ - Auto-Désassemblage de Talismans Sélectables, etc
+- Le Familier Chauve-Souris Violette a maintenant un effet actif [Auto Achat des Capacités de Guilde]
+- Boost des Stats des Familiers (2x tous les Nv 50)
+- Les Bonus de Stats des Familiers (par leur Loyauté, les Paliers d'Expédition, etc) sont appliqués à la Chance Critique de Familier, aux Dégâts Critiques et à la Résistance aux Débuffs
+- Le Gain de Points de Domptage a été boosté. Il prend maintenant encompte le Niveau du Familier et le # Capturé. Veuillez voir l'infobulle de la barre de Point de Domptage dans le Bestiaire
+- Les Effets d'Equipements [Chance Critique Physique/Magique de Familier] s'applique maintenant de façon multiplicative. Ils étaient avant additifs avec les capacités du Dompteur
 
 **Additions**
 - Added new [Super Dungeon (SD)] Tab - Unlocks at Town Building [Mystic Arena] Rank 2
