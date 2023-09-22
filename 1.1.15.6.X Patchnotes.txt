@@ -1,0 +1,77 @@
+**IEH2 Alpha [ver. 1.1.15.6.X]**
+
+**Expedition Revamp**
+- Added [Expedition Milestones] up to #3100
+ - Pet Rank Cap+
+ - Pet Loyalty Cap+
+ - Pet Stats+%
+ - Gold Cap+%, etc
+- Added Expedition selectable times up to 3840h
+- Expedition Speed is now 1.1x every 10th level of the expedition.
+- Expedition [Field Training] now counts Pet EXP Gain of hero stats. 
+- Expedition's Pet EXP Gain now counts Pet EXP Gain of hero stats.
+- Balanced Expedition EXP requirement for 200+ level
+- Shift + Click Cancel button in Expedition cancels all expeditions at once
+
+**Bestiary Pet Revamp**
+- Added [Total Pet Rank Milestones] in Bestiary
+ - Various stats boost
+ - Pet Passive Effect+%
+ - Available Pet Slot+
+ - Material Drop Cance+
+ - Double/Triple Capture Chance+
+ - Improves Pet Active Effect
+ - Auto Buy Rebirth Upgrades
+ - Auto Disassemble Selectable Talismans, etc
+- Purple Bat Pet now has active effect [Automatically Buy Guild Abilities]
+- Buffed Pet Stats (2x per Lv 50)
+- Pet Stat Bonus (from Loyalty, expedition milestones, etc) now applies to Pet Critical Chance, Critical Damage and Debuff Resistance as well.
+- Buffed Taming Point Gain. It now counts pet level and captured #. See the tooltip on taming point bar in bestiary.
+- EQ Effect [Pet Physical/Magical Critical Chance] now applies multiplicatively. It was previously additive with Tamer's skill.
+
+**Additions**
+- Added new [Super Dungeon (SD)] Tab - Unlocks at Town Building [Mystic Arena] Rank 2
+ - Roguelike Dungeons
+ - New equipment type [Artifact]
+ - New equipment effect that is called "SD Enchants"
+ - New stats type "After"
+- Revamped Ability > Stat Breakdowns
+- Global Quest [To Further Stage 14-18]
+- Town Building [Blacksmith] Level Milestone (Lv35, 55, 65) that expands Dictionary Upgrade level cap. Now Dictionary Upgrades are Lv 200 at max. (Lv50 in default, +Lv150 from Blacksmith)
+- The tooltip on Level Milestone of Town Buildings to see it with bigger font size.
+- The tooltip in the world map now shows lowest monster level of each region.
+- Epic Store [Update Bundle 2] in Epic Coin > Bundle tab.
+- Epic Store [Super Ability Point Reset] [Super Dungeon Powerups Reset] in Special 2 tab.
+- Increased Purchase # Limit of Epic Store Items [Expedition Team Slot + 1] [Equipment Weapon Slot + 1] [Equipment Armor Slot + 1] [Equipment Jewelry Slot + 1]
+
+**Balance & Changes**
+- Optimized Monster Kills calculation. Now area clear speed is much improved with high skills range and high skills area of effect.
+- Optimized Auto Rebirth. It now triggers just exactly every area clear.
+- Decreased Lv1~100 Mob HP (50% + 0.5% * Lv compared to previous one).
+- Equipment [Fox Ema]'s Equipment Drop Chance effect (from [0.0100+0.0005]% to [0.0150+0.0001]%
+- Halved the amount of Equipment Enchant Effect [Equipment Drop Chance]
+- Dictionary Upgrade level cap is now Lv50 in default. Changed some of their cost.
+- Increased the passive effect cap of Talisman [Enchanted Alembic]
+- Expanded the cap of town research power.
+- Buffed "Portal Orb Gain from Daily Quest +" of Town Building [Cartographer] Level Milestone.
+- Some of the Town Level Milestone Effects related to daily quests now persist through WA.  [Unlock new Epic Coin Daily Quest] [Portal Orb Gain from Daily Quest +]
+- Town Building [Mystic Arena] Level Milestones, Handicapped Challenge [Mystic Arena 8-9F]
+- Lowered the cast speed of Challenge Boss [Guardian Kor Lv 500] [Nostro Lv 550] [Lady Emelda Lv 600]
+- Challenge Boss [Octobaddie]'s purple attacks now don't affect on pets, in addition to blue attack.
+- Pet Stats now count hero's After stats.
+- Renamed the stats "Summoned Pet EXP Gain" to "Pet EXP Gain".
+- Renamed [Warrior Skill's Range] / [Warrior Skill's Area of Effect] to [Warrior's Class Skills Range] / [Warrior's Class Skills Area of Effect]. This is for all heroes.
+
+**Fixes**
+- Purple Flame Tiger pet active effect now works even when Nitro Booster is off.
+- Damage to Challenge Boss [Octobaddie]'s shield now counts slayer oil potions.
+- Some of the skills projectiles didn't hit Octobaddie.
+- Challenge Boss Octobaddie's Green bar didn't work properly.
+- Enchant Effect amount display now counts Equipment Effect% in the Craft>Enchant Scrolls tooltip
+- Passive Hero's Capture Logs showed up unintentionally.
+- You could unintentionally use pets if you set Sonnet Attack in a global skill slot even while global slots are limited in Handicapped Challenges.
+- Hero EXP gained last minute didn't work properly.
+- Other minor bugs/typoes
+
+**Bonus Code**
+[IEH2SuperDungeon] - 1000 Epic Coin, 100 Portal Orbs and 5 Refresh Ticket

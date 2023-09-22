@@ -731,6 +731,116 @@ public class Localized_French : LOCALIZATION
                 return "Nv";
             case BasicWord.GLv:
                 return "GNv";
+            case BasicWord.Fame://NEW5
+                return "Fame";
+            case BasicWord.Grade://NEW5
+                return "Grade";
+            case BasicWord.DungeonCoin://NEW5
+                return "Dungeon Coin";
+            case BasicWord.Super://NEW5
+                return "Super";
+            case BasicWord.SuperAbility://NEW5
+                return "Super Ability";
+            case BasicWord.Normal://NEW5
+                return "Normal";
+            case BasicWord.AlchemyPointGain://NEW5
+                return "Alchemy Point Gain";
+            case BasicWord.EnchantedEffectChance1://NEW5
+                return "Equipment 1st Enchanted Slot Chance";
+            case BasicWord.EnchantedEffectChance2://NEW5
+                return "Equipment 2nd Enchanted Slot Chance";
+            case BasicWord.EnchantedEffectChance3://NEW5
+                return "Equipment 3rd Enchanted Slot Chance";
+            case BasicWord.WarriorSkillLevelBonus://NEW5
+                return "Warrior Skill Level Bonus";
+            case BasicWord.WizardSkillLevelBonus://NEW5
+                return "Wizard Skill Level Bonus";
+            case BasicWord.AngelSkillLevelBonus://NEW5
+                return "Angel Skill Level Bonus";
+            case BasicWord.ThiefSkillLevelBonus://NEW5
+                return "Thief Skill Level Bonus";
+            case BasicWord.ArcherSkillLevelBonus://NEW5
+                return "Archer Skill Level Bonus";
+            case BasicWord.TamerSkillLevelBonus://NEW5
+                return "Tamer Skill Level Bonus";
+            case BasicWord.WarriorSkillRange://NEW5
+                return "Warrior Skill's Range";
+            case BasicWord.WizardSkillRange://NEW5
+                return "Wizard Skill's Range";
+            case BasicWord.AngelSkillRange://NEW5
+                return "Angel Skill's Range";
+            case BasicWord.ThiefSkillRange://NEW5
+                return "Thief Skill's Range";
+            case BasicWord.ArcherSkillRange://NEW5
+                return "Archer Skill's Range";
+            case BasicWord.TamerSkillRange://NEW5
+                return "Tamer Skill's Range";
+            case BasicWord.WarriorSkillAreaOfEffect://NEW5
+                return "Warrior Skill's Area of Effect";
+            case BasicWord.WizardSkillAreaOfEffect://NEW5
+                return "Wizard Skill's Area of Effect";
+            case BasicWord.AngelSkillAreaOfEffect://NEW5
+                return "Angel Skill's Area of Effect";
+            case BasicWord.ThiefSkillAreaOfEffect://NEW5
+                return "Thief Skill's Area of Effect";
+            case BasicWord.ArcherSkillAreaOfEffect://NEW5
+                return "Archer Skill's Area of Effect";
+            case BasicWord.TamerSkillAreaOfEffect://NEW5
+                return "Tamer Skill's Area of Effect";
+            case BasicWord.Skills://NEW5
+                return "Skills";
+            case BasicWord.HeroGrade://NEW5
+                return "Hero Grade";
+            case BasicWord.Artifact://NEW5
+                return "Artifact";
+            case BasicWord.ArtifactReplica://NEW5
+                return "Artifact Replica";
+            case BasicWord.ArtifactProficiency://NEW5
+                return "Artifact Proficiency";
+            case BasicWord.PermanentEffect://NEW5
+                return "Permanent Effect";
+            case BasicWord.Topaz://NEW5
+                return "Topaz";
+            case BasicWord.Ruby://NEW5
+                return "Ruby";
+            case BasicWord.PieceOfRuby://NEW5
+                return "Piece of Ruby";
+            case BasicWord.EntryCostRefreshTicket://NEW6
+                return "Entry Cost Refresh Ticket";
+            case BasicWord.Floor://NEW6
+                return "Floor";
+            case BasicWord.Attack://NEW6
+                return "Attack";
+            case BasicWord.Defense://NEW6
+                return "Defense";
+            case BasicWord.Bestiary://NEW6
+                return "Bestiary";
+            case BasicWord.AttackStats://NEW6
+                return "Attack Stats";
+            case BasicWord.DefenseStats://NEW6
+                return "Defense Stats";
+            case BasicWord.SkillStats://NEW6
+                return "Skill Stats";
+            case BasicWord.BestiaryStats://NEW6
+                return "Bestiary Stats";
+            case BasicWord.ExtraAfterDamage://NEW6
+                return "Extra After Damage";
+            case BasicWord.DungeonCoinGain://NEW6
+                return "Dungeon Coin Gain";
+            case BasicWord.DoubleCaptureChance://NEW6
+                return "Double Capture Chance";
+            case BasicWord.TripleCaptureChance://NEW6
+                return "Triple Capture Chance";
+            case BasicWord.EquipmentEffect://NEW6
+                return "Equipment Effect";
+            case BasicWord.ExpeditionPassiveEffect://NEW6
+                return "Expedition Passive Effect";
+            case BasicWord.SlimeCoinCap://NEW6
+                return "Slime Coin Cap";
+            case BasicWord.LastMinuteFame://NEW6
+                return "Fame gained in the last minute";
+            case BasicWord.SD://NEW6
+                return "SD";
         }
         return base.Basic(basicWord);
     }
@@ -762,6 +872,8 @@ public class Localized_French : LOCALIZATION
                 return "Réincarnation";
             case MenuKind.Challenge:
                 return "Défi";
+            case MenuKind.SuperDungeon://NEW6
+                return "Super Dungeon";
             case MenuKind.Ascension:
                 return "Ascension";
             case MenuKind.Town:
@@ -854,6 +966,24 @@ public class Localized_French : LOCALIZATION
                 return "Furie d'Armure";
             case MultiplierKind.WardedFury:
                 return "Furie d'Esprit";
+            case MultiplierKind.SuperAbility://NEW5
+                return "Super Ability";
+            case MultiplierKind.PetRankMilestone://NEW5
+                return "Pet Rank Milestone";
+            case MultiplierKind.SuperDungeon://NEW6
+                return "Super Dungeon";
+            case MultiplierKind.DungeonItem://NEW5
+                return "Super Dungeon Powerup";
+            case MultiplierKind.DungeonItemPermanent://NEW5
+                return "Super Dungeon Powerup (Permanent)";
+            case MultiplierKind.SDUpgrade://NEW5
+                return "Super Dungeon Upgrade";
+            case MultiplierKind.SDShop://NEW5
+                return "Super Dungeon Shop";
+            case MultiplierKind.GradeMilestone://NEW5
+                return "Grade Milestone";
+            case MultiplierKind.ExpeditionMilestone://NEW5
+                return "Expedition Milestone";
         }
         return base.StatsBreakdown(kind);
     }
@@ -1006,6 +1136,8 @@ public class Localized_French : LOCALIZATION
                 return "Dégâts Critiques de Familier";
             case Stats.PetDebuffResistance:
                 return "Résistance aux Débuffs de Familier";
+            case Stats.ArtifactProficiencyGain://NEW5
+                return "Artifact Proficiency Gain";
         }
         return tempStrStats;
     }
@@ -1042,6 +1174,23 @@ public class Localized_French : LOCALIZATION
         }
         return base.Ability(kind);
     }
+    public override string SuperAbility(AbilityKind kind)//NEW5
+    {
+        switch (kind)
+        {
+            case AbilityKind.Vitality:
+                return "Super VIT";
+            case AbilityKind.Strength:
+                return "Super STR";
+            case AbilityKind.Intelligence:
+                return "Super INT";
+            case AbilityKind.Agility:
+                return "Super AGI";
+            case AbilityKind.Luck:
+                return "Super LUK";
+        }
+        return Basic(BasicWord.Super) + " " + kind.ToString();
+    }
     public override string AbilityDescription(AbilityKind kind)
     {
         switch (kind)
@@ -1058,6 +1207,24 @@ public class Localized_French : LOCALIZATION
                 return "La Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition d'Equipement.";
         }
         return base.AbilityDescription(kind);
+    }
+    public override string SuperAbilityDescription(AbilityKind kind)//NEW5
+    {
+        switch (kind)
+        {
+            case AbilityKind.Vitality:
+                return "Super Vitality has an effect on HP, DEF and MDEF of both Multiplicative and After.";
+            case AbilityKind.Strength:
+                return "Super Strength has an effect on ATK and DEF of both Multiplicative and After.";
+            case AbilityKind.Intelligence:
+                return "Super Intelligence has an effect on MP, MATK and MDEF of both Multiplicative and After.";
+            case AbilityKind.Agility:
+                return "Super Agility has an effect on MP, SPD, Move Speed and Critical Damage of both Multiplicative and After.";
+            case AbilityKind.Luck:
+                return "Super Luck has an effect on Critical Chance and Critical Damage of both Multiplicative and After.";
+        }
+        return kind.ToString();
+
     }
     public override string AbilityWord(AbilityWord kind)
     {
@@ -1544,8 +1711,69 @@ public class Localized_French : LOCALIZATION
                 return "Lorsqu'une mission est complétée, la même mission sera complétée dans les difficultés inférieures.";
             case PetActiveEffectKind.AutoAlchemiseForNito:
                 return "Créée et désassemble des Potions de Soin Mineures automatiquement pour maximiser la Nitro lorsqu'il n'y en a plus. (le Slime Magique Bleu doit être Actif, requiert [Auto Désassemblage de Potion Avancé] dans le Magasin Epique et assez d'essences pour maximiser la Nitro)";
+            case PetActiveEffectKind.AutoBuyGuildAbility://NEW5
+                return "Automatically buy Guild Abilities.\nShift + Up/Down arrow key on a guild ability to increase/decrease the target level.";
         }
         return base.PetActiveEffect(kind);
+    }
+    public override string PetActiveEffectImprovement(PetActiveEffectKind kind)//NEW5
+    {
+        switch (kind)
+        {
+            case PetActiveEffectKind.UpgradeQueue:
+                return "Extra Upgrade Queue + 5";
+            case PetActiveEffectKind.AlchemyQueue:
+                return "Extra Alchemy Queue + 5";
+            case PetActiveEffectKind.DisassembleEquipment:
+                return "Extra Auto-Disassemble Equipment Slot + 5";
+            case PetActiveEffectKind.BuyShopTrapNormal:
+                return "Decrease " + PotionName(PotionKind.ThrowingNet) + " cooltime by 1";
+            case PetActiveEffectKind.BuyShopTrapIce:
+                return "Decrease " + PotionName(PotionKind.IceRope) + " cooltime by 1";
+            case PetActiveEffectKind.BuyShopTrapThunder:
+                return "Decrease " + PotionName(PotionKind.ThunderRope) + " cooltime by 1";
+            case PetActiveEffectKind.BuyShopTrapFire:
+                return "Decrease " + PotionName(PotionKind.FireRope) + " cooltime by 1";
+            case PetActiveEffectKind.BuyShopTrapLight:
+                return "Decrease " + PotionName(PotionKind.LightRope) + " cooltime by 1";
+            case PetActiveEffectKind.BuyShopTrapDark:
+                return "Decrease " + PotionName(PotionKind.DarkRope) + " cooltime by 1";
+            case PetActiveEffectKind.BuyShopMaterialSlime:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialMagicSlime:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialSpider:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialBat:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialFairy:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialFox:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialDevilfish:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialTreant:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialFlametiger:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.BuyShopMaterialUnicorn:
+                return "Restock amount of materials in Shop + 50";
+            case PetActiveEffectKind.RebirthTier1:
+                return "Unlocks a toggle in Rebirth Tier 1 that automatically buys the cheapest upgrade.";
+            case PetActiveEffectKind.RebirthTier2:
+                return "Unlocks a toggle in Rebirth Tier 2 that automatically buys the cheapest upgrade.";
+            case PetActiveEffectKind.RebirthTier3:
+                return "Unlocks a toggle in Rebirth Tier 3 that automatically buys the cheapest upgrade.";
+            case PetActiveEffectKind.RebirthTier4:
+                return "Unlocks a toggle in Rebirth Tier 4 that automatically buys the cheapest upgrade.";
+            case PetActiveEffectKind.RebirthTier5:
+                return "Unlocks a toggle in Rebirth Tier 5 that automatically buys the cheapest upgrade.";
+            case PetActiveEffectKind.RebirthTier6:
+                return "Unlocks a toggle in Rebirth Tier 6 that automatically buys the cheapest upgrade.";
+            case PetActiveEffectKind.DisassembleTalismanCommon:
+                return "Enables to select talismans to auto disassemble.";
+        }
+        return "";
     }
     //Area
     public override string AreaName(AreaKind kind)
@@ -1971,6 +2199,28 @@ public class Localized_French : LOCALIZATION
                 return "Bol de Ramen Epicé Sans Fin de Tigre de Feu";
             case EquipmentKind.ScreenOfTheSneakyFlametiger:
                 return "Ecran Furtif de Tigre de Feu";
+            case EquipmentKind.ModifiedSword://NEW5
+                return "Ancient Sword";
+            case EquipmentKind.ModifiedStaff://NEW5
+                return "Ancient Staff";
+            case EquipmentKind.ModifiedWing://NEW5
+                return "Ancient Wing";
+            case EquipmentKind.ModifiedDart://NEW5
+                return "Ancient Dart";
+            case EquipmentKind.ModifiedBow://NEW5
+                return "Ancient Bow";
+            case EquipmentKind.ModifiedRecorder://NEW5
+                return "Ancient Recorder";
+            case EquipmentKind.AncientCloak://NEW5
+                return "Ancient Cloak";
+            case EquipmentKind.AncientBelt://NEW5
+                return "Ancient Belt";
+            case EquipmentKind.AncientShoes://NEW5
+                return "Ancient Shoes";
+            case EquipmentKind.AncientRing://NEW5
+                return "Ancient Ring";
+            case EquipmentKind.AncientEarring://NEW5
+                return "Ancient Rarring";
         }
         return base.EquipmentName(kind);
     }
@@ -2139,7 +2389,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.PetEXPGain:
                 return "Gain d'EXP des Familiers";
             case EquipmentEffectKind.LoyaltyPointGain:
-                return "Gain de Points de Loyauté";
+                return "Gain de Point de Loyauté";
             case EquipmentEffectKind.WarriorSkillRange:
                 return "Portée des Capacités du Guerrier";
             case EquipmentEffectKind.WizardSkillRange:
@@ -2244,6 +2494,84 @@ public class Localized_French : LOCALIZATION
                 return "Multiplicateur de Critique Magique";
             case EquipmentEffectKind.ChallengeBossKnowledge:
                 return "Connaissance de Boss de Défi";
+            case EquipmentEffectKind.HPAfter://NEW5
+                return "HP After";
+            case EquipmentEffectKind.MPAfter://NEW5
+                return "MP After";
+            case EquipmentEffectKind.ATKAfter://NEW5
+                return "ATK After";
+            case EquipmentEffectKind.MATKAfter://NEW5
+                return "MATK After";
+            case EquipmentEffectKind.DEFAfter://NEW5
+                return "DEF After";
+            case EquipmentEffectKind.MDEFAfter://NEW5
+                return "MDEF After";
+            case EquipmentEffectKind.SPDAfter://NEW5
+                return "SPD After";
+            case EquipmentEffectKind.MoveSpeedAfter://NEW5
+                return "Move Speed After";
+            case EquipmentEffectKind.PhysicalCriticalAfter://NEW5
+                return "Physical Critical After";
+            case EquipmentEffectKind.MagicalCriticalAfter://NEW5
+                return "Magical Critical After";
+            case EquipmentEffectKind.CriticalDamageAfter://NEW5
+                return "Critical Damage After";
+            case EquipmentEffectKind.DebuffResistanceAfter://NEW5
+                return "Debuff Resistance After";
+            case EquipmentEffectKind.PhysicalDamageAfter://NEW5
+                return "Physical Damage After";
+            case EquipmentEffectKind.FireDamageAfter://NEW5
+                return "Fire Damage After";
+            case EquipmentEffectKind.IceDamageAfter://NEW5
+                return "Ice Damage After";
+            case EquipmentEffectKind.ThunderDamageAfter://NEW5
+                return "Thunder Damage After";
+            case EquipmentEffectKind.LightDamageAfter://NEW5
+                return "Light Damage After";
+            case EquipmentEffectKind.DarkDamageAfter://NEW5
+                return "Dark Damage After";
+            case EquipmentEffectKind.FireResistanceAfter://NEW5
+                return "Fire Resistance After";
+            case EquipmentEffectKind.IceResistanceAfter://NEW5
+                return "Ice Resistance After";
+            case EquipmentEffectKind.ThunderResistanceAfter://NEW5
+                return "Thunder Resistance After";
+            case EquipmentEffectKind.LightResistanceAfter://NEW5
+                return "Light Resistance After";
+            case EquipmentEffectKind.DarkResistanceAfter://NEW5
+                return "Dark Resistance After";
+            case EquipmentEffectKind.SlimeKnowledgeAfter://NEW5
+                return "Slime Knowledge After";
+            case EquipmentEffectKind.MagicSlimeKnowledgeAfter://NEW5
+                return "Magicslime Knowledge After";
+            case EquipmentEffectKind.SpiderKnowledgeAfter://NEW5
+                return "Spider Knowledge After";
+            case EquipmentEffectKind.BatKnowledgeAfter://NEW5
+                return "Bat Knowledge After";
+            case EquipmentEffectKind.FairyKnowledgeAfter://NEW5
+                return "Fairy Knowledge After";
+            case EquipmentEffectKind.FoxKnowledgeAfter://NEW5
+                return "Fox Knowledge After";
+            case EquipmentEffectKind.DevilFishKnowledgeAfter://NEW5
+                return "Devilfish Knowledge After";
+            case EquipmentEffectKind.TreantKnowledgeAfter://NEW5
+                return "Treant Knowledge After";
+            case EquipmentEffectKind.FlameTigerKnowledgeAfter://NEW5
+                return "Flametiger Knowledge After";
+            case EquipmentEffectKind.UnicornKnowledgeAfter://NEW5
+                return "Unicorn Knowledge After";
+            case EquipmentEffectKind.ChallengeBossKnowledgeAfter://NEW5
+                return "Challenge Boss Knowledge After";
+            case EquipmentEffectKind.SDDamageMultiplier://NEW6
+                return "SD Damage Multiplier";
+            case EquipmentEffectKind.SDDamageCutMultiplier://NEW6
+                return "SD Damage Cut Multiplier";
+            case EquipmentEffectKind.FameGain://NEW6
+                return "Fame Gain";
+            case EquipmentEffectKind.DungeonCoinGain://NEW6
+                return "Dungeon Coin Gain";
+            case EquipmentEffectKind.ExtraAfterDamage://NEW6
+                return "Extra After Damage";
         }
         return base.EquipmentEffectName(kind);
     }
@@ -2301,38 +2629,38 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.HPMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "PV <color=red>" + percent(value) + "</color>";
-                else tempString = "PV + " + percent(value);
+                if (value < 0) tempString = "PV <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "PV + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MPMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "PM <color=red>" + percent(value) + "</color>";
-                else tempString = "PM + " + percent(value);
+                if (value < 0) tempString = "PM <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "PM + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "ATQ <color=red>" + percent(value) + "</color>";
-                else tempString = "ATQ + " + percent(value);
+                if (value < 0) tempString = "ATQ <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "ATQ + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MATKMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "MATQ <color=red>" + percent(value) + "</color>";
-                else tempString = "MATQ + " + percent(value);
+                if (value < 0) tempString = "MATQ <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "MATQ + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DEFMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "DEF <color=red>" + percent(value) + "</color>";
-                else tempString = "DEF + " + percent(value);
+                if (value < 0) tempString = "DEF <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "DEF + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MDEFMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "MDEF <color=red>" + percent(value) + "</color>";
-                else tempString = "MDEF + " + percent(value);
+                if (value < 0) tempString = "MDEF <color=red>" + tDigit(value, 1) + "</color>";
+                else tempString = "MDEF + " + tDigit(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKPropotion:
@@ -2500,44 +2828,44 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.WarriorSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités du Guerrier (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités du Guerrier (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités du Guerrier (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités du Guerrier (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.WizardSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités de la Mage (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités de la Mage (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités de la Mage (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités de la Mage (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.AngelSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités de l'Ange (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités de l'Ange (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités de l'Ange (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités de l'Ange (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThiefSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités du Voleur (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités du Voleur (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités du Voleur (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités du Voleur (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.ArcherSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités de l'Archer (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités de l'Archer (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités de l'Archer (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités de l'Archer (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.TamerSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau des Capacités de la Dompteuse (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau des Capacités de la Dompteuse (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau des Capacités de la Dompteuse (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau des Capacités de la Dompteuse (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.AllSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Niveau de Toutes les Capacités (Global) <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Niveau de Toutes les Capacités (Global) + " + tDigit(value, 1);
+                if (value < 0) tempString = "Niveau de Toutes les Capacités (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Niveau de Toutes les Capacités (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             case EquipmentEffectKind.SlimeKnowledge:
@@ -2705,8 +3033,8 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.ColorMaterialDropChance:
                 if (isOnlyEffectValue) return percent(value, 4);
                 tempString = "Chance d'Apparition de Matériaux Rares (Global) + " + percent(value, 4);
-                if (value < 0) tempString = "Chance d'Apparition de Matériaux Rares (Global) <color=red>" + percent(value, 4) + "</color>";
-                else tempString = "Chance d'Apparition de Matériaux Rares (Global) + " + percent(value, 4);
+                if (value < 0) tempString = "Chance d'Apparition de Matériaux Rares (Global) <color=red>" + percent(value) + "</color>";
+                else tempString = "Chance d'Apparition de Matériaux Rares (Global) + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 4) + " / Nv )";
                 break;
             case EquipmentEffectKind.HpRegen:
@@ -2819,8 +3147,8 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.TownMatAreaClearGain:
                 if (isOnlyEffectValue) return tDigit(value, 1);
-                if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + tDigit(value, 1);
+                if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone <color=red>" + percent(value) + "</color>";
+                else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
             //case EquipmentEffectKind.TownMatDungeonRewardGain:
@@ -2992,8 +3320,8 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.ThunderDamageMultiplier:
                 if (isOnlyEffectValue) return percent(value, 3);
-                if (value < 0) tempString = "Dégâts d'Electricité <color=red>x" + percent(value, 3) + "</color>";
-                else tempString = "Dégâts d'Electricité x" + percent(value, 3);
+                if (value < 0) tempString = "Dégâts d'Électricité <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Dégâts d'Électricité x" + percent(value, 3);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.LightDamageMultiplier:
@@ -3050,6 +3378,201 @@ public class Localized_French : LOCALIZATION
                 if (value < 0) tempString = "Dégâts infligés aux Boss de Défi <color=red>" + percent(value) + "</color>";
                 else tempString = "Dégâts infligés aux Boss de Défi + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
+            case EquipmentEffectKind.HPAfter://NEW5
+                if (isOnlyEffectValue) return tDigit(value, 1);
+                tempString = "After HP + " + tDigit(value, 1);
+                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Lv )";
+                break;
+            case EquipmentEffectKind.MPAfter://NEW5
+                if (isOnlyEffectValue) return tDigit(value, 1);
+                tempString = "After MP + " + tDigit(value, 1);
+                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Lv )";
+                break;
+            case EquipmentEffectKind.ATKAfter://NEW5
+                if (isOnlyEffectValue) return tDigit(value, 1);
+                tempString = "After ATK + " + tDigit(value, 1);
+                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Lv )";
+                break;
+            case EquipmentEffectKind.MATKAfter://NEW5
+                if (isOnlyEffectValue) return tDigit(value, 1);
+                tempString = "After MATK + " + tDigit(value, 1);
+                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Lv )";
+                break;
+            case EquipmentEffectKind.DEFAfter://NEW5
+                if (isOnlyEffectValue) return tDigit(value, 1);
+                tempString = "After DEF + " + tDigit(value, 1);
+                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Lv )";
+                break;
+            case EquipmentEffectKind.MDEFAfter://NEW5
+                if (isOnlyEffectValue) return tDigit(value, 1);
+                tempString = "After MDEF + " + tDigit(value, 1);
+                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Lv )";
+                break;
+            case EquipmentEffectKind.SPDAfter://NEW5
+                if (isOnlyEffectValue) return tDigit(value, 1);
+                tempString = "After SPD + " + tDigit(value, 1);
+                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Lv )";
+                break;
+            case EquipmentEffectKind.MoveSpeedAfter://NEW5
+                if (isOnlyEffectValue) return meter(value);
+                tempString = "After Move Speed + " + meter(value) + " / sec";
+                if (perLevelValue > 0) tempString += " ( + " + meter(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.PhysicalCriticalAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Physical Critical Chance + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.MagicalCriticalAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Magical Critical Chance + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.CriticalDamageAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Critical Damage + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.DebuffResistanceAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Debuff Resistance + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.PhysicalDamageAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Physical Damage + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.FireDamageAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Fire Damage + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.IceDamageAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Ice Damage + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.ThunderDamageAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Thunder Damage + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.LightDamageAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Light Damage + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.DarkDamageAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Dark Damage + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.FireResistanceAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Fire Resistance + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.IceResistanceAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Ice Resistance + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.ThunderResistanceAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Thunder Resistance + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.LightResistanceAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Light Resistance + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.DarkResistanceAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Dark Resistance + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.SlimeKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Slime + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.MagicSlimeKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Magicslime + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.SpiderKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Spider + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.BatKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Bat + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.FairyKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Fairy + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.FoxKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Fox + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.DevilFishKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Devilfish + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.TreantKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Treant + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.FlameTigerKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Flametiger + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.UnicornKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Unicorn + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.ChallengeBossKnowledgeAfter://NEW5
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "After Damage to Challenge Boss + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.SDDamageMultiplier://NEW6
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "SD Damage Multiplier + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.SDDamageCutMultiplier://NEW6
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "SD Damage Cut Multiplier + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Lv )";
+                break;
+            case EquipmentEffectKind.FameGain://NEW6
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "Fame Gain + " + percent(value, 3);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Lv )";
+                break;
+            case EquipmentEffectKind.DungeonCoinGain://NEW6
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "Dungeon Coin Gain + " + percent(value, 4);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 4) + " / Lv )";
+                break;
+            case EquipmentEffectKind.ExtraAfterDamage://NEW6
+                if (isOnlyEffectValue) return percent(value);
+                tempString = "Extra After Damage + " + percent(value, 4);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 4) + " / Lv )";
                 break;
             default:
                 if (isOnlyEffectValue) return tDigit(value);
@@ -3237,17 +3760,41 @@ public class Localized_French : LOCALIZATION
             case EnchantKind.ForgeExtract:
                 return "Parchemin d'Extraction [Forge]";
             case EnchantKind.OptionDeleteAll:
-                return "Parchemin de Suppression Globale";
+                return "Parchemin de Suppression Global";
             case EnchantKind.OptionExtractAll:
-                return "Parchemin d'Extraction Globale";
+                return "Parchemin d'Extraction Global";
             case EnchantKind.OptionLotteryAll:
-                return "Parchemin de Lotterie Globale";
+                return "Parchemin de Lotterie Global";
             case EnchantKind.OptionLevelupAll:
                 return "Parchemin de Niveau Supérieur Global";
             case EnchantKind.OptionLevelMaxAll:
                 return "Parchemin de Niveau Maximal Global";
             case EnchantKind.OptionCopyAll:
-                return "Parchemin de Copie Globale";
+                return "Parchemin de Copie Global";
+            case EnchantKind.ArtifactOptionAdd:
+                return "Ancient Parchemin d'Enchantement";
+            case EnchantKind.ArtifactDelete:
+                return "Ancient Parchemin de Suppression";
+            case EnchantKind.ArtifactExtract:
+                return "Ancient Parchemin d'Extraction";
+            case EnchantKind.ArtifactLottery:
+                return "Ancient Parchemin de Lotterie";
+            case EnchantKind.ArtifactLevelup:
+                return "Ancient Parchemin de Niveau Supérieur";
+            case EnchantKind.ArtifactLevelMax:
+                return "Ancient Parchemin de Niveau Maximal";
+            case EnchantKind.ArtifactExpandEnchantSlot:
+                return "Ancient Parchemin d'Expansion";
+            case EnchantKind.ArtifactDeleteAll:
+                return "Ancient Parchemin de Suppression Global";
+            case EnchantKind.ArtifactExtractAll:
+                return "Ancient Parchemin d'Extraction Global";
+            case EnchantKind.ArtifactLotteryAll:
+                return "Ancient Parchemin de Lotterie Global";
+            case EnchantKind.ArtifactLevelupAll:
+                return "Ancient Parchemin de Niveau Supérieur Global";
+            case EnchantKind.ArtifactLevelMaxAll:
+                return "Ancient Parchemin de Niveau Maximal Global";
         }
         return base.EnchantName(kind);
     }
@@ -3589,6 +4136,26 @@ public class Localized_French : LOCALIZATION
                 return "Carte du Traqueur";
             case PotionKind.BerserkersStone:
                 return "Pierre de Berserker";
+            case PotionKind.AncientSlimeBadge:
+                return "Badge Slime Antique";
+            case PotionKind.AncientMagicslimeBadge:
+                return "Badge Slime Magique Antique";
+            case PotionKind.AncientSpiderBadge:
+                return "Badge Araignée Antique";
+            case PotionKind.AncientBatBadge:
+                return "Badge Chauve-Souris Antique";
+            case PotionKind.AncientFairyBadge:
+                return "Badge Fée Antique";
+            case PotionKind.AncientFoxBadge:
+                return "Badge Renard Antique";
+            case PotionKind.AncientDevilfishBadge:
+                return "Badge Poisson Démon Antique";
+            case PotionKind.AncientTreantBadge:
+                return "Badge Tréant Antique";
+            case PotionKind.AncientFlametigerBadge:
+                return "Badge Tigre de Feu Antique";
+            case PotionKind.AncientUnicornBadge:
+                return "Badge Licorne Antique";
         }
         return base.PotionName(kind);
     }
@@ -3774,6 +4341,36 @@ public class Localized_French : LOCALIZATION
             case PotionKind.BerserkersStone:
                 if (isPassive) return "Effet de l'Equipement + " + percent(effectValue);
                 return "Dégâts infligés aux Boss de Défi + " + percent(effectValue);
+            case PotionKind.AncientSlimeBadge://NEW5
+                if (isPassive) return "After Damage to Slime + " + percent(effectValue);
+                return "Multiplicative Damage to Slime + " + percent(effectValue);
+            case PotionKind.AncientMagicslimeBadge://NEW5
+                if (isPassive) return "After Damage to Magicslime + " + percent(effectValue);
+                return "Multiplicative Damage to Magicslime + " + percent(effectValue);
+            case PotionKind.AncientSpiderBadge://NEW5
+                if (isPassive) return "After Damage to Spider + " + percent(effectValue);
+                return "Multiplicative Damage to Spider + " + percent(effectValue);
+            case PotionKind.AncientBatBadge://NEW5
+                if (isPassive) return "After Damage to Bat + " + percent(effectValue);
+                return "Multiplicative Damage to Bat + " + percent(effectValue);
+            case PotionKind.AncientFairyBadge://NEW5
+                if (isPassive) return "After Damage to Fairy + " + percent(effectValue);
+                return "Multiplicative Damage to Fairy + " + percent(effectValue);
+            case PotionKind.AncientFoxBadge://NEW5
+                if (isPassive) return "After Damage to Fox + " + percent(effectValue);
+                return "Multiplicative Damage to Fox + " + percent(effectValue);
+            case PotionKind.AncientDevilfishBadge://NEW5
+                if (isPassive) return "After Damage to Devilfish + " + percent(effectValue);
+                return "Multiplicative Damage to Devilfish + " + percent(effectValue);
+            case PotionKind.AncientTreantBadge://NEW5
+                if (isPassive) return "After Damage to Treant + " + percent(effectValue);
+                return "Multiplicative Damage to Treant + " + percent(effectValue);
+            case PotionKind.AncientFlametigerBadge://NEW5
+                if (isPassive) return "After Damage to Flametiger + " + percent(effectValue);
+                return "Multiplicative Damage to Flametiger + " + percent(effectValue);
+            case PotionKind.AncientUnicornBadge://NEW5
+                if (isPassive) return "After Damage to Unicorn + " + percent(effectValue);
+                return "Multiplicative Damage to Unicorn + " + percent(effectValue);
         }
         return base.PotionEffect(kind, effectValue);
     }
@@ -4681,6 +5278,46 @@ public class Localized_French : LOCALIZATION
                         reward = "Débloque l'Amélioration [ Gain de Ressources 15 ]" +
                             "\n- File d'Améliorations + 5";
                         break;
+                    case QuestKindGlobal.Upgrade14://NEW5
+                        name = "To Further Stage 14";
+                        client = "Yuni";
+                        description = "";
+                        condition = "Upgrade [ Resource Gain 1 ] Lv 1100";
+                        reward = "Unleash Upgrade [ Resource Gain 16 ]" +
+                            "\n- Upgrade Queue + 5";
+                        break;
+                    case QuestKindGlobal.Upgrade15://NEW5
+                        name = "To Further Stage 15";
+                        client = "Yuni";
+                        description = "";
+                        condition = "Upgrade [ Resource Gain 1 ] Lv 1250";
+                        reward = "Unleash Upgrade [ Resource Gain 17 ]" +
+                            "\n- Upgrade Queue + 5";
+                        break;
+                    case QuestKindGlobal.Upgrade16://NEW5
+                        name = "To Further Stage 16";
+                        client = "Yuni";
+                        description = "";
+                        condition = "Upgrade [ Resource Gain 1 ] Lv 1500";
+                        reward = "Unleash Upgrade [ Resource Gain 18 ]" +
+                            "\n- Upgrade Queue + 5";
+                        break;
+                    case QuestKindGlobal.Upgrade17://NEW5
+                        name = "To Further Stage 17";
+                        client = "Yuni";
+                        description = "";
+                        condition = "Upgrade [ Resource Gain 1 ] Lv 1750";
+                        reward = "Unleash Upgrade [ Resource Gain 19 ]" +
+                            "\n- Upgrade Queue + 5";
+                        break;
+                    case QuestKindGlobal.Upgrade18://NEW5
+                        name = "To Further Stage 18";
+                        client = "Yuni";
+                        description = "";
+                        condition = "Upgrade [ Resource Gain 1 ] Lv 2000";
+                        reward = "Unleash Upgrade [ Resource Gain 20 ]" +
+                            "\n- Upgrade Queue + 5";
+                        break;
 
                     case QuestKindGlobal.Nitro1:
                         name = "Fan de Nitro 1";
@@ -4875,7 +5512,7 @@ public class Localized_French : LOCALIZATION
                         description += "\n- Lorsque vous fabriquez des potions, vous gagnez des <color=orange>Points d'Alchimie</color>, qui peuvent être utilisés pour acheter des <color=orange>Améliorations d'Alchimie</color> ou pour améliorer vos potions, ce qui augmentera leur effet et leur valeur de désassemblage. Utilisez ces points pour gagner un nombre cumulatif de 100 niveaux pour passer à la prochaine quête.";
                         description += "\n- Il vous sera utile de passer quelque temps à <color=orange>étendre votre limite d'Eau Mystérieuse</color>, car cela sera nécessaire pour améliorer vos <color=orange>Catalyseurs</color> et pour augmenter votre production d'Eau Mystérieuse.";
                         condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 100";
-                        reward = "Multiplie la Chance de Critique de Catalyseur par 125%";
+                        reward = "Multiplie la Chance Critique de Catalyseur par 125%";
                         break;
                     case QuestKindGlobal.Alchemy2:
                         name = "Route vers l'Alchimie 2";
@@ -4917,7 +5554,7 @@ public class Localized_French : LOCALIZATION
                         description = "\"Vous m'impressionnez toujours avec la vitesse à laquelle vous effectuez les tâches que je vous donne. Vous me rappelez moi-même à mes débuts, maintenant que j'y pense. Bref, remettons-nous y, d'accord ? Voyons voir, vous avez fait ça... ok, et ça aussi... excellent. Très bien, maintenant, j'imerais que vous exploriez les mystères plus profonds de l'alchimie. Collectez 30 Ectoplasmes et dites-moi lorsque vous les avez sur vous.\"";
                         description += "\n- Vous devez non seulement atteindre un niveau de potion cumulatif de 1000, mais vous devez aussi collecter 30 Ectoplasmes pour les donner à Archimède pour continuer.";
                         condition = "Niveau de Potion Total " + tDigit(game.potionCtrl.TotalPotionLevel()) + " / 1000";
-                        reward = "Multiplication de la Chance de Critique de Catalyseur par 125%" +
+                        reward = "Multiplication de la Chance Critique de Catalyseur par 125%" +
                             "\n- Limite d'Eau Mystérieuse Max + 250";
                         break;
                     case QuestKindGlobal.Alchemy7:
@@ -6061,6 +6698,46 @@ public class Localized_French : LOCALIZATION
                 return "Utilisez le multiplicateur en haut à gauche pour l'auto-achat de familier et la file d'améliorations";
             case ToggleKind.AutoAreaProgressPassiveHero:
                 return "Transporte les Héros Passifs dans la Zone de Progression Auto";
+            case ToggleKind.SDDisableDamageText://NEW5
+                return "Disable Damage Text";
+            case ToggleKind.SDDisableAllLogs://NEW5
+                return "Disable All Logs";
+            case ToggleKind.SDDisableDungeonCoinLog://NEW5
+                return "Dungeon Coin Gains";
+            case ToggleKind.SDDisableFameLog://NEW5
+                return "Fame Gains";
+            case ToggleKind.SDDisableGradeUp://NEW5
+                return "Disable Hero Grade Up text and particle";
+            case ToggleKind.SDDisableParticle://NEW5
+                return "Disable Particles";
+            case ToggleKind.SDDisableAttackEffect://NEW5
+                return "Disable Attack Effects";
+            case ToggleKind.AutoBuyRebirthUpgrade1://NEW5
+                return "Auto Buy Upgrades (Tier 1)";
+            case ToggleKind.AutoBuyRebirthUpgrade2://NEW5
+                return "Auto Buy Upgrades (Tier 2)";
+            case ToggleKind.AutoBuyRebirthUpgrade3://NEW5
+                return "Auto Buy Upgrades (Tier 3)";
+            case ToggleKind.AutoBuyRebirthUpgrade4://NEW5
+                return "Auto Buy Upgrades (Tier 4)";
+            case ToggleKind.AutoBuyRebirthUpgrade5://NEW5
+                return "Auto Buy Upgrades (Tier 5)";
+            case ToggleKind.AutoBuyRebirthUpgrade6://NEW5
+                return "Auto Buy Upgrades (Tier 6)";
+            case ToggleKind.SDAutoDodge://NEW6
+                return "Auto Dodge";
+            case ToggleKind.SDAutoLeaveAndRetry://NEW6
+                return "Auto Leave And Retry";
+            case ToggleKind.SDAutoProgress://NEW6
+                return "Auto Progression";
+            case ToggleKind.SDAutoPowerups://NEW6
+                return "Auto Buy Powerups";
+            case ToggleKind.SDUseAutoProgressionTargetFloor://NEW6
+                return "Use Auto Progression Target Floor";
+            case ToggleKind.SDFastResult://NEW6
+                return "Shorten Super Dungeon Result";
+            case ToggleKind.SDAutoUseRefreshTicket://NEW6
+                return "Auto Use Refresh Tickets";
         }
         return base.Toggle(kind);
     }
@@ -6463,7 +7140,7 @@ public class Localized_French : LOCALIZATION
     }
 
     //ExpeditionMilestone
-    public override string ExpeditionMilestoneString(int id)
+    public override string ExpeditionMilestoneString(int id, string text)
     {
         switch (id)
         {
@@ -6482,6 +7159,13 @@ public class Localized_French : LOCALIZATION
             case 12: return "Le progrès des Expéditions persiste après une AM (requiert l'Accomplissement AM1 #65)";
             case 13: return "Effet Passif des Expéditions + 25%";
             case 14: return "Vitesse des Expéditions + 25%";
+            case 15: return "Expedition [Field Training] Passive Effect + " + text;//NEW5
+            case 16: return "Expedition EXP Gain + " + text;//NEW5
+            case 17: return "Expedition Reward + " + text;//NEW5
+            case 18: return "Expedition Passive Effect + " + text;//NEW5
+            case 19: return "Expedition Speed + " + text;//NEW5
+            case 20: return "Pet Stats + " + text;//NEW5
+            case 21: return "Gold Cap + " + text;//NEW5
         }
         return base.ExpeditionMilestoneString(id);
     }
@@ -6822,7 +7506,9 @@ public class Localized_French : LOCALIZATION
             case 38: return "Meilleur Temps de Complétion";
             case 39: return "Meilleur Gain d'Or Total";
             case 40: return "Meilleur Gain d'EXP Total";
-
+            case 41: return "Grade Up!!!";//NEW5
+            case 42: return "Hotkey : Space key";//NEW5
+            case 43: return "Safe Zone";//NEW5
         }
         return base.BattleControllerUIString(id);
     }
@@ -6838,6 +7524,7 @@ public class Localized_French : LOCALIZATION
             case 4: return "<size=20><u>Coût de Fabrication</u><size=18>";
             case 5: return "<color=orange> Désassembler";
             case 6: return "<color=yellow>Maj + C pour fabriquer</color>";
+            case 7: return "Craft is not available on Artifacts.";//NEW5
         }
         return base.EquipmentDictionaryUIString(id);
     }
@@ -7072,6 +7759,9 @@ public class Localized_French : LOCALIZATION
             case 40: return "\n- Les Familiers actifs après le # de familiers activables seront automatiquement désactivés";
             case 41: return "\n- Vous pourrez recommencer les missions complétées mais vous ne recevrez pas de Pièces Épiques venant d'elles";
             case 42: return "Ascension Monde de Classe " + tDigit(wa.tier + 1);
+            case 43: return "\n- Hero Grade, Fame and Super Ability Points";//?
+            case 44: return "\n- Super Dungeon Max Floor Reached and Purchase # Limit of Ruby Shop";//NEW6
+            case 45: return "\n- Grade Milestones, Super Dungeon Improvement and Ruby Shop Stats tab";//NEW6
         }
         return "";
     }
@@ -7118,6 +7808,8 @@ public class Localized_French : LOCALIZATION
             case 21: return "Effet de Familier Actif";
             case 22: return "Effet de Familier Passif";
             case 23: return "Stats du Familier";
+            case 24: return "Total Pet Rank";//NEW5
+            case 25: return "Total Pet Rank Milestone";//NEW5
         }
         return "";
     }
@@ -7181,6 +7873,9 @@ public class Localized_French : LOCALIZATION
             case 2: return "Raid de Boss";
             case 3: return "Participant";
             case 4: return "Tous les héros couramment actifs vont rejoindre le combat !";
+            case 5: return "Portal Orb cost will increase by 2x every 5 Super Dungeon runs.";//NEW6
+            case 6: return "Current Runs : ";//NEW5
+            case 7: return "Total Runs : ";//NEW6
         }
         return "";
     }
@@ -7247,7 +7942,7 @@ public class Localized_French : LOCALIZATION
             case 55: return "Gain de Matériau lors du Désassemblage d'un Équipement ";
             case 56: return "Réduit le coût de fabrication par " + text;
             case 57: return "Temple";
-            case 58: return "Gain de Points de Réincarnation ";
+            case 58: return "Gain de Point de Réincarnation ";
             case 59: return "# Total de Réincarnations de Classe 1 : " + text;
             case 60: return "# Total de Réincarnations de Classe 2 : " + text;
             case 61: return "# Total de Réincarnations de Classe 3 : " + text;
@@ -7268,7 +7963,7 @@ public class Localized_French : LOCALIZATION
             case 76: return "Nv Max de Monstre Capturable : " + text;
             case 77: return "Battre tout monstre : ";
             case 78: return "Débloque un nouveau Piège dans le Magasin";
-            case 79: return "Gain de Points de Domptage + " + text + "%";
+            case 79: return "Gain de Point de Domptage + " + text + "%";
             case 80: return "# de Stock Max de Pièges dans le Magasin + " + text;
             case 81: return "Emplacement de Familier Actif + " + text;
             case 82: return "Réduit le temps de recharge des Pièges par " + text + " sec";
@@ -7289,12 +7984,12 @@ public class Localized_French : LOCALIZATION
             case 97: return "Dégâts sur les Boss de Défi ";
             case 98: return "Complétion de Défi de Raid " + text;
             case 99: return "Débloque les Défis avec Handicap";
-            case 100: return "Débloque les Défis Super Donjon";
+            case 100: return "Unleash Tab [ Super Dungeon ]";//NEW6
             case 101: return "Débloque l'Handicap [Arène Mystique " + text + "]";
             case 102: return "Débloque le Défi de Boss de Nv +" + text;
             case 103: return "Emplacement d'Inventaire d'Équipement ";
             case 104: return "Multiplie les Récompenses de Stats des Défis avec Handicap par ";
-            case 105: return "Gain de Points d'Alchimie ";
+            case 105: return "Gain de Point d'Alchimie ";
             case 106: return "Chercheur Arcanique";
             case 107: return "Multiplie le Pouvoir de Recherche par";
             case 108: return "# de Recherches + " + text;
@@ -7315,7 +8010,7 @@ public class Localized_French : LOCALIZATION
             case 123: return "Gain d'EXP d'Expédition ";
             case 124: return "Gain d'EXP de Familier d'Expédition ";
             case 125: return "Améliore l'effet des améliorations de Gain de Ressources";
-            case 126: return "";
+            case 126: return "Dictionary Upgrade's Max Level + " + text;//NEW5
             case 127: return "";
             case 128: return "";
             case 129: return "";
@@ -7428,6 +8123,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Récompense de Complétion";
             case 7: return "Commencer";
             case 8: return "Annuler";
+            case 9: return "Are you sure you want to cancel <color=yellow>ALL</color> expeditions?";//NEW6
             default: return base.ExpeditionCtrlString(id, text);
         }
     }
@@ -7576,6 +8272,7 @@ public class Localized_French : LOCALIZATION
             case 11: return "Finissez la Quête de Titre [Preuve de Reinc.] pour permettre l'Activation en Arrière-Plan.";
             case 12: return "Vous jouez couramment le héros " + text;
             case 13: return "Jouer le héros " + text;
+            case 14: return "Target level to auto buy";//NEW5
             default: return base.GuildMenuString(id, text);
         }
     }
@@ -7668,7 +8365,7 @@ public class Localized_French : LOCALIZATION
         if (area.curseAbilityMul < 1)
         {
             if (isCurse) tempStr += ", ";
-            tempStr += "Réduit les Points d'Abilité de " + percent(area.curseAbilityMul);
+            tempStr += "Reduces Ability Point to " + percent(area.curseAbilityMul, 4);//NEW5
             isCurse = true;
         }
         if (area.cursePetBasicStatsMul < 1)
@@ -7733,7 +8430,7 @@ public class Localized_French : LOCALIZATION
         switch (id)
         {
             case 0: return "Récompense d'EXP";
-            case 1: return "Gain de Points de Réincarnation de cette quête";
+            case 1: return "Gain de Point de Réincarnation de cette quête";
             case 2: return "Divise le coût d'emplacement d'acceptation par deux";
             case 3: return "Élimine le cout d'emplacement d'acceptation";
             default: return base.QuestString(id, text);
@@ -8137,7 +8834,7 @@ public class Localized_French : LOCALIZATION
                 effect = "Débloque une option dans l'onglet Options qui permet à la Capacité du Familier Renard Violet de se baser sur le niveau de maîtrise de l'équipement (Nv 10) au lieu du niveau maximum. (Le familier doit être activé pour que l'effet marche.)";
                 break;
             case EpicStoreKind.EquipmentEnchantFilter:
-                name = "<size=21>Filtres Avancés d'Auto Désassemblage d'Equipements Enchantés";
+                name = "<size=21>Filtres Avancés d'Auto Désassemblage d'Equimenets Enchantés";
                 effect = "<size=19>Débloque un bouton [Personnaliser] dans le Dictionnaire qui permet l'utilisation d'un Filtre d'Enchantement, qui permet de spécifier quels enchantements (y compris leur niveau minimum) à exclure de l'option d'auto désassemblage. Vous devez d'abord acheter [Auto Désassemblage d'Equipement Avancé] pour que cela fonctionne.";
                 break;
             case EpicStoreKind.EasyAccessQuest:
@@ -8182,7 +8879,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.AutoMysteriousWaterAdder:
                 name = "Auto Ajouteur d'Eau Mystérieuse";
-                effect = "Débloque la fonction de chargement d'Allocation d'Essences dans le Labo pour automatiquement allouer l'Eau Mystérieuse aux Essences dès que vous en produisez 0.1/sec, ou juste après une Ascension Monde. Requiert la complétion du Palier de Mission de Zone #1150 et l'Accomplissement d'AM1 #30.";
+                effect = "Débloque la fonction de chargement d'Allocation d'Essences dans le Labo pour automatiquement allouer l'Eau Mystérieuse aux Essences dès que vous en produisez 0.1/sec, ou juste après une Ascension Monde. Requiert la complétion du Palier de Mission de Zone #1150 et l' Accomplissement d'AM1 #30.";
                 break;
             case EpicStoreKind.SmartUseOfAnvils:
                 name = "Utilisation Intelligente des Enclumes";
@@ -8191,6 +8888,14 @@ public class Localized_French : LOCALIZATION
             case EpicStoreKind.EasyAccessChallenge:
                 name = "Accès Facile [Défi]";
                 effect = "Débloque des boutons dans l'onglet Défi qui vous permet de tenter des défis avec les héros en arrière-plan.";
+                break;
+            case EpicStoreKind.SuperAbilityReset://NEW6
+                name = "Super Ability Reset";
+                effect = "Resets Super Ability and restores Super Ability Points of current playing Hero.";
+                break;
+            case EpicStoreKind.SDPowerupReset://NEW6
+                name = "Super Dungeon Powerups Reset";
+                effect = "Resets Super Dungeon Powerups Rank and restores Topaz.";
                 break;
         }
         return (name, effect);
@@ -8507,7 +9212,7 @@ public class Localized_French : LOCALIZATION
                     for (int i = 0; i < Enums.basicStatsKindLength; i++)
                     {
                         int countI = i;
-                        tempStr += localized.BasicStats((BasicStatsKind)countI) + " " + tDigit(Parameter.baseStats[countJ][countI], 1) + " | ";
+                        tempStr += localized.BasicStats((BasicStatsKind)countI) + " " + tDigit(Parameter.baseStats[countJ][countI], 2) + " | ";
                     }
                 }
                 tempStr += "\n\n";
@@ -8519,7 +9224,7 @@ public class Localized_French : LOCALIZATION
                     for (int i = 0; i < Enums.basicStatsKindLength; i++)
                     {
                         int countI = i;
-                        tempStr += localized.BasicStats((BasicStatsKind)countI) + " " + tDigit(Parameter.stats[countJ][countI], 1) + " | ";
+                        tempStr += localized.BasicStats((BasicStatsKind)countI) + " " + tDigit(Parameter.stats[countJ][countI], 2) + " | ";
                     }
                 }
                 tempStr += "\n\n";
@@ -8928,6 +9633,13 @@ public class Localized_French : LOCALIZATION
         tempStr += "\n- Feuille : " + tDigit(main.S.totalLeaf);
         tempStr += "\n- Pièce Slime : " + tDigit(main.S.totalSlimeCoin);
         tempStr += "\n\n";
+        tempStr += "<size=20><u>Total Super Dungeon Currency Gained</u><size=18>";//NEW7
+        tempStr += "\n- Dungeon Coin gained in SD : " + tDigit(main.S.totalDungeonCoinGained);//NEW7
+        tempStr += "\n- Dungeon Coin saved from SD : " + tDigit(main.S.totalPermanentDungeonCoinGained);//NEW7
+        tempStr += "\n- Ruby : " + tDigit(main.S.totalRubyGained);//NEW7
+        tempStr += "\n- Piece of Ruby : " + tDigit(main.S.totalPieceOfRubyGained);//NEW7
+        tempStr += "\n- Entry Cost Refresh Ticket : " + tDigit(main.S.totalEntryCostRefreshTicketGained);//NEW7
+        tempStr += "\n\n";//NEW7
         tempStr += "<size=20><u>Niveau de Héros Max Atteint</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
@@ -9336,6 +10048,7 @@ public class Localized_French : LOCALIZATION
             case 3: return "Information";
             case 4: return "Total Complété #";
             case 5: return "Temps Total";
+            case 6: return "This Expedition Speed";//NEW5
             default: return base.ExpeditionString(id, text);
         }
     }
@@ -9682,6 +10395,9 @@ public class Localized_French : LOCALIZATION
             case 7: return "Temps de Jeu Réel Total";
             case 8: return "Temps de Jeu Total";
             case 9: return "Quitter le Mode Arrière-Plan";
+            case 10: return "Start " + text;//NEW5 //SuperDungeon
+            case 11: return "Sold Out";//NEW5
+            case 12: return text + " Drop Chance";//NEW6
             default: return base.OtherString(id, text);
         }
     }
@@ -9697,4 +10413,309 @@ public class Localized_French : LOCALIZATION
         }
         return base.NumberFormatString(kind);
     }
+
+    public override string PetRankMilestoneString(int id, string text = "")//NEW5
+    {
+        switch (id)
+        {
+            case 0: return "Taming Point Gain + " + text;
+            case 1: return "Loyalty Point Gain + " + text;
+            case 2: return "Pet EXP Gain + " + text;
+            case 3: return "Pet Stats + " + text;
+            case 4: return "Pet Passive Effect + " + text;
+            case 5: return "Double Capture Chance + " + text;
+            case 6: return "Triple Capture Chance + " + text;
+            case 7: return "Improves Pet Active Effect of " + text;
+            case 8: return "Common Material Drop Chance + " + text + " (Multiplicative)";
+            case 9: return "Rare Material Drop Chance + " + text + " (Multiplicative)";
+            case 10: return "Active Pet Slot + " + text;
+        }
+        return "";
+    }
+
+    public override string SuperDungeonString(int id, string text = "")//NEW5
+    {
+        switch (id)
+        {
+            case 0: return "You will get Dungeon Coin after defeating monsters.";
+            case 1: return "You will get Topaz when you clear a floor for the first time, per hero.";
+            case 2: return "You will get Ruby when you clear every 10th floor for the first time, per hero.";
+            case 3: return "You will get Piece of Ruby when you clear every 10th floor after the first time, per hero.";
+            case 4: return "Current Run Purchased #";
+            case 5: return "Current Portal Orb Cost to Enter";
+            case 6: return "Ticket that resets the current Portal Orb Cost of Super Dungeons back to 1 Portal Orb to enter.";//NEW6
+            case 7: return "Clear " + text;//NEW6
+            case 8: return "Various stats are nerfed during Super Dungeon";//NEW6
+            case 9: return "Blessings are not available";//NEW6
+            case 10: return "Max Floor Reached";//NEW6
+            case 11: return "Modifiers";//NEW6
+            case 12: return "Refresh";//NEW6
+            case 13: return "Go to Super Ability";//NEW6
+            case 14: return "Grade Milestones";//NEW6
+            case 15: return "Hero Stats";//NEW6
+            case 16: return "Available Class Skill Slot";//NEW6
+            case 17: return "Available Weapon Equipment Slot";//NEW6
+            case 18: return "Available Armor Equipment Slot";//NEW6
+            case 19: return "Available Jewelry Equipment Slot";//NEW6
+            case 20: return "Available Utility Slot";//NEW6
+            case 21: return "Initial Time Limit";//NEW6
+            case 22: return "Initial Available Dodge Time";//NEW6
+            case 23: return "SD Damage Multiplier";//NEW6
+            case 24: return "SD Damage Cut Multiplier";//NEW6
+            case 25: return "SD Physical Damage";//NEW6
+            case 26: return "SD Magical Damage";//NEW6
+            case 27: return "SD Physical Critical Chance";//NEW6
+            case 28: return "SD Magical Critical Chance";//NEW6
+            case 29: return "SD Critical Damage";//NEW6
+            case 30: return "SD Skill Cast Speed";//NEW6
+            case 31: return "SD Skill Hit Count";//NEW6
+            case 32: return "SD Extra After Damage";//NEW6
+            case 33: return "SD Move Speed";//NEW6
+            case 34: return "SD Equipment Drop Chance";//NEW6
+            case 35: return "Dungeon Coin Bonus per Defeat";//NEW6
+            case 36: return "Fame Gain";//NEW6
+            case 37: return "Powerups";//NEW6
+            case 38: return "Automations";//NEW6
+            case 39: return "Upgrade " + text;//NEW6
+            case 40: return "SD Upgrade";//NEW6
+            case 41: return "SD Automation";//NEW6
+            case 42: return "Target Floor";//NEW6
+            case 43: return "Vaild until the Entry Cost exceeds this value";//NEW6
+            case 44: return "SD Powerup";//NEW6
+            case 45: return "Hero Stats are nerfed during Super Dungeon - See Hero Detail tab";//NEW6
+            case 46: return "Super Dungeon successfully completed!";//NEW6
+            case 47: return "You've left the Super Dungeon safely.";//NEW6
+            case 48: return "You've lost, better luck next time!";//NEW6
+            case 49: return "Loot Gained";//NEW6
+            case 50: return "Powerups Purchased";//NEW6
+            case 51: return "Total Dungeon Coin Gained";//NEW6
+            case 52: return "Total Fame Gained";//NEW6
+            case 53: return "Super Dungeon";//NEW6
+            case 54: return "Use 1 " + Basic(BasicWord.EntryCostRefreshTicket) + " to reset the current the Entry Cost back to 1 Portal Orb.";
+            case 55: return "Active when the Entry Cost exceeds this value";//NEW6
+            case 56: return "Available Enchant Slot";//NEW7
+            case 57: return "Total gained in SD";//NEW7
+            case 58: return "Total saved from SD";//NEW7
+            case 59: return "Total gained";//NEW7
+            case 60: return "You can bring the following items back if you leave right now.";//NEW7
+        }
+        return text;
+    }
+
+    public override (string name, string effect, string permanentEffect) SDPowerupString(SuperDungeonPowerupKind kind, string text = "")//NEW7
+    {
+        string name = "";
+        string effect = "";
+        string permanentEffect = "";
+        switch (kind)
+        {
+            case SuperDungeonPowerupKind.Heal:
+                name = "Heal";
+                effect = "Restores {0} of Max HP every floor ( + {1} / Rank )";
+                permanentEffect = "HP After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.TimeLimit:
+                name = "Time Expansion";
+                effect = "SD Time Limit + {0} ( + {1} / Rank )";
+                permanentEffect = "Initial SD Time Limit + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.DamageMultiplier:
+                name = "SD Damage Multiplier";
+                effect = "SD Damage Multiplier + {0} ( + {1} / Rank )";
+                permanentEffect = "Initial SD Damage Multiplier + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.DamageCutMultiplier:
+                name = "SD Damage Cut Multiplier";
+                effect = "SD Damage Cut Multiplier + {0} ( + {1} / Rank )";
+                permanentEffect = "Initial SD Damage Cut Multiplier + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.RestoreDodgeTimesec:
+                name = "Dodge Time";
+                effect = "Restores {0} sec available dodge every floor ( + {1} / Rank )";
+                permanentEffect = "Initial available dodge + {0} sec ( + {1} sec / purchase )";
+                break;
+            case SuperDungeonPowerupKind.DodgeHeal:
+                name = "Dodge Heal";
+                effect = "Restores {0} of Max HP every time dodge is successful ( + {1} / Rank )";
+                permanentEffect = "MP After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.DungeonCoinGain:
+                name = "Dungeon Coin Gain";
+                effect = "Extra Dungeon Coin per defeat + {0} ( + {1} / Rank )";
+                permanentEffect = "Dungeon Coin Gain + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.FameGain:
+                name = "Fame Gain";
+                effect = "Fame Gain + {0} ( + {1} / Rank )";
+                permanentEffect = "Fame Gain + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.SkillCastSpeed:
+                name = "Skill Cast Speed";
+                effect = "Skill Cast Speed + {0} ( + {1} / Rank )";
+                permanentEffect = "SPD After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.PhysicalCriticalChance:
+                name = "Physical Critical Chance";
+                effect = "Physical Critical Chance After + {0} ( + {1} / Rank )";
+                permanentEffect = "Physical Critical Chance After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.MagicalCriticalChance:
+                name = "Magical Critical Chance";
+                effect = "Magical Critical Chance After + {0} ( + {1} / Rank )";
+                permanentEffect = "Magical Critical Chance After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.CriticalDamage:
+                name = "Critical Damage";
+                effect = "Critical Damage After + {0} ( + {1} / Rank )";
+                permanentEffect = "Critical Damage After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.MoveSpeed:
+                name = "Move Speed";
+                effect = "Move Speed After + {0} / sec ( + {1} / Rank )";
+                permanentEffect = "Move Speed After + {0} / sec ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.PhysicalDamage:
+                name = "Physical Damage";
+                effect = "Physical Damage After + {0} ( + {1} / Rank )";
+                permanentEffect = "ATK After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.MagicalDamage:
+                name = "Magical Damage";
+                effect = "Magical Damage After + {0} ( + {1} / Rank )";
+                permanentEffect = "MATK After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.PhysicalAbsorption:
+                name = "Physical Absorption";
+                effect = "Physical Absorption After + {0} ( + {1} / Rank )";
+                permanentEffect = "DEF After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.MagicalAbsorption:
+                name = "Magical Absorption";
+                effect = "Magical Absorption After + {0} ( + {1} / Rank )";
+                permanentEffect = "MDEF After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.SkillHitCount:
+                name = "Skill Hit Count";
+                effect = "Skill Hit Count + {0} ( + {1} / Rank )";
+                permanentEffect = "Skill Level After + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.ExtraAfterDamage:
+                name = "Extra After Damage";
+                effect = "Extra After Damage + {0} ( + {1} / Rank )";
+                permanentEffect = "Extra After Damage + {0} ( + {1} / purchase )";
+                break;
+            case SuperDungeonPowerupKind.EquipmentDropChance:
+                name = "Equipment Drop Chance";
+                effect = "Equipment Drop Chance After + {0} ( + {1} / Rank )";
+                permanentEffect = "Artifact Proficiency Gain + {0} ( + {1} / purchase )";
+                break;
+        }
+        return (name, effect, permanentEffect);
+    }
+
+    public override string SDShopString(int id, string text1 = "", string text2 = "", string text3 = "")//NEW7
+    {
+        switch (id)
+        {
+            case 0: return "Ruby Converter";
+            case 1: return "Convert " + text1 + " <sprite=\"PieceOfRuby\" index=0> " + Basic(BasicWord.PieceOfRuby) + " to 1 <sprite=\"Ruby\" index=0> " + Basic(BasicWord.Ruby);
+            case 2: return "Piece of Ruby Converter";
+            case 3: return "Convert 1 <sprite=\"Ruby\" index=0> " + Basic(BasicWord.Ruby) + " to " + text1 + " <sprite=\"PieceOfRuby\" index=0> " + Basic(BasicWord.PieceOfRuby);
+            case 4: return "Artifact Effect";
+            case 5: return text1 + " of \"Equipment Effect\" stats applies to Artifacts  ( + " + text2 + " / Lv )" + "\n- Current Equipment Effect for Artifacts : " + text3;
+            default: return text1;
+        }
+    }
+
+    public override (string name, string effect, string effectWithLevel) SDUpgradeString(SuperDungeonUpgradeKind kind, string text = "")//NEW7
+    {
+        string name = "";
+        string effect = "";
+        string effectWithLevel = "";
+        switch (kind)
+        {
+            case SuperDungeonUpgradeKind.MorePowerups:
+                name = "More Powerups";
+                effect = "Increases the amount of powerups every floor";
+                effectWithLevel = text + " powerups appear in the Safe Zone every floor";
+                break;
+            case SuperDungeonUpgradeKind.FlexibleDodge:
+                name = "Flexible Dodge";
+                effect = "Enables you to keep casting skills and moving during Dodge";
+                effectWithLevel = "";
+                break;
+            case SuperDungeonUpgradeKind.LeaveAndRetry:
+                name = "Leave & Retry";
+                effect = "Unlocks the \"Leave & Retry\" button that enables you start the current Super Dungeon as soon as you leave it";
+                effectWithLevel = "";
+                break;
+            case SuperDungeonUpgradeKind.AutoDodge:
+                name = "Auto Dodge";
+                effect = "Unlocks the \"Auto Dodge\" toggle in SD Options tab that automatically keeps holding down the Dodge button until the available dodge time is gone";
+                effectWithLevel = "";
+                break;
+            case SuperDungeonUpgradeKind.AutoLeaveAndRetry:
+                name = "Auto Leave & Retry";
+                effect = "Unlocks the toggle in SD Options tab that automatically clicks Leave & Retry button when you reach a certain floor with the entry cost less than a certain amount";
+                effectWithLevel = "";
+                break;
+            case SuperDungeonUpgradeKind.SDDamageMultiplier:
+                name = "SD Damage Multiplier";
+                effect = "Multiplies SD Damage Multiplier";
+                effectWithLevel = "by " + text;
+                break;
+            case SuperDungeonUpgradeKind.SDDamageCutMultiplier:
+                name = "SD Damage Cut Multiplier";
+                effect = "Multiplies SD Damage Cut Multiplier";
+                effectWithLevel = "by " + text;
+                break;
+            case SuperDungeonUpgradeKind.FameGain:
+                name = "Fame Gain";
+                effect = "Multiplies Fame Gain";
+                effectWithLevel = "by " + text;
+                break;
+            case SuperDungeonUpgradeKind.SDMPGainEveryFloor:
+                name = "Boost-Start of MP";
+                effect = "";
+                effectWithLevel = "Gains " + text + " of Max MP when you visit every floor";
+                break;
+            case SuperDungeonUpgradeKind.SDDungeonCoinBoostStart:
+                name = "Boost-Start of Dungeon Coin";
+                effect = "";
+                effectWithLevel = "Starts a Super Dungeon run with " + text + " Dungeon Coins";
+                break;
+            case SuperDungeonUpgradeKind.SDPowerupBoostStart:
+                name = "Boost-Start of Powerups";
+                effect = "Starts a Super Dungeon run with random powerups at B1F Safe Zone";
+                effectWithLevel = "";
+                break;
+            case SuperDungeonUpgradeKind.AutoProgress:
+                name = "Auto Progression";
+                effect = "Unlocks the \"Auto Progression\" toggle in SD Options tab that automatically keeps going to the next floor up to a certain floor";
+                effectWithLevel = "";
+                break;
+            case SuperDungeonUpgradeKind.AutoBuyPowerups:
+                name = "Auto Buy Powerups";
+                effect = "Unlocks the \"Auto Buy Powerups\" toggle in SD Options tab that automatically buys powerups randomly";
+                effectWithLevel = "Buys random powerups " + text + " times every floor";
+                break;
+            case SuperDungeonUpgradeKind.AutoUseRefreshTicket:
+                name = "Auto Use Refresh Tickets";
+                effect = "Unlocks the \"Auto Use Refresh Tickets\" toggle in SD Options tab that automatically uses an Entry Cost Refresh Ticket when the entry cost exceeds a certain amount";
+                effectWithLevel = "";
+                break;
+        }
+        return (name, effect, effectWithLevel);
+    }
+
+    public override string SDName(int id, string text = "")//NEW7
+    {
+        switch (id)
+        {
+            case 0: return "The Slime Hideout";
+            case 1: return "The Spider Underground Apartment";
+            default: return text;
+        }
+    }
+
 }
