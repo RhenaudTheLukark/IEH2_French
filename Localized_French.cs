@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UsefulMethod;
@@ -841,6 +841,8 @@ public class Localized_French : LOCALIZATION
                 return "Renommée gagné depuis une minute";
             case BasicWord.SD:
                 return "SD";
+            case BasicWord.TemporaryTotal://NEW8
+                return "Temporary Total";
         }
         return base.Basic(basicWord);
     }
@@ -3839,6 +3841,30 @@ public class Localized_French : LOCALIZATION
                 return "Augmente le niveau de tous les enchantements d'un objet équipé jusqu'à leur maximum.";
             case EnchantKind.OptionCopyAll:
                 return "Copie tous les enchantements d'un équipement et créée des Parchemins d'Enchantement associés. Les enchantements originels sont gardés.";
+            case EnchantKind.ArtifactOptionAdd://NEW8
+                return "Adds a SD enchanted effect to a piece of equipment that has an [Enchant Available] slot.";
+            case EnchantKind.ArtifactDelete://NEW8
+                return "Deletes a SD enchanted effect of an artifact and changes it to an available enchant slot.";
+            case EnchantKind.ArtifactExtract://NEW8
+                return "Extracts a SD enchanted effect of an artifact and creates its Ancient Enchant Scroll. The extracted enchanted effect will be deleted.";
+            case EnchantKind.ArtifactLottery://NEW8
+                return "Re-rolls a SD enchanted effect's value on artifact.";
+            case EnchantKind.ArtifactLevelup://NEW8
+                return "Increases a SD enchanted effect's level of an artifact that is not maxed yet.";
+            case EnchantKind.ArtifactLevelMax://NEW8
+                return "Increases a SD enchanted effect's level of an artifact to max.";
+            case EnchantKind.ArtifactExpandEnchantSlot://NEW8
+                return "Expands available enchant slot of an artifact by 1. Max 4 slots in total except for Thief's Mastery Effect.";
+            case EnchantKind.ArtifactDeleteAll://NEW8
+                return "Deletes all SD enchanted effect of an artifact and changes it to an available enchant slot.";
+            case EnchantKind.ArtifactExtractAll://NEW8
+                return "Extracts all SD enchanted effect of an artifact and creates its Enchant Scroll. The extracted enchanted effect will be deleted.";
+            case EnchantKind.ArtifactLotteryAll://NEW8
+                return "Re-rolls all SD enchanted effect's value on artifact.";
+            case EnchantKind.ArtifactLevelupAll://NEW8
+                return "Increases all SD enchanted effect's level of an artifact that is not maxed yet.";
+            case EnchantKind.ArtifactLevelMaxAll://NEW8
+                return "Increases all SD enchanted effect's level of an artifact to max.";
         }
         return base.EnchantInformation(kind);
     }
@@ -8011,7 +8037,7 @@ public class Localized_French : LOCALIZATION
             case 124: return "Gain d'EXP de Familier d'Expédition ";
             case 125: return "Améliore l'effet des améliorations de Gain de Ressources";
             case 126: return "Niveau Maximal d'Amélioration de Dictionnaire + " + text;
-            case 127: return "";
+            case 127: return "Add \"Refresh Ticket\" reward to Daily Quest [Cartographer " + text + "]";//NEW8
             case 128: return "";
             case 129: return "";
             case 130: return "";
@@ -8061,7 +8087,7 @@ public class Localized_French : LOCALIZATION
             case 0: return "Êtes-cous sûr de vouloir acheter ceci ?";
             case 1: return "GRATUIT la première fois !";
             case 2: return " (Achat Unique)";
-            case 3: return " (# de Limite d'Achat : " + text + ")";
+            case 3: return "Purchase # Limit : " + text;//NEW8
             case 4: return "Ceci coûte normalement " + text + ", mais il est GRATUIT la première fois !";
             case 5: return "Le prix augmentera après l'achat.";
             default: return base.EpicStoreMenuString(id, text);
@@ -8107,6 +8133,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Vous ne pouvez pas capturer des monstres de type 'colorés' avec cet objet.";
             case 7: return "Ce Talisman ne peut pas être désassemblé.";
             case 8: return "Effet Passif obtenu après désassemblage";
+            case 9: return "This artifact consumes " + text + " Nitro per sec when equipped";//NEW8
             default: return base.EquipMenuString(id, text);
         }
     }
@@ -10498,6 +10525,21 @@ public class Localized_French : LOCALIZATION
             case 58: return "Total sauvé depuis un SD";
             case 59: return "Total gagné";
             case 60: return "Vous pouvez revenir avec ces objets si vous partez maintenant.";
+            case 61: return "Unlock Cost";//NEW8
+            case 62: return "Leave";//NEW8
+            case 63: return "Leave & Retry";//NEW8
+            case 64: return "Dodge";//NEW8
+            case 65: return "Hero Details";//NEW8
+            case 66: return "Improvements";//NEW8
+            case 67: return "Ruby Shop";//NEW8
+            case 68: return "Options";//NEW8
+            case 69: return "Scrolls";//NEW8
+            case 70: return "Anvils";//NEW8
+            case 71: return "Talismans";//NEW8
+            case 72: return "Special";//NEW8
+            case 73: return "Stats";//NEW8
+            case 74: return "Super Dungeon Options";//NEW8
+            case 75: return "Automation Settings";//NEW8
         }
         return text;
     }
@@ -10522,12 +10564,12 @@ public class Localized_French : LOCALIZATION
             case SuperDungeonPowerupKind.DamageMultiplier:
                 name = "Multiplicateur de Dégâts de SD";
                 effect = "Multiplicateur de Dégâts de SD + {0} ( + {1} / Rang )";
-                permanentEffect = "Multiplicateur de Dégâts de SD Initial + {0} ( + {1} / achat )";
+                permanentEffect = "Multiplicative SD Damage Multiplier + {0} ( + {1} / purchase )";//NEW8
                 break;
             case SuperDungeonPowerupKind.DamageCutMultiplier:
                 name = "Multiplicateur de Réduction de Dégâts de SD";
                 effect = "Multiplicateur de Réduction de Dégâts de SD + {0} ( + {1} / Rang )";
-                permanentEffect = "Multiplicateur de Réduction de Dégâts de SD Initial + {0} ( + {1} / achat )";
+                permanentEffect = "Multiplicative SD Damage Cut Multiplier + {0} ( + {1} / purchase )";//NEW8
                 break;
             case SuperDungeonPowerupKind.RestoreDodgeTimesec:
                 name = "Temps d'Esquive";
@@ -10718,4 +10760,16 @@ public class Localized_French : LOCALIZATION
         }
     }
 
+    public override string GradeMilestone(int id, string text = "")//NEW8
+    {
+        switch (id)
+        {
+            case 0: return "Available Class Skill Slot + " + text;
+            case 1: return "Available Weapon Equipment Slot + " + text;
+            case 2: return "Available Armor Equipment Slot + " + text;
+            case 3: return "Available Jewelry Equipment Slot + " + text;
+            case 4: return "Available Utility Equipment Slot + " + text;
+            default: return text;
+        }
+    }
 }
