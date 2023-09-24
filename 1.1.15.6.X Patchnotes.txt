@@ -69,7 +69,7 @@
 - Les Messages de Capture PAssive du Héros étaient accidentellement affichés
 - Vous pouvez accidentellement utiliser les familiers si vous aviez équipé Attaque Sonore dans un emplacement de capacité global même si les emplacements de capacités globales sont limités dans un Défi avec Handicap
 - Gain d'EXP depuis la dernière minute ne fonctionnait pas correctement
-- D'autres corrections mineures / fautes de frappes
+- D'autres correctifs mineurs / fautes de frappes
 
 **Code Bonus**
 [IEH2SuperDungeon] - 1000 Pièces Épiques, 100 Orbes Portail et 5 Tickets de Rafraîchissement
