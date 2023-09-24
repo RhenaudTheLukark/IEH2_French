@@ -5038,7 +5038,7 @@ public class Localized_French : LOCALIZATION
             case GuildAbilityKind.GoldGain:
                 return "Multiplication des Gains d'Or par " + percent(1 + effectValue);
             case GuildAbilityKind.ExpGain:
-                return "Multiplication des Gaindd'EXP par " + percent(1 + effectValue);
+                return "Multiplication des Gains d'EXP par " + percent(1 + effectValue);
         }
         return tempString;
     }
