@@ -27,51 +27,49 @@
 - Boost des Stats des Familiers (2x tous les Nv 50)
 - Les Bonus de Stats des Familiers (par leur Loyauté, les Paliers d'Expédition, etc) sont appliqués à la Chance Critique de Familier, aux Dégâts Critiques et à la Résistance aux Débuffs
 - Le Gain de Points de Domptage a été boosté. Il prend maintenant encompte le Niveau du Familier et le # Capturé. Veuillez voir l'infobulle de la barre de Point de Domptage dans le Bestiaire
-- Les Effets d'Equipements [Chance Critique Physique/Magique de Familier] s'applique maintenant de façon multiplicative. Ils étaient avant additifs avec les capacités du Dompteur
+- Les Effets d'Équipements [Chance Critique Physique/Magique de Familier] s'applique maintenant de façon multiplicative. Ils étaient avant additifs avec les capacités du Dompteur
 
 **Additions**
-- Added new [Super Dungeon (SD)] Tab - Unlocks at Town Building [Mystic Arena] Rank 2
- - Roguelike Dungeons
- - New equipment type [Artifact]
- - New equipment effect that is called "SD Enchants"
- - New stats type "After"
-- Revamped Ability > Stat Breakdowns
-- Global Quest [To Further Stage 14-18]
-- Town Building [Blacksmith] Level Milestone (Lv35, 55, 65) that expands Dictionary Upgrade level cap. Now Dictionary Upgrades are Lv 200 at max. (Lv50 in default, +Lv150 from Blacksmith)
-- The tooltip on Level Milestone of Town Buildings to see it with bigger font size.
-- The tooltip in the world map now shows lowest monster level of each region.
-- Epic Store [Update Bundle 2] in Epic Coin > Bundle tab.
-- Epic Store [Super Ability Point Reset] [Super Dungeon Powerups Reset] in Special 2 tab.
-- Increased Purchase # Limit of Epic Store Items [Expedition Team Slot + 1] [Equipment Weapon Slot + 1] [Equipment Armor Slot + 1] [Equipment Jewelry Slot + 1]
+- Ajout de l'onglet [Super Donjon (SD)] - Débloquable à travers le Rang 2 du Bâtiment de Ville [Arêne Mystique]
+ - Donjons Roguelike
+ - Nouveau type d'équipement [Antiquités]
+ - Nouveau effects d'équipements appelés les "Enchantements de SD"
+ - Nouveau type de stats "Absolu"
+- Refonte du Sommaire des Stats des Capacités
+- Nouvelles Quêtes Globales [Pour Aller Plus Loin 14-18]
+- Les Paliers de Niveau du Bâtiment de Ville [Forge] (Nv35, 55, 65) augmente la limite de niveau des Améliorations de Dictionnaire. Maintenant le Nv max des Améliorations de Dictionnaire est 200. (Nv50 par défaut, +150 niveaux à travers la Forge)
+- L'infobulle sur le Palier de Niveau des Bâtiments de Ville a une taille de texte plus grande
+- L'infobulle sur la Carte Monde montre maintenant le niveau le plus bas des monstres dans chaque région
+- Nouvel objet dans le Magasin Épique [Lot de Mise à Jour 2] dans l'onglet Magasin Épique > Lots
+- Nouvel objet [Réinitialisation de Points de Super Abilité], [Réinitialisation de Pouvoirs de Super Donjon] dans l'onglet Spécial 2.
+- Augmentation de la Limite d'Achat des Objets du Magasin Épique [Emplacement d'Equipe d'Expédition + 1] [Emplacement d'Arme + 1] [Emplacement d'Armure + 1] [Emplacement de Bijou + 1]
 
-**Balance & Changes**
-- Optimized Monster Kills calculation. Now area clear speed is much improved with high skills range and high skills area of effect.
-- Optimized Auto Rebirth. It now triggers just exactly every area clear.
-- Decreased Lv1~100 Mob HP (50% + 0.5% * Lv compared to previous one).
-- Equipment [Fox Ema]'s Equipment Drop Chance effect (from [0.0100+0.0005]% to [0.0150+0.0001]%
-- Halved the amount of Equipment Enchant Effect [Equipment Drop Chance]
-- Dictionary Upgrade level cap is now Lv50 in default. Changed some of their cost.
-- Increased the passive effect cap of Talisman [Enchanted Alembic]
-- Expanded the cap of town research power.
-- Buffed "Portal Orb Gain from Daily Quest +" of Town Building [Cartographer] Level Milestone.
-- Some of the Town Level Milestone Effects related to daily quests now persist through WA.  [Unlock new Epic Coin Daily Quest] [Portal Orb Gain from Daily Quest +]
-- Town Building [Mystic Arena] Level Milestones, Handicapped Challenge [Mystic Arena 8-9F]
-- Lowered the cast speed of Challenge Boss [Guardian Kor Lv 500] [Nostro Lv 550] [Lady Emelda Lv 600]
-- Challenge Boss [Octobaddie]'s purple attacks now don't affect on pets, in addition to blue attack.
-- Pet Stats now count hero's After stats.
-- Renamed the stats "Summoned Pet EXP Gain" to "Pet EXP Gain".
-- Renamed [Warrior Skill's Range] / [Warrior Skill's Area of Effect] to [Warrior's Class Skills Range] / [Warrior's Class Skills Area of Effect]. This is for all heroes.
+**Balance & Changements**
+- Optimisation de la calculation du nombre de Monstres Tués. Maintenant la vitesse de complétion d'une zone est bien meilleure avec les capacités ayant une grande portée ou zone d'effet
+- Optimisation de l'Auto Réincarnation. Il est maintenant lancé après chaque complétion de zone
+- Réduction des PV des Monstres ayant un niveau entra 1 et 100 (50% + 0.5% * Nv comparé à avant)
+- Changement de l'effet de Chance d'Apparition d'Équipement de l'[Ema Renard] (de [0.0100+0.0005]% à [0.0150+0.0001]%)
+- Réduit de moitié l'Effet d'Enchantement d'Équipement de [Chance d'Apparition d'Équipement]
+- La Limite de Niveau des Améliorations de Dictionnaire est maintenant Nv 50 par défaut, et certains des coûts de ces améliorations ont été changés
+- Augmentation de la limite de l'effet passif du Talisman [Alambique Enchanté]
+- Augmentation de la limite de la puissance de recherche de ville
+- Augmentation du bonus "Gain d'Orbes de Portail à travers les Quêtes Journalières +" du Palier de Niveau du Bâtiment de Ville [Cartographeur]
+- Certains Effets de Paliers de Niveau de Ville liés aux quêtes journalières persistent maintenant après une AM ([Débloque une nouvelle Quête Journalière de Pièce Épique], [PGain d'Orbes de Portail à travers les Quêtes Journalières +])
+- Les Paliers de Niveau du Bâtiment de Ville [Arène Mystique], les Défis avec Handicap [Arène Mystique 8-9F]
+- Réduction de la vitesse de lancer des Boss de Défi [Guardien Kor Nv 500] [Nostro Nv 550] [Dame Emelda Nv 600]
+- Les attaques violettes du Boss de Défi [Octopabo] n'affect plus les familiers, en plus de son attaque bleue
+- Les Stats des Familiers prennent maintenant en compte les Stats Absolues du héros
 
-**Fixes**
-- Purple Flame Tiger pet active effect now works even when Nitro Booster is off.
-- Damage to Challenge Boss [Octobaddie]'s shield now counts slayer oil potions.
-- Some of the skills projectiles didn't hit Octobaddie.
-- Challenge Boss Octobaddie's Green bar didn't work properly.
-- Enchant Effect amount display now counts Equipment Effect% in the Craft>Enchant Scrolls tooltip
-- Passive Hero's Capture Logs showed up unintentionally.
-- You could unintentionally use pets if you set Sonnet Attack in a global skill slot even while global slots are limited in Handicapped Challenges.
-- Hero EXP gained last minute didn't work properly.
-- Other minor bugs/typoes
+**Correctifs**
+- L'effect actif du familier Tigre de Feu Violet fonctionne maintenant même si la Nitro est désactivé
+- Les dégâts envers le ouclier du Boss de Défi [Octopabo] compte maintenant les potions d'huile de tueur
+- Certains projectiles de capcités ne pouvaient pas toucher Octopabo
+- La barre verte du Boss de Défi Octopabo ne fonctionnait pas correctement
+- L'affichage du montant d'Effet d'Enchantement prend maintenant en compte le % d'Effet d'Équipement dans l'infobulle de l'onglet Fabrication > Parchemin d'Enchantement
+- Les Messages de Capture PAssive du Héros étaient accidentellement affichés
+- Vous pouvez accidentellement utiliser les familiers si vous aviez équipé Attaque Sonore dans un emplacement de capacité global même si les emplacements de capacités globales sont limités dans un Défi avec Handicap
+- Gain d'EXP depuis la dernière minute ne fonctionnait pas correctement
+- D'autres corrections mineures / fautes de frappes
 
-**Bonus Code**
-[IEH2SuperDungeon] - 1000 Epic Coin, 100 Portal Orbs and 5 Refresh Ticket
+**Code Bonus**
+[IEH2SuperDungeon] - 1000 Pièces Épiques, 100 Orbes Portail et 5 Tickets de Rafraîchissement
