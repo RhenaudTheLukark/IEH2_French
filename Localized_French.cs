@@ -6370,30 +6370,31 @@ public class Localized_French : LOCALIZATION
                         description = "A hurried individual wearing glasses and a scruffy collection of robes, runs into you, scattering scrolls everywhere. After collecting their dropped possessions, they take a look at you before nodding, \"You look like you can handle yourself. These slimes, they've been stealing my magical research and it's severely hampered my progress. Would you mind helping me out some and dealing these thieves a telling blow? I... I'm willing to pay if that's what you need.\"";
                         break;
                     case QuestKindGeneral.CompleteDungeon0_0:
-                        name = "Find My Husband 1";
+                        name = "Trouvez Mon Époux 1";
                         client = "Wakana";
-                        description = "Excuse me, do you have a moment? My husband has been missing for the past few days. My neighbors said they saw him go to the slime cave, but I'm not good with slime so I can't go look for him. Can you please go there for me?"
-                            + " After you clear <color=orange>Slime Village: Area 2</color> 100 times, you can try the Slime dungeon through <color=orange>Dungeon</color> tab in World Map. Keep in mind that you need <color=orange>Portal Orb</color> to enter Dungeons, which you can get from such as global quests and daily quests."
-                            + " Before trying a dungeon, the <color=orange>Simulation</color> button in World Map is so useful. It simulates each area and tell you whether you can clear it or not.";
+                        description = "Excusez moi, avez vous un moment? Mon époux est disparu il y à quelques jours. Mes voisins disent qu'ils l'ont vu aller dans la caverne des Slimes, mais je ne suis pas douée avec les Slimes alors je ne peux pas aller voir. Pouvez-vous y aller pour moi?"
+                            + " Quand vous aurez complété <color=orange>Village Slime: Zone 2</color> 100 fois, Vous pouvez essayer le Dongeon Slime par l'onglet<color=orange>Dongeon</color> dans la map monde. Gardez à l'esprit qu'il vous faudra une <color=orange>Orbe Portail</color> pour entrer dans les Dongeons, que vous pouvez obtenir par exemple dans les quêtes globales et journalières."
+                            + " Avant de tenter un dongeon, le boutton <color=orange>Simulation</color> dans la map monde peut être utile. Il simule chaque zone et vous informe si vous pouvez la compléter ou non.";
                         break;
                     case QuestKindGeneral.CompleteDungeon0_1:
-                        name = "Find My Husband 2";
+                        name = "Trouvez Mon Époux 2";
                         client = "Wakana";
-                        description = "Oh, you didn't find him, I'm so sad. Maybe he's in another cave... I don't know. Please, can you go and look for him again? I'm so worried about him that I can't do anything about it."; break;
+                        description = "Oh, vous ne l'avez pas trouvé, je suis si triste. Peut-être qu'il est dans une autre caverne... Je sais pas. S'il-vous-plaît, pouvez-vous aller à sa recherche à nouveau? JE suis inquiète pour lui et je ne peux rien faire.";
+                        break;
                     case QuestKindGeneral.CompleteDungeon0_2:
-                        name = "Find My Husband 3";
+                        name = "Trouvez Mon Époux 3";
                         client = "Wakana";
-                        description = "What! You saw him being kidnapped by slime in the depths of the cave!? Oh, my god! I'm sure there's a slime hideout nearby, that's where he'll be. Please, please and please go and find him!";
+                        description = "Quoi! Vous l'avez vu se faire kidnapper par des Slimes dans les profondeurs de la caverne!? Oh mon Dieu! Je suis certaine qu'il y a un repère de Slimes dans le coin, c'est là qu'il sera. S'il-vous-plaît S'il-vous-plaît S'il-vous-plaît, allez le retrouver!";
                         break;
                     case QuestKindGeneral.DefeatNormalMagicSlime:
-                        name = "A Debt Left Unpaid";
-                        client = "Young Witch";
-                        description = "I was studying by the tree when some Magicslimes asked to borrow my quills. I should have known something was wrong when they swallowed them, but I trusted them anyway. Now I have nothing to write with, and my homework for the academy is late. If you could teach them a lesson for me I'd gladly return the favor by making a quilt out of their hats.";
+                        name = "Une Dette Impayée";
+                        client = "Jeune Sorcière";
+                        description = "J'étudiais près des arbres quand un Slime Magique a demandé d'emprunter ma plume. J'aurais dû savoir que quelque chose n'allait pas quand il l'a avalé, mais je lui ai tout de même fait confiance. Maintenant je n'ai rien pour écrire et mes devoirs pour l'académie sont en retard. Si vous pouvez leur apprendre une leçon je vous renverrez volontier l'ascenseur en faisant un édredon de leurs chapeaux.";
                         break;
                     case QuestKindGeneral.DefeatGreenMagicSlime:
-                        name = "Sending A Message";
-                        client = "Claire The Witch";
-                        description = "\"I was doing extra credit to make up for my missing homework when one of the Magicslimes tossed this paper at me.\" She hands you a balled - up piece of paper inviting you to a tea party in Magicslime City. \"I'm no expert, but I'd say this is definitely a trap. Especially considering my friends at school are always too nervous to invite me over. I need you to go for me and send those lying Magicslimes back to where they came from.\"";
+                        name = "Envoyer Un Message";
+                        client = "Claire La Sorcière";
+                        description = "\"Je faisais des travaux en extra pour compenser pour mes devoirs manquant quand un des Slimes Magiques m'a lancé ce papier.\" Elle vous tend un morceau de papier chifonné vous invitant pour le thé dans la ville des Slimes Magiques. \"Je suis pas une experte, mais je dirais que c'est définitivement un piège. Spécialement considérant que mes amis à l'école sont trop nerveux pour m'inviter. J'ai besoin que tu y ailles pour moi et que tu renvoies ces menteurs de Slime Magiques d'où ils viennent.\"";
                         break;
                     case QuestKindGeneral.DefeatYellowBat:
                         name = "La Mine 1";
