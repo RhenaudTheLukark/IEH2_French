@@ -6396,34 +6396,34 @@ public class Localized_French : LOCALIZATION
                         description = "\"I was doing extra credit to make up for my missing homework when one of the Magicslimes tossed this paper at me.\" She hands you a balled - up piece of paper inviting you to a tea party in Magicslime City. \"I'm no expert, but I'd say this is definitely a trap. Especially considering my friends at school are always too nervous to invite me over. I need you to go for me and send those lying Magicslimes back to where they came from.\"";
                         break;
                     case QuestKindGeneral.DefeatYellowBat:
-                        name = "The Mine 1";
+                        name = "La Mine 1";
                         client = "Brick";
-                        description = "As you are about to enter the cave a small giant sporting nothing but a pair of overalls, a mining hat, and a pickaxe. He scratches his head and addresses you with a worried expression. \"Excuse me. I need to get mining for the boss but the bats always give me the spooks. Can you lend me a hand and clear them out? I can't give you the ore, but you can have the stone.\"";
+                        description = "Comme vous êtes sur le point d'entrer dans la caverne, vous voyez un petit géant qui ne porte qu'une salopette, un casque de mineur et une pioche. Il se gratte la tête et s'adresse à vous avec une expression inquiète. \"Excusez-moi. Je dois miner pour le patron mais les chauve-souris me foutent les jetons. Pouvez-vous me donner un coup de main pour les éliminer?Je ne peux pas vous donner de minerais mais vous pouvez prendre la pierre.\"";
                         break;
                     case QuestKindGeneral.DefeatRedBat:
-                        name = "The Mine 2";
+                        name = "La Mine 2";
                         client = "Mira";
-                        description = "A small woman in thick steel plates and a miner helmet approaches you, \"Thank you for helping clear the bats. Brick has gotten a new sense of motivation recently. If you could go a bit deeper into the mine we could get some higher quality ore, and some rough stone you could keep.\"";
+                        description = "Une petite femme dans une tenue d'acier épaisse et un casque de mineur vous approche, \"Merci pour votre aide avec les chauve-souris. Brick a un regain de motivation récemment. Si vous pouviez aller un peu plus profond dans la mine on pourrait trouver du minerais de meilleur qualité, et un peu de pierre que tu pourrais garder.\"";
                         break;
                     case QuestKindGeneral.DefeatGreenBat:
-                        name = "The Mine 3";
+                        name = "La Mine 3";
                         client = "Mira";
-                        description = "With all those bats out of the way we saw some gems glittering deeper down in the mines. The boys and I understand that going down any deeper in the cave is dangerous. So we're willing to split our findings.";
+                        description = "Avec toutes ces Chauve-Souris hors du chemin, on a vu quelques gemmes scintiller plus bas dans les mines. Les mecs et moi on comprend que c'est dangereux de descendre plus profondément. Alors on veut bien partager notre butin.";
                         break;
                     case QuestKindGeneral.DefeatPurpleBat:
-                        name = "A Deep Dark Place";
+                        name = "Un endroit sombre et lugubre";
                         client = "Brick";
-                        description = "Brick approaches you as you return from the mine with a worried expression, \"It's good your back safe. Did you see the thing moving? It is like something was living in the void of the dark itself. I don't know why, but I don't have a good feeling about it. Could you go into that darkness and take care of it for us? I'm sure everyone would be happy being able to sleep a bit easier.\"";
+                        description = "Brick s'approche de vous comme vous revenez de la mine avec une expression inquiète, \"C'est bien que vous soyez de retour sain et sauf. Avez-vous vu la chose bouger? C'est comme si quelque chose vivait dans le vide des ténèbres. Je sais pas pourquoi, mais j'ai un mauvais présentiment. Pourrais-tu aller dans les ténèbres et t'en occuper pour nous? Je suis certain que tout le monde serrait heureux de dormir sur leurs deux oreilles.\"";
                         break;
                     case QuestKindGeneral.DefeatBlueBat:
-                        name = "A Strange Request";
-                        client = "Miss Fizzle";
-                        description = "As your leaving for Bat Cave a tomboy with thick goggles and a sharp grin eyes you down from atop a rock. Swirling a fiery potion in her hand as she calls to you, \"You. Yeah, you. I was wondering if you could bring me some guano from the bats I have a project I'm working on it's going to be great just you wait.\"";
+                        name = "Une Étrange Requête";
+                        client = "Mademoiselle Fizzle";
+                        description = "Comme vous vous dirigez vers la Caverne des Chauve-Souris, un garçon manqué avec d'épaisses lunettes et un sourrire prononcé vous observe du haut d'un rocher. En remuant une potion flamboyante dans sa main elle s'addresse à vous, \"Toi. Ouais, toi. Je me demandais si tu pourrais m'apporter du guano des Chauve-Souris. J'ai un projet sur lequel je travaille, ce sera génial tu verra.\"";
                         break;
                     case QuestKindGeneral.BringToEnchantShard:
-                        name = "The Big One";
-                        client = "Miss Fizzle";
-                        description = "Hey, thanks for the help earlier. My experiments are almost ready. All I need is a little Oil Of Slime to act as a base, A bit of Magical Cloth to wrap it in, and some Spider Silk for a long enough fuse. Then we can create a bomb so big it could blast away a million bats. For science of course.";
+                        name = "Le Gros";
+                        client = "Mademoiselle Fizzle";
+                        description = "Hey, merci pour ton aide plus tôt. Mes expérimentations sont presque terminées. Tout ce qu'il me faut c'est un peu d'Huile de Slime pour servir de base, un peu de Tissu Magique pour l'emballer, et de la Soie d'Areignée pourune mèche suffisament longue. Ensuite on pourra créer une bombe assez grosse pour faire exploser un million de chauve-souris. Pour la science, bien entendu.";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_0:
                         name = "Manoir Hanté 1";
@@ -9824,7 +9824,7 @@ public class Localized_French : LOCALIZATION
             }
         }
         tempStr += "\n\n";
-        tempStr += "<size=20><u>ARecord de Temps de Réincarnation</u><size=18>";
+        tempStr += "<size=20><u>Record de Temps de Réincarnation</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
