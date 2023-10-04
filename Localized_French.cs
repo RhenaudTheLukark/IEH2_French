@@ -336,7 +336,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.TalismanFragments:
                 return "Fragments de Talisman";
             case BasicWord.Equipment:
-                return "Equipement";
+                return "Équipement";
             case BasicWord.Weapon:
                 return "Arme";
             case BasicWord.Armor:
@@ -832,7 +832,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.TripleCaptureChance:
                 return "Chance de Triple Capture";
             case BasicWord.EquipmentEffect:
-                return "Effet d'Equipement";
+                return "Effet d'Équipement";
             case BasicWord.ExpeditionPassiveEffect:
                 return "Effet d'Expedition Passif";
             case BasicWord.SlimeCoinCap:
@@ -841,8 +841,8 @@ public class Localized_French : LOCALIZATION
                 return "Renommée gagné depuis une minute";
             case BasicWord.SD:
                 return "SD";
-            case BasicWord.TemporaryTotal://NEW8
-                return "Temporary Total";
+            case BasicWord.TemporaryTotal:
+                return "Total Temporaire";
         }
         return base.Basic(basicWord);
     }
@@ -1119,7 +1119,7 @@ public class Localized_French : LOCALIZATION
             case Stats.SkillProficiencyGain:
                 return "Maîtrise de Capacité";
             case Stats.EquipmentProficiencyGain:
-                return "Maîtrise d'Equipement";
+                return "Maîtrise d'Équipement";
             case Stats.EquipmentDropChance:
                 return "Apparition d'Équipement";
             case Stats.MoveSpeed:
@@ -1206,7 +1206,7 @@ public class Localized_French : LOCALIZATION
             case AbilityKind.Agility:
                 return "L'Agilité a un effet sur les PM, la CEL et la Vitesse de Déplacement.";
             case AbilityKind.Luck:
-                return "La Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition d'Equipement.";
+                return "La Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition d'Équipement.";
         }
         return base.AbilityDescription(kind);
     }
@@ -1223,7 +1223,7 @@ public class Localized_French : LOCALIZATION
             case AbilityKind.Agility:
                 return "La Super Agilité a un effet sur les PM, la CEL et la Vitesse de Déplacement Multiplicatifs et Absolus.";
             case AbilityKind.Luck:
-                return "La Super Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition d'Equipement Multiplicatifs et Absolus.";
+                return "La Super Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition d'Équipement Multiplicatifs et Absolus.";
         }
         return kind.ToString();
 
@@ -1380,8 +1380,8 @@ public class Localized_French : LOCALIZATION
                 return "Preuve de Réinc.";
             case TitleKind.Quester:
                 return "Quêteur";
-            case TitleKind.ExplorerOfSD://NEW10
-                return "Explorer of Super Dungeon";
+            case TitleKind.ExplorerOfSD:
+                return "Explorateur de Super Donjon";
         }
         return base.Title(kind);
     }
@@ -1478,9 +1478,9 @@ public class Localized_French : LOCALIZATION
                 break;
             case TitleKind.Quester:
                 return optStr + "# Complétions de Quêtes Générales + " + tDigit(effectValue) + " par complétion";
-            case TitleKind.ExplorerOfSD://NEW10
-                if (isSub) tempString = optStr + "Multiply Fame Gain by " + percent(1 + effectValue);
-                else tempString = optStr + "Multiply SD Damage Multiplier by " + percent(1 + effectValue);
+            case TitleKind.ExplorerOfSD:
+                if (isSub) tempString = optStr + "Multiplie les Gains de Renommée par " + percent(1 + effectValue);
+                else tempString = optStr + "Multiplie le Multiplicateur de Dégâts de SD par " + percent(1 + effectValue);
                 break;
         }
         return tempString;
@@ -1718,7 +1718,7 @@ public class Localized_French : LOCALIZATION
             case PetActiveEffectKind.ClearLowerDifAreaMission:
                 return "Lorsqu'une mission est complétée, la même mission sera complétée dans les difficultés inférieures.";
             case PetActiveEffectKind.AutoAlchemiseForNito:
-                return "Créée et désassemble des Potions de Soin Mineures automatiquement pour maximiser la Nitro lorsqu'il n'y en a plus. (le Slime Magique Bleu doit être Actif, requiert [Auto Désassemblage de Potion Avancé] dans le Magasin Epique et assez d'essences pour maximiser la Nitro)";
+                return "Créée et désassemble des Potions de Soin Mineures automatiquement pour maximiser la Nitro lorsqu'il n'y en a plus. (le Slime Magique Bleu doit être Actif, requiert [Auto Désassemblage de Potion Avancé] dans le Magasin Épique et assez d'essences pour maximiser la Nitro)";
             case PetActiveEffectKind.AutoBuyGuildAbility:
                 return "Achète les Capacités de Guilde automatiquement.\nMaj + Flèche Haut/Bas sur une capacité de guilde pour augmenter/réduire le niveau visé.";
         }
@@ -1733,7 +1733,7 @@ public class Localized_French : LOCALIZATION
             case PetActiveEffectKind.AlchemyQueue:
                 return "File d'Alchimie Disponible + 5";
             case PetActiveEffectKind.DisassembleEquipment:
-                return "Emplacement d'Auto-Désassemblage d'Equipement + 5";
+                return "Emplacement d'Auto-Désassemblage d'Équipement + 5";
             case PetActiveEffectKind.BuyShopTrapNormal:
                 return "Réduit le temps de recharge du " + PotionName(PotionKind.ThrowingNet) + " par 1";
             case PetActiveEffectKind.BuyShopTrapIce:
@@ -1747,25 +1747,25 @@ public class Localized_French : LOCALIZATION
             case PetActiveEffectKind.BuyShopTrapDark:
                 return "Réduit le temps de recharge du " + PotionName(PotionKind.DarkRope) + " par 1";
             case PetActiveEffectKind.BuyShopMaterialSlime:
-                return "Réapprovisionnement d'" + Material(MaterialKind.OilOfSlime) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialMagicSlime:
-                return "Réapprovisionnement de " + Material(MaterialKind.EnchantedCloth) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialSpider:
-                return "Réapprovisionnement de " + Material(MaterialKind.SpiderSilk) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialBat:
-                return "Réapprovisionnement d'" + Material(MaterialKind.BatWing) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialFairy:
-                return "Réapprovisionnement de " + Material(MaterialKind.FairyDust) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialFox:
-                return "Réapprovisionnement de " + Material(MaterialKind.FoxTail) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialDevilfish:
-                return "Réapprovisionnement d'" + Material(MaterialKind.FishScales) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialTreant:
-                return "Réapprovisionnement de " + Material(MaterialKind.CarvedBranch) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialFlametiger:
-                return "Réapprovisionnement de " + Material(MaterialKind.ThickFur) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.BuyShopMaterialUnicorn:
-                return "Réapprovisionnement de " + Material(MaterialKind.UnicornHorn) + " dans le Magasin + 50";
+                return "Réapprovisionnement de Matériau dans le Magasin + 50";
             case PetActiveEffectKind.RebirthTier1:
                 return "Débloque un bouton dans la Réincarnation de Classe 1 qui achète l'amélioration la moins chère automatiquement.";
             case PetActiveEffectKind.RebirthTier2:
@@ -2471,7 +2471,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.SkillProficiencyMultiplier:
                 return "Multiplicateur de Maîtrise de Capacité";
             case EquipmentEffectKind.EquipmentProficiencyMultiplier:
-                return "Multiplicateur de Maîtrise d'Equipement";
+                return "Multiplicateur de Maîtrise d'Équipement";
             case EquipmentEffectKind.EXPGainMultiplier:
                 return "Multiplicateur de Gain d'EXP";
             case EquipmentEffectKind.GoldGainMultiplier:
@@ -2637,38 +2637,38 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.HPMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "PV <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "PV + " + tDigit(value, 1);
+                if (value < 0) tempString = "PV <color=red>" + percent(value, 1) + "</color>";
+                else tempString = "PV + " + percent(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MPMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "PM <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "PM + " + tDigit(value, 1);
+                if (value < 0) tempString = "PM <color=red>" + percent(value, 1) + "</color>";
+                else tempString = "PM + " + percent(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "ATQ <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "ATQ + " + tDigit(value, 1);
+                if (value < 0) tempString = "ATQ <color=red>" + percent(value, 1) + "</color>";
+                else tempString = "ATQ + " + percent(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MATKMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "MATQ <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "MATQ + " + tDigit(value, 1);
+                if (value < 0) tempString = "MATQ <color=red>" + percent(value, 1) + "</color>";
+                else tempString = "MATQ + " + percent(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.DEFMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "DEF <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "DEF + " + tDigit(value, 1);
+                if (value < 0) tempString = "DEF <color=red>" + percent(value, 1) + "</color>";
+                else tempString = "DEF + " + percent(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.MDEFMultiplier:
                 if (isOnlyEffectValue) return percent(value);
-                if (value < 0) tempString = "MDEF <color=red>" + tDigit(value, 1) + "</color>";
-                else tempString = "MDEF + " + tDigit(value, 1);
+                if (value < 0) tempString = "MDEF <color=red>" + percent(value, 1) + "</color>";
+                else tempString = "MDEF + " + percent(value, 1);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ATKPropotion:
@@ -3292,8 +3292,8 @@ public class Localized_French : LOCALIZATION
                 break;
             case EquipmentEffectKind.EquipmentProficiencyMultiplier:
                 if (isOnlyEffectValue) return percent(value, 3);
-                if (value < 0) tempString = "Gain de Maîtrise d'Equipement <color=red>x" + percent(value, 3) + "</color>";
-                else tempString = "Gain de Maîtrise d'Equipement x" + percent(value, 3);
+                if (value < 0) tempString = "Gain de Maîtrise d'Équipement <color=red>x" + percent(value, 3) + "</color>";
+                else tempString = "Gain de Maîtrise d'Équipement x" + percent(value, 3);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 3) + " / Nv )";
                 break;
             case EquipmentEffectKind.EXPGainMultiplier:
@@ -3660,19 +3660,19 @@ public class Localized_French : LOCALIZATION
                 effect = "Gain de Maîtrise d'Équipement de la Dompteuse";
                 break;
             case DictionaryUpgradeKind.EquipmentDropChance:
-                name = "Chasseur d'Equipement";
+                name = "Chasseur d'Équipement";
                 effect = "Chance d'Apparition d'Équipement (sauf Unique) ";
                 break;
             case DictionaryUpgradeKind.EnchantedEffectChance1:
-                name = "Fortune d'Equipement 1";
+                name = "Fortune d'Équipement 1";
                 effect = "Chance additionnelle d'avoir un 1er enchantement";
                 break;
             case DictionaryUpgradeKind.EnchantedEffectChance2:
-                name = "Fortune d'Equipement 2";
+                name = "Fortune d'Équipement 2";
                 effect = "Chance additionnelle d'avoir un 2ème enchantement";
                 break;
             case DictionaryUpgradeKind.EnchantedEffectChance3:
-                name = "Fortune d'Equipement 3";
+                name = "Fortune d'Équipement 3";
                 effect = "Chance additionnelle d'avoir un 3ème enchantement";
                 break;
         }
@@ -3814,15 +3814,15 @@ public class Localized_French : LOCALIZATION
             case EnchantKind.OptionAdd:
                 return "Ajoute un enchantement à un équipement ayant un [Enchantement Vide].";
             case EnchantKind.OptionLevelup:
-                return "Augmente le niveau de l'enchantement d'un objet équipé qui n'est pas au niveau maximal.";
+                return "Augmente le niveau d'un enchantement d'un équipement qui n'est pas au niveau maximal.";
             case EnchantKind.OptionLevelMax:
-                return "Augmente le niveau de l'enchantement d'un objet équipé jusqu'à son maximum.";
+                return "Augmente le niveau d'un enchantement d'un équipement jusqu'à son maximum.";
             case EnchantKind.OptionLottery:
                 return "Randomise la valeur d'un enchantement d'un équipement.";
             case EnchantKind.OptionDelete:
-                return "Supprime l'enchantement d'un équipement et le transforme en un [Enchantement Vide].";
+                return "Supprime un enchantement d'un équipement et le transforme en un [Enchantement Vide].";
             case EnchantKind.OptionExtract:
-                return "Extrait l'enchantement d'un équipement et créée un Parchemin d'Enchantement associé. L'effet extrait est supprimé de l'équipement.";
+                return "Extrait un enchantement d'un équipement et créée un Parchemin d'Enchantement associé. L'effet extrait est supprimé de l'équipement.";
             case EnchantKind.OptionCopy:
                 return "Copie l'enchantement d'un équipement et créée un Parchemin d'Enchantement associé. L'enchantement originel est gardé.";
             case EnchantKind.ExpandEnchantSlot:
@@ -3832,45 +3832,45 @@ public class Localized_French : LOCALIZATION
             case EnchantKind.ForgeAdd:
                 return "Donne un effet forgé à un équipement ayant un emplacement [Forge Disponible] ou le même type d'effet forgé.";
             case EnchantKind.ForgeDelete:
-                return "Supprime un effet forgé d'un équipement et le remplace pat un emplacement [Forge Disponible].";
+                return "Supprime un effet forgé d'un équipement et le remplace par un emplacement [Forge Disponible].";
             case EnchantKind.ForgeExtract:
                 return "Extrait l'effet forgé d'un équipement et créée son [Enclume de Forge] associé. L'effet forgé extrait est supprimé de l'équipement.";
             case EnchantKind.OptionDeleteAll:
-                return "Supprime tous les enchantements d'un équipement et les transforment en [Enchantement Vide]s.";
+                return "Supprime tous les enchantements d'un équipement et les transforme en [Enchantement Vide]s.";
             case EnchantKind.OptionExtractAll:
                 return "Extrait tous les enchantements d'un équipement et créée des Parchemins d'Enchantement associés. Les effets extraits sont supprimés de l'équipement.";
             case EnchantKind.OptionLotteryAll:
                 return "Randomise les valeurs de tous les enchantements d'un équipement.";
             case EnchantKind.OptionLevelupAll:
-                return "Augmente le niveau de tous les enchantements d'un objet équipé qui ne sont pas à leur niveau maximal.";
+                return "Augmente le niveau de tous les enchantements d'un équipement qui ne sont pas à leur niveau maximal.";
             case EnchantKind.OptionLevelMaxAll:
-                return "Augmente le niveau de tous les enchantements d'un objet équipé jusqu'à leur maximum.";
+                return "Augmente le niveau de tous les enchantements d'un équipement jusqu'à leur maximum.";
             case EnchantKind.OptionCopyAll:
                 return "Copie tous les enchantements d'un équipement et créée des Parchemins d'Enchantement associés. Les enchantements originels sont gardés.";
-            case EnchantKind.ArtifactOptionAdd://NEW8
-                return "Adds a SD enchanted effect to a piece of equipment that has an [Enchant Available] slot.";
-            case EnchantKind.ArtifactDelete://NEW8
-                return "Deletes a SD enchanted effect of an artifact and changes it to an available enchant slot.";
-            case EnchantKind.ArtifactExtract://NEW8
-                return "Extracts a SD enchanted effect of an artifact and creates its Ancient Enchant Scroll. The extracted enchanted effect will be deleted.";
-            case EnchantKind.ArtifactLottery://NEW8
-                return "Re-rolls a SD enchanted effect's value on artifact.";
-            case EnchantKind.ArtifactLevelup://NEW8
-                return "Increases a SD enchanted effect's level of an artifact that is not maxed yet.";
-            case EnchantKind.ArtifactLevelMax://NEW8
-                return "Increases a SD enchanted effect's level of an artifact to max.";
-            case EnchantKind.ArtifactExpandEnchantSlot://NEW8
-                return "Expands available enchant slot of an artifact by 1. Max 4 slots in total except for Thief's Mastery Effect.";
-            case EnchantKind.ArtifactDeleteAll://NEW8
-                return "Deletes all SD enchanted effect of an artifact and changes it to an available enchant slot.";
-            case EnchantKind.ArtifactExtractAll://NEW8
-                return "Extracts all SD enchanted effect of an artifact and creates its Enchant Scroll. The extracted enchanted effect will be deleted.";
-            case EnchantKind.ArtifactLotteryAll://NEW8
-                return "Re-rolls all SD enchanted effect's value on artifact.";
-            case EnchantKind.ArtifactLevelupAll://NEW8
-                return "Increases all SD enchanted effect's level of an artifact that is not maxed yet.";
-            case EnchantKind.ArtifactLevelMaxAll://NEW8
-                return "Increases all SD enchanted effect's level of an artifact to max.";
+            case EnchantKind.ArtifactOptionAdd:
+                return "Ajoute un enchantement de SD à un équipement ayant un [Enchantement Vide].";
+            case EnchantKind.ArtifactDelete:
+                return "Supprime un enchantement de SD d'une antiquité et le transforme en un [Enchantement Vide].";
+            case EnchantKind.ArtifactExtract:
+                return "Extrait un enchantement de SD d'une antiquité et créée un Parchemin Antique d'Enchantement associé. L'effet extrait est supprimé de l'antiquité.";
+            case EnchantKind.ArtifactLottery:
+                return "Randomise la valeur d'un enchantement de SD d'une antiquité.";
+            case EnchantKind.ArtifactLevelup:
+                return "Augmente le niveau d'un enchantement de SD d'une antiquité qui n'est pas au niveau maximal.";
+            case EnchantKind.ArtifactLevelMax:
+                return "Augmente le niveau d'un enchantement de SD d'une antiquité jusqu'à son maximum.";
+            case EnchantKind.ArtifactExpandEnchantSlot:
+                return "Augmente le nombre d'enchantements d'une antiquité par 1. Max 4 emplacements en tout en dehors de l'Effet de Maîtrise du Voleur.";
+            case EnchantKind.ArtifactDeleteAll:
+                return "Supprime tous les enchantements de SD d'une antiquité et les transforme en [Enchantement Vide]s.";
+            case EnchantKind.ArtifactExtractAll:
+                return "Extrait tous les enchantements de SD d'une antiquité et créée des Parchemins Antiques d'Enchantement associés. Les effets extraits sont supprimés de l'antiquité.";
+            case EnchantKind.ArtifactLotteryAll:
+                return "Randomise les valeurs de tous les enchantements de SD d'une antiquité.";
+            case EnchantKind.ArtifactLevelupAll:
+                return "Augmente le niveau de tous les enchantements de SD d'une antiquité qui ne sont pas à leur niveau maximal.";
+            case EnchantKind.ArtifactLevelMaxAll:
+                return "Augmente le niveau de tous les enchantements de SD d'une antiquité jusqu'à leur maximum.";
         }
         return base.EnchantInformation(kind);
     }
@@ -4368,10 +4368,10 @@ public class Localized_French : LOCALIZATION
                 if (isPassive) return "Gain d'Eau Mystérieuse + " + tDigit(effectValue, 3) + " / " + Basic(BasicWord.Sec);
                 return "Effet de Potion (Global) + " + percent(effectValue);
             case PotionKind.TrackersMap:
-                if (isPassive) return "Chance d'Invasion Epique + " + percent(effectValue) + " au lieu d'une Grosse Invasion";
+                if (isPassive) return "Chance d'Invasion Épique + " + percent(effectValue) + " au lieu d'une Grosse Invasion";
                 return "Augmente le # de Complétions de Zone et de Récompense de Zone par " + tDigit(effectValue, 1);
             case PotionKind.BerserkersStone:
-                if (isPassive) return "Effet de l'Equipement + " + percent(effectValue);
+                if (isPassive) return "Effet de l'Équipement + " + percent(effectValue);
                 return "Dégâts infligés aux Boss de Défi + " + percent(effectValue);
             case PotionKind.AncientSlimeBadge:
                 if (isPassive) return "Dégâts Absolus infligés aux Slimes + " + percent(effectValue);
@@ -5014,7 +5014,7 @@ public class Localized_French : LOCALIZATION
             case GuildAbilityKind.EquipmentInventory:
                 return "Inventaire d'Équipement + " + tDigit(effectValue);
             case GuildAbilityKind.EnchantInventory:
-                return "Inentaire d'Enchantement + " + tDigit(effectValue);
+                return "Inventaire d'Enchantement + " + tDigit(effectValue);
             case GuildAbilityKind.PotionInventory:
                 return "Inventaire d'Utilitaire + " + tDigit(effectValue);
             case GuildAbilityKind.GlobalSkillSlot:
@@ -5034,7 +5034,7 @@ public class Localized_French : LOCALIZATION
             case GuildAbilityKind.MagicalAbsoption:
                 return "Absorption Magique + " + percent(effectValue);
             case GuildAbilityKind.UpgradeCost:
-                return "Réduction du Coût des améliorations Générales par " + percent(effectValue);
+                return "Réduction du Coût des Améliorations Générales par " + percent(effectValue);
             case GuildAbilityKind.MaterialDrop:
                 return "Gain de Matériaux + " + tDigit(effectValue);
             case GuildAbilityKind.NitroCap:
@@ -5044,7 +5044,7 @@ public class Localized_French : LOCALIZATION
             case GuildAbilityKind.GoldGain:
                 return "Multiplication des Gains d'Or par " + percent(1 + effectValue);
             case GuildAbilityKind.ExpGain:
-                return "Multiplication des Gaindd'EXP par " + percent(1 + effectValue);
+                return "Multiplication des Gains d'EXP par " + percent(1 + effectValue);
         }
         return tempString;
     }
@@ -5110,14 +5110,14 @@ public class Localized_French : LOCALIZATION
                         client = "Hitan";
                         description = "Dans l'onglet <color=orange>Amélioration</color>, tu peux acheter différentes améliorations avec de l'or pour augmenter tes statistiques ! Essaye d'acheter des améliorations de <color=orange>Gain de Ressources</color> !\n<color=yellow>- Pour plus d'informations sur les améliorations, cliquez sur le bouton d'Aide en haut à gauche > [Amélioration].</color>";
                         condition = "Atteindre le Nv 25 avec [ Gain de Ressources 1 ]";
-                        reward = "Débloque l'Amélioration [ Gain de Ressources 2 ]\n- Débloque l'onglet d'Amélioration Générale 2\n- Débloque l'onglet [ Equipement ]";
+                        reward = "Débloque l'Amélioration [ Gain de Ressources 2 ]\n- Débloque l'onglet d'Amélioration Générale 2\n- Débloque l'onglet [ Équipement ]";
                         break;
                     case QuestKindGlobal.Equip:
-                        name = "Tutoriel 5 : Equipement";
+                        name = "Tutoriel 5 : Équipement";
                         client = "Hitan";
-                        description = "Lorsque tu combattras des monstres, il y a une chance mince qu'il lâchent un <color=orange>Equipement</color> après être vaincu. Lorsque tu en récupères un, amène-le à moi s'il te plaît ! Tu peux l'équiper en le glissant-déposant dans un emplacement d'équipement libre dans l'onglet color=orange>Equipement</color>." +
-                            " Une fois que tu en récupères un, va voir le <color=orange>Dictionnaire</color> dans l'onglet Equipement. Il affichera tous les équipements rencontrés jusqu'à présent ! Tu peux aussi voir qu'ils y a quelques améliorations. Elles augmentent les <color=orange>Gains de Maîtrise d'Equipement</color> des héros, qui réduit le temps requis pour augmenter le niveau d'un équipement.\n<color=yellow>- Pour plus d'informations sur les Equipements et le Dictionnaire, clique sur le bouton d'Aide en haut à gauche > [Equipement].</color>";
-                        condition = "Collecte un Equipement";
+                        description = "Lorsque tu combattras des monstres, il y a une chance mince qu'il lâchent un <color=orange>Équipement</color> après être vaincu. Lorsque tu en récupères un, amène-le à moi s'il te plaît ! Tu peux l'équiper en le glissant-déposant dans un emplacement d'équipement libre dans l'onglet color=orange>Équipement</color>." +
+                            " Une fois que tu en récupères un, va voir le <color=orange>Dictionnaire</color> dans l'onglet Équipement. Il affichera tous les équipements rencontrés jusqu'à présent ! Tu peux aussi voir qu'ils y a quelques améliorations. Elles augmentent les <color=orange>Gains de Maîtrise d'Équipement</color> des héros, qui réduit le temps requis pour augmenter le niveau d'un équipement.\n<color=yellow>- Pour plus d'informations sur les Équipements et le Dictionnaire, clique sur le bouton d'Aide en haut à gauche > [Équipement].</color>";
+                        condition = "Collecte un Équipement";
                         reward = "Débloque l'onglet [ Labo ]";
                         break;
                     case QuestKindGlobal.Alchemy:
@@ -5201,7 +5201,7 @@ public class Localized_French : LOCALIZATION
                         client = "Hitan";
                         description = optStr + "Bravo ! Après une Ascension Monde, chaque zone du monde a aussi la possibilité d'avoir un prestige. Tu peux gagner des <color=orange>Points de Prestige de Zone</color> dépendant du # de complétions de la zone. Tu peux voir le prochain # de complétions pour gagner des points dans les infos de la zone." +
                             " Une fois que le niveau de l'amélioration <color=orange>[ Prestige de Zone ]</color> est augmenté, tu peux changer la difficulté de la zone. La chance d'apparition de l'équipement unique de la zone et la récompense de sa complétion augmente avec la difficulté, tandis que le niveau des monstres et le # de vagues à compléter augmente aussi." +
-                            " Tu peux aussi compléter les mêmes missions de la zone dans les différentes difficultés, donc tu peux aussi gagner plus de Pièces Epiques et augmenter le Nombre de Missions de Zone complétées.\n<color=yellow>- Pour plus d'informations, Aide > [Carte Monde].</color>";
+                            " Tu peux aussi compléter les mêmes missions de la zone dans les différentes difficultés, donc tu peux aussi gagner plus de Pièces Épiques et augmenter le Nombre de Missions de Zone complétées.\n<color=yellow>- Pour plus d'informations, Aide > [Carte Monde].</color>";
                         condition = "Atteindre le Nv 1 de l'Amélioration de Zone [ Prestige de Zone ] de la Zone 1 du " + AreaName(AreaKind.SlimeVillage);
                         break;
 
@@ -5643,22 +5643,22 @@ public class Localized_French : LOCALIZATION
                 switch (kindDaily)
                 {
                     case QuestKindDaily.EC1:
-                        name = "Pièce Epique 1 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        name = "Pièce Épique 1 : " + DailyQuestRarityName(quest.dailyQuestRarity);
                         client = "La Guilde des Aventuriers";
                         description = "La Guilde des Aventuriers a posté une quête " + DailyQuestRarityName(quest.dailyQuestRarity) + " pour vaincre " + tDigit(quest.defeatRequredDefeatNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " qui terrorisent les villageois vivant près de la région " + AreaName(quest.questingArea.kind) + ". Revenez ici lorsque la tâche est complétée.";
                         break;
                     case QuestKindDaily.EC2:
-                        name = "Pièce Epique 2 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        name = "Pièce Épique 2 : " + DailyQuestRarityName(quest.dailyQuestRarity);
                         client = "L'Association des Trappeurs";
                         description = "L'Association des Trappeurs a posté une quête " + DailyQuestRarityName(quest.dailyQuestRarity) + " pour capturer " + tDigit(quest.captureRequiredNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " pour une analyse et étude approfondie. Revenez ici lorsque la tâche est complétée.";
                         break;
                     case QuestKindDaily.EC3:
-                        name = "Pièce Epique 3 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        name = "Pièce Épique 3 : " + DailyQuestRarityName(quest.dailyQuestRarity);
                         client = "La Guilde des Aventuriers";
                         description = "La Guilde des Aventuriers a posté une quête " + DailyQuestRarityName(quest.dailyQuestRarity) + " pour vaincre " + tDigit(quest.defeatRequredDefeatNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " qui terrorisent les villageois vivant près de la région " + AreaName(quest.questingArea.kind) + ". Revenez ici lorsque la tâche est complétée.";
                         break;
                     case QuestKindDaily.EC4:
-                        name = "Pièce Epique 4 : " + DailyQuestRarityName(quest.dailyQuestRarity);
+                        name = "Pièce Épique 4 : " + DailyQuestRarityName(quest.dailyQuestRarity);
                         client = "L'Association des Trappeurs";
                         description = "L'Association des Trappeurs a posté une quête " + DailyQuestRarityName(quest.dailyQuestRarity) + " pour capturer " + tDigit(quest.captureRequiredNum()) + " " + MonsterSpeciesName(quest.dailyTargetMonsterSpecies) + " pour une analyse et étude approfondie. Revenez ici lorsque la tâche est complétée.";
                         break;
@@ -6475,60 +6475,61 @@ public class Localized_French : LOCALIZATION
                         description = "A hurried individual wearing glasses and a scruffy collection of robes, runs into you, scattering scrolls everywhere. After collecting their dropped possessions, they take a look at you before nodding, \"You look like you can handle yourself. These slimes, they've been stealing my magical research and it's severely hampered my progress. Would you mind helping me out some and dealing these thieves a telling blow? I... I'm willing to pay if that's what you need.\"";
                         break;
                     case QuestKindGeneral.CompleteDungeon0_0:
-                        name = "Find My Husband 1";
+                        name = "Trouvez Mon Époux 1";
                         client = "Wakana";
-                        description = "Excuse me, do you have a moment? My husband has been missing for the past few days. My neighbors said they saw him go to the slime cave, but I'm not good with slime so I can't go look for him. Can you please go there for me?"
-                            + " After you clear <color=orange>Slime Village: Area 2</color> 100 times, you can try the Slime dungeon through <color=orange>Dungeon</color> tab in World Map. Keep in mind that you need <color=orange>Portal Orb</color> to enter Dungeons, which you can get from such as global quests and daily quests."
-                            + " Before trying a dungeon, the <color=orange>Simulation</color> button in World Map is so useful. It simulates each area and tell you whether you can clear it or not.";
+                        description = "Excusez moi, avez vous un moment? Mon époux a disparu il y a de cela quelques jours. Mes voisins disent qu'ils l'ont vu aller dans la caverne des Slimes, mais je ne suis pas douée avec les Slimes alors je ne peux pas aller le chercher. Pouvez-vous y aller pour moi ?"
+                            + " Après avoir complété le <color=orange>Village Slime : Zone 2</color> 100 fois, vous pourrez essayer le Donjon Slime à travers l'onglet <color=orange>Donjon</color> dans la Map Monde. Gardez à l'esprit qu'il vous faudra une <color=orange>Orbe Portail</color> pour entrer dans le Donjon, que vous pouvez obtenir par exemple à travers les quêtes globales et journalières."
+                            + " Avant de tenter un donjon, le bouton <color=orange>Simulation</color> dans la Map Monde peut être utile. Il simule chaque zone et vous informe si vous pouvez la compléter ou non.";
                         break;
                     case QuestKindGeneral.CompleteDungeon0_1:
-                        name = "Find My Husband 2";
+                        name = "Trouvez Mon Époux 2";
                         client = "Wakana";
-                        description = "Oh, you didn't find him, I'm so sad. Maybe he's in another cave... I don't know. Please, can you go and look for him again? I'm so worried about him that I can't do anything about it."; break;
+                        description = "Oh, vous ne l'avez pas trouvé, je suis si triste. Peut-être qu'il est dans une autre caverne... Je sais pas. S'il vous plaît, pouvez-vous aller à sa recherche à nouveau ? Je suis si inquiète pour lui et je ne peux rien y faire.";
+                        break;
                     case QuestKindGeneral.CompleteDungeon0_2:
-                        name = "Find My Husband 3";
+                        name = "Trouvez Mon Époux 3";
                         client = "Wakana";
-                        description = "What! You saw him being kidnapped by slime in the depths of the cave!? Oh, my god! I'm sure there's a slime hideout nearby, that's where he'll be. Please, please and please go and find him!";
+                        description = "Comment ? Vous l'avez vu se faire enlever par des Slimes dans les profondeurs de la caverne !? Oh seigneur ! Je suis certaine qu'il y a un repère de Slimes dans le coin, c'est là qu'il sera. S'il vous plaît, je vous en prie, allez le délivrer !";
                         break;
                     case QuestKindGeneral.DefeatNormalMagicSlime:
-                        name = "A Debt Left Unpaid";
-                        client = "Young Witch";
-                        description = "I was studying by the tree when some Magicslimes asked to borrow my quills. I should have known something was wrong when they swallowed them, but I trusted them anyway. Now I have nothing to write with, and my homework for the academy is late. If you could teach them a lesson for me I'd gladly return the favor by making a quilt out of their hats.";
+                        name = "Une Dette Impayée";
+                        client = "Jeune Sorcière";
+                        description = "J'étudiais sous l'arbre quand un Slime Magique m'a demandé s'il pouvait emprunter ma plume. J'aurais dû savoir que quelque chose n'allait pas quand il l'a avalé, mais je lui ai tout de même fait confiance. Maintenant je n'ai rien pour écrire et mes devoirs pour l'académie sont en retard. Si vous pouvez leur apprendre une leçon, je vous renverrez volontiers l'ascenseur en faisant une couette de leurs chapeaux.";
                         break;
                     case QuestKindGeneral.DefeatGreenMagicSlime:
-                        name = "Sending A Message";
-                        client = "Claire The Witch";
-                        description = "\"I was doing extra credit to make up for my missing homework when one of the Magicslimes tossed this paper at me.\" She hands you a balled - up piece of paper inviting you to a tea party in Magicslime City. \"I'm no expert, but I'd say this is definitely a trap. Especially considering my friends at school are always too nervous to invite me over. I need you to go for me and send those lying Magicslimes back to where they came from.\"";
+                        name = "Envoyer Un Message";
+                        client = "Claire La Sorcière";
+                        description = "\"Je travaillais sur des leçons en plus pour compenser pour mes devoirs manquants quand un des Slimes Magiques m'a lancé ce papier.\" Elle vous tend un morceau de papier chifonné ayant une invitation à boire du thé dans la Ville des Slimes Magiques. \"Je ne suis pas une experte, mais je dirais que c'est définitivement un piège. Spécialement considérant que mes amis à l'école sont trop nerveux pour m'inviter. J'ai besoin que tu y ailles pour moi et que tu renvoies ces menteurs de Slime Magiques d'où ils viennent.\"";
                         break;
                     case QuestKindGeneral.DefeatYellowBat:
-                        name = "The Mine 1";
-                        client = "Brick";
-                        description = "As you are about to enter the cave a small giant sporting nothing but a pair of overalls, a mining hat, and a pickaxe. He scratches his head and addresses you with a worried expression. \"Excuse me. I need to get mining for the boss but the bats always give me the spooks. Can you lend me a hand and clear them out? I can't give you the ore, but you can have the stone.\"";
+                        name = "La Mine 1";
+                        client = "Brique";
+                        description = "Alors que vous êtes sur le point d'entrer dans la caverne, vous voyez un petit géant qui ne porte qu'une salopette, un casque de mineur et une pioche. Il se gratte la tête et s'adresse à vous avec une expression inquiète. \"Excusez-moi. Je dois miner pour l'patron mais les Chauve-Souris me foutent les jetons. Pouvez-vous me donner un coup de main pour les faire partir ? Je ne peux pas vous donner de minéraux mais vous pouvez prendre la pierre.\"";
                         break;
                     case QuestKindGeneral.DefeatRedBat:
-                        name = "The Mine 2";
+                        name = "La Mine 2";
                         client = "Mira";
-                        description = "A small woman in thick steel plates and a miner helmet approaches you, \"Thank you for helping clear the bats. Brick has gotten a new sense of motivation recently. If you could go a bit deeper into the mine we could get some higher quality ore, and some rough stone you could keep.\"";
+                        description = "Une petite femme dans une tenue d'acier épaisse et un casque de mineur vous approche, \"Merci pour votre aide avec les Chauve-Souris. Brique a regagné de la motivation récemment. Si vous pouviez aller un peu plus profond dans la mine, on pourrait trouver des minéraux de meilleur qualité, et un peu de pierre que vous pourrez garder.\"";
                         break;
                     case QuestKindGeneral.DefeatGreenBat:
-                        name = "The Mine 3";
+                        name = "La Mine 3";
                         client = "Mira";
-                        description = "With all those bats out of the way we saw some gems glittering deeper down in the mines. The boys and I understand that going down any deeper in the cave is dangerous. So we're willing to split our findings.";
+                        description = "Avec toutes ces Chauve-Souris hors du chemin, on a vu quelques gemmes scintiller plus bas dans la mine. Les garçons et moi on comprend que c'est dangereux de descendre plus profondément, alors on veut bien partager notre butin.";
                         break;
                     case QuestKindGeneral.DefeatPurpleBat:
-                        name = "A Deep Dark Place";
-                        client = "Brick";
-                        description = "Brick approaches you as you return from the mine with a worried expression, \"It's good your back safe. Did you see the thing moving? It is like something was living in the void of the dark itself. I don't know why, but I don't have a good feeling about it. Could you go into that darkness and take care of it for us? I'm sure everyone would be happy being able to sleep a bit easier.\"";
+                        name = "Un Endroit Sombre Et Lugubre";
+                        client = "Brique";
+                        description = "Brique s'approche de vous avec une expression inquiète lorsque vous revenez de la mine. \"C'est bien qu'vous soyez de retour sain et sauf. Avez-vous vu la chose bouger ? C'est comme si quelque chose vivait dans le vide des ténèbres. Je sais pas pourquoi, mais j'ai un mauvais pressentiment. Tu pourrais aller dans ces ténèbres et t'en occuper pour nous ? Je suis certain que tout le monde sera heureux de pouvoir dormir sur nos deux oreilles.\"";
                         break;
                     case QuestKindGeneral.DefeatBlueBat:
-                        name = "A Strange Request";
-                        client = "Miss Fizzle";
-                        description = "As your leaving for Bat Cave a tomboy with thick goggles and a sharp grin eyes you down from atop a rock. Swirling a fiery potion in her hand as she calls to you, \"You. Yeah, you. I was wondering if you could bring me some guano from the bats I have a project I'm working on it's going to be great just you wait.\"";
+                        name = "Une Une Étrange Requête";
+                        client = "Mademoiselle Fizzle";
+                        description = "Alors que vous vous dirigez vers la Caverne des Chauve-Souris, un garçon manqué avec d'épaisses lunettes et un sourire prononcé vous observe du haut d'un rocher. Elle s'addresse à vous, remuant une potion flamboyante dans sa main. \"Toi ! Ouais, toi. Je me demandais si tu pouvais m'apporter du guano de Chauve-Souris. J'ai un projet sur lequel je travaille, ce sera génial, tu verras.\"";
                         break;
                     case QuestKindGeneral.BringToEnchantShard:
-                        name = "The Big One";
-                        client = "Miss Fizzle";
-                        description = "Hey, thanks for the help earlier. My experiments are almost ready. All I need is a little Oil Of Slime to act as a base, A bit of Magical Cloth to wrap it in, and some Spider Silk for a long enough fuse. Then we can create a bomb so big it could blast away a million bats. For science of course.";
+                        name = "La Grosse Affaire";
+                        client = "Mademoiselle Fizzle";
+                        description = "Hé, merci pour ton aide plus tôt. Mes expériences sont presque prêtes. Tout ce qu'il me faut c'est un peu d'Huile de Slime pour servir de base, un peu de Tissu Magique pour l'emballer, et de la Soie d'Areignée pour une mèche suffisament longue. Ensuite, on pourra créer une bombe assez grosse pour faire exploser un million de Chauve-Souris ! Pour la science, bien entendu.";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_0:
                         name = "Manoir Hanté 1";
@@ -6639,12 +6640,12 @@ public class Localized_French : LOCALIZATION
                         description = "Mon troupeau ! Ma ferme ! Ils sont r'venu grâce à vous ! Sauf qu'y m'faut encore vot' aide. Ces casse-pieds qui ont détruit ma ferme dans l'temps sont encore dans les alentours. J'crois qu'ils me r'gardaient l'autre nuit. J'voyais rien, mais Gus était assis à fixer dans l'noir pendant des lunes, et j'vous jure, le son des branches qui bougent, c'tait pas naturel. Ça m'a fait rappeler des souvenirs terribles de mon temps dans l'armée, quand j'tais en charge d'entrainer une unité de wombats de combat. C'tait terrible, trop même pour les histoires de beuverie. J'referrai pas face à ça, mais ça veut dire que j'peux pas me battre près d'mon troupeau, même pas pou' les défendre. Donc s'tu pourrais, tu vois, combattre ces monstres pour moi et me laisser garder mes bébés en sûreté ?";
                         break;
                     case QuestKindGeneral.TheBiggerOne: //TODO
-                        name = "The Bigger One";
-                        client = "Papa Beemeritus";
-                        description = "Slimes & Spiders? Pfft! We're about to start working with the serious ingredients to blow those Devilfish right out of the lake! Go collect Bat Wings to form a base, a few Fox Tails to wrap it in, and some Fairy Dust to serve as a magical binding. With these Papa promises magically explosive results!";
+                        name = "La Très Grosse Affaire";
+                        client = "Père Bémérite";
+                        description = "Des Slimes et Araignées ? Bah ! We're about to start working with the serious ingredients to blow those Devilfish right out of the lake! Go collect Bat Wings to form a base, a few Fox Tails to wrap it in, and some Fairy Dust to serve as a magical binding. With these Papa promises magically explosive results!";
                         break;
                     case QuestKindGeneral.TheBiggestOne: //TODO
-                        name = "The Bigger One";
+                        name = "The Biggest One";
                         client = "Miss Fizzle";
                         description = "Are we ready for another science lesson? I see you've built enough bombs for Devilfish. Maybe we should build the biggest one yet for Unicorns? Let's start the collection of Fish Scales, Carved Branches, and Thick Fur! After all this is in the name of Science and discovery!";
                         break;
@@ -6653,7 +6654,6 @@ public class Localized_French : LOCALIZATION
                         client = "Bill Nye";
                         description = "Okay class, today we are going for something more daring. It's going to take awhile to get the materials, but I promise it'll be worth it! Don't worry too much, we'll get there in time! You've already collected most of these materials needed. We are going to turn monster materials into Portal Orbs!";
                         break;
-
                     case QuestKindGeneral.TigerTaming://NEW10
                         name = "Tiger Taming";
                         client = "Beastmaster Koji";
@@ -6751,7 +6751,7 @@ public class Localized_French : LOCALIZATION
             case ToggleKind.PerformanceMode:
                 return "Mode Performance";
             case ToggleKind.AutoDisassembleExcludeEnchanted:
-                return "Exclure les Equipements Enchantés";
+                return "Exclure les Équipements Enchantés";
             case ToggleKind.DisableCombatRange:
                 return "Désactiver la Vision de la Portée des Capactés";
             case ToggleKind.DarkenBattlefield:
@@ -7331,7 +7331,7 @@ public class Localized_French : LOCALIZATION
             case 3: return "Emplacement d'Inventaire d'Équipement + 10";
             case 4: return "Gain d'EXP + 30%";
             case 5: return "Limite d'Or + " + text;
-            case 6: return "Gain de Maîtrise d'Equipement + 20%";
+            case 6: return "Gain de Maîtrise d'Équipement + 20%";
             case 7: return "Gain d'Eau Mystérieuse + 50%";
             case 8: return "Emplacement d'Inventaire d'Équipement + 10";
             case 9: return "Gain de Matériaux de Ville + 50%";
@@ -7882,7 +7882,7 @@ public class Localized_French : LOCALIZATION
             case 13: return "\n- Le Rang, Niveau et la Maîtrise des Capacités";
             case 14: return "\n- Le Niveau d'Amélioration dans l'onglet d'Amélioration";
             case 15: return "\n- Les objets dans l'Inventaire d'Enchantements, le Niveau et la Maîtrise des Équipements et les Améliorations de Dictionnaire";
-            case 16: return "\n- Equipment/Artifact that has no enchanted slots in inventory and equip slots";//NEW9 Added "/Artifact" 
+            case 16: return "\n- Les Équipements/Antiquités sans emplacement d'enchantement dans l'inventaire et les emplacements d'équipement";/
             case 17: return "\n- Les Expansions d'Eau Mystérieuse et les Catalyseurs";
             case 18: return "\n- Le Niveau, l'EXP et les Capacités de Guilde";
             case 19: return "\n- Le Rang et Niveau des Bâtiments de Ville et les Matériaux de Ville";
@@ -7892,7 +7892,7 @@ public class Localized_French : LOCALIZATION
             case 23: return "\n- Les Orbes de Portail, le # de Complétions de Donjon et les Améliorations de Prestige de Donjon";
             case 24: return "\n- Les Quêtes Globales, Journalières, de Titre et les Titres déjà acquis, la Maîtrise des Quêtes Globales";
             case 25: return "\n- L'Effet de Maîtrise des Équipements";
-            case 26: return "\n- Equipment/Artifact that has any enchanted effects, enchanted slots or forged effects in inventory";//NEW9 Added "/Artifact" 
+            case 26: return "\n- Les Équipements/Antiquités avec des effets d'enchantement, des emplacements d'enchantement ou des effets de forge dans l'inventaire";
             case 27: return "\n- Les objets dans l'Inventaire d'Utilitaires et ses emplacements équipés, le progrès des Talismans";
             case 28: return "\n- Les Essences et Matéruaix sauf les Matériaux de Ville";
             case 29: return "\n- Les Améliorations d'Alchimie et le Niveau des Potions";
@@ -8161,7 +8161,7 @@ public class Localized_French : LOCALIZATION
             case 124: return "Gain d'EXP de Familier d'Expédition ";
             case 125: return "Améliore l'effet des améliorations de Gain de Ressources";
             case 126: return "Niveau Maximal d'Amélioration de Dictionnaire + " + text;
-            case 127: return "Add \"Refresh Ticket\" reward to Daily Quest [Cartographer " + text + "]";//NEW8
+            case 127: return "Ajoute une récompense de \"Ticket de Rafraîchissement\" dans les Quêtes Journalières [Cartographeur " + text + "]";
             case 128: return "";
             case 129: return "";
             case 130: return "";
@@ -8211,10 +8211,10 @@ public class Localized_French : LOCALIZATION
             case 0: return "Êtes-cous sûr de vouloir acheter ceci ?";
             case 1: return "GRATUIT la première fois !";
             case 2: return " (Achat Unique)";
-            case 3: return "Purchase # Limit : " + text;//NEW8
+            case 3: return "# de Limite d'Achat : " + text;
             case 4: return "Ceci coûte normalement " + text + ", mais il est GRATUIT la première fois !";
             case 5: return "Le prix augmentera après l'achat.";
-            case 6: return "Bundle";//NEW9
+            case 6: return "Lot";
             default: return base.EpicStoreMenuString(id, text);
         }
     }
@@ -8228,7 +8228,7 @@ public class Localized_French : LOCALIZATION
             case 3: return "Handicaps";
             case 4: return "Récompense de Première Complétion";
             case 5: return "Récompense pour Toute Complétion";
-            case 6: return "Arène Mystique " + text + "F";
+            case 6: return "Arène Mystique E" + text;
             default: return base.ChallengeHandicappedString(id, text);
         }
     }
@@ -8258,7 +8258,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Vous ne pouvez pas capturer des monstres de type 'colorés' avec cet objet.";
             case 7: return "Ce Talisman ne peut pas être désassemblé.";
             case 8: return "Effet Passif obtenu après désassemblage";
-            case 9: return "This artifact consumes " + text + " Nitro per sec when equipped";//NEW8
+            case 9: return "Cette antiquité consomme " + text + " Nitro par sec lorsqu'elle est équipée";
             default: return base.EquipMenuString(id, text);
         }
     }
@@ -8801,8 +8801,8 @@ public class Localized_French : LOCALIZATION
                 effect = "Permet de réinitialiser les Améliorations de Dictionnaire de façon permanente. Il sera possible de les réinitialiser et de récupérer ses points à tout moment.";
                 break;
             case EpicStoreKind.AdvancedAutoDisassemblingEquipment:
-                name = "Auto Désassemblage d'Equipement Avancé";
-                effect = "Débloque une option dans le Dictionnaire d'Equipement qui permet d'éviter de désassembler les équipements enchantés.";
+                name = "Auto Désassemblage d'Équipement Avancé";
+                effect = "Débloque une option dans le Dictionnaire d'Équipement qui permet d'éviter de désassembler les équipements enchantés.";
                 break;
             case EpicStoreKind.AdvancedAutoDisassemblePotion:
                 name = "Auto Désassemblage de Potion Avancé";
@@ -8825,8 +8825,8 @@ public class Localized_French : LOCALIZATION
                 effect = "Débloque 1 Emplacement de Capacité Global pour tous les héros.";
                 break;
             case EpicStoreKind.EquipmentInventorySlot10:
-                name = "Emplacement d'Inventaire d'Equipement + 10";
-                effect = "Débloque 10 Emplacements d'Inventaire d'Equipement.";
+                name = "Emplacement d'Inventaire d'Équipement + 10";
+                effect = "Débloque 10 Emplacements d'Inventaire d'Équipement.";
                 break;
             case EpicStoreKind.EquipmentWeaponSlot1:
                 name = "Emplacement d'Inventaire d'Arme + 1";
@@ -8845,8 +8845,8 @@ public class Localized_French : LOCALIZATION
                 effect = "Débloque une option dans l'onglet Capacité qui permet d'autoriser le lancer d'une capacité aussi tôt que son Temps de Recharge est écoulé peu importe sa Consommation de PM, avec une réduction proportionnelle de l'effet et du gain de maîtrise si la Consommation de PM n'est pas atteinte de ([PM courant du héros] / [Consommation de PM de la capacité])%, avec un minimum de 10%";
                 break;
             case EpicStoreKind.EquipmentTenacity:
-                name = "Tenacité d'Equipement";
-                effect = "Permet d'équiper un équipement pour lequel les requis ne sont pas remplis, avec une réduction proportionnelle de son effet de ([Niveau du Héros et ses Abilités] / [Abilités requises de l'Equipement])%, avec un minimum de 10%. Il permet aussi d'utiliser les enchantements sur les objets équipés.";
+                name = "Tenacité d'Équipement";
+                effect = "Permet d'équiper un équipement pour lequel les requis ne sont pas remplis, avec une réduction proportionnelle de son effet de ([Niveau du Héros et ses Abilités] / [Abilités requises de l'Équipement])%, avec un minimum de 10%. Il permet aussi d'utiliser les enchantements sur les objets équipés.";
                 break;
             case EpicStoreKind.AdvancedAutoRebirthTiming:
                 name = "Auto Réincarnation Avancée [ Temps ]";
@@ -8873,8 +8873,8 @@ public class Localized_French : LOCALIZATION
                 effect = "Augmente la taille de la File d'Alchimie par 10. Effectuez un Clic Droit sur une potion pour l'assigner à la File, et Maj + Clic Droit pour l'enlever de la File.";
                 break;
             case EpicStoreKind.AutoDisassembleEquipmentSlot5:
-                name = "Emplacement d'Auto Désassemblage d'Equipement + 5";
-                effect = "Augmente le nombre d'Emplacements d'Auto Désassemblage d'Equipement par 5. Cliquez sur un équipement dans le dictionnaire pour assigner/enlever l'auto désassemblage lorsqu'il est récolté.";
+                name = "Emplacement d'Auto Désassemblage d'Équipement + 5";
+                effect = "Augmente le nombre d'Emplacements d'Auto Désassemblage d'Équipement par 5. Cliquez sur un équipement dans le dictionnaire pour assigner/enlever l'auto désassemblage lorsqu'il est récolté.";
                 break;
             case EpicStoreKind.Tier1RebirthUpgradeReset:
                 name = "Réinitialisation d'Améliorations de Réincarnation de Classe 1";
@@ -8906,8 +8906,8 @@ public class Localized_French : LOCALIZATION
                 effect = "Augmente de nombre d'Emplacements de Familier Actif par 5.";
                 break;
             case EpicStoreKind.EquipUtilitySlot1:
-                name = "Emplacement d'Equipement d'Utilitaire + 1";
-                effect = "Débloque 1 Emplacement d'Equipement d'Utilitaire pour tous les héros.";
+                name = "Emplacement d'Équipement d'Utilitaire + 1";
+                effect = "Débloque 1 Emplacement d'Équipement d'Utilitaire pour tous les héros.";
                 break;
             case EpicStoreKind.UtilityInventorySlot5:
                 name = "Emplacement d'Inventaire Utilitaire + 5";
@@ -8938,11 +8938,11 @@ public class Localized_French : LOCALIZATION
                 effect = "Débloque un bouton dans l'onglet Options qui permet d'automatiquement aller à une Zone sous Invasion. Pendant une Invasion, [Auto-Réincarnation] et [Meilleur Gain d'EXP] sont désactivés. Déplace aussi tous les héros passifs si [Convocation] est acheté. Tous les héros iront dans leur zone favorite après l'Invasion si [Zone Favorite] est acheté.";
                 break;
             case EpicStoreKind.EasyAccessEquipment:
-                name = "Accès Facile [Equipement]";
-                effect = "Débloque des boutons dans l'onglet Equipement qui permet d'accéder aux emplacements d'équipement des héros en arrière-plan sans avoir à changer de héros.";
+                name = "Accès Facile [Équipement]";
+                effect = "Débloque des boutons dans l'onglet Équipement qui permet d'accéder aux emplacements d'équipement des héros en arrière-plan sans avoir à changer de héros.";
                 break;
             case EpicStoreKind.AdvancedAutoDisassembleCraftedEquipment:
-                name = "Auto-Désassemblage des Equipement Fabriqués Avancé";
+                name = "Auto-Désassemblage des Équipement Fabriqués Avancé";
                 effect = "Autorise la fonction d'Auto-Désassemblage des familiers à utiliser le Multiplicateur en haut à gauche lors du désassemblage d'équipement fabriqué. (Le bon familier doit être activé pour que l'effet marche.)";
                 break;
             case EpicStoreKind.AdvancedAutoBuyTraps:
@@ -8962,12 +8962,12 @@ public class Localized_French : LOCALIZATION
                 effect = "Donne 1 succès Steam pour IEH1 factice qui permet de récolter un Bonus Joueur supplémentaire dans l'onglet Options > Bonus sans avoir à réellement recevoir le succès dans IEH1. Vous pouvez récolter jusqu'à 20 succès Steam pour IEH1 (réel + factice) en tout.";
                 break;
             case EpicStoreKind.EquipmentLoadouts:
-                name = "Collection d'Equipement";
-                effect = "Débloque des boutons dans l'onglet Equipement qui permet d'avoir différentes collections d'équipement - Tout achat supplémentaire augmente le nombre d'emplacements de collections par le nombre acheté.";
+                name = "Collection d'Équipement";
+                effect = "Débloque des boutons dans l'onglet Équipement qui permet d'avoir différentes collections d'équipement - Tout achat supplémentaire augmente le nombre d'emplacements de collections par le nombre acheté.";
                 break;
             case EpicStoreKind.RegularDailyChest:
                 name = "Coffre Journalier";
-                effect = "Vous recevrez quelques récompenses ci-dessous de façon aléatoire chaque jour !\n- 0%/25%/50%/100% de la Limite de Nitro (peut dépasser la limite)\n- 0/1/2/4 heures de bénédiction d'EXP (seulement pour le héros courant)\n- 0/1/2/5 Orbes de Portail\n- <sprite=\"epiccoin\" index=0> 50/100/250 Pièces Epiques";
+                effect = "Vous recevrez quelques récompenses ci-dessous de façon aléatoire chaque jour !\n- 0%/25%/50%/100% de la Limite de Nitro (peut dépasser la limite)\n- 0/1/2/4 heures de bénédiction d'EXP (seulement pour le héros courant)\n- 0/1/2/5 Orbes de Portail\n- <sprite=\"epiccoin\" index=0> 50/100/250 Pièces Épiques";
                 break;
             case EpicStoreKind.SmartUseOfProficiencyScrolls:
                 name = "Utilisation Intelligente de Parchemin de Maîtrise";
@@ -8986,8 +8986,8 @@ public class Localized_French : LOCALIZATION
                 effect = "Débloque une option dans l'onglet Options qui permet à la Capacité du Familier Renard Violet de se baser sur le niveau de maîtrise de l'équipement (Nv 10) au lieu du niveau maximum. (Le familier doit être activé pour que l'effet marche.)";
                 break;
             case EpicStoreKind.EquipmentEnchantFilter:
-                name = "<size=21>Filtres Avancés d'Auto Désassemblage d'Equipements Enchantés";
-                effect = "<size=19>Débloque un bouton [Personnaliser] dans le Dictionnaire qui permet l'utilisation d'un Filtre d'Enchantement, qui permet de spécifier quels enchantements (y compris leur niveau minimum) à exclure de l'option d'auto désassemblage. Vous devez d'abord acheter [Auto Désassemblage d'Equipement Avancé] pour que cela fonctionne.";
+                name = "<size=21>Filtres Avancés d'Auto Désassemblage d'Équipements Enchantés";
+                effect = "<size=19>Débloque un bouton [Personnaliser] dans le Dictionnaire qui permet l'utilisation d'un Filtre d'Enchantement, qui permet de spécifier quels enchantements (y compris leur niveau minimum) à exclure de l'option d'auto désassemblage. Vous devez d'abord acheter [Auto Désassemblage d'Équipement Avancé] pour que cela fonctionne.";
                 break;
             case EpicStoreKind.EasyAccessQuest:
                 name = "Accès Facile [Quête]";
@@ -9007,7 +9007,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.ScrollFilter:
                 name = "Filtre de Parchemin";
-                effect = "Débloque un bouton dans l'onglet Equipement qui active un filtre de parchemin, qui indique que les parchemins tels que les Parchemins de Suppression ou les Parchemins de Lotterie ne seront pas gardées après avoir réclamé les récompenses de complétion de donjons/défis. ";
+                effect = "Débloque un bouton dans l'onglet Équipement qui active un filtre de parchemin, qui indique que les parchemins tels que les Parchemins de Suppression ou les Parchemins de Lotterie ne seront pas gardées après avoir réclamé les récompenses de complétion de donjons/défis. ";
                 break;
             case EpicStoreKind.PersistentSkillSet:
                 name = "Capacités Persistante";
@@ -9118,7 +9118,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- L'Ange est un héros de support infligeant des <color=orange>Dégâts Physiques</color> et des <color=orange>Dégâts de Lumière</color>, qui comporte aussi une collection de buffs. Son arme principale est ses ailes. Elle excelle au soin et à donner des buffs à elle-même et aux autres héros. Ses dégâts faibles est son point faible. L'Ange gagne des feuilles lorsqu'elle tue des monstres.";
                 tempStr += "\n\n";
                 tempStr += "<u>Voleur</u>";
-                tempStr += "\n- Le Voleur est un héros furtif qui inflige des <color=orange>Dégâts Physiques</color> et des <color=orange>Dégâts de Ténèbres</color>. Il a un mix de capacités de mélée et à distance. Ses deux atouts sont sa Vitesse et son taux d'Apparition d'Equipement, ce qui en fait un excellent farmeur. Il a une santé et défense plus basse, ce qui est son point faible. Le Voleur gagne des pierres lorsqu'il tue des monstres.";
+                tempStr += "\n- Le Voleur est un héros furtif qui inflige des <color=orange>Dégâts Physiques</color> et des <color=orange>Dégâts de Ténèbres</color>. Il a un mix de capacités de mélée et à distance. Ses deux atouts sont sa Vitesse et son taux d'Apparition d'Équipement, ce qui en fait un excellent farmeur. Il a une santé et défense plus basse, ce qui est son point faible. Le Voleur gagne des pierres lorsqu'il tue des monstres.";
                 tempStr += "\n\n";
                 tempStr += "<u>Archer</u>";
                 tempStr += "\n- L'Archer est un héros mobile infligeant un mix de <color=orange>Dégâts Physiques</color> et de <color=orange>Dégâts Magiques</color> tout en se concentrant sur une portée longue qui garde les ennemis loin de lui. Sa santé basse est son point faible. L'Archer gagne des crystaux lorsqu'il tue des monstres.";
@@ -9159,7 +9159,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- La prochaine région continue le cycle de la précédente en commençant par le prochain Matériau de Ville après celui de sa Zone 7.";
                 tempStr += "\n\n";
                 tempStr += "<u>Missions de Zone</u>";
-                tempStr += "\n- Chaque Zone a deux missions au début, qui peuvent être complétées pour gagner des Pièces Epiques et qui comptent pour le compte des Paliers de Mission. Cela peut être amélioré à l'aide du Prestige de Zone détaillé ci-dessous.";
+                tempStr += "\n- Chaque Zone a deux missions au début, qui peuvent être complétées pour gagner des Pièces Épiques et qui comptent pour le compte des Paliers de Mission. Cela peut être amélioré à l'aide du Prestige de Zone détaillé ci-dessous.";
                 tempStr += "\n\n";
                 tempStr += "<u>Prestige de Zone</u>";
                 tempStr += "\n- Vous devez effectuer une Ascension Monde pour que ce Prestige soit débloqué.";
@@ -9220,7 +9220,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "<u>Dégâts Infligés</u>";
                 tempStr += "\n- Tout d'abord, les dégâts d'une capacité sont calculés comme ceci : [ATQ/MATQ du Héros] * [Multiplicateur de Dégâts de la Capacité]";
                 tempStr += "\n- ensuite, quand un monstre reçoit l'attaque de la capacité : les dégâts sont réduits par la DEF et le pourcentage de résistance élémentaire du monstre";
-                tempStr += "\n- Après cela, les dégâts sont multipliés par [% de Dégâts Physiques/de Feu/de Glace/d'Electricité/de Lumière/de Ténèbres] et [% de Dégâts spécifiques au monstre à travers les effects d'Equipements uniques]";
+                tempStr += "\n- Après cela, les dégâts sont multipliés par [% de Dégâts Physiques/de Feu/de Glace/d'Electricité/de Lumière/de Ténèbres] et [% de Dégâts spécifiques au monstre à travers les effects d'Équipements uniques]";
                 tempStr += "\n\n";
                 tempStr += "<u>Dégâts Reçus</u>";
                 tempStr += "\n- Test du % de Nullification des Dégâts - Aucun dégât n'est reçu. Si ce test a échoué, ces prochains points arrivent dans l'ordre qu'ils sont donnés";
@@ -9266,7 +9266,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Bénédiction de MATQ – Multiplie la statistique de MATQ totale par un certain % pour une durée donnée.";
                 tempStr += "\n- Bénédiction de Vitesse – Multiplie la statistique de Vitesse de Déplacement par un certain % pour une durée donnée.";
                 tempStr += "\n- Bénédiction de Maîtrise de Capacité - Multiplie les gains de Maîtrise de Capacité par un certain % pour une durée donnée.";
-                tempStr += "\n- Bénédiction de Maîtrise d'Équipement - Multiplie les gains de Maîtrise d'Equipement par un certain % pour une durée donnée.";
+                tempStr += "\n- Bénédiction de Maîtrise d'Équipement - Multiplie les gains de Maîtrise d'Équipement par un certain % pour une durée donnée.";
                 tempStr += "\n- Bénédiction de Gain d'Or - Multiplie les Gains d'Or par un certain % pour une durée donnée.";
                 tempStr += "\n- Bénédiction de Gain d'EXP - Multiplie les Gains d'EXP par un certain % pour une durée donnée.";
                 tempStr += "\n\n";
@@ -9312,14 +9312,14 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- <color=orange>Maj + Clic Droit</color> sur un bouton de quête : Accepter et se déplacer vers la quête instantanément, ou juste réclamer la quête";
                 tempStr += "\n\n";
                 tempStr += "<u>Onglet Améliorations</u>";
-                tempStr += "\n- <color=orange>Clic Droit</color> : Ajoute l'amélioration dans la file (Note : Cela requiert avoir des emplacements de file d'améliorations depuis un effet de Familier ou un achat dans le Magasin Epique)";
+                tempStr += "\n- <color=orange>Clic Droit</color> : Ajoute l'amélioration dans la file (Note : Cela requiert avoir des emplacements de file d'améliorations depuis un effet de Familier ou un achat dans le Magasin Épique)";
                 tempStr += "\n- <color=orange>Maj + Clic Droit</color> : Enlève l'amélioration de la file";
-                tempStr += "\n- <color=orange>Q</color> : Ajoute l'amélioration dans une Super File en utilisant 10 emplacements de file (Note: Ceci requiert un achat dans le Magasin Epique)";
+                tempStr += "\n- <color=orange>Q</color> : Ajoute l'amélioration dans une Super File en utilisant 10 emplacements de file (Note: Ceci requiert un achat dans le Magasin Épique)";
                 tempStr += "\n\n";
-                tempStr += "<u>Onglet Equipements</u>";
-                tempStr += "\n- <color=orange>Double Clic Gauche</color> : L'Equipement ou l'Utilitaire sera équipé/deséquipé, si un emplacement est libre.";
-                tempStr += "\n- Effectuer un <color=orange>Clic Gauche</color> en maintenant <color=orange>Maj + D</color> sur un <color=orange>Objet</color> : l'Equipement/Utilitaire sera désassemblé.";
-                tempStr += "\n- Effectuer un <color=orange>Double Clic Gauche</color> en maintenant <color=orange>Maj + D</color> sur le <color=orange>Bouton Désassembler</color> : Désassemble tous les objets dans l'Inventaire d'Equipement qui ne sont pas verrouillés.";
+                tempStr += "<u>Onglet Équipements</u>";
+                tempStr += "\n- <color=orange>Double Clic Gauche</color> : L'Équipement ou l'Utilitaire sera équipé/deséquipé, si un emplacement est libre.";
+                tempStr += "\n- Effectuer un <color=orange>Clic Gauche</color> en maintenant <color=orange>Maj + D</color> sur un <color=orange>Objet</color> : l'Équipement/Utilitaire sera désassemblé.";
+                tempStr += "\n- Effectuer un <color=orange>Double Clic Gauche</color> en maintenant <color=orange>Maj + D</color> sur le <color=orange>Bouton Désassembler</color> : Désassemble tous les objets dans l'Inventaire d'Équipement qui ne sont pas verrouillés.";
                 tempStr += "\n- <color=orange>L</color> : Vérouille / Déverrouille un objet.";
                 tempStr += "\n- Effectuer un <color=orange>Clic Gauche</color> en maintenant <color=orange>Maj</color> sur le <color=orange>Bouton de Tri</color> : Effectue le tri en ordre inverse.";
                 tempStr += "\n- Glisser-déposer des Parchemins de Maîtrise ou des Enclumes ensemble en maintenant <color=orange>Maj</color> : Combine le même type d'effet.";
@@ -9330,9 +9330,9 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- <color=orange>Maj + C</color> un équipement dans le dictionnaire : Fabrique cet objet. (Note : Requiert une amélioration de ville)";
                 tempStr += "\n\n";
                 tempStr += "<u>Onglet Labo</u>";
-                tempStr += "\n- <color=orange>Clic Gauche</color> sur une potion: Ajoute la potion dans la file d'alchimie (Note : Requiert une file d'alchimie récupérable à travers les effets de familier ou un achat dans le Magasin Epique)";
+                tempStr += "\n- <color=orange>Clic Gauche</color> sur une potion: Ajoute la potion dans la file d'alchimie (Note : Requiert une file d'alchimie récupérable à travers les effets de familier ou un achat dans le Magasin Épique)";
                 tempStr += "\n- <color=orange>Maj + Clic Droit</color> : Enlève la potion de la file";
-                tempStr += "\n- <color=orange>Q</color> : Ajoute la potion dans la Super File en échange de 10 emplacements de file d'alchimie (Note : Requiert un achat dans le Magasin Epique)";
+                tempStr += "\n- <color=orange>Q</color> : Ajoute la potion dans la Super File en échange de 10 emplacements de file d'alchimie (Note : Requiert un achat dans le Magasin Épique)";
                 tempStr += "\n\n";
                 break;
             case HelpKind.Ability:
@@ -9341,7 +9341,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- FOR : Augmente l'ATQ | la DEF";
                 tempStr += "\n- INT : Augmente les PM | la MATQ | la MDEF";
                 tempStr += "\n- AGI : Augmente les PM | VIT | Vitesse de Déplacement";
-                tempStr += "\n- CHA : Augmente la Chance de Coup Critique | la Chance d'Apparition d'Equipement";
+                tempStr += "\n- CHA : Augmente la Chance de Coup Critique | la Chance d'Apparition d'Équipement";
                 tempStr += "\n\n";
                 tempStr += "Les statistiques sont calculées comme ci-dessous.";
                 tempStr += "\n- PV = [BASE] + [INCREMENT] x VTL  :  <color=orange>" + localized.BasicStatsDescription(BasicStatsKind.HP) + "</color>";
@@ -9353,7 +9353,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- VIT = [BASE] + [INCREMENT] x AGI  :  <color=orange>" + localized.BasicStatsDescription(BasicStatsKind.SPD) + "</color>";
                 tempStr += "\n- Chance de Coup Critique Physique = [BASE] + [INCREMENT] x CHA  :  <color=orange>Chance de multiplier les dégâts par 2.0x ou plus.</color>";
                 tempStr += "\n- Chance de Coup Critique Physique = [BASE] + [INCREMENT] x CHA  :  <color=orange>Chance de multiplier les dégâts par 2.0x ou plus.</color>";
-                tempStr += "\n- Chance d'Apparition d'Equipement = [BASE] + [INCREMENT] x CHA^(2/3)  :  <color=orange>Augmente la Chance d'Apparition d'Equipement ( N'inclut pas les Equipements Uniques )</color>";
+                tempStr += "\n- Chance d'Apparition d'Équipement = [BASE] + [INCREMENT] x CHA^(2/3)  :  <color=orange>Augmente la Chance d'Apparition d'Équipement ( N'inclut pas les Équipements Uniques )</color>";
                 tempStr += "\n- Vitesse de Déplacement = [BASE] + [INCREMENT] x AGI^(2/3)  :  <color=orange>Augmente la vitesse de déplacement sur le champ de bataille</color>";
                 tempStr += "\n\n";
                 tempStr += "<u>[BASE] Statistiques Basiques</u>";
@@ -9415,7 +9415,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Elles ne sont jamais réinitialisées.";
                 tempStr += "\n\n";
                 tempStr += "<u>Quête Journalière</u>";
-                tempStr += "\n- Les quêtes journalières sont une bonne source de Pièces Epiques et d'Orbes Portail.";
+                tempStr += "\n- Les quêtes journalières sont une bonne source de Pièces Épiques et d'Orbes Portail.";
                 tempStr += "\n- Elles sont partagées entre tous les héros.";
                 tempStr += "\n- Elles ne comptent pas pour la limite de Quêtes Acceptées.";
                 tempStr += "\n- Elles sont réinitialisées à minuit dans la tranche horaire définie pour votre compte Steam.";
@@ -9437,7 +9437,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Une fois cette limite atteinte, vous devrez compléter ou annuler une des quêtes en cours pour en accepter une nouvelle.";
                 tempStr += "\n- Il est possible d'augmenter cette limite à travers une amélioration de Réincarnation.";
                 tempStr += "\n\n";
-                tempStr += "<u>Quête Favorite (Achat du Magasin Epique)</u>";
+                tempStr += "<u>Quête Favorite (Achat du Magasin Épique)</u>";
                 tempStr += "\n- Cela vous permet d'assigner des quêtes générales en tant que favorite ce qui comptera pour la Limite de Quêtes Acceptées. Les quêtes favorites seront automatiquement acceptées puis réclamées une fois leurs conditions remplies.";
                 tempStr += "\n\n";
                 break;
@@ -9468,19 +9468,19 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n\n";
                 break;
             case HelpKind.Equip:
-                tempStr += "<u>Equipement</u>";
-                tempStr += "\n- L'onglet Equipement est là où vous trouverez tous les équipements que vous avez ramassés sur le champ de bataille. Pour ramasser un équipement, effectuez un clic gauche sur celui-ci.";
-                tempStr += "\n- Pour l'équiper, effectuez un clic gauche et glissez-déposez l'équipement depuis l'Inventaire d'Equipement vers un emplacement vide pour le bon type d'équipement.";
-                tempStr += "\n- Tant que l'objet est équipé, il gagnera de la Maîtrise d'Equipement qui peut augmenter le niveau de l'objet, ce qui augmentera son pouvoir. Après avoir atteint le Niveau 10 (Maîtrise) avec ce héros, vous gagnerez un bonus passif. Tous les héros qui portent cet objet gagneront ce bonus passif.";
+                tempStr += "<u>Équipement</u>";
+                tempStr += "\n- L'onglet Équipement est là où vous trouverez tous les équipements que vous avez ramassés sur le champ de bataille. Pour ramasser un équipement, effectuez un clic gauche sur celui-ci.";
+                tempStr += "\n- Pour l'équiper, effectuez un clic gauche et glissez-déposez l'équipement depuis l'Inventaire d'Équipement vers un emplacement vide pour le bon type d'équipement.";
+                tempStr += "\n- Tant que l'objet est équipé, il gagnera de la Maîtrise d'Équipement qui peut augmenter le niveau de l'objet, ce qui augmentera son pouvoir. Après avoir atteint le Niveau 10 (Maîtrise) avec ce héros, vous gagnerez un bonus passif. Tous les héros qui portent cet objet gagneront ce bonus passif.";
                 tempStr += "\n- Si vous n'avez plus de place dans votre inventaire d'équipement, vous pouvez glisser-déposer un objet dans la bar de désassemblage pour récupérer des matériaux de ville.";
-                tempStr += "\n- Il existe aussi un Inventaire d'Enchantements et un Inventaire d'utilitaires dans l'onglet Equipement - Référez-vous à la section d'aide du Laboratoire pour plus d'infos sur les Enchantements et les Utilitaires.";
+                tempStr += "\n- Il existe aussi un Inventaire d'Enchantements et un Inventaire d'utilitaires dans l'onglet Équipement - Référez-vous à la section d'aide du Laboratoire pour plus d'infos sur les Enchantements et les Utilitaires.";
                 tempStr += "\n- Une fois qu'un équipement atteint le niveau 60, il débloquera son premier emplacement de forge. Les emplacements de forge sont débloqués au niveaux 60, 80, 100 et 120 pour chaque équipement.";
                 tempStr += "\n- Vous pouvez récupérer les Enclumes requises pour forger l'équipement en complétant des expéditions, à travers des défis de boss, et à travers des donjons loin dans le jeu. Une fois qu'une enclume est obtenue, glissez-déposez la sur votre équipement de niveau 60 ou supérieur lors qu'il se trouve dans l'inventaire.";
                 tempStr += "\n\n";
                 tempStr += "<u>Dictionnaire</u>";
-                tempStr += "\n- L'onglet Dictionnaire dans l'Equipement montre tous les équipements trouvés en jeu jusqu'à présent.";
-                tempStr += "\n- A chaque fois qu'un équipement atteint le niveau 10 (pour chaque héros), vous gagnerez des points de dictionnaire qui peuvent être utilisés pour augmenter les Gain de Maîtrise d'Equipement d'un héros donne ou Chasseur d'Equipement qui augmente les chances de trouver des objets sur le champ de bataille.";
-                tempStr += "\n- La rareté d'un équipement jour sur les gains de Points de Dictionnaire donnés. Commun : 1, Peu Commun : 2, Rare : 3, Super Rare : 4, et Epique : 5.";
+                tempStr += "\n- L'onglet Dictionnaire dans l'Équipement montre tous les équipements trouvés en jeu jusqu'à présent.";
+                tempStr += "\n- A chaque fois qu'un équipement atteint le niveau 10 (pour chaque héros), vous gagnerez des points de dictionnaire qui peuvent être utilisés pour augmenter les Gain de Maîtrise d'Équipement d'un héros donne ou Chasseur d'Équipement qui augmente les chances de trouver des objets sur le champ de bataille.";
+                tempStr += "\n- La rareté d'un équipement jour sur les gains de Points de Dictionnaire donnés. Commun : 1, Peu Commun : 2, Rare : 3, Super Rare : 4, et Épique : 5.";
                 tempStr += "\n- Dans le Dictionnaire, vous pouvez donner des équipements à auto-désassembler une fois que vous avez la bonne amélioration en cliquant sur l'objet. Vous verrez un D en bas à gauche de l'icône de l'objet, qui indique Désassemblage. L'auto-désassemblage s'effectue lorsqu'un objet est cliqué sur le champ de bataille avec au moins un emplacement d'inventaire vide.";
                 tempStr += "\n- À l'aide d'une amélioration de ville, il vous sera aussi possible de fabriquer des équipements.";
                 tempStr += "\n\n";
@@ -9631,7 +9631,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n\n";
                 tempStr += "<u>Classe 3</u>";
                 tempStr += "\n- Vous devez atteindre le niveau 300 sur le héros courant pour être éligible à la Réincarnation de Classe 3. Le Bâtiment de Ville [Temple] doit être à un Rang minimum pour effectuer une Réincarnation de Classe 3. ";
-                tempStr += "\n- Vous gagnez des Points de Réincarnation basés sur le niveau des Equipements du Héros, sur le Niveau des Capacités du Héros à partir de 100, sur le Niveau du Héros à partir du niveau 300, à travers la complétion de différentes Quêtes Générales, et sur la distance parcourue depuis la dernière réincarnation.";
+                tempStr += "\n- Vous gagnez des Points de Réincarnation basés sur le niveau des Équipements du Héros, sur le Niveau des Capacités du Héros à partir de 100, sur le Niveau du Héros à partir du niveau 300, à travers la complétion de différentes Quêtes Générales, et sur la distance parcourue depuis la dernière réincarnation.";
                 tempStr += "\n- Bonus : Vous gagnez des niveaux pour la Capacité d'Attaque de Base basés sur le niveau du héros maximal atteint lors d'une Réincarnation de Classe 3, jusqu'au niveau 500 moins 300. Par exemple, si vous effectuez une réincarnation au Niveau 350, vous gagnerez 50 Nv pour la Capacité d'Attaque de Base pour ce héros. Vous augmenterez aussi le bonus de Réincarnation de Classe 2 (AP supplémentaire tous les 25 niveaux, et les AP de Classe 1) par un certain %. La formule est +10 x [# Réincarnation de Classe 3]^(2/3) %";
                 tempStr += "\n\n";
                 break;
@@ -9682,7 +9682,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Très Ressourcé - Lié au nombre de niveaux de l'onglet Général 1, des améliorations de Gain de Ressources.";
                 tempStr += "\n- Explorateur du Monde – La distance totale parcourue par les héros et les familiers pendant cette Ascension Monde.";
                 tempStr += "\n- Expert en Équipement - Celui-ci se concentre sur le nombre de points de dictionnaire accumulés.";
-                tempStr += "\n- Désassembleur Professionnel – Nombre total de Matériaux de Ville gagnés à travers le Désassemblage d'Equipement.";
+                tempStr += "\n- Désassembleur Professionnel – Nombre total de Matériaux de Ville gagnés à travers le Désassemblage d'Équipement.";
                 tempStr += "\n- Réincarnateur Classe 1 – Nombre total de Réincarnations de Classe 1 effectuées à travers tous les héros pendant cette Ascension Monde. ";
                 tempStr += "\n- Réincarnateur Classe 2 – Nombre total de Réincarnations de Classe 2 effectuées à travers tous les héros pendant cette Ascension Monde.";
                 tempStr += "\n\n";
@@ -9707,18 +9707,18 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Amélioration de Nitro – Augmente la vitesse du jeu lorsque la Nitro est utilisée.";
                 break;
             case HelpKind.EpicStore:
-                tempStr += "Le Magasin Epique est là où vous achetez des améliorations/fonctionnalités supplémentaires tel que plus d'Emplacements d'Equipement, des améliorations liées à l'Auto-Réincarnation ou encore les Super Files pour les Améliorations et l'Alchimie. Les <color=orange>Pièces Epiques (PE)</color> sont utilisées pour acheter ces améliorations.";
-                tempStr += "\nIl y a plusieurs façons de gagner des Pièces Epiques. Les <color=orange>Quêtes Journalières de Pièces Epiques</color>, les <color=orange>Complétions de Missions de Zones</color>, les <color=orange>Succès</color>, ainsi qu'en les achetant avec de l'argent réel.";
+                tempStr += "Le Magasin Épique est là où vous achetez des améliorations/fonctionnalités supplémentaires tel que plus d'Emplacements d'Équipement, des améliorations liées à l'Auto-Réincarnation ou encore les Super Files pour les Améliorations et l'Alchimie. Les <color=orange>Pièces Épiques (PE)</color> sont utilisées pour acheter ces améliorations.";
+                tempStr += "\nIl y a plusieurs façons de gagner des Pièces Épiques. Les <color=orange>Quêtes Journalières de Pièces Épiques</color>, les <color=orange>Complétions de Missions de Zones</color>, les <color=orange>Succès</color>, ainsi qu'en les achetant avec de l'argent réel.";
                 tempStr += "\n\n";
-                tempStr += "Vous pouvez avoir jusqu'à 4 Quêtes Journalières de PE chaque jour. Elles sont réinitialisées lorsqu'il est Minuit dans l'horloge locale de l'ordinateur. Vous commencez avec 1 Quête Journalière de PE, 1 à travers la complétion du palier de niveau 25 du bâtiment de ville Statue de Héros, et les 2 dernières à travers le Magasin Epique.";
+                tempStr += "Vous pouvez avoir jusqu'à 4 Quêtes Journalières de PE chaque jour. Elles sont réinitialisées lorsqu'il est Minuit dans l'horloge locale de l'ordinateur. Vous commencez avec 1 Quête Journalière de PE, 1 à travers la complétion du palier de niveau 25 du bâtiment de ville Statue de Héros, et les 2 dernières à travers le Magasin Épique.";
                 tempStr += "\n\n";
-                tempStr += "Compléter les Missions de chaque Zone octroie aussi des Pièces Epiques. Vous ne gagnez des Pièces Epiques qu'une seule fous par mission, par sauvegarde. Chaque Difficulté de Zone augmente la réompense en PE. Chaque Zone a 10 difficultés différentes, ayant un maximum de 5 missions chacunes. Au total, 50 missions donnent une récompense de première complétion par Zone. Il existe 10 Régions dans le jeu, comprenant chacune 8 Zones.";
+                tempStr += "Compléter les Missions de chaque Zone octroie aussi des Pièces Épiques. Vous ne gagnez des Pièces Épiques qu'une seule fous par mission, par sauvegarde. Chaque Difficulté de Zone augmente la réompense en PE. Chaque Zone a 10 difficultés différentes, ayant un maximum de 5 missions chacunes. Au total, 50 missions donnent une récompense de première complétion par Zone. Il existe 10 Régions dans le jeu, comprenant chacune 8 Zones.";
                 tempStr += "\n\n";
-                tempStr += "Il exite aussi des succès en jeu qui donnent des Pièces Epiques. Veuillez en voir la liste en allant dans Aide > Succès.";
+                tempStr += "Il exite aussi des succès en jeu qui donnent des Pièces Épiques. Veuillez en voir la liste en allant dans Aide > Succès.";
                 tempStr += "\n\n";
-                tempStr += "Enfin, vous pouvez directement acheter des Pièces Epiques depuis de Magasin Epique en utilisant de l'argent réel.";
+                tempStr += "Enfin, vous pouvez directement acheter des Pièces Épiques depuis de Magasin Épique en utilisant de l'argent réel.";
                 tempStr += "\n\n";
-                tempStr += "À ce jour, au total, il est possible de gagner <color=orange>plus de 250 000 Pièces Epiques</color> juste en compétant les Missions et les Succès en jeu.";
+                tempStr += "À ce jour, au total, il est possible de gagner <color=orange>plus de 250 000 Pièces Épiques</color> juste en compétant les Missions et les Succès en jeu.";
                 break;
             case HelpKind.S_General:
                 tempStr += GeneralString();
@@ -9813,17 +9813,17 @@ public class Localized_French : LOCALIZATION
         tempStr += "\n- Total d'Invasions Vaincues : " + tDigit(main.S.swarmClearedNum);
         tempStr += "\n- Meilleur Score d'Invasion (Normale) : " + tDigit(main.S.swarmBestScores[0]);
         tempStr += "\n- Meilleur Score d'Invasion (Grosse) : " + tDigit(main.S.swarmBestScores[1]);
-        tempStr += "\n- Meilleur Score d'Invasion (Epique) : " + tDigit(main.S.swarmBestScores[2]);
+        tempStr += "\n- Meilleur Score d'Invasion (Épique) : " + tDigit(main.S.swarmBestScores[2]);
         tempStr += "\n\n";
         tempStr += "<size=20><u>Autres</u><size=18>";
         tempStr += "\n- Total de Coffres au Trésor ouverts : " + tDigit(main.S.openedChestNum);
-        tempStr += "\n- Total d'Equipement Gagné : " + tDigit(main.S.totalEquipmentGained);
+        tempStr += "\n- Total d'Équipement Gagné : " + tDigit(main.S.totalEquipmentGained);
         tempValue = 0;
         for (int i = 0; i < main.S.disassembledEquipmentNums.Length; i++)
         {
             tempValue += main.S.disassembledEquipmentNums[i];
         }
-        tempStr += "\n- Total d'Equipement Désassemblé : " + tDigit(tempValue);
+        tempStr += "\n- Total d'Équipement Désassemblé : " + tDigit(tempValue);
         tempStr += "\n- Total de Points d'Alchimie Gagnés : " + tDigit(main.S.totalAlchemyPointGained);
         tempStr += "\n- Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum());
         tempStr += "\n\n";
@@ -9857,7 +9857,7 @@ public class Localized_French : LOCALIZATION
         tempStr += "<size=20><u>Détails des Gains de Matériaux de Ville</u><size=18>";
         tempStr += optStr + "\n" + game.townCtrl.townMaterialGainMultiplier[(int)game.currentHero].BreakdownString(true);
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Détails des Gains de Matériaux de Ville à travers le Désassemblage d'Equipement</u><size=18>";
+        tempStr += "<size=20><u>Détails des Gains de Matériaux de Ville à travers le Désassemblage d'Équipement</u><size=18>";
         tempStr += optStr + "\n" + game.equipmentCtrl.disassembleMultiplier.BreakdownString(true);
         tempStr += "\n\n";
         tempStr += optStr + "<size=20><u>Record de Temps de Rang de Bâtiment</u><size=18>";
@@ -9950,7 +9950,7 @@ public class Localized_French : LOCALIZATION
             }
         }
         tempStr += "\n\n";
-        tempStr += "<size=20><u>ARecord de Temps de Réincarnation</u><size=18>";
+        tempStr += "<size=20><u>Record de Temps de Réincarnation</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
@@ -10350,7 +10350,7 @@ public class Localized_French : LOCALIZATION
             case PetPassiveEffectKind.SlimeCoinCap:
                 return "Multiplie la Limite des Pièces Slime par <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.EquipmentEffect:
-                return "Multiplie l'Effet des Equipements par <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
+                return "Multiplie l'Effet des Équipements par <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.AlchemyPointGain:
                 return "Gain de Points d'Alchimie <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
         }
@@ -10625,7 +10625,7 @@ public class Localized_French : LOCALIZATION
             case 31: return "Nombre de Coups d'une Capacité dans un SD";
             case 32: return "Dégâts Absolus Supplémentaires dans un SD";
             case 33: return "Vitesse de Déplacement dans un SD";
-            case 34: return "Chance d'apparition d'Equipement dans un SD";
+            case 34: return "Chance d'apparition d'Équipement dans un SD";
             case 35: return "Bonus de Pièce de Donjon par Monster Vaincu";
             case 36: return "Gain de Renommée";
             case 37: return "Pouvoirs";
@@ -10652,21 +10652,21 @@ public class Localized_French : LOCALIZATION
             case 58: return "Total sauvé depuis un SD";
             case 59: return "Total gagné";
             case 60: return "Vous pouvez revenir avec ces objets si vous partez maintenant.";
-            case 61: return "Unlock Cost";//NEW8
-            case 62: return "Leave";//NEW8
-            case 63: return "Leave & Retry";//NEW8
-            case 64: return "Dodge";//NEW8
-            case 65: return "Hero Details";//NEW8
-            case 66: return "Improvements";//NEW8
-            case 67: return "Ruby Shop";//NEW8
-            case 68: return "Options";//NEW8
-            case 69: return "Scrolls";//NEW8
-            case 70: return "Anvils";//NEW8
-            case 71: return "Talismans";//NEW8
-            case 72: return "Special";//NEW8
-            case 73: return "Stats";//NEW8
-            case 74: return "Super Dungeon Options";//NEW8
-            case 75: return "Automation Settings";//NEW8
+            case 61: return "Côut de Débloquage";
+            case 62: return "Quitter";
+            case 63: return "Quitter & Réessayer";
+            case 64: return "Esquive";
+            case 65: return "Détails du Héros";
+            case 66: return "Améliorations";
+            case 67: return "Magasin de Rubis";
+            case 68: return "Options";
+            case 69: return "Parchemins";
+            case 70: return "Enclumes";
+            case 71: return "Talismans";
+            case 72: return "Spécial";
+            case 73: return "Stats";
+            case 74: return "Options de Super Donjon";
+            case 75: return "Options d'Automatisation";
             case 76: return "You will leave the current Super Dungeon in " + text + " sec automatically if you don't go to the next floor.";//NEW9
             case 77: return "Total used";//NEW9
             case 78: return "<sprite=\"locks\" index=0> Accept the new Global Quest [Super Dungeon 1]";//NEW10
@@ -10694,12 +10694,12 @@ public class Localized_French : LOCALIZATION
             case SuperDungeonPowerupKind.DamageMultiplier:
                 name = "Multiplicateur de Dégâts de SD";
                 effect = "Multiplicateur de Dégâts de SD + {0} ( + {1} / Rang )";
-                permanentEffect = "Multiplicative SD Damage Multiplier + {0} ( + {1} / purchase )";//NEW8
+                permanentEffect = "Multiplicateur de Dégâts de SD + {0} ( + {1} / achat )";
                 break;
             case SuperDungeonPowerupKind.DamageCutMultiplier:
                 name = "Multiplicateur de Réduction de Dégâts de SD";
                 effect = "Multiplicateur de Réduction de Dégâts de SD + {0} ( + {1} / Rang )";
-                permanentEffect = "Multiplicative SD Damage Cut Multiplier + {0} ( + {1} / purchase )";//NEW8
+                permanentEffect = "Multiplicateur de Réduction de Dégâts de SD + {0} ( + {1} / achat )";
                 break;
             case SuperDungeonPowerupKind.RestoreDodgeTimesec:
                 name = "Temps d'Esquive";
@@ -10777,8 +10777,8 @@ public class Localized_French : LOCALIZATION
                 permanentEffect = "Dégâts Absolus Supplémentaires + {0} ( + {1} / achat )";
                 break;
             case SuperDungeonPowerupKind.EquipmentDropChance:
-                name = "Chance d'Apparition d'Equipement";
-                effect = "Chance d'Apparition d'Equipement Absolue + {0} ( + {1} / Rang )";
+                name = "Chance d'Apparition d'Équipement";
+                effect = "Chance d'Apparition d'Équipement Absolue + {0} ( + {1} / Rang )";
                 permanentEffect = "Gain de Maîtrise d'Antiquité + {0} ( + {1} / achat )";
                 break;
         }
@@ -10794,7 +10794,7 @@ public class Localized_French : LOCALIZATION
             case 2: return "Convertisseur de Morceau de Rubis";
             case 3: return "Convertit 1 <sprite=\"Ruby\" index=0> " + Basic(BasicWord.Ruby) + " en " + text1 + " <sprite=\"PieceOfRuby\" index=0> " + Basic(BasicWord.PieceOfRuby);
             case 4: return "Effet d'Antiquité";
-            case 5: return text1 + " des stats \"Effet d'Equipement\" s'applique aux Antiquités ( + " + text2 + " / Nv )" + "\n- Effet d'Equipement Courant des Antiquités : " + text3;
+            case 5: return text1 + " des stats \"Effet d'Équipement\" s'applique aux Antiquités ( + " + text2 + " / Nv )" + "\n- Effet d'Équipement Courant des Antiquités : " + text3;
             default: return text1;
         }
     }
@@ -10890,15 +10890,15 @@ public class Localized_French : LOCALIZATION
         }
     }
 
-    public override string GradeMilestone(int id, string text = "")//NEW8
+    public override string GradeMilestone(int id, string text = "")
     {
         switch (id)
         {
-            case 0: return "Available Class Skill Slot + " + text;
-            case 1: return "Available Weapon Equipment Slot + " + text;
-            case 2: return "Available Armor Equipment Slot + " + text;
-            case 3: return "Available Jewelry Equipment Slot + " + text;
-            case 4: return "Available Utility Equipment Slot + " + text;
+            case 0: return "Emplacement de Capacité de Classe Disponible + " + text;
+            case 1: return "Emplacement d'Arme Disponible + " + text;
+            case 2: return "Emplacement d'Armure Disponible + " + text;
+            case 3: return "Emplacement de Bijou Disponible + " + text;
+            case 4: return "Emplacement d'Utilitaire Disponible + " + text;
             default: return text;
         }
     }
