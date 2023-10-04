@@ -740,7 +740,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.Super:
                 return "Super";
             case BasicWord.SuperAbility:
-                return "Super Capacité";
+                return "Super Abilité";
             case BasicWord.Normal:
                 return "Normal";
             case BasicWord.AlchemyPointGain:
@@ -806,7 +806,7 @@ public class Localized_French : LOCALIZATION
             case BasicWord.PieceOfRuby:
                 return "Morceau de Rubis";
             case BasicWord.EntryCostRefreshTicket:
-                return "Ticket de Rafraîchissement de Coût d'Entrée";
+                return "Ticket de Réinitialisation de Coût d'Entrée";
             case BasicWord.Floor:
                 return "Niveau";
             case BasicWord.Attack:
@@ -969,7 +969,7 @@ public class Localized_French : LOCALIZATION
             case MultiplierKind.WardedFury:
                 return "Furie d'Esprit";
             case MultiplierKind.SuperAbility:
-                return "Super Capacité";
+                return "Super Abilité";
             case MultiplierKind.PetRankMilestone:
                 return "Pilier de Rang de Familier";
             case MultiplierKind.SuperDungeon:
@@ -2426,8 +2426,8 @@ public class Localized_French : LOCALIZATION
                 return "Gain de Matériaux de Ville";
             case EquipmentEffectKind.TownMatAreaClearGain:
                 return "Gain de Matériaux de Ville (Zone)";
-            //case EquipmentEffectKind.TownMatDungeonRewardGain:
-            //    return "Gain de Matériaux de Ville (Donjon)";
+            case EquipmentEffectKind.TownMatDungeonRewardGain:
+                return "Gain de Matériaux de Ville (Donjon)";
             case EquipmentEffectKind.RebirthPointGain1:
                 return "Gain de Points de Réincarnation de Classe 1";
             case EquipmentEffectKind.RebirthPointGain2:
@@ -3159,11 +3159,11 @@ public class Localized_French : LOCALIZATION
                 else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
                 break;
-            //case EquipmentEffectKind.TownMatDungeonRewardGain:
-            //    if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
-            //    else           tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon + " + percent(value);
-            //    if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
-            //    break;
+            case EquipmentEffectKind.TownMatDungeonRewardGain:
+                if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
+                else           tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
             case EquipmentEffectKind.RebirthPointGain1:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Réincarnation de Classe 1 <color=red>" + percent(value) + "</color>";
@@ -4196,7 +4196,7 @@ public class Localized_French : LOCALIZATION
     {
         switch (kind)
         {
-            case PotionConsumeConditionKind.Nothing://Talisman
+            case PotionConsumeConditionKind.Nothing:
                 return "Les Talismans ne sont jamais consommés et leur effet est multiplié par leur # de pile";
             case PotionConsumeConditionKind.HpHalf:
                 return "Utilisé automatiquement lorsque les PV du héros sont en dessous de 50%";
@@ -4348,7 +4348,7 @@ public class Localized_French : LOCALIZATION
                 return "Multiplie les Gains d'EXP par " + percent(1 + effectValue);
             case PotionKind.WarriorsBadge:
                 if (isPassive) return "Réduit le Cout de Rang des Capacités du Guerrier par " + percent(effectValue);
-                return "Multiplie la Chance de Coup Critique Physique par " + percent(1 + effectValue);//"Warrior's Skill Proficiency Gain + " + percent(effectValue);
+                return "Multiplie la Chance de Coup Critique Physique par " + percent(1 + effectValue);
             case PotionKind.WizardsBadge:
                 if (isPassive) return "Réduit le Cout de Rang des Capacités de la Mage par " + percent(effectValue);
                 return "Multiplie la Chance de Coup Critique Magique par " + percent(1 + effectValue);
@@ -5607,35 +5607,35 @@ public class Localized_French : LOCALIZATION
                         reward = "Gain de Points d'Alchimie + 100%" +
                             "\n- Réduction des coûts de montée de niveau des Catalyseurs par 25%";
                         break;
-                    case QuestKindGlobal.SD1://NEW10
-                        name = "Super Dungeon 1";
+                    case QuestKindGlobal.SD1:
+                        name = "Super Donjon 1";
                         client = "Hitan";
-                        description = "Did you really find the Super Dungeon? I've heard rumors about it recently, but I never thought it actually existed... It seems like in this dungeon, almost all of the hero's stats are restricted. It's very dangerous to confront monsters head-on in such a situation. <color=orange>It would be wise to dodge attacks at the right moment.</color> So, first, try to  <color=orange>dodge monster attacks five times</color> in the Super Dungeon." +
-                            "\n- When you're trying the Super Dungeon for the first time, <color=orange>turning off the Nitro Booster is recommended.</color>" +
-                            "\n- While pressing the dodge button on the battle screen, you can dodge monster attacks. Keep an eye on the cast time (blue bar) displayed below the monster and dodge at the appropriate moment. However, you won't be able to use skills or move while dodging. Hotkey: Spacebar" +
-                            "\n- To enter the Super Dungeon, you'll need Portal Orbs. The entry cost doubles every five runs." +
-                            "\n- For more information about Super Dungeon, check out the Help in top left > [Super Dungeon].";
-                        condition = "Successfull Dodge : " + tDigit(main.S.totalDodgeNum) + " / " + tDigit(5);
-                        reward = "New Title Quests";
+                        description = "Est-ce que tu as vraiment trouvé le Super Donjon ? J'en ai entendu des rumeurs assez récemment, mais je n'ai jamais pensé qu'il existerai... ON dirait que dans ce Donjon, presque toutes les statistiques du héros sont réduites. C'est très dangereux de se confronter à des monstres tête à tête dans une telle situation. <color=orange>Il serait intelligent d'esquiver les attaques au bon moment.</color> Donc, en premier lieu, essaye d'<color=orange>esquiver les attaques des monstres cinq fois</color> dans le Super Donjon." +
+                            "\n- Lorsque vous essayez le Super Donjon pour la première fois, <color=orange>il est recommandé de désactiver la Nitro.</color>" +
+                            "\n- Lorsque vous appuyez sur le bouton Esquive sur l'écran de combat, vous pouvez esquiver les attaques des monstres. Gardez un oeil sur la temps de lancement (barre bleue) affichée en dessous du monstre et esquive au bon moment. Cependant, tu ne pourras ni bouger ni utiliser des capacités tout en esquivant. Raccourci: Espace" +
+                            "\n- Pour rentrer dans le Super Donjon, vous aurez besoin d'Orbes Portail. Le coût d'entrée double pour chaque cinq essais." +
+                            "\n- Pour plus d'informations sur le Super Donjon, veuillez vous référer à l'Aide en haut à gauche > [Super Donjon].";
+                        condition = "Esquives Réussies : " + tDigit(main.S.totalDodgeNum) + " / " + tDigit(5);
+                        reward = "Nouvelles Quêtes de Titre";
                         break;
-                    case QuestKindGlobal.SD2://NEW10
-                        name = "Super Dungeon 2";
+                    case QuestKindGlobal.SD2:
+                        name = "Super Donjon 2";
                         client = "Hitan";
-                        description = "Well done! If you use dodge effectively, you should be able to progress through the dungeon efficiently. By acquiring <color=orange>Flexible Dodge</color> in the [Improvements] > [Automation] tab, you'll be able to use skills and move while dodging. Furthermore, by obtaining <color=orange>Auto Dodge</color>, which will be unlocked later, you will automatically use dodge at all times. Now, let's proceed to conquer the Super Dungeon. It appears that you can obtain <color=orange>Topaz</color> for clearing each floor. Topaz can enhance the powerup effects that show up on the safe zones inside the Super Dungeon. They can also assist in automating your Super Dungeon runs. As you delve deeper into the floors, you'll acquire more Topaz, so don't hesitate to use them. <color=orange>Now, let's set our sights on B5F.</color>" +
-                            "\n- You'll earn <color=orange>Fame</color> with each monster defeated, and the hero grade will increase. As the grade rises, you'll earn <color=orange>Super Ability Points.</color>" +
-                            "\n- Allocating points to <color=orange>Super Abilities</color> will grant you [Multiplicative] and <color=orange>[After]</color> stat bonuses. While all stats are restricted in the Super Dungeon, the stats from [After] are not limited, making them very effective for conquering the dungeon." +
-                            "\n- <color=orange>New title quests have been unlocked.</color> Let's work on them together.";
-                        condition = "Clear B5F of Super Dungeon [The Slime Hideout]";
-                        reward = "Fame Gain + " + percent(0.10d);
+                        description = "Bien joué ! Si tu esquives bien, tu devrais être capable de progresser efficacement dans le donjon. Il vous sera possible de vous déplacer et d'utiliser des capacités en esquivant en achetant <color=orange>Esquive Flexible</color> dans l'onglet [Améliorations] > [Automatisation]. De plus, en obtenant l'<color=orange>Auto Esquive</color>, qui sera débloquée plus tard, vous utiliserez toujours l'esquive. Maintenant, continuons de conquérir le Super Donjon. On dirait que vous pouvez obtenir des <color=orange>Topazes</color> en complétant chaque étage. Les Topazes peuvent augmenter les effets des pouvoirs qui apparaissent dans les zones sûres dans le Super Donjon. Ils peuvent aussi vous aider à automatiser vos essais dans le Super Donjon. Plus loin vous irez dans le donjon, plus vous pourrez récupérer de Topazes, donc n'hésitez pas à les utiliser. <color=orange>Maintenant, essayons d'atteindre le 5ème étage.</color>" +
+                            "\n- Vous gagnerez de la <color=orange>Ranommée</color> pour chaque monstre vaincu, et la classe du héros augmentera. Lorsque la classe augmente, vous gagnez des <color=orange>Points de Super Abilités.</color>" +
+                            "\n- Allouer des point aux <color=orange>Super Abilités</color> vous donnera des bonus de stats [Multiplicatifs] et <color=orange>[Absolus]</color>. Alors que toutes les stats sont réduites dans le Super Donjon, les stats [Absolues] ne le sont pas, les rendant très efficaces pour conquérir le donjon." +
+                            "\n- <color=orange>De nouvelles quêtes de titre ont été débloquées.</color> Allons les compléter ensemble.";
+                        condition = "Compléter le 5ème étage du Super Donjon [La Cachette Slime]";
+                        reward = "Gain de Renommée + " + percent(0.10d);
                         break;
-                    case QuestKindGlobal.SD3://NEW10
-                        name = "Super Dungeon 3";
+                    case QuestKindGlobal.SD3:
+                        name = "Super Donjon 3";
                         client = "Hitan";
-                        description = "Great job! Since we've already invaded their hideout once, there's no turning back. <color=orange>Next, aim for B10F.</color> According to our investigation, it seems there's a colossal boss residing on B10F. Approach it with caution. I'm sure it will drop some special loot." +
-                            "\n- You can obtain <color=orange>Topaz</color> for each hero the first time you clear each floor. If you're having difficulty progressing in the dungeon, consider trying with different heroes." +
-                            "\n- You can reset the portal orb entry cost using an <color=orange>Entry Cost Refresh Ticket</color>. You can receive this ticket as a daily quest reward, thanks to the effects of the Building [Mystic Arena] level milestone.";
-                        condition = "Clear B10F of Super Dungeon [The Slime Hideout]";
-                        reward = "Fame Gain + " + percent(0.20d);
+                        description = "Bon travail ! Vu qu'on a déjà envahi leur cachette une fois, autant continuer. <color=orange>Maintenant, visons le 10ème étage.</color> D'après nos recherches, on dirait qu'il y a un boss colossal au 10ème étage. Approche-le avec prudence. Je suis sûr qu'il lâchera un butin spécial." +
+                            "\n- Vous pouvez obtenir des <color=orange>Topazes</color> pour chaque héros la première fois que vous complétez chaque étage. Si vous avez du mal à progresser dans le donjon, considérez d'essayer avec d'autres héros." +
+                            "\n- Vous pouvez réinitialiser le coût d'entrée en Orbe Portail en utilisant un <color=orange>Ticket de Réinitialisation de Coût d'Entrée</color>. Vous pouvez recevoir ce ticket en tant ue récompense de quête journalière à travers l'un des Effets de Palier de Niveau du Bâtiment de Ville [Arène Mystique].";
+                        condition = "Compléter le 10ème étage du Super Donjon [La Cachette Slime]";
+                        reward = "Gain de Renommée + " + percent(0.20d);
                         break;
                 }
                 break;
@@ -5914,7 +5914,7 @@ public class Localized_French : LOCALIZATION
                         client = "Krang the … brain… in a flesh golem?";
                         description = "Muaha, you may have defeated all of those fools, but I can make myself grow massive with this golem body I possess. Race me! 100 million meters! Win or lose, I’ll teach you how to be the fastest in the world!";
                         break;
-                    case QuestKindTitle.PhysicalAttack1:
+                    case QuestKindTitle.PhysicalAttack1: //TODO
                         name = Title(TitleKind.PhysicalDamage) + " 1";
                         client = "Boxer Tyson";
                         description = "Yo, you new around here? I’ve been using slimes as punching bags. Care to join me? Let’s beat up some monsters together. It’s very therapeutic and if you can keep up with me, I’ll give you some pointers on maximizing your physical damage.";
@@ -5935,7 +5935,7 @@ public class Localized_French : LOCALIZATION
                         description = "Oh man, I’ve had the best time punching these monsters out with you. Your muscles look great! Alright, one last stretch before we reach our limit. Come on, we got gains to make.";
 
                         break;
-                    case QuestKindTitle.FireAttack1:
+                    case QuestKindTitle.FireAttack1: //TODO
                         name = Title(TitleKind.FireDamage) + " 1";
                         client = "Pyromancer Natsu";
                         description = "Ey, you interested in fire magic? I know a thing a two I could teach you. Come on, we can train together, and I’ll see what you’re capable of with your magic.";
@@ -5955,7 +5955,7 @@ public class Localized_French : LOCALIZATION
                         client = "Pyromancer Natsu";
                         description = "Looks like I’ll be needing to head back to my guild soon, but I have a little more fire in my belly to spare, so let’s go burn em up one last time. Glad I got to fight alongside you for a while!";
                         break;
-                    case QuestKindTitle.IceAttack1:
+                    case QuestKindTitle.IceAttack1: //TODO
                         name = Title(TitleKind.IceDamage) + " 1";
                         client = "Cryomancer, Shimo Aisu";
                         description = "It isn’t everyday I meet someone interested in the frozen arts. You are looking for someone to practice your skills with I take it? Good, let’s get started then.";
@@ -5975,7 +5975,7 @@ public class Localized_French : LOCALIZATION
                         client = "Cryomancer, Shimo Aisu";
                         description = "I am not one for puns but watching your growth with ice magic has given me chills! You may be one of those hidden masters that only arise once a century or two! I am grateful for our time together, as I have learned much from watching you as well. Let us practice some more, though now I fear I have little left to teach you.";
                         break;
-                    case QuestKindTitle.ThunderAttack1:
+                    case QuestKindTitle.ThunderAttack1: //TODO
                         name = Title(TitleKind.ThunderDamage) + " 1";
                         client = "Thunderbeast Raiju";
                         description = "You see a strange beast, electricity arcing across its fur sporadically, resting under what appears to be a blackened tree. It glances at you, sniffs at the air, and it stares at you intently. You get the feeling it wants you to follow it and the urge to use thunder magic swells within you.";
@@ -5995,7 +5995,7 @@ public class Localized_French : LOCALIZATION
                         client = "Thunderbeast Raiju";
                         description = "The beast stares at you for a moment, its eyes no longer sharp and untrusting as they were when you first met. It seems a little sad, as though it knows it must depart soon after growing a little attached to you. Still, it doesn’t look like its quite ready to leave just yet, and there are always more enemies to blast. Practicing alongside this legendary being has certainly been helpful, so before it must go you decide to continue the fight for as long as it can remain.";
                         break;
-                    case QuestKindTitle.LightAttack1:
+                    case QuestKindTitle.LightAttack1: //TODO
                         name = Title(TitleKind.LightDamage) + " 1";
                         client = "The lazy farmer Aggrezi";
                         description = "You there, hey, I uhh saw you could use light magic and wondered if you could help me out? I, uhh, am so weak and fragile and the monsters here are so, uhh, dark and scary. If you wouldn’t mind, uhh, practicing that light magic and keeping me, uhh, safe, I’d appreciate it. I’ll just be over here in my, uhh, recliner waiting for you to clear the fields of those abominations.";
@@ -6015,7 +6015,7 @@ public class Localized_French : LOCALIZATION
                         client = "The lazy farmer Aggrezi";
                         description = "I cannot hide my appearance any longer from you, dear mortal. You have done exceptionally well at honing your light magic and growing the purity within yourself. I was sent here to guide you, but I was meant to do it discreetly, but you have surpassed my expectations and so I felt I owed it to you to reveal myself at least. I will be leaving soon, but before I do it would be my honor to practice the sacred light magic alongside you.";
                         break;
-                    case QuestKindTitle.DarkAttack1:
+                    case QuestKindTitle.DarkAttack1: //TODO
                         name = Title(TitleKind.DarkDamage) + " 1";
                         client = "Archibald, the Shadow Hunter";
                         description = "\"Psst, hey you there. You have the taint of shadow around you.\" A dark man emerges from the shadows and inspects you closely, attempting to discern whether or not you are what you appear. Looking satisfied with his inspection he continues to speak, \"Ahh, I feared you may have been something else, but fortunately for you that does not appear to be so. Still, there does appear to be some darkness in you. With the proper training, that darkness can be honed and used in battle. Since you are not a pawn of the Dark One, I am willing to share a little bit of what I know with you. Can't have that darkness within you taking over, or else you'll force my hand and I'll have to end you. Show me how you currently wield your darkness and we can continue talking later.\"";
@@ -6040,27 +6040,27 @@ public class Localized_French : LOCALIZATION
                         client = "Mia the alchemist";
                         description = "An alchemist's job is to create what the world wants. There are alchemists who pursue what they want to create, but I am not interested in that. Oh! You say you want to learn Alchemy under me? Well, go ahead. I've compiled a list of things that are easy for beginners to make, so you can gather the materials yourself.";
                         break;
-                    case QuestKindTitle.Alchemist2: //TODO
+                    case QuestKindTitle.Alchemist2:
                         name = Title(TitleKind.Alchemist) + " 2";
                         client = "Mia the Alchemist";
                         description = "My family has been a famous family of alchemists for generations. Everyone comes to us requesting potions among other things. It's an easy job since everyone is satisfied as long as we make what they want. Oh, you've already finished making everything on the list? Why don't you create something you'd like to make yourself next?";
                         break;
-                    case QuestKindTitle.Alchemist3: //TODO
+                    case QuestKindTitle.Alchemist3:
                         name = Title(TitleKind.Alchemist) + " 3";
                         client = "Mia the Alchemist";
                         description = "Why don't I try my hand at making what I want to make? As I've said many times, I'm not interested in that. But it made me happy to see you using alchemy to make the things you want to make. Next, I'd like you to do me a favor and get me the materials I need for my work. Thank you.";
                         break;
-                    case QuestKindTitle.Alchemist4: //TODO
+                    case QuestKindTitle.Alchemist4:
                         name = Title(TitleKind.Alchemist) + " 4";
                         client = "Mia the Alchemist";
                         description = "Thanks for bringing me the materials. You're looking great as an alchemist! Seeing you working so happily on your alchemy has made me interested in doing research to create what I want to create. I thought the day would never come when I would feel this way, so it's kind of strange. Now I need you to bring me the materials I need for my research. Thank you.";
                         break;
-                    case QuestKindTitle.Alchemist5: //TODO
+                    case QuestKindTitle.Alchemist5:
                         name = Title(TitleKind.Alchemist) + " 5";
                         client = "Mia the Alchemist";
                         description = "I never realized how much fun it was to use alchemy to create what I wanted to create...! I wouldn't have realized it without you. Thank you. My research is still incomplete, so I'll try to face this research from now on. I will continue to work as usual, so I will be too busy to take care of you. But you are a full-fledged alchemist now, and you can do just fine as an alchemist without me! I just want to try alchemy with you one last time. After this, we'll say goodbye. Come on, let's go gather materials together!";
                         break;
-                    case QuestKindTitle.EquipmentProf1:
+                    case QuestKindTitle.EquipmentProf1: //TODO
                         name = Title(TitleKind.EquipmentProficiency) + " 1";
                         client = "Karosis";
                         description = "\"Pssst,\" a disheveled individual wearing glasses and carrying a small collection of scrolls calls to you from a nearby alley. \"Looks like you found something unusual and hard to find there. I'll give you something nice if you can find me some other rare items.\"";
@@ -6088,110 +6088,110 @@ public class Localized_French : LOCALIZATION
                         client = "Metallic Nuts";
                         description = "Did you know that there are metal monsters in this world? You have a rare chance of spotting them. In the Slime dungeons, there are metal Slimes for instance. Their bodies are so hard that you can only deal 1 damage to them. However, if you defeat them, you'll get a bunch of EXP. First of all, I want you to go kill one Metal Slime. Once you've done that, I'm sure you'll be a little better at killing Metal Slimes.";
                         break;
-                    case QuestKindTitle.MetalHunter2: //TODO
+                    case QuestKindTitle.MetalHunter2:
                         name = Title(TitleKind.MetalHunter) + " 2";
                         client = "Metallic Nuts";
                         description = "I see you've defeated the metal Slime! It looks like you've learned a bit how to destroy metal monsters. Keep it up and you'll learn how to hunt metal monsters more efficiently. For the next hunt, make sure you don't confuse between a Metal Slime and a Metal Magicslime.  Hunt down 2 Metal Magicslimes.";
                         break;
-                    case QuestKindTitle.MetalHunter3: //TODO
+                    case QuestKindTitle.MetalHunter3:
                         name = Title(TitleKind.MetalHunter) + " 3";
                         client = "Metallic Nuts";
                         description = "I see you were able to defeat a few Metal Magicslimes too! Are you getting used to breaking metal bodies? Let's keep on defeating metal monsters and earning EXP. The next hunt will be for some Metal Spiders";
                         break;
-                    case QuestKindTitle.MetalHunter4: //TODO
+                    case QuestKindTitle.MetalHunter4:
                         name = Title(TitleKind.MetalHunter) + " 4";
                         client = "Metallic Nuts";
                         description = "I can't believe you beat Metal Spiders too. You've got a knack for breaking metal bodies! We need you to take down the Metal Bats next, and if you can accomplish this, you will be a pro at Metal hunting.";
                         break;
-                    case QuestKindTitle.MetalHunter5: //TODO
+                    case QuestKindTitle.MetalHunter5:
                         name = Title(TitleKind.MetalHunter) + " 5";
                         client = "Metallic Nuts";
                         description = "";
                         break;
-                    case QuestKindTitle.MetalHunter6: //TODO
+                    case QuestKindTitle.MetalHunter6:
                         name = Title(TitleKind.MetalHunter) + " 6";
                         client = "Metallic Nuts";
                         description = "";
                         break;
-                    case QuestKindTitle.MetalHunter7: //TODO
+                    case QuestKindTitle.MetalHunter7:
                         name = Title(TitleKind.MetalHunter) + " 7";
                         client = "Metallic Nuts";
                         description = "";
                         break;
-                    case QuestKindTitle.MetalHunter8: //TODO
+                    case QuestKindTitle.MetalHunter8:
                         name = Title(TitleKind.MetalHunter) + " 8";
                         client = "Metallic Nuts";
                         description = "";
                         break;
-                    case QuestKindTitle.MetalHunter9: //TODO
+                    case QuestKindTitle.MetalHunter9:
                         name = Title(TitleKind.MetalHunter) + " 9";
                         client = "Metallic Nuts";
                         description = "";
                         break;
-                    case QuestKindTitle.ExplorerOfSD1://NEW10
+                    case QuestKindTitle.ExplorerOfSD1: //TODO
                         name = Title(TitleKind.ExplorerOfSD) + " 1";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(100);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100);
                         break;
-                    case QuestKindTitle.ExplorerOfSD2://NEW10
+                    case QuestKindTitle.ExplorerOfSD2:
                         name = Title(TitleKind.ExplorerOfSD) + " 2";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(500);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500);
                         break;
-                    case QuestKindTitle.ExplorerOfSD3://NEW10
+                    case QuestKindTitle.ExplorerOfSD3:
                         name = Title(TitleKind.ExplorerOfSD) + " 3";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(2000);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(2000);
                         break;
-                    case QuestKindTitle.ExplorerOfSD4://NEW10
+                    case QuestKindTitle.ExplorerOfSD4:
                         name = Title(TitleKind.ExplorerOfSD) + " 4";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(10000);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000);
                         break;
-                    case QuestKindTitle.ExplorerOfSD5://NEW10
+                    case QuestKindTitle.ExplorerOfSD5:
                         name = Title(TitleKind.ExplorerOfSD) + " 5";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(50000);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(50000);
                         break;
-                    case QuestKindTitle.ExplorerOfSD6://NEW10
+                    case QuestKindTitle.ExplorerOfSD6:
                         name = Title(TitleKind.ExplorerOfSD) + " 6";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(100000);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100000);
                         break;
-                    case QuestKindTitle.ExplorerOfSD7://NEW10
+                    case QuestKindTitle.ExplorerOfSD7:
                         name = Title(TitleKind.ExplorerOfSD) + " 7";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(500000);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500000);
                         break;
-                    case QuestKindTitle.ExplorerOfSD8://NEW10
+                    case QuestKindTitle.ExplorerOfSD8:
                         name = Title(TitleKind.ExplorerOfSD) + " 8";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(1000000);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1000000);
                         break;
-                    case QuestKindTitle.ExplorerOfSD9://NEW10
+                    case QuestKindTitle.ExplorerOfSD9:
                         name = Title(TitleKind.ExplorerOfSD) + " 9";
                         client = "";
                         description = "";
                         if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(5000000);
                         else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(5000000);
                         break;
-                    case QuestKindTitle.ExplorerOfSD10://NEW10
+                    case QuestKindTitle.ExplorerOfSD10:
                         name = Title(TitleKind.ExplorerOfSD) + " 10";
                         client = "";
                         description = "";
@@ -6203,22 +6203,22 @@ public class Localized_French : LOCALIZATION
                         client = "Yayoi, the Fireworks Master";
                         description = "When launching fireworks, you wonder if it gets hot, right? I've been doing this job for many years, so I'm used to it. Do you want to be able to withstand the heat of the flames too? If so, why don't you touch hot things constantly until you get used to the heat?";
                         break;
-                    case QuestKindTitle.FireResistance2: //TODO
+                    case QuestKindTitle.FireResistance2:
                         name = Title(TitleKind.FireResistance) + " 2";
                         client = "Yayoi, the Fireworks Master";
                         description = "Ah! Hey, we meet again! Are you used to the heat since then? Well, I have a favor to ask you... We have a vacancy in our fireworks crew for the upcoming fireworks show, and I'm looking for a replacement. I need your help if you don't mind. But I don't know if you can handle the heat of the fireworks right now.... So, you need to get a little more heat tolerance!";
                         break;
-                    case QuestKindTitle.FireResistance3: //TODO
+                    case QuestKindTitle.FireResistance3:
                         name = Title(TitleKind.FireResistance) + " 3";
                         client = "Yayoi, the Fireworks Master";
                         description = "Oh! You look much better now! I think I can trust you to set off fireworks now! You'll be practicing setting off fireworks with me for a while! But first, I need you to bring me the items I need for the fireworks. Sorry for all the requests, but I'm counting on you!";
                         break;
-                    case QuestKindTitle.FireResistance4: //TODO
+                    case QuestKindTitle.FireResistance4:
                         name = Title(TitleKind.FireResistance) + " 4";
                         client = "Yayoi, the Fireworks Master";
                         description = "Thanks to the items you have collected, I have successfully finished making fireworks balls! But fireworks are only complete when they are launched into the sky! The fireworks show is tonight! Oh no, the monsters have gathered to see the fireworks... Let's get rid of the monsters during the day so our guests can watch the fireworks in peace!";
                         break;
-                    case QuestKindTitle.FireResistance5: //TODO
+                    case QuestKindTitle.FireResistance5:
                         name = Title(TitleKind.FireResistance) + " 5";
                         client = "Yayoi, the Fireworks Master";
                         description = "Oh man! The firework show was a blast! Thanks to your help, it was a great success! Wasn't it hot when you set off the fireworks? From the look on your face, I'd say you had plenty of time to spare. With that fiery spirit, I'm sure you'll get through anything! It's a shame to say goodbye, so will you do me one last favor? I need to gather materials for next year's fireworks show, so help me gather them together!";
@@ -6228,22 +6228,22 @@ public class Localized_French : LOCALIZATION
                         client = "Len, the Ice Swordsman";
                         description = "You want something from me...? ─ ─ Hmmm. You want ice resistance? It is true that you are not resistant to ice damage at all now. In fact, you are frozen by my cold air. It can't be helped. I will teach you how to handle ice. Come with me.";
                         break;
-                    case QuestKindTitle.IceResistance2: //TODO
+                    case QuestKindTitle.IceResistance2:
                         name = Title(TitleKind.IceResistance) + " 2";
                         client = "Len, the Ice Swordsman";
                         description = "That's a little better. To gain ice resistance, you need an icy spirit. You can't melt it, and you can't shatter it. It is important to maintain a firm spirit. Now, hone your icy spirit in the fight.";
                         break;
-                    case QuestKindTitle.IceResistance3: //TODO
+                    case QuestKindTitle.IceResistance3:
                         name = Title(TitleKind.IceResistance) + " 3";
                         client = "Len, the Ice Swordsman";
                         description = "Hmmm. Looks like you were able to acquire the spirit of ice. You probably don't even notice my cold air anymore. But you are not perfect yet. To handle ice, you need to know more about it. Learn ice in the fight.";
                         break;
-                    case QuestKindTitle.IceResistance4: //TODO
+                    case QuestKindTitle.IceResistance4:
                         name = Title(TitleKind.IceResistance) + " 4";
                         client = "Len, the Ice Swordsman";
                         description = "You seem to have mastered ice. Hmmm. You remember things better than I thought you would. If you've come this far, you should be able to develop resistance to ice with a little more training. I have no intention of slacking off in my training until the end. Prepare yourself and work hard.";
                         break;
-                    case QuestKindTitle.IceResistance5: //TODO
+                    case QuestKindTitle.IceResistance5:
                         name = Title(TitleKind.IceResistance) + " 5";
                         client = "Len the Ice Swordsman";
                         description = "You have arrived here well. It is safe to say that your ice resistance has almost reached perfection. Keep up the icy spirit so that I won't be disappointed the next time we meet. Now, let's put the finishing touches on it. Don't get carried away and cut corners.";
@@ -6253,22 +6253,22 @@ public class Localized_French : LOCALIZATION
                         client = "Amadeus, the guitarist";
                         description = "You want to build a body that can withstand lightning? You don't say that with half a mind, do you? Can't you swear on your rock soul? Hmmm. Doesn't seem like you're just joking around. All right then! I'll teach you how to handle lightning! First, let's take down some monsters around here!";
                         break;
-                    case QuestKindTitle.ThunderResistance2: //TODO
+                    case QuestKindTitle.ThunderResistance2:
                         name = Title(TitleKind.ThunderResistance) + " 2";
                         client = "Amadeus, the guitarist";
                         description = "You rock! I like it a lot! But you're not ready to control the power of the thunder yet. You need to let out more of what you've been holding inside! Then the lightning will respond to your heart! Let's go, let's go, let's go!";
                         break;
-                    case QuestKindTitle.ThunderResistance3: //TODO
+                    case QuestKindTitle.ThunderResistance3:
                         name = Title(TitleKind.ThunderResistance) + " 3";
                         client = "Amadeus, the guitarist";
                         description = "Good God, good God! Your heart shouts have reached my heart! At this rate, you'll soon be able to control the power of thunder! You've got potential! Maybe you also have talent as a rock musician? Well, that aside, let's go hunting some monsters!";
                         break;
-                    case QuestKindTitle.ThunderResistance4: //TODO
+                    case QuestKindTitle.ThunderResistance4:
                         name = Title(TitleKind.ThunderResistance) + " 4";
                         client = "Amadeus, the guitarist";
                         description = "You're pretty much finished! How's it going? You're getting a feel for it, aren't you? You feel a numbness inside your body, don't you? If you can completely own that numbness, you'll build up your tolerance to lightning! Now, it's time for the last spurt! Make your own noise!";
                         break;
-                    case QuestKindTitle.ThunderResistance5: //TODO
+                    case QuestKindTitle.ThunderResistance5:
                         name = Title(TitleKind.ThunderResistance) + " 5";
                         client = "Amadeus, the guitarist";
                         description = "This rocks! You could get hit by lightning and not even flinch! I'm impressed with the way you face the lightning! Lastly, I want to have a session with you now that you're perfect! Come with me! Come on, let's go wild!";
@@ -6278,22 +6278,22 @@ public class Localized_French : LOCALIZATION
                         client = "The Ladyship Lapidus";
                         description = "Oh, you wanted to see me? I see, you want to obtain the blessing of light? Very well. I am here to help you grow. I will spare no pains to help you on your path of light. Now, let's go and kill some monsters!";
                         break;
-                    case QuestKindTitle.LightResistance2: //TODO
+                    case QuestKindTitle.LightResistance2:
                         name = Title(TitleKind.LightResistance) + " 2";
                         client = "The Ladyship Lapidus";
                         description = "You're doing well! You have some potential. It's said that the protection of light is given to those with a pure heart. Try to face the monsters with a clear mind. If you do that, I think you'll grow faster!";
                         break;
-                    case QuestKindTitle.LightResistance3: //TODO
+                    case QuestKindTitle.LightResistance3:
                         name = Title(TitleKind.LightResistance) + " 3";
                         client = "The Ladyship Lapidus";
                         description = "Your heart has been filled with light since we met. I sensed that you kept a pure heart even while confronting the monster. Please remember that awareness. Next time, try to fight with the image of wearing the light. It will be easier to receive the blessings of the light!";
                         break;
-                    case QuestKindTitle.LightResistance4: //TODO
+                    case QuestKindTitle.LightResistance4:
                         name = Title(TitleKind.LightResistance) + " 4";
                         client = "The Ladyship Lapidus";
                         description = "You are gaining the blessing of light well! I think if you work a little harder you will get the blessing completely. I have seen many people who aspire to the path of light, but many of them fail because they can't get a sense of it. So I'm glad you haven't given up this far and are willing to give it a shot...! Now, let's head out to defeat them again!";
                         break;
-                    case QuestKindTitle.LightResistance5: //TODO
+                    case QuestKindTitle.LightResistance5:
                         name = Title(TitleKind.LightResistance) + " 5";
                         client = "The Ladyship Lapidus";
                         description = "You have gained the blessing of light almost completely. I think that your strong desire for the light has borne fruit. I, too, am honored to have supported you! I hope you will continue to follow the path of light. Now, let's get on with the final touches!";
@@ -6303,22 +6303,22 @@ public class Localized_French : LOCALIZATION
                         client = "Dark Dragon Bite Amatsu";
                         description = "My name is 'Dark Dragon Bite Amatsu'. I am the one who controls the principles of darkness.If you seek the power of darkness, then I shall grant you the true darkness.But you must have the strength to withstand the darkness. First, defeat the hidden monsters of darkness.";
                         break;
-                    case QuestKindTitle.DarkResistance2: //TODO
+                    case QuestKindTitle.DarkResistance2:
                         name = Title(TitleKind.DarkResistance) + " 2";
                         client = "Dark Dragon Bite Amatsu";
                         description = "Thou hast become a vessel of darkness through war. The power of darkness will raise your soul as a foundation. Therefore, the darkness that sleeps deep within you will awaken. Absorb the darkness from the hidden demon monsters and awaken your own darkness.";
                         break;
-                    case QuestKindTitle.DarkResistance3: //TODO
+                    case QuestKindTitle.DarkResistance3:
                         name = Title(TitleKind.DarkResistance) + " 3";
                         client = "Dark Dragon Bite Amatsu";
                         description = "The darkness within you has awakened only slightly from its slumber in the depths. Your darkness is a beautiful one, a pure darkness free of impurities. If it is you, then you will likely gain strong dark abilities. Now, let us resume our hunt for monsters.";
                         break;
-                    case QuestKindTitle.DarkResistance4: //TODO
+                    case QuestKindTitle.DarkResistance4:
                         name = Title(TitleKind.DarkResistance) + " 4";
                         client = "Dark Dragon Bite Amatsu";
                         description = "You have fully awakened to the power of darkness. You should now have complete control over its abilities. Your growth has been accelerated due to my influence. I am grateful for the opportunity to teach you about the darkness. The training is almost complete, but do not let your guard down.";
                         break;
-                    case QuestKindTitle.DarkResistance5: //TODO
+                    case QuestKindTitle.DarkResistance5:
                         name = Title(TitleKind.DarkResistance) + " 5";
                         client = "Dark Dragon Bite Amatsu";
                         description = "You now possess the power of darkness. You are now capable of neutralizing most forms of darkness. However, this power is strong, so be careful when using it. I will teach you how to control it. This is the final training.";
@@ -6330,21 +6330,21 @@ public class Localized_French : LOCALIZATION
                         if (!quest.isAccepted) condition = "Defeat any monsters while your HP is 20% or less : " + tDigit(500);
                         else condition = "Defeat any monsters while your HP is 20% or less : " + tDigit(Main.main.SR.survivalNumQuestTitle[(int)quest.heroKind]) + " / " + tDigit(500);
                         break;
-                    case QuestKindTitle.Survival2: //TODO
+                    case QuestKindTitle.Survival2:
                         name = Title(TitleKind.Survival) + " 2";
                         client = "Matsuzo, the hot-blooded instructor";
                         description = "Well done! You made it back alive! How was that? Have you learned the importance of Kiatsu? You can do anything if you have Ki! Next to Ki, the most important thing is a strong body! Come on! Fight the monsters! And you've got to get better! Polish it up!";
                         if (!quest.isAccepted) condition = "Defeat any monsters while your HP is 20% or less : " + tDigit(5000);
                         else condition = "Defeat any monsters while your HP is 20% or less : " + tDigit(Main.main.SR.survivalNumQuestTitle[(int)quest.heroKind]) + " / " + tDigit(5000);
                         break;
-                    case QuestKindTitle.Survival3: //TODO
+                    case QuestKindTitle.Survival3:
                         name = Title(TitleKind.Survival) + " 3";
                         client = "Matsuzo, the hot-blooded instructor";
                         description = "Oh! You've transformed! What an amazing body! With this, you can withstand even more hardships! Next, let's work on building your stamina! No matter how tough things get, with stamina, you can make it through! Go! Build up your stamina!";
                         if (!quest.isAccepted) condition = "Defeat any monsters while your HP is 20% or less : " + tDigit(50000);
                         else condition = "Defeat any monsters while your HP is 20% or less : " + tDigit(Main.main.SR.survivalNumQuestTitle[(int)quest.heroKind]) + " / " + tDigit(50000);
                         break;
-                    case QuestKindTitle.Survival4: //TODO
+                    case QuestKindTitle.Survival4:
                         name = Title(TitleKind.Survival) + " 4";
                         client = "Matsuzo, the hot-blooded instructor";
                         description = "Wow! You've come this far with all-out running! What amazing stamina! With this, you might be able to endure even harder survival challenges! Next, let's work on building your power! Power is justice! Power is justice! With power, you can do anything! Use monsters as punching bags and hone your power to the fullest!";
@@ -6357,13 +6357,13 @@ public class Localized_French : LOCALIZATION
                         description = "Hey there player! Let me introduce you to the method for improving your heroes, by allowing them to increase their background efficiency when you're playing as a different hero! With each improvement to the Proof of Rebirth title, your background efficiency will get better, but it does require that you perform a certain number of rebirths at a higher tier than the previous quest required. Let's start this off by having you perform Rebirth Tier 1 once. When you have done that, come back here for your reward!";
                         condition = "Rebirth Tier 1 # : " + tDigit(GameController.game.rebirthCtrl.Rebirth(quest.heroKind, 0).rebirthNum) + " / 1";
                         break;
-                    case QuestKindTitle.Cooperation2: //TODO
+                    case QuestKindTitle.Cooperation2:
                         name = Title(TitleKind.Cooperation) + " 2";
                         client = "The TestTeam";
                         description = "Now that you've started to Rebirth Tier 1 a lot. (I sure hope you're getting the Exp Multiplier from the RB1 Upgrades! ) It's time to test yourself and go for Rebirth Tier 2. (Some insider knowledge : Try and get more then 20 levels of EXP multiplier!) Like the previous title, you'll gain more background efficiency. Be aware of what the Rebirth Tier 2 will reset, so it's not a shock! I know you can complete this! Perform one Rebirth Tier 2 and come back here and collect your new title reward!";
                         condition = "Rebirth Tier 2 # : " + tDigit(GameController.game.rebirthCtrl.Rebirth(quest.heroKind, 1).rebirthNum) + " / 1";
                         break;
-                    case QuestKindTitle.Cooperation3: //TODO
+                    case QuestKindTitle.Cooperation3:
                         name = Title(TitleKind.Cooperation) + " 3";
                         client = "The TestTeam";
                         description = "Who's ready to gain some more Background Efficiency? The next hardship will be conducting a Rebirth Tier 3.  Again, read what it will reset, so you can prepare! This one can be tricky to get enough levels, but I believe in you! Remember, EXP is your friend! Get up close and cuddly with it. Perform one Rebirth Tier 3 and come back for a shiny new reward.";
@@ -6374,47 +6374,47 @@ public class Localized_French : LOCALIZATION
                         client = "Ivan, the Trainee Adventurer";
                         description = "Hi there, adventurer! You seem to be the questing type, but did you know that there are benefits to completing many, many quests? Yeah, there's a program through the Adventurer's Guild that grants the title of Quester to anyone who completes at least 100 general quests! I'm still too new to even think about doing that, but you look like you might be able to pull it off! Why don't you give a shot? I've heard having that title earns some great benefits when completing quests!";
                         break;
-                    case QuestKindTitle.Quester2: //TODO
+                    case QuestKindTitle.Quester2:
                         name = Title(TitleKind.Quester) + " 2";
                         client = "Ivan, the fledgling adventurer";
                         description = "Hey! It looks like you are doing well with your quests. I also followed your example and took on a quest, which was a success and got me out of my apprenticeship. Let's both continue to tackle quests from now on!";
                         break;
-                    case QuestKindTitle.Quester3: //TODO
+                    case QuestKindTitle.Quester3:
                         name = Title(TitleKind.Quester) + " 3";
                         client = "Ivan, a low-ranked adventurer";
                         description = "I was also successful in a few quests and the guild gave me a title for my recognition! I didn't think it was possible for me, but now I know I can do it if I try. I'm going to try to take on more quests.";
                         break;
-                    case QuestKindTitle.Quester4: //TODO
+                    case QuestKindTitle.Quester4:
                         name = Title(TitleKind.Quester) + " 4";
                         client = "Ivan, the Promising  Adventurer";
                         description = "When I accepted a quest, the receptionist said to me, 'You are a promising newcomer'. I don't know if I can live up to his expectations, but I was a little happy to hear that about me!";
                         break;
-                    case QuestKindTitle.Quester5: //TODO
+                    case QuestKindTitle.Quester5:
                         name = Title(TitleKind.Quester) + " 5";
                         client = "Ivan, a mid-level adventurer";
                         description = "I've been able to achieve some decent results within the guild, so I'm not being called a newbie as much anymore. Even though I still feel like a rookie. But now that I've graduated from being a newbie, I have to work hard and live up to expectations!";
                         break;
-                    case QuestKindTitle.Quester6: //TODO
+                    case QuestKindTitle.Quester6:
                         name = Title(TitleKind.Quester) + " 6";
                         client = "Ivan, a well-known adventurer";
                         description = "Lately, when I go back to the guild, I've been approached by various adventurers for help. I wonder if it's because I've been taking on a lot of quests and doing them well? I'm feeling more confident about myself now!";
                         break;
-                    case QuestKindTitle.Quester7: //TODO
+                    case QuestKindTitle.Quester7:
                         name = Title(TitleKind.Quester) + " 7";
                         client = "Ivan, a high ranking adventurer";
                         description = "I was able to receive a higher rank than before when I successfully completed a quest to defeat a monster that was said to be difficult to subjugate. I feel like I'm finally getting closer to you.";
                         break;
-                    case QuestKindTitle.Quester8: //TODO
+                    case QuestKindTitle.Quester8:
                         name = Title(TitleKind.Quester) + " 8";
                         client = "Ivan, the Popular Adventurer";
                         description = "When I go to town, I'm getting approached by townspeople. It seems that my success in completing many quests has spread through the guild and to the townspeople, and now many people know about it. It's a little embarrassing, but I don't feel bad!";
                         break;
-                    case QuestKindTitle.Quester9: //TODO
+                    case QuestKindTitle.Quester9:
                         name = Title(TitleKind.Quester) + " 9";
                         client = "Ivan, the highest ranked adventurer";
                         description = "I have finally received the highest title in the guild after taking on many difficult quests! I never thought I could grow this much from being a apprentice. I'm glad I've continued to steadily take on quests up to this point!";
                         break;
-                    case QuestKindTitle.Quester10: //TODO
+                    case QuestKindTitle.Quester10:
                         name = Title(TitleKind.Quester) + " 10";
                         client = "Ivan, an elite adventurer";
                         description = "After becoming the highest rank adventurer, I continued to take on quests and was eventually appointed to the elite force directly under the guild! There is nothing more honorable than this. Even now, I cannot match the number of quests you have cleared. I started taking quests for you, and I think it's in part because of you that I made it into the elite corps. Thank you!";
@@ -6529,7 +6529,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGeneral.BringToEnchantShard:
                         name = "La Grosse Affaire";
                         client = "Mademoiselle Fizzle";
-                        description = "Hé, merci pour ton aide plus tôt. Mes expériences sont presque prêtes. Tout ce qu'il me faut c'est un peu d'Huile de Slime pour servir de base, un peu de Tissu Magique pour l'emballer, et de la Soie d'Areignée pour une mèche suffisament longue. Ensuite, on pourra créer une bombe assez grosse pour faire exploser un million de Chauve-Souris ! Pour la science, bien entendu.";
+                        description = "Hé, merci pour ton aide plus tôt. Mes expériences sont presque prêtes. Tout ce qu'il me faut c'est un peu d'Huile de Slime pour servir de base, un peu de Tissu Magique pour l'emballer, et de la Soie d'Araignée pour une mèche suffisament longue. Ensuite, on pourra créer une bombe assez grosse pour faire exploser un million de Chauve-Souris ! Pour la science, bien entendu.";
                         break;
                     case QuestKindGeneral.CompleteDungeon2_0:
                         name = "Manoir Hanté 1";
@@ -6639,27 +6639,27 @@ public class Localized_French : LOCALIZATION
                         client = "Croque-Requin, le berger de Wombat";
                         description = "Mon troupeau ! Ma ferme ! Ils sont r'venu grâce à vous ! Sauf qu'y m'faut encore vot' aide. Ces casse-pieds qui ont détruit ma ferme dans l'temps sont encore dans les alentours. J'crois qu'ils me r'gardaient l'autre nuit. J'voyais rien, mais Gus était assis à fixer dans l'noir pendant des lunes, et j'vous jure, le son des branches qui bougent, c'tait pas naturel. Ça m'a fait rappeler des souvenirs terribles de mon temps dans l'armée, quand j'tais en charge d'entrainer une unité de wombats de combat. C'tait terrible, trop même pour les histoires de beuverie. J'referrai pas face à ça, mais ça veut dire que j'peux pas me battre près d'mon troupeau, même pas pou' les défendre. Donc s'tu pourrais, tu vois, combattre ces monstres pour moi et me laisser garder mes bébés en sûreté ?";
                         break;
-                    case QuestKindGeneral.TheBiggerOne: //TODO
+                    case QuestKindGeneral.TheBiggerOne:
                         name = "La Très Grosse Affaire";
-                        client = "Père Bémérite";
-                        description = "Des Slimes et Araignées ? Bah ! We're about to start working with the serious ingredients to blow those Devilfish right out of the lake! Go collect Bat Wings to form a base, a few Fox Tails to wrap it in, and some Fairy Dust to serve as a magical binding. With these Papa promises magically explosive results!";
+                        client = "Papa Bémérite";
+                        description = "Des Slimes et Araignées ? Bah ! On va commencer à travailler avec des ingrédients sérieux pour éjecter ces Poissons Démons hors du lac ! Va collecter des Ailes de Chauve-Souris pour servir de base, quelques Queues de Renard pour l'emballer et un peu de Poussière de Fée pour agir en tant que réactant magique. Avec ça, Papa promet des résultats magiquement explosifs !";
                         break;
-                    case QuestKindGeneral.TheBiggestOne: //TODO
-                        name = "The Biggest One";
-                        client = "Miss Fizzle";
-                        description = "Are we ready for another science lesson? I see you've built enough bombs for Devilfish. Maybe we should build the biggest one yet for Unicorns? Let's start the collection of Fish Scales, Carved Branches, and Thick Fur! After all this is in the name of Science and discovery!";
+                    case QuestKindGeneral.TheBiggestOne:
+                        name = "La Gigantesque Affaire";
+                        client = "Mademoiselle Fizzle";
+                        description = "Est-ce que tu es prêt pour une autre leçon de sciences ? Je vois que tu as fabriqué assez de bombes pour les Poissons Démons. On devrait peut-être construire la plus grosse bombe pour les Licornes ? Commençons avec la collecte d'Écailles de Poisson Démon, de Branches Sculptées et de Fourrure Épaisse ! Après tout, c'est au nom de la Science et de la découverte !";
                         break;
-                    case QuestKindGeneral.TheBiggerestOne://NEW10
-                        name = "The Biggerest One";
-                        client = "Bill Nye";
-                        description = "Okay class, today we are going for something more daring. It's going to take awhile to get the materials, but I promise it'll be worth it! Don't worry too much, we'll get there in time! You've already collected most of these materials needed. We are going to turn monster materials into Portal Orbs!";
+                    case QuestKindGeneral.TheBiggerestOne:
+                        name = "La Gargantuesque Affaire";
+                        client = "Jamy & Fred";
+                        description = "Deux aventuriers, un ayant les mains remplies de butin, l'autre brandissant un courte canne, sortent d'un donjon. \"Oh là là Jamy, regarde ce nombre de matériaux qu'on a ! Qu'est-ce qu'on peut bien en faire ?\" \"Ben oui, Fred, à ce point là, il est temps d'essayer quelque chose de plus audacieux ! On a mis beaucoup de temps pour récupérer tous ces matériaux, mais tu vas voir, ça ve en valloir le coup ! Avec cette petite recette, on va pouvoir transformer ces matériaux de monstres en Orbes Portail !\"";
                         break;
-                    case QuestKindGeneral.TigerTaming://NEW10
-                        name = "Tiger Taming";
-                        client = "Beastmaster Koji";
-                        description = "Trouble is brewing and I don't have enough time to prepare on my own. We are going to need more Flametigers to help fortify our defenses. You're going to have to venture into the volcano to find them in their natural habitat. Be careful! It get's hot down there and the tigers are fierce, but they will make powerful allies once I'm done training them! Oh, and while you're in the volcano, please bring me back some thick fur! We need more material for making more bedding for the animals.";
-                        if (!quest.isAccepted) condition = "Capture any Flametigers " + tDigit(5000);
-                        else condition = "Capture any Flametigers " + tDigit(Math.Max(0, game.monsterCtrl.CapturedNum(MonsterSpecies.FlameTiger) - quest.initCapturedNum)) + " / " + tDigit(5000);
+                    case QuestKindGeneral.TigerTaming:
+                        name = "Dressage de Tigre";
+                        client = "Koji le Maître des Bêtes";
+                        description = "Un mal inconnu se prépare et je n'ai pas assez de temps pour me préparer par moi-même. On aura besoin de plus de Tigres de Feu pour fortifier nos défenses. Tu devras t'aventurer dans le volcan pour le trouver dans leur habitat naturel. Fais attention à toi ! Il fait horriblement chaud là-bas et les tigres sont redoutables, mais ils feront des alliés puissants lorsque j'aurais fini de les entraîner ! Oh, et tant que tu seras dans le volcan, s'il te plaît ramène-moi un peu de Fourrure Épaisse ! On aura besoin de plus de matière pour fabriquer des couvertures pour les animaux.";
+                        if (!quest.isAccepted) condition = "Capture " + tDigit(5000) + " de n'importe quel type de Tigre de Feu";
+                        else condition = tDigit(Math.Max(0, game.monsterCtrl.CapturedNum(MonsterSpecies.FlameTiger) - quest.initCapturedNum)) + " / " + tDigit(5000) + " Tigres de Feu capturés";
                         break;
                 }
                 break;
@@ -6881,13 +6881,12 @@ public class Localized_French : LOCALIZATION
             case ToggleKind.SDFastResult:
                 return "Écourter l'Écran de Résultat de Super Donjon";
             case ToggleKind.SDAutoUseRefreshTicket:
-                return "Auto Utilisation de Ticket de Rafraîchissement";
-            case ToggleKind.BuyOneSuperAbility://NEW9
-                return "Override [x1]";
-            case ToggleKind.SDBuyOnePowerupRank://NEW9
-                return "Override Multiplier [x1]";
-            case ToggleKind.SDDisableAutoLeave://NEW10
-                return "Disable auto leaving in 60 sec at a Safe Zone";
+                return "Auto Utilisation de Ticket de Réinitialisation";
+            case ToggleKind.BuyOneSuperAbility:
+                return "Ignorer [x1]";
+            case ToggleKind.SDBuyOnePowerupRank:
+                return "Ignorer le Multiplicateur [x1]";
+                return "Désactiver Auto Quitter après avoir passé 60 sec dans une Zone Sûre";
         }
         return base.Toggle(kind);
     }
@@ -7365,7 +7364,7 @@ public class Localized_French : LOCALIZATION
             case 37: return "Les Capacités restent au Rang 1 après une Ascension Monde ";
             case 38: return "Vitesse de Nitro + 0.5x (Consommation + 0.5 par sec)";
             case 39: return "La configuration de héros Actifs/Passifs dans l'onglet Guilde persiste après une AM";
-            case 40: return "Débloque l'Allocation d'Essence dans le Labo (Requiert l'Accomplissement AM1 #30)";//"Catalyst setup persists on WA (requires WA1 Accomp #30)";
+            case 40: return "Débloque l'Allocation d'Essence dans le Labo (Requiert l'Accomplissement AM1 #30)";
             case 41: return "La Limite d'Eau Mystérieuse persiste après une AM sans compter les améliorations manquantes";
             case 42: return "La configuration de Recherche de ville persiste après une AM (Requiert l'Accomplissement AM1 #60)";
             case 43: return "Gain d'Or + 250%";
@@ -7909,7 +7908,7 @@ public class Localized_French : LOCALIZATION
             case 40: return "\n- Les Familiers actifs après le # de familiers activables seront automatiquement désactivés";
             case 41: return "\n- Vous pourrez recommencer les missions complétées mais vous ne recevrez pas de Pièces Épiques venant d'elles";
             case 42: return "Ascension Monde de Classe " + tDigit(wa.tier + 1);
-            case 43: return "\n- Hero Grade, Fame and Super Ability Points";//?
+            case 43: return "\n- Classe de Héros, Renommée et Points de Super Abilité";
             case 44: return "\n- Etage Maximal de Super Donjon Atteint et Limite de # d'Achats du Magasin de Rubis";
             case 45: return "\n- Paliers de Classe, Améliorations de Super Donjon et l'onglet Stats de Magasin de Rubis";
         }
@@ -8161,7 +8160,7 @@ public class Localized_French : LOCALIZATION
             case 124: return "Gain d'EXP de Familier d'Expédition ";
             case 125: return "Améliore l'effet des améliorations de Gain de Ressources";
             case 126: return "Niveau Maximal d'Amélioration de Dictionnaire + " + text;
-            case 127: return "Ajoute une récompense de \"Ticket de Rafraîchissement\" dans les Quêtes Journalières [Cartographeur " + text + "]";
+            case 127: return "Ajoute une récompense de \"Ticket de Réinitialisation\" dans les Quêtes Journalières [Cartographeur " + text + "]";
             case 128: return "";
             case 129: return "";
             case 130: return "";
@@ -9790,8 +9789,8 @@ public class Localized_French : LOCALIZATION
         tempStr += "\n- Pièces de Donjon sauvées d'un SD : " + tDigit(main.S.totalPermanentDungeonCoinGained);
         tempStr += "\n- Rubis : " + tDigit(main.S.totalRubyGained);
         tempStr += "\n- Morceaux de Rubis : " + tDigit(main.S.totalPieceOfRubyGained);
-        tempStr += "\n- Tickets de Rafraîchissement de Coût d'Entrée : " + tDigit(main.S.totalEntryCostRefreshTicketGained);
-        tempStr += "\n- Entry Cost Refresh Ticket Used : " + tDigit(main.S.totalEntryCostRefreshTicketUsed);//NEW9
+        tempStr += "\n- Tickets de Réinitialisation de Coût d'Entrée : " + tDigit(main.S.totalEntryCostRefreshTicketGained);
+        tempStr += "\n- Tickets de Réinitialisation de Coût d'Entrée Utilisés : " + tDigit(main.S.totalEntryCostRefreshTicketUsed);
         tempStr += "\n\n";
         tempStr += "<size=20><u>Niveau de Héros Max Atteint</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
@@ -9806,7 +9805,7 @@ public class Localized_French : LOCALIZATION
             int count = i;
             tempStr += "\n- " + localized.Hero((HeroKind)count) + " : " + meter(main.S.movedDistance[count]) + " | Cette Ascension " + meter(main.S.totalMovedDistance[count]) + " | Cette Réincarnation " + meter(main.SR.movedDistance[count]);
         }
-        tempStr += "\n- Familier : " + meter(main.S.movedDistancePet) + " | Cette Ascension " + meter(main.S.totalMovedDistancePet);// + " | Cette Réincarnation " + meter(main.SR.movedDistancePet);
+        tempStr += "\n- Familier : " + meter(main.S.movedDistancePet) + " | Cette Ascension " + meter(main.S.totalMovedDistancePet);
         tempStr += "\nTotal : " + meter(game.statsCtrl.TotalMovedDistance(false)) + " | Cette Ascension " + meter(game.statsCtrl.TotalMovedDistance(true));
         tempStr += "\n\n";
         tempStr += "<size=20><u>Invasion</u><size=18>";
@@ -10128,8 +10127,8 @@ public class Localized_French : LOCALIZATION
             case 19: return "Complétion #";
             case 20: return "EXP de Guilde";
             case 21: return "(Assurez-vous d'avoir suffisament d'emplacements disponibles avant de réclamer)";
-            case 22: return "Temps depuis le Dernier Rafraîchissement";
-            case 23: return "Temps avant le Prochain Rafraîchissement";
+            case 22: return "Temps depuis le Dernier Réinitialisation";
+            case 23: return "Temps avant le Prochain Réinitialisation";
             case 24: return "Cette quête ne se rafraîchira pas tant qu'elle est active";
             case 25: return "Maîtrise des Quêtes";
             case 26: return "Rang Courant";
@@ -10548,10 +10547,10 @@ public class Localized_French : LOCALIZATION
             case 7: return "Temps de Jeu Réel Total";
             case 8: return "Temps de Jeu Total";
             case 9: return "Quitter le Mode Arrière-Plan";
-            case 10: return "Commencer " + text; //SuperDungeon
+            case 10: return "Commencer " + text;
             case 11: return "Rupture de Stock";
             case 12: return "Chance d'Apparition de " + text;
-            case 13: return "Switching to " + text;//NEW9
+            case 13: return "Changement vers " + text;
             default: return base.OtherString(id, text);
         }
     }
@@ -10604,7 +10603,7 @@ public class Localized_French : LOCALIZATION
             case 10: return "Etage Max Atteint";
             case 11: return "Modificateurs";
             case 12: return "Réinitialisation";
-            case 13: return "Aller à la Super Capacité";
+            case 13: return "Aller à la Super Abilité";
             case 14: return "Palier de Classe";
             case 15: return "Stats de Héros";
             case 16: return "Emplacements de Capacité de Classe Disponibles";
@@ -10667,9 +10666,9 @@ public class Localized_French : LOCALIZATION
             case 73: return "Stats";
             case 74: return "Options de Super Donjon";
             case 75: return "Options d'Automatisation";
-            case 76: return "You will leave the current Super Dungeon in " + text + " sec automatically if you don't go to the next floor.";//NEW9
-            case 77: return "Total used";//NEW9
-            case 78: return "<sprite=\"locks\" index=0> Accept the new Global Quest [Super Dungeon 1]";//NEW10
+            case 76: return "Vous quitterez le Super Donjon automatiquement dans " + text + " sec si vous n'atteignez pas le prochain étage.";
+            case 77: return "Total utilisé";
+            case 78: return "<sprite=\"locks\" index=0> Accepter la nouvelle Quête Globale [Super Dunjon 1]";
         }
         return text;
     }
@@ -10872,8 +10871,8 @@ public class Localized_French : LOCALIZATION
                 effectWithLevel = "Achète des pouvoirs aléatoires " + text + " fois à chaque étage";
                 break;
             case SuperDungeonUpgradeKind.AutoUseRefreshTicket:
-                name = "Auto Utilisation des Tickets de Rafraîchissement";
-                effect = "Débloque le bouton \"Auto Utilisation des Tickets de Rafraîchissement\" dans l'onglet Options de SD qui utilise un Ticket de Rafraîchissement de Coût d'Entrée lorsque le coût d'entrée excède une certaine valeur";
+                name = "Auto Utilisation des Tickets de Réinitialisation";
+                effect = "Débloque le bouton \"Auto Utilisation des Tickets de Réinitialisation\" dans l'onglet Options de SD qui utilise un Ticket de Réinitialisation de Coût d'Entrée lorsque le coût d'entrée excède une certaine valeur";
                 effectWithLevel = "";
                 break;
         }
