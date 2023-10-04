@@ -6425,54 +6425,54 @@ public class Localized_French : LOCALIZATION
                 switch (kindGeneral)
                 {
                     case QuestKindGeneral.CompleteArea0_0:
-                        name = "Find My Brother 1";
+                        name = "Trouvez mon frère 1";
                         client = "Nohn";
-                        description = "Can you please help me find my brother? He's been missing for some time now. He's worrying us sick! I wonder if he's in the Slime Village. Please check Area 1.";
+                        description = "Pouvez-vous m'aider à retrouver mon frère? Il est disparu depuis un bon moment maintenant. Il nous rend malades d'inquiétude! Je me demande s'il est dans le Village des Slimes. Fouillez la Zone 1.";
                         break;
                     case QuestKindGeneral.CompleteArea0_1:
-                        name = "Find My Brother 2";
+                        name = "Trouvez mon frère 2";
                         client = "Nohn";
-                        description = "No? Not in Area 1, was he? We must continue on then, I suppose. When I get my hands on him... well, let's just try and find him! What about Area 2?";
+                        description = "Non? Il n'était pas dans la Zone 1? On doit continuer à chercher, je supposes. Quand j'aurai mis la main sur lui... bon, essayons de le retrouver! Que dit la Zone 2?";
                         break;
                     case QuestKindGeneral.CompleteArea0_2:
-                        name = "Find My Brother 3";
+                        name = "Trouvez mon frère 3";
                         client = "Nohn";
-                        description = "Ah, there was some evidence of a struggle? It better not have been those slimes. Show them what you're made of. Clear Area 3 and get my brother back for me!";
+                        description = "Ah, il y avait des signes de bataille? Ça a intérêt à ne pas être ces slimes. Montrez leur de quel bois vous vous chauffez. Complétez la Zone 3 et retrouvez mon frêre pour moi!";
                         break;
                     case QuestKindGeneral.CompleteArea0_3:
-                        name = "Find My Brother 4";
+                        name = "Trouvez mon frère 4";
                         client = "Nohn";
-                        description = "Thank you so much for finding Hitan. I can't believe those slimes took him like that. Clear Area 4 and bring him back home. I will take care of him from there.";
+                        description = "Merci d'avoir retrouvé Hitan. Je ne peux pas croire que ces slimes l'ont capturé comme ça. Complétez la Zone 4 et ramenez le à la maison. Je vais m'occuper de lui pour la suite.";
                         break;
                     case QuestKindGeneral.DefeatNormalSlime1:
-                        name = "Slime Infestation 1";
-                        client = "Village Mayor";
-                        description = "The Slimes have overrun the village. Please help our village clean up these pesky monsters.";
+                        name = "Infestation des Slimes 1";
+                        client = "Maire du village";
+                        description = "Les slimes ont envahi le village. S'il-vous-plaît aidez notre village à se débarasser de ces monstres.";
                         break;
                     case QuestKindGeneral.DefeatNormalSlime2:
-                        name = "Slime Infestation 2";
-                        client = "Village Mayor";
-                        description = "You did such an amazing job before. It looks like there's still a lot more. Could you help us again and help push back the slimes?";
+                        name = "Infestation des Slimes 2";
+                        client = Maire du village";
+                        description = "Vous avez fait un si bon travail. On dirait qu'il y en a toujours plus. Pouvez-vous nous aider à nouveau à repousser les slimes?";
                         break;
                     case QuestKindGeneral.DefeatNormalSlime3:
-                        name = "Slime Infestation 3";
-                        client = "Village Mayor";
-                        description = "Oh no, your attempts to help us seem to have really upset the slimes, and now there's an army of them knocking on our doors! Since you're kind of responsible for this mess, what would you say to helping us clean... that is, cleaning it up for us?";
+                        name = "Infestation des Slimes 3";
+                        client = "Maire du village";
+                        description = "Oh non, vos tentatives de nous aider ont vraiment frustré les slimes, et maintenant c'est une armée de slimes qui est à nos portes! Puisque vous êtes en quelques sortes responsable de ce bordel, que diriez-vous de nous aider à nettoyer... je veux dire, nettoyes ça pour nous?";
                         break;
                     case QuestKindGeneral.BringOilOfSlime:
-                        name = "The Slime Lover";
+                        name = "L'amoureux des Slimes";
                         client = "";
                         description = "";
                         break;
                     case QuestKindGeneral.DefeatRedSlime:
-                        name = "Red Slime Threat";
-                        client = "Huck the Village Farmer";
-                        description = "Please help! The red slimes have been attacking my farm. Scare them away for me! Help me, you are my only hope.";
+                        name = "Menace des Slimes Rouges";
+                        client = "Huck le fermier du village";
+                        description = "Aidez-Moi! Les Slimes rouges ont envahi ma ferme! Faites les dégager! Aidez-moi, vous êtes mon seul espoir.";
                         break;
                     case QuestKindGeneral.DefeatRedMagicSlime:
-                        name = "Magicslime Menace";
+                        name = "Menace des Slimes Magiques";
                         client = "Karosis";
-                        description = "A hurried individual wearing glasses and a scruffy collection of robes, runs into you, scattering scrolls everywhere. After collecting their dropped possessions, they take a look at you before nodding, \"You look like you can handle yourself. These slimes, they've been stealing my magical research and it's severely hampered my progress. Would you mind helping me out some and dealing these thieves a telling blow? I... I'm willing to pay if that's what you need.\"";
+                        description = "Un individu pressé portant des lunettes et des robes usées vous bouscule et trébuche, éparpillant des parchemins partout. Après avoir ramassé ses possessions, il vous observe avant de hocher la tête, \"Vous semblez savoir vous débrouiller. Ces slimes, ils me volent mes recherches magiques et ça ralentit sévèrement mon progrès. Pourriez-vous m'aider en vous occupant de ces voleurs? Je.... suis disposé à payer si c'est ce qu'il vous faut.\"";
                         break;
                     case QuestKindGeneral.CompleteDungeon0_0:
                         name = "Trouvez Mon Époux 1";
