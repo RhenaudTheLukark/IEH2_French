@@ -6416,8 +6416,8 @@ public class Localized_French : LOCALIZATION
                         break;
                     case QuestKindTitle.Quester10:
                         name = Title(TitleKind.Quester) + " 10";
-                        client = "Ivan, an elite adventurer";
-                        description = "After becoming the highest rank adventurer, I continued to take on quests and was eventually appointed to the elite force directly under the guild! There is nothing more honorable than this. Even now, I cannot match the number of quests you have cleared. I started taking quests for you, and I think it's in part because of you that I made it into the elite corps. Thank you!";
+                        client = "Ivan, aventurier d'élite";
+                        description = "Après avoir atteint le plus haut rang d'aventurier, j'ai continué à m'attaquer à des quêtes et j'ai éventuellement été appointé à la force d'élite directement sous la guilde! Il n'y a pas plus honorable. Même maintenant, je ne peux pas égaler le nombre de quêtes que tu as complété. J'ai commencé à prendre des quêtes pour toi, et je crois que c'est en partie grâce à toi que j'ai intégré le groupe d'élite. Merci!";
                         break;
                 }
                 break;
