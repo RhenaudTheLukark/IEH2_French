@@ -4719,7 +4719,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindThief.KnifeToss:
                 return "Lance une dague pointue vers l'ennemi, infligeant des dégâts.";
             case SkillKindThief.LuckyBlow:
-                return "Lancer de dague de courte portée qui a une chance de coup critique élevée, ce qui inflige de g^ros dégâts en un seul coup.";
+                return "Lancer de dague de courte portée qui a une chance de coup critique élevée, ce qui inflige de gros dégâts en un seul coup.";
             case SkillKindThief.SpreadToss:
                 return "Lance plusieurs dagues dans un cercle autour du héros, touchant des ennemis dans différentes directions.";
             case SkillKindThief.ShadowStrike:
@@ -6459,7 +6459,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGeneral.CaptureBlueFairy:
                         name = "Le Roi Des Fées 2";
                         client = "Pierre Joyeux";
-                        description = "Les jeunes aventuriers comme vous viennent toujours empirer les choses. Ne sais-tu pas que pour chaque fée tuée, deux autres reviennent ? Vous devez les capturer si vous voulez les empêcher de vous terroriser. Je vais également faire de mon mieux.";
+                        description = "Les jeunes aventuriers comme toi viennent toujours empirer les choses. Ne sais-tu pas que pour chaque fée tuée, deux autres reviennent ? Tu dois les capturer si tu veux les empêcher de te terroriser. Je vais également faire de mon mieux.";
                         break;
                     case QuestKindGeneral.CaptureYellowFairy:
                         name = "Le Roi Des Fées 3";
@@ -6469,7 +6469,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGeneral.CaptureRedFairy:
                         name = "La Reine Des Fées";
                         client = "Pierre Joyeux";
-                        description = "Tu as fait du bon travail en aidant ce jeunot, je n'en attendais pas moins. Cependant, c'est ici que nos chemins se séparent. Prends bien soin de la fée que je vous ai donnée.";
+                        description = "Tu as fait du bon travail en m'aidant, je n'en attendais pas moins. Cependant, c'est ici que nos chemins se séparent. Prends bien soin de la fée que je t'ai donné.";
                         break;
                     case QuestKindGeneral.CaptureGreenFairy:
                         name = "Charmes pour la Chance";
@@ -10041,13 +10041,13 @@ public class Localized_French : LOCALIZATION
             case ExpeditionKind.PetRank:
                 name = "Capture de Monstres";
                 effect = "Point de Domptage : <color=green>" + percent(Math.Pow(1.1d, expedition.level.value)) + "</color>  ( x1.1 par Niveau )";
-                passive = optStr + "Multiplie le Gain de points de Domptage par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
+                passive = optStr + "Multiplie le Gain de Points de Domptage par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 reward = "Points de Domptage " + text;
                 break;
             case ExpeditionKind.Equipment:
                 name = "Entraînement d'Équipement";
                 effect = "Temps de Parchemin de Maîtrise : <color=green>" + percent(1 + 0.10d * expedition.level.value) + "</color>  ( + " + percent(0.10d) + " par Niveau )";
-                passive = optStr + "Multiplie le Gain en Maîtise d'Équipement par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
+                passive = optStr + "Multiplie le Gain en Maîtrise d'Équipement par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 break;
             case ExpeditionKind.PetExp:
                 name = "Entraînement sur le Terrain";
@@ -10299,7 +10299,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case WorldAscensionMiletoneKind.DictionaryPoint:
                 name = "Expert en Équipement";
-                description = "Total des points de Dictionnaire";
+                description = "Total des Points de Dictionnaire";
                 passive = "Amélioration des effets du Dictionnaire + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.DisassembleEquipment:
@@ -10355,11 +10355,11 @@ public class Localized_French : LOCALIZATION
                 break;
             case AscensionUpgradeKind.PreRebirthTier1:
                 name = "Points de Pré-Réinc. Classe 1";
-                effect = "Ajoute des points de Réincarnation Classe 1 gratuits + " + tDigit(value) + " au début d'une nouvelle AM";
+                effect = "Ajoute des Points de Réincarnation Classe 1 gratuits + " + tDigit(value) + " au début d'une nouvelle AM";
                 break;
             case AscensionUpgradeKind.PreRebirthTier2:
                 name = "Points de Pré-Réinc. Classe 2";
-                effect = "Ajoute des points de Réincarnation Classe 2 gratuits + " + tDigit(value) + " au début d'une nouvelle AM";
+                effect = "Ajoute des Points de Réincarnation Classe 2 gratuits + " + tDigit(value) + " au début d'une nouvelle AM";
                 break;
             case AscensionUpgradeKind.RebirthTier1BonusCap:
                 name = "Bonus de Réinc. Classe 1 +";
