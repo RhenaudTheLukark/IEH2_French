@@ -5884,56 +5884,55 @@ public class Localized_French : LOCALIZATION
                         description = "Je ne me rappelle pas avoir commandé une pizza... Ah, désolé, tu as la tête de quelqu'un qui cherche toujours à faire des courses pour les autres. En parlant de ça, j'ai besoin de plus d'ingrédients. Si tu es assez sympa pour m'en récupérer, je t'apprendrai comment utiliser une potion de plus à la fois, mais après ça je vais devoir partir en voyage à travers le monde. Et, s'il te plaît, arrête de me demander mes recettes alchimiques - je ne peux vraiment pas les partager avec toi.";
                         break;
 
-                    case QuestKindTitle.Porter1: //TODO
-                        name = "The Great Race 1";
-                        client = "Bebop the Warthog";
-                        description = "\"Hey, you, wanna race? I bet I can run 1000 meters faster than you can. Beat me and I’ll teach you how to be even faster than me!\" You are a little concerned that racing this large, warthog man will be pointless, but you might as well since he seems interested in teaching you something that may be useful.";
+                    case QuestKindTitle.Porter1:
+                        name = "La Grande Course 1";
+                        client = "Bebop le PHacochèrethe Warthog";
+                        description = "\"Hé, toi, tu veux faire la course ? Je suis sûr que je peux courir les 1000 mètres plus vite que toi. Bas-moi et je t'apprendrai comment être encore plus rapide que moi !\" Tu n'est pas sûr que faire la course avec ce grand homme phacochère soit bien utile, mais pourquoi pas le faire s'il est intéressé à t'apprendre quelque chose qui sera peut-être utile.";
                         break;
                     case QuestKindTitle.Porter2:
-                        name = "The Great Race 2";
-                        client = "Rocksteady the Rhino";
-                        description = "\"That’s no fair, you raced that warthog-faced buffoon, but not me?! I can teach you how to be even faster than me, so let’s start now!\" Why are these strange animal people approaching you like this? Who cares, might as well get moving.";
+                        name = "La Grande Course 2";
+                        client = "Rocksteady le Rhinocéros";
+                        description = "\"C'est pas juste, t'as fait la course avec ce bouffon à face de cochon, mais pas moi ?! Je t'apprendrai comment être encore plus rapide que moi, donc allons-y maintenant !\" Pourquoi est-ce que ces animaux étranges t'accostent comme ça ? Peu importe, autant y aller.";
                         break;
                     case QuestKindTitle.Porter3:
-                        name = "The Great Race 3";
-                        client = "Tokka the Snapping Turtle";
-                        description = "\"You might think I’m slow, being a turtle, but that’s why the turtle won against the hare. I can’t stand that warhog and rhino, so I’ll teach you how to be even faster than all of us if you can beat me at running 100k meters!\" Where are these anthropomorphic animals even coming from?!";
+                        name = "La Grande Course 3";
+                        client = "Slash la Tortue-Alligator";
+                        description = "\"Tu penses que je suis lent, comme je suis une tortue, mais c'est pour ça que la tortue a gagné contre le lièvre. Je ne peux pas supporter ce phacochère et ce rhinocéros, donc je vais t'apprendre comment être encore plus rapide que nous tous si tu peuxme battre dans une course de 100k mètres !\" D'où viennent ces animaux anthropomorphiques ?!";
                         break;
                     case QuestKindTitle.Porter4:
-                        name = "The Great Race 4";
-                        client = "Rahzar the Wolf";
-                        description = "It’s easy to beat a turtle, a rhino, and a warthog… I am much more cunning and much faster in a long run than any of them. Prove to me that you’re faster than a wolf by running 1 million meters and I’ll teach you what I know about being the fastest!";
+                        name = "La Grande Course 4";
+                        client = "Rahzar le Loup";
+                        description = "C'est facile de battre une tortue, un rhinocéros, un phacochère… Mais je suis bien plus malin et rapide dans une longue course qu'eux. Prouve-moi que tu es plus rapide qu'un loup en courant pendant 1 million de mètres et je t'apprendrai ce que je sais sur comment devenir le plus rapide !";
                         break;
                     case QuestKindTitle.Porter5:
-                        name = "The Great Race 5";
-                        client = "Baxter the Fly";
-                        description = "Oh you think that beating all of these simpleton land runners that you stand a chance at beating me in a race? Hardly possible, but let’s give it a go. I won’t be running, though, since I have wings, so let’s say 10 million meters as our goal? See you at the finish line!";
+                        name = "La Grande Cours 5";
+                        client = "Baxter la Mouche";
+                        description = "Oh, tu penses que battre tous ces simples coureurs terrestres te donne une chance contre moi dans une course ? Peu possible, mais voyons ça. Je ne courerais pas, bien sûr, mais, vu que j'ai des ailes, disons que notre but sera 10 millions de mètres ? À plus tard sur la ligne d'arrivée !";
                         break;
                     case QuestKindTitle.Porter6:
-                        name = "The Great Race 6";
-                        client = "Krang the … brain… in a flesh golem?";
-                        description = "Muaha, you may have defeated all of those fools, but I can make myself grow massive with this golem body I possess. Race me! 100 million meters! Win or lose, I’ll teach you how to be the fastest in the world!";
+                        name = "La Grande Cours 6";
+                        client = "Krang le… Cerveau… dans un Robot de Chair ?";
+                        description = "Bah ha ha, tu as peut-être vaincu tous ces idiots, mais je peux devenir super grand avec mon corps robotique. Fais la course avec moi ! 100 millions de mètres ! Que tu gagnes ou perdes, je t'apprendrai à être le plus rapide du monde !";
                         break;
-                    case QuestKindTitle.PhysicalAttack1: //TODO
+                    case QuestKindTitle.PhysicalAttack1:
                         name = Title(TitleKind.PhysicalDamage) + " 1";
-                        client = "Boxer Tyson";
-                        description = "Yo, you new around here? I’ve been using slimes as punching bags. Care to join me? Let’s beat up some monsters together. It’s very therapeutic and if you can keep up with me, I’ll give you some pointers on maximizing your physical damage.";
+                        client = "Tyson le Boxeur";
+                        description = "Yo, t'es nouveau ici ? J'utilise des slimes en tant que sacs de frappe. Tu veux me rejoindre ? Allons tabasser des monstres ensemble. C'est thérapeutique et si tu peux tenir la cadence, je te dirais comment maximiser tes dégâts physiques.";
                         break;
                     case QuestKindTitle.PhysicalAttack2:
                         name = Title(TitleKind.PhysicalDamage) + " 2";
-                        client = "Boxer Tyson";
-                        description = "Not bad, not bad. You really didn’t disappoint me. But we’ve got a lot more monsters and if these fists aren’t smashing, these muscles aren’t growing. Let’s get back to it and I’ll help you with your posture when you strike.";
+                        client = "Tyson le Boxeur";
+                        description = "Pas mal, pas mal. Tu m'as vraiment pas déçu. Mais il y a encore beaucoup plus de monstres, et si ces poings ne cassent pas des têtes, ces muscles ne grandissent pas. Retournons-y et je t'aiderai avec ta posture lorsque tu frappes.";
                         break;
                     case QuestKindTitle.PhysicalAttack3:
                         name = Title(TitleKind.PhysicalDamage) + " 3";
-                        client = "Boxer Tyson";
-                        description = "You’re not getting tired, are you? Come on, the monster hordes are endless and who can ask for a better workout than this? I’m not ready to plateau yet, so let’s push even harder this time and see how swole we can get.";
+                        client = "Tyson le Boxeur";
+                        description = "T'es pas fatigué, si ? Allons, les hordes de monstres n'en finissent pas et qui peut demander un meilleur entraînement que ça ? Je suis pas encore à mon plateau, donc allons-y encore plus fort cette fois et voyons comment ces muscles peuvent grossir.";
                         break;
                     case QuestKindTitle.PhysicalAttack4:
                         name = Title(TitleKind.PhysicalDamage) + " 4";
-                        client = "Boxer Tyson";
-                        description = "Oh man, I’ve had the best time punching these monsters out with you. Your muscles look great! Alright, one last stretch before we reach our limit. Come on, we got gains to make.";
-
+                        client = "Tyson le Boxeur";
+                        description = "Oh mec, j'ai passé un super bon moment à mettre ces monstres au tapis avec toi. Tes muscles ont l'air saillant ! Bon, un dernier sprint avant qu'on atteigne notre limite. Allons, on a des gains à faire.";
                         break;
                     case QuestKindTitle.FireAttack1: //TODO
                         name = Title(TitleKind.FireDamage) + " 1";
@@ -6060,143 +6059,143 @@ public class Localized_French : LOCALIZATION
                         client = "Mia the Alchemist";
                         description = "I never realized how much fun it was to use alchemy to create what I wanted to create...! I wouldn't have realized it without you. Thank you. My research is still incomplete, so I'll try to face this research from now on. I will continue to work as usual, so I will be too busy to take care of you. But you are a full-fledged alchemist now, and you can do just fine as an alchemist without me! I just want to try alchemy with you one last time. After this, we'll say goodbye. Come on, let's go gather materials together!";
                         break;
-                    case QuestKindTitle.EquipmentProf1: //TODO
+                    case QuestKindTitle.EquipmentProf1:
                         name = Title(TitleKind.EquipmentProficiency) + " 1";
                         client = "Karosis";
-                        description = "\"Pssst,\" a disheveled individual wearing glasses and carrying a small collection of scrolls calls to you from a nearby alley. \"Looks like you found something unusual and hard to find there. I'll give you something nice if you can find me some other rare items.\"";
-                        condition = "Equipment laying on the battlefield from monster kills : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 5";
+                        description = "\"Pssst,\" un individu débraillé portant des lunettes et portant une petite collection de parchemins t'appelle depuis une allée proche. \"On dirait que t'as trouvé quelque chose d'inconnu et qui est difficile à trouver, mon ami. Je te donne un truc cool si tu arrives à me trouver plus d'objets rares, capische ?\"";
+                        condition = "Équipement sur le champ de bataille lâchés par des monstres : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 5";
                         break;
                     case QuestKindTitle.EquipmentProf2:
                         name = Title(TitleKind.EquipmentProficiency) + " 2";
-                        condition = "Equipment laying on the battlefield from monster kills : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 10";
+                        condition = "Équipement sur le champ de bataille lâchés par des monstres : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 10";
                         break;
                     case QuestKindTitle.EquipmentProf3:
                         name = Title(TitleKind.EquipmentProficiency) + " 3";
-                        condition = "Equipment laying on the battlefield from monster kills : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 15";
+                        condition = "Équipement sur le champ de bataille lâchés par des monstres : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 15";
                         break;
                     case QuestKindTitle.EquipmentProf4:
                         name = Title(TitleKind.EquipmentProficiency) + " 4";
-                        condition = "Equipment laying on the battlefield from monster kills : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 20";
+                        condition = "Équipement sur le champ de bataille lâchés par des monstres : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 20";
                         break;
                     case QuestKindTitle.EquipmentProf5:
                         name = Title(TitleKind.EquipmentProficiency) + " 5";
-                        condition = "Equipment laying on the battlefield from monster kills : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 30";
+                        condition = "Équipement sur le champ de bataille lâchés par des monstres : " + tDigit(GameController.game.battleCtrl.EquipmentDroppingNum()) + " / 30";
                         break;
 
-                    case QuestKindTitle.MetalHunter1: //TODO
+                    case QuestKindTitle.MetalHunter1:
                         name = Title(TitleKind.MetalHunter) + " 1";
-                        client = "Metallic Nuts";
-                        description = "Did you know that there are metal monsters in this world? You have a rare chance of spotting them. In the Slime dungeons, there are metal Slimes for instance. Their bodies are so hard that you can only deal 1 damage to them. However, if you defeat them, you'll get a bunch of EXP. First of all, I want you to go kill one Metal Slime. Once you've done that, I'm sure you'll be a little better at killing Metal Slimes.";
+                        client = "Féru de Métal";
+                        description = "Savais-tu qu'il existe des monstres de métal dans ce monde ? T'as une très petite chance de les trouver. Par exemple, dans les donjons des Slimes, il y a des Slimes de Métal. Leurs corps sont si durs que tu peux seulement leur infliger 1 dégât. Cependant, si tu arrives à les vaincre, tu gagnes beaucoup d'EXP. Tout d'abord, je veux que tu ailles vaincre un Slime de Métal. Lordque ce sera fait, je suis sûr que tu pourras les tuer plus vite.";
                         break;
                     case QuestKindTitle.MetalHunter2:
                         name = Title(TitleKind.MetalHunter) + " 2";
-                        client = "Metallic Nuts";
-                        description = "I see you've defeated the metal Slime! It looks like you've learned a bit how to destroy metal monsters. Keep it up and you'll learn how to hunt metal monsters more efficiently. For the next hunt, make sure you don't confuse between a Metal Slime and a Metal Magicslime.  Hunt down 2 Metal Magicslimes.";
+                        client = "Féru de Métal";
+                        description = "J'ai vu que tu as vaincu le Slime de Métal ! On dirait que tu en as appris un peu sur comment vaincre les monstres de métal. Continue comme ça et tu apprendras comment les chasser plus efficacement. Pour la prochaine chasse, fais attention de ne pas comfondre un Slime de Métal et un Slime Magique de Métal. Va chasser 2 Slimes Magiques de Métal.";
                         break;
                     case QuestKindTitle.MetalHunter3:
                         name = Title(TitleKind.MetalHunter) + " 3";
-                        client = "Metallic Nuts";
-                        description = "I see you were able to defeat a few Metal Magicslimes too! Are you getting used to breaking metal bodies? Let's keep on defeating metal monsters and earning EXP. The next hunt will be for some Metal Spiders";
+                        client = "Féru de Métal";
+                        description = "J'ai vu que tu as aussi pu vaincre quelques Slimes Magiques de Métal ! Est-ce que tu t'habitues à pulvériser des corps en métal ? Continue de vaincre des monstres de métal et de gagner de l'EXP. La prochaine chasse sera sur des Araignées de Métal.";
                         break;
                     case QuestKindTitle.MetalHunter4:
                         name = Title(TitleKind.MetalHunter) + " 4";
-                        client = "Metallic Nuts";
-                        description = "I can't believe you beat Metal Spiders too. You've got a knack for breaking metal bodies! We need you to take down the Metal Bats next, and if you can accomplish this, you will be a pro at Metal hunting.";
+                        client = "Féru de Métal";
+                        description = "Je peux pas croire que tu as aussi pu vaincre des Araignées de Métal. T'as un truc pour pulvériser des corps en métal ! Maintenant tu dois vaincre des Chauves-Souris en Métal, et si tu peux faire ça, tu deviendras un pro en matière de chasse de monstre en métal.";
                         break;
                     case QuestKindTitle.MetalHunter5:
                         name = Title(TitleKind.MetalHunter) + " 5";
-                        client = "Metallic Nuts";
+                        client = "Féru de Métal";
                         description = "";
                         break;
                     case QuestKindTitle.MetalHunter6:
                         name = Title(TitleKind.MetalHunter) + " 6";
-                        client = "Metallic Nuts";
+                        client = "Féru de Métal";
                         description = "";
                         break;
                     case QuestKindTitle.MetalHunter7:
                         name = Title(TitleKind.MetalHunter) + " 7";
-                        client = "Metallic Nuts";
+                        client = "Féru de Métal";
                         description = "";
                         break;
                     case QuestKindTitle.MetalHunter8:
                         name = Title(TitleKind.MetalHunter) + " 8";
-                        client = "Metallic Nuts";
+                        client = "Féru de Métal";
                         description = "";
                         break;
                     case QuestKindTitle.MetalHunter9:
                         name = Title(TitleKind.MetalHunter) + " 9";
-                        client = "Metallic Nuts";
+                        client = "Féru de Métal";
                         description = "";
                         break;
-                    case QuestKindTitle.ExplorerOfSD1: //TODO
+                    case QuestKindTitle.ExplorerOfSD1:
                         name = Title(TitleKind.ExplorerOfSD) + " 1";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(100);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(100);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100);
                         break;
                     case QuestKindTitle.ExplorerOfSD2:
                         name = Title(TitleKind.ExplorerOfSD) + " 2";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(500);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(500);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500);
                         break;
                     case QuestKindTitle.ExplorerOfSD3:
                         name = Title(TitleKind.ExplorerOfSD) + " 3";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(2000);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(2000);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(2000);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(2000);
                         break;
                     case QuestKindTitle.ExplorerOfSD4:
                         name = Title(TitleKind.ExplorerOfSD) + " 4";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(10000);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(10000);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000);
                         break;
                     case QuestKindTitle.ExplorerOfSD5:
                         name = Title(TitleKind.ExplorerOfSD) + " 5";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(50000);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(50000);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(50000);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(50000);
                         break;
                     case QuestKindTitle.ExplorerOfSD6:
                         name = Title(TitleKind.ExplorerOfSD) + " 6";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(100000);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100000);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(100000);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100000);
                         break;
                     case QuestKindTitle.ExplorerOfSD7:
                         name = Title(TitleKind.ExplorerOfSD) + " 7";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(500000);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500000);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(500000);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500000);
                         break;
                     case QuestKindTitle.ExplorerOfSD8:
                         name = Title(TitleKind.ExplorerOfSD) + " 8";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(1000000);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1000000);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(1000000);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1000000);
                         break;
                     case QuestKindTitle.ExplorerOfSD9:
                         name = Title(TitleKind.ExplorerOfSD) + " 9";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(5000000);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(5000000);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(5000000);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(5000000);
                         break;
                     case QuestKindTitle.ExplorerOfSD10:
                         name = Title(TitleKind.ExplorerOfSD) + " 10";
                         client = "";
                         description = "";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(10000000);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000000);
+                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(10000000);
+                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000000);
                         break;
                     case QuestKindTitle.FireResistance1: //TODO
                         name = Title(TitleKind.FireResistance) + " 1";
@@ -6351,73 +6350,73 @@ public class Localized_French : LOCALIZATION
                         if (!quest.isAccepted) condition = "Defeat any monsters while your HP is 20% or less : " + tDigit(500000);
                         else condition = "Defeat any monsters while your HP is 20% or less : " + tDigit(Main.main.SR.survivalNumQuestTitle[(int)quest.heroKind]) + " / " + tDigit(500000);
                         break;
-                    case QuestKindTitle.Cooperation1: //TODO
+                    case QuestKindTitle.Cooperation1:
                         name = Title(TitleKind.Cooperation) + " 1";
                         client = "Morkyl";
-                        description = "Hey there player! Let me introduce you to the method for improving your heroes, by allowing them to increase their background efficiency when you're playing as a different hero! With each improvement to the Proof of Rebirth title, your background efficiency will get better, but it does require that you perform a certain number of rebirths at a higher tier than the previous quest required. Let's start this off by having you perform Rebirth Tier 1 once. When you have done that, come back here for your reward!";
+                        description = "Hé, salut le joueur ! Je vais t'apprendre comment améliorer tes héros, en leur permettant d'augmenter leur efficacité en arrière-plan, lorsque tu joues avec un autre héros ! Avec chaque amélioration à travers le titre Preuve de Réincarnation, son efficacité en arrière-plan augmentera, mais il faudra que tu complètes un certain nombre de réincarnations de classe plus haute que la dernière quête que tu as effectuée. Commençons tout ça en te faisant faire une Réincarnation de Classe 1 une fois. quand tu as fait ça, reviens me voir pour ta récompense !";
                         condition = "Rebirth Tier 1 # : " + tDigit(GameController.game.rebirthCtrl.Rebirth(quest.heroKind, 0).rebirthNum) + " / 1";
                         break;
                     case QuestKindTitle.Cooperation2:
                         name = Title(TitleKind.Cooperation) + " 2";
-                        client = "The TestTeam";
-                        description = "Now that you've started to Rebirth Tier 1 a lot. (I sure hope you're getting the Exp Multiplier from the RB1 Upgrades! ) It's time to test yourself and go for Rebirth Tier 2. (Some insider knowledge : Try and get more then 20 levels of EXP multiplier!) Like the previous title, you'll gain more background efficiency. Be aware of what the Rebirth Tier 2 will reset, so it's not a shock! I know you can complete this! Perform one Rebirth Tier 2 and come back here and collect your new title reward!";
+                        client = "RhenaudTheLukark";
+                        description = "Maintenant que tu as fait beaucoup de Réincarnations de Classe 1 (J'espère que tu as amélioré le Multiplcateur d'EXP dans les Améliorations de Réinc. 1 !), il est temps de repousser tes limites et d'essayer de faire une Réincarnation de Classe 2. (Petit indice : Essaye d'avoir au moins 20 niveaux de Multiplicateur d'EXP !) Comme le dernier titre, tu gagneras plus d'efficacité en arrière-plan. Fais attention à ce que la Réincarnation de Classe 2 remet à zéro, pour que ce ne soit pas une surprise ! Je sais que tu peux le faire ! Effectue une Réincarnation de Classe 2 et reviens me voir pour collecter ton nouveau titre !";
                         condition = "Rebirth Tier 2 # : " + tDigit(GameController.game.rebirthCtrl.Rebirth(quest.heroKind, 1).rebirthNum) + " / 1";
                         break;
                     case QuestKindTitle.Cooperation3:
                         name = Title(TitleKind.Cooperation) + " 3";
-                        client = "The TestTeam";
-                        description = "Who's ready to gain some more Background Efficiency? The next hardship will be conducting a Rebirth Tier 3.  Again, read what it will reset, so you can prepare! This one can be tricky to get enough levels, but I believe in you! Remember, EXP is your friend! Get up close and cuddly with it. Perform one Rebirth Tier 3 and come back for a shiny new reward.";
+                        client = "Rehatla";
+                        description = "Qui est prêt à gagner plus d'Efficacité en Arrière-Plan ? La prochaine étape est d'effectuer une Réincarnation de Classe 3. Encore une fois, lis ce qu'elle remet à zéro, pour que tu puisses t'y préparer ! Celle-ci est plus difficile pour atteindre le bon niveau, mais je crois en toi ! N'oublie pas, d'EXP est ton ami ! Garde-là près de toi et récupères-en un maximum ! Effectue une Réincarnation de Classe 3 et reviens me voir pour ta nouvelle récompense.";
                         condition = "Rebirth Tier 3 # : " + tDigit(GameController.game.rebirthCtrl.Rebirth(quest.heroKind, 2).rebirthNum) + " / 1";
                         break;
-                    case QuestKindTitle.Quester1: //TODO
+                    case QuestKindTitle.Quester1:
                         name = Title(TitleKind.Quester) + " 1";
-                        client = "Ivan, the Trainee Adventurer";
-                        description = "Hi there, adventurer! You seem to be the questing type, but did you know that there are benefits to completing many, many quests? Yeah, there's a program through the Adventurer's Guild that grants the title of Quester to anyone who completes at least 100 general quests! I'm still too new to even think about doing that, but you look like you might be able to pull it off! Why don't you give a shot? I've heard having that title earns some great benefits when completing quests!";
+                        client = "Ivan, Aventurier Stagiaire";
+                        description = "Hé, salut l'aventurier ! T'as l'air d'être le type de personne à accepter des quêtes, mais est-ce que tu savais qu'il y a un avantage à compléter beaucoup, beaucoup de quêtes ? Ouais, il y a un programme mis en place par la Guilde des Aventuriers qui octroie le titre de Quêteur à tous ceux qui complètent au moins 100 quêtes générales ! Je suis trop bleu pour même penser à faire ça, mais t'as l'air d'être capable de le faire ! Pourquoi t'essayerais pas ? J'ai entendu dire que ce titre t'octroie de supers avantages pour la complétion de quêtes !";
                         break;
                     case QuestKindTitle.Quester2:
                         name = Title(TitleKind.Quester) + " 2";
-                        client = "Ivan, the fledgling adventurer";
-                        description = "Hey! It looks like you are doing well with your quests. I also followed your example and took on a quest, which was a success and got me out of my apprenticeship. Let's both continue to tackle quests from now on!";
+                        client = "Ivan, Aventurier Débutant";
+                        description = "Hé ! On dirait que t'as l'air de t'en sortir avec tes quêtes. J'ai aussi suivi ton exemple et j'ai pris une quête, et ça c'est bien passé, donc je suis sorti de mon apprentissage. Continuons à compléter des quêtes ensemble !";
                         break;
                     case QuestKindTitle.Quester3:
                         name = Title(TitleKind.Quester) + " 3";
-                        client = "Ivan, a low-ranked adventurer";
-                        description = "I was also successful in a few quests and the guild gave me a title for my recognition! I didn't think it was possible for me, but now I know I can do it if I try. I'm going to try to take on more quests.";
+                        client = "Ivan, Aventurier de Rang Bas";
+                        description = "J'ai aussi réussi quelques quêtes et la guilde m'a donné un titre en tant que récompense ! Je pensais pas pouvoir arriver jusque là, mais maintenant je sais que je peux le faire si j'essaye. Je vais prendre quelques quêtes en plus, maintenant.";
                         break;
                     case QuestKindTitle.Quester4:
                         name = Title(TitleKind.Quester) + " 4";
-                        client = "Ivan, the Promising  Adventurer";
-                        description = "When I accepted a quest, the receptionist said to me, 'You are a promising newcomer'. I don't know if I can live up to his expectations, but I was a little happy to hear that about me!";
+                        client = "Ivan, Aventurier Prometteur";
+                        description = "Quand j'ai accepté une quête, la réceptionniste m'a dit 'Tu es un aventurier prometteur'. Je ne sais pas si je peux être à la hauteur de ses attentes, mais j'étais content d'entendre ça à propos de moi !";
                         break;
                     case QuestKindTitle.Quester5:
                         name = Title(TitleKind.Quester) + " 5";
-                        client = "Ivan, a mid-level adventurer";
-                        description = "I've been able to achieve some decent results within the guild, so I'm not being called a newbie as much anymore. Even though I still feel like a rookie. But now that I've graduated from being a newbie, I have to work hard and live up to expectations!";
+                        client = "Ivan, Aventurier de Rang Moyen";
+                        description = "J'ai réussi à atteindre des résultats sympas dans la guilde, donc maintenant on ne me traite plus trop comme un novice. Même si j'ai toujours l'impression d'en être un. Mais maintenant que j'ai passé le cap d'être un novice, je vais devoir bosser dur et être à la hauteur de mon rang !";
                         break;
                     case QuestKindTitle.Quester6:
                         name = Title(TitleKind.Quester) + " 6";
-                        client = "Ivan, a well-known adventurer";
-                        description = "Lately, when I go back to the guild, I've been approached by various adventurers for help. I wonder if it's because I've been taking on a lot of quests and doing them well? I'm feeling more confident about myself now!";
+                        client = "Ivan, Aventurier de Renom";
+                        description = "Récemment, lorsque je reviens dans la guilde, je suis souvent accosté par d'autres aventuriers pour que je les aide. Je me demande si c'est parce que j'ai pris pas mal de quêtes et que je les complète bien ? Je me sens plus en confiance avec moi-même maintenant !";
                         break;
                     case QuestKindTitle.Quester7:
                         name = Title(TitleKind.Quester) + " 7";
-                        client = "Ivan, a high ranking adventurer";
-                        description = "I was able to receive a higher rank than before when I successfully completed a quest to defeat a monster that was said to be difficult to subjugate. I feel like I'm finally getting closer to you.";
+                        client = "Ivan, Avanturier de Rang Haut";
+                        description = "J'ai réussi à acquérir un rang plus élevé après avoir réussi une quête pour vaincre un monstre qui à ce qu'il parait était assez dûr à battre. J'ai enfin l'impression que je commence à me rapprocher de ton niveau.";
                         break;
                     case QuestKindTitle.Quester8:
                         name = Title(TitleKind.Quester) + " 8";
-                        client = "Ivan, the Popular Adventurer";
-                        description = "When I go to town, I'm getting approached by townspeople. It seems that my success in completing many quests has spread through the guild and to the townspeople, and now many people know about it. It's a little embarrassing, but I don't feel bad!";
+                        client = "Ivan, Aventurier Populaire";
+                        description = "Lorsque je vais en ville, je suis souvent accosté par les villageois. On dirait que mes réussites de quêtes se sont propagées à travers la guilde et les villageois, et maintenant beaucoup de personnes sont au courant. C'est un peu embarrassant, mais ça fait du bien !";
                         break;
                     case QuestKindTitle.Quester9:
                         name = Title(TitleKind.Quester) + " 9";
-                        client = "Ivan, the highest ranked adventurer";
-                        description = "I have finally received the highest title in the guild after taking on many difficult quests! I never thought I could grow this much from being a apprentice. I'm glad I've continued to steadily take on quests up to this point!";
+                        client = "Ivan, Aventurier de Plus Haut Rang";
+                        description = "J'ai enfin atteint le plus haut tirtre de la guilde après avoir pris plein de quêtes difficiles ! J'ai jamais pensé que je pourrais atteindre ce niveau lors de mon apprentissage. Je suis si content d'avoir continué à prendre toutes ces quêtes jusqu'à maintenant !";
                         break;
                     case QuestKindTitle.Quester10:
                         name = Title(TitleKind.Quester) + " 10";
-                        client = "Ivan, aventurier d'élite";
-                        description = "Après avoir atteint le plus haut rang d'aventurier, j'ai continué à m'attaquer à des quêtes et j'ai éventuellement été appointé à la force d'élite directement sous la guilde! Il n'y a pas plus honorable. Même maintenant, je ne peux pas égaler le nombre de quêtes que tu as complété. J'ai commencé à prendre des quêtes pour toi, et je crois que c'est en partie grâce à toi que j'ai intégré le groupe d'élite. Merci!";
+                        client = "Ivan, Aventurier Légendaire";
+                        description = "Après être devenu l'aventurier ayant le rang le plus élevé, j'ai continué à m'attaquer à des quêtes et j'ai éventuellement été enrôlé dans une section d'élite directement dirigée par la guilde ! Il n'y a pas plus honorable. Même maintenant, je peux pas égaler le nombre de quêtes que tu as complété. J'ai commencé à prendre des quêtes pour toi, et je crois que c'est en partie grâce à toi que j'ai intégré le groupe d'élite. Merci !";
                         break;
                 }
                 break;
