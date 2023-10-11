@@ -2838,43 +2838,43 @@ public class Localized_French : LOCALIZATION
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités du Guerrier (Global) <color=red>" + percent(value) + "</color>";
                 else tempString = "Niveau des Capacités du Guerrier (Global) + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.WizardSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités de la Mage (Global) <color=red>" + percent(value) + "</color>";
                 else tempString = "Niveau des Capacités de la Mage (Global) + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.AngelSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités de l'Ange (Global) <color=red>" + percent(value) + "</color>";
                 else tempString = "Niveau des Capacités de l'Ange (Global) + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ThiefSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités du Voleur (Global) <color=red>" + percent(value) + "</color>";
                 else tempString = "Niveau des Capacités du Voleur (Global) + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.ArcherSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités de l'Archer (Global) <color=red>" + percent(value) + "</color>";
                 else tempString = "Niveau des Capacités de l'Archer (Global) + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.TamerSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau des Capacités de la Dompteuse (Global) <color=red>" + percent(value) + "</color>";
                 else tempString = "Niveau des Capacités de la Dompteuse (Global) + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.AllSkillLevel:
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Niveau de Toutes les Capacités (Global) <color=red>" + percent(value) + "</color>";
                 else tempString = "Niveau de Toutes les Capacités (Global) + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.SlimeKnowledge:
                 if (isOnlyEffectValue) return percent(value);
@@ -3157,7 +3157,7 @@ public class Localized_French : LOCALIZATION
                 if (isOnlyEffectValue) return tDigit(value, 1);
                 if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone <color=red>" + percent(value) + "</color>";
                 else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + tDigit(perLevelValue, 2) + " / Nv )";
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.TownMatDungeonRewardGain:
                 if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
