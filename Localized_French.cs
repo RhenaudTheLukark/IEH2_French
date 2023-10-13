@@ -792,11 +792,11 @@ public class Localized_French : LOCALIZATION
             case BasicWord.HeroGrade:
                 return "Classe du Héros";
             case BasicWord.Artifact:
-                return "Antiquité";
+                return "Relique";
             case BasicWord.ArtifactReplica:
-                return "Réplique d'Antiquité";
+                return "Réplique de Relique";
             case BasicWord.ArtifactProficiency:
-                return "Maîtrise d'Antiquité";
+                return "Maîtrise de Relique";
             case BasicWord.PermanentEffect:
                 return "Effet Permanent";
             case BasicWord.Topaz:
@@ -836,13 +836,17 @@ public class Localized_French : LOCALIZATION
             case BasicWord.ExpeditionPassiveEffect:
                 return "Effet d'Expedition Passif";
             case BasicWord.SlimeCoinCap:
-                return "Limite de Pièce Smile";
+                return "Limite de Pièces Slime";
             case BasicWord.LastMinuteFame:
                 return "Renommée gagné depuis une minute";
             case BasicWord.SD:
                 return "SD";
             case BasicWord.TemporaryTotal:
                 return "Total Temporaire";
+            case BasicWord.SuperQueue:
+                return "Super File";
+            case BasicWord.AvailableSuperQueue:
+                return "Super File Disponible";
         }
         return base.Basic(basicWord);
     }
@@ -986,6 +990,12 @@ public class Localized_French : LOCALIZATION
                 return "Palier de Classe";
             case MultiplierKind.ExpeditionMilestone:
                 return "Palier d'Expédition";
+            case MultiplierKind.SDModifier:
+                return "Modificateur de SD";
+            case MultiplierKind.SDModifierMilestone:
+                return "Palier de Modificateur de SD";
+            case MultiplierKind.SDGemRitual:
+                return "Rituel de Gemme de SD";
         }
         return base.StatsBreakdown(kind);
     }
@@ -1139,7 +1149,7 @@ public class Localized_French : LOCALIZATION
             case Stats.PetDebuffResistance:
                 return "Résistance aux Débuffs de Familier";
             case Stats.ArtifactProficiencyGain:
-                return "Gain de Maîtrise d'Antiquité";
+                return "Gain de Maîtrise de Relique";
         }
         return tempStrStats;
     }
@@ -2397,7 +2407,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentEffectKind.PetEXPGain:
                 return "Gain d'EXP des Familiers";
             case EquipmentEffectKind.LoyaltyPointGain:
-                return "Gain de Point de Loyauté";
+                return "Gain de Points de Loyauté";
             case EquipmentEffectKind.WarriorSkillRange:
                 return "Portée des Capacités du Guerrier";
             case EquipmentEffectKind.WizardSkillRange:
@@ -3595,8 +3605,10 @@ public class Localized_French : LOCALIZATION
         switch (kind)
         {
             case EquipmentForgeEffectKind.ReduceRequiredHeroLevel:
+                if (isArtifactAnvil) return "Classe du Héros - " + tDigit(value);
                 return "Niveau du Héros - " + tDigit(value);
             case EquipmentForgeEffectKind.ReduceRequiredAbility:
+                if (isArtifactAnvil) return "Super Abilité Requise - " + tDigit(value);
                 return "Abilité Requise - " + tDigit(value);
             case EquipmentForgeEffectKind.IncreaseProficiencyGain:
                 return "Gain de Maîtrise + " + percent(value);
@@ -3605,7 +3617,9 @@ public class Localized_French : LOCALIZATION
             case EquipmentForgeEffectKind.PurifyCurseEffect:
                 return "Purifie " + percent(value) + " de l'Effet Maudit";
             case EquipmentForgeEffectKind.IncreaseEffectIncrement:
-                return "Augmentation de l'Effet / Nv + " + percent(value);
+                return "Effet / Nv + " + percent(value);
+            case EquipmentForgeEffectKind.EqLevel:
+                return "Niveau d'Équipement + " + tDigit(value);
         }
         return base.ForgeNameString(kind, value);
     }
@@ -3625,6 +3639,8 @@ public class Localized_French : LOCALIZATION
                 return "Réduit les effets négatifs de cet équipement par " + percent(value) + " (Max : " + percent(maxValue) + ")";
             case EquipmentForgeEffectKind.IncreaseEffectIncrement:
                 return "Effet de cet équipement + " + percent(value) + " par niveau (Max : " + percent(maxValue) + ")";
+            case EquipmentForgeEffectKind.EqLevel:
+                return "Niveau de cet équipement + " + tDigit(value) + " (Max: " + tDigit(maxValue) + ")";
         }
         return kind.ToString();
     }
@@ -3803,6 +3819,12 @@ public class Localized_French : LOCALIZATION
                 return "Parchemin Antique de Niveau Supérieur Global";
             case EnchantKind.ArtifactLevelMaxAll:
                 return "Parchemin Antique de Niveau Maximal Global";
+            case EnchantKind.ArtifactForgeAdd:
+                return "Enclume Antique de Forge";
+            case EnchantKind.ArtifactForgeDelete:
+                return "Parchemin Antique de Suppression [Forge]";
+            case EnchantKind.ArtifactForgeExtract:
+                return "Parchemin Antique d'Extraction [Forge]";
         }
         return base.EnchantName(kind);
     }
@@ -3828,9 +3850,9 @@ public class Localized_French : LOCALIZATION
             case EnchantKind.ExpandEnchantSlot:
                 return "Augmente le nombre d'enchantements d'un équipement par 1. Max 4 emplacements en tout en dehors de l'Effet de Maîtrise du Voleur.";
             case EnchantKind.InstantProf:
-                return "Gagne instantanément de la Maîtrise sur cet équipement pour le héros couramment joué.";
+                return "Gagne instantanément de la maîtrise sur cet équipement pour le héros couramment joué.";
             case EnchantKind.ForgeAdd:
-                return "Donne un effet forgé à un équipement ayant un emplacement [Forge Disponible] ou le même type d'effet forgé.";
+                return "Ajoute un effet forgé à un équipement ayant un emplacement [Forge Disponible] ou le même type d'effet forgé.";
             case EnchantKind.ForgeDelete:
                 return "Supprime un effet forgé d'un équipement et le remplace par un emplacement [Forge Disponible].";
             case EnchantKind.ForgeExtract:
@@ -3850,27 +3872,33 @@ public class Localized_French : LOCALIZATION
             case EnchantKind.ArtifactOptionAdd:
                 return "Ajoute un enchantement de SD à un équipement ayant un [Enchantement Vide].";
             case EnchantKind.ArtifactDelete:
-                return "Supprime un enchantement de SD d'une antiquité et le transforme en un [Enchantement Vide].";
+                return "Supprime un enchantement de SD d'une relique et le transforme en un [Enchantement Vide].";
             case EnchantKind.ArtifactExtract:
-                return "Extrait un enchantement de SD d'une antiquité et créée un Parchemin Antique d'Enchantement associé. L'effet extrait est supprimé de l'antiquité.";
+                return "Extrait un enchantement de SD d'une relique et créée un Parchemin Antique d'Enchantement associé. L'effet extrait est supprimé de l'relique.";
             case EnchantKind.ArtifactLottery:
-                return "Randomise la valeur d'un enchantement de SD d'une antiquité.";
+                return "Randomise la valeur d'un enchantement de SD d'une relique.";
             case EnchantKind.ArtifactLevelup:
-                return "Augmente le niveau d'un enchantement de SD d'une antiquité qui n'est pas au niveau maximal.";
+                return "Augmente le niveau d'un enchantement de SD d'une relique qui n'est pas au niveau maximal.";
             case EnchantKind.ArtifactLevelMax:
-                return "Augmente le niveau d'un enchantement de SD d'une antiquité jusqu'à son maximum.";
+                return "Augmente le niveau d'un enchantement de SD d'une relique jusqu'à son maximum.";
             case EnchantKind.ArtifactExpandEnchantSlot:
-                return "Augmente le nombre d'enchantements d'une antiquité par 1. Max 4 emplacements en tout en dehors de l'Effet de Maîtrise du Voleur.";
+                return "Augmente le nombre d'enchantements d'une relique par 1. Max 4 emplacements en tout en dehors de l'Effet de Maîtrise du Voleur.";
             case EnchantKind.ArtifactDeleteAll:
-                return "Supprime tous les enchantements de SD d'une antiquité et les transforme en [Enchantement Vide]s.";
+                return "Supprime tous les enchantements de SD d'une relique et les transforme en [Enchantement Vide]s.";
             case EnchantKind.ArtifactExtractAll:
-                return "Extrait tous les enchantements de SD d'une antiquité et créée des Parchemins Antiques d'Enchantement associés. Les effets extraits sont supprimés de l'antiquité.";
+                return "Extrait tous les enchantements de SD d'une relique et créée des Parchemins Antiques d'Enchantement associés. Les effets extraits sont supprimés de l'relique.";
             case EnchantKind.ArtifactLotteryAll:
-                return "Randomise les valeurs de tous les enchantements de SD d'une antiquité.";
+                return "Randomise les valeurs de tous les enchantements de SD d'une relique.";
             case EnchantKind.ArtifactLevelupAll:
-                return "Augmente le niveau de tous les enchantements de SD d'une antiquité qui ne sont pas à leur niveau maximal.";
+                return "Augmente le niveau de tous les enchantements de SD d'une relique qui ne sont pas à leur niveau maximal.";
             case EnchantKind.ArtifactLevelMaxAll:
-                return "Augmente le niveau de tous les enchantements de SD d'une antiquité jusqu'à leur maximum.";
+                return "Augmente le niveau de tous les enchantements de SD d'une relique jusqu'à leur maximum.";
+            case EnchantKind.ArtifactForgeAdd:
+                return "Ajoute un effet forgé à une relique ayant un emplacement [Forge Disponible] ou le même type d'effet forgé.";
+            case EnchantKind.ArtifactForgeDelete:
+                return "Supprime un effet forgé d'une relique et le remplace par un emplacement [Forge Disponible].";
+            case EnchantKind.ArtifactForgeExtract:
+                return "Extrait l'effet forgé d'une relique et créée son [Enclume de Forge] associé. L'effet forgé extrait est supprimé de la relique.";
         }
         return base.EnchantInformation(kind);
     }
@@ -4188,6 +4216,18 @@ public class Localized_French : LOCALIZATION
                 return "Badge Tigre de Feu Antique";
             case PotionKind.AncientUnicornBadge:
                 return "Badge Licorne Antique";
+            case PotionKind.AncientWarriorsBadge:
+                return "Badge du Guerrier Antique";
+            case PotionKind.AncientWizardsBadge:
+                return "Badge de Mage Antique";
+            case PotionKind.AncientAngelsBadge:
+                return "Badge de l'Ange Antique";
+            case PotionKind.AncientThiefsBadge:
+                return "Badge du Voleur Antique";
+            case PotionKind.AncientArchersBadge:
+                return "Badge de l'Archer Antique";
+            case PotionKind.AncientTamersBadge:
+                return "Badge de la Dompteuse Antique";
         }
         return base.PotionName(kind);
     }
@@ -4360,10 +4400,10 @@ public class Localized_French : LOCALIZATION
                 return "Multiplie la Chance d'Apparition d'Équipement par " + percent(1 + effectValue);
             case PotionKind.ArchersBadge:
                 if (isPassive) return "Réduit le Cout de Rang des Capacités de l'Archer par " + percent(effectValue);
-                return "Dégâts Critiques + " + percent(effectValue);
+                return "Multiplie les Dégâts Critiques par " + percent(1 + effectValue);
             case PotionKind.TamersBadge:
                 if (isPassive) return "Réduit le Cout de Rang des Capacités de la Dompteuse par " + percent(effectValue);
-                return "Gain d'EXP + " + percent(effectValue);
+                return "Multiplie les Gains d'EXP des Familiers par " + percent(1 + effectValue);
             case PotionKind.EnchantedAlembic:
                 if (isPassive) return "Gain d'Eau Mystérieuse + " + tDigit(effectValue, 3) + " / " + Basic(BasicWord.Sec);
                 return "Effet de Potion (Global) + " + percent(effectValue);
@@ -4372,7 +4412,7 @@ public class Localized_French : LOCALIZATION
                 return "Augmente le # de Complétions de Zone et de Récompense de Zone par " + tDigit(effectValue, 1);
             case PotionKind.BerserkersStone:
                 if (isPassive) return "Effet de l'Équipement + " + percent(effectValue);
-                return "Dégâts infligés aux Boss de Défi + " + percent(effectValue);
+                return "Multiplie les Dégâts infligés aux Boss de Défi par " + percent(1 + effectValue);
             case PotionKind.AncientSlimeBadge:
                 if (isPassive) return "Dégâts Absolus infligés aux Slimes + " + percent(effectValue);
                 return "Multiplicateur de Dégâts infligés aux Slimes + " + percent(effectValue);
@@ -4403,6 +4443,24 @@ public class Localized_French : LOCALIZATION
             case PotionKind.AncientUnicornBadge:
                 if (isPassive) return "Dégâts Absolus infligés aux Licornes + " + percent(effectValue);
                 return "Multiplicateur de Dégâts infligés aux Licornes + " + percent(effectValue);
+            case PotionKind.AncientWarriorsBadge:
+                if (isPassive) return "Dégâts de SD + " + percent(effectValue);
+                return "Multiplie les Dégâts Physiques par " + percent(1 + effectValue);
+            case PotionKind.AncientWizardsBadge:
+                if (isPassive) return "Dégâts de Boss de Défi de SD + " + percent(effectValue);
+                return "Multiplie les Dégâts Magiques par " + percent(1 + effectValue);
+            case PotionKind.AncientAngelsBadge:
+                if (isPassive) return "Réduction de Dégâts de SD + " + percent(effectValue);
+                return "Multiplie les Gains de Maîtrise d'Équipement par " + percent(1 + effectValue);
+            case PotionKind.AncientThiefsBadge:
+                if (isPassive) return "Furie d'Armure de SD + " + percent(effectValue);
+                return "Multiplie la Furie d'Armure par " + percent(1 + effectValue);
+            case PotionKind.AncientArchersBadge:
+                if (isPassive) return "Furie d'Esprite de SD + " + percent(effectValue);
+                return "Multiplie la Furie d'Esprit par " + percent(1 + effectValue);
+            case PotionKind.AncientTamersBadge:
+                if (isPassive) return "Gain de Pièces de Donjon + " + percent(effectValue);
+                return "Multiplie les Gains de Points de Domptage par " + percent(1 + effectValue);
         }
         return base.PotionEffect(kind, effectValue);
     }
@@ -5305,7 +5363,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Upgrade13:
                         name = "Meilleure Collecte 13";
                         client = "Yuni";
-                        description = "Quel travail astronomique ! Pour continuer, augmente l'amélioration Gain de Ressources 1 jusqu'au Nv 1000 !";
+                        description = "Atteindre le Niveau 900 est vraiment un exploit ! Cependant, il reste toujours un autre but à atteindre. Essaye d'atteindre le Niveau 1000 de Gain de Ressources 1. Avec chaque niveau, ton empreinte sur ce monde accroit. Continue de repousser les limites.";
                         condition = "Atteindre le Nv 1000 pour l'Amélioration [ Gain de Ressources 1 ]";
                         reward = "Débloque l'Amélioration [ Gain de Ressources 15 ]" +
                             "\n- File d'Améliorations + 5";
@@ -5313,7 +5371,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Upgrade14:
                         name = "Meilleure Collecte 14";
                         client = "Yuni";
-                        description = "";
+                        description = "Le Niveau 1000 est atteint, cependant l'aventure continue toujours. La prochaine étape est le Niveau 1100 de Gain de Ressources 1. Les difficultés continuent de grandir, mais c'est aussi le cas de ton expertise. Continue sur ta lancée.";
                         condition = "Atteindre le Nv 1100 pour l'Amélioration [ Gain de Ressources 1 ]";
                         reward = "Débloque l'Amélioration [ Gain de Ressources 16 ]" +
                             "\n- File d'Améliorations + 5";
@@ -5321,7 +5379,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Upgrade15:
                         name = "Meilleure Collecte 15";
                         client = "Yuni";
-                        description = "";
+                        description = "Pendant que tu te concentreras sur le Niveau 1250 de Gain de Ressources 1, prends un moment pour regarder en arrière et voir l'incroyable voyage que tu as accompli jusqu'ici. Ensuite, repars-y avec un nouvel élan. Aucun défi n'est trop grand pour toi.";
                         condition = "Atteindre le Nv 1250 pour l'Amélioration [ Gain de Ressources 1 ]";
                         reward = "Débloque l'Amélioration [ Gain de Ressources 17 ]" +
                             "\n- File d'Améliorations + 5";
@@ -5329,7 +5387,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Upgrade16:
                         name = "Meilleure Collecte 16";
                         client = "Yuni";
-                        description = "";
+                        description = "Maintenant que le Niveau 1250 est derrière toi, le Niveau 1500 de Gain de Ressources 1 approche. Reste concentré, affine ta stratégie, et tu atteindras sans soucis des hauteurs inégalées.";
                         condition = "Atteindre le Nv 1500 pour l'Amélioration [ Gain de Ressources 1 ]";
                         reward = "Débloque l'Amélioration [ Gain de Ressources 18 ]" +
                             "\n- File d'Améliorations + 5";
@@ -5337,7 +5395,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Upgrade17:
                         name = "Meilleure Collecte 17";
                         client = "Yuni";
-                        description = "";
+                        description = "Tu t'approches de ton but ultime. Le Niveau 1750 de Gain de Ressources 1 est ta nouvelle cible. Cette nouvelle étape apportera son nouveau lot de problèmes, mais avec ta détermination, le succès est inévitable.";
                         condition = "Atteindre le Nv 1750 pour l'Amélioration [ Gain de Ressources 1 ]";
                         reward = "Débloque l'Amélioration [ Gain de Ressources 19 ]" +
                             "\n- File d'Améliorations + 5";
@@ -5345,7 +5403,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Upgrade18:
                         name = "Meilleure Collecte 18";
                         client = "Yuni";
-                        description = "";
+                        description = "La dernière quête est là ! Entre le moment de ton départ et maintenant, avec le but d'atteindre le Niveau 2000 de Gain de Ressources 1, ton aventure était vraiment incroyable. Donne tout ce que tu as pour ce dernier défi. La victoire est à portée de main !";
                         condition = "Atteindre le Nv 2000 pour l'Amélioration [ Gain de Ressources 1 ]";
                         reward = "Débloque l'Amélioration [ Gain de Ressources 20 ]" +
                             "\n- File d'Améliorations + 5";
@@ -5468,73 +5526,101 @@ public class Localized_French : LOCALIZATION
                         break;
                     case QuestKindGlobal.Capture2:
                         name = "Capture de Monstre 2";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Eh salut ! T'dois chercher comment entraîner et gérer d'monstrueux, non ? Cherche pas plus loin, j'serais content de t'apprendre ça. D'bord, t'dois avoir un piège. Va au Magasin, achète des pièges et capture des monstrueux, puis reviens me voir. J't'attendrai ici.";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
+                        description = "Eh salut ! Tu dois chercher comment entraîner et gérer des monstrueux, non ? Cherche pas plus loin, je serais content de t'apprendre ça. D'abord, tu dois avoir un piège. Va au Magasin, achète des pièges et capture des monstrueux, puis reviens me voir. Je t'attendrai ici.";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000);
                         reward = "Gain de Points de Domptage + 20%";
                         break;
                     case QuestKindGlobal.Capture3:
                         name = "Capture de Monstre 3";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Hé ! T'là ! On d'rait que t'dégoté des pièges et que t'sû les utiliser, c'vrai. T'comme un magicien maintenant ! Comme t'sais t'débrouiller avec l'monstrueux maintenant, et t'vu comment l'faire devenir des animaux d'compagnie tout mimi, eh oui, t'peut-être pu voir que seul un certain nombre peut t'suivre à la fois. T'dois continuer à améliorer l'bâtiment Trappeur ! Oh, et comme on est potes, j't'dirai un petit secret qui t'sera utile. Cherche un monstrueux qui t'aides pour l'capture.";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
+                        description = "Hé ! T'es là ! On dirait que tas dégoté des pièges et que t'a su les utiliser, c'est vrai. T'es comme un magicien maintenant ! Comme tu sais te débrouiller avec les monstrueux maintenant, et t'as vu comment les faire devenir des animaux de compagnie tout mimis, eh oui, t'as peut-être pu voir que seul un certain nombre peut te suivre à la fois. Tu dois continuer à améliorer le bâtiment Trappeur ! Oh, et comme on est potes, je te dirai un petit secret qui te sera utile. Cherche un monstrueux qui t'aides pour la capture.";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000);
                         reward = "Gain de Points de Domptage + 30%";
                         break;
                     case QuestKindGlobal.Capture4:
                         name = "Capture de Monstre 4";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
-                        description = "Eh bien s'lut ! Ce p'ti gars à huit pattes a bien aidé, non ? J'suis sûr que oui ! Maintenant s't'veux faire ça plus sérieusement, t'dois étendre la sélection de pièges dans l'Magasin ! Pour ça y faut réparer le bâtiment Trappeur bien comme il faut, c'vrai. Reviens m'voir quand l'Magasin vend d'pièges pour l'monstrueux rouges !";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
+                        description = "Eh bien salut ! Ce p'ti gars à huit pattes a bien aidé, non ? J'suis sûr que oui ! Maintenant si tu veux faire ça plus sérieusement, tu dois étendre la sélection de pièges dans le Magasin ! Pour ça y faut réparer le bâtiment Trappeur bien comme il faut, c'est vrai. Reviens me voir quand le Magasin vend des pièges pour les monstrueux rouges !";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000)
                             + "\n- Rang 3 pour le Bâtiment de Ville [Trappeur]";
                         reward = "Gain de Points de Domptage + 40%";
                         break;
                     case QuestKindGlobal.Capture5:
                         name = "Capture de Monstre 5";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000);
                         reward = "Gain de Points de Domptage + 50%";
                         break;
                     case QuestKindGlobal.Capture6:
                         name = "Capture de Monstre 6";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10000000);
                         reward = "Gain de Points de Domptage + 75%";
                         break;
                     case QuestKindGlobal.Capture7:
                         name = "Capture de Monstre 7";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(50000000);
                         reward = "Gain de Points de Domptage + 100%";
                         break;
                     case QuestKindGlobal.Capture8:
                         name = "Capture de Monstre 8";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100000000);
                         reward = "Gain de Points de Domptage + 200%";
                         break;
                     case QuestKindGlobal.Capture9:
                         name = "Capture de Monstre 9";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(300000000);
                         reward = "Gain de Points de Domptage + 300%";
                         break;
                     case QuestKindGlobal.Capture10:
                         name = "Capture de Monstre 10";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(500000000);
                         reward = "Gain de Points de Domptage + 500%";
                         break;
                     case QuestKindGlobal.Capture11:
                         name = "Capture de Monstre 11";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000000000);
                         reward = "Gain de Points de Domptage + 1000%";
                         break;
                     case QuestKindGlobal.Capture12:
                         name = "Capture de Monstre 12";
-                        client = "Dirge Suebe, l'Eleveur de Monstres";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(5000000000);
                         reward = "Gain de Points de Domptage + 5000%";
+                        break;
+                    case QuestKindGlobal.Capture13:
+                        name = "Capture de Monstre 13";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
+                        description = "";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(10e9);
+                        reward = "Gain de Points de Domptage + 10000%";
+                        break;
+                    case QuestKindGlobal.Capture14:
+                        name = "Capture de Monstre 14";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
+                        description = "";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(25e9);
+                        reward = "Gain de Points de Domptage + 15000%";
+                        break;
+                    case QuestKindGlobal.Capture15:
+                        name = "Capture de Monstre 15";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
+                        description = "";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(50e9);
+                        reward = "Gain de Points de Domptage + 25000%";
+                        break;
+                    case QuestKindGlobal.Capture16:
+                        name = "Capture de Monstre 16";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
+                        description = "";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100e9);
+                        reward = "Gain de Points de Domptage + 50000%";
                         break;
 
                     case QuestKindGlobal.Alchemy1:
@@ -5635,7 +5721,15 @@ public class Localized_French : LOCALIZATION
                             "\n- Vous pouvez obtenir des <color=orange>Topazes</color> pour chaque héros la première fois que vous complétez chaque étage. Si vous avez du mal à progresser dans le donjon, considérez d'essayer avec d'autres héros." +
                             "\n- Vous pouvez réinitialiser le coût d'entrée en Orbe Portail en utilisant un <color=orange>Ticket de Réinitialisation de Coût d'Entrée</color>. Vous pouvez recevoir ce ticket en tant ue récompense de quête journalière à travers l'un des Effets de Palier de Niveau du Bâtiment de Ville [Arène Mystique].";
                         condition = "Compléter le 10ème étage du Super Donjon [La Cachette Slime]";
-                        reward = "Gain de Renommée + " + percent(0.20d);
+                        reward = "Débloque l'Onglet [Magasin de Rubis] dans le Super Donjon\n- Gain de Renommée + " + percent(0.20d);
+                        break;
+                    case QuestKindGlobal.SD4:
+                        name = "Super Donjon 4";
+                        client = "Hitan";
+                        description = "Tu as vaincu le boss de défi ? Je suis très fier de toi. Cependant, on ne s'arrête pas ici, si ? Tu dois te diriger plus profondément dans le donjon et trouver ce qui t'attends. Avec ce nouveau butin, tu peux faire des choses merveilleuses !" +
+                            "\n- Vous pouvez obtenir des <color=orange>Rubis</color> pour chaque héros la permière fois qu'un étage de boss de défi est complété (tous les 10 étages). Si vous avez du mal à progresser dans le donjon, considérez de dépenser des rubis pour acheter des <color=orange>reliques</color>, des <color=orange>parchemins antiques</color>, ou d'autres choses dans le sous-onglet <color=orange>[Magasin de Rubis]</color>." +
+                            "\n- Après avoir vaincu un boss pour la première fois, toute nouvelle complétion pour ce héros vous donnera des <color=orange>Fragments de Rubis</color>, qui peuvent être convertis en Rubis.";
+                        condition = "Dépense 1 Rubis";
                         break;
                 }
                 break;
@@ -6129,73 +6223,73 @@ public class Localized_French : LOCALIZATION
                         break;
                     case QuestKindTitle.ExplorerOfSD1:
                         name = Title(TitleKind.ExplorerOfSD) + " 1";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(100);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100);
+                        client = "Widget";
+                        description = "Maintenant que tu as trouvé le Super Donjon et que tu as prouvé que tu peux survivre là-dedans, il est temps de devenir plus fort et de libérer un chemin à l'intérieur. Les monstres super forts des Super Donjons ne te rendront pas la tâche facile, donc on va devoir t'envoyer là-dedans et réduire leurs nombres pour que tu puisses explorer des étages plus bas.";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(100);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100);
                         break;
                     case QuestKindTitle.ExplorerOfSD2:
                         name = Title(TitleKind.ExplorerOfSD) + " 2";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(500);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500);
+                        client = "Widget";
+                        description = "On dirait que tu as réussi à visiter les étages plus profonds, mais il y a toujours beaucoup à faire ! Plus tu iras loin, plus tu trouveras de monstres qui barreront ton chemin. Ne t'inquiètes pas, plus il y a de monstres, plus tu auras d'opportunités de devenir plus fort ! Repars dans ce donjon et vva vaincre plus de monstres pour voir ce dont tu es capable !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(500);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500);
                         break;
                     case QuestKindTitle.ExplorerOfSD3:
                         name = Title(TitleKind.ExplorerOfSD) + " 3";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(2000);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(2000);
+                        client = "Widget";
+                        description = "Je suis content de voir que tu as réussi à vaincre quelques monstres dans le Super Donjon, main malheureusement il y en a juste trop pour compter qui t'attendent toujours. Tu vas devoir y rester pendant longtemps, mais au moins, tu pourras devenir bien plus fort, donc montre-moi ce que tu peux faire et va vaincre quelques milliers de monstres !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(2000);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(2000);
                         break;
                     case QuestKindTitle.ExplorerOfSD4:
                         name = Title(TitleKind.ExplorerOfSD) + " 4";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(10000);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000);
+                        client = "Widget";
+                        description = "Tu l'as fait ! Tu as fait du bon travail, mais je crois que tu sais déjà ce que je vais dire. Quelques milliers de monstres comparé à une horde n'est qu'une goutte d'eau dans l'ocean. Accélérons la cadence vu que tu dois t'en débarasser plus vite qu'avant, reviens me voir lorsque tu en auras vaincu 10 000 de plus !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(10000);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000);
                         break;
                     case QuestKindTitle.ExplorerOfSD5:
                         name = Title(TitleKind.ExplorerOfSD) + " 5";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(50000);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(50000);
+                        client = "Widget";
+                        description = "Voilà, tu as l'air prometteur maintenant, je commence à être excité à propos de ce qu'on peut trouver d'autre dans le Super Donjon ! Tu dois pouvoir aller assez profondément maintenant. Je suis sûr qu'il doit y avoir encore plus de monstres plus bas. La prochaine fois que tu retourneras dans le donjon, ta nouvelle tâche sera de vaincre 50 000 monsters. Je sais que ça a l'air d'être beaucoup, mais j'ai confiance en toi !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(50000);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(50000);
                         break;
                     case QuestKindTitle.ExplorerOfSD6:
                         name = Title(TitleKind.ExplorerOfSD) + " 6";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(100000);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100000);
+                        client = "Widget";
+                        description = "Tu dois être fatigué de me voir maintenant, mais hé, regarde jusqu'où tu es arrivé ! Tu sais ce que je vais dire... tu as fait tes preuves jusqu'à présent, et tu t'es beaucoup renforcé depuis qu'on a commencé, mais il y a plus de travail à faire, et tu dois faire tes preuves une fois de plus. Ces monstres des étages plus hauts ne sont pas à ta cheville, mais comment est-ce que ça se passe dans les étages plus profonds ? Reviens me voir lorsque tu auras vaincu 100 000 monstres et on verra ensuite.";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(100000);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100000);
                         break;
                     case QuestKindTitle.ExplorerOfSD7:
                         name = Title(TitleKind.ExplorerOfSD) + " 7";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(500000);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500000);
+                        client = "Widget";
+                        description = "Hé, t'as éradiqué beaucoup de monstres, mais le Super Donjon est toujours rempli de tant de monstres. Au moins, tu arrives à les garder à distance, donc bien joué à toi pour être arrivé jusqu'ici ! Je suis sûr que tu dois pouvoir en éradiquer plein à la fois, donc, je sais que c'est une grande différence, mais pour ta prochaine tâche, repars dans le donjon et éradique 500 000 de ces super monstres pour moi, car je ne peux pas penser à une autre personne à qui demancer ça maintenant !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(500000);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(500000);
                         break;
                     case QuestKindTitle.ExplorerOfSD8:
                         name = Title(TitleKind.ExplorerOfSD) + " 8";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(1000000);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1000000);
+                        client = "Widget";
+                        description = "Super ! Excellent travail ! A chaque fois que je te vois revenir pour me parler, je deviens de plus en plus excité ! Tu ne vas certainement pas laisser le Super Donjon et ses hordes infinies te saper le moral, ça c'est sûr. Je suis surpris de voir que ces monstres ne s'enfuient pas en courant en te voyant rentrer dans le donjon ! Quand on a commencé tout ça, je n'étais pas sûr que tu serais capable d'arriver jusqu'ici, mais maintenant je sais que tu ne seras pas surpris si je te dis d'y retourner et de vaincre un million de monstres en plus, n'est-ce pas ? J'ai hâte de te revoir !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(1000000);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1000000);
                         break;
                     case QuestKindTitle.ExplorerOfSD9:
                         name = Title(TitleKind.ExplorerOfSD) + " 9";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(5000000);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(5000000);
+                        client = "Widget";
+                        description = "Tu as vraiment éradiqué toutes ces hordes de monstres dans le donjon cette fois, j'en suis presque bouche bée... presque. Vu que tu t'en sors si bien et que tu arrives à la fin des tests que j'ai à te donner, je veux voir si je peux vraiment te donner une tâche difficile, cette fois-ci. Ne porte pas la faute sur moi, tu es celui qui continue d'exploser toutes mes attentes ! Donc, voyons-voir combien de temps il te faut pour vaincre 5 000 000 de monstres cette fois-ci ! Je t'attendrai ici !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(5000000);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(5000000);
                         break;
                     case QuestKindTitle.ExplorerOfSD10:
                         name = Title(TitleKind.ExplorerOfSD) + " 10";
-                        client = "";
-                        description = "";
-                        if (!quest.isAccepted) condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(10000000);
-                        else condition = "Vaincre tout monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000000);
+                        client = "Widget";
+                        description = "Eh bien, tu l'as fait. Regarde jusqu'où tu es arrivé depuis la première fois que tu es arrivé dans un Super Donjon. J'ai êut-être émis des doutes sur toi au début, mais tu as effacé tous mes doutes sur toi. Malheureusement, c'est sans doute la dernière fois que je te parlerai, donc faisons en sorte que ce soit une grosse tâche ! Pour ton dernier titre, tu vas devoir éradiquer 10 000 000 monstres de plus. N'oublie pas, héros, je te soutiens, et j'espère qu'on se verra de nouveau dans le futur !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(10000000);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000000);
                         break;
                     case QuestKindTitle.FireResistance1: //TODO
                         name = Title(TitleKind.FireResistance) + " 1";
@@ -7356,8 +7450,8 @@ public class Localized_French : LOCALIZATION
             case 30: return "Emplacement de Set de Capacité + 1";
             case 31: return "Niveau de Bâtiment de Ville + " + text;
             case 32: return "Limite de Loyauté de Familier + " + text;
-            case 33: return "Améliore l'effet des améliorations de Gain de Ressources";
-            case 34: return "Réduit l'incrément du coût par Nv des améliorations de Gain de Ressources par " + text;
+            case 33: return "Améliore l'effet des Améliorations de Gain de Ressources";
+            case 34: return "Réduit l'incrément du coût par Nv des Améliorations de Gain de Ressources par " + text;
             case 35: return "Limite de Rang de Familier + " + text;
             case 36: return "Les Files d'Amélioration/Alchimie persistent après une Ascension Monde";
             case 37: return "Les Capacités restent au Rang 1 après une Ascension Monde ";
@@ -7373,6 +7467,7 @@ public class Localized_French : LOCALIZATION
             case 47: return "Les Parchemins de Lotterie tirent seulement des valeurs plus hautes";
             case 48: return "Intérêt sur les Pièces Slime + " + text;
             case 49: return "Gain de Score d'Invasion + " + text;
+            case 50: return "+" + text + " de Pièces de Donjon et de Fragments de Rubis sont gardés après la mort dans un SD";
         }
         return base.MissionMilestoneString(id);
     }
@@ -7672,7 +7767,7 @@ public class Localized_French : LOCALIZATION
             case 4: return "<size=20><u>Coût de Fabrication</u><size=18>";
             case 5: return "<color=orange> Désassembler";
             case 6: return "<color=yellow>Maj + C pour fabriquer</color>";
-            case 7: return "La Fabrication n'est pas possible sur les Antiquités.";
+            case 7: return "La Fabrication n'est pas possible sur les Reliques.";
         }
         return base.EquipmentDictionaryUIString(id);
     }
@@ -7880,7 +7975,7 @@ public class Localized_French : LOCALIZATION
             case 13: return "\n- Le Rang, Niveau et la Maîtrise des Capacités";
             case 14: return "\n- Le Niveau d'Amélioration dans l'onglet d'Amélioration";
             case 15: return "\n- Les objets dans l'Inventaire d'Enchantements, le Niveau et la Maîtrise des Équipements et les Améliorations de Dictionnaire";
-            case 16: return "\n- Les Équipements/Antiquités sans emplacement d'enchantement dans l'inventaire et les emplacements d'équipement";/
+            case 16: return "\n- Les Équipements/Reliques sans emplacement d'enchantement dans l'inventaire et les emplacements d'équipement";/
             case 17: return "\n- Les Expansions d'Eau Mystérieuse et les Catalyseurs";
             case 18: return "\n- Le Niveau, l'EXP et les Capacités de Guilde";
             case 19: return "\n- Le Rang et Niveau des Bâtiments de Ville et les Matériaux de Ville";
@@ -7890,7 +7985,7 @@ public class Localized_French : LOCALIZATION
             case 23: return "\n- Les Orbes de Portail, le # de Complétions de Donjon et les Améliorations de Prestige de Donjon";
             case 24: return "\n- Les Quêtes Globales, Journalières, de Titre et les Titres déjà acquis, la Maîtrise des Quêtes Globales";
             case 25: return "\n- L'Effet de Maîtrise des Équipements";
-            case 26: return "\n- Les Équipements/Antiquités avec des effets d'enchantement, des emplacements d'enchantement ou des effets de forge dans l'inventaire";
+            case 26: return "\n- Les Équipements/Reliques avec des effets d'enchantement, des emplacements d'enchantement ou des effets de forge dans l'inventaire";
             case 27: return "\n- Les objets dans l'Inventaire d'Utilitaires et ses emplacements équipés, le progrès des Talismans";
             case 28: return "\n- Les Essences et Matéruaix sauf les Matériaux de Ville";
             case 29: return "\n- Les Améliorations d'Alchimie et le Niveau des Potions";
@@ -7909,7 +8004,7 @@ public class Localized_French : LOCALIZATION
             case 42: return "Ascension Monde de Classe " + tDigit(wa.tier + 1);
             case 43: return "\n- Classe de Héros, Renommée et Points de Super Abilité";
             case 44: return "\n- Etage Maximal de Super Donjon Atteint et Limite de # d'Achats du Magasin de Rubis";
-            case 45: return "\n- Paliers de Classe, Améliorations de Super Donjon et l'onglet Stats de Magasin de Rubis";
+            case 45: return "\n- Monnaies de Super Donjon, Paliers de Classe, Améliorations de Super Donjon et l'onglet Stats de Magasin de Rubis";
         }
         return "";
     }
@@ -8090,7 +8185,7 @@ public class Localized_French : LOCALIZATION
             case 55: return "Gain de Matériau lors du Désassemblage d'un Équipement ";
             case 56: return "Réduit le coût de fabrication par " + text;
             case 57: return "Temple";
-            case 58: return "Gain de Point de Réincarnation ";
+            case 58: return "Gain de Points de Réincarnation ";
             case 59: return "# Total de Réincarnations de Classe 1 : " + text;
             case 60: return "# Total de Réincarnations de Classe 2 : " + text;
             case 61: return "# Total de Réincarnations de Classe 3 : " + text;
@@ -8111,7 +8206,7 @@ public class Localized_French : LOCALIZATION
             case 76: return "Nv Max de Monstre Capturable : " + text;
             case 77: return "Battre tout monstre : ";
             case 78: return "Débloque un nouveau Piège dans le Magasin";
-            case 79: return "Gain de Point de Domptage + " + text + "%";
+            case 79: return "Gain de Points de Domptage + " + text + "%";
             case 80: return "# de Stock Max de Pièges dans le Magasin + " + text;
             case 81: return "Emplacement de Familier Actif + " + text;
             case 82: return "Réduit le temps de recharge des Pièges par " + text + " sec";
@@ -8157,7 +8252,7 @@ public class Localized_French : LOCALIZATION
             case 122: return "Montant de Récompense d'Expédition ";
             case 123: return "Gain d'EXP d'Expédition ";
             case 124: return "Gain d'EXP de Familier d'Expédition ";
-            case 125: return "Améliore l'effet des améliorations de Gain de Ressources";
+            case 125: return "Améliore l'effet des Améliorations de Gain de Ressources";
             case 126: return "Niveau Maximal d'Amélioration de Dictionnaire + " + text;
             case 127: return "Ajoute une récompense de \"Ticket de Réinitialisation\" dans les Quêtes Journalières [Cartographeur " + text + "]";
             case 128: return "";
@@ -8256,7 +8351,7 @@ public class Localized_French : LOCALIZATION
             case 6: return "Vous ne pouvez pas capturer des monstres de type 'colorés' avec cet objet.";
             case 7: return "Ce Talisman ne peut pas être désassemblé.";
             case 8: return "Effet Passif obtenu après désassemblage";
-            case 9: return "Cette antiquité consomme " + text + " Nitro par sec lorsqu'elle est équipée";
+            case 9: return "Cette relique consomme " + text + " Nitro par sec lorsqu'elle est équipée";
             default: return base.EquipMenuString(id, text);
         }
     }
@@ -8389,8 +8484,8 @@ public class Localized_French : LOCALIZATION
                 break;
 
             case SlimeBankUpgradeKind.SlimeCoinCap2:
-                name = "Limite de Pièce Slime 2";
-                description = "Multiplie la Limite de Pièce Slime";
+                name = "Limite de Pièces Slime 2";
+                description = "Multiplie la Limite de Pièces Slime";
                 effect = "par " + percent(1 + upgrade.EffectValue(isNextValue));
                 break;
 
@@ -8468,6 +8563,7 @@ public class Localized_French : LOCALIZATION
             case 14: return "Maîtrise d'Équipement";
             case 15: return "Progrès du Héros Actif";
             case 16: return "complétée " + text + " fois";
+            case 17: return "Rituels de Gemme de Gem";
             default: return base.OfflineBounusString(id, text);
         }
     }
@@ -8580,7 +8676,7 @@ public class Localized_French : LOCALIZATION
         switch (id)
         {
             case 0: return "Récompense d'EXP";
-            case 1: return "Gain de Point de Réincarnation de cette quête";
+            case 1: return "Gain de Points de Réincarnation de cette quête";
             case 2: return "Divise le coût d'emplacement d'acceptation par deux";
             case 3: return "Élimine le cout d'emplacement d'acceptation";
             default: return base.QuestString(id, text);
@@ -8864,7 +8960,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.UpgradeQueue5:
                 name = "File d'Amélioration + 5";
-                effect = "Augmente la taille de la File d'Amélioration par 5. Cette file est aussi disponible pour les améliorations de Banque Slime. Effectuez un Clic Droit sur une amélioration pour l'assigner à la File, et Maj + Clic Droit pour l'enlever de la File.";
+                effect = "Augmente la taille de la File d'Amélioration par 5. Cette file est aussi disponible pour les Améliorations de Banque Slime. Effectuez un Clic Droit sur une amélioration pour l'assigner à la File, et Maj + Clic Droit pour l'enlever de la File.";
                 break;
             case EpicStoreKind.AlchemyQueue10:
                 name = "File d'Alchimie + 10";
@@ -9047,6 +9143,15 @@ public class Localized_French : LOCALIZATION
                 name = "Réinitialisation de Pouvoir de Super Donjon";
                 effect = "Réinitialise le Rang des Pouvoirs de Super donjon et rembourse les Topazes dépensés.";
                 break;
+            case EpicStoreKind.SDLootGainOnDeath:
+                name = "Fugitif de Super Donjon";
+                effect = "Permet de ramener +25% du butin (pièces de donjon et fragments de rubis) après une mort dans un Super Donjon.";
+                break;
+            case EpicStoreKind.SDFilteredPowerupsAutoBuyLimit:
+                name = "Filtre de Limite d'Auto-Achat de Pouvoir";
+                effect = "Permet d'ajouter une limite d'achat de l'Automatisation de Super Donjon [Auto-Achat de Pouvoirs] dans la fenêtre Filtre de Pouvoir. Vous avez besoin d'Emplacements de Filtre de Pouvoir pour activer cette fonctionnalité sur un pouvoir.";
+                break;
+        }
         }
         return (name, effect);
     }
@@ -9173,7 +9278,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "<u>Donjons</u>";
                 tempStr += "\n- Chaque région a sa propre collection de donjons qui peuvent être débloqués.";
                 tempStr += "\n- Chaque entrée dans un donjon a un coût d'Orbes de Portail dépendant du Donjon. ";
-                tempStr += "\n- Vous avez un temps limité pour compéter le donjon, qui peut être augmenté à travers la Recherche de Ville, les Coffres au Trésor, et les améliorations de Prestige de Donjon.";
+                tempStr += "\n- Vous avez un temps limité pour compéter le donjon, qui peut être augmenté à travers la Recherche de Ville, les Coffres au Trésor, et les Améliorations de Prestige de Donjon.";
                 tempStr += "\n- Les Donjons sont une bonne source d'Or, d'EXP, d'Eclats Enchantés et d'autres matériaux. Ils sont très utiles pour atteindre votre premier requis de niveau de réincarnation.";
                 tempStr += "\n\n";
                 tempStr += "<u>Prestige de Donjon</u>";
@@ -9450,13 +9555,13 @@ public class Localized_French : LOCALIZATION
                 break;
             case HelpKind.Upgrade:
                 tempStr += "<u>Amélioration de Ressource</u>";
-                tempStr += "\n- L'onglet Ressource vous permet d'augmenter le nombre de ressources lâchées par les monstres en les achetant avec de l'or. Certaines quêtes peuvent aussidébloquer de nouvelles améliorations de gain de ressources.";
+                tempStr += "\n- L'onglet Ressource vous permet d'augmenter le nombre de ressources lâchées par les monstres en les achetant avec de l'or. Certaines quêtes peuvent aussi débloquer de nouvelles améliorations de gain de ressources.";
                 tempStr += "\n\n";
                 tempStr += "<u>Améliorations de Statistiques</u>";
                 tempStr += "\n- L'onglet Stats donne accès à des bonus lié à différentes statistiques pour tous les héros, pour un coût d'or et de ressources.";
                 tempStr += "\n\n";
                 tempStr += "<u>Améliorations de Limite d'Or</u>";
-                tempStr += "\n- Les améliorations de limite d'or vous permettent d'augmenter la Limite d'Or contre des ressources. Chaque ressource a sa propre amélioration qui vous permet d'augmenter la Limite d'Or.";
+                tempStr += "\n- Les Améliorations de Limite d'Or vous permettent d'augmenter la Limite d'Or contre des ressources. Chaque ressource a sa propre amélioration qui vous permet d'augmenter la Limite d'Or.";
                 tempStr += "\n\n";
                 tempStr += "<u>Améliorations de Banque Slime</u>";
                 tempStr += "\n- Débloqué après avoir atteint le Niveau de Guilde 35, la Banque Slime offre de nouvelles améliorations contre des Pièces Slime, qui permettent d'améliorer différents aspects du jeu.";
@@ -9522,7 +9627,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Pour utiliser un parchemin d'enchantement, glissez-déposez un Parchemin d'Enchantement depuis l'Inventaire d'Enchantements sur une pièce d'équipement dans l'Inventaire qui a un Emplacement d'Enchantement vide.";
                 break;
             case HelpKind.Guild:
-                tempStr += "C'est ici que vous pouvez voir votre niveau de Guilde courant, tous les membres de la guilde, et les améliorations de guilde. ";
+                tempStr += "C'est ici que vous pouvez voir votre niveau de Guilde courant, tous les membres de la guilde, et les améliorations de guilde.";
                 tempStr += "\n\n";
                 tempStr += "<u>Niveau de Guilde</u>";
                 tempStr += "\n- Les niveaux de guilde débloquent des bâtiments de ville et peuvent être un requis pour augmenter le Rang de certains bâtiments de ville.";
@@ -9677,7 +9782,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "Les 8 Paliers sont";
                 tempStr += "\n- Constructeur de Ville – Celui-ci est directement lié au nombre de niveaux de vos bâtiments de ville.";
                 tempStr += "\n- Emissaire de la Carte – Nombre total de Paliers de Missions de Zone atteint pendant cette Ascension Monde.";
-                tempStr += "\n- Très Ressourcé - Lié au nombre de niveaux de l'onglet Général 1, des améliorations de Gain de Ressources.";
+                tempStr += "\n- Très Ressourcé - Lié au nombre de niveaux de l'onglet Général 1, des Améliorations de Gain de Ressources.";
                 tempStr += "\n- Explorateur du Monde – La distance totale parcourue par les héros et les familiers pendant cette Ascension Monde.";
                 tempStr += "\n- Expert en Équipement - Celui-ci se concentre sur le nombre de points de dictionnaire accumulés.";
                 tempStr += "\n- Désassembleur Professionnel – Nombre total de Matériaux de Ville gagnés à travers le Désassemblage d'Équipement.";
@@ -9787,7 +9892,8 @@ public class Localized_French : LOCALIZATION
         tempStr += "\n- Pièces de Donjon gagnées dans un SD : " + tDigit(main.S.totalDungeonCoinGained);
         tempStr += "\n- Pièces de Donjon sauvées d'un SD : " + tDigit(main.S.totalPermanentDungeonCoinGained);
         tempStr += "\n- Rubis : " + tDigit(main.S.totalRubyGained);
-        tempStr += "\n- Morceaux de Rubis : " + tDigit(main.S.totalPieceOfRubyGained);
+        tempStr += "\n- Fragments de Rubis : " + tDigit(main.S.totalPieceOfRubyGained);
+        tempStr += "\n- Pierre Mère : " + tDigit(main.S.totalMotherStoneGained);
         tempStr += "\n- Tickets de Réinitialisation de Coût d'Entrée : " + tDigit(main.S.totalEntryCostRefreshTicketGained);
         tempStr += "\n- Tickets de Réinitialisation de Coût d'Entrée Utilisés : " + tDigit(main.S.totalEntryCostRefreshTicketUsed);
         tempStr += "\n\n";
@@ -10170,11 +10276,11 @@ public class Localized_French : LOCALIZATION
             case ExpeditionKind.Equipment:
                 name = "Entraînement d'Équipement";
                 effect = "Temps de Parchemin de Maîtrise : <color=green>" + percent(1 + 0.10d * expedition.level.value) + "</color>  ( + " + percent(0.10d) + " par Niveau )";
-                passive = optStr + "Multiplie le Gain en Maîtrise d'Équipement par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
+                passive = optStr + "Multiplie le Gain de Maîtrise d'Équipement par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 break;
             case ExpeditionKind.PetExp:
                 name = "Entraînement sur le Terrain";
-                effect = "Gain en EXP de Familier : <color=green>" + percent(Math.Pow(1.2d, expedition.level.value)) + "</color>  ( x1.2 par Niveau )";
+                effect = "Gain d'EXP de Familier : <color=green>" + percent(Math.Pow(1.2d, expedition.level.value)) + "</color>  ( x1.2 par Niveau )";
                 passive = optStr + "Multiplie les Gains d'EXP de Familier en expédition par <color=green>" + percent(1 + expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 reward = "EXP de Familier " + text;
                 break;
@@ -10312,13 +10418,13 @@ public class Localized_French : LOCALIZATION
             case PetPassiveEffectKind.TownMatGainFromDungeonReward:
                 return "Gain de Matériel de Ville des Récompenses de Dongeons <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.EquipProfGain:
-                return "Gain en Maîtrise d'Équipement <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
+                return "Gain de Maîtrise d'Équipement <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.MysteriousWaterGain:
                 return "Gain d'Eau Mystérieuse <color=green>+ " + tDigit(pet.effectValue, 3) + " / sec</color> ( + " + tDigit(pet.effectIncrementValue, 3) + " / Rang )";
             case PetPassiveEffectKind.ChestPortalOrbChance:
                 return "Chance de Trouver une Orbe Portail dans un Coffre : <color=green>" + percent(pet.effectValue, 4) + "</color> ( + " + percent(pet.effectIncrementValue, 4) + " / Rang )";
             case PetPassiveEffectKind.SkillProfGain:
-                return "Gain en Maîtrise de Capacité <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
+                return "Gain de Maîtrise de Capacité <color=green>+ " + percent(pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.TownMatGain:
                 return "Multiplicateur de Gain de Matériaux de Ville <color=green>" + percent(1 + pet.effectValue) + "</color> ( + " + percent(pet.effectIncrementValue) + " / Rang )";
             case PetPassiveEffectKind.ResearchPowerStone:
@@ -10428,7 +10534,7 @@ public class Localized_French : LOCALIZATION
             case WorldAscensionMiletoneKind.DisassembleEquipment:
                 name = "Désassembleur Professionnel";
                 description = "Total des Matériaux de Ville Acquis en désassemblant";
-                passive = "Gain en Maîtrise d'Équipement + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
+                passive = "Gain de Maîtrise d'Équipement + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
             case WorldAscensionMiletoneKind.RebirthPointGainTier1:
                 name = "Réincarnateur Classe 1";
@@ -10550,6 +10656,7 @@ public class Localized_French : LOCALIZATION
             case 11: return "Rupture de Stock";
             case 12: return "Chance d'Apparition de " + text;
             case 13: return "Changement vers " + text;
+            case 14: return "Progrès Courant";
             default: return base.OtherString(id, text);
         }
     }
@@ -10570,8 +10677,8 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Gain de Point de Domptage + " + text;
-            case 1: return "Gain de Point de Loyauté + " + text;
+            case 0: return "Gain de Points de Domptage + " + text;
+            case 1: return "Gain de Points de Loyauté + " + text;
             case 2: return "Gain d'EXP de Familier + " + text;
             case 3: return "Stats de Familier + " + text;
             case 4: return "Effet PAssif de Familier + " + text;
@@ -10592,7 +10699,7 @@ public class Localized_French : LOCALIZATION
             case 0: return "Vous recevrez des Pièces de Donjon après avoir vaincu des monstres.";
             case 1: return "Vous recevrez des Topazes lorsque vous complétez un étage pour la première fois, pour chaque héros.";
             case 2: return "Vous recevrez des Rubis lorsque vous complétez chaque dixième étage pour la première fois, pour chaque héros.";
-            case 3: return "Vous recevrez des Morceaux de Rubis lorsque vous complétez chaque dixième étage après la première fois, pour chaque héros.";
+            case 3: return "Vous recevrez des Fragments de Rubis lorsque vous complétez chaque dixième étage après la première fois, pour chaque héros.";
             case 4: return "Acheté dans l'Essai Courant #";
             case 5: return "Coût Courant en Orbes Portail pour Entrer";
             case 6: return "Ticket qui réinitialise le Coût en Orbe Portail des Super Donjons à 1 Orbe Portail par entrée.";
@@ -10668,6 +10775,26 @@ public class Localized_French : LOCALIZATION
             case 76: return "Vous quitterez le Super Donjon automatiquement dans " + text + " sec si vous n'atteignez pas le prochain étage.";
             case 77: return "Total utilisé";
             case 78: return "<sprite=\"locks\" index=0> Accepter la nouvelle Quête Globale [Super Dunjon 1]";
+            case 79: return "[Dégâts Reçus] = [ATQ/MATQ du Monstre] * (1 - [Réduction] * [Multiplicateur de Réduction de Dégâts de SD])";
+            case 80: return "Multiplicateur de Dégâts de Boss de Défi de SD";
+            case 81: return "Modificateur Courant #";
+            case 82: return "Max Complété #";
+            case 83: return "Furie d'Armure de SD";
+            case 84: return "Furie d'Esprit de SD";
+            case 85: return "Augmente le Multiplicateur de Dégâts de SD par ([Furie d'Armure de SD] x Log2([DEF Absolue]))%";
+            case 86: return "Augmente le Multiplicateur de Dégâts de SD par ([Furie d'Esprit de SD] x Log2([MDEF Absolue]))%";
+            case 87: return "Filtre de Pouvoir";
+            case 88: return "Emplacement de Filtre de Pouvoir";
+            case 89: return "Les pouvoirs barrés N'APPARAITRONT PAS dans les zones sûres. Jusqu'à [# d'Emplacements de Filtre de Pouvoir] pouvoirs peuvent être filtrés.\nSi vous achetez [Filtre de Limite d'Auto-Achat de Pouvoir] dans le Magasin Epique, vous pouvez ajouter une limite d'achat aux pouvoirs barrés qui les feront apparaître dans les zones sûres jusqu'à qu'une limite d'achat soit atteinte, après quoi ils n'apparaîtront plus.\nUne Limite d'Achat de 0 veut dire que le pouvoir n'apparaîtra jamais dans les zones sûres.";
+            case 90: return "Limite d'Achat";
+            case 91: return "M";
+            case 92: return "Vous recevrez des Pierres Mères lorsque vous compléterez l'E100 d'un donjon pour la première fois, par héroq.";//TODO
+            case 93: return "Assigné";
+            case 94: return "+Tout";
+            case 95: return "Rituels de Gemme";
+            case 96: return "Palier de Modificateur";
+            case 97: return "Total M" + text;
+            case 98: return "# Total de Max Modificateurs Complétés";
         }
         return text;
     }
@@ -10777,7 +10904,17 @@ public class Localized_French : LOCALIZATION
             case SuperDungeonPowerupKind.EquipmentDropChance:
                 name = "Chance d'Apparition d'Équipement";
                 effect = "Chance d'Apparition d'Équipement Absolue + {0} ( + {1} / Rang )";
-                permanentEffect = "Gain de Maîtrise d'Antiquité + {0} ( + {1} / achat )";
+                permanentEffect = "Gain de Maîtrise de Relique + {0} ( + {1} / achat )";
+                break;
+            case SuperDungeonPowerupKind.ChallengeBossDamageMultiplier://NEW11
+                name = "Multiplicateur de Dégâts de Boss de Défi de SD";
+                effect = "Multiplicateur de Dégâts de Boss de Défi de SD + {0} ( + {1} / Rang )";
+                permanentEffect = "Multiplication du Multiplicateur de Dégâts de Boss de Défi de SD + {0} ( + {1} / achat )";
+                break;
+            default:
+                name = base.SDPowerupString(kind,text).name;
+                effect = base.SDPowerupString(kind,text).effect;
+                permanentEffect = base.SDPowerupString(kind,text).permanentEffect;
                 break;
         }
         return (name, effect, permanentEffect);
@@ -10791,8 +10928,8 @@ public class Localized_French : LOCALIZATION
             case 1: return "Convertit " + text1 + " <sprite=\"PieceOfRuby\" index=0> " + Basic(BasicWord.PieceOfRuby) + " en 1 <sprite=\"Ruby\" index=0> " + Basic(BasicWord.Ruby);
             case 2: return "Convertisseur de Morceau de Rubis";
             case 3: return "Convertit 1 <sprite=\"Ruby\" index=0> " + Basic(BasicWord.Ruby) + " en " + text1 + " <sprite=\"PieceOfRuby\" index=0> " + Basic(BasicWord.PieceOfRuby);
-            case 4: return "Effet d'Antiquité";
-            case 5: return text1 + " des stats \"Effet d'Équipement\" s'applique aux Antiquités ( + " + text2 + " / Nv )" + "\n- Effet d'Équipement Courant des Antiquités : " + text3;
+            case 4: return "Effet de Relique";
+            case 5: return text1 + " des stats \"Effet d'Équipement\" s'applique aux Reliques ( + " + text2 + " / Nv )" + "\n- Effet d'Équipement Courant des Reliques : " + text3;
             default: return text1;
         }
     }
@@ -10874,6 +11011,236 @@ public class Localized_French : LOCALIZATION
                 effect = "Débloque le bouton \"Auto Utilisation des Tickets de Réinitialisation\" dans l'onglet Options de SD qui utilise un Ticket de Réinitialisation de Coût d'Entrée lorsque le coût d'entrée excède une certaine valeur";
                 effectWithLevel = "";
                 break;
+            case SuperDungeonUpgradeKind.SDChallengeBossDamageMultiplier:
+                name = "Multiplicateur de Dégâts de Boss de Défi de SD";
+                effect = "Multiplie le Multiplicateur de Dégâts de Boss de Défi de SD";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.GoldCap:
+                name = "Gold Cap";
+                effect = "Multiplie la Limie d'Or";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.SlimeCoinCap:
+                name = "Slime Coin Cap";
+                effect = "Multiplie la Limite de Pièces Slime";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.HPMultiplier:
+                name = "Multiplicateur de " + BasicStats(BasicStatsKind.HP);
+                effect = "Multiplie les " + BasicStats(BasicStatsKind.HP);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.MPMultiplier:
+                name = "Multiplicateur de " + BasicStats(BasicStatsKind.MP);
+                effect = "Multiplie les " + BasicStats(BasicStatsKind.MP);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.ATKMultiplier:
+                name = "Multiplicateur d'" + BasicStats(BasicStatsKind.ATK);
+                effect = "Multiplie l'" + BasicStats(BasicStatsKind.ATK);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.MATKMultiplier:
+                name = "Multiplicateur de " + BasicStats(BasicStatsKind.MATK);
+                effect = "Multiplie la " + BasicStats(BasicStatsKind.MATK);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.DEFMultiplier:
+                name = "Multiplicateur de " + BasicStats(BasicStatsKind.DEF);
+                effect = "Multiplie la " + BasicStats(BasicStatsKind.DEF);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.MDEFMultiplier:
+                name = "Multiplicateur de " + BasicStats(BasicStatsKind.MDEF);
+                effect = "Multiplie la " + BasicStats(BasicStatsKind.MDEF);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.SPDMultiplier:
+                name = "Multiplicateur de " + BasicStats(BasicStatsKind.SPD);
+                effect = "Multiplie la " + BasicStats(BasicStatsKind.SPD);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.PhysicalCriticalChanceMul:
+                name = "Multiplicateur de " + Stat(Stats.PhysCritChance);
+                effect = "Multiplie la " + Stat(Stats.PhysCritChance);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.MagicalCriticalChanceMul:
+                name = "Multiplicateur de " + Stat(Stats.MagCritChance);
+                effect = "Multiplie la " + Stat(Stats.MagCritChance);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.CriticalDamageMul:
+                name = "Multiplicateur de " + Stat(Stats.CriticalDamage);
+                effect = "Multiplie les " + Stat(Stats.CriticalDamage);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.DebuffResistanceMul:
+                name = "Multiplicateur de " + Stat(Stats.DebuffRes);
+                effect = "Multiplie la " + Stat(Stats.DebuffRes);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.PetPhysicalCriticalChanceMul:
+                name = "Multiplicateur de " + Stat(Stats.PetPhysCritChance);
+                effect = "Multiplie la " + Stat(Stats.PetPhysCritChance);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.PetMagicalCriticalChanceMul:
+                name = "Multiplicateur de " + Stat(Stats.PetMagCritChance);
+                effect = "Multiplie la " + Stat(Stats.PetMagCritChance);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.PetCriticalDamageMul:
+                name = "Multiplicateur de " + Stat(Stats.PetCriticalDamage);
+                effect = "Multiplie les " + Stat(Stats.PetCriticalDamage);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.PetDebuffResistanceMul:
+                name = "Multiplicateur de " + Stat(Stats.PetDebuffResistance);
+                effect = "Multiplie la " + Stat(Stats.PetDebuffResistance);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.ElementResistanceMultiplier:
+                name = "Multiplicateur de Résistance Élementaire";
+                effect = "Multiplie Toutes les Résistances Élementaires";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.PhysicalDamageMultiplier:
+                name = "Multiplicateur des Dégâts Physiques";
+                effect = "Multiplie les Dégâts Physiques";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.MagicalDamageMultiplier:
+                name = "Multiplicateur des Dégâts Magiques";
+                effect = "Multiplie les Dégâts Magiques";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.ArmoredFuryMultiplier:
+                name = "Multiplicateur de " + Stat(Stats.ArmoredFury);
+                effect = "Multiplie la " + Stat(Stats.ArmoredFury);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.WardedFuryMultiplier:
+                name = "Multiplicateur de " + Stat(Stats.WardedFury);
+                effect = "Multiplie la " + Stat(Stats.WardedFury);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.DamageToRegularMonstersMultiplier:
+                name = "Dégâts de Monstres Normaux";
+                effect = "Multiplie les Dégâts infligés aux Monstres Normaux";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.DamageToChallengeBossMultiplier:
+                name = "Dégâts de Boss de Défi";
+                effect = "Multiplie les Dégâts infligés aux Boss de Défi";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.HeroExpGainMul:
+                name = "Gain d'EXP de Héros";
+                effect = "Multiplie les Gains d'EXP de Héros";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.GoldGainMul:
+                name = "Gain d'Or";
+                effect = "Multiplie les Gains d'Or";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.StoneGainMul:
+                name = "Gain de Pierre";
+                effect = "Multiplie les Gains de Pierre";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.CrystalGainMul:
+                name = "Gain de Crystal";
+                effect = "Multiplie les Gains de Crystal";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.LeafGainMul:
+                name = "Gain de Feuille";
+                effect = "Multiplie les Gains de Feuille";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.SkillProficiencyGainMul:
+                name = Stat(Stats.SkillProficiencyGain);
+                effect = "Multiplie les Gains de " + Stat(Stats.SkillProficiencyGain);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.EquipmentProficiencyGainMul:
+                name = Stat(Stats.EquipmentProficiencyGain);
+                effect = "Multiplie les Gains de " + Stat(Stats.EquipmentProficiencyGain);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.GuildEXPGainMul:
+                name = "Gain d'EXP de Guilde";
+                effect = "Multiplie les Gains d'EXP de Guilde";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.TownMatGainMul:
+                name = "Gain de Matériaux de Ville";
+                effect = "Multiplie les Gains de Matériaux de Ville";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.TamingPointGainMul:
+                name = Stat(Stats.TamingPointGain);
+                effect = "Multiplie les Gains de " + Stat(Stats.TamingPointGain);
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.PetEXPGainMul:
+                name = "Gain d'EXP de Familier";
+                effect = "Multiplie les Gains d'EXP de Familier";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.LoyaltyPointGainMul:
+                name = "Gain de Points de Loyauté";
+                effect = "Multiplie les Gains de Points de Loyauté";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.AlchemyPointGainMul:
+                name = "Gain de Points d'Alchimie";
+                effect = "Multiplie les Gains de Points d'Alchimie";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.StoneResearchPowerMul:
+                name = "Pouvoir de Recherche de Pierre";
+                effect = "Multiplie le Pouvoir de Recherche de Pierre";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.CrystalResearchPowerMul:
+                name = "Pouvoir de Recherche de Crystal";
+                effect = "Multiplie le Pouvoir de Recherche de Crystal";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.LeafResearchPowerMul:
+                name = "Pouvoir de Recherche de Feuille";
+                effect = "Multiplie le Pouvoir de Recherche de Feuille";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.SDUpgreadeSuperQueue:
+                name = "Super File d'Amélioration de SD";
+                effect = "Super File d'Amélioration de SD Disponible";
+                effectWithLevel = "+ " + text;
+                break;
+            case SuperDungeonUpgradeKind.SDArmoredFury:
+                name = "Furie d'Armure de SD";
+                effect = "Augmente la Furie d'Armure de SD";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.SDWardedFury:
+                name = "Furie d'Esprit de SD";
+                effect = "Augmente la Furie d'Esprit de SD";
+                effectWithLevel = "par " + text;
+                break;
+            case SuperDungeonUpgradeKind.PowerupFilterSlot:
+                name = "Emplacement de Filtre de Pouvoir";
+                effect = "Augmente les Emplacements de Filtre de Pouvoir";
+                effectWithLevel = "par " + text;
+                break;
+            default:
+                name = base.SDUpgradeString(kind, text).name;
+                effect = base.SDUpgradeString(kind, text).effect;
+                effectWithLevel = base.SDUpgradeString(kind, text).effectWithLevel;
+                break;
         }
         return (name, effect, effectWithLevel);
     }
@@ -10897,7 +11264,141 @@ public class Localized_French : LOCALIZATION
             case 2: return "Emplacement d'Armure Disponible + " + text;
             case 3: return "Emplacement de Bijou Disponible + " + text;
             case 4: return "Emplacement d'Utilitaire Disponible + " + text;
-            default: return text;
+            case 5: return "Multiplicateur de Dégâts de SD + " + text;
+            case 6: return "Multiplicateur de Réduction de Dégâts de SD + " + text;
+            case 7: return "Multiplicateur de Dégâts de Boss de Défi de SD + " + text;
+            default: return base.GradeMilestone(id, text);
         }
+    }
+
+    public override string SDModifierString(SDModifierKind kind)//NEW11
+    {
+        switch (kind)
+        {
+            case SDModifierKind.MobLv50: return "Monster Level + 50";
+            case SDModifierKind.MobLv100: return "Monster Level + 100";
+            case SDModifierKind.MobLv200: return "Monster Level + 200";
+            case SDModifierKind.MobLv400: return "Monster Level + 400";
+            case SDModifierKind.MobLv800: return "Monster Level + 800";
+            case SDModifierKind.ReducePowerup1: return "Decrease the amount of Powerups that show up at a Safe Zone by 1";
+            case SDModifierKind.ReducePowerup2: return "Decrease the amount of Powerups that show up at a Safe Zone by 2";
+            case SDModifierKind.ReduceSkillSlot1: return "Decrease available class skill slots by 1";
+            case SDModifierKind.ReduceSkillSlot2: return "Decrease available class skill slots by 2";
+            case SDModifierKind.ReduceSkillSlot4: return "Decrease available class skill slots by 4";
+            case SDModifierKind.MobFullCast: return "Monster Cast starts at full";
+            case SDModifierKind.DodgeDrainSpeed2x: return "2x drain speed of available dodge time";
+            case SDModifierKind.DodgeDrainPerDodge: return "Drain 1 sec of available dodge time on a successful dodge";
+            case SDModifierKind.DisableMove: return "Disable Move";
+            case SDModifierKind.DungeonCoinFixed1: return "Base Dungeon Coin gain per defeat is fixed at 1";
+            case SDModifierKind.RemoveSDPowerupPassives: return "Remove the permanent effects of SD Powerups";//NEW12
+
+        }
+        return base.SDModifierString(kind);
+    }
+
+    public override string DebuffingString(int id, string text = "")
+    {
+        switch (id)
+        {
+            case 0: return BasicStats(BasicStatsKind.SPD) + " et Vitesse de Déplacement " + text;
+            case 1: return "Reçoit 10% de dégâts additionnels";
+            case 2: return "Reçoit " + text + " dégâts par seconde";
+            case 3: return "Les Attaques et le Déplacement s'arrête pendant 1 seconde";
+            case 4: return "Tué instantanément si les PV sont en dessous de 50%";
+            case 5: return "Projeté en arrière et étourdi pendant 0.5 seconde";
+            case 6: return "Tiré vers le centre du champ de bataille";
+            case 7: return "Régénération de PM " + text + " / sec";
+            default: return base.DebuffingString(id, text);
+        }
+    }
+    public override (string name, string effect) SDGemString(SDGemKind kind, string text = "")
+    {
+        string name = "";
+        string effect = "";
+        switch (kind)
+        {
+            case SDGemKind.Sunstone:
+                name = "Héliolite";
+                effect = "Multiplie les Gains d'EXP de Guilde par " + text;
+                break;
+            case SDGemKind.Morganite:
+                name = "Morganite";
+                effect = "Augmente la limite de montée de Niveau de Héros à la fois (+30 Nv par défaut) par " + text;
+                break;
+            case SDGemKind.Tanzanite:
+                name = "Tanzanite";
+                effect = "Multiplie les Effets de Recherche de Pierre par " + text;
+                break;
+            case SDGemKind.Heliodor:
+                name = "Béryl";
+                effect = "Multiplie les Effets de Recherche de Crystal par " + text;
+                break;
+            case SDGemKind.Peridot:
+                name = "Péridot";
+                effect = "Multiplie les Effets de Recherche de Feuille par " + text;
+                break;
+            case SDGemKind.Obsidian:
+                name = "Obsidienne";
+                effect = "Augmente le # de Monstres Vaincus comptés par monstre vaincu par " + text;
+                break;
+            case SDGemKind.Amber:
+                name = "Ambre";
+                effect = "Augmente le # de Complétions de Donjon et de Récompenses de Complétion par " + text;
+                break;
+            case SDGemKind.Hackmanite:
+                name = "Sodalite";
+                effect = "Baisse le Temps Minimum d'Expédition (15m par défaut) par " + text;
+                break;
+            case SDGemKind.Turquoise:
+                name = "Turquoise";
+                effect = "Réduit la Pénalité d'Efficacité des Expéditions Longues - Courant : " + text + "^[Hour]";
+                break;
+            case SDGemKind.Kunzite:
+                name = "Spodumène";
+                effect = "Augmente la limite de l'Effet de Forge [Effet d'Équipement] par " + text;
+                break;
+            case SDGemKind.Carnelian:
+                name = "Cornaline";
+                effect = "Augmente la limite de l'Effet de Forge [Effet / Nv] par " + text;
+                break;
+            case SDGemKind.BlueTourmaline:
+                name = "Tourmaline";
+                effect = "Augmente la limite de l'Effet de Forge [Niveau d'Équipement] par " + text;
+                break;
+            case SDGemKind.Diamond:
+                name = "Diamant";
+                effect = "Multiplie les Effets Passifs des Talismans par " + text;
+                break;
+            case SDGemKind.Almandine:
+                name = "Almandin";
+                effect = "Vitesse de Nitro + " + text + "x";
+                break;
+            default:
+                name = base.SDGemString(kind, text).name;
+                effect = base.SDGemString(kind, text).effect;
+                break;
+        }
+        return (name, effect);
+    }
+    public override string SDModifierMilestone(int id, string text = "")
+    {
+        switch (id)
+        {
+            case 0: return "Débloque l'Onglet [Amélioration de SD " + text + "]";
+            case 1: return "Débloque de nouvelles Enclumes de Forge dans le Magasin de Rubis";
+            case 2: return "Débloque l'Onglet [Enclumes] dans le Magasin de Rubis";
+            case 3: return "Débloque de nouveau(x) Talisman(s) dans le Magasin de Rubis";
+            case 4: return "Débloque de nouveaux objets dans l'onglet [Stats] du Magasin de Rubis";
+            case 5: return "Emplacement de Filtre de Pouvoir + " + text;
+            case 6: return "Débloque une nouvelle Gemme dans les Rituels de Gemme";
+            case 7: return "+" + text + " des Pièces de Donjon et des Fragments de Rubis sont ramenés après une mort dans un SD";
+            case 8: return "Super File d'amélioration de SD + " + text;
+            case 9: return "Permet aux Rituels de Gemme de progresser en utilisant le Bonus Passif de Temps Hors-Ligne";
+            case 10: return "Améliore le taux de conversion du [Convertisseur de Fragments de Rubis] dans le Magasin de Rubis";
+            case 11: return "Améliore le taux de conversion du [Convertisseur de Rubis] dans le Magasin de Rubis";
+            case 12: return "Augmente la limite de rang des pouvoirs par " + text;
+            case 13: return "Augmente le nombre de Tickets de Réinitialisation de Coût d'Entrée gagnés dans les Quêtes Journalières par " + text;
+        }
+        return base.SDModifierMilestone(id, text);
     }
 }
