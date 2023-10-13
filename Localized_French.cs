@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UsefulMethod;
@@ -2436,8 +2436,8 @@ public class Localized_French : LOCALIZATION
                 return "Gain de Matériaux de Ville";
             case EquipmentEffectKind.TownMatAreaClearGain:
                 return "Gain de Matériaux de Ville (Zone)";
-            case EquipmentEffectKind.TownMatDungeonRewardGain:
-                return "Gain de Matériaux de Ville (Donjon)";
+            //case EquipmentEffectKind.TownMatDungeonRewardGain:
+            //    return "Gain de Matériaux de Ville (Donjon)";
             case EquipmentEffectKind.RebirthPointGain1:
                 return "Gain de Points de Réincarnation de Classe 1";
             case EquipmentEffectKind.RebirthPointGain2:
@@ -3169,11 +3169,11 @@ public class Localized_French : LOCALIZATION
                 else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
-            case EquipmentEffectKind.TownMatDungeonRewardGain:
-                if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
-                else           tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
-                break;
+            //case EquipmentEffectKind.TownMatDungeonRewardGain:
+            //    if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
+            //    else tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon + " + percent(value);
+            //    if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+            //    break;
             case EquipmentEffectKind.RebirthPointGain1:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Réincarnation de Classe 1 <color=red>" + percent(value) + "</color>";
@@ -3600,7 +3600,7 @@ public class Localized_French : LOCALIZATION
         }
         return tempString;
     }
-    public override string ForgeNameString(EquipmentForgeEffectKind kind, double value)
+    public override string ForgeNameString(EquipmentForgeEffectKind kind, double value, bool isArtifactAnvil)
     {
         switch (kind)
         {
@@ -3621,7 +3621,7 @@ public class Localized_French : LOCALIZATION
             case EquipmentForgeEffectKind.EqLevel:
                 return "Niveau d'Équipement + " + tDigit(value);
         }
-        return base.ForgeNameString(kind, value);
+        return base.ForgeNameString(kind, value, isArtifactAnvil);
     }
     public override string ForgeEffectString(EquipmentForgeEffectKind kind, double value, double maxValue)
     {
@@ -6544,7 +6544,7 @@ public class Localized_French : LOCALIZATION
                         break;
                     case QuestKindGeneral.DefeatNormalSlime2:
                         name = "Infestation des Slimes 2";
-                        client = Maire du village";
+                        client = "Maire du village";
                         description = "Vous avez fait un si bon travail. On dirait qu'il y en a toujours plus. Pouvez-vous nous aider à nouveau à repousser les slimes?";
                         break;
                     case QuestKindGeneral.DefeatNormalSlime3:
@@ -7975,7 +7975,7 @@ public class Localized_French : LOCALIZATION
             case 13: return "\n- Le Rang, Niveau et la Maîtrise des Capacités";
             case 14: return "\n- Le Niveau d'Amélioration dans l'onglet d'Amélioration";
             case 15: return "\n- Les objets dans l'Inventaire d'Enchantements, le Niveau et la Maîtrise des Équipements et les Améliorations de Dictionnaire";
-            case 16: return "\n- Les Équipements/Reliques sans emplacement d'enchantement dans l'inventaire et les emplacements d'équipement";/
+            case 16: return "\n- Les Équipements/Reliques sans emplacement d'enchantement dans l'inventaire et les emplacements d'équipement";
             case 17: return "\n- Les Expansions d'Eau Mystérieuse et les Catalyseurs";
             case 18: return "\n- Le Niveau, l'EXP et les Capacités de Guilde";
             case 19: return "\n- Le Rang et Niveau des Bâtiments de Ville et les Matériaux de Ville";
@@ -9152,7 +9152,6 @@ public class Localized_French : LOCALIZATION
                 effect = "Permet d'ajouter une limite d'achat de l'Automatisation de Super Donjon [Auto-Achat de Pouvoirs] dans la fenêtre Filtre de Pouvoir. Vous avez besoin d'Emplacements de Filtre de Pouvoir pour activer cette fonctionnalité sur un pouvoir.";
                 break;
         }
-        }
         return (name, effect);
     }
     public override string HelpNameString(HelpKind kind)
@@ -10216,7 +10215,7 @@ public class Localized_French : LOCALIZATION
             case 5: return " [Quête Favorite] dans le Magasin Épique";
             case 6:
                 return "Les Quêtes de Titre et les Quêtes Générales sont limitées au Nombre de Quêtes Acceptées." +
-"\nVous pouvez augmenter la limite avec une amélioration de Réincarnation.";
+    "\nVous pouvez augmenter la limite avec une amélioration de Réincarnation.";
             case 7: return "Marcher";
             case 8: return "Attaque Physique #";
             case 9: return "Attaque de Feu #";
@@ -10912,9 +10911,9 @@ public class Localized_French : LOCALIZATION
                 permanentEffect = "Multiplication du Multiplicateur de Dégâts de Boss de Défi de SD + {0} ( + {1} / achat )";
                 break;
             default:
-                name = base.SDPowerupString(kind,text).name;
-                effect = base.SDPowerupString(kind,text).effect;
-                permanentEffect = base.SDPowerupString(kind,text).permanentEffect;
+                name = base.SDPowerupString(kind, text).name;
+                effect = base.SDPowerupString(kind, text).effect;
+                permanentEffect = base.SDPowerupString(kind, text).permanentEffect;
                 break;
         }
         return (name, effect, permanentEffect);
