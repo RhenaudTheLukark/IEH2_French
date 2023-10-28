@@ -847,18 +847,18 @@ public class Localized_French : LOCALIZATION
                 return "Super File";
             case BasicWord.AvailableSuperQueue:
                 return "Super File Disponible";
-            case BasicWord.MotherStone://NEW15
-                return "Mother Gem";
-            case BasicWord.GuildGrade://NEW15
-                return "Guild Grade";
-            case BasicWord.GuildFame://NEW15
-                return "Guild Fame";
-            case BasicWord.GuildSuperAbility://NEW15
-                return "Guild Super Ability";
-            case BasicWord.GuildGradeUp://NEW15
-                return "Guild Grade Up";
-            case BasicWord.GG://NEW15
-                return "GG";//stands for Guild Grade
+            case BasicWord.MotherStone:
+                return "Gemme Mère";
+            case BasicWord.GuildGrade:
+                return "Classe de Guilde";
+            case BasicWord.GuildFame:
+                return "Renommée de Guilde";
+            case BasicWord.GuildSuperAbility:
+                return "Super Abilité de Guilde";
+            case BasicWord.GuildGradeUp:
+                return "Montée de Classe de Guilde";
+            case BasicWord.GG:
+                return "CG";
         }
         return base.Basic(basicWord);
     }
@@ -927,8 +927,7 @@ public class Localized_French : LOCALIZATION
             case MultiplierKind.Dictionary:
                 return "Dictionaire";
             case MultiplierKind.Guild:
-                return "Guild Ability";//NEW15 
-                //return "Guilde";
+                return "Abilité de Guilde";
             case MultiplierKind.AreaPrestige:
                 return "Prestige de Zone";
             case MultiplierKind.AreaDebuff:
@@ -1010,7 +1009,7 @@ public class Localized_French : LOCALIZATION
             case MultiplierKind.SDGemRitual:
                 return "Rituel de Gemme de SD";
             case MultiplierKind.GuildSuperAbility:
-                return "Guild Super Ability";//NEW15 
+                return "Super Abilité de Guilde";
         }
         return base.StatsBreakdown(kind);
     }
@@ -1745,7 +1744,7 @@ public class Localized_French : LOCALIZATION
             case PetActiveEffectKind.AutoAlchemiseForNito:
                 return "Créée et désassemble des Potions de Soin Mineures automatiquement pour maximiser la Nitro lorsqu'il n'y en a plus. (le Slime Magique Bleu doit être Actif, requiert [Auto Désassemblage de Potion Avancé] dans le Magasin Épique et assez d'essences pour maximiser la Nitro)";
             case PetActiveEffectKind.AutoBuyGuildAbility:
-                return "Achète les Capacités de Guilde automatiquement.\nMaj + Flèche Haut/Bas sur une capacité de guilde pour augmenter/réduire le niveau visé.";
+                return "Achète les Abilités de Guilde automatiquement.\nMaj + Flèche Haut/Bas sur une capacité de guilde pour augmenter/réduire le niveau visé.";
         }
         return base.PetActiveEffect(kind);
     }
@@ -2451,8 +2450,8 @@ public class Localized_French : LOCALIZATION
                 return "Gain de Matériaux de Ville";
             case EquipmentEffectKind.TownMatAreaClearGain:
                 return "Gain de Matériaux de Ville (Zone)";
-            //case EquipmentEffectKind.TownMatDungeonRewardGain:
-            //    return "Gain de Matériaux de Ville (Donjon)";
+            case EquipmentEffectKind.TownMatDungeonRewardGain:
+                return "Gain de Matériaux de Ville (Donjon)";
             case EquipmentEffectKind.RebirthPointGain1:
                 return "Gain de Points de Réincarnation de Classe 1";
             case EquipmentEffectKind.RebirthPointGain2:
@@ -3184,11 +3183,11 @@ public class Localized_French : LOCALIZATION
                 else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
-            //case EquipmentEffectKind.TownMatDungeonRewardGain:
-            //    if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
-            //    else tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon + " + percent(value);
-            //    if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
-            //    break;
+            case EquipmentEffectKind.TownMatDungeonRewardGain:
+                if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
+                else tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon + " + percent(value);
+                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+                break;
             case EquipmentEffectKind.RebirthPointGain1:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Réincarnation de Classe 1 <color=red>" + percent(value) + "</color>";
@@ -3638,17 +3637,15 @@ public class Localized_French : LOCALIZATION
         }
         return base.ForgeNameString(kind, value, isArtifactAnvil);
     }
-    public override string ForgeEffectString(EquipmentForgeEffectKind kind, double value, double maxValue, bool isArtifactAnvil)//NEW14
+    public override string ForgeEffectString(EquipmentForgeEffectKind kind, double value, double maxValue, bool isArtifactAnvil)
     {
         switch (kind)
         {
             case EquipmentForgeEffectKind.ReduceRequiredHeroLevel:
-                if (isArtifactAnvil) return "Required Hero Grade of this equipment - " + tDigit(value);//NEW14
-                //if (isArtifactAnvil) return "Required Hero Grade of this equipment - " + tDigit(value);//NEW14
+                if (isArtifactAnvil) return "Classe de Héros requise pour cette relique - " + tDigit(value);
                 return "Niveau du Héros requis pour cet équipement - " + tDigit(value) + " (Max : " + tDigit(maxValue) + ")";
             case EquipmentForgeEffectKind.ReduceRequiredAbility:
-                if (isArtifactAnvil) return "Required Super Ability Point of this equipment - " + tDigit(value);//NEW14
-                //if (isArtifactAnvil) return "Required Super Ability Point of this equipment - " + tDigit(value);//NEW14
+                if (isArtifactAnvil) return "Points de Super Abilité requis pour cette relique - " + tDigit(value);
                 return "Points d'Abilité requis pour cet équipement - " + tDigit(value) + " (Max : " + tDigit(maxValue) + ")";
             case EquipmentForgeEffectKind.IncreaseProficiencyGain:
                 return "Gain de Maîtrise de cet équipement + " + percent(value) + " (Max : " + tDigit(maxValue) + ")";
@@ -5050,7 +5047,7 @@ public class Localized_French : LOCALIZATION
             case GuildAbilityKind.LeafGain:
                 return "Cueillette";
             case GuildAbilityKind.GuildExpGain:
-                return "Entrainement";
+                return "Entraînement";
             case GuildAbilityKind.SkillProficiency:
                 return "Étude";
             case GuildAbilityKind.Trapping:
@@ -5113,8 +5110,7 @@ public class Localized_French : LOCALIZATION
             case GuildAbilityKind.UpgradeCost:
                 return "Réduction du Coût des Améliorations Générales par " + percent(effectValue);
             case GuildAbilityKind.MaterialDrop:
-                return "Increases dropped amount of materials by " + tDigit(effectValue);//NEW15
-                //return "Gain de Matériaux + " + tDigit(effectValue);
+                return "Augmentation du nombre de matériaux lachés par " + tDigit(effectValue);
             case GuildAbilityKind.NitroCap:
                 return "Limite de Nitro + " + tDigit(effectValue);
             case GuildAbilityKind.GoldCap:
@@ -5731,7 +5727,7 @@ public class Localized_French : LOCALIZATION
                             "\n- Vous gagnerez de la <color=orange>Ranommée</color> pour chaque monstre vaincu, et la classe du héros augmentera. Lorsque la classe augmente, vous gagnez des <color=orange>Points de Super Abilités.</color>" +
                             "\n- Allouer des point aux <color=orange>Super Abilités</color> vous donnera des bonus de stats [Multiplicatifs] et <color=orange>[Absolus]</color>. Alors que toutes les stats sont réduites dans le Super Donjon, les stats [Absolues] ne le sont pas, les rendant très efficaces pour conquérir le donjon." +
                             "\n- <color=orange>De nouvelles quêtes de titre ont été débloquées.</color> Allons les compléter ensemble.";
-                        condition = "Compléter le 5ème étage du Super Donjon [La Cachette Slime]";
+                        condition = "Compléter le 5ème étage du Super Donjon [La Cachette des Slimes]";
                         reward = "Gain de Renommée + " + percent(0.10d);
                         break;
                     case QuestKindGlobal.SD3:
@@ -5740,7 +5736,7 @@ public class Localized_French : LOCALIZATION
                         description = "Bon travail ! Vu qu'on a déjà envahi leur cachette une fois, autant continuer. <color=orange>Maintenant, visons le 10ème étage.</color> D'après nos recherches, on dirait qu'il y a un boss colossal au 10ème étage. Approche-le avec prudence. Je suis sûr qu'il lâchera un butin spécial." +
                             "\n- Vous pouvez obtenir des <color=orange>Topazes</color> pour chaque héros la première fois que vous complétez chaque étage. Si vous avez du mal à progresser dans le donjon, considérez d'essayer avec d'autres héros." +
                             "\n- Vous pouvez réinitialiser le coût d'entrée en Orbe Portail en utilisant un <color=orange>Ticket de Réinitialisation de Coût d'Entrée</color>. Vous pouvez recevoir ce ticket en tant ue récompense de quête journalière à travers l'un des Effets de Palier de Niveau du Bâtiment de Ville [Arène Mystique].";
-                        condition = "Compléter le 10ème étage du Super Donjon [La Cachette Slime]";
+                        condition = "Compléter le 10ème étage du Super Donjon [La Cachette des Slimes]";
                         reward = "Débloque l'Onglet [Magasin de Rubis] dans le Super Donjon\n- Gain de Renommée + " + percent(0.20d);
                         break;
                     case QuestKindGlobal.SD4:
@@ -5751,41 +5747,41 @@ public class Localized_French : LOCALIZATION
                             "\n- Après avoir vaincu un boss pour la première fois, toute nouvelle complétion pour ce héros vous donnera des <color=orange>Fragments de Rubis</color>, qui peuvent être convertis en Rubis.";
                         condition = "Dépense 1 Rubis";
                         break;
-                    case QuestKindGlobal.SD5://NEW14
-                        name = "Super Dungeon 5";
+                    case QuestKindGlobal.SD5:
+                        name = "Super Donjon 5";
                         client = "Hitan";
-                        description = "Now that I've made you spend your precious ruby, I want you to do something else for me. You see, there are other Super Dungeons out there for you to discover. Which means you can get more Topazes and Rubies. <color=orange>To find the next Super Dungeon you need to beat B50F (or higher) and safely exit the Super Dungeon.</color> So that is what I would like you to do! Beat the Slime Hideout B50F to unlock the next Super Dungeon. You will also increase your Max Floor reached which helps boost certain bonuses! Make sure you try and get to the Highest Floor possible on every hero!!" +
-                            "\n- Unlocking new Super Dungeons and clearing floors in them, will reward you with more Topazes (per floor clear, per hero), Rubies (per 10F clear, per hero), or Pieces of Ruby (per 10f Clear, per Hero, after the first clear) than in the previous Super Dungeons by 1. ";
-                        condition = "Clear B50F of Super Dungeon [The Slime Hideout]";
-                        reward = "Fame Gain + " + percent(0.30d);
+                        description = "Maintenant que je t'ai fait dépenser ton précieux rubis, je veux que tu fasses quelque chose d'autre pour moi. Tu vois, il y a d'autres Super Donjons à découvrir. Ce qui veut dire que tu peux récupérer plus de Topazes et de Rubis. <color=orange>Pour trouver le prochain Super Donjon, tu dois vaincre l'E50 (ou plus) et quitter le Super Donjon en sécurité.</color> Donc c'est ce que je veux que tu fasses ! Vaincs l'E50 de la Cachette des Slimes et débloque le prochain Super Donjon. Tu augmenteras aussi ton Etage Max Atteint, ce qui améliore certains bonus ! Fais en sorte d'essayer d'atteindre l'Etage Max le plus haut possible pour chaque héros !!" +
+                            "\n- Débloquer de nouveaux Super Donjons et compléter des étages dans chacun d'eux te donnera plus de Topazes (par étage complété, par héros), de Rubis (tous les 10èmes étages complétés, par héros), ou de Fragments de Rubis (tous les 10èmes étages complétés, par héros, après la première complétion) que le Super Donjon précédent par 1. ";
+                        condition = "Complète l'E50 du Super Donjon [La Cachette des Slimes]";
+                        reward = "Gain de Renommée + " + percent(0.30d);
                         break;
-                    case QuestKindGlobal.SD6://NEW14
-                        name = "Super Dungeon 6";
+                    case QuestKindGlobal.SD6:
+                        name = "Super Donjon 6";
                         client = "Hitan";
-                        description = "I knew you could do it! Now that you've opened the Super Dungeon [The Spider Underground Apartment], <color=orange>I need you to set your sights on clearing B100F of [The Slime Hideout]</color>, there's a whole new piece of Super Dungeons to be unlocked: <color=orange>Modifiers</color>! If you start to struggle with clearing this task, don't forget to try the newly unlocked Super Dungeon and get more Topazes and Rubies to gain power! " +
-                            "\n- Clearing B100F on each hero will reward you with a First Clear Reward per hero, and once you've completed B100F on all heroes, you'll receive an All Complete Reward (once you claim it of course!)" +
-                            "\n- Modifiers are a great way to increase the difficulty of Super Dungeons, while rewarding you for your hard work! You'll gain Mother Gems and Modifier Milestones for clearing your highest modifier point SD run per hero! But first, we have to get you to unlock Modifiers.";
-                        condition = "Clear B100F of Super Dungeon [The Slime Hideout]";
-                        reward = "Unlock [Modifiers]\n- Fame Gain + " + percent(0.40d);
+                        description = "Je savais que tu pouvais le faire ! Maintenant que tu as trouvé le Super Donjon [L'Appartement Souterrain des Araignées], <color=orange>Tu dois te concentrer sur la complétion de l'E100 de [La Cachette des Slimes]</color>, car il y a une nouvelle fonctionnalité des Super Donjons à débloquer : les <color=orange>Modificateurs</color> ! Si tu as du mal à compléter cette tâche, n'oublie pas d'essayer le Super Donjon que tu viens de débloquer pour recevoir plus de Topazes et Rubis afin de monter en puissance ! " +
+                            "\n- Compléter l'E100 avec chaque héros vous donnera une Récompense de Première Complétion pour chaque héros, et lorsque vous aurez complété l'E100 avec tous les héros, vous recevrez une Récompense de Complétion Totale (après l'avoir réclamée, bien entendu !)" +
+                            "\n- Les Modificateurs sont un bon moyen d'augmenter la difficulté des Super Donjons, tout en vous récompensant pour votre dur labeur ! Vous gagnerez des Gemmes Mères et des Paliers de Modificateurs après la complétion d'un essai de SD ayant un nombre de points de modificateurs haut par héros ! Mais d'abord, il va falloir débloquer les Modificateurs.";
+                        condition = "Complète l'E100 du Super Donjon [La Cachette des Slimes]";
+                        reward = "Débloque les [Modificateurs]\n- Gain de Renommée + " + percent(0.40d);
                         break;
-                    case QuestKindGlobal.SD7://NEW14
-                        name = "Super Dungeon 7";
+                    case QuestKindGlobal.SD7:
+                        name = "Super Donjon 7";
                         client = "Hitan";
-                        description = "Ok, you did it! Now I can go into more detail about Modifiers and what they do! Modifiers will increase the difficulty of your SD run, but in turn reward <color=orange>Modifier Points</color> on completion. You can select as many Modifiers per run as you want. You may want to start slow and work your way up. Modified runs will also increase the amount of Pieces of Ruby received on each 10F cleared, the amount is increased by the number of the current run's Modifier Points. It can be a great way to get Pieces of Rubies to be converted into Rubies!" +
-                            "\n- Once you've cleared a Modified run, you'll gain <color=orange>Mother Gems</color> based on your Highest Modifier Points Cleared. Mother Gems can be used in the <color=orange>Gem Rituals</color> Tab which will be unlocked once you complete this quest (I can't just give it to you right away!). These Mother Gems are awarded per hero, so try and do Modifiers on each hero and increase your Mother Gem amount! " +
+                        description = "Ok, tu l'as fait ! Maintenant je vais pouvoir rentrer dans les détails sur les Modificateurs et ce qu'ils font ! Les Modificateurs augmenteront la difficulté de ton essai de SD, mais en retour te donnent des <color=orange>Points de Modificateur</color> après leur complétion. Tu peux sélectionner autant de Modificateurs que tu veux pour chaque essai. Tu voudras sans doute commencer en douceur et augmenter la difficulté au fur et à mesure du temps. Les essais modifiés rapportent aussi plus de Fragments de Rubis pour chaque 10ème étage complété, le montant est augmenté par le nombre de Points de Modificateur de l'essai courant. Ca peut être un bon moyen de récupérer des Fragments de Rubis à convertir en Rubis !" +
+                            "\n- Une fois qu'un essai modifié est complété, tu gagneras des <color=orange>Gemmes Mères</color> basé sur le Nombre Max de Points de Modificateur Complétés. Les Gemmes Mères peuvent être utilisées dans l'onglet <color=orange>Rituels de Gemme</color> qui ser débloqué après la complétion de cette quête (je ne peux pas juste te le donner comme ça !). Ces Gemmes Mères sont données pour chaque héros, donc essaye de compléter des Modificateurs pour chaque héros et augmente ton nombre de Gemmes Mères ! " +
                             "";
-                        condition = "Clear B100F of Super Dungeon [The Slime Hideout] with 1 or more Modifier Points";
-                        reward = "Unleash Tab [Gem Rituals] in Super Dungeon";
+                        condition = "Complète l'E100 du Super Donjon [La Cachette des Slimes] avec au moins 1 Point de Modificateur";
+                        reward = "Débloque l'onglet [Rituels de Gemme] dans le Super Donjon";
                         break;
-                    case QuestKindGlobal.SD8://NEW14
-                        name = "Super Dungeon 8";
+                    case QuestKindGlobal.SD8:
+                        name = "Super Donjon 8";
                         client = "Hitan";
-                        description = "And you thought you were done! Ha. I wanted to tell you more about these Gem Rituals. Do you remember any of our adventures from Incremental Epic Hero 1? Gem Rituals are similar to what Dark Rituals were in IEH1. If you aren't familiar, I'll explain more now. " +
-                            "\n- Gem Rituals use Mother Gems to increase certain bonuses within the game. You will need at least 1 Mother Gem in a Gem Ritual for it to start. The more Mother Gems you add to a ritual, the faster it will progress. So you will want to do higher Modifiers to gain more Mother Gems and level up your rituals!" +
-                            "\n- Alongside the Mother Gems, each hero will add their Highest Modifier Points to the total <color=orange>Modifier Milestones</color> which have a ton of different bonuses for your Super Dungeons! " +
-                            "\n- I almost forgot! Each hero's <color=orange>Max Floor Reached bonus</color> will increase by their Highest Modifier Points Cleared too! See what I mean by a big update to Super Dungeons with these Modifiers? ";
-                        condition = "Complete Level 1 of any [Gem Ritual]";
-                        reward = "SD Challenge Boss Damage Multiplier + " + percent(0.50d);
+                        description = "Tu pensais que ce serait fini ? Ha. Je voulais t'en dire plus sur ces Rituels de Gemme. Est-ce que tu te rappelles de nos aventures sur Incremental Epic Hero 1 ? Les Rituels de Gemme sont similaires aux Rituels Sombres de IEH1. Si tu ne t'en souviens pas, je vais te l'expliquer maintenant. " +
+                            "\n- Les Rituels de Gemme utilisent des Gemmes Mères pour augmenter certains bonus dans le jeu. Tu as besoin d'au moins 1 Gemme Mère dans un Rituel de Gemme pour qu'il puisse commencer. Plus un rituel comprend de Gemmes Mères, plus rapide il sera. Donc tu voudras compléter des Modificateurs plus haut pour gagner plus de Gemmes Mères et augmenter le iveau de tes rituels !" +
+                            "\n- Alongside the Mother Gems, each hero will add their Highest Modifier Points to the total <color=orange>Modifier Milestones</color> which have a ton of different bonuses for your Super Donjons! " +
+                            "\n- J'ai presque oublié ! Le <color=orange>bonus d'Etage Max Atteint</color> de chaque héros augmente aussi à travers leur Nombre Max de Points de Modificateur Complétés ! Tu vois ce que je voulais dire quand je parlais d'une révolution pour les Super Donjons avec ces Modificateurs maintenant ? ";
+                        condition = "Complète le Niveau 1 de n'importe quel [Rituel de Gemme]";
+                        reward = "Multiplicateur de Dégâts de Boss de Défi de SD + " + percent(0.50d);
                         break;
                 }
                 break;
@@ -7026,7 +7022,7 @@ public class Localized_French : LOCALIZATION
             case ToggleKind.SDAutoPowerups:
                 return "Achat Auto des Pouvoirs";
             case ToggleKind.SDUseAutoProgressionTargetFloor:
-                return "Etage Visé lors de l'Auto Progression";
+                return "Étage Visé lors de l'Auto Progression";
             case ToggleKind.SDFastResult:
                 return "Écourter l'Écran de Résultat de Super Donjon";
             case ToggleKind.SDAutoUseRefreshTicket:
@@ -7037,10 +7033,10 @@ public class Localized_French : LOCALIZATION
                 return "Ignorer le Multiplicateur [x1]";
             case ToggleKind.SDDisableAutoLeave:
                 return "Désactiver Auto Quitter après avoir passé 60 sec dans une Zone Sûre";
-            case ToggleKind.AutoProgressionOnWA://NEW14
-                return "Activate automatically on WA";
-            case ToggleKind.SDDisableGuildLog://NEW14
-                return "Guild Fame/Grade";
+            case ToggleKind.AutoProgressionOnWA:
+                return "Activer automatiquement après une AM";
+            case ToggleKind.SDDisableGuildLog:
+                return "Renommée/Classe de Guilde";
         }
         return base.Toggle(kind);
     }
@@ -8048,10 +8044,8 @@ public class Localized_French : LOCALIZATION
             case 25: return "\n- L'Effet de Maîtrise des Équipements";
             case 26: return "\n- Les Équipements/Reliques avec des effets d'enchantement, des emplacements d'enchantement ou des effets de forge dans l'inventaire";
             case 27: return "\n- Les objets dans l'Inventaire d'Utilitaires et ses emplacements équipés, le progrès des Talismans";
-            //case 28: return "\n- Les Essences et Matéruaix sauf les Matériaux de Ville";
-            //case 29: return "\n- Les Améliorations d'Alchimie et le Niveau des Potions";
-            case 28: return "\n- Essence and Materials except for Town Materials, Alchemy Upgrade and Potion Level";//NEW15
-            case 29: return "\n- Guild Grade, Guild Fame and Guild Super Ability";//NEW15
+            case 28: return "\n- Les Essences et Matériaux sauf les Matériaux de Ville, les Améliorations d'Alchimie et le Niveau des Potions";
+            case 29: return "\n- La Classe de Guilde, la Renommée de Guilde et les Super Abilités de Guilde";
             case 30: return "\n- Le progrès de la Recherche des Bâtiments de Ville";
             case 31: return "\n- Le progrès du Bestiaire";
             case 32: return "\n- Le Niveau et EXP des Expéditions";
@@ -8065,12 +8059,9 @@ public class Localized_French : LOCALIZATION
             case 40: return "\n- Les Familiers actifs après le # de familiers activables seront automatiquement désactivés";
             case 41: return "\n- Vous pourrez recommencer les missions complétées mais vous ne recevrez pas de Pièces Épiques venant d'elles";
             case 42: return "Ascension Monde de Classe " + tDigit(wa.tier + 1);
-            //case 43: return "\n- Classe de Héros, Renommée et Points de Super Abilité";
-            //case 44: return "\n- Etage Maximal de Super Donjon Atteint et Limite de # d'Achats du Magasin de Rubis";
-            //case 45: return "\n- Monnaies de Super Donjon, Paliers de Classe, Améliorations de Super Donjon et l'onglet Stats de Magasin de Rubis";
-            case 43: return "\n- Hero Grade, Grade Milestones, Fame and Super Ability Points";//NEW15
-            case 44: return "\n- Super Dungeon Max Floor Reached (Ruby/Topaz cannot be reacquired.) and Purchase # of Ruby Shop";//NEW6 //NEW15
-            case 45: return "\n- Super Dungeon currencies, Improvement and Ruby Shop Stats, Gem Rituals and Modifier Points";//NEW15
+            case 43: return "\n- La Classe de Héros, la Renommée et les Points de Super Abilité";
+            case 44: return "\n- L'Étage Maximal de Super Donjon Atteint (Les Rubis/Topazes ne peuvent pas être récupérés à nouveau) et le # d'Achats du Magasin de Rubis";
+            case 45: return "\n- Les Monnaies de Super Donjon, les Super Donjon currencies, les Améliorations et Statistiques du Magasin de Rubis, les Rituels de Gemme et les Points de Modificateur";
         }
         return "";
     }
@@ -8829,7 +8820,7 @@ public class Localized_French : LOCALIZATION
             case 41: return "Maj + Clic Gauche pour rentrer un montant personnalisé ou pour réinitialiser le montant courant";
             case 42: return "Maj + F pour montrer les coûts entiers (Max x100)";
             case 43: return "Détails de la Limite de Nitro";
-            case 44: return "Guild Fame Gain when " + text + " grade up";//NEW15
+            case 44: return "Gain de Renommée de Guilde lorsque le héros " + text + " augmente de classe";
             default: return base.ResourceCtrlString(id, text);
         }
     }
@@ -9208,8 +9199,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.SDPowerupReset:
                 name = "Réinitialisation de Pouvoir de Super Donjon";
-                effect = "Resets Super Dungeon Automations and Powerup's Ranks. It also locks Powerups again, which removes them from the Powerup Pool. This will restore Topazes spent on them, but not Dungeon Coins. You will keep Powerups' permanent effects when purchasing this, but they will be deactivated until the Powerup is unlocked again.";//NEW14
-                //effect = "Réinitialise le Rang des Pouvoirs de Super donjon et rembourse les Topazes dépensés.";
+                effect = "Réinitialise les Automatisations de Super Donjon et le Rang des Pouvoirs. Il bloque aussi les Pouvoirs à nouveau, ce qui les enlève de la sélection de Pouvoirs. Ceci rembourse les Topazes dépensés sur ceux-ci, mais pas les Pièces de Donjon. Vous garderez les effets permanents des Pouvoirs lorsque vous achetez ceci, mais ils seront désactivés jusqu'à ce que le Pouvoir associé est débloqué à nouveau.";
                 break;
             case EpicStoreKind.SDLootGainOnDeath:
                 name = "Fugitif de Super Donjon";
@@ -9219,21 +9209,21 @@ public class Localized_French : LOCALIZATION
                 name = "Filtre de Limite d'Auto-Achat de Pouvoir";
                 effect = "Permet d'ajouter une limite d'achat de l'Automatisation de Super Donjon [Auto-Achat de Pouvoirs] dans la fenêtre Filtre de Pouvoir. Vous avez besoin d'Emplacements de Filtre de Pouvoir pour activer cette fonctionnalité sur un pouvoir.";
                 break;
-            case EpicStoreKind.GuildSuperAbilityReset://NEW15
-                name = "Guild Super Ability Reset";
-                effect = "Resets Guild Super Ability and restores Guild Super Ability Points. If your Guild Level is above 300 from Socializing, it will be set to 300 and Guild Abilities will be reset and refunded. Additionally, if any Guild Abilities are above their default max level, they will be set back to the default max and the extra points will be refunded.";
+            case EpicStoreKind.GuildSuperAbilityReset:
+                name = "Réinitialisation de Super Abilité de Guilde";
+                effect = "Réinitialise les Super Abilités de Guilde et rembourse les Points de Super Abilité de Guilde. Si votre Niveau de Guilde est au dessus de 300 grâce à Socialisation, il sera descendu jusqu'au Nv300 et les Abilités de Guilde seront réinitialisées et remboursées. De plus, si toute Abilité de Guilde est au dessus de son niveau max par défaut, elle sera descendu à son niveau max par défaut et les points en plus seront remboursés.";
                 break;
-            case EpicStoreKind.SDPowerupFilterLoadout://NEW15
-                name = "SD Powerup Filter Loadouts";
-                effect = "Unlocks buttons in the Powerup Filter window that allows you to have different loadouts of powerup filter set - Subsequent purchases will increase the loadout slot by the purchase amount. ";
+            case EpicStoreKind.SDPowerupFilterLoadout:
+                name = "Collection de Filtre de Pouvoir de SD";
+                effect = "Débloque des boutons dans la fenêtre de Filtre de Pouvoir qui permet d'avoir différentes collections de filtres de pouvoir - Tout achat futur augmentera le nombre d'emplacements de collection par le nombre acheté. ";
                 break;
-            case EpicStoreKind.SDModifierLoadout://NEW15
-                name = "SD Modifier Loadouts";
-                effect = "Unlocks buttons in the Modifier window that allows you to have different loadouts of modifier set - Subsequent purchases will increase the loadout slot by the purchase amount. ";
+            case EpicStoreKind.SDModifierLoadout:
+                name = "Collection de Modificateur de SD";
+                effect = "Débloque des boutons dans la fenêtre de Modificateurs qui permet d'avoir différentes collections de modificateurs - Tout achat futur augmentera le nombre d'emplacements de collection par le nombre acheté. ";
                 break;
-            case EpicStoreKind.SDPowerupFilterSlot://NEW15
-                name = "SD Powerup Filter Slot + 1";
-                effect = "Increases SD Powerup Filter Slot by 1.";
+            case EpicStoreKind.SDPowerupFilterSlot:
+                name = "Emplacement de Filtre de Pouvoir de SD + 1";
+                effect = "Augmente le nombre d'Emplacements de Filtre de Pouvoir de SD par 1.";
                 break;
         }
         return (name, effect);
@@ -9263,7 +9253,7 @@ public class Localized_French : LOCALIZATION
             case HelpKind.Shop: return "Magasin";
             case HelpKind.Rebirth: return "Réincarnation";
             case HelpKind.Challenge: return "Défi";
-            case HelpKind.SuperDungeon: return "Super Dungeon";//NEW15
+            case HelpKind.SuperDungeon: return "Super Donjon";
             case HelpKind.Expedition: return "Expédition";
             case HelpKind.WorldAscension: return "Ascension Monde";
             case HelpKind.EpicStore: return "Magasin Épique";
@@ -9727,12 +9717,12 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- A chaque fois que la guilde monte de niveau, vous recevrez un point d'abilité qui vous permet d'améliorer la guilde.";
                 tempStr += "\n- Déplacez votre souris sur chaque amélioration débloquée pour voir ce qu'elles font pour toute votre guilde. ";
                 tempStr += "\n- Vous pouvez débloquer plus d'Abilités de Guilde à travers différentes classes d'Ascension Monde. ";
-                tempStr += "\n\n";//NEW15
-                tempStr += "<u>Guild Grade</u>";//NEW15
-                tempStr += "\n- By clicking Super button while in the Guild tab, or while being in a Super Dungeon you can see your current Guild Grade, and Guild Super Abilities.";//NEW15
-                tempStr += "\n- You can start gaining Guild Fame which will turn into Guild Grades, by gaining Hero Grades while in Super Dungeons. Each time your hero gains a grade, it will increase your guild fame as well.";//NEW15
-                tempStr += "\n- Guild Super Abilities can increase the max cap some of your regular Guild abilities. Make sure to read what they do!!";//NEW15
-                tempStr += "\n- Currently Guild Grade does not reset. However, you can purchase a Guild Super Ability Reset from the Epic Store (Super Dungeon tab). You get 1 free use of this purchase!";//NEW15
+                tempStr += "\n\n";
+                tempStr += "<u>Classe de Guilde</u>";
+                tempStr += "\n- En appuyant sur le bouton Super dans l'onglet Guilde, ou lorsque vous êtes dans un Super Donjon, vous pouvez voir votre Classe de Guilde courante, et vos Super Abilités de Guilde.";
+                tempStr += "\n- Vous pouvez gagner de la Renommée de Guilde ce qui augmentera votre Classe de Guilde, en augmentant la Classe de Héros dans les Super Donjons. Chaque fois qu'un héros augmente sa classe, la renommée de guilde augmentera aussi.";
+                tempStr += "\n- Les Super Abilités de Guilde peuvent augmenter la limite maximale de certaines de vos Abilités de Guilde normales. Faites en sorte de savoir ce que fait chacune d'elles !!";
+                tempStr += "\n- La Classe de Guilde ne peut pour le moment pas être réinitialisée. Cependant, vous pouvez acheter une Réinitialisation de Super Abilité de Guilde dans le Magasin Epique (onglet Super Dunjon). Vous avez 1 utilisation gratuite de cette achat !";
                 break;
             case HelpKind.Town:
                 tempStr += "La Ville a 12 bâtiments différents que vous pouvez monter de rang et de niveau. Beaucoup d'améliorations et de contenu sont débloqués à travers la Ville. ";
@@ -9847,84 +9837,84 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n\n";
                 tempStr += "Le bâtiment de ville [Arène Mystique] est associé à ces Défis. Vous pouvez débloquer de nouveaux étages et niveaux de boss à travers ce bâtiment de ville. ";
                 break;
-            case HelpKind.SuperDungeon://NEW15
-                tempStr += "To unlock the [Super Dungeon] tab, you must have Rank 2 of Town Building [Mystic Arena] first. This also unlocks the Super button in the [Ability] and [Guild] tab.";
+            case HelpKind.SuperDungeon:
+                tempStr += "Pour débloquer l'onglet [Super Donjon], vous devez d'abord atteindre le Rang 2 du Bâtiment de Ville [Arène Mystique]. Cela débloque aussi le bouton Super dans les onglets [Abilité] et [Guilde].";
                 tempStr += "\n\n";
-                tempStr += "<u>Unlocking the Super Dungeons</u>";
-                tempStr += "\n- The first Super Dungeon you unlock is [The Slime Hideout], which is unlocked as soon as you unlock the Super Dungeon tab. ";
-                tempStr += "\n- To unlock other Super Dungeons, you first must reach Floor 50 of the previous Super Dungeon. ";
-                tempStr += "\n- You must accept the first Super Dungeon Global Quest, before being able to enter the Super Dungeon.";
+                tempStr += "<u>Débloquer les Super Donjons</u>";
+                tempStr += "\n- Le premier Super Donjon débloqu est [La Cachette des Slimes], qui est débloqué en meême temps que l'onglet Super Donjon. ";
+                tempStr += "\n- Pour débloquer d'autres Super Donjons, vous devez compéter l'Etage 50 du Super Donjon précédent et quitter le donjon en sécurité. ";
+                tempStr += "\n- Vous devez accepter la première Quête Globale sur les Super Donjons avant de pouvoir rentrer dans un Super Donjon.";
                 tempStr += "\n\n";
-                tempStr += "<u>Features</u>";
-                tempStr += "\n- Each Super Dungeon will have different limitations noted in the Super Dungeon tab, under Information.";
-                tempStr += "\n- Each Super Dungeon has several rewards to be obtained. Max Floor Reached, First Clear Reward, and All Complete Rewards.";
-                tempStr += "\n - Max Floor Reached - This is for each hero, that has safely left their highest floor. These rewards are global. ";
-                tempStr += "\n - First Clear Reward - Obtained after a hero successfully beats and leaves Floor 100 of the Super Dungeon.";
-                tempStr += "\n - All Complete Reward - After all heroes have completed their first clear reward, you will obtain the All Complete Reward.";
+                tempStr += "<u>Fonctionnalités</u>";
+                tempStr += "\n- Chaque Super Donjon a différentes limitations, notées dans l'onglet Super Donjon, sous Informations.";
+                tempStr += "\n- Chaque Super Donjon contient plusieurs récompenses à obtenir. L'Etage Max Atteint, la Récompense de Première Complétion, et la Récompense de Complétion Totale.";
+                tempStr += "\n - Etage Max Atteint - Concerne l'étage maximal dans lequel chaque héros a quitté le donjon en sécurité. Ces récompenses sont globales. ";
+                tempStr += "\n - Récompense de Première Complétion - Obtenue après qu'un héros aie complété et quitté l'Etage 100 d'un Super Donjon.";
+                tempStr += "\n - Récompense de Complétion Totale - Après que tous les héros aient récupéré leur récompense de première complétion, vous obtiendrez la Récompense de Complétion Totale.";
                 tempStr += "\n\n";
-                tempStr += "<u>A Super Dungeon Run</u>";
-                tempStr += "\n- Each run of a Super Dungeon has a Portal Orb cost to enter. The cost will double every 5 runs (The first 1-5 runs will cost 1 Portal Orbs each, 6-10 costs 2, 11-15 costs 4, and so on.) The Cost of Portal Orbs can revert to 1 Portal Orbs per run by using an Entry Cost Refresh Ticket, which can be obtained via Daily Quests and claiming them.";
-                tempStr += "\n- On a Floor completion (beating all 10 waves of the floor) you enter a Safe Zone. ";
-                tempStr += "\n- Safe Zones have powerups that can be purchased via Dungeon Coins. There's an Effect Bonus and a Permanent Effect Bonus to each powerup purchased.";
-                tempStr += "\n - Effect is for that specific Super Dungeon run only.";
-                tempStr += "\n - Permanent Effect lasts even after the Super Dungeon run. Some of these can only work while in a Super Dungeon. Determined by the word \"SD\" in the Permanent Effect. Others will work in and out of Super Dungeons.";
-                tempStr += "\n- While in the Safe Zone, you can safely leave the Super Dungeon and gain any Dungeon Coins, Topaz, Rubies, or Pieces of Rubies that may have been gained on that run. That can be used to upgrade multiple things within the Super Dungeon tab. (see below for usage)";
-                tempStr += "\n- Dying or leaving before getting to the safe zone, you will lose all current gained Dungeon Coins, Topaz, Rubies, Pieces of Rubies from that run. You will also lose any effects from Powerups (not including permanent effect bonuses that you may have obtained via purchasing Powerups). Fame gained is also kept even on failing a Super Dungeon run.";
-                tempStr += "\n- There are upgrades you can get that will allow you to bring back Dungeon Coins and Pieces of Rubies if you do die.";
-                tempStr += "\n- On every first floor completion per hero you will receive a Topaz. This will increase by 1, every 10 floors. (ex. Floor 1-10 first completion will give you 1 topaz each. Floor 11-20 will give you 2 topaz each). This is not reset upon World Ascension. Further Super Dungeons increase this Topaz reward.";
-                tempStr += "\n- Every 10th floor has a Challenge Boss wave. Challenge Bosses award Rubies on the hero's first clear on that floor. Any subsequent completion of the boss on that floor, will award Pieces of Rubies for the hero. The amount of Rubies and Pieces of Rubies also increase as you defeat higher floor challenge bosses.";
-                tempStr += "\n - Challenge boss rewarding rubies on first clear will not be reset upon World Ascension. You will receive Pieces of Rubies.";
-                tempStr += "\n - Further Super Dungeons will increase the Ruby / Piece of Ruby reward.";
+                tempStr += "<u>Un Essai de Super Donjon</u>";
+                tempStr += "\n- Chaque essai de Super Donjon a un coût en Orbe Portail associé afin d'y rentrer. Le coût double tous les 5 essais (Les 1-5 premiers essais coûtent 1 Orbe Portal, 6-10 coûtent 2, 11-15 coûtent 4, etc.) Le Coût en Orbes Portail peut revenir à 1 Orbe Portail en utilisant un Ticket de Réinitialisation de Coût d'Entrée, qui peut être obtenu via les Quêtes Journalières et en les récoltant.";
+                tempStr += "\n- Après chaque complétion d'un Etage (vaincre les 10 vagues de l'étage) vous entrerez dans une Zone Sûre. ";
+                tempStr += "\n- Les Zones Sûres ont des pouvoirs qui peuvent être achetées avec des Pièces de Donjon. Il y a un Effet Bonus et un Effet Permanent lié à chaque achat de pouvoir.";
+                tempStr += "\n - L'Effet Bonus affecte seulement l'essai courant du Super Donjon.";
+                tempStr += "\n - L'Effet Permanent reste même après la fin de l'essai de Super Donjon. Certains effets ne fonctionnent que dans les Super Donjons, annoté avec le mot \"SD\" dans sa description. Les autres fonctionnent même en dehors des Super Donjons.";
+                tempStr += "\n- Lorsque vous êtes dans une Zone Sûre, vous pouvez quitter le Super Donjon en sécurité et gagner des Pièces de Donjon, des Topazes, des Rubis et des Fragments de Rubis qui ont pu être gagné pendant cet essai. Ces ressources peuvent être utilisées afin d'améliorer des choses variées dans l'onglet Super Donjon. (voir ci-dessous pour les utilisations)";
+                tempStr += "\n- Si vous mourrez ou quittez avant d'atteindre une Zone Sûre, vous perdrez toutes les Pièces de Donjon, les Topazes, les Rubis et les Fragments de Rubis acquis pendant cet essai. Vous perdrez aussi tous les effets des Pouvoirs (sans inclure les effets permanents qui ont été obtenus à travers l'achat de Pouvoirs). La Renommée est aussi gardée même après l'échec d'un essai de Super Donjon.";
+                tempStr += "\n- Il existe des améliorations achetables qui peuvent te permettre de récupérer des Pièces de Donjon et des Fragments de Rubis si vous mourrez.";
+                tempStr += "\n- Pour chaque première complétion d'un étage par héros, vous recevrez un Topaze. Le nombre récupéré augmente de 1 tous les 10 étages. (ex. La première complétion de l'Etage 1-10 vous octroie 1 Topaze par étage, les Etages 11-20 vous octroie 2 Topazes par étage, etc). Ceci n'est pas réinitialisé après une Ascension Monde. Les Super Donjons suivants augmentent aussi la récompense de Topaze.";
+                tempStr += "\n- Chaque 10ème étage a une vague de Boss de Défi. Les Boss de Défi lachent des Rubis lorsque le héros complète l'étage pour la première fois. Toute complétion future du boss de cet étage donnera des Fragments de Rubis pour ce héros. Le nombre de Rubis et de Fragments e Rubis augmente aussi lorsque vous vainquez les boss de défi aux étages supérieurs.";
+                tempStr += "\n - Les Boss de Défi qui lâchent des Rubis lors de leur première complétion ne seront pas réinitialisés après une Ascension Monde. Vous recevrez des Fragments de Rubis.";
+                tempStr += "\n - Les Super donjons suivants augmentent les récompenses de Rubis / Fragments de Rubis.";
                 tempStr += "\n\n";
-                tempStr += "<u>Grade / Fame </u>";
-                tempStr += "\n- Fame is gained through killing monsters within a Super Dungeon run. When you get enough Fame, you will get a Grade increase. (Think of it as Experience and Leveling the hero)";
-                tempStr += "\n- Fame amount depends on the Monster level and the amount of Fame Gain% you have. You can increase Fame Gain % through Upgrades, Artifact Equipment, Powerups, and other sources.";
-                tempStr += "\n- Upon getting a Grade Increase, you will receive 1 Super Ability Point (Ability Tab > Super Button). Make sure to hover over each Super Ability, to see what they add as they differ slightly from regular Abilities.";
-                tempStr += "\n- Grade Milestones (Super Dungeon > Hero Details) are milestones you can get when hitting the required Grade level. These milestones pertain to Super Dungeons, and allows for more class skill slots, equipment slots, utility slots to be available to use during the SD run.";
-                tempStr += "\n- Rebirth Tier 4 and World Ascension will reset your Grade / Fame back to 0. There is a way to save Grade Milestones via Modifier Milestones (see Modifiers)";
-                tempStr += "\n- Each time your hero gains a Grade, you will also gain Guild Fame, that will eventually level up your Guild Grade. (See more on Guild Grade under the [Guild] tab in Help)";
+                tempStr += "<u>Classe / Renommée </u>";
+                tempStr += "\n- La Renommée est gagné en vainquant des monstres dans un essai de Super Donjon. Lorsque vous recevez assez de Renommée, votre Classe augmentera. (Pense à de l'Expérience et à la Montée de Niveau classique du héros)";
+                tempStr += "\n- Le montant de Renommée dépend du niveau du Monstre et de votre % de Gains de Renommée. Vous pouvez augmenter votre % de Gains de Renommée à travers des Améliorations, des Reliques, des Pouvoirs, et d'autres sources.";
+                tempStr += "\n- Lorsque votre Classe augmente, vous recevrez 1 Point de Super Abilité (Onglet Abilité > Bouton Super). Faites en sorte de bouger votre souris sur chaque Super Abilité pour voir ce qu'elles ajoutent, car elles diffèrent un peu des Abilités normales.";
+                tempStr += "\n- Les Paliers de Classes (Super Donjon > Détails du Héros) sont des paliers qui peuvent être atteint en atteignant la Classe requise. Ces paliers affectent les Super Donjons, et permet d'avoir plus d'emplacements de capacité de classe, d'emplacements d'équipement, d'emplacements d'utilitaires disponibles pendant un essai de SD.";
+                tempStr += "\n- La Réincarnation de Classe 4 et l'Ascension Monde réinitalisera votre Renommée / Classe à 0. Il existe un moyen de garder les Paliers de Classe à travers les Paliers de Modificateurs (voir Modificateurs)";
+                tempStr += "\n- À chaque fois que votre héros augmente de Classe, vous gagnerez aussi de la Renommée de Guilde, qui éventuellement augmentera votre Classe de Guilde. (Plus de détails dans la section Classe de Guilde dans l'onglet [Guilde] de l'Aide)";
                 tempStr += "\n\n";
-                tempStr += "<u>Dungeon Coin <sprite=\"DungeonCoin\" index=0> Usage</u>";
-                tempStr += "\n- Obtained by killing monsters. You can also level up certain upgrades, to start with Dungeon Coins on a fresh Super Dungeon run, or increase the Dungeon Coin Gain%.";
-                tempStr += "\n- The Dungeon Coins gained while in a Super Dungeon, can be used to purchase Powerups.";
-                tempStr += "\n- When you successfully leave a Super Dungeon run, any left over Dungeon Coins not used to purchase Powerups will be added to your total Dungeon Coins (Seen by Super Dungeon Tab > Above the Super Dungeon sub tab.)";
-                tempStr += "\n- You can use these Dungeon Coins to unlock new Powerups for future Super Dungeon runs and purchase certain Improvements. (Super Dungeon Tab > Improvements)";
-                tempStr += "\n- Dungeon Coins can be used in the Improvements > Upgrade 1-4 tabs as well.";
+                tempStr += "<u>Utilisation de Pièces de Donjon <sprite=\"DungeonCoin\" index=0></u>";
+                tempStr += "\n- Obtenu en vainquant des monstres dans un Super Donjon. Vous pouvez aussi monter le niveau de certaines améliorations, pour commencer avec des Pièces de Donjon dans un nouvel essai de Super Donjon, ou en augmentant votre % de Gains de Pièces de Donjon.";
+                tempStr += "\n- Les Pièces de Donjon gagnées dans un Super Donjon peuvent être utilisées afin d'acheter des Pouvoirs.";
+                tempStr += "\n- Lorsque vous quittez un essai de Super Donjon en sécurité, toutes Pièces de Donjon non dépensées pour acheter des Pouvoirs seront ajoutées au total de Pièces de Donjon (visible dans l'Onglet Super Donjon > Au dessus du sous-onglet Super Donjon.)";
+                tempStr += "\n- Vous pouvez utiliser ces Pièces de Donjon afin de débloquer de nouveaux Pouvoirs pour des essais futurs de Super Donjon et afin d'acheter des Améliorations. (Onglet Super Donjon > Améliorations)";
+                tempStr += "\n- Les Pièces de Donjon peuvent aussi être utilisées dans les onglets Améliorations > Amélioration 1-4.";
                 tempStr += "\n\n";
-                tempStr += "<u>Topaz <sprite=\"Topaz\" index=0> Usage</u>";
-                tempStr += "\n- After receiving and safely leaving a dungeon with Topaz, you can use the Topaz to rank up Powerups (Super Dungeon Tab > Improvements > Powerups). Which will increase its Effect for SD Runs.";
-                tempStr += "\n- With Topaz, you can unlock different Automations (Super Dungeon Tab > Improvements > Automations) that will make Super Dungeons more idle-friendly.";
+                tempStr += "<u>Utilisation des Topazes <sprite=\"Topaz\" index=0></u>";
+                tempStr += "\n- Après avoir reçu des Topazes et être sorti du donjon en sécurité, vous pouvez utiiser ces Topazes pour augmenter le rang des Pouvoirs (Onglet Super Donjon > Améliorations > Pouvoirs), ce qui augmenta ses Effets dans les essais de SD.";
+                tempStr += "\n- Avec les Topazes, vous pouvez débloquer des Automatisations variées (Onglet Super Donjon > Améliorations > Automatisations) qui rendront les Super Donjons plus facile à compléter automatiquement.";
                 tempStr += "\n\n";
-                tempStr += "<u>Ruby <sprite=\"Ruby\" index=0> / Piece of Ruby <sprite=\"PieceOfRuby\" index=0> Usage</u>";
-                tempStr += "\n- After killing a Challenge Boss floor and leaving the dungeon with a Ruby, you can then use the Ruby in the Ruby Shop (Super Dungeon Tab > Ruby Shop) for a bunch of different things. Such as, Artifacts, Scrolls, Anvils, Talismans, Stats, and other things!";
-                tempStr += "\n- You can also convert Pieces of Ruby into 1 Ruby in the Ruby Shop (Super Dungeon Tab > Ruby Shop > Special)";
-                tempStr += "\n- Pieces of Ruby can be used to purchase things in the Ruby shop as well, or be converted into Rubies.";
+                tempStr += "<u>Utilisation des Rubis <sprite=\"Ruby\" index=0> / Fragments de Rubis <sprite=\"PieceOfRuby\" index=0></u>";
+                tempStr += "\n- Après avoir vaincu un étage de Boss de Défi et avoir quitté le donjon avec un Rubis, vous pouvez ensuite l'utiliser dans le Magasin de Rubis (Onglet Super Donjon > Magasin de Rubis) pour plein de différentes choses, tel que des Reliques, des Parchemins, des Enclumes, des Talismans, des Stats et d'autres choses !";
+                tempStr += "\n- Vous pouvez aussi convertir des Fragments de Rubis en 1 Rubis dans le Magasin de Rubis (Onglet Super Donjon > Magasin de Rubis > Spécial)";
+                tempStr += "\n- Les Fragments de Rubis sont aussi utilisés pour acheter des choses dans le Magasin de Rubis, ou pour être convertis en Rubis.";
                 tempStr += "\n\n";
-                tempStr += "<u>Artifact</u>";
-                tempStr += "\n- Artifacts can be gained by killing monsters while in a Super Dungeon run. Equipment drop chance does play a roll in dropping them as loot.";
-                tempStr += "\n- They can also be gained by purchasing them from the Ruby Shop if you're having difficulties getting them to drop.";
-                tempStr += "\n- Unless specifically noted: Enchant scrolls, Forging Anvils, Proficiency Scrolls, Offline Time, and Equipment Proficiency Gains WILL NOT work on the Artifacts. Delete / Extract scrolls can work non-SD enchants on artifacts.";
-                tempStr += "\n- Artifacts when worn will also have a cost of Nitro (amount noted in the tooltip of the Artifact). If you run out of Nitro, the Artifact will not provide the effects or gain proficiency.";
-                tempStr += "\n- Disassembling Artifacts will reward you with Pieces of Ruby.";
+                tempStr += "<u>Reliques</u>";
+                tempStr += "\n- Les Reliques peuvent être obtenues en vainquant des monstres pendant un essai de Super Donjon. La Chance d'Apparition d'Equipement joue un rôle quant à leur apparition.";
+                tempStr += "\n- Elles peuvent aussi être achetées dans le Magasin de Rubis si vous avez du mal à vous les procurer.";
+                tempStr += "\n- Mis à part si c'est explicitement noté, les Parchemins d'Enchantement, les Enclumes de forge, les Parchemins de Maîtrise, le Temps Hors Ligne et les Gains de Maîtrise d'Equipement N'AFFECTENT PAS les Reliques. Les Parchemins d'Extraction / de Suppression permettent toujours d'enlever des enchantements non liés aux SD des reliques.";
+                tempStr += "\n- Les Reliques ont aussi un coût en Nitro lorsqu'elles sont portés (montant affiché dans l'infobulle de la Relique). Si vous tombez à court de Nitro, les effets de la Relique seront désactivés et sa Maîtrise n'augmentera pas.";
+                tempStr += "\n- Le Désassemblage de Reliques vous donne des Fragments de Rubis.";
                 tempStr += "\n\n";
-                tempStr += "<u>Dodging</u>";
-                tempStr += "\n- Click and hold on the dodge button will allow your hero to dodge an attack. You can also use the [Spacebar] to trigger the dodge as a short cut. You only have so much amount of dodge so use wisely.";
-                tempStr += "\n- While you're dodging, you can not cast skills or move (You can later upgrade your dodge, to allow both of these). So you will have to time your dodges to when the monsters cast timer (Blue bar under their HP bar) is almost full.";
-                tempStr += "\n- The Dodge bar will also show the closet monsters skill bar time to cast.";
+                tempStr += "<u>Esquive</u>";
+                tempStr += "\n- Appuyer et tenir le bouton Esquive permet au héros d'esquiver une attaque. vous pouvez aussi utiliser [Espace] pour esquiver en tant que raccourci. Votre temps d'esquive est limité, donc utilisez-le avec parcimonie.";
+                tempStr += "\n- Pendant l'esquive, vous ne pouvez pas lancer de capacité ou vous déplacer (Vous pourrez dans le futur améliorer votre esquive pour vous permettre de faire tout ça). Donc, vous devrez esquiver lorsque le temps de lancer de capacité du monstre (barre bleue en dessous de leur barre de PV) est presque pleine.";
+                tempStr += "\n- La barre d'esquive permet aussi de voir la barre de lancer de capacité du monstre le plus proche."; //TODO
                 tempStr += "\n\n";
-                tempStr += "<u>Modifiers</u>";
-                tempStr += "\n- Modifiers are per Super Dungeon";
-                tempStr += "\n- To first unlock modifiers, you must clear B100F on the SD at least once. After the first clear, you can click on the Modifier button. (Super Dungeon tab > Modifiers)";
-                tempStr += "\n- Selecting a modifier will add that to your next SD Run. The points associated with each Modifier can be used to determine the difficulty of the modifier. You can also select multiple modifiers for a higher modifier point SD Run.";
-                tempStr += "\n- You must clear B100F with the selected modifiers, to receive Modifier Points. Upon clearing, you will also gain Mother Gems (See Gem Rituals). You will also gain additional Pieces of Ruby based on the modifier points (Ex. Selected Modifier points + 3. On Slime B10F clear, you would gain 4 Pieces of Ruby instead of 1.)";
-                tempStr += "\n- Per hero, their highest Modifier Point will increase their Max Floor Reached bonus, and also go towards Modifier Milestones.";
-                tempStr += "\n- Modifier Milestones (Super Dungeon Tab > Ribbon above Modifier Button) is calculated by each Hero's highest modifier point per SD. These milestones will unlock other things within the SD tab, such as more Upgrade Tabs, Gem Rituals, filter slots, and so on.";
+                tempStr += "<u>Modificateurs</u>";
+                tempStr += "\n- Les Modificateurs sont pour chaque Super Donjon.";
+                tempStr += "\n- Pour débloquer les Modificateurs, il faut compléter l'E100 du SD au moins une fois. Après la première complétion, vous pouvez cliquer sur le bouton Modificateur. (Onglet Super Donjon > Modificateurs)";
+                tempStr += "\n- La sélection d'un modificateur l'ajoutera dans votre prochain essai de SD. Les points associés à chaque Modificateur peuvent être utilisés pour déterminer sa difficulté. Vous pouvez aussi sélectionner plusieurs Modificateurs pour un essai de SD avec un plus grand nombre de Points de Modificateur.";
+                tempStr += "\n- Vous devez compléter l'E100 avec les modificateurs sélectionnés afin de recevoir des Points de Modificateur. Après complétion, vous gagnerez aussi des Gemmes Mères (Voir Rituels de Gemme). Vous recevrez aussi des Fragments de Rubis additionnels basé sur les Points de Modificateur (Ex. Sélectionné un essai avec 3 Points de Modificateur. Lors de la complétion de l'E10 de [La Cachette des Slimes], vous gagnerez 4 Fragments de Rubis au lieu de 1.)";
+                tempStr += "\n- Pour chaque héros, leur Points de Modificateur Max augmenteront leur bonus d'Etage Max Atteint, et compteront pour les Paliers de Modificateur.";
+                tempStr += "\n- Les Paliers de Modificateur (Onglet Super Donjon > Ruban au dessus du bouton Modificateur) sont calculés en utilisant le Max de Points de Modificateur de chaque héros pour chaque SD. Ces paliers débloqueront d'autres choses dans l'onglet SD, tel que plus d'onglets d'Améliorations, des Rituels de Gemme, des emplacements de filtre, etc.";
                 tempStr += "\n\n";
-                tempStr += "<u>Gem Rituals</u>";
-                tempStr += "\n- Gem Ritual tab (Super Dungeon Tab > Gem Rituals ) is first unlocked after your first clear in an Modified SD run.";
-                tempStr += "\n- Upon clearing, you'll gain Mother Gems based on the Highest Modified Points per hero, per SD.";
-                tempStr += "\n- Mother Gems can then be used to increase the Gem Ritual bonuses. Assigning Mother Gems to the Gem Rituals will start the progress of leveling up that gem ritual. Adding more Mother Gems to that ritual will lower the time required to level it up. ";
-                tempStr += "\n- Passive Playtime Offline Bonus does not apply to Gem Rituals, till you get the required Modifier Milestone.";
+                tempStr += "<u>Rituels de Gemme</u>";
+                tempStr += "\n- L'Onglet Rituels de Gemme (Onglet Super Donjon > Rituels de Gemme) est débloqué après votre première complétion d'un essai modifié de SD.";
+                tempStr += "\n- Après complétion, vous gagnerez des Gemmes Mères basées sur le Max de Points de Modification par héros, par SD.";
+                tempStr += "\n- Les Gemmes Mères peuvent être utilisées pour augmenter les bonus de Rituel de Gemme. Assigner des Gemmes Mères aux Rituels de Gemme commencera le progrès vers la montée de niveau de ce rituel de gemme. Ajouter plus de Rituels de Gemme réduira le temps requis afin d'augmenter le niveau du rituel. ";
+                tempStr += "\n- Le bonus de Temps de Jeu Hors-Ligne Passif ne s'applique pas aux Rituels de Gemme, à moins d'avoir le Palier de Modificateur qui l'autorise.";
                 break;
             case HelpKind.Expedition:
                 tempStr += "Les expéditions sont là où vous pouvez envoyer vos familiers (récupéré en augmentant le rang de monstres au Rang 1 à travers des captures) dans de différentes types d'aventures.";
@@ -10060,7 +10050,7 @@ public class Localized_French : LOCALIZATION
         tempStr += "<size=20><u>Total de Ressources de Super Donjon Gagnées</u><size=18>";
         tempStr += "\n- Pièces de Donjon gagnées dans un SD : " + tDigit(main.S.totalDungeonCoinGained);
         tempStr += "\n- Pièces de Donjon sauvées d'un SD : " + tDigit(main.S.totalPermanentDungeonCoinGained);
-        tempStr += "\n- Topaz : " + tDigit(main.S.totalTopazGained);//NEW14
+        tempStr += "\n- Topazes : " + tDigit(main.S.totalTopazGained);
         tempStr += "\n- Rubis : " + tDigit(main.S.totalRubyGained);
         tempStr += "\n- Fragments de Rubis : " + tDigit(main.S.totalPieceOfRubyGained);
         tempStr += "\n- Pierre Mère : " + tDigit(main.S.totalMotherStoneGained);
@@ -10876,7 +10866,7 @@ public class Localized_French : LOCALIZATION
             case 7: return "Complétion " + text;
             case 8: return "De nombreuses stats sont réduites dans un Super Donjon";
             case 9: return "Les bénédictions ne sont pas disponibles";
-            case 10: return "Etage Max Atteint";
+            case 10: return "Étage Max Atteint";
             case 11: return "Modificateurs";
             case 12: return "Réinitialisation";
             case 13: return "Aller à la Super Abilité";
@@ -10908,7 +10898,7 @@ public class Localized_French : LOCALIZATION
             case 39: return "Améliorer " + text;
             case 40: return "Amélioration de SD";
             case 41: return "Automatisation de SD";
-            case 42: return "Etage Visé";
+            case 42: return "Étage Visé";
             case 43: return "Valide jusqu'à ce que le Coût d'Entrée excède cette valeur";
             case 44: return "Pouvoir de SD";
             case 45: return "Les Stats de Héros sont réduites dans un Super Donjon - Voir l'onglet Détails de Héros";
@@ -10958,20 +10948,20 @@ public class Localized_French : LOCALIZATION
             case 89: return "Les pouvoirs barrés N'APPARAITRONT PAS dans les zones sûres. Jusqu'à [# d'Emplacements de Filtre de Pouvoir] pouvoirs peuvent être filtrés.\nSi vous achetez [Filtre de Limite d'Auto-Achat de Pouvoir] dans le Magasin Epique, vous pouvez ajouter une limite d'achat aux pouvoirs barrés qui les feront apparaître dans les zones sûres jusqu'à qu'une limite d'achat soit atteinte, après quoi ils n'apparaîtront plus.\nUne Limite d'Achat de 0 veut dire que le pouvoir n'apparaîtra jamais dans les zones sûres.";
             case 90: return "Limite d'Achat";
             case 91: return "M";
-            case 92: return "Vous recevrez des Pierres Mères lorsque vous compléterez l'E100 d'un donjon pour la première fois, par héroq.";//TODO
+            case 92: return "Vous recevrez des Gemmes Mères lorsque vous complétez l'E100 d'un donjon pour la première fois, par héros.";
             case 93: return "Assigné";
             case 94: return "+Tout";
             case 95: return "Rituels de Gemme";
             case 96: return "Palier de Modificateur";
             case 97: return "Total M" + text;
             case 98: return "# Total de Max Modificateurs Complétés";
-            case 99: return "You will gain Mother Gems and an increase to the Max Floor Reached reward, based on the highest modifier points cleared per hero. You will also get additional Pieces of Ruby based on the modifier points of the current run.";//NEW14
-            case 100: return "Additive";//NEW14
-            case 101: return "Subtractive";//NEW14
-            case 102: return "Multiplicative";//NEW14
-            case 103: return "Purchase amount every floor";//NEW14
-            case 104: return "Stop buying powerups after this floor";//NEW15
-            case 105: return "SD Challenge Boss Damage Cut Multiplier";//NEW15
+            case 99: return "Vous gagnerez des Gemmes Mères et une augmentation de la récompense d'Etage Max Atteint, basé sur le maximum de points de modificateur complété pour chaque héros. Vous gagnerez aussi des Fragments de Rubis en plus basé sur les points de modificateur de l'essai courant.";
+            case 100: return "Additif";
+            case 101: return "Soustractif";
+            case 102: return "Multiplicatif";
+            case 103: return "Montant acheté à chaque étage";
+            case 104: return "Arrêter d'acheter des pouvoirs après cet étage";
+            case 105: return "Multiplcateur de Réduction de Dégâts de Boss de Défi de SD";
         }
         return text;
     }
@@ -11083,7 +11073,7 @@ public class Localized_French : LOCALIZATION
                 effect = "Chance d'Apparition d'Équipement Absolue + {0} ( + {1} / Rang )";
                 permanentEffect = "Gain de Maîtrise de Relique + {0}";
                 break;
-            case SuperDungeonPowerupKind.ChallengeBossDamageMultiplier://NEW11
+            case SuperDungeonPowerupKind.ChallengeBossDamageMultiplier:
                 name = "Multiplicateur de Dégâts de Boss de Défi de SD";
                 effect = "Multiplicateur de Dégâts de Boss de Défi de SD + {0} ( + {1} / Rang )";
                 permanentEffect = "Multiplication du Multiplicateur de Dégâts de Boss de Défi de SD + {0}";
@@ -11107,22 +11097,22 @@ public class Localized_French : LOCALIZATION
             case 3: return "Convertit 1 <sprite=\"Ruby\" index=0> " + Basic(BasicWord.Ruby) + " en " + text1 + " <sprite=\"PieceOfRuby\" index=0> " + Basic(BasicWord.PieceOfRuby);
             case 4: return "Effet de Relique";
             case 5: return text1 + " des stats \"Effet d'Équipement\" s'applique aux Reliques ( + " + text2 + " / Nv )" + "\n- Effet d'Équipement Courant des Reliques : " + text3;
-            case 6: return "SD Max Floor Reward Multiplier";//NEW14
-            case 7: return "Multiplies the SD Max Floor Reached Reward by " + text1 + "  ( + " + text2 + " / Lv )";//NEW14
-            case 8: return "Gold Cap";//NEW14
-            case 9: return "Multiplies Gold Cap by " + text1 + "  ( + " + text2 + " / Lv )";//NEW14
-            case 10: return "Gold Gain";//NEW14
-            case 11: return "Multiplies Gold Gain by " + text1 + "  ( + " + text2 + " / Lv )";//NEW14
-            case 12: return "Slime Coin Cap";//NEW14
-            case 13: return "Multiplies Slime Coin Cap by " + text1 + "  ( + " + text2 + " / Lv )";//NEW14
-            case 14: return "Guild EXP Gain";//NEW14
-            case 15: return "Multiplies Guild EXP Gain by " + text1 + "  ( + " + text2 + " / Lv )";//NEW14
-            case 16: return "Taming Point Gain";//NEW14
-            case 17: return "Multiplies Taming Point Gain by " + text1 + "  ( + " + text2 + " / Lv )";//NEW14
-            case 18: return "Loyalty Point Gain";//NEW14
-            case 19: return "Multiplies Loyalty Point Gain by " + text1 + "  ( + " + text2 + " / Lv )";//NEW14
-            case 20: return "Town Research Power";//NEW14
-            case 21: return "Multiplies Town Research Power by " + text1 + "  ( + " + text2 + " / Lv )";//NEW14
+            case 6: return "Multiplicateur de Récompense d'Etage Max de SD";
+            case 7: return "Multiplie la Récompense d'Etage Max de SD par " + text1 + "  ( + " + text2 + " / Nv )";
+            case 8: return "Limite d'Or";
+            case 9: return "Multiplie la Limite d'Or par " + text1 + "  ( + " + text2 + " / Nv )";
+            case 10: return "Gain d'Or";
+            case 11: return "Multiplie les Gains d'Or par " + text1 + "  ( + " + text2 + " / Nv )";
+            case 12: return "Limite de Pièces de Slime";
+            case 13: return "Multiplie la Limite de Pièces de Slime par " + text1 + "  ( + " + text2 + " / Nv )";
+            case 14: return "Gain d'EXP de Guilde";
+            case 15: return "Multiplie les Gains d'EXP de Guilde par " + text1 + "  ( + " + text2 + " / Nv )";
+            case 16: return "Gain de Points de Domptage";
+            case 17: return "Multiplie les Gains de Points de Domptage par " + text1 + "  ( + " + text2 + " / Nv )";
+            case 18: return "Gain de Points de Loyauté";
+            case 19: return "Multiplie les Gains de Points de Loyauté par " + text1 + "  ( + " + text2 + " / Nv )";
+            case 20: return "Pouvoir de Recherche de Ville";
+            case 21: return "Multiplie le Pouvoir de Recherche de Ville par " + text1 + "  ( + " + text2 + " / Nv )";
             default: return text1;
         }
     }
@@ -11429,14 +11419,14 @@ public class Localized_French : LOCALIZATION
                 effect = "Augmente les Emplacements de Filtre de Pouvoir";
                 effectWithLevel = "par " + text;
                 break;
-            case SuperDungeonUpgradeKind.SDChallengeBossDamageCutMultiplier://NEW15
-                name = "SD Challenge Boss Damage Cut Multiplier";
-                effect = "Multiplies SD Challenge Boss Damage Cut Multiplier";
-                effectWithLevel = "by " + text;
+            case SuperDungeonUpgradeKind.SDChallengeBossDamageCutMultiplier:
+                name = "Multiplicateur de Réduction de Dégâts de Boss de Défi de SD";
+                effect = "Multiplie le Multiplicateur de Réduction de Dégâts de Boss de Défi de SD";
+                effectWithLevel = "par " + text;
                 break;
-            case SuperDungeonUpgradeKind.BoostStartGoodRNG://NEW15
-                name = "Boost-Start of Good RNG";
-                effect = "The Powerup [SD Damage Multiplier] will always show up at B1F Safe Zone";
+            case SuperDungeonUpgradeKind.BoostStartGoodRNG:
+                name = "Avance de Bonne RNG";
+                effect = "Le Pouvoir [Multiplicateur de Dégâts de SD] apparaitra toujours à la Zone Sûre de l'E1";
                 effectWithLevel = "";
                 break;
             default:
@@ -11454,9 +11444,9 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return "La Cachette des Slimes";
             case 1: return "L'Appartement Souterrain des Araignées";
-            case 2: return "The Darkest Forest";//NEW15
-            case 3: return "The Burning Garden";//NEW15
-            case 4: return "The Slime Lecture Venue";//NEW15
+            case 2: return "La Fôret Ténébreuse";
+            case 3: return "Le Jardin Enflammé";
+            case 4: return "La Salle de Conférence des Slimes";
             default: return text;
         }
     }
@@ -11473,40 +11463,40 @@ public class Localized_French : LOCALIZATION
             case 5: return "Multiplicateur de Dégâts de SD + " + text;
             case 6: return "Multiplicateur de Réduction de Dégâts de SD + " + text;
             case 7: return "Multiplicateur de Dégâts de Boss de Défi de SD + " + text;
-            case 8: return "SD Challenge Boss Damage Cut Multiplier + " + text;//NEW15
-            case 9: return "SD Armored Fury + " + text;//NEW15
-            case 10: return "SD Warded Fury + " + text;//NEW15
+            case 8: return "Multiplicateur de Réduction de Dégâts de Boss de Défi de SD + " + text;
+            case 9: return "Furie d'Armure de SD + " + text;
+            case 10: return "Furie d'Esprit de SD + " + text;
             default: return base.GradeMilestone(id, text);
         }
     }
 
-    public override string SDModifierString(SDModifierKind kind, string text = "")//NEW14
+    public override string SDModifierString(SDModifierKind kind, string text = "")
     {
         switch (kind)
         {
-            case SDModifierKind.MobLv: return "Monster Level + " + text;
-            case SDModifierKind.ReducePowerup: return "Decrease the amount of Powerups that show up at a Safe Zone by " + text;
-            case SDModifierKind.ReduceSkillSlot: return "Decrease available class skill slots by " + text;
-            case SDModifierKind.MobFullCast: return "Monster Cast starts at full";
-            case SDModifierKind.DodgeDrainSpeed2x: return "2x drain speed of available dodge time";
-            case SDModifierKind.DodgeDrainPerDodge: return "Drain 1 sec of available dodge time on a successful dodge";
-            case SDModifierKind.DisableMove: return "Disable Move";
-            case SDModifierKind.DungeonCoinFixed1: return "Base Dungeon Coin gain per defeat is fixed at 1";
-            case SDModifierKind.RemoveSDPowerupPassives: return "Remove the permanent effects of SD Powerups";
-            case SDModifierKind.RemoveEquipmentEffectBonuses: return "Remove Equipment Effect Bonus";
-            case SDModifierKind.DisablePowerupFilter: return "Disable Powerup Filter";
-            case SDModifierKind.StartWith5PercentOfMaxHP: return "Start with 5% of Max HP and drain 20% of current HP every floor";
-            case SDModifierKind.DrainHPPerSec: return "Drain HP " + text + " per sec";
-            case SDModifierKind.SwapATKWithDEF: return "Swap ATK/MATK with DEF/MDEF";
-            case SDModifierKind.SDDamage: return "Multiply SD Damage Multiplier by " + text;
-            case SDModifierKind.SDChallengeBossDamage: return "Multiply SD Challenge Boss Damage Multiplier by " + text;
-            case SDModifierKind.RemoveSDUpgrade1: return "Remove the effect of SD Damage-type and Fury upgrades in SD Upgrade 1";//NEW15
-            case SDModifierKind.ReducePowerupEffect: return "Reduce the effect of powerups by " + text;//NEW15
-            case SDModifierKind.MonsterExplode: return "Monsters explode on death that deals damage";//NEW15
-            case SDModifierKind.MPRegen: return "Increase MP Regenerate by " + text + " of Max MP";//NEW15
-            case SDModifierKind.FameGain: return "Multiply Fame Gain by " + text;//NEW15
-            case SDModifierKind.ArtifactChance: return "Multiply Artifact Gain Chance by " + text;//NEW15
-            case SDModifierKind.SDEnchantChance: return "Multiply SD Enchant Gain Chance by " + text;//NEW15
+            case SDModifierKind.MobLv: return "Niveau de Monstre  + " + text;
+            case SDModifierKind.ReducePowerup: return "Réduit le nombre de Pouvoirs qui apparaissent dans les Zones Sûres par " + text;
+            case SDModifierKind.ReduceSkillSlot: return "Réduit le nombre d'emplacements de capacités de classe par " + text;
+            case SDModifierKind.MobFullCast: return "La Jauge d'attaque des Monstres commence remplie";
+            case SDModifierKind.DodgeDrainSpeed2x: return "Le Temps d'Esquive disponible est réduit 2x plus vite";
+            case SDModifierKind.DodgeDrainPerDodge: return "Réduit le Temps d'Esquive restant d'1 sec par esquive réussie";
+            case SDModifierKind.DisableMove: return "Désactive le Déplacement";
+            case SDModifierKind.DungeonCoinFixed1: return "Les gains de Pièces de Donjon de base par ennemi vaincu est fixé à 1";
+            case SDModifierKind.RemoveSDPowerupPassives: return "Enlève les effets permanents des Pouvoirs de SD";
+            case SDModifierKind.RemoveEquipmentEffectBonuses: return "Enlève les Bonus d'Effets d'Équipements";
+            case SDModifierKind.DisablePowerupFilter: return "Désactive le Filtre de Pouvoirs";
+            case SDModifierKind.StartWith5PercentOfMaxHP: return "Commence avec 5% des PV Max et soustrait 20% des PV courants à chaque étage";
+            case SDModifierKind.DrainHPPerSec: return "Réduit les PV par " + text + " par sec";
+            case SDModifierKind.SwapATKWithDEF: return "Échange l'ATQ/MATQ avec la DEF/MDEF";
+            case SDModifierKind.SDDamage: return "Multiplie le Multiplicateur de Dégâts de SD par " + text;
+            case SDModifierKind.SDChallengeBossDamage: return "Multiplie le Multiplicateur de Dégâts de Boss de Défi de SD par " + text;
+            case SDModifierKind.RemoveSDUpgrade1: return "Enlève les effets de type Dégâts de SD et les améliorations de Furie de l'onglet Amélioration de SD 1";
+            case SDModifierKind.ReducePowerupEffect: return "Réduit les effets des pouvoirs par " + text;
+            case SDModifierKind.MonsterExplode: return "Les monstres explosent en mourrant, ce qui vous inflige des dégâts";
+            case SDModifierKind.MPRegen: return "Augmente la Régénération de PM par " + text + " des PV Max";
+            case SDModifierKind.FameGain: return "Multiplie les Gains de Renommée par " + text;
+            case SDModifierKind.ArtifactChance: return "Multiplie la Chance d'Apparition de Relique par " + text;
+            case SDModifierKind.SDEnchantChance: return "Multiplie la Chance d'Apparition d'Enchantements de SD par " + text;
         }
         return base.SDModifierString(kind, text);
     }
@@ -11566,8 +11556,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case SDGemKind.Turquoise:
                 name = "Turquoise";
-                effect = "Reduce the efficiency penalty of longer expeditions - Current : [Hour]^" + text;//NEW14 changed from [text]^[Hour] to [Hour]^[text]
-                //effect = "Réduit la Pénalité d'Efficacité des Expéditions Longues - Courant : " + text + "^[Hour]";
+                effect = "Réduit la Pénalité d'Efficacité des Expéditions Longues - Courant : [Heure]^" + text;
                 break;
             case SDGemKind.Kunzite:
                 name = "Spodumène";
@@ -11589,9 +11578,9 @@ public class Localized_French : LOCALIZATION
                 name = "Almandin";
                 effect = "Vitesse de Nitro + " + text + "x";
                 break;
-            case SDGemKind.Emerald://NEW15
-                name = "Emerald";
-                effect = "Multiplies SD Powerups Effect by " + text;
+            case SDGemKind.Emerald:
+                name = "Émeraude";
+                effect = "Multiplie les Effets des Pouvoirs de SD par " + text;
                 break;
             default:
                 name = base.SDGemString(kind, text).name;
@@ -11618,20 +11607,20 @@ public class Localized_French : LOCALIZATION
             case 11: return "Améliore le taux de conversion du [Convertisseur de Rubis] dans le Magasin de Rubis";
             case 12: return "Augmente la limite de rang des pouvoirs par " + text;
             case 13: return "Augmente le nombre de Tickets de Réinitialisation de Coût d'Entrée gagnés dans les Quêtes Journalières par " + text;
-            case 14: return "Unlocks new Modifier(s)";//NEW14
-            case 15: return "Powerup Filter Loadout Slot + 1";//NEW15
-            case 16: return "Modifier Loadout Slot + 1";//NEW15
-            case 17: return "Enables Grade Milestones persisting on Rebirth/World Ascension";//NEW15
+            case 14: return "Débloque de nouveau(x) Modificateur(s)";
+            case 15: return "Emplacement de Collection de Filtre de Pouvoir + 1";
+            case 16: return "Emplacement de Collection de Modificateur + 1";
+            case 17: return "Les Paliers de Classe persistent après une Reincarnation/Ascension Monde";
         }
         return base.SDModifierMilestone(id, text);
     }
 
-    public override string SDModifierMilestoneForPowerupEffect(SuperDungeonPowerupKind kind, string text)//NEW15
+    public override string SDModifierMilestoneForPowerupEffect(SuperDungeonPowerupKind kind, string text)
     {
-        return "SD Powerup [" + SDPowerupString(kind).name + "] Effect + " + text;
+        return "Effet du Pouvoir de SD [" + SDPowerupString(kind).name + "] + " + text;
     }
 
-    public override (string name, string effect1, string effect2) GuildSuperAbility(GuildSuperAbilityKind kind, string text1 = "", string text2 = "")//NEW15
+    public override (string name, string effect1, string effect2) GuildSuperAbility(GuildSuperAbilityKind kind, string text1 = "", string text2 = "")
     {
         string name = "";
         string effect1 = "";
@@ -11639,63 +11628,63 @@ public class Localized_French : LOCALIZATION
         switch (kind)
         {
             case GuildSuperAbilityKind.SuperMining:
-                name = "Super Mining";
-                effect1 = "Multiply Stone Gain by " + text1;
-                effect2 = "Increase Mining level cap by " + text2;
+                name = "Super Minage";
+                effect1 = "Multiple les Gains de Pierre par " + text1;
+                effect2 = "Augmente la Limite de Niveau de Minage par " + text2;
                 break;
             case GuildSuperAbilityKind.SuperSynthesizing:
-                name = "Super Synthesizing";
-                effect1 = "Multiply Crystal Gain by " + text1;
-                effect2 = "Increase Synthesizing level cap by " + text2;
+                name = "Super Synthèse";
+                effect1 = "Multiple les Gains de Crystal par " + text1;
+                effect2 = "Augmente la Limite de Niveau de Synthèse par " + text2;
                 break;
             case GuildSuperAbilityKind.SuperGathering:
-                name = "Super Gathering";
-                effect1 = "Multiply Leaf Gain by " + text1;
-                effect2 = "Increase Gathering level cap by " + text2;
+                name = "Super Cueillette";
+                effect1 = "Multiple les Gains de Feuille par " + text1;
+                effect2 = "Augmente la Limite de Niveau de Cueillette par " + text2;
                 break;
             case GuildSuperAbilityKind.SuperTraining:
-                name = "Super Training";
-                effect1 = "Multiply Guild EXP Gain by " + text1;
-                effect2 = "Increase Training level cap by " + text2;
+                name = "Super Entraînement";
+                effect1 = "Multiplie les Gains d'EXP de Guilde par " + text1;
+                effect2 = "Augmente la Limite de Niveau d'Entraînement par " + text2;
                 break;
             case GuildSuperAbilityKind.SuperTrapping:
-                name = "Super Trapping";
-                effect1 = "Triple Capture Chance + " + text1;
-                effect2 = "Increase Trapping level cap by " + text2;
+                name = "Super Capture";
+                effect1 = "Chance de Capture Triple + " + text1;
+                effect2 = "Augmente la Limite de Niveau de Capture par " + text2;
                 break;
             case GuildSuperAbilityKind.SuperBanking:
-                name = "Super Banking";
-                effect1 = "Multiply Gold Cap by " + text1;
-                effect2 = "Increase Banking level cap by " + text2;
+                name = "Super Investissement";
+                effect1 = "Multiplie la Limite d'Or par " + text1;
+                effect2 = "Augmente la Limite de Niveau d'Investissement par " + text2;
                 break;
             case GuildSuperAbilityKind.SuperFinancing:
-                name = "Super Financing";
-                effect1 = "Decrease General Upgrade Cost by " + text1;
-                effect2 = "Increase Financing level cap by " + text2;
+                name = "Super Financement";
+                effect1 = "Réduit les Coûts des Améliorations Générales par " + text1;
+                effect2 = "Augmente la Limite de Niveau de Financement par " + text2;
                 break;
             case GuildSuperAbilityKind.Finding:
-                name = "Scavenging";
-                effect1 = "Multiply dropped amount of materials by " + text1;
+                name = "Récupération";
+                effect1 = "Multiplie le nombre de matériaux lachés par " + text1;
                 break;
             case GuildSuperAbilityKind.Racing:
-                name = "Racing";
-                effect1 = "Multiply Nitro Cap by " + text1;
+                name = "Course";
+                effect1 = "Multiplie la Limite de Nitro par " + text1;
                 break;
             case GuildSuperAbilityKind.Socializing:
-                name = "Socializing";
-                effect1 = "Increase Guild Level Cap (default: GLv300) by " + text1;
+                name = "Socialisation";
+                effect1 = "Augmente la Limite de niveau de Guilde (GNv300 par défaut) par " + text1;
                 break;
             case GuildSuperAbilityKind.Ritualizing:
-                name = "Ritualizing";
-                effect1 = "Multiply Gem Ritual Speed by " + text1;
+                name = "Ritualisation";
+                effect1 = "Multiplie la Vitesse de Rituel de Gemme par " + text1;
                 break;
             case GuildSuperAbilityKind.Artificing:
-                name = "Artificing";
-                effect1 = "Multiply Artifact Proficiency Gain by " + text1;
+                name = "Relicalisation";
+                effect1 = "Multiplie les Gains de Maîtrise des Reliques par " + text1;
                 break;
             case GuildSuperAbilityKind.Haggling:
-                name = "Haggling";
-                effect1 = "Decrease Super Dungeon Upgrade Cost by " + text1;
+                name = "Marchandage";
+                effect1 = "Réduit les Coûts d'Améliorations de Super Donjon par " + text1;
                 break;
             default:
                 name = kind.ToString();
