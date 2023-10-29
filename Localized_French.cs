@@ -2450,8 +2450,8 @@ public class Localized_French : LOCALIZATION
                 return "Gain de Matériaux de Ville";
             case EquipmentEffectKind.TownMatAreaClearGain:
                 return "Gain de Matériaux de Ville (Zone)";
-            case EquipmentEffectKind.TownMatDungeonRewardGain:
-                return "Gain de Matériaux de Ville (Donjon)";
+            //case EquipmentEffectKind.TownMatDungeonRewardGain:
+            //    return "Gain de Matériaux de Ville (Donjon)";
             case EquipmentEffectKind.RebirthPointGain1:
                 return "Gain de Points de Réincarnation de Classe 1";
             case EquipmentEffectKind.RebirthPointGain2:
@@ -2997,9 +2997,9 @@ public class Localized_French : LOCALIZATION
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
             case EquipmentEffectKind.EquipmentDropChance:
-                if (isOnlyEffectValue) return percent(value, 3);
+                if (isOnlyEffectValue) return percent(value, 4);
                 if (value < 0) tempString = "Chance d'Apparition d'Équipement <color=red>" + percent(value) + "</color>";
-                else tempString = "Chance d'Apparition d'Équipement + " + percent(value);
+                else tempString = "Chance d'Apparition d'Équipement + " + percent(value, 4);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 4) + " / Nv )";
                 break;
             case EquipmentEffectKind.SlimeDropChance:
@@ -3183,11 +3183,11 @@ public class Localized_French : LOCALIZATION
                 else tempString = "Gain de Matériaux de Ville à travers la Complétion d'une Zone + " + percent(value);
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
                 break;
-            case EquipmentEffectKind.TownMatDungeonRewardGain:
-                if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
-                else tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon + " + percent(value);
-                if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
-                break;
+            //case EquipmentEffectKind.TownMatDungeonRewardGain:
+            //    if (value < 0) tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon <color=red>" + percent(value) + "</color>";
+            //    else tempString = "Gain de Matériaux de Ville à travers la Complétion d'un Donjon + " + percent(value);
+            //    if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue) + " / Nv )";
+            //    break;
             case EquipmentEffectKind.RebirthPointGain1:
                 if (isOnlyEffectValue) return percent(value);
                 if (value < 0) tempString = "Gain de Points de Réincarnation de Classe 1 <color=red>" + percent(value) + "</color>";
@@ -7037,6 +7037,8 @@ public class Localized_French : LOCALIZATION
                 return "Activer automatiquement après une AM";
             case ToggleKind.SDDisableGuildLog:
                 return "Renommée/Classe de Guilde";
+            case ToggleKind.SDRetryOnFail://NEW16
+                return "Retry even if you fail super dungeon";
         }
         return base.Toggle(kind);
     }
@@ -8821,6 +8823,10 @@ public class Localized_French : LOCALIZATION
             case 42: return "Maj + F pour montrer les coûts entiers (Max x100)";
             case 43: return "Détails de la Limite de Nitro";
             case 44: return "Gain de Renommée de Guilde lorsque le héros " + text + " augmente de classe";
+            case 45: return "Used in the last hour";//NEW16
+            case 46: return "Activate/deactivate while holding Shift key applies to all heroes.";//NEW16
+            case 47: return "Nitro Drain Breakdowns";//NEW16
+            case 48: return "Booster";//NEW16
             default: return base.ResourceCtrlString(id, text);
         }
     }
@@ -10064,6 +10070,13 @@ public class Localized_French : LOCALIZATION
             tempStr += "\n- " + localized.Hero((HeroKind)count) + " : Nv " + tDigit(main.S.maxHeroLevelReached[count]);
         }
         tempStr += "\n\n";
+        tempStr += "<size=20><u>Max Hero Grade Reached</u><size=18>";//NEW16
+        for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)//NEW16
+        {
+            int count = i;
+            tempStr += "\n- " + localized.Hero((HeroKind)count) + " : Lv " + tDigit(main.S.maxHeroGradeReached[count]);//NEW16
+        }
+        tempStr += "\n\n";//NEW16
         tempStr += "<size=20><u>Distance Parcourue Totale</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
@@ -10962,6 +10975,7 @@ public class Localized_French : LOCALIZATION
             case 103: return "Montant acheté à chaque étage";
             case 104: return "Arrêter d'acheter des pouvoirs après cet étage";
             case 105: return "Multiplcateur de Réduction de Dégâts de Boss de Défi de SD";
+            case 106: return "Town Building [" + text + "]";//NEW16
         }
         return text;
     }
@@ -11446,7 +11460,7 @@ public class Localized_French : LOCALIZATION
             case 1: return "L'Appartement Souterrain des Araignées";
             case 2: return "La Fôret Ténébreuse";
             case 3: return "Le Jardin Enflammé";
-            case 4: return "La Salle de Conférence des Slimes";
+            case 4: return "The Kor Lecture Hall";//NEW16 Renamed from Slime to Kor (Challenge Boss: Guradian Kor) //"La Salle de Conférence des Slimes";
             default: return text;
         }
     }
@@ -11580,7 +11594,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case SDGemKind.Emerald:
                 name = "Émeraude";
-                effect = "Multiplie les Effets des Pouvoirs de SD par " + text;
+                effect = "Multiplies SD Powerups Permanent Effect by " + text;//NEW16 changed to Permanent Effect from just Effect //"Multiplie les Effets des Pouvoirs de SD par " + text;
                 break;
             default:
                 name = base.SDGemString(kind, text).name;
