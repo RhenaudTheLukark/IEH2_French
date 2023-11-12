@@ -4676,7 +4676,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindArcher.GravityArrow:
                 return "Flèche de Gravité";
             case SkillKindArcher.Kiting:
-                return "Kiting";
+                return "Évitement";
         }
         return base.SkillNameArcher(kind);
     }
@@ -6080,85 +6080,85 @@ public class Localized_French : LOCALIZATION
                         client = "Tyson le Boxeur";
                         description = "Oh mec, j'ai passé un super bon moment à mettre ces monstres au tapis avec toi. Tes muscles ont l'air saillant ! Bon, un dernier sprint avant qu'on atteigne notre limite. Allons, on a des gains à faire.";
                         break;
-                    case QuestKindTitle.FireAttack1: //TODO
+                    case QuestKindTitle.FireAttack1:
                         name = Title(TitleKind.FireDamage) + " 1";
-                        client = "Pyromancer Natsu";
-                        description = "Ey, you interested in fire magic? I know a thing a two I could teach you. Come on, we can train together, and I’ll see what you’re capable of with your magic.";
+                        client = "Pyromancier Natsu";
+                        description = "Hé, t'es intéressé par la magie du feu ? Je connais deux trois trucs que je pourrais t'apprendre. allez, allons nous entraîner ensemble, que je voies ce dont tu es capable avec ta magie.";
                         break;
                     case QuestKindTitle.FireAttack2:
                         name = Title(TitleKind.FireDamage) + " 2";
-                        client = "Pyromancer Natsu";
-                        description = "Wow, you might just have a fire in your belly. Fire magic is powerful, but it requires strong convictions or else it’ll backfire and burn you too. Come on, I think I’m going to enjoy blazing next to you for a while!";
+                        client = "Pyromancier Natsu";
+                        description = "Yo, on dirait presque que tu portes le feu dans ton ventre. La magie du feu est puissante, mais elle requiert des convictions forte ou elle se retournera contre toi et te brûlera. Allez, je pense que je vais bien aimer m'enflammer avec toi pendant un moment !";
                         break;
                     case QuestKindTitle.FireAttack3:
                         name = Title(TitleKind.FireDamage) + " 3";
-                        client = "Pyromancer Natsu";
-                        description = "Awesome! I love fighting alongside my friends, and I feel like we’re both really improving! Let’s get out there and show them our fire is the strongest!";
+                        client = "Pyromancier Natsu";
+                        description = "Super ! J'adore combattre avec mes amis, et je pense qu'on s'améliore bien tous les deux ! Allons-y de nouveau et montrons leur que notre flamme est la plus ardente !";
                         break;
                     case QuestKindTitle.FireAttack4:
                         name = Title(TitleKind.FireDamage) + " 4";
-                        client = "Pyromancer Natsu";
-                        description = "Looks like I’ll be needing to head back to my guild soon, but I have a little more fire in my belly to spare, so let’s go burn em up one last time. Glad I got to fight alongside you for a while!";
+                        client = "Pyromancier Natsu";
+                        description = "On dirait que je vais bientôt devoir retourner à ma guilde, mais j'ai un peu plus de feu à souffler dans mon ventre, donc allons les cramer une fois de plus. C'était super d'avoir pu combattre à tes côtés pendant un moment !";
                         break;
-                    case QuestKindTitle.IceAttack1: //TODO
+                    case QuestKindTitle.IceAttack1:
                         name = Title(TitleKind.IceDamage) + " 1";
-                        client = "Cryomancer, Shimo Aisu";
-                        description = "It isn’t everyday I meet someone interested in the frozen arts. You are looking for someone to practice your skills with I take it? Good, let’s get started then.";
+                        client = "Cryomancière Shimo Aisu";
+                        description = "Ce n'est pas tous les jours que je rencontre quelqu'un qui porte un intérêt pour l'art de la glace. Je suppose que tu cherches quelqu'un avec qui t'entraîner ? Bien, commençons.";
                         break;
                     case QuestKindTitle.IceAttack2:
                         name = Title(TitleKind.IceDamage) + " 2";
-                        client = "Cryomancer, Shimo Aisu";
-                        description = "I’d say we’re working up a good sweat, but then we’d probably freeze ourselves. You’re pretty good but remember that ice magic is about controlling the cold outside of yourself and the heat within. You must always remember to keep your heart warm, or it will freeze along with your enemies. Now practice focusing on your heart as you cast.";
+                        client = "Cryomancière Shimo Aisu";
+                        description = "Je dirais que nous avons bien transpiré, mais si c'était le cas, on serait tous les deux congelés. Tu es bon, mais n'oublie pas que la magie de glace a pour base le contrôle du froid en dehors de soi et de ta chaleur intérieure. Tu dois toujours te rappeler de garder ton coeur chaud, ou il gèlera avec tes ennemies. Maintenant, concentre toi sur ton coeur pendant ton lancer.";
                         break;
                     case QuestKindTitle.IceAttack3:
                         name = Title(TitleKind.IceDamage) + " 3";
-                        client = "Cryomancer, Shimo Aisu";
-                        description = "Excellent, you’re far better than I expected you to be. Ice magic tends to turn most people away because it creates unfavorable conditions for training, but a true master understands that what happens within you is more important than what happens without. Reflect on that as we practice some more.";
+                        client = "Cryomancière Shimo Aisu";
+                        description = "Excellent, tu es bien meilleur que ce je pensais. La magie de glace repousse beaucoup, car elle crée une condition défavorable lors de l'entraînement, mais un vrai maître comprend que ce qui se passe intérieurement est plus important que le reste. Pondère mes mots pendant notre prochain entraînement.";
                         break;
                     case QuestKindTitle.IceAttack4:
                         name = Title(TitleKind.IceDamage) + " 4";
-                        client = "Cryomancer, Shimo Aisu";
-                        description = "I am not one for puns but watching your growth with ice magic has given me chills! You may be one of those hidden masters that only arise once a century or two! I am grateful for our time together, as I have learned much from watching you as well. Let us practice some more, though now I fear I have little left to teach you.";
+                        client = "Cryomancière Shimo Aisu";
+                        description = "Je ne suis pas du genre à faire des blagues, mais tes progrès avec la magie de glace m'a donné des frissons ! Tu dois être l'un de ces maîtres inconnus qui apparaît tous les quelques siècles ! Je suis contente du temps que nous avons passé ensemble, car j'ai aussi pu en apprendre beaucoup en te regardant. Continuons notre entraînement, cependant j'ai bien peur de ne plus avoir grand chose à t'apprendre.";
                         break;
-                    case QuestKindTitle.ThunderAttack1: //TODO
+                    case QuestKindTitle.ThunderAttack1:
                         name = Title(TitleKind.ThunderDamage) + " 1";
-                        client = "Thunderbeast Raiju";
-                        description = "You see a strange beast, electricity arcing across its fur sporadically, resting under what appears to be a blackened tree. It glances at you, sniffs at the air, and it stares at you intently. You get the feeling it wants you to follow it and the urge to use thunder magic swells within you.";
+                        client = "Raiju, la Bête Électrique";
+                        description = "Vous voyez une bête étrange se reposer sous ce qui s'avère être un arbre noirci, électricité sautant dans sa fourrure de façon erratique. Elle lance un regard vers vous, hume l'air autour d'elle avant de fixer son regard sur vous une fois de plus. Vous avez l'impression qu'elle veut que vous la suiviez, tandis que l'envie d'utiliser la magie d'électricité s'intensifie en vous.";
                         break;
                     case QuestKindTitle.ThunderAttack2:
                         name = Title(TitleKind.ThunderDamage) + " 2";
-                        client = "Thunderbeast Raiju";
-                        description = "The beast appears pleased as it watches you sending bolts of thunderous magic left and right. Suddenly, it sends a sharp bolt of its own directly into your chest. Surprisingly, this is painless as you see dozens of battles play forth in your mind. It walks a few meters and pauses, as if waiting for you to follow again. You can feel the magic of thunder again wishing to burst forth from your fingers.";
+                        client = "Raiju, la Bête Électrique";
+                        description = "La bête semble contente alors qu'elle vous regarde lancer des arcs de magie électrique dans toutes les directions. Soudainement, elle envoie un arc rapide de sa propre électricité directement dans votre torse. Surprenament, il ne fait aucun mal alors que vous voyez des dizaines de combats se jouer dans votre esprit. Elle avance de quelques mètres et pause, comme si elle attendait que vous la suiviez de nouveau. Vous pouvez sentir la magie de tonnerre en vous qui n'a envie que de s'échapper de vos doigts.";
                         break;
                     case QuestKindTitle.ThunderAttack3:
                         name = Title(TitleKind.ThunderDamage) + " 3";
-                        client = "Thunderbeast Raiju";
-                        description = "Incredibly, despite no regular means of communication, you feel you have learned from this strange lightning creature. Still, it seems to beckon to you that there is more it wishes to show you. You can tell the time you are spending with this beast is aiding your growth with thunder magic. It suddenly roars, though it sounds like a huge thunderclap and darts off running toward more enemies. You’ve come this, so you decide to continue fighting alongside it.";
+                        client = "Raiju, la Bête Électrique";
+                        description = "Incroyablement, même sans échanger un mot, vous sentez avoir beaucoup apris auprès de cette étrange créature électrique. Et pourtant, elle semble avoir plus de choses à vous montrer. Vous voyez que le temps passé avec cette bête vous aide à augmenter la puissance de votre magie électrique. Elle rugit soudainement, ressemblant plus à un coup de tonnerre, avant de s'élancer vers plus d'ennemis. Vous êtes déjà arrivé jusqu'ici, donc autant continuer à combattre avec elle.";
                         break;
                     case QuestKindTitle.ThunderAttack4:
                         name = Title(TitleKind.ThunderDamage) + " 4";
-                        client = "Thunderbeast Raiju";
-                        description = "The beast stares at you for a moment, its eyes no longer sharp and untrusting as they were when you first met. It seems a little sad, as though it knows it must depart soon after growing a little attached to you. Still, it doesn’t look like its quite ready to leave just yet, and there are always more enemies to blast. Practicing alongside this legendary being has certainly been helpful, so before it must go you decide to continue the fight for as long as it can remain.";
+                        client = "Raiju, la Bête Électrique";
+                        description = "La bête vous dévisage pendant un moment, son regard non sévère ou inconfiant tels qu'ils étaient lors de votre première rencontre. Elle a même l'air un peu triste, comme si elle devait bientôt partir, après s'être un peu attaché à vous. Quand bien même, elle n'a pas l'air prête à partir pour le moment, et il reste toujours des ennemis à foudroyer. S'être entraîné auprès de cette fabuleuse bête a été bien utile, donc avant qu'elle s'en aille, vous décidez de continuer le combat à ses côtés jusqu'à ce qu'elle doive partir.";
                         break;
                     case QuestKindTitle.LightAttack1: //TODO
                         name = Title(TitleKind.LightDamage) + " 1";
-                        client = "The lazy farmer Aggrezi";
-                        description = "You there, hey, I uhh saw you could use light magic and wondered if you could help me out? I, uhh, am so weak and fragile and the monsters here are so, uhh, dark and scary. If you wouldn’t mind, uhh, practicing that light magic and keeping me, uhh, safe, I’d appreciate it. I’ll just be over here in my, uhh, recliner waiting for you to clear the fields of those abominations.";
+                        client = "Aggrezi le Fermier Fainéant";
+                        description = "Hé, toi, euh, je t'ai vu utiliser de la magie de lumière et je me demandais, est-ce que tu pourrais m'aider ? Euh, je suis si faible et frêle, et les monstres ici sont si, euh, sombres et flippants. Si ça te dérange pas, euh, tu pourrais entraîner ta magie de lumière ici et, euh, me protéger, ce serait super, en vrai. En attendant je vais, eug, rester dans mon fauteuil, et attendre que tu en finisses avec ces abominations.";
                         break;
                     case QuestKindTitle.LightAttack2:
                         name = Title(TitleKind.LightDamage) + " 2";
-                        client = "The lazy farmer Aggrezi";
-                        description = "Delightful, ermm, I mean good work there! You, uhh, really showed them how it is done. Next time, though, you should, uhh, let the light pass through your crown chakra more, err, I mean let the heavens flow through you, yeah. I’m sure that’ll help you get stronger and, uhh, take down the baddies faster. If you need me, uhh, I’ll be over here sipping some lemonade.";
+                        client = "Aggrezi le Fermier Fainéant";
+                        description = "Super, ahh, euh, je voulais dire mon travail, champion ! Tu, euh, leur a bien montré qui est le boss. La prochaine fois, par contre, tu devrais, euh, laisser la lumière passer à travers ton chakra coronal un peu plus, euh, je veux dire laisser les cieux t'invigorer, ouais. Je suis sûr que ça t'aidera à être plus fort, et, euh, à détruire les pas beaux plus vite. Si tu as besoin de moi, euh, je serais là-bas en train de boire de la limonade.";
                         break;
                     case QuestKindTitle.LightAttack3:
                         name = Title(TitleKind.LightDamage) + " 3";
-                        client = "The lazy farmer Aggrezi";
-                        description = "Well done mortal, errm, I mean you’ve done a splendid job clearing my fields! Hmm, you think I’m acting suspicious? Uhh, I don’t know what you mean. Just a lazy farmer whose wings, errm, arms are too weak to do the job any longer, yeah. I couldn’t help but notice, uhh, you should find a source of purity within yourself, errm, find a happy place when you cast. I’m sure that’ll help, yeah. Alright, enough chit chat, get back out there.";
+                        client = "Aggrezi le Fermier Fainéant";
+                        description = "Bien joué mortel, euh je veux dire tu as fait du bon travail dans mes champs ! Quoi, tu penses que je suis étrange ? Euh, je sais pas de quoi tu parles. Je suis juste un fermier un peu paresseux dont les ailes, euh, je veux dire les bras sont trop faibles pour continuer mon travail, ouais ouais. J'ai pas pu m'empêcher de voir, mais, euh, tu dois trouver une source de pureté en toi, euh, trouve des pensées positives en lançant tes sorts. Je suis sûr que ça aidera, ouais. Allez, assez parlé, retourne là-bas.";
                         break;
                     case QuestKindTitle.LightAttack4:
                         name = Title(TitleKind.LightDamage) + " 4";
-                        client = "The lazy farmer Aggrezi";
-                        description = "I cannot hide my appearance any longer from you, dear mortal. You have done exceptionally well at honing your light magic and growing the purity within yourself. I was sent here to guide you, but I was meant to do it discreetly, but you have surpassed my expectations and so I felt I owed it to you to reveal myself at least. I will be leaving soon, but before I do it would be my honor to practice the sacred light magic alongside you.";
+                        client = "Aggrezi le Fermier Fainéant";
+                        description = "Je ne peux plus cacher mon apparence envers vous, cher mortel. Vous avez fait un excellent travail en améliorant votre affinité envers la magie de lumière et en augmentant la pureté en vous. J'ai été envoyé ici afin de vous guider, mais ma mission était censée être discrète, cependant vous avez surpassé toutes mes espérances, donc je pensais que je devais au moins me révéler à vous. Je vais bientôt devoir partir, mais avant cela, il serait un honneur de pouvoir pratiquer la magie de lumière sacrée à vos côtés.";
                         break;
                     case QuestKindTitle.DarkAttack1: //TODO
                         name = Title(TitleKind.DarkDamage) + " 1";
@@ -6570,69 +6570,69 @@ public class Localized_French : LOCALIZATION
                 switch (kindGeneral)
                 {
                     case QuestKindGeneral.CompleteArea0_0:
-                        name = "Trouvez mon frère 1";
+                        name = "Trouver Mon frère 1";
                         client = "Nohn";
                         description = "Pouvez-vous m'aider à retrouver mon frère? Il est disparu depuis un bon moment maintenant. Il nous rend malades d'inquiétude! Je me demande s'il est dans le Village des Slimes. Fouillez la Zone 1.";
                         break;
                     case QuestKindGeneral.CompleteArea0_1:
-                        name = "Trouvez mon frère 2";
+                        name = "Trouver Mon frère 2";
                         client = "Nohn";
                         description = "Non? Il n'était pas dans la Zone 1? On doit continuer à chercher, je supposes. Quand j'aurai mis la main sur lui... bon, essayons de le retrouver! Que dit la Zone 2?";
                         break;
                     case QuestKindGeneral.CompleteArea0_2:
-                        name = "Trouvez mon frère 3";
+                        name = "Trouver Mon frère 3";
                         client = "Nohn";
                         description = "Ah, il y avait des signes de bataille? Ça a intérêt à ne pas être ces slimes. Montrez leur de quel bois vous vous chauffez. Complétez la Zone 3 et retrouvez mon frêre pour moi!";
                         break;
                     case QuestKindGeneral.CompleteArea0_3:
-                        name = "Trouvez mon frère 4";
+                        name = "Trouver Mon frère 4";
                         client = "Nohn";
                         description = "Merci d'avoir retrouvé Hitan. Je ne peux pas croire que ces slimes l'ont capturé comme ça. Complétez la Zone 4 et ramenez le à la maison. Je vais m'occuper de lui pour la suite.";
                         break;
                     case QuestKindGeneral.DefeatNormalSlime1:
-                        name = "Infestation des Slimes 1";
+                        name = "Infestation Des Slimes 1";
                         client = "Maire du village";
                         description = "Les slimes ont envahi le village. S'il-vous-plaît aidez notre village à se débarasser de ces monstres.";
                         break;
                     case QuestKindGeneral.DefeatNormalSlime2:
-                        name = "Infestation des Slimes 2";
+                        name = "Infestation Des Slimes 2";
                         client = "Maire du village";
                         description = "Vous avez fait un si bon travail. On dirait qu'il y en a toujours plus. Pouvez-vous nous aider à nouveau à repousser les slimes?";
                         break;
                     case QuestKindGeneral.DefeatNormalSlime3:
-                        name = "Infestation des Slimes 3";
+                        name = "Infestation Des Slimes 3";
                         client = "Maire du village";
                         description = "Oh non, vos tentatives de nous aider ont vraiment frustré les slimes, et maintenant c'est une armée de slimes qui est à nos portes! Puisque vous êtes en quelques sortes responsable de ce bordel, que diriez-vous de nous aider à nettoyer... je veux dire, nettoyes ça pour nous?";
                         break;
                     case QuestKindGeneral.BringOilOfSlime:
-                        name = "L'amoureux des Slimes";
+                        name = "L'Amoureux Des Slimes";
                         client = "";
                         description = "";
                         break;
                     case QuestKindGeneral.DefeatRedSlime:
-                        name = "Menace des Slimes Rouges";
+                        name = "Menace Des Slimes Rouges";
                         client = "Huck le fermier du village";
                         description = "Aidez-Moi! Les Slimes rouges ont envahi ma ferme! Faites les dégager! Aidez-moi, vous êtes mon seul espoir.";
                         break;
                     case QuestKindGeneral.DefeatRedMagicSlime:
-                        name = "Menace des Slimes Magiques";
+                        name = "Menace Des Slimes Magiques";
                         client = "Karosis";
                         description = "Un individu pressé portant des lunettes et des robes usées vous bouscule et trébuche, éparpillant des parchemins partout. Après avoir ramassé ses possessions, il vous observe avant de hocher la tête, \"Vous semblez savoir vous débrouiller. Ces slimes, ils me volent mes recherches magiques et ça ralentit sévèrement mon progrès. Pourriez-vous m'aider en vous occupant de ces voleurs? Je.... suis disposé à payer si c'est ce qu'il vous faut.\"";
                         break;
                     case QuestKindGeneral.CompleteDungeon0_0:
-                        name = "Trouvez Mon Époux 1";
+                        name = "Trouver Mon Époux 1";
                         client = "Wakana";
                         description = "Excusez moi, avez vous un moment? Mon époux a disparu il y a de cela quelques jours. Mes voisins disent qu'ils l'ont vu aller dans la caverne des Slimes, mais je ne suis pas douée avec les Slimes alors je ne peux pas aller le chercher. Pouvez-vous y aller pour moi ?"
                             + " Après avoir complété le <color=orange>Village Slime : Zone 2</color> 100 fois, vous pourrez essayer le Donjon Slime à travers l'onglet <color=orange>Donjon</color> dans la Map Monde. Gardez à l'esprit qu'il vous faudra une <color=orange>Orbe Portail</color> pour entrer dans le Donjon, que vous pouvez obtenir par exemple à travers les quêtes globales et journalières."
                             + " Avant de tenter un donjon, le bouton <color=orange>Simulation</color> dans la Map Monde peut être utile. Il simule chaque zone et vous informe si vous pouvez la compléter ou non.";
                         break;
                     case QuestKindGeneral.CompleteDungeon0_1:
-                        name = "Trouvez Mon Époux 2";
+                        name = "Trouver Mon Époux 2";
                         client = "Wakana";
                         description = "Oh, vous ne l'avez pas trouvé, je suis si triste. Peut-être qu'il est dans une autre caverne... Je sais pas. S'il vous plaît, pouvez-vous aller à sa recherche à nouveau ? Je suis si inquiète pour lui et je ne peux rien y faire.";
                         break;
                     case QuestKindGeneral.CompleteDungeon0_2:
-                        name = "Trouvez Mon Époux 3";
+                        name = "Trouver Mon Époux 3";
                         client = "Wakana";
                         description = "Comment ? Vous l'avez vu se faire enlever par des Slimes dans les profondeurs de la caverne !? Oh seigneur ! Je suis certaine qu'il y a un repère de Slimes dans le coin, c'est là qu'il sera. S'il vous plaît, je vous en prie, allez le délivrer !";
                         break;
@@ -6667,7 +6667,7 @@ public class Localized_French : LOCALIZATION
                         description = "Brique s'approche de vous avec une expression inquiète lorsque vous revenez de la mine. \"C'est bien qu'vous soyez de retour sain et sauf. Avez-vous vu la chose bouger ? C'est comme si quelque chose vivait dans le vide des ténèbres. Je sais pas pourquoi, mais j'ai un mauvais pressentiment. Tu pourrais aller dans ces ténèbres et t'en occuper pour nous ? Je suis certain que tout le monde sera heureux de pouvoir dormir sur nos deux oreilles.\"";
                         break;
                     case QuestKindGeneral.DefeatBlueBat:
-                        name = "Une Une Étrange Requête";
+                        name = "Une Étrange Requête";
                         client = "Mademoiselle Fizzle";
                         description = "Alors que vous vous dirigez vers la Caverne des Chauve-Souris, un garçon manqué avec d'épaisses lunettes et un sourire prononcé vous observe du haut d'un rocher. Elle s'addresse à vous, remuant une potion flamboyante dans sa main. \"Toi ! Ouais, toi. Je me demandais si tu pouvais m'apporter du guano de Chauve-Souris. J'ai un projet sur lequel je travaille, ce sera génial, tu verras.\"";
                         break;
@@ -6697,7 +6697,7 @@ public class Localized_French : LOCALIZATION
                         description = "J'ai trouvé la reine des araignées. Du moins, une des reines. Malheureusement, elle m'a capturé. Envoyez de l'aide !";
                         break;
                     case QuestKindGeneral.CaptureYellowSlime:
-                        name = "Pour Tout En Jaune !";
+                        name = "Tout En Jaune !";
                         client = "Cercle Jaune";
                         description = "Un individu vêtu d'une robe Jaune de la tête aux pieds se tient juste au dehors du village slime, bondissant d'excitement sur ses talons alors qu'il étire le cou pour avoir une meilleure vue sur la ville. Alors que vous le dépassez, il vous salue frénétiquement, vous invitant à le rejoindre. \"S'il vous plaît, je passais par ce village et j'ai vu un éclair jaune se faufiller entre deux édifices, mais je n'ai pas pu le rattraper. Pouvez-vous l'attraper pour moi ? S'il vous plaît, s'il vous plaît, s'il vous plaît !\" Bon, vous ne pouvez dire non à ce visage. Allons-y !";
                         break;
@@ -6733,17 +6733,17 @@ public class Localized_French : LOCALIZATION
                         description = "Avez-vous entendu la rumeur que le temple du renard local est possédé par un neuf-queues ? C'est horrible de voir les renards attaquer les gens à vue. Pourriez-vous capturer quelques renards pour qu'on puisse les aider ? Si vous les ramenez dans des filets, nous pourrons les relocaliser dans une petite ville dans la forêt. La rumeur dit que les renards peuvent y parcourir ses rues légalement, tout comme les gens.";
                         break;
                     case QuestKindGeneral.BringFoxTails:
-                        name = "Ville des Renards";
+                        name = "Ville Des Renards";
                         client = "Moine aux Histoires Nombreuses";
                         description = "Les renards dans la ville vont bien mais ils se sentent seuls sans leurs vieux amis. Je vois que vous avez une jolie collection de monstres dans votre village. Pourriez-vous en envoyer quelques uns dans le village dans la forêt ? Ils peuvent encourager les renards, et ramasser des trucs sur leur chemin du retour vers votre village.";
                         break;
                     case QuestKindGeneral.CaptureGreenFox:
-                        name = "Construire un Meilleur Temple";
+                        name = "Construire Un Meilleur Temple";
                         client = "Moine aux Histoires Nombreuses";
                         description = "Il semble que le neuf-queues ne quittera pas le temple de si tôt. Donc les renards n'ont nul part où aller. Peut-être que vos petits amis peuvent être utiles à nouveau. Les renards ne font pas confiance aux humains, mais si vos companions les aident à construire un temple, ils pourraient rester dans ce temple et ne pas se soucier du neuf-queues. Les villageois de la forêt ne laisseraient jamais leur précieux renards être blessés, après tout.";
                         break;
                     case QuestKindGeneral.CapturePurpleFox:
-                        name = "Un Voyage de Mille Lieues";
+                        name = "Un Voyage De Mille Lieues";
                         client = "Moine aux Histoires Nombreuses";
                         description = "Oh, c'est encore vous. Merci encore pour votre aide. Je viens d'aller à la guilde pour demander une petite faveur. Il y a eu un accident récent dans le village de la forêt où un voyageur est venu passer la nuit. C'était plutôt déstabilisant et je crois que je dois aller faire un pèlerinage pour me remettre les idées en place. Ce voyage n'est pas sûr. Même sans ça, le voyage sera très solitaire, et j'apprécierais grandement que l'un de vos petits amis se joigne à moi.";
                         break;
@@ -6759,7 +6759,7 @@ public class Localized_French : LOCALIZATION
                         description = "Écoute fiston, as-tu entendu parler de l'hérésie dernièrement ? J'te le dis tout de suite, c'est mon lac et ma maison, je vis ici depuis longtemps, et j'ai jamais eu de problèmes de poisson démon. Jusqu'à c'qu'un homme commence à venir avec ses jouets de poisson démon pour faire peur aux touristes. Personne le crois bien sûr. Tout le monde sait que les poissons démons sont rouges, pas bleus. Qu'est-ce tu dirais d'arrêter la prochaine ligne de faux poissons démons avant que les touristes soient trop agités ?";
                         break;
                     case QuestKindGeneral.DefeatBossDevilFish:
-                        name = "Pêche à la Dynamite";
+                        name = "Pêche À La Dynamite";
                         client = "Mademoiselle Pétille";
                         description = "Vous savez, je ne suis pas fan de débats philosophiques sur l'existence des poissons démons, ou la moralité en général. Alors j'essaie de me tenir loin des petites disputes dans lesquelles les gens se mêlent. Je sais qu'il y a quelque chose de gros là-dedans, et je ne nagerai pas tant que ce ne sera pas parti. Si je viens à ouvrir la caverne sous-marine, vous vous en chargerez dans sa propre tanière. Correction, dans son ancienne tanière.";
                         break;
@@ -6800,7 +6800,7 @@ public class Localized_French : LOCALIZATION
                         description = "Deux aventuriers, un ayant les mains remplies de butin, l'autre brandissant un courte canne, sortent d'un donjon. \"Oh là là Jamy, regarde ce nombre de matériaux qu'on a ! Qu'est-ce qu'on peut bien en faire ?\" \"Ben oui, Fred, à ce point là, il est temps d'essayer quelque chose de plus audacieux ! On a mis beaucoup de temps pour récupérer tous ces matériaux, mais tu vas voir, ça ve en valloir le coup ! Avec cette petite recette, on va pouvoir transformer ces matériaux de monstres en Orbes Portail !\"";
                         break;
                     case QuestKindGeneral.TigerTaming:
-                        name = "Dressage de Tigre";
+                        name = "Dressage De Tigre";
                         client = "Koji le Maître des Bêtes";
                         description = "Un mal inconnu se prépare et je n'ai pas assez de temps pour me préparer par moi-même. On aura besoin de plus de Tigres de Feu pour fortifier nos défenses. Tu devras t'aventurer dans le volcan pour le trouver dans leur habitat naturel. Fais attention à toi ! Il fait horriblement chaud là-bas et les tigres sont redoutables, mais ils feront des alliés puissants lorsque j'aurais fini de les entraîner ! Oh, et tant que tu seras dans le volcan, s'il te plaît ramène-moi un peu de Fourrure Épaisse ! On aura besoin de plus de matière pour fabriquer des couvertures pour les animaux.";
                         if (!quest.isAccepted) condition = "Capture " + tDigit(5000) + " de n'importe quel type de Tigre de Feu";
@@ -7037,8 +7037,8 @@ public class Localized_French : LOCALIZATION
                 return "Activer automatiquement après une AM";
             case ToggleKind.SDDisableGuildLog:
                 return "Renommée/Classe de Guilde";
-            case ToggleKind.SDRetryOnFail://NEW16
-                return "Retry even if you fail super dungeon";
+            case ToggleKind.SDRetryOnFail:
+                return "Réessayer même si l'essai de super donjon a échoué";
         }
         return base.Toggle(kind);
     }
@@ -7342,7 +7342,7 @@ public class Localized_French : LOCALIZATION
             case RebirthPointKind.Quest:
                 return "Quête Générale";
             case RebirthPointKind.Move:
-                return "Dsitance Parcourue";
+                return "Ditance Parcourue";
             case RebirthPointKind.SkillLevel:
                 return "Niveau des Capacités";
             case RebirthPointKind.EQLevel:
@@ -8823,10 +8823,10 @@ public class Localized_French : LOCALIZATION
             case 42: return "Maj + F pour montrer les coûts entiers (Max x100)";
             case 43: return "Détails de la Limite de Nitro";
             case 44: return "Gain de Renommée de Guilde lorsque le héros " + text + " augmente de classe";
-            case 45: return "Used in the last hour";//NEW16
-            case 46: return "Activate/deactivate while holding Shift key applies to all heroes.";//NEW16
-            case 47: return "Nitro Drain Breakdowns";//NEW16
-            case 48: return "Booster";//NEW16
+            case 45: return "Utilisé dans la dernière heure";
+            case 46: return "Activer/désactiver en maintenant la touch Maj pour l'appliquer à tous les héros.";
+            case 47: return "Détails de l'Utilisation de Nitro";
+            case 48: return "Boosteur";
             default: return base.ResourceCtrlString(id, text);
         }
     }
@@ -9397,7 +9397,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- Normal : Jaune";
                 tempStr += "\n- Critique : Rouge";
                 tempStr += "\nDégâts Supplémentaires:";
-                tempStr += "\n- Electrique : Jaune";
+                tempStr += "\n- Électrique : Jaune";
                 tempStr += "\n- Huilde de Tueur : Orange";
                 tempStr += "\n\n";
                 tempStr += "<u>Dégâts Infligés</u>";
@@ -10070,13 +10070,13 @@ public class Localized_French : LOCALIZATION
             tempStr += "\n- " + localized.Hero((HeroKind)count) + " : Nv " + tDigit(main.S.maxHeroLevelReached[count]);
         }
         tempStr += "\n\n";
-        tempStr += "<size=20><u>Max Hero Grade Reached</u><size=18>";//NEW16
-        for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)//NEW16
+        tempStr += "<size=20><u>Classe de Héros Max Atteinte</u><size=18>";
+        for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
             int count = i;
-            tempStr += "\n- " + localized.Hero((HeroKind)count) + " : Lv " + tDigit(main.S.maxHeroGradeReached[count]);//NEW16
+            tempStr += "\n- " + localized.Hero((HeroKind)count) + " : Nv " + tDigit(main.S.maxHeroGradeReached[count]);
         }
-        tempStr += "\n\n";//NEW16
+        tempStr += "\n\n";
         tempStr += "<size=20><u>Distance Parcourue Totale</u><size=18>";
         for (int i = 0; i < Enum.GetNames(typeof(HeroKind)).Length; i++)
         {
@@ -10975,7 +10975,7 @@ public class Localized_French : LOCALIZATION
             case 103: return "Montant acheté à chaque étage";
             case 104: return "Arrêter d'acheter des pouvoirs après cet étage";
             case 105: return "Multiplcateur de Réduction de Dégâts de Boss de Défi de SD";
-            case 106: return "Town Building [" + text + "]";//NEW16
+            case 106: return "Bâtiment de Ville [" + text + "]";
         }
         return text;
     }
@@ -11033,19 +11033,19 @@ public class Localized_French : LOCALIZATION
                 permanentEffect = "VIT Absolue + {0}";
                 break;
             case SuperDungeonPowerupKind.PhysicalCriticalChance:
-                name = "Physical Critical Chance";
-                effect = "Physical Critical Chance After + {0} ( + {1} / Rang )";
-                permanentEffect = "Physical Critical Chance After + {0}";
+                name = "Chance Critique Physique";
+                effect = "Chance Critique Physique Absolue + {0} ( + {1} / Rang )";
+                permanentEffect = "Chance Critique Physique Absolue + {0}";
                 break;
             case SuperDungeonPowerupKind.MagicalCriticalChance:
-                name = "Magical Critical Chance";
-                effect = "Magical Critical Chance After + {0} ( + {1} / Rang )";
-                permanentEffect = "Magical Critical Chance After + {0}";
+                name = "Chance Critique Magique";
+                effect = "Chance Critique Magique Absolue + {0} ( + {1} / Rang )";
+                permanentEffect = "Chance Critique Magique Absolue + {0}";
                 break;
             case SuperDungeonPowerupKind.CriticalDamage:
-                name = "Critical Damage";
-                effect = "Critical Damage After + {0} ( + {1} / Rang )";
-                permanentEffect = "Critical Damage After + {0}";
+                name = "Dégâts Critiques";
+                effect = "Dégâts Critiques Absolus + {0} ( + {1} / Rang )";
+                permanentEffect = "Dégâts Critiques Absolus + {0}";
                 break;
             case SuperDungeonPowerupKind.MoveSpeed:
                 name = "Vitesse de Déplacement";
@@ -11460,7 +11460,7 @@ public class Localized_French : LOCALIZATION
             case 1: return "L'Appartement Souterrain des Araignées";
             case 2: return "La Fôret Ténébreuse";
             case 3: return "Le Jardin Enflammé";
-            case 4: return "The Kor Lecture Hall";//NEW16 Renamed from Slime to Kor (Challenge Boss: Guradian Kor) //"La Salle de Conférence des Slimes";
+            case 4: return "La Salle de Conférence Kor";
             default: return text;
         }
     }
@@ -11594,7 +11594,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case SDGemKind.Emerald:
                 name = "Émeraude";
-                effect = "Multiplies SD Powerups Permanent Effect by " + text;//NEW16 changed to Permanent Effect from just Effect //"Multiplie les Effets des Pouvoirs de SD par " + text;
+                effect = "Multiplie les Effets Permanents des Pouvoirs de SD par " + text;
                 break;
             default:
                 name = base.SDGemString(kind, text).name;
