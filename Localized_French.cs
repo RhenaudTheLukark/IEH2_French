@@ -859,14 +859,14 @@ public class Localized_French : LOCALIZATION
                 return "Montée de Classe de Guilde";
             case BasicWord.GG:
                 return "CG";
-            case BasicWord.SuccessfulDodge://NEW18
-                return "Successful Dodge";
-            case BasicWord.Add://NEW18
-                return "Add";
-            case BasicWord.Mul://NEW18
-                return "Mul";
+            case BasicWord.SuccessfulDodge:
+                return "Esquive Réussie";
+            case BasicWord.Add:
+                return "Ajt";
+            case BasicWord.Mul:
+                return "Mlt";
             case BasicWord.Hotkey:
-                return "Hotkey";//NEW18
+                return "Touche";
         }
         return base.Basic(basicWord);
     }
@@ -1018,8 +1018,8 @@ public class Localized_French : LOCALIZATION
                 return "Rituel de Gemme de SD";
             case MultiplierKind.GuildSuperAbility:
                 return "Super Abilité de Guilde";
-            case MultiplierKind.SPD://NEW18
-                return "SPD";
+            case MultiplierKind.SPD:
+                return "VIT";
         }
         return base.StatsBreakdown(kind);
     }
@@ -3929,67 +3929,67 @@ public class Localized_French : LOCALIZATION
         return base.EnchantInformation(kind);
     }
 
-    public override string EnchantInformation2(EnchantKind kind)//NEW18
+    public override string EnchantInformation2(EnchantKind kind)
     {
         switch (kind)
         {
             case EnchantKind.OptionAdd:
-                return "Holding Shift while applying uses multiple Scrolls until all available [Enchant Slot]s are filled with the selected Enchant (limited by the current Stack #).";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que tous les [Emplacement d'Enchantement]s soient remplis avec l'Enchantement sélectionné (limité par le # de Pile courant).";
             case EnchantKind.OptionLevelup:
-                return "Holding Shift while applying uses multiple Scrolls until the selected Enchant is at max level (limited by the current Stack #).";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que l'Enchantement sélectionné soit au niveau maximum (limité par le # de Pile courant).";
             case EnchantKind.OptionLottery:
-                return "Holding Shift while applying uses multiple Scrolls until the selected Enchant Effect reaches max value (limited by the current Stack #). Needs Area Mission Milestone #2500.";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que l'Effet d'Enchantement sélectionné aie sa valeur maximale (limité par le # de Pile courant). Requiert le Palier de Mission de Zone #2500.";
             case EnchantKind.OptionCopy:
-                return "Holding Shift while selecting an Enchant uses this Scroll [current Stack #] times.";
+                return "Maintenir Maj en sélectionnant un Enchantement utilise ce Parchemin [# de Pile courant] fois.";
             case EnchantKind.ExpandEnchantSlot:
-                return "Holding Shift while applying uses multiple Scrolls until the Equipment is at max [Enchant Slot]s (limited by the current Stack #).";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que l'Équipement soit au nombre maximum d'[Emplacement d'Enchantement]s (limité par le # de Pile courant).";
             case EnchantKind.OptionLotteryAll:
-                return "Holding Shift while applying uses multiple Scrolls until all Enchant Effects reach max value (limited by the current Stack #). Needs Area Mission Milestone #2500.";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que tous les Effets d'Enchantement aient leur valeur maximale (limité par le # de Pile courant). Requiert le Palier de Mission de Zone #2500.";
             case EnchantKind.OptionLevelupAll:
-                return "Holding Shift while applying uses multiple Scrolls until all Enchants are at max level  (limited by the current Stack #).";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que tous les Enchantements soient à leur niveau maximum (limité par le # de Pile courant).";
             case EnchantKind.OptionCopyAll:
-                return "Holding Shift while selecting an Item uses this Scroll [current Stack #] times.";
+                return "Maintenir Maj en sélectionnant un Objet utilise ce Parchemin [# de Pile courant] fois.";
             case EnchantKind.ArtifactOptionAdd:
-                return "Holding Shift while applying uses multiple Scrolls until all available [Enchant Slot]s are filled with the selected Enchant (limited by the current Stack #).";
-            case EnchantKind.ArtifactLottery:
-                return "Holding Shift while applying uses multiple Scrolls until the selected Enchant Effect reaches max value (limited by the current Stack #). Needs Area Mission Milestone #2500.";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que tous les [Emplacement d'Enchantement]s soient remplis avec l'Enchantement sélectionné (limité par le # de Pile courant).";
             case EnchantKind.ArtifactLevelup:
-                return "Holding Shift while applying uses multiple Scrolls until the selected Enchant is at max level (limited by the current Stack #).";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que l'Enchantement sélectionné soit au niveau maximum (limité par le # de Pile courant).";
+            case EnchantKind.ArtifactLottery:
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que l'Effet d'Enchantement sélectionné aie sa valeur maximale (limité par le # de Pile courant). Requiert le Palier de Mission de Zone #2500.";
             case EnchantKind.ArtifactExpandEnchantSlot:
-                return "Holding Shift while applying uses multiple Scrolls until the Equipment is at max [Enchant Slot]s (limited by the current Stack #).";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que la Relique soit au nombre maximum d'[Emplacement d'Enchantement]s (limité par le # de Pile courant).";
             case EnchantKind.ArtifactLotteryAll:
-                return "Holding Shift while applying uses multiple Scrolls until all Enchant Effects reach max value (limited by the current Stack #). Needs Area Mission Milestone #2500.";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que tous les Effets d'Enchantement aient leur valeur maximale (limité par le # de Pile courant). Requiert le Palier de Mission de Zone #2500.";
             case EnchantKind.ArtifactLevelupAll:
-                return "Holding Shift while applying uses multiple Scrolls until all Enchants are at max level  (limited by the current Stack #).";
+                return "Maintenir Maj en l'appliquant utilise plusieurs Parchemins jusqu'à ce que tous les Enchantements soient à leur niveau maximum (limité par le # de Pile courant).";
         }
         return base.EnchantInformation2(kind);
     }
 
-    public override string EnchantInformationForgeEffectString(EquipmentForgeEffectKind kind, bool isArtifactAnvil)//NEW18
+    public override string EnchantInformationForgeEffectString(EquipmentForgeEffectKind kind, bool isArtifactAnvil)
     {
         switch (kind)
         {
             case EquipmentForgeEffectKind.ReduceRequiredHeroLevel:
-                if (isArtifactAnvil) return "Reduces the required Hero Grade to wear an Artifact by the applied amount.";
-                return "Reduces the required Hero Level to wear a piece of Equipment by the applied amount.";
+                if (isArtifactAnvil) return "Réduit la Classe de Héros requise pour équiper la Relique par le montant donné.";
+                return "Réduit le Niveau de Héros requise pour équiper un Équipement par le montant donné.";
             case EquipmentForgeEffectKind.ReduceRequiredAbility:
-                if (isArtifactAnvil) return "Reduces the required Super Ability Points to wear an Artifact by the applied amount.";
-                return "Reduces the required Ability Points to wear a piece of Equipment by the applied amount.";
+                if (isArtifactAnvil) return "Réduit les Points de Super Abilité requis pour équiper une Relique par le montant donné.";
+                return "Réduit les Points d'Abilité requis pour équiper un Équipement par le montant donné.";
             case EquipmentForgeEffectKind.IncreaseProficiencyGain:
-                if (isArtifactAnvil) return "Multiplies Proficiency Gain for an Artifact by the applied amount.";
-                return "Multiplies Proficiency Gain for a piece of Equipment by the applied amount.";
+                if (isArtifactAnvil) return "Multiplie les Gains de Maîtrise d'une Relique par un montant donné.";
+                return "Multiplie les Gains de Maîtrise d'une Équipement par un montant donné.";
             case EquipmentForgeEffectKind.IncreaseEffect:
-                if (isArtifactAnvil) return "Increase all Effects (implicit and enchanted) of an Artifact by the applied amount.";
-                return "Increase all Effects (implicit and enchanted) of a piece of Equipment by the applied amount.";
+                if (isArtifactAnvil) return "Augmente tous les Effets (innés et enchantés) d'une Relique par le montant donné.";
+                return "Augmente tous les Effets (innés et enchantés) d'un Équipement par le montant donné.";
             case EquipmentForgeEffectKind.PurifyCurseEffect:
-                if (isArtifactAnvil) return "Purifies the Cursed Effects on an Artifact by the applied amount.";
-                return "Purifies the Cursed Effects on a piece of Equipment by the applied amount.";
+                if (isArtifactAnvil) return "Purifie les Effets Maudits d'une Relique par le montant donné.";
+                return "Purifie les Effets Maudits d'un Équipement par le montant donné.";
             case EquipmentForgeEffectKind.IncreaseEffectIncrement:
-                if (isArtifactAnvil) return "Increases the Effect Increment per Level on an Artifact by the applied amount.";
-                return "Increases the Effect Increment per Level on a piece of Equipment by the applied amount.";
+                if (isArtifactAnvil) return "Augmente l'Incrément d'Effet par Niveau d'une Relique par le montant donné.";
+                return "Augmente l'Incrément d'Effet par Niveau d'un Équipement par le montant donné.";
             case EquipmentForgeEffectKind.EqLevel:
-                if (isArtifactAnvil) return "Increases the bonus Levels of an Artifact by the applied amount.";
-                return "Increases the bonus Levels of a piece of Equipment by the applied amount.";
+                if (isArtifactAnvil) return "Augmente le nombre de Niveaux bonus d'une Relique par le montant donné.";
+                return "Augmente le nombre de Niveaux bonus d'un Équipement par le montant donné.";
         }
         return base.EnchantInformationForgeEffectString(kind, isArtifactAnvil);
     }
@@ -4417,7 +4417,7 @@ public class Localized_French : LOCALIZATION
                 return "Multiplie les Gains d'EXP de Guilde par " + percent(1 + effectValue);
             case PotionKind.CertificateOfCompetence:
                 if (isPassive) return "Multiplie les Gains de Maîtrise de Capacité par " + percent(1 + effectValue);
-                return "Skill Cast Speed + " + percent(effectValue);//NEW18 //return "Réduit le Temps de Recharge des Capacités par " + percent(effectValue);
+                return "Vitesse de Lancer de Capacité + " + percent(effectValue);
             case PotionKind.MasonsTrowel:
                 if (isPassive) return "Augmente le niveau de l'effet des Bâtiments de Ville par " + percent(effectValue);
                 return "Augmente les Gains de Matériaux de Ville par " + percent(effectValue);
@@ -5293,29 +5293,19 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.Town:
                         name = "Tutoriel 8 : Ville";
                         client = "Hitan";
-                        description = "- Now you can go to the <color=orange>Town</color> tab. There are various Buildings in the Town. You can improve Buildings with <color=orange>Town Materials</color> that you gain every time you clear an Area (see Area Info). Dungeons give more Town Materials when you clear them. Like Skills, Buildings have Ranks and Levels. The Level cap increases by 20 per Rank. To understand more, <color=orange>let's raise Cartographer's Level to 5</color>, then you will be able to go to another Region in the World!"//NEW18
-                            + "\n- The first Building <color=orange>Statue of Heroes</color> limits the Rank of all other Town Buildings. To rank up the Statue you need an Essence of Life from the Lab tab. "//NEW18
-                            + "\n- Next, we need to rank up the Cartographer. You will be required to obtain <color=orange>Monster Fluid</color>, which is a Rare Drop Material from Slimes. Other Buildings, such as the Alchemist Hut, may require Materials obtained from the Catalyst Critical chance. Check each Catalyst's tooltip to see which Material can be obtained by the Critical."//NEW18
-                            + "\n<color=yellow>- For more information, Help > [Town].</color>";//NEW18
-                        //description = optStr + "Maintenant, tu peux aller dans l'onglet <color=orange>Ville</color>." +
-                        //    " Il y a plusieurs bâtiments dans la ville." +
-                        //    " Tu peux améliorer les bâtiments à l'aide de Matériaux de Ville que tu gagnes à chaque fois qu'une zone est complétée ( tu peux le voir dans les infos de la zone )." +
-                        //    " Les Donjons donnents des Matériaux de Ville lorsqu'ils sont complétés." +
-                        //    " Tout comme les capacités, les bâtiments ont un Rang et un Niveau. La limite de niveau augmente par 20 pour chaque rang." +
-                        //    " Pour mieux comprendre, <color=orange>augmentons le niveau du Cartographeur jusqu'au niveau 5.</color>" +
-                        //    " Tu pourras ensuite accéder à une nouvelle région du monde !\n<color=yellow>- Pour plus d'informations, Aide > [Ville].</color>"
-                        //    ;
+                        description = "- Maintenant, tu peux aller dans l'onglet <color=orange>Ville</color>. Il y a plusieurs Bâtiments dans la ville. Tu peux améliorer les Bâtiments à l'aide de <color=orange>Matériaux de Ville</color> que tu gagnes à chaque fois qu'une zone est complétée (voir Info de Zone). Les Donjons donnents plus de Matériaux de Ville lorsqu'ils sont complétés. Tout comme les capacités, les bâtiments ont un Rang et un Niveau. La limite de niveau augmente par 20 pour chaque rang. Pour mieux comprendre, <color=orange>augmentons le niveau du Cartographeur jusqu'au niveau 5.</color> Tu pourras ensuite accéder à une nouvelle région du monde !"
+                            + "\n- Le premier Bâtiment <color=orange>Statue des Héros</color> limite le Rang des autres Bâtiments de Ville. Pour augmenter la rang de la Statue, tu as besoin d'Essence de Vie que tu peux acquérir dans l'onglet Labo. "
+                            + "\n- Ensuite, tu dois augmenter le rang du Cartographeur. Tu auras besoin d'acquérir du <color=orange>Fluide de Monstre</color>, qui est un Matériau Rare lâché par les Slimes. D'autres Bâtiments, tel que la Hutte de l'Alchimiste, peut avoir besoin d'autres Matériaux obtenus à travers la Catalyse Critique. Vérifie l'infobulle de chaque Catalyseur pour voir quel Matériau peut être obtenu lors d'une catalyse critique."
+                            + "\n<color=yellow>- Pour plus d'informations, Aide > [Ville].</color>";
                         condition = "Atteindre le Nv 5 pour le Bâtiment [ Cartographeur ]";
                         reward = "Bénédiction de Gain d'EXP (Durée 30 mins)";
                         break;
                     case QuestKindGlobal.Research:
                         name = "Tutoriel 9 : Recherche de Ville";
                         client = "Hitan";
-                        description = optStr + "While we are in the town, each building has three different <color=orange>Researchable Effects</color>. You can speed up the research speed by gaining more resources. <color=orange>Let's research Cartographer's Leaf Research. This will provide an additional Town Material per clear</color>, which can be extremely useful in gathering town materials to level up buildings in the town!"
-                            + "\n- The Research Power is calculated as: Log10([current Stone/Crystal/Leaf]). So to get Leaf Research Lv 1, <color=orange>I recommend you unlock the 3rd Hero, Angel (Guild Lv 10) and get some Leaves first!</color>"//NEW18
-                            + "\n<color=yellow>- For more information, Help > [Town].</color>";//NEW18
-                        //description = optStr + "Tant que tu es dans la ville, chaque bâtiment a trois différents <color=orange>effets recherchables</color>. Tu peux augmenter la vitesse de recherche en gagnant les ressources associées. <color=orange>Recherchons la Recherche de Feuille du Cartographeur. Celle-ci augmente le nombre de Matériaux de Ville lâchés pour chaque complétion de zone</color>, ce qui est très utile pour ramasser plus de matériaux de ville pour augmenter le niveau des bâtiments dans la ville !\n<color=yellow>- Pour plus d'informations, Aide > [Ville].</color>"
-                        //    ;
+                        description = optStr + "Tant que tu es dans la ville, chaque bâtiment a trois différents <color=orange>Effets Recherchables</color>. Tu peux augmenter la vitesse de recherche en possédant plus lde la ressource associée. <color=orange>Sélectionnons la Recherche de Feuille du Cartographeur. Celle-ci augmente le nombre de Matériaux de Ville lâchés pour chaque complétion de zone</color>, ce qui est très utile pour ramasser plus de matériaux de ville pour augmenter le niveau des bâtiments dans la ville !"
+                            + "\n- Le Pouvoir de Recherche est calculé comme ceci : Log10([Pierre/Cristal/Feuille courant]). Donc, pour atteindre le Nv 1 de la Recherche de Feuille, <color=orange>je te suggère de tout d'abord débloquer le 3ème héros, l'Ange (Nv de Guilde 10) et de récupérer quelques Feuilles !</color>"
+                            + "\n<color=yellow>- Pour plus d'informations, Aide > [Ville].</color>";
                         condition = "Atteindre le Nv 1 de la Recherche de Feuille du Cartographeur";
                         reward = "Bénédiction de Gain d'Or (Durée 30 mins)\n-Débloque l'onglet [ Réincarnation ]";
                         break;
@@ -5612,33 +5602,33 @@ public class Localized_French : LOCALIZATION
                         condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1000000000);
                         reward = "Limite de Nitro + 50000";
                         break;
-                    case QuestKindGlobal.Nitro16: //NEW18
-                        name = "How to be a Nitro Booster Geek 16";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro16:
+                        name = "Fan de Nitro 16";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(5e9);
-                        reward = "Base Nitro Cap + 60000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(5e9);
+                        reward = "Limite de Nitro + 60000";
                         break;
-                    case QuestKindGlobal.Nitro17: //NEW18
-                        name = "How to be a Nitro Booster Geek 17";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro17:
+                        name = "Fan de Nitro 17";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1e10);
-                        reward = "Base Nitro Cap + 70000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1e10);
+                        reward = "Limite de Nitro + 70000";
                         break;
-                    case QuestKindGlobal.Nitro18: //NEW18
-                        name = "How to be a Nitro Booster Geek 18";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro18:
+                        name = "Fan de Nitro 18";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(5e10);
-                        reward = "Base Nitro Cap + 80000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(5e10);
+                        reward = "Limite de Nitro + 80000";
                         break;
-                    case QuestKindGlobal.Nitro19: //NEW18
-                        name = "How to be a Nitro Booster Geek 19";
-                        client = "Gnomish Engineer, Asgabit Tinkerbait";
+                    case QuestKindGlobal.Nitro19:
+                        name = "Fan de Nitro 19";
+                        client = "Thuldek Bricolapat, l'Ingénieur Nain";
                         description = "";
-                        condition = "Total Nitro consumed : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1e11);
-                        reward = "Base Nitro Cap + 90000";
+                        condition = "Total de Nitro Consommé : " + tDigit(main.S.nitroConsumed) + " / " + tDigit(1e11);
+                        reward = "Limite de Nitro + 90000";
                         break;
 
                     case QuestKindGlobal.Capture1:
@@ -5749,19 +5739,19 @@ public class Localized_French : LOCALIZATION
                         condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(100e9);
                         reward = "Gain de Points de Domptage + 50000%";
                         break;
-                    case QuestKindGlobal.Capture17://NEW18
-                        name = "Capturing Monsters 17";
-                        client = "Dirgah Suebur, the Monster Handler";
+                    case QuestKindGlobal.Capture17:
+                        name = "Capture de Monstre 17";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         description = "";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(500e9);
-                        reward = "Taming Point Gain + 75000%";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(500e9);
+                        reward = "Gain de Points de Domptage + 75000%";
                         break;
-                    case QuestKindGlobal.Capture18://NEW18
-                        name = "Capturing Monsters 18";
-                        client = "Dirgah Suebur, the Monster Handler";
+                    case QuestKindGlobal.Capture18:
+                        name = "Capture de Monstre 18";
+                        client = "Dirgah Suebur, l'Éleveur de Monstres";
                         description = "";
-                        condition = "Total Captured Monsters # : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000e9);
-                        reward = "Taming Point Gain + 100000%";
+                        condition = "# Total de Monstres Capturés : " + tDigit(game.monsterCtrl.CapturedNum()) + " / " + tDigit(1000e9);
+                        reward = "Gain de Points de Domptage + 100000%";
                         break;
 
                     case QuestKindGlobal.Alchemy1:
@@ -6265,7 +6255,7 @@ public class Localized_French : LOCALIZATION
                         client = "Raiju, la Bête Électrique";
                         description = "La bête vous dévisage pendant un moment, son regard non sévère ou inconfiant tels qu'ils étaient lors de votre première rencontre. Elle a même l'air un peu triste, comme si elle devait bientôt partir, après s'être un peu attaché à vous. Quand bien même, elle n'a pas l'air prête à partir pour le moment, et il reste toujours des ennemis à foudroyer. S'être entraîné auprès de cette fabuleuse bête a été bien utile, donc avant qu'elle s'en aille, vous décidez de continuer le combat à ses côtés jusqu'à ce qu'elle doive partir.";
                         break;
-                    case QuestKindTitle.LightAttack1: //TODO
+                    case QuestKindTitle.LightAttack1:
                         name = Title(TitleKind.LightDamage) + " 1";
                         client = "Aggrezi le Fermier Fainéant";
                         description = "Hé, toi, euh, je t'ai vu utiliser de la magie de lumière et je me demandais, est-ce que tu pourrais m'aider ? Euh, je suis si faible et frêle, et les monstres ici sont si, euh, sombres et flippants. Si ça te dérange pas, euh, tu pourrais entraîner ta magie de lumière ici et, euh, me protéger, ce serait super, en vrai. En attendant je vais, eug, rester dans mon fauteuil, et attendre que tu en finisses avec ces abominations.";
@@ -6464,44 +6454,44 @@ public class Localized_French : LOCALIZATION
                     case QuestKindTitle.ExplorerOfSD10:
                         name = Title(TitleKind.ExplorerOfSD) + " 10";
                         client = "Widget";
-                        description = "Eh bien, tu l'as fait. Regarde jusqu'où tu es arrivé depuis la première fois que tu es arrivé dans un Super Donjon. J'ai êut-être émis des doutes sur toi au début, mais tu as effacé tous mes doutes sur toi. Malheureusement, c'est sans doute la dernière fois que je te parlerai, donc faisons en sorte que ce soit une grosse tâche ! Pour ton dernier titre, tu vas devoir éradiquer 10 000 000 monstres de plus. N'oublie pas, héros, je te soutiens, et j'espère qu'on se verra de nouveau dans le futur !";
+                        description = "Eh bien, tu l'as fait. Regarde jusqu'où tu es arrivé depuis la première fois que tu es arrivé dans un Super Donjon. J'ai peut-être émis des doutes sur toi au début, mais tu as effacé tous mes doutes sur toi. Malheureusement, c'est sans doute la dernière fois que je te parlerai, donc faisons en sorte que ce soit une grosse tâche ! Pour ton dernier titre, tu vas devoir éradiquer 10 000 000 monstres de plus. N'oublie pas, héros, je te soutiens, et j'espère qu'on se verra de nouveau dans le futur !";
                         if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(10000000);
                         else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10000000);
                         break;
-                    case QuestKindTitle.ExplorerOfSD11://NEW17
+                    case QuestKindTitle.ExplorerOfSD11:
                         name = Title(TitleKind.ExplorerOfSD) + " 11";
                         client = "Widget";
-                        description = "Okay, I know that I said that was your last title, but after a lot of thought and a deeper investigation into the Super Dungeon, I've decided that the only way forward is to start clearing out way more monsters than you have before. I know, it sounds like a pain, but hey, at least you get a chance to become even stronger and more famous than you already are, right? And by the way, if you haven't already started checking out those fancy gems that you can find in the dungeon, you might want to start, because for the amounts of monsters I'm going to be asking you to defeat from here on out, you're really going to need the help.";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(100e6);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100e6);
+                        description = "Ok, je sais que j'ai dit que ce serait ton dernier titre, mais après intense réflexion et une étude plus poussée sur les Super Donjons, j'ai décidé que le seul moyen de continuer est d'exterminer encore plus de montres que ce que tu as fait jusqu'à présent. Je sais, ça a l'air d'une corvée, mais hé, au moins tu as la possibilité de devenir encore plus fort et célèbre ce maintenant, non ? Et au fait, si tu n'as pas encore commencé à regarder ces jolies gemmes que tu peux trouver dans le donjon, tu devrais commencer, car au vu du nombre de monstres que je vais te demander de terrasser, tu auras bien besoin de leur aide.";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(100e6);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100e6);
                         break;
-                    case QuestKindTitle.ExplorerOfSD12://NEW17
+                    case QuestKindTitle.ExplorerOfSD12:
                         name = Title(TitleKind.ExplorerOfSD) + " 12";
                         client = "Widget";
-                        description = "I'm not going to mince words any more, you did a great job with that last batch, so you've earned another title and some well deserved rest, but as soon as you're ready... your next promotion is going to require an even more substantial effort. I'll speak with you again after you clear out a billion monsters. See you then, and good luck!";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(1e9);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1e9);
+                        description = "Bon, je nevais plus passer par quatre chemins, tu as fait du bon boulot avec la dernière mission, donc je vais te donner un autre titre et une courte pause, mais dès que tu seras prêt... ta prochaine promotion demandera un effort encore plus grand. Je te recontacterai lorsque tu auras exterminé un milliard de monstres. À plus, et bonne chance !";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(1e9);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1e9);
                         break;
-                    case QuestKindTitle.ExplorerOfSD13://NEW17
+                    case QuestKindTitle.ExplorerOfSD13:
                         name = Title(TitleKind.ExplorerOfSD) + " 13";
                         client = "Widget";
-                        description = "These days I'm not sure if we should even be calling you an Explorer, you're more of a whirling ball of death once you step foot into those dungeons, aren't you? Though, you sure must be getting through every square foot of those dungeons if you've defeated a billion monsters, though. I'm honestly worried now that there's no end to them, and keeping them at bay is starting to become a full time job. So let's see if clearing out 10 billion more will make a difference, shall we?";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(10e9);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10e9);
+                        description = "A ce point, je ne sais pas si je dois te considérer comme un Explorateur, tu as plus l'air d'une boule d'extermination hurlante lorsque tu rentres dans un de ces donjons, non ? Cela dit, tu as sans doute exploré chaque recoin de ces donjons si tu as vaincu un milliard de monstres. A ce point, je suis vraiment inquiet qu'ils ne s'arrêteront jamais d'apparaître, et que les retenir devient un travail à temps plein. Voyons donc si en exterminer 10 milliards de plus fait une différence, non ?";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(10e9);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(10e9);
                         break;
-                    case QuestKindTitle.ExplorerOfSD14://NEW17
+                    case QuestKindTitle.ExplorerOfSD14:
                         name = Title(TitleKind.ExplorerOfSD) + " 14";
                         client = "Widget";
-                        description = "I can't even imagine the effort it took you to cut through that many monsters, but I am sure am impressed and entertained with it all! And hey, you're doing a lot of good for everyone by keeping the monsters supressed in the Super Dungeon like that! So let's just keep up with the pattern and see if you can manage ten times as many as last time, eh? 100 billion should be doable for you by now...";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(100e9);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100e9);
+                        description = "Je ne veux même pas imaginer l'effort herculéen qui a dû être requis pour annihiler autant de monstres, mais je suis pour certain impressionné et même amusé par tout ça ! Et bon, c'est une très bonne chose que tu gardes ces monstres à l'intérieur du Super Donjon comme ça ! Donc continuons avec ce rythme et voyons voir si tu peux en tuer deix fois plus comme la dernière fois, non ? Tu devrais être capable d'en tuer 100 milliards maintenant...";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(100e9);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(100e9);
                         break;
-                    case QuestKindTitle.ExplorerOfSD15://NEW17
+                    case QuestKindTitle.ExplorerOfSD15:
                         name = Title(TitleKind.ExplorerOfSD) + " 15";
                         client = "Widget";
-                        description = "All right! It's become pretty clear that the endless spawning and onslaught of monsters in the Super Dungeon can only be matched by a hero like yourself, so I don't think there's a whole lot more you have to prove, but how about one last time for old time's sake? I mean, you know, if it's too much for you you don't have to earn this one last promotion, of course, but it sure would make me happy to say I knew the hero who single-handedly defeated a trillion monsters in the Super Dungeon... so what do you say? One last hurrah?";
-                        if (!quest.isAccepted) condition = "Defeat any monsters in any Super Dungeon : " + tDigit(1e12);
-                        else condition = "Defeat any monsters in any Super Dungeon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1e12);
+                        description = "Allez ! C'est devenu assez clair que l'apparition et l'assaut infini des monstres du Super Donjon ne peut être repoussé que par un héros tel que toi, donc je ne pense pas que tu aies grand chose de plus à prouver, mais que penses-tu d'un dernier défi, au souvenir du bon temps ? Et puis bon, si c'est trop pour toi tu n'as pas besoin de gagner ce dernier titre, bien sûr, mais ça me rendrait heureux de dire que e connais le héros qui a vaincu un trillion de monstres à lui tout seul dans le Super Donjon... Donc, tu en penses quoi ? Un dernière fanfare ou non ?";
+                        if (!quest.isAccepted) condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(1e12);
+                        else condition = "Vaincre n'importe quel monstre dans n'importe quel Super Donjon : " + tDigit(Main.main.SR.sdMobDefeatedNums[(int)quest.heroKind]) + " / " + tDigit(1e12);
                         break;
                     case QuestKindTitle.FireResistance1: //TODO
                         name = Title(TitleKind.FireResistance) + " 1";
@@ -6765,9 +6755,9 @@ public class Localized_French : LOCALIZATION
                         description = "Oh non, vos tentatives de nous aider ont vraiment frustré les slimes, et maintenant c'est une armée de slimes qui est à nos portes! Puisque vous êtes en quelques sortes responsable de ce bordel, que diriez-vous de nous aider à nettoyer... je veux dire, nettoyes ça pour nous?";
                         break;
                     case QuestKindGeneral.BringOilOfSlime:
-                        name = "The Slime Killer";//NEW20 //name = "L'Amoureux Des Slimes";
-                        client = "Nutty the Slime Killer";//NEW20
-                        description = "I just love killing Slimes. <color=orange>Please defeat any Slime and bring back their loot, Oil of Slime.</color> Monsters can drop Common and Rare Drop Materials. If you're curious on what the Monsters drop, check out the <color=orange>Bestiary</color> tab to know what they may drop! Once you bring me enough Oils of Slime, I'll give you several <color=orange>Monster Fluids</color>, which are rarer than Oils. I just love collecting the Slime Oil... for totally no reason what so ever.";//NEW20
+                        name = "Le Tueur De Slimes";
+                        client = "Maité le Tueur de Slimes";
+                        description = "J'adore tuer des Slimes. <color=orange>S'il vous plaît, tuez des Slimes et ramanez-moi leur butin, l'Huile de Slime.</color> Les monstres peuvent lâcher des Matériaux Communs et des Matériaux Rares. Si vous êtes curieux à propos de ce que chaque Monstre lâche, allez voir l'onglet <color=orange>Bestiaire</color> pour savoir ce qu'ils peuvent lâcher ! Une fois que vous m'aurez apporté assez d'Huiles de Slime, je vous donnerez quelques <color=orange>Fluides de Monstre</color>, qui sont plus rares que les Huiles. J'adore juste collecter l'Huile de Slime... pour absolument aucune raison.";
                         break;
                         
                     case QuestKindGeneral.DefeatRedSlime:
@@ -7200,14 +7190,14 @@ public class Localized_French : LOCALIZATION
                 return "Renommée/Classe de Guilde";
             case ToggleKind.SDRetryOnFail:
                 return "Réessayer même si l'essai de super donjon a échoué";
-            case ToggleKind.DisableResult://NEW17
-                return "Disable the battle result when the clear time is less than 1 sec real time";
-            case ToggleKind.SDDisableSafeZone://NEW17
-                return "Disable Safe Zone Powerup screen to prevent flickering";
-            case ToggleKind.SDDisableSuccessfulDodge://NEW18
-                return "Successful Dodge";
-            case ToggleKind.DisableNotificationTown://NEW20
-                return "Disable notifications for Town";
+            case ToggleKind.DisableResult:
+                return "Désactiver les résultats de combat si le temps de complétion est inférieur à 1s de temps réel";
+            case ToggleKind.SDDisableSafeZone:
+                return "Désactiver l'écran de Pouvoir de Zone Sûre pour éviter le clignottement";
+            case ToggleKind.SDDisableSuccessfulDodge:
+                return "Esquive Réussie";
+            case ToggleKind.DisableNotificationTown:
+                return "Désactiver les notifications pour la Ville";
         }
         return base.Toggle(kind);
     }
@@ -7567,8 +7557,8 @@ public class Localized_French : LOCALIZATION
                 return "Boss avec Handicap";
             case global::ChallengeType.SuperDungeon:
                 return "Super Donjon";
-            case global::ChallengeType.UltimateTrial://NEW18
-                return "Ultimate Trial";
+            case global::ChallengeType.UltimateTrial:
+                return "Épreuve Ultime";
         }
         return ChallengeType(type);
     }
@@ -7698,9 +7688,9 @@ public class Localized_French : LOCALIZATION
             case 48: return "Intérêt sur les Pièces Slime + " + text;
             case 49: return "Gain de Score d'Invasion + " + text;
             case 50: return "+" + text + " de Pièces de Donjon et de Fragments de Rubis sont gardés après la mort dans un SD";
-            case 51: return "Improves the Re-lottery Scroll to roll max values";//NEW18
-            case 52: return "Currently accepted Daily Quests will not be cancelled on WA";//NEW18
-            case 53: return "Currently accepted Title Quests will not be cancelled on WA";//NEW18
+            case 51: return "Force les Parchemins de Lotterie à atteindre leur valeur maximale";
+            case 52: return "Les Quêtes Journalières en cours ne seront pas annulées après une AM";
+            case 53: return "Les Quêtes de Titre en cours ne seront pas annulées après une AM";
         }
         return base.MissionMilestoneString(id);
     }
@@ -7814,15 +7804,15 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return "Nombre de Coups de cette Capacité + 1";
             case 1: return "Consommation de PM de cette Capacité -50%";
-            case 2: return "Area of Effect +" + meter(value, 3) + " for this Skill";//NEW18 //case 2: return "Portée de l'Effet de cette Capacité + ";
+            case 2: return "Zone d'Effet +" + meter(value, 3) + " pour cette Capacité";
             case 3: return "Temps de Recharge de cette Capacité -50%";
             case 4: return "Enlève la Consommation de PM de cette Capacité";
-            case 5: return "Range +" + meter(value, 3) + " for this Skill";//NEW18 //case 5: return "Portée de cette Capacité + ";
+            case 5: return "Portée +" + meter(value, 3) + " pour cette Capacité";
             case 6: return "Temps de Recharge de cette Capacité -25%";
             case 7: return "À Définir";
             case 8: return "Dégâts de cette capacité +50% par mètre parcouru";
             case 9: return "Effectue une charge rapide vers la cible pour attaquer.";
-            case 10: return "Cast Time ready on Area start for this Skill";//NEW18
+            case 10: return "Capacité prête à être lancée au début de la Zone pour cette Capacité";
         }
         return base.WarriorSkillsString(id);
     }
@@ -7860,15 +7850,15 @@ public class Localized_French : LOCALIZATION
             case 11: return "Temps de Recharge de cette Capacité -25%";
             case 12: return "À Définir";
             case 13: return "Résistance aux Débuffs +" + percent(value, 2) + " tant que cette Capacité est équipée";
-            case 14: return "HP Regeneration +" + tDigit(value, 1) + "/sec (After) while this Skill is equipped"; //NEW18
-            case 15: return "HP +" + tDigit(value, 1) + " (After) while this Skill is equipped"; //NEW18
-            case 16: return "ATK +" + tDigit(value, 1) + " (After) while this Skill is equipped"; //NEW18
-            case 17: return "MATK +" + tDigit(value, 1) + " (After) while this Skill is equipped"; //NEW18
-            case 18: return "SD Damage Multiplier +" + percent(value, 2) + " (Mul) while this Skill is equipped"; //NEW18
-            case 19: return "Magical Nullify Chance +" + percent(value, 2) + " while this Skill is equipped"; //NEW18
-            //case 20: return "Hero's Skill +" + tDigit(value, 1) + " without increasing MP Consumption while this Skill is equipped"; 
-            case 21: return "Hit Count +" + tDigit(value, 0) + " for this Skill";//NEW18
-            case 22: return "Cast Time -" + percent(value, 0) + " for this Skill";//NEW18
+            case 14: return "Régénération de PV +" + tDigit(value, 1) + "/sec (Absolu) tant que cette Capacité est équipée";
+            case 15: return "PV +" + tDigit(value, 1) + " (Absolu) tant que cette Capacité est équipée";
+            case 16: return "ATQ +" + tDigit(value, 1) + " (Absolu) tant que cette Capacité est équipée";
+            case 17: return "MATQ +" + tDigit(value, 1) + " (Absolu) tant que cette Capacité est équipée";
+            case 18: return "Multiplie les Dégâts de SD +" + percent(value, 2) + " (Mlt) tant que cette Capacité est équipée";
+            case 19: return "Chance de Nullification Magique +" + percent(value, 2) + " tant que cette Capacité est équipée";
+            //case 20: return "Capacité du Héros +" + tDigit(value, 1) + " sans augmenter la Consommation de MP tant que cette Capacité est équipée";
+            case 21: return "Nombre de Coups +" + tDigit(value, 0) + " pour cette Capacité";
+            case 22: return "Temps de Lancer -" + percent(value, 0) + " pour cette Capacité";
         }
         return base.AngelSkillsString(id);
     }
@@ -7878,19 +7868,19 @@ public class Localized_French : LOCALIZATION
         switch (id)
         {
             case 0: return "Nombre de Coups de cette Capacité + 1";
-            case 1: return "Physical Critical Chance +" + percent(value, 2) + " (Add) while this Skill is equipped";//NEW18 "(Add)" //case 1: return "Chance de Coup Critique Physique +" + percent(value, 2) + " tant que cette Capacité est équipée";
+            case 1: return "Chance de Coup Critique Physique +" + percent(value, 2) + " (Ajt) tant que cette Capacité est équipée";
             case 2: return "Cette Capacité a maintenant une attaque transperçante";
-            case 3: return "Damage +" + percent(value, 0) + " for this Skill";//NEW18 //case 3: return "Dégâts de cette Capacité";
-            case 4: return "Magical Critical Chance +" + percent(value, 2) + " (Add) while this Skill is equipped";//NEW18 "(Add)" //case 4: return "Chance de Coup Critique Magique +" + percent(value, 2) + " tant que cette Capacité est équipée";
-            case 5: return "Steal Chance +" + percent(value, 2) + " for this Skill";//NEW18 //case 5: return "Chance de Vol";
+            case 3: return "Dégâts +" + percent(value, 0) + " pour cette Capacité";
+            case 4: return "Chance de Coup Critique Magique +" + percent(value, 2) + " (Ajt) tant que cette Capacité est équipée";
+            case 5: return "Chance de Vol +" + percent(value, 2) + " pour cette Capacité";
             case 6: return "Portée de l'Effet de cette Capacité + ";
             case 7: return "À Définir";
             case 8: return "Chance de Coup Critique de cette Capacité : ";
             case 9: return "Disparait momentanément et apparait de nouveau près de l'ennemi le plus éloigné pour lui ingliger des dégâts";
-            case 10: return "Chance to steal Common Materials: " + percent(value);//NEW18 //case 10: return " chance de voler un matériau laché à chaque utilisation";
-            //case 11: return "Steal 1 more Material while this Skill is equipped"; //NEW18
-            case 12: return "Physical Critical Chance +" + percent(value, 2) + " (Mul) while this Skill is equipped";//NEW18
-            case 13: return "Magical Critical Chance +" + percent(value, 2) + " (Mul) while this Skill is equipped";//NEW18
+            case 10: return "Chance de vol de Matériau Commun: " + percent(value);
+            //case 11: return "Vole 1 Matériau de plus tant que cette Capacité est équipée";
+            case 12: return "Chance de Coup Critique Physique +" + percent(value, 2) + " (Mlt) tant que cette Capacité est équipée";
+            case 13: return "Chance de Coup Critique Magique +" + percent(value, 2) + " (Mlt) tant que cette Capacité est équipée";
         }
         return base.ThiefSkillsString(id);
     }
@@ -7922,7 +7912,7 @@ public class Localized_French : LOCALIZATION
         {
             case 0: return "Emplacements d'Invocation de Familier +" + tDigit(value, 0) + " Pet Summon Slot tant que cette Capacité est équipée";
             case 1: return "Permet d'invoquer des familiers\n- Multiplicateur de l'Attaque de Base des Familiers : ";
-            case 2: return "Pet Damage Multiplier +" + percent(value, 0) + " (Mul) for this Skill";//NEW18 //case 2: return "Multiplie le Multiplicateur de Dégâts de cette Capacité par ";
+            case 2: return "Multiplie les Dégâts des Familiers +" + percent(value, 0) + " (Mlt) pour cette Capacité";
             case 3: return "Donne aux familiers un ordre d'attaquer peu importe leur temps de recharge\n- PMultiplicateur de l'Attaque des Familiers : ";
             case 4: return "Donne aux familiers un ordre pour qu'ils se ruent vers des ennemis aléatoires\n- Multiplicateur de l'Attaque des Familiers : ";
             case 5: return "Donne aux familiers un ordre pour revenir près du héros et attaquer le monstre le plus près du héros\n- Multiplicateur de l'Attaque des Familiers : ";
@@ -7931,7 +7921,7 @@ public class Localized_French : LOCALIZATION
             case 8: return "5% de chance de soigner 10% des PV Max en plus";
             case 9: return "0.5% de chance de soigner complètement à chaque utilisation";
             case 10: return "Soigne les PV des familiers";
-            case 11: return "Effect Chance +" + percent(value, 0) + " for this Skill";//NEW18 //case 11: return "Effets de chance de cette Capacité + ";
+            case 11: return "Chance d'Effet +" + percent(value, 0) + " pour cette Capacité";
             case 12: return " chance que tous les familiers utilisent une capacité aléatoire équipée par le héros tous les ";
             case 13: return "\n- Les familiers n'utilisent aucun PM pour lancer utiliser une capacité peu importe son temps de recharge";
             case 14: return "\n- Taux de Gain de Maîtrise de Capacité pour chaque utilisation par un familier : ";
@@ -8183,13 +8173,13 @@ public class Localized_French : LOCALIZATION
             case 39: return "Jouer à IEH pendant " + tDigit(value) + " semaine(s) de temps de jeu";
             case 40: return "Jouer à IEH pendant " + tDigit(value) + " mois(s) de temps de jeu";
             case 41: return "Jouer à IEH pendant " + tDigit(value) + " année(s) de temps de jeu";
-            case 42: return "Walk to the sirius [8.6 light years]"; //NEW18
-            case 43: return "Walk to the edge of the universe [13.8 Bill light years]"; //NEW18
-            case 44: return "Total Skill Trigger #" + tDigit(value); //NEW18
-            case 45: return "TOTAL CLEARED # "; //NEW18
-            case 46: return "Total Clear Bonus : Gold Gain "; //NEW18
-            case 47: return " ( + 1% / clear )"; //NEW18
-            case 48: return "Achievements"; //NEW18
+            case 42: return "Marcher vers Sirius [8.6 années lumière]";
+            case 43: return "Marcher vers les confins de l'univers [13.8 Milliard d'années lumière]";
+            case 44: return "# de Lancers de Capacité " + tDigit(value);
+            case 45: return "# TOTAL COMPLÉTÉ ";
+            case 46: return "Bonus de Complétion Totale : Gain d'Or";
+            case 47: return " (+ 1% / complétion)";
+            case 48: return "Succès";
         }
         return base.AchievementString(id);
     }
@@ -8247,7 +8237,7 @@ public class Localized_French : LOCALIZATION
             case 32: return "\n- Le Niveau et EXP des Expéditions";
             case 33: return "\n- Le Palier de Mission de Zone, la Nitro, les Pièces Épiques et les achats du Magasin Épique";
             case 34: return "\n\n<u>Attention</u>";
-            case 35: return "\n- Each World Ascension increases the requirement of total milestone levels to ascend next time by 1 (Max:50)"; //NEW18 change //case 35: return "\n- Chaque Ascension Monde augmente les requis de niveau de palier total pour faire une autre ascension par 1";
+            case 35: return "\n- Chaque Ascension Monde augmente les requis de niveau de palier total pour faire une autre ascension par 1 (Max:50)";
             case 36: return "\n- Les héros débloqués seront toujours débloqués après l'Ascension Monde";
             case 37: return "\n- Les Bâtiments de Ville débloqués seront toujours débloqués après l'Ascension Monde";
             case 38: return "\n- Les Quêtes Journalières et de Titres couramment acceptées devront être acceptées de nouveau après une Ascension Monde";
@@ -8372,7 +8362,7 @@ public class Localized_French : LOCALIZATION
             case 5: return "Le coût en Orbe Portail double toutes les 5 entrées dans un Super Donjon.";
             case 6: return "Entrées Courantes : ";
             case 7: return "Entrées Totales : ";
-            case 8: return "Failed";//NEW17
+            case 8: return "Échec";
         }
         return "";
     }
@@ -8509,21 +8499,21 @@ public class Localized_French : LOCALIZATION
             case 125: return "Améliore l'effet des Améliorations de Gain de Ressources";
             case 126: return "Niveau Maximal d'Amélioration de Dictionnaire + " + text;
             case 127: return "Ajoute une récompense de \"Ticket de Réinitialisation\" dans les Quêtes Journalières [Cartographeur " + text + "]";
-            case 128: return "Multiply Skill Proficiency Gain by";//NEW18
-            case 129: return "Total Skill Trigger #";//NEW18
-            case 130: return "Multiply Armored Fury by";//NEW18
-            case 131: return "Multiply Warded Fury by";//NEW18
-            case 132: return "Multiply Critical Damage by";//NEW18
-            case 133: return "Max Skill Rank + " + text;//NEW18
-            case 134: return "Once a skill reaches minimum cast time, " + text + " of excess speed will be converted into extra hits";//NEW18
-            case 135: return "Global Skill Slot + " + text;//NEW18
-            case 136: return "Skill Cast Speed + " + text;//NEW18
-            case 137: return text + " of excess speed will be converted into extra hits";//NEW18
-            case 138: return "Preserve Skill Passive Effects upon rebirthing";//NEW18
-            case 139: return "Trap's cooldown is reset on rebirth";//NEW18
-            case 140: return "Unlock Ultimate Trial Challenge";//NEW18
-            case 141: return "Excess Effect Amount"; //NEW18
-            case 142: return "Common Material Drop Chance"; //NEW18
+            case 128: return "Multiplie les Gains de Maîtrise de Capacité par";
+            case 129: return "# de Lancers de Capacité Total";
+            case 130: return "Multiplie la Furie d'Armure par";
+            case 131: return "Multiplie la Furie d'Esprit par";
+            case 132: return "Multiplie les Dégâts Critiques par";
+            case 133: return "Rang Max de Capacité + " + text;
+            case 134: return "Lorsqu'une capacité atteint son temps de lancer minimum, " + text + " de sa vitesse en excès sera convertie en coups supplémentaires";
+            case 135: return "Emplacement de Capacité Globale + " + text;
+            case 136: return "Vitesse de Lancer de Capacité + " + text;
+            case 137: return text + " de la vitesse en excès sera convertie en coups supplémentaires";
+            case 138: return "Préserve les Effets Passifs des Capacités après une Reincarnation";
+            case 139: return "Le temps de recharge des pièges est réinitialisé après une réincarnation";
+            case 140: return "Débloque les Défis Épreuve Ultime";
+            case 141: return "Montant des Effets en excès";
+            case 142: return "Chance d'Apparition de Matériau Commun";
         }
 
         return "";
@@ -8578,12 +8568,12 @@ public class Localized_French : LOCALIZATION
         }
     }
 
-    public override string EpicStoreString(int id, string text1 = "", string text2 = "", string text3 = "", string text4 = "")//NEW19
+    public override string EpicStoreString(int id, string text1 = "", string text2 = "", string text3 = "", string text4 = "")
     {
         switch (id)
         {
-            case 0: return "This item is normally " + text1 + ", \nbut now it's <color=green>" + text2 + " (" + text3 + " OFF)</color> until " + text4 + "!";
-            case 1: return text1 + " OFF until " + text2 + "!";
+            case 0: return "Ceci coûte normalement " + text1 + ", \nmais il coûte maintenant <color=green>" + text2 + " (-" + text3 + ")</color> jusqu'au " + text4 + " !";
+            case 1: return "-" + text1 + " jusqu'au " + text2 + " !";
             default: return base.EpicStoreString(id, text1, text2, text3, text4);
         }
     }
@@ -8894,25 +8884,25 @@ public class Localized_French : LOCALIZATION
         if (area.cursePetBasicStatsMul < 1)
         {
             if (isCurse) tempStr += ", ";
-            tempStr += "Reduces Pet Stats to " + percent(area.cursePetBasicStatsMul, 4);//NEW18 Added ", 4" //tempStr += "Réduit les Stats des Familiers de " + percent(area.cursePetBasicStatsMul);
+            tempStr += "Réduit les Stats des FamiliersStats de " + percent(area.cursePetBasicStatsMul, 4);
             isCurse = true;
         }
         if (area.curseMoveSpeedMul < 1)
         {
             if (isCurse) tempStr += ", ";
-            tempStr += "Reduces Move Speed to " + percent(area.curseMoveSpeedMul, 4);//NEW18 Added ", 4" //tempStr += "Réduit la Vitesse de Déplacement de " + percent(area.curseMoveSpeedMul);
+            tempStr += "Réduit la Vitesse de Déplacement de " + percent(area.curseMoveSpeedMul, 4);
             isCurse = true;
         }
         if (area.curseSkillRangeMul < 1)
         {
             if (isCurse) tempStr += ", ";
-            tempStr += "Reduces Skill Range to " + percent(area.curseSkillRangeMul, 4);//NEW18 Added ", 4" //tempStr += "Réduit la Portée des Capacités de " + percent(area.curseSkillRangeMul);
+            tempStr += "Réduit la Portée des Capacités de " + percent(area.curseSkillRangeMul, 4);
             isCurse = true;
         }
         if (area.curseAOEMul < 1)
         {
             if (isCurse) tempStr += ", ";
-            tempStr += "Reduces Area of Effect to " + percent(area.curseAOEMul, 4);//NEW18 Added ", 4" //tempStr += "Réduit la Taille des Zones d'Effet de " + percent(area.curseAOEMul);
+            tempStr += "Réduit la Taille des Zones d'Effet de " + percent(area.curseAOEMul, 4);
             isCurse = true;
         }
         return tempStr;
@@ -8956,7 +8946,7 @@ public class Localized_French : LOCALIZATION
             case 1: return "Gain de Points de Réincarnation de cette quête";
             case 2: return "Divise le coût d'emplacement d'acceptation par deux";
             case 3: return "Élimine le cout d'emplacement d'acceptation";
-            case 4: return "This Quest's Rewards";//NEW18
+            case 4: return "Récompenses de cette Quête";
             default: return base.QuestString(id, text);
         }
     }
@@ -9316,7 +9306,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.EasyAccessEquipment:
                 name = "Accès Facile [Équipement]";
-                effect = "Unlocks buttons in the Equip tab that allows you to access to the equipment slots of background heroes without switching heroes. This enables swapping equipment between heroes. Right click on the easy access hero icons on the equipment page to swap equipment.";//NEW18 //effect = "Débloque des boutons dans l'onglet Équipement qui permet d'accéder aux emplacements d'équipement des héros en arrière-plan sans avoir à changer de héros.";
+                effect = "Débloque des boutons dans l'onglet Équipement qui permet d'accéder aux emplacements d'équipement des héros en arrière-plan sans avoir à changer de héros. Cela permet d'échanger des equipements entre héros. Effectuez un clic droit sur un icône d'accès facile d'un héros sur la page d'équipement pour échanger les équipements.";
                 break;
             case EpicStoreKind.AdvancedAutoDisassembleCraftedEquipment:
                 name = "Auto-Désassemblage des Équipement Fabriqués Avancé";
@@ -9340,7 +9330,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.EquipmentLoadouts:
                 name = "Collection d'Équipement";
-                effect = "Unlocks buttons in the Equip tab that allow you to have different loadouts of equipment sets - Subsequent purchases will increase the loadout slot by the purchase amount. Right click the loadout button to rename it.";//NEW18 Added "Right click the loadout button to rename it." //effect = "Débloque des boutons dans l'onglet Équipement qui permet d'avoir différentes collections d'équipement - Tout achat supplémentaire augmente le nombre d'emplacements de collections par le nombre acheté.";
+                effect = "Débloque des boutons dans l'onglet Équipement qui permet d'avoir différentes collections d'équipement - Tout achat supplémentaire augmente le nombre d'emplacements de collections par le nombre acheté. Effectuez un clic droit sur le bouton de collection pour la renommer.";
                 break;
             case EpicStoreKind.RegularDailyChest:
                 name = "Coffre Journalier";
@@ -9356,7 +9346,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.Pause:
                 name = "Pause";
-                effect = "Unlocks a button to pause the game in Settings tab. You can still interact with the game while paused, to change equipment and skills, buy upgrades, or switch heroes, without In-Game Playtime advancing. This also pauses World Ascension Accomplishment timers. Hotkey: Shift + X";//NEW19 Added "Hotkey: Shift + X" //effect = "Débloque un bouton qui permet de mettre le jeu en pause dans l'onglet Options. Vous pouvez toujours intéragir avec le jeu pendant qu'il est mis en pause, pour changer les équipements et les capacités, acheter des améliorations, ou changer de héros, sans que le Temps de Jeu n'avance. Cela pause aussi le temps des Accomplissements d'Ascension Monde.";
+                effect = "Débloque un bouton qui permet de mettre le jeu en pause dans l'onglet Options. Vous pouvez toujours intéragir avec le jeu pendant qu'il est mis en pause, pour changer les équipements et les capacités, acheter des améliorations, ou changer de héros, sans que le Temps de Jeu n'avance. Cela pause aussi le temps des Accomplissements d'Ascension Monde. Raccourci: Maj + X";
                 break;
             case EpicStoreKind.PurpleFoxMastery:
                 name = "Maîtrise du Renard Violet";
@@ -9372,7 +9362,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.SkillLoadouts:
                 name = "Collection de Capacité";
-                effect = "Unlocks buttons in the Skill tab that allow you to have different loadouts of skill sets - Subsequent purchases will increase the loadout slot by the purchase amount. Right click the loadout button to rename it.";//NEW18 Added "Right click the loadout button to rename it." //effect = "Débloque des boutons dans l'onglet Capacité qui permet d'avoir de différentes collections de capacités. Tout achat supplémentaire permet d'augmenter ce nombre par le nombre acheté.";
+                effect = "Débloque des boutons dans l'onglet Capacité qui permet d'avoir de différentes collections de capacités. Tout achat supplémentaire permet d'augmenter ce nombre par le nombre acheté. Effectuez un clic droit sur le bouton de collection pour la renommer.";
                 break;
             case EpicStoreKind.AdvancedAutoProficiencyScroll:
                 name = "Utilisation Automatique Avancée de Parchemins de Maîtrise";
@@ -9440,41 +9430,41 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.SDPowerupFilterLoadout:
                 name = "Collection de Filtre de Pouvoir de SD";
-                effect = "Unlocks buttons in the Powerup Filter window that allows you to have different loadouts of powerup filter set - Subsequent purchases will increase the loadout slot by the purchase amount. Right click the loadout button to rename it.";//NEW18 Added "Right click the loadout button to rename it." //effect = "Débloque des boutons dans la fenêtre de Filtre de Pouvoir qui permet d'avoir différentes collections de filtres de pouvoir - Tout achat futur augmentera le nombre d'emplacements de collection par le nombre acheté. ";
+                effect = "Débloque des boutons dans la fenêtre de Filtre de Pouvoir qui permet d'avoir différentes collections de filtres de pouvoir - Tout achat futur augmentera le nombre d'emplacements de collection par le nombre acheté. Effectuez un clic droit sur le bouton de collection pour la renommer.";
                 break;
             case EpicStoreKind.SDModifierLoadout:
                 name = "Collection de Modificateur de SD";
-                effect = "Unlocks buttons in the Modifier window that allows you to have different loadouts of modifier set - Subsequent purchases will increase the loadout slot by the purchase amount. Right click the loadout button to rename it.";//NEW18 Added "Right click the loadout button to rename it." //effect = "Débloque des boutons dans la fenêtre de Modificateurs qui permet d'avoir différentes collections de modificateurs - Tout achat futur augmentera le nombre d'emplacements de collection par le nombre acheté. ";
+                effect = "ébloque des boutons dans la fenêtre de Modificateurs qui permet d'avoir différentes collections de modificateurs - Tout achat futur augmentera le nombre d'emplacements de collection par le nombre acheté. Effectuez un clic droit sur le bouton de collection pour la renommer.";
                 break;
             case EpicStoreKind.SDPowerupFilterSlot:
                 name = "Emplacement de Filtre de Pouvoir de SD + 1";
                 effect = "Augmente le nombre d'Emplacements de Filtre de Pouvoir de SD par 1.";
                 break;
-            case EpicStoreKind.StackableScrolls://NEW18
-                name = "Stackable and Stack-Use of Scrolls";
-                effect = "Enables the stacking of Scrolls in the Enchant Inventory. Hold Shift while dragging in the inventory to stack/split Scrolls. Enchant Scrolls only stack with the same effect and level. Holding Shift while applying Scrolls will use as many as needed (and available in the current stack).";
+            case EpicStoreKind.StackableScrolls:
+                name = "Parchemins Empilables et Utilisation de Parchemin par Pile";
+                effect = "Permet d'empiler les Parchemins dans l'Inventaire de Parchemin. Maintenez Maj en cliquant déposant pour empiler/dépiler les Parchemins. Les Parchemins d'Enchantement ne sont empilables que s'ils ont le même effet et niveau. Mainteir Maj en appliquant des PArchemins en utlisera autant que possible (et disponible dans la pile courante).";
                 break;
         }
         return (name, effect);
     }
 
-    public override (string name, string description) InAppPurchaseString(InAppPurchase item)//NEW19 French,Koreanは関数ごと追加
+    public override (string name, string description) InAppPurchaseString(InAppPurchase item)
     {
         string name = "";
         string description = "";
         switch (item.kind)
         {
             case InAppPurchaseKind.UpdateBundle1:
-                name = "Update Bundle 1";
-                description = "This bundle contains: \n- <sprite=\"EpicCoin\" index=0> 5500 Epic Coin\n- Removes the lowest rarity reward for each type from the pool in the Regular Daily Chest\n- Nitro Cap + 50% (Multiplies the Nitro cap. Stacks additively with [Nitro Cap Expansion].) \n- Upgrade Queue + 20";
+                name = "Lot de Mise à Jour 1";
+                description = "Ce lot contient : \n- <sprite=\"EpicCoin\" index=0> 5500 Pièces Épiques\n- Enlève la rareté de récompense la plus basse pour chaque type de récompense dans le Coffre Journalier\n- Limite de Nitro + 50% (Multiplie la Limite de Nitro. S'ajoute avec [Expansion de Nitro Max].) \n- File d'Amélioration + 20";
                 break;
-            case InAppPurchaseKind.UpdateBundle2://NEW6
-                name = "Update Bundle 2";
-                description = "This bundle contains: \n- <sprite=\"EpicCoin\" index=0> 5500 Epic Coin\n- Expedition Team Slot + 1\n- 1000 Portal Orbs and 10 Entry Cost Refresh Tickets (Super Dungeon)\n- Upgrade Queue + 20";
+            case InAppPurchaseKind.UpdateBundle2:
+                name = "Lot de Mise à Jour 2";
+                description = "Ce lot contient : \n- <sprite=\"EpicCoin\" index=0> 5500 Pièces Épiques\n- Emplacement d'Équipe d'Expédition + 1\n- 1000 Orbes Portail et 10 Tickets de Réinitialisation de Coût d'Entrée (Super Donjon)\n- File d'Amélioration + 20";
                 break;
-            case InAppPurchaseKind.UpdateBundle3://NEW19
-                name = "Update Bundle 3";
-                description = "This bundle contains: \n- <sprite=\"EpicCoin\" index=0> 5500 Epic Coin\n- Expedition Team Slot + 1\n- Town Research Slot + 1\n- Upgrade Queue + 20";
+            case InAppPurchaseKind.UpdateBundle3:
+                name = "Lot de Mise à Jour 3";
+                description = "Ce lot contient : \n- <sprite=\"EpicCoin\" index=0> 5500 Pièces Épiques\n- Emplacement d'Équipe d'Expédition + 1\n- Emplacement de Recherche de Ville + 1\n- File d'Amélioration + 20";
                 break;
         }
         return (name, description);
@@ -9516,7 +9506,7 @@ public class Localized_French : LOCALIZATION
             case HelpKind.S_Challenge: return "Défi";
             case HelpKind.S_WorldAscension: return "Ascension Monde";
             case HelpKind.S_AreaMission: return "Mission de Zone";
-            case HelpKind.A_All: return "Progress Overview"; //New18 //case HelpKind.A_All: return "Tout";
+            case HelpKind.A_All: return "Progrès Global";
             case HelpKind.A_General: return "Général";
             case HelpKind.A_Area: return "Zone";
             case HelpKind.A_Currency: return "Ressources";
@@ -10152,7 +10142,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "<u>Esquive</u>";
                 tempStr += "\n- Appuyer et tenir le bouton Esquive permet au héros d'esquiver une attaque. vous pouvez aussi utiliser [Espace] pour esquiver en tant que raccourci. Votre temps d'esquive est limité, donc utilisez-le avec parcimonie.";
                 tempStr += "\n- Pendant l'esquive, vous ne pouvez pas lancer de capacité ou vous déplacer (Vous pourrez dans le futur améliorer votre esquive pour vous permettre de faire tout ça). Donc, vous devrez esquiver lorsque le temps de lancer de capacité du monstre (barre bleue en dessous de leur barre de PV) est presque pleine.";
-                tempStr += "\n- La barre d'esquive permet aussi de voir la barre de lancer de capacité du monstre le plus proche."; //TODO
+                tempStr += "\n- La barre d'esquive permet aussi de voir la barre de lancer de capacité du monstre le plus proche.";
                 tempStr += "\n\n";
                 tempStr += "<u>Modificateurs</u>";
                 tempStr += "\n- Les Modificateurs sont pour chaque Super Donjon.";
@@ -10783,20 +10773,20 @@ public class Localized_French : LOCALIZATION
         return base.MonsterPetPassiveEffectStreing(pet);
     }
 
-    public override string MonsterPetPassiveEffectStreing2(MonsterPet pet) //NEW18
+    public override string MonsterPetPassiveEffectStreing2(MonsterPet pet)
     {
         switch (pet.passiveEffectKind2)
         {
             case PetPassiveEffectKind2.GoldGain2:
-                return " Gold Gain Multiplier <color=green>+ " + percent(pet.effectValue2) + "</color> ( [Excess Effect Amount] x " + percent(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
+                return " Multiplie les Gains d'Or <color=green>+ " + percent(pet.effectValue2) + "</color> ( [Montant d'Excès d'Effet] x " + percent(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
             case PetPassiveEffectKind2.TamingPointGain2:
-                return " Taming Point Gain Multiplier <color=green>+ " + percent(pet.effectValue2) + "</color> ( [Excess Effect Amount] x " + percent(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
+                return " Multiplie les Gains de Points de Domptage <color=green>+ " + percent(pet.effectValue2) + "</color> ( [Montant d'Excès d'Effet] x " + percent(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
             case PetPassiveEffectKind2.RareMatChanceForBlueSlime2:
-                return " Rare Material Drop Chance <color=green>+ " + percent(pet.effectValue2) + "</color> ( [Excess Effect Amount] x " + percent(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
+                return " Chance d'Apparition de Matériau Rare <color=green>+ " + percent(pet.effectValue2) + "</color> ( [Montant d'Excès d'Effet] x " + percent(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
             case PetPassiveEffectKind2.RareMatChance2:
-                return " Rare Material Drop Chance <color=green>+ " + percent(pet.effectValue2) + "</color> ( [Excess Effect Amount] x " + percent(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
+                return " Chance d'Apparition de Matériau Rare <color=green>+ " + percent(pet.effectValue2) + "</color> ( [Montant d'Excès d'Effet] x " + percent(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
             case PetPassiveEffectKind2.ChestPortalOrbNumber2:
-                return " Max Portal Orbs in Chests <color=green>+ " + tDigit(Math.Floor(pet.effectValue2)) + "</color> ( [Excess Effect Amount] x " + tDigit(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
+                return " Orbes Portail Max dans un Coffre <color=green>+ " + tDigit(Math.Floor(pet.effectValue2)) + "</color> ( [Montant d'Excès d'Effet] x " + tDigit(MonsterParameter.PetPassiveEffectValue2(pet.passiveEffectKind2)) + " )";
         }
         return base.MonsterPetPassiveEffectStreing2(pet);
     }
@@ -10998,23 +10988,23 @@ public class Localized_French : LOCALIZATION
             case 12: return "Chance d'Apparition de " + text;
             case 13: return "Changement vers " + text;
             case 14: return "Progrès Courant";
-            case 15: return "Select order";//NEW18
-            case 16: return "Apply";//NEW18
-            case 17: return "Skill Cast Speed";//NEW18
-            case 18: return "Input a name for " + text;//NEW18
-            case 19: return text + " while this skill is equipped";//NEW18
-            case 20: return "Poison Damage";//NEW18
-            case 21: return "Skill Level Milestone [" + text + "]";//NEW18
-            case 22: return "Total highest Skill levels reached";//NEW18
-            case 23: return "Damage-type skill's damage : <color=green>" + text + "x</color> (2x per Lv 250)";//NEW18
-            case 24: return "2x per Lv 50";//NEW18
-            case 25: return "Artifact Gain Chance";//NEW18
-            case 26: return "SD Enchant Gain Chance";//NEW18
-            case 27: return "Right click to select this hero to swap current equipment from.";//NEW18
-            case 28: return "Right click to swap " + text + "'s current equipment for this hero's current equipment.";//NEW18
-            case 29: return "Expedition Pet EXP Gain";//NEW18
-            case 30: return "Apply All";//NEW20
-            case 31: return "<size=20>Apply All Box<size=18>\n- Drag a scroll or anvil here to apply it to all equipment in your current Loadout (limited by the current stack #).\n\n- Available Types: Enchant Scroll, All-type Scroll, Proficiency Scroll, and Anvils\n- You can use Shift-functionality with scrolls here";//NEW20
+            case 15: return "Sélectionner l'ordre";
+            case 16: return "Appliquer";
+            case 17: return "Vitesse de Lancer de Capacité";
+            case 18: return "Entrez un nom pour " + text;
+            case 19: return text + " tant que cette Capacité est équipée";
+            case 20: return "Dégâts de Poison";
+            case 21: return "Palier de Niveau de Capacité [" + text + "]";
+            case 22: return "Niveau total maximal atteint pour les Capacités";
+            case 23: return "Dégâts des Capacités infligeant des dégâts directs : <color=green>" + text + "x</color> (2x tous les 250 Nv)";
+            case 24: return "2x tous les 50 Nv";
+            case 25: return "Chance de Gain de Relique";
+            case 26: return "Chance de Gain d'Enchantement de SD";
+            case 27: return "Clic droit pour échanger les équipements avec ce héros.";
+            case 28: return "Clic droit pour échanger les équipements du héros " + text + "avec les équipements du héros courant.";
+            case 29: return "Gain d'EXP de Familier de l'Expédition";
+            case 30: return "Tout Appliquer";
+            case 31: return "<size=20>Boîte Tout Appliquer<size=18>\n- Glissez-déposez un parchemin ou une enclume ici pour l'appliquer à tous les équipements de la Collection courante (limité par le # de Pile courant).\n\n- Types disponibles : Parchemin d'Enchantement, tous les Parchemins Globaux, Parchemin de Maîtrise, et les Enclumes\n- Vous pouvez utiliser la fonctionnalité Maj avec les parchemins ici";
             default: return base.OtherString(id, text);
         }
     }
@@ -11046,8 +11036,8 @@ public class Localized_French : LOCALIZATION
             case 8: return "Chance d'Apparition de Matériel Commun x" + text;
             case 9: return "Chance d'apparition de Matériel Rare x" + text;
             case 10: return "Emplacement de Familier Actif + " + text;
-            case 11: return "Pets can be summoned and sent on Expeditions simultaneously";//NEW18
-            case 12: return "Pets can be summoned by multiple Heroes simultaneously";//NEW18
+            case 11: return "Les Familiers peuvent être invoqués et envoyés dans une Expédition en même temps";
+            case 12: return "Les Familiers peuvent être invoqués par plusieurs héros à la fois";
         }
         return "";
     }
