@@ -6759,7 +6759,7 @@ public class Localized_French : LOCALIZATION
                         client = "Maité le Tueur de Slimes";
                         description = "J'adore tuer des Slimes. <color=orange>S'il vous plaît, tuez des Slimes et ramanez-moi leur butin, l'Huile de Slime.</color> Les monstres peuvent lâcher des Matériaux Communs et des Matériaux Rares. Si vous êtes curieux à propos de ce que chaque Monstre lâche, allez voir l'onglet <color=orange>Bestiaire</color> pour savoir ce qu'ils peuvent lâcher ! Une fois que vous m'aurez apporté assez d'Huiles de Slime, je vous donnerez quelques <color=orange>Fluides de Monstre</color>, qui sont plus rares que les Huiles. J'adore juste collecter l'Huile de Slime... pour absolument aucune raison.";
                         break;
-                        
+
                     case QuestKindGeneral.DefeatRedSlime:
                         name = "Menace Des Slimes Rouges";
                         client = "Huck le fermier du village";
@@ -7198,6 +7198,8 @@ public class Localized_French : LOCALIZATION
                 return "Esquive Réussie";
             case ToggleKind.DisableNotificationTown:
                 return "Désactiver les notifications pour la Ville";
+            case ToggleKind.DisableSwitchHeroScreen://NEW21
+                return "Disable loading screen when switching Heroes";
         }
         return base.Toggle(kind);
     }
@@ -9334,7 +9336,12 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.RegularDailyChest:
                 name = "Coffre Journalier";
-                effect = "Vous recevrez quelques récompenses ci-dessous de façon aléatoire chaque jour !\n- 0%/25%/50%/100% de la Limite de Nitro (peut dépasser la limite)\n- 0/1/2/4 heures de bénédiction d'EXP (seulement pour le héros courant)\n- 0/1/2/5 Orbes de Portail\n- <sprite=\"epiccoin\" index=0> 50/100/250 Pièces Épiques";
+                if (game.inAppPurchaseCtrl.inAppPuchaseList[(int)InAppPurchaseKind.UpdateBundle1].IsPurchased())
+                    effect = "You will get some of following randomly every day!\n- 25%/50%/100% of Nitro Cap (allows exceeding cap)\n- 1/2/4 hours EXP Blessing\n- 5/15/50 Portal Orbs\n- <sprite=\"epiccoin\" index=0> 100/250 Epic Coin";//NEW21 
+                else
+                    effect = "You will get some of following randomly every day!\n- 0%/25%/50%/100% of Nitro Cap (allows exceeding cap)\n- 0/1/2/4 hours EXP Blessing\n- 0/5/15/50 Portal Orbs\n- <sprite=\"epiccoin\" index=0> 50/100/250 Epic Coin";//NEW21 Removed " (only for the current hero)"
+                break;
+                //effect = "Vous recevrez quelques récompenses ci-dessous de façon aléatoire chaque jour !\n- 0%/25%/50%/100% de la Limite de Nitro (peut dépasser la limite)\n- 0/1/2/4 heures de bénédiction d'EXP (seulement pour le héros courant)\n- 0/1/2/5 Orbes de Portail\n- <sprite=\"epiccoin\" index=0> 50/100/250 Pièces Épiques";
                 break;
             case EpicStoreKind.SmartUseOfProficiencyScrolls:
                 name = "Utilisation Intelligente de Parchemin de Maîtrise";
@@ -9443,6 +9450,10 @@ public class Localized_French : LOCALIZATION
             case EpicStoreKind.StackableScrolls:
                 name = "Parchemins Empilables et Utilisation de Parchemin par Pile";
                 effect = "Permet d'empiler les Parchemins dans l'Inventaire de Parchemin. Maintenez Maj en cliquant déposant pour empiler/dépiler les Parchemins. Les Parchemins d'Enchantement ne sont empilables que s'ils ont le même effet et niveau. Mainteir Maj en appliquant des PArchemins en utlisera autant que possible (et disponible dans la pile courante).";
+                break;
+            case EpicStoreKind.EasyAccessBestiary://NEW21
+                name = "Easy Access [Bestiary]";
+                effect = "Unlocks buttons in the Bestiary tab that allow you to summon / unsummon pets with background heroes.";
                 break;
         }
         return (name, effect);
