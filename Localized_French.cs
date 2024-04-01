@@ -7198,8 +7198,8 @@ public class Localized_French : LOCALIZATION
                 return "Esquive Réussie";
             case ToggleKind.DisableNotificationTown:
                 return "Désactiver les notifications pour la Ville";
-            case ToggleKind.DisableSwitchHeroScreen://NEW21
-                return "Disable loading screen when switching Heroes";
+            case ToggleKind.DisableSwitchHeroScreen:
+                return "Désactiver l'écran de chargement lors du changement d'Héros actif";
         }
         return base.Toggle(kind);
     }
@@ -9337,11 +9337,9 @@ public class Localized_French : LOCALIZATION
             case EpicStoreKind.RegularDailyChest:
                 name = "Coffre Journalier";
                 if (game.inAppPurchaseCtrl.inAppPuchaseList[(int)InAppPurchaseKind.UpdateBundle1].IsPurchased())
-                    effect = "You will get some of following randomly every day!\n- 25%/50%/100% of Nitro Cap (allows exceeding cap)\n- 1/2/4 hours EXP Blessing\n- 5/15/50 Portal Orbs\n- <sprite=\"epiccoin\" index=0> 100/250 Epic Coin";//NEW21 
+                    effect = "Vous recevrez quelques récompenses ci-dessous de façon aléatoire chaque jour !\n- 25%/50%/100% de la Limite de Nitro (peut dépasser la limite)\n- 1/2/4 heures de bénédiction d'EXP\n- 1/2/5 Orbes de Portail\n- <sprite=\"epiccoin\" index=0> 100/250 Pièces Épiques";
                 else
-                    effect = "You will get some of following randomly every day!\n- 0%/25%/50%/100% of Nitro Cap (allows exceeding cap)\n- 0/1/2/4 hours EXP Blessing\n- 0/5/15/50 Portal Orbs\n- <sprite=\"epiccoin\" index=0> 50/100/250 Epic Coin";//NEW21 Removed " (only for the current hero)"
-                break;
-                //effect = "Vous recevrez quelques récompenses ci-dessous de façon aléatoire chaque jour !\n- 0%/25%/50%/100% de la Limite de Nitro (peut dépasser la limite)\n- 0/1/2/4 heures de bénédiction d'EXP (seulement pour le héros courant)\n- 0/1/2/5 Orbes de Portail\n- <sprite=\"epiccoin\" index=0> 50/100/250 Pièces Épiques";
+                    effect = "Vous recevrez quelques récompenses ci-dessous de façon aléatoire chaque jour !\n- 0%/25%/50%/100% de la Limite de Nitro (peut dépasser la limite)\n- 0/1/2/4 heures de bénédiction d'EXP\n- 0/1/2/5 Orbes de Portail\n- <sprite=\"epiccoin\" index=0> 50/100/250 Pièces Épiques";
                 break;
             case EpicStoreKind.SmartUseOfProficiencyScrolls:
                 name = "Utilisation Intelligente de Parchemin de Maîtrise";
@@ -9441,7 +9439,7 @@ public class Localized_French : LOCALIZATION
                 break;
             case EpicStoreKind.SDModifierLoadout:
                 name = "Collection de Modificateur de SD";
-                effect = "ébloque des boutons dans la fenêtre de Modificateurs qui permet d'avoir différentes collections de modificateurs - Tout achat futur augmentera le nombre d'emplacements de collection par le nombre acheté. Effectuez un clic droit sur le bouton de collection pour la renommer.";
+                effect = "Débloque des boutons dans la fenêtre de Modificateurs qui permet d'avoir différentes collections de modificateurs - Tout achat futur augmentera le nombre d'emplacements de collection par le nombre acheté. Effectuez un clic droit sur le bouton de collection pour la renommer.";
                 break;
             case EpicStoreKind.SDPowerupFilterSlot:
                 name = "Emplacement de Filtre de Pouvoir de SD + 1";
@@ -9451,9 +9449,9 @@ public class Localized_French : LOCALIZATION
                 name = "Parchemins Empilables et Utilisation de Parchemin par Pile";
                 effect = "Permet d'empiler les Parchemins dans l'Inventaire de Parchemin. Maintenez Maj en cliquant déposant pour empiler/dépiler les Parchemins. Les Parchemins d'Enchantement ne sont empilables que s'ils ont le même effet et niveau. Mainteir Maj en appliquant des PArchemins en utlisera autant que possible (et disponible dans la pile courante).";
                 break;
-            case EpicStoreKind.EasyAccessBestiary://NEW21
-                name = "Easy Access [Bestiary]";
-                effect = "Unlocks buttons in the Bestiary tab that allow you to summon / unsummon pets with background heroes.";
+            case EpicStoreKind.EasyAccessBestiary:
+                name = "Accès Facile [Bestiaire]";
+                effect = "Débloque des boutons dans l'onglet Bestiaire qui permet l'invocation / la désinvocation de familiers pour les héros en arrière-plan.";
                 break;
         }
         return (name, effect);
