@@ -33,7 +33,7 @@
 		"NEW_ACHIEVEMENT_1_14_DESC"	"Eradique 10 000 invasions"
 		"NEW_ACHIEVEMENT_1_15_NAME"	"Maître Alchimiste"
 		"NEW_ACHIEVEMENT_1_15_DESC"	"Atteint un Niveau de Potion Total de 1250"
-		"NEW_ACHIEVEMENT_1_16_NAME"	"Grand Maître AlchimisteAlchemist Grandmaster"
+		"NEW_ACHIEVEMENT_1_16_NAME"	"Grand Maître Alchimiste"
 		"NEW_ACHIEVEMENT_1_16_DESC"	"Atteint un Niveau de Potion Total de 3000"
 		"NEW_ACHIEVEMENT_1_17_NAME"	"Maître de Capacité de Classe"
 		"NEW_ACHIEVEMENT_1_17_DESC"	"Débloque 8 Emplacements de Capacité de Classe sur un héros"
