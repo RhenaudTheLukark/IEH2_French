@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UsefulMethod;
@@ -1020,6 +1020,8 @@ public class Localized_French : LOCALIZATION
                 return "Super Abilité de Guilde";
             case MultiplierKind.SPD:
                 return "VIT";
+            case MultiplierKind.SkillMilestone:
+                return "Palier de Capacité";
         }
         return base.StatsBreakdown(kind);
     }
@@ -1091,6 +1093,8 @@ public class Localized_French : LOCALIZATION
                 tempStrBaseStats = optStr + "<sprite=\"stats\" index=6>";
                 if (!isShort) tempStrBaseStats += " CEL";
                 break;
+            default:
+                return base.BasicStats(kind, isShort);
         }
         return tempStrBaseStats;
     }
@@ -1174,6 +1178,8 @@ public class Localized_French : LOCALIZATION
                 return "Résistance aux Débuffs de Familier";
             case Stats.ArtifactProficiencyGain:
                 return "Gain de Maîtrise de Relique";
+            default:
+                return base.Stat(stats, isShort);
         }
         return tempStrStats;
     }
@@ -1225,7 +1231,7 @@ public class Localized_French : LOCALIZATION
             case AbilityKind.Luck:
                 return "Super CHA";
         }
-        return Basic(BasicWord.Super) + " " + kind.ToString();
+        return base.SuperAbility(kind);
     }
     public override string AbilityDescription(AbilityKind kind)
     {
@@ -1259,8 +1265,7 @@ public class Localized_French : LOCALIZATION
             case AbilityKind.Luck:
                 return "La Super Chance a un effet sur la Chance de Coup Critique et la Chance d'Apparition d'Équipement Multiplicatifs et Absolus.";
         }
-        return kind.ToString();
-
+        return base.SuperAbilityDescription(kind);
     }
     public override string AbilityWord(AbilityWord kind)
     {
@@ -1516,6 +1521,8 @@ public class Localized_French : LOCALIZATION
                 if (isSub) tempString = optStr + "Multiplie les Gains de Renommée par " + percent(1 + effectValue);
                 else tempString = optStr + "Multiplie le Multiplicateur de Dégâts de SD par " + percent(1 + effectValue);
                 break;
+            default:
+                return base.TitleEffect(kind, effectValue, isSub);
         }
         return tempString;
     }
@@ -1815,7 +1822,7 @@ public class Localized_French : LOCALIZATION
             case PetActiveEffectKind.DisassembleTalismanCommon:
                 return "Permet la sélection de talismans à auto-désassembler.";
         }
-        return "";
+        return base.PetActiveEffectImprovement(kind);
     }
     //Area
     public override string AreaName(AreaKind kind)
@@ -1846,8 +1853,6 @@ public class Localized_French : LOCALIZATION
         return base.AreaName(kind);
     }
 
-    //未
-    //AreaPrestige//未
     public override (string name, string currentEffect, string nextEffect) AreaPrestigeUpgrade(AreaPrestigeUpgrade upgrade)
     {
         string tempName = upgrade.kind.ToString();
@@ -1907,10 +1912,11 @@ public class Localized_French : LOCALIZATION
                 tempNextEffect = "Coût en Orbe Portail pour entrer ce donjon - " + tDigit(upgrade.nextEffectValue)
                     + "\n( Ne peut pas être en dessous de 1 Orbe Portail )";
                 break;
+            default:
+                return base.AreaPrestigeUpgrade(upgrade);
         }
         return (tempName, tempEffect, tempNextEffect);
     }
-    //Equipment//未
     public override string EquipmentName(EquipmentKind kind)
     {
         switch (kind)
@@ -3617,10 +3623,7 @@ public class Localized_French : LOCALIZATION
                 if (perLevelValue > 0) tempString += " ( + " + percent(perLevelValue, 4) + " / Nv )";
                 break;
             default:
-                if (isOnlyEffectValue) return tDigit(value);
-                if (value < 0) tempString = kind.ToString() + " <color=red>" + tDigit(value) + "</color>";
-                else tempString = kind.ToString() + " + " + tDigit(value);
-                break;
+                return base.EquipmentEffect(kind, value, isLevelMaxEffect, perLevelValue, isOnlyEffectValue);
         }
         return tempString;
     }
@@ -3717,6 +3720,8 @@ public class Localized_French : LOCALIZATION
                 name = "Fortune d'Équipement 3";
                 effect = "Chance additionnelle d'avoir un 3ème enchantement";
                 break;
+            default:
+                return base.DictionaryUpgarde(kind);
         }
         return (name, effect);
     }
@@ -4052,6 +4057,8 @@ public class Localized_French : LOCALIZATION
             case CatalystKind.Void:
                 tempName = "Catalyseur du Vide";
                 break;
+            default:
+                return base.Catalyst(catalyst);
         }
         tempName += "<size=18>\n\n<color=green>Nv " + tDigit(catalyst.level.value) + "</color> / " + tDigit(catalyst.level.maxValue());
         if (catalyst.level.value > 0 && !catalyst.isEquipped) tempName += "\n<color=yellow>Cliquez sur cet icône pour afficher le Convertisseur d'Essence !</color>";
@@ -4808,7 +4815,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindWarrior.KnockingShot:
                 return "Délivre une attaque à dégâts modérés qui pousse grandement les ennemis qui l'ont subi.";
         }
-        return kind.ToString();
+        return base.SkillDescriptionWarrior(kind);
     }
     public override string SkillDescriptionWizard(SkillKindWizard kind)
     {
@@ -4835,7 +4842,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindWizard.LightningThunder:
                 return "Appelle un tonnerre puissant qui applique des dégâts d'électricité à tous les ennemis à sa portée.";
         }
-        return kind.ToString();
+        return base.SkillDescriptionWizard(kind);
     }
     public override string SkillDescriptionAngel(SkillKindAngel kind)
     {
@@ -4862,7 +4869,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindAngel.HolyArch:
                 return "Entre en communication avec un pouvoir divin pour augmenter l'apprentissage des capacités du héros, sauf celle-ci.";
         }
-        return kind.ToString();
+        return base.SkillDescriptionAngel(kind);
     }
     public override string SkillDescriptionThief(SkillKindThief kind)
     {
@@ -4889,7 +4896,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindThief.Assassination:
                 return "Utilise votre habileté pour délivrer un coup mortel des ténèbres, qui a une chance d'instantanément éliminer un ennemi ayant en dessous de 50% de ses PV.";
         }
-        return kind.ToString();
+        return base.SkillDescriptionThief(kind);
     }
     public override string SkillDescriptionArcher(SkillKindArcher kind)
     {
@@ -4916,7 +4923,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindArcher.Kiting:
                 return "Rase les bords du champ de bataille afin de se déplacer en dehors de la portée physique des ennemis tout en ayant un bonus de Vitesse en mode Déplacement Auto.";
         }
-        return kind.ToString();
+        return base.SkillDescriptionArcher(kind);
     }
     public override string SkillDescriptionTamer(SkillKindTamer kind)
     {
@@ -4943,7 +4950,7 @@ public class Localized_French : LOCALIZATION
             case SkillKindTamer.TuneOfTotalTaming:
                 return "Joue une mélodie magique qui ensorcelle les monstres cibles, donnant la possibiité de les capturer et de les transformer en familiers loyaux.";
         }
-        return kind.ToString();
+        return base.SkillDescriptionTamer(kind);
     }
 
     public override string SkillEffect(EffectKind effect)
@@ -5049,59 +5056,7 @@ public class Localized_French : LOCALIZATION
         }
         return base.DebuffName(kind);
     }
-    ////Stance未
-    //public override (string name, string effect) Stance(Stance stance)
-    //{
-    //    string tempName = "Normal";
-    //    string tempEffect = "";
-    //    switch (stance.heroKind)
-    //    {
-    //        case HeroKind.Warrior:
-    //            switch ((WarriorStanceKind)stance.id)
-    //            {
-    //                case WarriorStanceKind.Attack:
-    //                    tempName = "Attaque";
-    //                    tempEffect = "Dégâts de l'Attaque à l'Épée + " + percent(stance.effectValueBuff);
-    //                    break;
-    //                case WarriorStanceKind.Reach:
-    //                    tempName = "Portée";
-    //                    tempEffect = "Portée de l'Attaque à l'Épée : " + meter(stance.effectValueBuff);
-    //                    break;
-    //                case WarriorStanceKind.Knock:
-    //                    tempName = "Poussée";
-    //                    tempEffect = "Ajoute un effet de Poussée à l'Attaque à l'Épée";
-    //                    break;
-    //            }
-    //            break;
-    //        case HeroKind.Wizard:
-    //            switch ((WizardStanceKind)stance.id)
-    //            {
-    //                case WizardStanceKind.Fire:
-    //                    tempName = "Feu";
-    //                    tempEffect = "Change le type de l'Attaque au Bâton en Feu";
-    //                    break;
-    //                case WizardStanceKind.Ice:
-    //                    tempName = "Glace";
-    //                    tempEffect = "Change le type de l'Attaque au Bâton en Glace";
-    //                    break;
-    //                case WizardStanceKind.Thunder:
-    //                    tempName = "Électricité";
-    //                    tempEffect = "Change le type de l'Attaque au Bâton en Électricité";
-    //                    break;
-    //            }
-    //            break;
-    //        case HeroKind.Angel:
-    //            break;
-    //        case HeroKind.Thief:
-    //            break;
-    //        case HeroKind.Archer:
-    //            break;
-    //        case HeroKind.Tamer:
-    //            break;
-    //    }
-    //    return (tempName, tempEffect);
-    //}
-    //GuildAbility
+
     public override string GuildAbilityName(GuildAbilityKind kind)
     {
         switch (kind)
@@ -5152,7 +5107,6 @@ public class Localized_French : LOCALIZATION
     //GuildAbilityEffect
     public override string GuildAbilityEffect(GuildAbilityKind kind, double effectValue)
     {
-        string tempString = kind.ToString() + " + " + tDigit(effectValue);
         switch (kind)
         {
             case GuildAbilityKind.StoneGain:
@@ -5196,7 +5150,7 @@ public class Localized_French : LOCALIZATION
             case GuildAbilityKind.ExpGain:
                 return "Multiplication des Gains d'EXP par " + percent(1 + effectValue);
         }
-        return tempString;
+        return base.GuildAbilityEffect(kind, effectValue);
     }
     public override string DailyQuestRarityName(DailyQuestRarity rarity)
     {
@@ -5213,7 +5167,7 @@ public class Localized_French : LOCALIZATION
             case DailyQuestRarity.Epic:
                 return "Épique";
         }
-        return DailyQuestRarityName(rarity);
+        return base.DailyQuestRarityName(rarity);
     }
     //Quest
     public override (string name, string client, string description, string condition, string reward, string unlock) Quest(QUEST quest)
@@ -5251,7 +5205,7 @@ public class Localized_French : LOCALIZATION
                     case QuestKindGlobal.ClearTitleQuest:
                         name = "Tutoriel 3 : Quête de Titre";
                         client = "Hitan";
-                        description = "Bien joué ! Les <color=orange>Quêtes de Titre</color> sont des quêtes spéciales qui donnent accès à des Titres une fois complétées. Ces titres ont des effets uniques. Essaye de compléter la première Quête de Titre ! Garde en tête que tu ne peux accepter que 3 quêtes au maximum en comptant les Quêtes Générales et les Quêtes de Titre. Tu pourras augmenter cette limite plus loin dans le jeu. Les Quêtes Globales et Journalières ne sont pas affectées par cette limite.\n<color=yellow>- Pour plus d'informations sur les quêtes, clique sur le bouton d'Aide en haut à gauche > [Quête].</color>";
+                        description = "Bien joué ! Les <color=orange>Quêtes de Titre</color> sont des quêtes spéciales qui donnent accès à des Titres une fois complétées. Ces titres ont des effets uniques. Essaye de compléter la première Quête de Titre ! Garde en tête que tu ne peux accepter que 5 quêtes au maximum en comptant les Quêtes Générales et les Quêtes de Titre. Tu pourras augmenter cette limite plus loin dans le jeu. Les Quêtes Globales et Journalières ne sont pas affectées par cette limite.\n<color=yellow>- Pour plus d'informations sur les quêtes, clique sur le bouton d'Aide en haut à gauche > [Quête].</color>";
                         condition = "Compléter la première Quête de Titre";
                         reward = "Débloque l'onglet [ Amélioration ]";
                         break;
@@ -5898,6 +5852,8 @@ public class Localized_French : LOCALIZATION
                         condition = "Complète le Niveau 1 de n'importe quel [Rituel de Gemme]";
                         reward = "Multiplicateur de Dégâts de Boss de Défi de SD + " + percent(0.50d);
                         break;
+                    default:
+                        return base.Quest(quest);
                 }
                 break;
             case QuestKind.Daily:
@@ -5948,7 +5904,8 @@ public class Localized_French : LOCALIZATION
                         client = "La Conférence des Cartographeurs";
                         description = "La Conférence des Cartographeurs aimerait envoyer quelques cartographeurs dans la région " + AreaName(quest.completeTargetArea.kind) + " pour collecter plus de données et inspecter tout changement dans le paysage ou dans l'écosystème de créatures s'y trouvant. Veuillez les escorter pendant leur travail. Vu que cette quête est " + DailyQuestRarityName(quest.dailyQuestRarity) + ", vous devez donc compléter la zone " + quest.completeTargetArea.Name(true, false) + " au moins " + tDigit(quest.areaRequredCompletedNum()) + " fois avant que les Cartographeurs aient terminé leur tâche.";
                         break;
-
+                    default:
+                        return base.Quest(quest);
                 }
                 break;
             case QuestKind.Title:
@@ -6714,6 +6671,8 @@ public class Localized_French : LOCALIZATION
                         client = "Ivan, Aventurier Légendaire";
                         description = "Après être devenu l'aventurier ayant le rang le plus élevé, j'ai continué à m'attaquer à des quêtes et j'ai éventuellement été enrôlé dans une section d'élite directement dirigée par la guilde ! Il n'y a pas plus honorable. Même maintenant, je peux pas égaler le nombre de quêtes que tu as complété. J'ai commencé à prendre des quêtes pour toi, et je crois que c'est en partie grâce à toi que j'ai intégré le groupe d'élite. Merci !";
                         break;
+                    default:
+                        return base.Quest(quest);
                 }
                 break;
             case QuestKind.General:
@@ -6957,6 +6916,8 @@ public class Localized_French : LOCALIZATION
                         if (!quest.isAccepted) condition = "Capture " + tDigit(5000) + " de n'importe quel type de Tigre de Feu";
                         else condition = tDigit(Math.Max(0, game.monsterCtrl.CapturedNum(MonsterSpecies.FlameTiger) - quest.initCapturedNum)) + " / " + tDigit(5000) + " Tigres de Feu capturés";
                         break;
+                    default:
+                        return base.Quest(quest);
                 }
                 break;
         }
@@ -7477,6 +7438,8 @@ public class Localized_French : LOCALIZATION
                 tempEffect = "Effet de [Maître d'Équipement] + " + percent(upgrade.effectValue, 0);
                 tempNextEffect = "Effet de [Maître d'Équipement] + " + percent(upgrade.nextEffectValue, 0);
                 break;
+            default:
+                return base.Rebirth(upgrade);
         }
         if (upgrade.level.IsMaxed()) tempNextEffect = Basic(BasicWord.Level) + " Max";
         else tempNextEffect += " ( <color=green>Nv " + tDigit(upgrade.transaction.ToLevel()) + "</color> )";
@@ -7530,6 +7493,8 @@ public class Localized_French : LOCALIZATION
                 tempString += "\nNiveau de Capacité Initial : <color=green>" + tDigit(rebirth.additionalAbilityPoint.Value()) + "</color>";
                 tempString += "\nEffet Bonus de Réincarnation de Classe 2 : <color=green>+ " + percent(rebirth.bonusEffectFactorOneDownTier.Value()) + "</color>";
                 break;
+            default://NewF
+                return base.RebirthInfo(rebirth);
         }
         return tempString;
     }
@@ -7562,7 +7527,7 @@ public class Localized_French : LOCALIZATION
             case global::ChallengeType.UltimateTrial:
                 return "Épreuve Ultime";
         }
-        return ChallengeType(type);
+        return base.ChallengeType(type);
     }
     //ChallengeHandicap
     public override string HandicapString(ChallengeHandicapKind kind)
@@ -7702,36 +7667,36 @@ public class Localized_French : LOCALIZATION
     {
         switch (id)
         {
-            case 0: return "Effectuer la Réincarnation de Classe 1 de n'importe quel héros en 3 heures ou moins";
+            case 0: return "Effectuer la Réincarnation de Classe 1 de n'importe quel héros en 2 heures ou moins";
             case 1: return "Effectuer la Réincarnation de Classe 1 de n'importe quel héros en 1 heure ou moins";
             case 2: return "Effectuer la Réincarnation de Classe 1 de n'importe quel héros en 20 minutes ou moins";
             case 3: return "Effectuer la Réincarnation de Classe 1 de n'importe quel héros en 5 minutes ou moins";
-            case 4: return "Effectuer la Réincarnation de Classe 2 de n'importe quel héros en 3 heures ou moins";
+            case 4: return "Effectuer la Réincarnation de Classe 2 de n'importe quel héros en 2 heures ou moins";
             case 5: return "Effectuer la Réincarnation de Classe 2 de n'importe quel héros en une heure ou moins";
             case 6: return "Effectuer la Réincarnation de Classe 2 de n'importe quel héros en 20 minutes ou moins";
             case 7: return "Effectuer la Réincarnation de Classe 2 de n'importe quel héros en 5 minutes ou moins";
-            case 8: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en 8 heures ou moins";
-            case 9: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en 3 heures ou moins";
+            case 8: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en 6 heures ou moins";
+            case 9: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en 2 heures ou moins";
             case 10: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en une heure ou moins";
             case 11: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en 20 minutes ou moins";
             case 12: return "Effectuer la Réincarnation de Classe 3 de n'importe quel héros en 5 minutes ou moins";
-            case 13: return "Vaincre le Raid de Boss [Florzporbe Nv 100] en 8 heures ou moins";
-            case 14: return "Vaincre le Raid de Boss [Florzporbe Nv 100] en 3 heures ou moins";
+            case 13: return "Vaincre le Raid de Boss [Florzporbe Nv 100] en 6 heures ou moins";
+            case 14: return "Vaincre le Raid de Boss [Florzporbe Nv 100] en 2 heures ou moins";
             case 15: return "Vaincre le Raid de Boss [Florzporbe Nv 100] en une heure ou moins";
             case 16: return "Vaincre le Raid de Boss [Florzporbe Nv 100] en 20 minutes ou moins";
             case 17: return "Vaincre le Raid de Boss [Florzporbe Nv 100] en 5 minutes ou moins";
-            case 18: return "Vaincre le Raid de Boss [Aranetta Nv 150] en 8 heures ou moins";
-            case 19: return "Vaincre le Raid de Boss [Aranetta Nv 150] en 3 heures ou moins";
+            case 18: return "Vaincre le Raid de Boss [Aranetta Nv 150] en 6 heures ou moins";
+            case 19: return "Vaincre le Raid de Boss [Aranetta Nv 150] en 2 heures ou moins";
             case 20: return "Vaincre le Raid de Boss [Aranetta Nv 150] en une heure ou moins";
             case 21: return "Vaincre le Raid de Boss [Aranetta Nv 150] en 20 minutes ou moins";
             case 22: return "Vaincre le Raid de Boss [Aranetta Nv 150] en 5 minutes ou moins";
-            case 23: return "Vaincre le Raid de Boss [Gardien Kor Nv 200] en 8 heures ou moins";
-            case 24: return "Vaincre le Raid de Boss [Gardien Kor Nv 200] en 3 heures ou moins";
+            case 23: return "Vaincre le Raid de Boss [Gardien Kor Nv 200] en 6 heures ou moins";
+            case 24: return "Vaincre le Raid de Boss [Gardien Kor Nv 200] en 2 heures ou moins";
             case 25: return "Vaincre le Raid de Boss [Gardien Kor Nv 200] en une heure ou moins";
             case 26: return "Vaincre le Raid de Boss [Gardien Kor Nv 200] en 20 minutes ou moins";
             case 27: return "Vaincre le Raid de Boss [Gardien Kor Nv 200] en 5 minutes ou moins";
-            case 28: return "Vaincre le Raid de Boss [" + str1 + "] en 8 heures ou moins";
-            case 29: return "Vaincre le Raid de Boss [" + str1 + "] en 3 heures ou moins";
+            case 28: return "Vaincre le Raid de Boss [" + str1 + "] en 6 heures ou moins";
+            case 29: return "Vaincre le Raid de Boss [" + str1 + "] en 2 heures ou moins";
             case 30: return "Vaincre le Raid de Boss [" + str1 + "] en une heure ou moins";
             case 31: return "Vaincre le Raid de Boss [" + str1 + "] en 20 minutes ou moins";
             case 32: return "Vaincre le Raid de Boss [" + str1 + "] en 5 minutes ou moins";
@@ -7741,42 +7706,42 @@ public class Localized_French : LOCALIZATION
             case 36: return "Atteindre le Niveau de Guilde 20 en une heure ou moins";
             case 37: return "Atteindre le Niveau de Guilde 20 en 20 minutes ou moins";
             case 38: return "Atteindre le Niveau de Guilde 20 en 5 minutes ou moins";
-            case 39: return "Atteindre le Niveau de Guilde 25 en 3 heures ou moins";
+            case 39: return "Atteindre le Niveau de Guilde 25 en 2 heures ou moins";
             case 40: return "Atteindre le Niveau de Guilde 25 en une heure ou moins";
             case 41: return "Atteindre le Niveau de Guilde 25 en 20 minutes ou moins";
             case 42: return "Atteindre le Niveau de Guilde 25 en 5 minutes ou moins";
-            case 43: return "Atteindre le Niveau de Guilde 30 en 8 heures ou moins";
-            case 44: return "Atteindre le Niveau de Guilde 30 en 3 heures ou moins";
+            case 43: return "Atteindre le Niveau de Guilde 30 en 6 heures ou moins";
+            case 44: return "Atteindre le Niveau de Guilde 30 en 2 heures ou moins";
             case 45: return "Atteindre le Niveau de Guilde 30 en une heure ou moins";
             case 46: return "Atteindre le Niveau de Guilde 30 en 20 minutes ou moins";
             case 47: return "Atteindre le Niveau de Guilde 30 en 5 minutes ou moins";
             case 48: return "Atteindre le Niveau de Guilde 35 en 24 heures ou moins";
-            case 49: return "Atteindre le Niveau de Guilde 35 en 8 heures ou moins";
-            case 50: return "Atteindre le Niveau de Guilde 35 en 3 heures ou moins";
+            case 49: return "Atteindre le Niveau de Guilde 35 en 6 heures ou moins";
+            case 50: return "Atteindre le Niveau de Guilde 35 en 2 heures ou moins";
             case 51: return "Atteindre le Niveau de Guilde 35 en une heure ou moins";
             case 52: return "Atteindre le Niveau de Guilde 35 en 20 minutes ou moins";
             case 53: return "Atteindre le Niveau de Guilde 35 en 5 minutes ou moins";
             case 54: return "Atteindre le Niveau de Guilde 40 en 24 heures ou moins";
-            case 55: return "Atteindre le Niveau de Guilde 40 en 8 heures ou moins";
-            case 56: return "Atteindre le Niveau de Guilde 40 en 3 heures ou moins";
+            case 55: return "Atteindre le Niveau de Guilde 40 en 6 heures ou moins";
+            case 56: return "Atteindre le Niveau de Guilde 40 en 2 heures ou moins";
             case 57: return "Atteindre le Niveau de Guilde 40 en une heure ou moins";
             case 58: return "Atteindre le Niveau de Guilde 40 en 20 minutes ou moins";
             case 59: return "Atteindre le Niveau de Guilde 40 en 5 minutes ou moins";
             case 60: return "Atteindre le Niveau de Guilde 45 en 24 heures ou moins";
-            case 61: return "Atteindre le Niveau de Guilde 45 en 8 heures ou moins";
-            case 62: return "Atteindre le Niveau de Guilde 45 en 3 heures ou moins";
+            case 61: return "Atteindre le Niveau de Guilde 45 en 6 heures ou moins";
+            case 62: return "Atteindre le Niveau de Guilde 45 en 2 heures ou moins";
             case 63: return "Atteindre le Niveau de Guilde 45 en une heure ou moins";
             case 64: return "Atteindre le Niveau de Guilde 45 en 20 minutes ou moins";
             case 65: return "Atteindre le Niveau de Guilde 45 en 5 minutes ou moins";
             case 66: return "Atteindre le Niveau de Guilde 50 en 24 heures ou moins";
-            case 67: return "Atteindre le Niveau de Guilde 50 en 8 heures ou moins";
-            case 68: return "Atteindre le Niveau de Guilde 50 en 3 heures ou moins";
+            case 67: return "Atteindre le Niveau de Guilde 50 en 6 heures ou moins";
+            case 68: return "Atteindre le Niveau de Guilde 50 en 2 heures ou moins";
             case 69: return "Atteindre le Niveau de Guilde 50 en une heure ou moins";
             case 70: return "Atteindre le Niveau de Guilde 50 en 20 minutes ou moins";
             case 71: return "Atteindre le Niveau de Guilde 50 en 5 minutes ou moins";
             case 72: return "Atteindre le Niveau de Guilde " + str1 + " en 24 heures ou moins";
-            case 73: return "Atteindre le Niveau de Guilde " + str1 + " en 8 heures ou moins";
-            case 74: return "Atteindre le Niveau de Guilde " + str1 + " en 3 heures ou moins";
+            case 73: return "Atteindre le Niveau de Guilde " + str1 + " en 6 heures ou moins";
+            case 74: return "Atteindre le Niveau de Guilde " + str1 + " en 2 heures ou moins";
             case 75: return "Atteindre le Niveau de Guilde " + str1 + " en une heure ou moins";
             case 76: return "Atteindre le Niveau de Guilde " + str1 + " en 20 minutes ou moins";
             case 77: return "Atteindre le Niveau de Guilde " + str1 + " en 5 minutes ou moins";
@@ -7939,7 +7904,7 @@ public class Localized_French : LOCALIZATION
             case 24: return "Essaye de capturer tous les monstres de la même couleur que la cible dans une zone d'effet";
             case 25: return "La priorité est donnée à la capture de monstres dont un piège de la même couleur est équipé";
         }
-        return TamerSkillsString(id);
+        return base.TamerSkillsString(id);
     }
 
     public override string BattleControllerUIString(int id)
@@ -8197,7 +8162,7 @@ public class Localized_French : LOCALIZATION
             case 4: return " pour rentrer dans ce donjon";
             case 5: return " Mat. Ville";
         }
-        return "";
+        return base.AreaTableUIString(id);
     }
 
     public override string AscensionMenuUIString(int id, WorldAscension wa = null)
@@ -8251,7 +8216,7 @@ public class Localized_French : LOCALIZATION
             case 44: return "\n- L'Étage Maximal de Super Donjon Atteint (Les Rubis/Topazes ne peuvent pas être récupérés à nouveau) et le # d'Achats du Magasin de Rubis";
             case 45: return "\n- Les Monnaies de Super Donjon, les Super Donjon currencies, les Améliorations et Statistiques du Magasin de Rubis, les Rituels de Gemme et les Points de Modificateur";
         }
-        return "";
+        return base.AscensionMenuUIString(id, wa);
     }
 
     public override string BattleStatusUIString(int id)
@@ -8265,7 +8230,7 @@ public class Localized_French : LOCALIZATION
             case 4: return " capacités de héros peuvent être mises ici.";
             case 5: return "Cliquez sur l'icône d'une capacité dans l'onglet de Capacité pour l'équiper.";
         }
-        return "";
+        return base.BattleStatusUIString(id);
     }
 
     public override string BestiaryMenuUIString(int id, string str = "")
@@ -8299,7 +8264,7 @@ public class Localized_French : LOCALIZATION
             case 24: return "Rang de Familier Total";
             case 25: return "Palier de Rang de Familier Total";
         }
-        return "";
+        return base.BestiaryMenuUIString(id, str);
     }
 
 
@@ -8329,7 +8294,7 @@ public class Localized_French : LOCALIZATION
             case 19: return "Emplacement d'Inventaire d'Enchantement + " + slotAmt;
             case 20: return "Emplacement d'Inventaire d'Utilitaire + " + slotAmt;
         }
-        return "";
+        return base.EquipmentSlotsString(id, slotAmt);
     }
 
     public override string ClassSkillSlotString(int id, int slotAmt = 1)
@@ -8344,7 +8309,7 @@ public class Localized_French : LOCALIZATION
             case 5: return "Emplacement de Capacité de Classe de la Dompteuse + " + slotAmt;
             case 6: return "Emplacement de Capacité Global + " + slotAmt;
         }
-        return "";
+        return base.ClassSkillSlotString(id, slotAmt);
     }
 
     public override string ChallengeClearConditionsDefeatString(string text)
@@ -8366,7 +8331,7 @@ public class Localized_French : LOCALIZATION
             case 7: return "Entrées Totales : ";
             case 8: return "Échec";
         }
-        return "";
+        return base.ChallengeString(id);
     }
 
     public override string BuildingString(int id, string text = "")
@@ -8517,8 +8482,7 @@ public class Localized_French : LOCALIZATION
             case 141: return "Montant des Effets en excès";
             case 142: return "Chance d'Apparition de Matériau Commun";
         }
-
-        return "";
+        return base.BuildingString(id, text);
     }
 
     public override string ChallengeBossDescriptionString(int id)
@@ -8533,25 +8497,8 @@ public class Localized_French : LOCALIZATION
             case 5: return "<size=17>Nari Sune, le Renard aux Neuf Queues, a beaucoup de rumeurs circulant autour d'elle. En tant que farceur connu, Nari Sune peut se transformer en plein de créatures différentes et peut même contrôler tout pouvoir natif que cette créature peut posséder. Généralement isolée et content d'ignorer l'état du monde, Nari Sune a récemment été découverte en train d'interférer avec les affaires politiques de différents royaumes, se transformant en leaders variés pour implanter conflit et discontentement. Les intentions de Nari Sune sont inconnues, mais ses actions ont donné lieu à des guerres, des coups d'état, et à la mort de milliers de personne dans le chaos qu'il s'en suit. Attention à tous ceux à sa recherche, car elle est ancienne est rusée, ce qui lui a permis de survivre depuis si longtemps.</size>";
             case 6: return "<size=17>Octopabo, la Terreur des Profondeurs, tourmente les paquebots de commerce depuis maintenant soixante ans. Peu de choses sont connues à son propos, car il existe peu de survivants, et ceux qui existent ont péri peu après leur échapée à cause du poison mortel se trouvant dans l'encre noire d'Octopabo. Ce que l'on sait est qu'il aveugle complètement ses victimes, même en dehors de l'eau, car son encre reste dans l'air, formant d'épais nuages noirs. Lorsque ces nuages se dispersent enfin, le bâteau ainsi que son équipage ont disparus, comme si entièrement avalés par la bête. Seules les âmes les plus stupides et courageuses essayent de réclamer la prime multidécennale sur cette créature machiavélique.";
             case 7: return "<size=17>Bananoutan, le Bananattaqueur, est une créature mystérieuse. Brandissant des bananes en tant que dagues, cette créature peut en invoquer une infinité, bombardant une zone dans une évisceration totale de bananes. Certains pensent qu'il est l'esprit d'un arbre qui a été maudit par une sorcière pour ne pas avoir poussé de fruit suite à se demande, cependant personne ne connait la réelle origine de ce monstre. Cependant, il est su qu'il agit rarement d'une façon amicale, et il devient immédiatement hostile lorsqu'il est approché. Il est dit que seuls ceux portant le symbole de la Grande Banane peut s'en approcher, mais personne ne sait vraiment ce que c'est ou comment l'acquérir.";
-            case 8: return "";
-            case 9: return "";
-            case 10: return "";
-            case 11: return "";
-            case 12: return "";
-            case 13: return "";
-            case 14: return "";
-            case 15: return "";
-            case 16: return "";
-            case 17: return "";
-            case 18: return "";
-            case 19: return "";
-            case 20: return "";
-            case 21: return "";
-            case 22: return "";
-            case 23: return "";
-
         }
-        return "";
+        return base.ChallengeBossDescriptionString(id);
     }
 
 
@@ -8621,6 +8568,8 @@ public class Localized_French : LOCALIZATION
             case 7: return "Ce Talisman ne peut pas être désassemblé.";
             case 8: return "Effet Passif obtenu après désassemblage";
             case 9: return "Cette relique consomme " + text + " Nitro par sec lorsqu'elle est équipée";
+            case 10: return "Effectuez un doucle clic ou glissez-déposez";
+            case 11: return "Complétez la Quête de Titre [Etude de Monstre 1] pour activer la capture.";
             default: return base.EquipMenuString(id, text);
         }
     }
@@ -8759,6 +8708,9 @@ public class Localized_French : LOCALIZATION
                 break;
 
             default:
+                name = base.SlimeBankUpgradeString(upgrade, isNextValue).name;
+                description = base.SlimeBankUpgradeString(upgrade, isNextValue).description;
+                effect = base.SlimeBankUpgradeString(upgrade, isNextValue).effect;
                 break;
         }
         return (name, description, effect);
@@ -8820,8 +8772,8 @@ public class Localized_French : LOCALIZATION
             case 2: return "Sélectionnez un bonus de déconnexion parmi les suivants :";
             case 3: return "Bonus de Nitro";
             case 4: return "Vous gagnerez <color=green>" + text + " Nitro</color>.";
-            case 5: return "Vous êtes couramment à vote max de Nitro.";
-            case 6: return "1 Nitro est gagné toutes les 2 secondes de déconnexion.";
+            case 5: return "Vous êtes couramment à votre max de Nitro.";
+            case 6: return "1 Nitro est gagné toutes les 1 secondes de déconnexion.";
             case 7: return "Le Temps de Jeu n'augmentera pas.";
             case 8: return "Bonus de Temps de Jeu Passif";
             case 9: return "Vous gagnerez les suivants :";
@@ -8833,6 +8785,10 @@ public class Localized_French : LOCALIZATION
             case 15: return "Progrès du Héros Actif";
             case 16: return "complétée " + text + " fois";
             case 17: return "Rituels de Gemme de Gem";
+            case 18: return "Maîtrise de Capacité";
+            case 19: return "Monstres Vaincus #";
+            case 20: return "Activation de Capacité #";
+
             default: return base.OfflineBounusString(id, text);
         }
     }
@@ -8853,7 +8809,7 @@ public class Localized_French : LOCALIZATION
             case 10: return "Bénédiction de Gain d'EXP (Durée de 15 mins)";
             case 11: return "5 Fragments de Talisman";
             case 12: return "Bénédiction de Gain d'Or (Durée de 15 mins)";
-            case 13: return "1 Orbe Portail";
+            case 13: return "5 Orbe Portail";
             case 14: return "1 ";
             case 15: return "Talisman (Peu Commun) [" + text + "]";
             case 16: return "Talisman (Rare) [" + text + "]";
@@ -9453,6 +9409,12 @@ public class Localized_French : LOCALIZATION
                 name = "Accès Facile [Bestiaire]";
                 effect = "Débloque des boutons dans l'onglet Bestiaire qui permet l'invocation / la désinvocation de familiers pour les héros en arrière-plan.";
                 break;
+            case EpicStoreKind.UtilityMaxStackNum:
+                name = "Empilement Max d'Utilitaires + 5";
+                effect = "Empilement Max des Objets Utilitaires + 5";
+                break;
+            default:
+                return base.EpicStoreCtrlString(item);
         }
         return (name, effect);
     }
@@ -9475,6 +9437,12 @@ public class Localized_French : LOCALIZATION
                 name = "Lot de Mise à Jour 3";
                 description = "Ce lot contient : \n- <sprite=\"EpicCoin\" index=0> 5500 Pièces Épiques\n- Emplacement d'Équipe d'Expédition + 1\n- Emplacement de Recherche de Ville + 1\n- File d'Amélioration + 20";
                 break;
+            case InAppPurchaseKind.FullReleaseSupportBundle:
+                name = "Lot de Support de Sortie d'Accès Anticipé";
+                description = "Ce lot contient : \n- <sprite=\"EpicCoin\" index=0> 5500 Pièces Épiques\n- Multiplication de la Vitesse de Rituel de Gemme par 150%\n- Limite de Nitro + 50% (Multiplie la Limite de Nitro. S'ajoute avec [Expansion de Nitro Max].)\n- File d'Amélioration + 20";
+                break;
+            default:
+                return base.InAppPurchaseString(item);
         }
         return (name, description);
     }
@@ -9973,7 +9941,7 @@ public class Localized_French : LOCALIZATION
                 tempStr += "\n- En appuyant sur le bouton Super dans l'onglet Guilde, ou lorsque vous êtes dans un Super Donjon, vous pouvez voir votre Classe de Guilde courante, et vos Super Abilités de Guilde.";
                 tempStr += "\n- Vous pouvez gagner de la Renommée de Guilde ce qui augmentera votre Classe de Guilde, en augmentant la Classe de Héros dans les Super Donjons. Chaque fois qu'un héros augmente sa classe, la renommée de guilde augmentera aussi.";
                 tempStr += "\n- Les Super Abilités de Guilde peuvent augmenter la limite maximale de certaines de vos Abilités de Guilde normales. Faites en sorte de savoir ce que fait chacune d'elles !!";
-                tempStr += "\n- La Classe de Guilde ne peut pour le moment pas être réinitialisée. Cependant, vous pouvez acheter une Réinitialisation de Super Abilité de Guilde dans le Magasin Epique (onglet Super Dunjon). Vous avez 1 utilisation gratuite de cette achat !";
+                tempStr += "\n- La Classe de Guilde ne peut pour le moment pas être réinitialisée. Cependant, vous pouvez acheter une Réinitialisation de Super Abilité de Guilde dans le Magasin Épique (onglet Super Dunjon). Vous avez 1 utilisation gratuite de cette achat !";
                 break;
             case HelpKind.Town:
                 tempStr += "La Ville a 12 bâtiments différents que vous pouvez monter de rang et de niveau. Beaucoup d'améliorations et de contenu sont débloqués à travers la Ville. ";
@@ -10347,7 +10315,14 @@ public class Localized_French : LOCALIZATION
         tempStr += "Niveau de Guilde Max Atteint : Nv " + tDigit(main.S.maxGuildLevel);
         tempStr += "\n\n";
         tempStr += "<size=20><u>Record de Temps de Niveau de Guilde</u><size=18>";
-        for (int i = 0; i < game.guildCtrl.accomplishGuildLevels.Length; i++)
+        int pageId = HelpControllerUI.GLvPageId;//NewF2
+        if (game.guildCtrl.accomplishGuildLevels[300].accomplishedBestTime <= 0)
+            pageId = 0;
+        else if (pageId == 0) tempStr += " (→)";
+        else tempStr += " (←)";
+        int initLv = pageId == 0 ? 1 : Math.Min(301, game.guildCtrl.accomplishGuildLevels.Length);
+        int endLv = pageId == 0 ? 301 : game.guildCtrl.accomplishGuildLevels.Length;
+        for (int i = initLv; i < endLv; i++)
         {
             if (game.guildCtrl.accomplishGuildLevels[i].accomplishedBestTime > 0)
             {
@@ -10611,6 +10586,9 @@ public class Localized_French : LOCALIZATION
                 passive = optStr + "Gain de Distance Marchée en expédition <color=green>+ " + percent(expedition.EffectValue()) + "</color>  ( + " + percent(expedition.passiveEffectValueIncrementPerLevel) + " / Nv )";
                 reward = text + " Distance Marchée";
                 break;
+            default:
+                return base.ExpeditionGlobalInformationString(expedition, text);
+
         }
 
         return (name, effect, passive, reward);
@@ -10886,6 +10864,9 @@ public class Localized_French : LOCALIZATION
                 description = "Total des Points de Réincarnation Classe 2 gagnés";
                 passive = "Gain de Points de Réincarnation Classe 2 + " + percent(currentValue) + " -> <color=green>+ " + percent(nextValue) + "</color>";
                 break;
+            default:
+                return base.WorldAscensionMilestoneString(milestone, currentValue, nextValue);
+
         }
         return (name, description, passive);
     }
@@ -10945,6 +10926,10 @@ public class Localized_French : LOCALIZATION
             case AscensionUpgradeKind.NitroSpeed:
                 name = "Amélioration de Nitro";
                 effect = "Vitesse de Nitro + " + tDigit(value, 1) + "x";
+                break;
+            default:
+                name = base.WorldAscensionUpgradeString(upgrade, value).name;
+                effect = base.WorldAscensionUpgradeString(upgrade, value).effect;
                 break;
         }
 
@@ -11014,6 +10999,14 @@ public class Localized_French : LOCALIZATION
             case 29: return "Gain d'EXP de Familier de l'Expédition";
             case 30: return "Tout Appliquer";
             case 31: return "<size=20>Boîte Tout Appliquer<size=18>\n- Glissez-déposez un parchemin ou une enclume ici pour l'appliquer à tous les équipements de la Collection courante (limité par le # de Pile courant).\n\n- Types disponibles : Parchemin d'Enchantement, tous les Parchemins Globaux, Parchemin de Maîtrise, et les Enclumes\n- Vous pouvez utiliser la fonctionnalité Maj avec les parchemins ici";
+            case 32: return "Palier de Nombre d'Activation de Capacité [" + text + "]";
+            case 33: return "Gain de Maîtrise de Capacité (Mult)";
+            case 34: return "[Nombre d'Activation Totale] / " + tDigit(1000) + " %";
+            case 35: return "Vous avez obtenu {0} Pièces Épiques!";
+            case 36: return "Vous gagnez {0} Pièces Épiques à chaque fois que vous débloquez un nouveau Conseiller de Guilde.";
+            case 37: return "Débloque de nouveau(x) Parchemin(s) dans le Magasin de Rubis";
+            case 38: return "Les améliorations de Prestige de Zone et le Nombre de Complétions persistent après une AM (Requiert les Accomp d'AM1 #80-150)";
+            case 39: return "Débloque des Enclumes de Forge améliorées dans le Magasin de Rubis";
             default: return base.OtherString(id, text);
         }
     }
@@ -11048,7 +11041,7 @@ public class Localized_French : LOCALIZATION
             case 11: return "Les Familiers peuvent être invoqués et envoyés dans une Expédition en même temps";
             case 12: return "Les Familiers peuvent être invoqués par plusieurs héros à la fois";
         }
-        return "";
+        return base.PetRankMilestoneString(id, text);
     }
 
     public override string SuperDungeonString(int id, string text = "")
@@ -11144,7 +11137,7 @@ public class Localized_French : LOCALIZATION
             case 86: return "Augmente le Multiplicateur de Dégâts de SD par ([Furie d'Esprit de SD] x Log2([MDEF Absolue]))%";
             case 87: return "Filtre de Pouvoir";
             case 88: return "Emplacement de Filtre de Pouvoir";
-            case 89: return "Les pouvoirs barrés N'APPARAITRONT PAS dans les zones sûres. Jusqu'à [# d'Emplacements de Filtre de Pouvoir] pouvoirs peuvent être filtrés.\nSi vous achetez [Filtre de Limite d'Auto-Achat de Pouvoir] dans le Magasin Epique, vous pouvez ajouter une limite d'achat aux pouvoirs barrés qui les feront apparaître dans les zones sûres jusqu'à qu'une limite d'achat soit atteinte, après quoi ils n'apparaîtront plus.\nUne Limite d'Achat de 0 veut dire que le pouvoir n'apparaîtra jamais dans les zones sûres.";
+            case 89: return "Les pouvoirs barrés N'APPARAITRONT PAS dans les zones sûres. Jusqu'à [# d'Emplacements de Filtre de Pouvoir] pouvoirs peuvent être filtrés.\nSi vous achetez [Filtre de Limite d'Auto-Achat de Pouvoir] dans le Magasin Épique, vous pouvez ajouter une limite d'achat aux pouvoirs barrés qui les feront apparaître dans les zones sûres jusqu'à qu'une limite d'achat soit atteinte, après quoi ils n'apparaîtront plus.\nUne Limite d'Achat de 0 veut dire que le pouvoir n'apparaîtra jamais dans les zones sûres.";
             case 90: return "Limite d'Achat";
             case 91: return "M";
             case 92: return "Vous recevrez des Gemmes Mères lorsque vous complétez l'E100 d'un donjon pour la première fois, par héros.";
@@ -11154,7 +11147,7 @@ public class Localized_French : LOCALIZATION
             case 96: return "Palier de Modificateur";
             case 97: return "Total M" + text;
             case 98: return "# Total de Max Modificateurs Complétés";
-            case 99: return "Vous gagnerez des Gemmes Mères et une augmentation de la récompense d'Etage Max Atteint, basé sur le maximum de points de modificateur complété pour chaque héros. Vous gagnerez aussi des Fragments de Rubis en plus basé sur les points de modificateur de l'essai courant.";
+            case 99: return "Vous gagnerez des Gemmes Mères et une augmentation de la récompense d'Etage Max atteint, basé sur le maximum de points de modificateur complété pour chaque héros. Vous gagnerez aussi des Fragments de Rubis en plus basé sur les points de modificateur de l'essai courant.";
             case 100: return "Additif";
             case 101: return "Soustractif";
             case 102: return "Multiplicatif";
@@ -11162,8 +11155,14 @@ public class Localized_French : LOCALIZATION
             case 104: return "Arrêter d'acheter des pouvoirs après cet étage";
             case 105: return "Multiplcateur de Réduction de Dégâts de Boss de Défi de SD";
             case 106: return "Bâtiment de Ville [" + text + "]";
+            case 107: return "Récompense d'Etage Max du SD du Guerrier";
+            case 108: return "Récompense d'Etage Max du SD de la Mage";
+            case 109: return "Récompense d'Etage Max du SD de l'Ange";
+            case 110: return "Récompense d'Etage Max du SD du Voleur";
+            case 111: return "Récompense d'Etage Max du SD de l'Archer";
+            case 112: return "Récompense d'Etage Max du SD du Dompteur";
         }
-        return text;
+        return base.SuperDungeonString(id, text);
     }
 
     public override (string name, string effect, string permanentEffect) SDPowerupString(SuperDungeonPowerupKind kind, string text = "")
@@ -11313,7 +11312,7 @@ public class Localized_French : LOCALIZATION
             case 19: return "Multiplie les Gains de Points de Loyauté par " + text1 + "  ( + " + text2 + " / Nv )";
             case 20: return "Pouvoir de Recherche de Ville";
             case 21: return "Multiplie le Pouvoir de Recherche de Ville par " + text1 + "  ( + " + text2 + " / Nv )";
-            default: return text1;
+            default: return base.SDShopString(id, text1, text2, text3);
         }
     }
 
@@ -11647,7 +11646,8 @@ public class Localized_French : LOCALIZATION
             case 2: return "La Fôret Ténébreuse";
             case 3: return "Le Jardin Enflammé";
             case 4: return "La Salle de Conférence Kor";
-            default: return text;
+            case 5: return "Le Puits des Tentacules";
+            default: return base.SDName(id, text);
         }
     }
 
@@ -11887,9 +11887,9 @@ public class Localized_French : LOCALIZATION
                 effect1 = "Réduit les Coûts d'Améliorations de Super Donjon par " + text1;
                 break;
             default:
-                name = kind.ToString();
-                effect1 = text1;
-                effect2 = text2;
+                name = base.GuildSuperAbility(kind, text1, text2).name;
+                effect1 = base.GuildSuperAbility(kind, text1, text2).effect1;
+                effect2 = base.GuildSuperAbility(kind, text1, text2).effect2;
                 break;
         }
         return (name, effect1, effect2);
